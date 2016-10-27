@@ -85,6 +85,17 @@ switch (_side) do {
 	};
 };
 
+//Telephone
+_numAnnu = format["SELECT numero,annuaire FROM phonenumber WHERE pid_owner='%1'",_uid];
+_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
+if(count _numAnnuResult != 0)then {
+	_queryResult set [20,_numAnnuResult select 0];
+	_queryResult set [21,_numAnnuResult select 1];
+};
+_numreper = format["SELECT nam_contact, num_contact,pid_contact,id FROM numberrepertoire WHERE pid_owner='%1'",_uid];
+_numreperResult = [_numreper,2,true] call DB_fnc_asyncCall;
+_queryResult set [22,_numreperResult];
+
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[12,_keyArr];
 
