@@ -13,6 +13,18 @@ class Socket_Reciever
 	};
 };
 
+class KiraScript
+{
+	tag = "Kira";
+	class Kira
+	{
+		file = "core\emoji";
+		class forEmoji {};
+		class emojiCfg {};
+		class test {};
+	};
+};
+
 class Life_Client_Core
 {
 	tag = "life";
@@ -150,7 +162,6 @@ class Life_Client_Core
 		class p_updateMenu {};
 		class removeItem {};
 		class useItem {};
-		class cellphone {};
 		class keyMenu {};
 		class keyGive {};
 		class keyDrop {};
@@ -356,5 +367,24 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-	};
+	};/*
+	class phone
+	{
+		file = "core\smartphone";
+		class cellphone {};
+		class sendMsg {};
+		class cellphonesendMessage {};
+		class addcontact {};
+		class removecontact {};
+		class messageShow {};
+		class removeMsg {};
+		class editcontact {};
+		class editcontactApply {};
+		class creatNum {};
+		class addRepertoire {};
+		class addToAnnuaire {};
+		class sendSerUrg {};
+		class sendadmin {};
+		class select {};
+	};*/
 };

@@ -75,6 +75,17 @@ switch(playerSide) do {
 	};
 };
 
+life_num = _this select 20;
+/*life_annuaire = _this select 21;
+if(!(isNil "life_annuaire")) then {
+	if(life_annuaire == 1)then{
+		life_annuaire = true;
+	}else{
+		life_annuaire = false;
+	};
+};*/
+life_repertoire = _this select 22;
+
 if(count (_this select 12) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 12);
 };
