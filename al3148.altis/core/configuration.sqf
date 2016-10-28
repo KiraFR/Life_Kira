@@ -372,3 +372,9 @@ life_garage_sell =
 	["B_MRAP_01_F",10000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+life_fourriere_prices =
+[
+Life_garage_prices *0.1
+];
+__CONST__(life_fourriere_prices,life_fourriere_prices);

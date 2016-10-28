@@ -28,7 +28,7 @@ _query = format["SELECT id, side, classname, type, pid, alive, active, plate, co
 
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
-if(Debug) then{
+if(Debug == true) then{
 	diag_log "------------- Client Query Request -------------";
 	diag_log format["QUERY: %1",_query];
 	diag_log format["Time to complete: %1 (in seconds)",(diag_tickTime - _tickTime)];

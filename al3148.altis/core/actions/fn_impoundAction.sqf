@@ -56,7 +56,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		};
 		
 		life_impound_inuse = true;
-		[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
+		[[_vehicle,true,player],"TON_fnc_fourriereStore",false,false] spawn life_fnc_MP;
 		waitUntil {!life_impound_inuse};
 		hint format[localize "STR_NOTF_Impounded",_type,_price];
 		[[0,"STR_NOTF_HasImpounded",true,[profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
@@ -68,3 +68,4 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	};
 };
 life_action_inUse = false;
+[1] call SOCK_fnc_updatePartial;

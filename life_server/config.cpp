@@ -105,6 +105,8 @@ class CfgFunctions
 			class cleanupRequest {};
 			class setObjVar {};
 			class keyManagement {};
+			class getVehicles_fourriere {};
+			class fourriereStore {};
 		};
 		
 		class Housing
