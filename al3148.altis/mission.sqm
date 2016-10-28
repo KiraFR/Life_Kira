@@ -57,11 +57,7 @@ class Mission
 	};
 	addOnsAuto[]=
 	{
-		"A3_Characters_F_BLUFOR",
-		"a3_characters_f",
-		"A3_Characters_F_Civil",
-		"A3_Characters_F_OPFOR",
-		"A3_Characters_F_Gamma",
+		"A3_Characters_F",
 		"A3_Structures_F_Civ_Garbage",
 		"A3_Structures_F_Civ_Constructions",
 		"A3_Signs_F",
@@ -91,9 +87,7 @@ class Mission
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_EPA_Civ_Camping",
 		"A3_Structures_F_Civ_Accessories",
-		"A3_Weapons_F_Vests",
-		"a3_weapons_f",
-		"A3_Weapons_F_CSAT",
+		"A3_Weapons_F",
 		"A3_Structures_F_EPB_Items_Military",
 		"A3_Structures_F_EPA_Items_Vessels",
 		"A3_Structures_F_EPA_Items_Tools",
@@ -103,8 +97,8 @@ class Mission
 	randomSeed=2004553;
 	class Intel
 	{
-		briefingName="Altis Life RPG - Kira";
-		overviewText="Altis Life RPG 3.1.4.8 - Kira";
+		briefingName="Altis Life RPG";
+		overviewText="Altis Life RPG 3.1.4.8";
 		startWeather=0.099999994;
 		startWind=0.29999998;
 		startWindDir=20;
@@ -3422,7 +3416,6 @@ class Mission
 					side="GUER";
 					vehicle="I_Story_Colonel_F";
 					player="PLAY CDG";
-					forceHeadlessClient=1;
 					leader=1;
 					skill=0.60000002;
 					text="hc_1";
@@ -3494,7 +3487,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=525;
+		items=526;
 		class Item0
 		{
 			position[]={8065.1616,35.674362,24985.314};
@@ -8918,10 +8911,20 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false;";
 		};
+		class Item525
+		{
+			position[]={3672.3584,7.5200315,13409.108};
+			azimut=39.103901;
+			id=738;
+			side="EMPTY";
+			vehicle="Land_CashDesk_F";
+			skill=0.60000002;
+			init="this enableSimulation false; this allowDamage false; this addAction[""Fourriere"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles_fourriere"",false,false] spawn life_fnc_MP;   createDialog ""Life_Fourriere_menu"";   disableSerialization;   ctrlSetText[18002,""Fetching Vehicles....""];   life_fourriere_sp = ""four_1"";  }];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+		};
 	};
 	class Markers
 	{
-		items=215;
+		items=216;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -9402,7 +9405,7 @@ class Mission
 		};
 		class Item62
 		{
-			position[]={3649.4426,7.00559,13384.339};
+			position[]={3640.3411,6.9703755,13370.021};
 			name="jail_release";
 			type="Empty";
 			angle=190.78471;
@@ -10620,6 +10623,12 @@ class Mission
 			text="Turtle Dealer";
 			type="mil_dot";
 			colorName="ColorRed";
+		};
+		class Item215
+		{
+			position[]={3660.5735,7.2166305,13393.741};
+			name="four_1";
+			type="Empty";
 		};
 	};
 };
