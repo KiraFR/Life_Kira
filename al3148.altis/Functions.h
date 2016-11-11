@@ -367,11 +367,30 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
+<<<<<<< HEAD
 		class vehicleFourriere {};
 		class fourrierreLBChange {};
 		class fourriereMenu {};
 		class unfourriere {};
 	};/*
+=======
+	};
+	
+	class DynMarket
+    {
+        file = "core\DynMarket";
+        class bought {};
+        class update {};
+        class DisplayPrices {};
+        class LoadIntoListbox {};
+        class ForcePrice {};
+        class DYNMARKET_getPrice {};
+		class DYNMARKET_getIcon {};
+    };
+
+	
+	/*
+>>>>>>> origin/master
 	class phone
 	{
 		file = "core\smartphone";

@@ -26,3 +26,5 @@
 #include "federalReserve.h"
 #include "testMessage.hpp"
 #include "fourriere.hpp"
+#include "dynmarket_changeprice.hpp"
+#include "dynmarket_prices.hpp"

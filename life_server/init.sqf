@@ -125,6 +125,7 @@ client_session_list = [];
 
 [] spawn TON_fnc_initHouses;
 [] spawn life_fnc_initWanted;
+[] execVM "\life_server\Functions\DynMarket\fn_config.sqf"
 
 //Lockup the dome
 private["_dome","_rsb"];

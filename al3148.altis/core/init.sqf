@@ -103,4 +103,9 @@ life_fnc_garageRefund = compileFinal
 
 [] execVM "core\init_survival.sqf";
 
+_boughtItems = [];
+
+	[[getPlayerUID player],"TON_fnc_playerLogged",false,false] 
+
+spawn life_fnc_MP;
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
