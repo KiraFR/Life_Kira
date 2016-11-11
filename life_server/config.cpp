@@ -129,6 +129,17 @@ class CfgFunctions
 			class removeGang {};
 			class updateGang {};
 		};
+
+		class DynMarket
+        {
+            file = "\life_server\Functions\DynMarket";
+            class calculatePrices {};
+            class config {};
+            class getUpdate {};
+            class HandleDB {};
+            class playerLogged {};
+            class sleeper {};
+        };
 	};
 	class SmartphoneKira {
 		tag = "SMPH";
@@ -146,16 +157,6 @@ class CfgFunctions
 			class CheckRepertoire {}
 		};
 	};
-	class DynMarket
-        {
-            file = "\life_server\Functions\DynMarket";
-            class calculatePrices {};
-            class config {};
-            class getUpdate {};
-            class HandleDB {};
-            class playerLogged {};
-            class sleeper {};
-        };
 };
 
 
