@@ -367,13 +367,11 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-<<<<<<< HEAD
+
 		class vehicleFourriere {};
 		class fourrierreLBChange {};
 		class fourriereMenu {};
 		class unfourriere {};
-	};/*
-=======
 	};
 	
 	class DynMarket
@@ -390,7 +388,6 @@ class Life_Client_Core
 
 	
 	/*
->>>>>>> origin/master
 	class phone
 	{
 		file = "core\smartphone";
