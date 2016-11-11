@@ -367,7 +367,22 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-	};/*
+	};
+	
+	class DynMarket
+    {
+        file = "core\DynMarket";
+        class bought {};
+        class update {};
+        class DisplayPrices {};
+        class LoadIntoListbox {};
+        class ForcePrice {};
+        class DYNMARKET_getPrice {};
+		class DYNMARKET_getIcon {};
+    };
+
+	
+	/*
 	class phone
 	{
 		file = "core\smartphone";

@@ -10,3 +10,7 @@ Changelog 0.0.0.2:
 
 Changelog 0.0.0.3:
   -Ajout de la fourrière automobile , aerien , bateau
+  
+Changelog 0.0.0.4:
+  -Ajout de La Bourse Dynamique
+  
