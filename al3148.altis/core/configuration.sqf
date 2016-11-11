@@ -62,7 +62,7 @@ life_carryWeight = 0; //Represents the players current inventory weight (MUST ST
 ****** Kira Variables *****
 *****************************
 */
-life_fourriere_prices = 1.25;
+
 /*
 *****************************
 ****** Life Variables *******
@@ -377,3 +377,33 @@ life_garage_sell =
 	["B_MRAP_01_F",10000]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
+
+
+life_fourriere_prices =
+[
+	["B_QuadBike_01_F",550],
+	["C_Hatchback_01_F",1500],
+	["C_Offroad_01_F", 2500],
+	["B_G_Offroad_01_F",3500],
+	["C_SUV_01_F",5250],
+	["C_Van_01_transport_F",7890],
+	["C_Hatchback_01_sport_F",2350],
+	["C_Van_01_fuel_F",4500],
+	["I_Heli_Transport_02_F",100000],
+	["C_Van_01_box_F",9000],
+	["I_Truck_02_transport_F",12000],
+	["I_Truck_02_covered_F",14500],
+	["B_Truck_01_transport_F",25650],
+	["B_Truck_01_box_F", 35000],
+	["O_MRAP_02_F",45000],
+	["B_Heli_Light_01_F",45000],
+	["O_Heli_Light_02_unarmed_F",65000],
+	["C_Rubberboat",400],
+	["C_Boat_Civil_01_F",4500],
+	["B_Boat_Transport_01_F",450],
+	["C_Boat_Civil_01_police_F",3500],
+	["B_Boat_Armed_01_minigun_F",16500],
+	["B_SDV_01_F",25000],
+	["B_MRAP_01_F",7500]
+];
+__CONST__(life_fourriere_prices,life_fourriere_prices);

@@ -19,7 +19,7 @@ _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 _trunkSpace = [_className] call life_fnc_vehicleWeightCfg;
 
 _retrievePrice = [_className,__GETC__(life_fourriere_prices)] call TON_fnc_index;
-_retrievePrice = if(_retrievePrice == -1) then {1000} else {(__GETC__(life_fourriere_prices) select _retrievePrice) select 1;};
+_retrievePrice = if(_retrievePrice == -1) then {1000} else {((__GETC__(life_fourriere_prices) select _retrievePrice) select 1) * 2;};
 
 (getControl(18000,18003)) ctrlSetStructuredText parseText format[
 	(localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
