@@ -243,7 +243,7 @@ sell_array =
 	["cement",1950],
 	["goldbar",95000]
 ];
-__CONST__(buy_array,buy_array);
+__CONST__(sell_array,sell_array);
 
 life_weapon_shop_array =
 [
