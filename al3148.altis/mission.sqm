@@ -10631,6 +10631,26 @@ class Mission
 			type="Empty";
 		};
 	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={14511.987,16.996958,16907.619};
+			a=5;
+			b=25;
+			angle=224.58;
+			rectangular=1;
+			activationBy="CIV";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="[vehicle player,speed (vehicle player),15] call life_fnc_lessPoints;";
+			class Effects
+			{
+			};
+		};
+	};
 };
 class Intro
 {

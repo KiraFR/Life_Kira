@@ -46,6 +46,15 @@ class playerSettings {
 			w = 0.3; h = 0.6;
 		};
 		
+		class Permisinfos : Life_RscStructuredText
+		{
+			idc = 2016;
+			sizeEx = 0.020;
+			text = "";
+			x = 0.105;
+			y = 0.59;
+			w = 0.3; h = 0.6;
+		};
 		class PlayersName : Title {
 			idc = carry_weight;
 			style = 1;
@@ -77,6 +86,17 @@ class playerSettings {
 			w = 0.275; h = 0.04;
 		};
 		
+
+		class Permis : Life_RscText
+		{
+			idc = -1;
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
+			text = "Point de Permis";
+			sizeEx = 0.04;
+			
+			x = 0.11; y = 0.55;
+			w = 0.219; h = 0.04;
+		};
 		class moneySHeader : Life_RscText
 		{
 			idc = -1;
@@ -305,6 +325,16 @@ class playerSettings {
 			text = "$STR_PM_SyncData";
 			onButtonClick = "[] call SOCK_fnc_syncData;";
 			x = 0.1;
+			y = 0.805;
+			w = (6.25 / 40);
+			h = (1 / 25);
+		};
+
+		class ButtonMarket : life_RscButtonMenu {
+			idc = -1;
+			text = "Bourse";
+			onButtonClick = "createDialog ""life_dynmarket_prices"";";
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.805;
 			w = (6.25 / 40);
 			h = (1 / 25);

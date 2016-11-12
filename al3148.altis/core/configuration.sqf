@@ -31,6 +31,7 @@ life_respawned = false;
 life_removeWanted = false;
 life_action_gathering = false;
 life_listMessage = [];
+
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
@@ -62,7 +63,8 @@ life_carryWeight = 0; //Represents the players current inventory weight (MUST ST
 ****** Kira Variables *****
 *****************************
 */
-
+life_pPermis = 12;
+life_amende = 550;
 /*
 *****************************
 ****** Life Variables *******
