@@ -90,7 +90,7 @@ class Life_Fourriere_menu
 			text = "";
 			sizeEx = 0.04;
 			colorBackground[] = {0.1,0.1,0.1,0.9};
-			onLBSelChanged = "_this call life_fnc_garageLBChange;";
+			onLBSelChanged = "_this call life_fnc_fourriereLBChange;";
 			
 			//Position & height
 			x = 0.11; y = 0.302;

@@ -57,7 +57,7 @@ if(count _nearVehicles > 0) exitWith
 	[[1,(localize "STR_Garage_SpawnPointError")],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 };
 
-_query = format["UPDATE vehicles SET active='1' WHERE pid='%1' AND id='%2'",_pid,_vid];
+_query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
 
 
 [_query,false] spawn DB_fnc_asyncCall;

@@ -243,6 +243,7 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+		class lessPoints {};
 	};
 	
 	class Vehicle
@@ -367,9 +368,9 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-
+		
 		class vehicleFourriere {};
-		class fourrierreLBChange {};
+		class fourriereLBChange {};
 		class fourriereMenu {};
 		class unfourriere {};
 	};

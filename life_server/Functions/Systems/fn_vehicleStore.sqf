@@ -33,7 +33,7 @@ if(_impound) then
 	} 
 		else
 	{
-		_query = format["UPDATE vehicles SET active='0' AND fourriere='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
+		_query = format["UPDATE vehicles SET active='0' WHERE pid='%1' AND plate='%2'",_uid,_plate];
 		
 		_thread = [_query,1] call DB_fnc_asyncCall;
 		//waitUntil {scriptDone _thread};
