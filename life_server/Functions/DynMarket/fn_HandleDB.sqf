@@ -19,9 +19,7 @@ switch (_switch) do
 		switch (_whatanumber) do {
 			case 1: {_query = format["UPDATE dynmarket SET prices='%1'",DYNMARKET_Items_CurrentPriceArr];};
 		};
-		waitUntil {sleep (random 0.3); !DB_Async_Active};
 		_queryResult = [_query,1] call DB_fnc_asyncCall;
-		diag_log "### DYNMARKET >> SUCCESSFULLY BACKUP'D CURRENT PRICES TO DATABASE!   ###";
 	};
 	
 	case 1:
@@ -29,19 +27,11 @@ switch (_switch) do
 		_query = switch(_whatanumber) do {
 			case 1: {_returnCount = 11; format["SELECT prices FROM dynmarket WHERE id='1'"];};
 		};
-
-		waitUntil{sleep (random 0.3); !DB_Async_Active};
 		_tickTime = diag_tickTime;
 		_queryResult = [_query,2] call DB_fnc_asyncCall;
 		//DYNMARKET_Items_CurrentPriceArr = _queryResult select 0;
 		_pricearray = _queryResult select 0;
 		if (count _pricearray < 1) then {
-			diag_log "########################## DYNAMIC MARKET ##########################";
-			diag_log "### >> CAN'T LOAD PRICES FROM DATABASE: ERROR 01x                ###";
-			diag_log "###        THE REQUESTED PRICEARRAY WAS UNEXPECTEDLY EMPTY!      ###";
-			diag_log "###        IF YOU ARE RUNNING DYNMARKET FOR THE FIRST TIME,      ###";
-			diag_log "###        PLEASE IGNORE THIS ERROR!                             ###";
-			diag_log "####################################################################";
 		} else {
 			DYNMARKET_Items_CurrentPriceArr = _pricearray;
 			{
@@ -56,9 +46,6 @@ switch (_switch) do
 					};
 				} forEach DYNMARKET_sellarraycopy;
 			} forEach DYNMARKET_Items_CurrentPriceArr;
-			diag_log "########################## DYNAMIC MARKET ##########################";
-			diag_log "### >> SUCCESSFULLY LOADED PRICES FROM DATABASE!                 ###";
-			diag_log "####################################################################";
 		};
 	};
 };

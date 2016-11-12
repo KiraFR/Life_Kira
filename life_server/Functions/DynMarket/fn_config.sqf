@@ -16,16 +16,7 @@ DYNMARKET_Serveruptime         = 05;   // Serveruptime after restart in hours
 DYNMARKET_UseExternalDatabase  = true; // Should the script use the External Database?
 DYNMARKET_PriceUpdateInterval  = 01;   // After how many minutes should the price be updated?
 DYNMARKET_CreateBackups        = true; // Should the server save write the prices regulary into the Database? If false, it will save the prices before Server-restart?
-DYNMARKET_CreateBackupInterval = 03;   // After how many updates (PriceUpdateIntervals) should the prices be saved into the Database?
-DYNMARKET_UserNotification     = true; // Should the user be informed with a hint whenever the prices got updated?
-
-// █████████████████ USER NOTIFICATION TEXTS  █████████████████
-
-DYNMARKET_UserNotification_Text = 
-[
-	"Your prices have been updated!",
-	"The new prices are being calculated by the server..."
-];
+DYNMARKET_CreateBackupInterval = 03;   // After how many updates (PriceUpdateIntervals) should the prices be saved into the Database? // Should the user be informed with a hint whenever the prices got updated?
 
 // █████████████████ ITEM GROUP CONFIGURATION █████████████████
 
@@ -34,13 +25,38 @@ DYNMARKET_Items_Groups =
 	["Legal",
 		[
 			["apple",-1,10,50],
-			["peach",-1,30,100]
+			["salema",-1,20,45],
+			["ornate",-1,15,40],
+			["mackerel",-1,75,175],
+			["tuna",-1,350,700],
+			["mullet",-1,150,250],
+			["catshark",-1,100,300],
+			["rabbit",-1,35,65],
+			["oilp",-1,2000,3200],
+			["turtle",-1,1000,3000],
+			["turtlesoup",-1,500,1000],
+			["donuts",-1,20,60],
+			["marijuana",-1,1250,2350],
+			["peach",-1,20,55],
+			["diamondc",-1,1000,2000],
+			["iron_r",-1,2200,3200],
+			["copper_r",-1,1500,2250],
+			["salt_r",-1,950,1650],
+			["glass",-1,850,1450],
+			["cement",-1,950,1950],
+			["goldbar",-1,50000,95000],
+			["turtle",-1,1500,3000]
 		],
 		0.5
 	],
 	["Illegal", 
 		[
-			/*["peach",1,30,100]*/
+			["cocaine",-1,2000,3000],
+			["cocainep",-1,4000,5000],
+			["heroinp",-1,2000,3000],
+			["cocaine",-1,1000,2000],
+			["cocainep",-1,3000,4000],
+			["marijuana",-1,2000,3000]
 		],
 		0.5
 	]
@@ -48,10 +64,11 @@ DYNMARKET_Items_Groups =
 
 // █████████████████    ALL SELLABLE ITEMS    █████████████████
 
-DYNMARKET_Items_ToTrack        = 
+DYNMARKET_Items_ToTrack = 
 [
-	["apple",25],
-	["peach",50],
+	["apple",50],
+	["heroinu",1850],
+	["heroinp",2650],
 	["salema",45],
 	["ornate",40],
 	["mackerel",175],
@@ -59,82 +76,34 @@ DYNMARKET_Items_ToTrack        =
 	["mullet",250],
 	["catshark",300],
 	["rabbit",65],
-	["turtle",30077],
+	["oilp",3200],
+	["turtle",3000],
 	["water",5],
 	["coffee",5],
 	["turtlesoup",1000],
 	["donuts",60],
+	["marijuana",2350],
 	["tbacon",25],
 	["lockpick",75],
-	["handcuffkey",75],
 	["pickaxe",750],
 	["redgull",200],
-	["fuelF",100],
-	["spikeStrip",1200],
-	["tracker",2500],
-	["goldbar",125000],
-	["cocainep",5348],
-	["heroinp",4527],
-	["marijuana",4365],
-	["iron_r",3017],
-	["copper_r",3746],
-	["salt_r",4759],
-	["glass",3368],
-	["oilp",2571],
-	["cement",3342],
-	["diamondc",3566],
-	["eisenp",3153],
-	["getreidep",3210],
-	["holzp",3248],
-	["hopfenp",3540],
-	["schwefelp",3222],
-	["silberp",3966],
-	["tabakp",4577],
-	["traubenp",4006],
-	["zinnp",3274],
-	["zuckerp",4565],
-	["schmuck",14825],
-	["bronze",13375],
-	["getreideip",4244],
-	["zuckerip",4922],
-	["tabakip",3977],
-	["kkugel",13987],
-	["spulver",11408],
-	["pbrau",24701],
-	["pkugel",62727],
-	["uranip",9448],
-	["uranp",18108],
-	["muschelp",1],
-	["korallep",1],
-	["aquarium",1],
-	["goldfisch",1],
-	["goldfischglas",1],
-	["pschmuck",1],
-	["algenp",1],
-	["reisp",1],
-	["reisip",1],
-	["seidep",1],
-	["baumwollep",1],
-	["psegel",1],
-	["sushi",1],
-	["halbl",1],
-	["nanop",1],
-	["pmuenze",1],
-	["rlachs",1],
-	["rmakrele",1],
-	["tfsteak",1],
-	["resche",1],
-	["display",1],
-	["szellen",1],
-	["htrans",1],
-	["prothese",1],
-	["kunststoff",1],
-	["titanp",1],
-	["notebook",1],
-	["kaffeep",1],
-	["statue",1],
-	["scanner",10000],
-	["uwsl",5000]
+	["peach",55],
+	["cocaine",3000],
+	["cocainep",5000],
+	["diamond",750],
+	["diamondc",2000],
+	["iron_r",3200],
+	["copper_r",1500],
+	["salt_r",1650],
+	["glass",1450],
+	["cement",1950],
+	["goldbar",95000],
+	["heroinu",1200],
+	["heroinp",2500],
+	["cocaine",1500],
+	["cocainep",3500],
+	["marijuana",2000],
+	["turtle",3000]
 ];
 
 //███████████████████████████████████████████████████████████████████████
@@ -148,15 +117,11 @@ DYNMARKET_Serveruptime = (DYNMARKET_Serveruptime * 3600) - 300;
 	_currentArray = _x;
 	DYNMARKET_Items_CurrentPriceArr pushBack [_currentArray select 0,_currentArray select 1,0];
 } forEach DYNMARKET_Items_ToTrack;
-publicVariable "DYNMARKET_UserNotification";
-publicVariable "DYNMARKET_UserNotification_Text";
 if (DYNMARKET_UseExternalDatabase) then {[1] call TON_fnc_HandleDB;};
 DYNMARKET_UpdateCount = 0;
 if (DYNMARKET_UseExternalDatabase) then {
 	[] spawn {
 		sleep DYNMARKET_Serveruptime;
-		diag_log "### DYNMARKET >> CURRENT PRICES ARE BEING WRITTEN TO THE DATABASE    ###";
-		diag_log "### DYNMARKET >> AS PLANNED, AWAITING RESULT...                      ###";
 		[0] call TON_fnc_HandleDB;
 	};
 };

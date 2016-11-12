@@ -10,15 +10,12 @@
 
 // In this file you can configure random events
 DYNMARKET_chance = 20; // Chance for a random event to happen
-DYNMARKET_Events =
-[
-	["An Oiltanker has sunken! The price went drasticaly down!",["oilp"],-1], // -1 MEANS CHANGE PRICE TO MAX, -2 TO MIN, OR A VALUE TO WHICH THE PRICE BE CHANGED TO
-	["The citizens seem to live healthier, fruites now have a high price!",["apple","peach"],100]
-];
+DYNMARKET_Events =[];
 
 _random = floor(random 100)+1;
 if (_random>DYNMARKET_chance) exitWith {DYNMARKET_waitForEvent = true;};
 _eventCount = count DYNMARKET_Events;
+if(_eventCount== 0)exitWith{};
 _randomEventID = floor(random _eventCount);
 _eventToHappen = DYNMARKET_Events select _randomEventID;
 
