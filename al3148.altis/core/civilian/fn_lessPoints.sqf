@@ -28,12 +28,21 @@ switch(true)do{
 	};
 };
 
-hint format["Une amende de %1€ et un retrait de %2 points ont été effectuer sur votre personne car vous rouliez à %3km/h, ce qui est %4km/h au dessus de la limite autorisée.",
+hint format["<t color='#FFCC00'><t size='2'><t align='center'>Une amende et un retrait ont été effectuer sur votre personne<br/><t align='left'><t size='1'>Montant: %1€<br/><t align='left'><t size='1'>Points: %2 points<br/><t align='left'><t size='1'>Raison: Vous rouliez à %3km/h, ce qui est %4km/h au dessus de la limite autorisée.",
 	life_amende *_nbrPoint,
 	_nbrPoint,
 	round _speed,
 	_plus
 ];
+
+if(life_pPermis <= 0)then {
+	missionNamespace setVariable["license_civ_driver",false];
+	missionNamespace setVariable["license_civ_truck",false];
+	hint "Vous venez de perdre votre permis voiture et camion, vous devez attendre 1h pour pouvoir en racheter un nouveau.";
+	life_waitpermis = true;
+	life_pPermis = 0;
+	[10] call SOCK_fnc_updatePartial;
+};
 life_atmcash = life_atmcash - (life_amende *_nbrPoint);
 [] call life_fnc_hudUpdate;
 [9] call SOCK_fnc_updatePartial;

@@ -50,6 +50,20 @@ switch(_mode) do {
 		_packet set[2,life_cash];
 		_packet set[4,life_atmcash];
 	};
+	case 8: {
+		_packet set[2,life_nbrFoisPermis];
+		_packet set[4,life_pPermis];
+	};
+	case 9: {
+		_packet set[2,life_pPermis];
+	};
+	case 10: {
+		_packet set[2,waitsleep];
+		_packet set[4,life_waitpermis];
+	};
+	case 11: {
+		_packet set[2,waitsleep];
+	};
 };
 
 [_packet,"DB_fnc_updatePartial",false,false] call life_fnc_MP;

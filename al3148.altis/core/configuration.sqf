@@ -63,8 +63,10 @@ life_carryWeight = 0; //Represents the players current inventory weight (MUST ST
 ****** Kira Variables *****
 *****************************
 */
-life_pPermis = 12;
+life_pPermis = 0;
 life_amende = 550;
+life_nbrFoisPermis = 0;
+life_waitpermis = false;
 /*
 *****************************
 ****** Life Variables *******

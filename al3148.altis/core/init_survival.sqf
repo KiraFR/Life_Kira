@@ -105,3 +105,31 @@
 		};
 	};
 };
+
+[] spawn {
+	while {true} do {
+		if(life_waitpermis) then {
+			waitsleep = 0;
+			while {waitsleep < 30} do{
+				sleep 60;
+				waitsleep = waitsleep + 1;
+
+				switch (waitsleep) do {
+					case 15:{
+						hint "Il vous reste 15min a attendre.";
+						[11] call SOCK_fnc_updatePartial;
+					};
+					case 25:{
+						hint "Il vous reste 5min a attendre.";
+						[11] call SOCK_fnc_updatePartial;
+					};
+					case 30:{
+						life_waitpermis = false;
+						hint "Vous pouvez maintenant racheter vos permis.";
+						[10] call SOCK_fnc_updatePartial;
+					};
+				};
+			};
+		};
+	};
+};

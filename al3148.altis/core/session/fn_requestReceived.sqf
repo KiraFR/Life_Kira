@@ -56,6 +56,15 @@ switch(playerSide) do {
 		life_is_arrested = _this select 7;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
+		life_pPermis = _this select 12;
+		life_nbrFoisPermis = _this select 13;
+		_PermisDispo = _this select 14;
+		if(_PermisDispo == 1)then{
+			life_waitpermis = true;
+		}else{
+			life_waitpermis = false;
+		};
+		waitsleep = _this select 15;
 		life_houses = _this select 18;
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
@@ -86,8 +95,8 @@ if(!(isNil "life_annuaire")) then {
 };*/
 life_repertoire = _this select 22;
 
-if(count (_this select 12) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 12);
+if(count (_this select 25) > 0) then {
+	{life_vehicles pushBack _x;} foreach (_this select 25);
 };
 
 life_session_completed = true;

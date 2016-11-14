@@ -82,8 +82,18 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[19,missionNamespace getVariable[format["gang_%1",_uid],[]]];
+		_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
+		_PermisResult = [_Permis,2] call DB_fnc_asyncCall;
+		if(count _numAnnuResult > 0)then {
+			_queryResult set [12,_PermisResult select 0];
+			_queryResult set [13,_PermisResult select 1];
+			_queryResult set [14,_PermisResult select 2];
+			_queryResult set [15,_PermisResult select 3];
+		};
 	};
 };
+
+
 
 //Telephone
 _numAnnu = format["SELECT numero,annuaire FROM phonenumber WHERE pid_owner='%1'",_uid];
@@ -92,11 +102,12 @@ if(count _numAnnuResult != 0)then {
 	_queryResult set [20,_numAnnuResult select 0];
 	_queryResult set [21,_numAnnuResult select 1];
 };
-_numreper = format["SELECT nam_contact, num_contact,pid_contact,id FROM numberrepertoire WHERE pid_owner='%1'",_uid];
+
+_numreper = format["SELECT nam_contact, num_contact, pid_contact, id FROM numberrepertoire WHERE pid_owner='%1'",_uid];
 _numreperResult = [_numreper,2,true] call DB_fnc_asyncCall;
 _queryResult set [22,_numreperResult];
 
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[12,_keyArr];
+_queryResult set[25,_keyArr];
 
 [_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;

@@ -11,7 +11,13 @@ if(_type == "") exitWith {-1};
 
 switch (_type) do
 {
-	case "driver": {500}; //Drivers License cost
+	case "driver": { //Drivers License cost
+		if(!(missionNamespace getVariable "license_civ_truck") && !(missionNamespace getVariable "license_civ_driver")) then{
+			500 * (life_nbrFoisPermis + 1)
+		}else{
+			500 * life_nbrFoisPermis
+		};
+	}; 
 	case "boat": {1000}; //Boating license cost
 	case "pilot": {25000}; //Pilot/air license cost
 	case "gun": {10000}; //Firearm/gun license cost
@@ -25,7 +31,13 @@ switch (_type) do
 	case "medmarijuana": {1500}; //Medical Marijuana processing license cost
 	case "gang": {10000}; //Gang license cost
 	case "rebel": {75000}; //Rebel license cost
-	case "truck": {20000}; //Truck license cost
+	case "truck": { //Truck license cost
+		if(!(missionNamespace getVariable "license_civ_truck") && !(missionNamespace getVariable "license_civ_driver")) then{
+			20000 * (life_nbrFoisPermis + 1)
+		}else{
+			20000 * life_nbrFoisPermis
+		};
+	}; 
 	case "diamond": {35000};
 	case "salt": {12000};
 	case "cocaine": {30000};

@@ -47,4 +47,8 @@ _query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, co
 ];
 
 [_query,1] call DB_fnc_asyncCall;
+
+_query = format["INSERT INTO permis (uid) VALUES('%1')",_uid];
+[_query,1] call DB_fnc_asyncCall;
+
 [[],"SOCK_fnc_dataQuery",(owner _returnToSender),false] spawn life_fnc_MP;
