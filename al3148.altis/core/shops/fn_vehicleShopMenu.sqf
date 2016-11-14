@@ -5,7 +5,7 @@
 	Description:
 	Blah
 */
-private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy"];
+private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy","_spawnPos"];
 _shop = [(_this select 3),0,"",[""]] call BIS_fnc_param;
 _sideCheck = [(_this select 3),1,sideUnknown,[civilian]] call BIS_fnc_param;
 _spawnPoints = [(_this select 3),2,"",["",[]]] call BIS_fnc_param;
@@ -48,3 +48,20 @@ ctrlShow [2304,false];
 	_control lbSetData [(lbSize _control)-1,_className];
 	_control lbSetValue [(lbSize _control)-1,_ForEachIndex];
 } foreach _vehicleList;
+
+if(typeName _spawnPoints == "ARRAY")then{
+	_spawnPos = _spawnPoints select 0;
+}else {
+	_spawnPos = _spawnPoints;
+};
+life_shop_cam = "CAMERA" camCreate (position player);
+showCinemaBorder false;
+life_shop_cam cameraEffect ["Internal", "Back"];
+life_shop_cam camSetTarget (getMarkerPos _spawnPos);
+life_shop_cam camSetPos (player modelToWorld [0,0,5]);
+life_shop_cam camSetFOV .50;
+life_shop_cam camCommit 0;
+waitUntil {isNull (findDisplay 2300)};
+life_shop_cam cameraEffect ["TERMINATE","BACK"];
+camDestroy life_shop_cam;
+if(!(isNil "vehPreview"))then{deleteVehicle vehPreview;};

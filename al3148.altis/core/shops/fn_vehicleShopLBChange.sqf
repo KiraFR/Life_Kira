@@ -8,10 +8,9 @@
 	displays various bits of information about the vehicle.
 */
 disableSerialization;
-private["_control","_index","_className","_basePrice","_vehicleInfo","_colorArray","_ctrl"];
+private["_control","_index","_className","_basePrice","_vehicleInfo","_colorArray","_ctrl","_temp"];
 _control = _this select 0;
 _index = _this select 1;
-
 //Fetch some information.
 _className = _control lbData _index;
 _vIndex = _control lbValue _index;

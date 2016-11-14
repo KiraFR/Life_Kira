@@ -1,3 +1,5 @@
+#define decale_droite 0.75
+#define decale_haut -0.55
 class Life_Vehicle_Shop_v2
 {
 	idd = 2300;
@@ -12,9 +14,9 @@ class Life_Vehicle_Shop_v2
 		{
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			idc = -1;
-			x = 0.1;
-			y = 0.2;
-			w = 0.8;
+			x = decale_droite + 0.1;
+			y = decale_haut + 0.2;
+			w = 0.62;
 			h = (1 / 25);
 		};
 		
@@ -22,9 +24,9 @@ class Life_Vehicle_Shop_v2
 		{
 			colorBackground[] = {0,0,0,0.7};
 			idc = -1;
-			x = 0.1;
-			y = 0.2 + (11 / 250);
-			w = 0.8;
+			x = decale_droite + 0.1;
+			y = decale_haut + 0.2 + (11 / 250);
+			w = 0.62;
 			h = 0.7 - (22 / 250);
 		};
 		
@@ -32,9 +34,9 @@ class Life_Vehicle_Shop_v2
 		{
 			idc = 2301;
 			text = "";
-			x = 0.1;
-			y = 0.2;
-			w = 0.8;
+			x = decale_droite + 0.1;
+			y = decale_haut + 0.2;
+			w = 0.62;
 			h = (1 / 25);
 		};
 		
@@ -43,7 +45,7 @@ class Life_Vehicle_Shop_v2
 			idc = -1;
 			text = "$STR_GUI_ShopStock";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			x = 0.11; y = 0.26;
+			x = decale_droite + 0.11; y = decale_haut + 0.26;
 			w = 0.3;
 			h = (1 / 25);
 		};
@@ -53,8 +55,8 @@ class Life_Vehicle_Shop_v2
 			idc = 2330;
 			text = "$STR_GUI_VehInfo";
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			x = 0.42; y = 0.26;
-			w = 0.46;
+			x = decale_droite + 0.42; y = decale_haut + 0.26;
+			w = 0.28;
 			h = (1 / 25);
 		};
 		
@@ -62,9 +64,9 @@ class Life_Vehicle_Shop_v2
 		{
 			idc = -1;
 			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
-			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
+			onButtonClick = "deleteVehicle vehPreview;closeDialog 0;";
+			x = decale_droite + -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = decale_haut + 0.9 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -73,9 +75,9 @@ class Life_Vehicle_Shop_v2
 		{
 			idc = -1;
 			text = "$STR_Global_RentVeh";
-			onButtonClick = "[false] spawn life_fnc_vehicleShopBuy;";
-			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
+			onButtonClick = "deleteVehicle vehPreview;[false] spawn life_fnc_vehicleShopBuy;";
+			x = decale_droite + 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = decale_haut + 0.9 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -84,9 +86,9 @@ class Life_Vehicle_Shop_v2
 		{
 			idc = 2309;
 			text = "$STR_Global_Buy";
-			onButtonClick = "[true] spawn life_fnc_vehicleShopBuy;";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
+			onButtonClick = "deleteVehicle vehPreview;[true] spawn life_fnc_vehicleShopBuy;";
+			x = decale_droite + 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = decale_haut + 0.9 - (1 / 25);
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
@@ -103,14 +105,15 @@ class Life_Vehicle_Shop_v2
 			onLBSelChanged = "_this call life_fnc_vehicleShopLBChange";
 			
 			//Position & height
-			x = 0.11; y = 0.302;
+			x = decale_droite + 0.11; y = decale_haut + 0.302;
 			w = 0.303; h = 0.49;
 		};
 		
 		class ColorList : Life_RscCombo
 		{
 			idc = 2304;
-			x = 0.11; y = 0.8;
+			onLBSelChanged = "[] call life_fnc_vehicleShopCam";
+			x = decale_droite + 0.11; y = decale_haut + 0.8;
 			w = 0.303; h = 0.03;
 		};
 		
@@ -120,7 +123,7 @@ class Life_Vehicle_Shop_v2
 			text = "";
 			sizeEx = 0.035;
 			
-			x = 0.41; y = 0.3;
+			x = decale_droite + 0.41; y = decale_haut + 0.3;
 			w = 0.5; h = 0.5;
 		};
 	};
