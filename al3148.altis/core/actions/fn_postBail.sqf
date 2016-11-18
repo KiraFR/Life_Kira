@@ -15,4 +15,4 @@ if(life_atmcash < life_bail_amount) exitWith {hint format[localize "STR_NOTF_Bai
 
 life_atmcash = life_atmcash - life_bail_amount;
 life_bail_paid = true;
-[[0,"STR_NOTF_Bail_Bailed",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+[0,"STR_NOTF_Bail_Bailed",true,[profileName]],RemoteExec ["life_fnc_broadcast",1];

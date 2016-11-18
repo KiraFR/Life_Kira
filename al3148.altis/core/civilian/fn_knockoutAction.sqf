@@ -13,9 +13,9 @@ if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 if(player distance _target > 4) exitWith {};
 life_knockout = true;
-[[player,"AwopPercMstpSgthWrflDnon_End2"],"life_fnc_animSync",nil,false] spawn life_fnc_MP;
+[player,"AwopPercMstpSgthWrflDnon_End2"],RemoteExec ["life_fnc_animSync",nil];
 sleep 0.08;
-[[_target,profileName],"life_fnc_knockedOut",_target,false] spawn life_fnc_MP;
+[_target,profileName], RemoteExecCall ["life_fnc_knockedOut",_target];
 
 sleep 3;
 life_knockout = false;

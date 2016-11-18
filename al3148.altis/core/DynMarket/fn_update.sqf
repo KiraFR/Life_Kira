@@ -14,7 +14,7 @@ if (isNil "DYNAMICMARKET_boughtItems") then {DYNAMICMARKET_boughtItems=[];};
 switch (_mode) do {
 	case 0:
 	{
-		[[DYNAMICMARKET_boughtItems],"TON_fnc_getUpdate",false,false] spawn life_fnc_MP;
+		[[DYNAMICMARKET_boughtItems],RemoteExecCall ["TON_fnc_getUpdate",0];
 
 		DYNAMICMARKET_boughtItems = [];
 	};
