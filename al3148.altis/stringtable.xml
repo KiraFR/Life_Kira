@@ -1052,14 +1052,6 @@
 			<Italian>Mia Gang</Italian>
 			<Portuguese>Gangue</Portuguese>
 		</Key>
-		<Key ID="STR_PM_WantedList">
-			<Original>Wanted List</Original>
-			<English>Wanted List</English>
-			<German>Fahndungsliste</German>
-			<French>Interpol</French>
-			<Italian>Lista Ricercati</Italian>
-			<Portuguese>Lista de Foragidos</Portuguese>
-		</Key>
 		<Key ID="STR_PM_CellPhone">
 			<Original>Cell Phone</Original>
 			<English>Cell Phone</English>
@@ -1325,24 +1317,6 @@
 			<French>Déposer</French>
 			<Italian>Deposita</Italian>
 			<Portuguese>Loja</Portuguese>
-		</Key>
-	</Package>
-	<Package name="Wanted_Menu">
-		<Key ID="STR_Wanted_Title">
-			<Original>APD Wanted List</Original>
-			<English>APD Wanted List</English>
-			<German>Fahndungsliste</German>
-			<French>Interpol</French>
-			<Italian>Lista Ricercati</Italian>
-			<Portuguese>Lista de Procurados ADP</Portuguese>
-		</Key>
-		<Key ID="STR_Wanted_Pardon">
-			<Original>Pardon</Original>
-			<English>Pardon</English>
-			<German>Erlassen</German>
-			<French>Excuser</French>
-			<Italian>Perdona</Italian>
-			<Portuguese>Perdão</Portuguese>
 		</Key>
 	</Package>
 	<Package name="Animals">

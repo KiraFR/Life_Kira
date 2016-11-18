@@ -152,9 +152,6 @@ class Life_Client_Core
 	class Player_Menu
 	{
 		file = "core\pmenu";
-		class wantedList {};
-		class wantedInfo {};
-		class wantedMenu {};
 		class pardon {};
 		class giveItem {};
 		class giveMoney {};

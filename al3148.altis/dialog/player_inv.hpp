@@ -278,16 +278,6 @@ class playerSettings {
 				};
 			};
 		};
-		
-		class ButtonGangList : Life_RscButtonMenu {
-			idc = 2012;
-			text = "$STR_PM_WantedList";
-			onButtonClick = "[] call life_fnc_wantedMenu";
-			x = 0.1 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.8 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
 	
 		class ButtonKeys : Life_RscButtonMenu {
 			idc = 2013;
