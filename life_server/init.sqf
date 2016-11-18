@@ -81,7 +81,6 @@ _onDisconnect = ["SERV_onClientDisconnect","onPlayerDisconnected",{[_uid,_id,_na
 [] spawn TON_fnc_cleanup;
 life_gang_list = [];
 publicVariable "life_gang_list";
-life_wanted_list = [];
 client_session_list = [];
 
 [] execFSM "\life_server\cleanup.fsm";
@@ -124,7 +123,6 @@ client_session_list = [];
 } foreach allUnits;
 
 [] spawn TON_fnc_initHouses;
-[] spawn life_fnc_initWanted;
 [] execVM "\life_server\Functions\DynMarket\fn_config.sqf";
 
 //Lockup the dome

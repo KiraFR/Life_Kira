@@ -14,10 +14,6 @@ if(!(_unit getVariable "restrained")) exitWith {}; //He's not restrained.
 if(!((side _unit) in [civilian,independent])) exitWith {}; //Not a civ
 if(isNull _unit) exitWith {}; //Not valid
 
-
-[[_unit,player,false],"life_fnc_wantedBounty",false,false] spawn life_fnc_MP;
-
-if(isNull _unit) exitWith {}; //Not valid
 detach _unit;
 [[_unit,false],"life_fnc_jail",_unit,false] spawn life_fnc_MP;
 [[0,"STR_NOTF_Arrested_1",true, [_unit getVariable["realname",name _unit], profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;

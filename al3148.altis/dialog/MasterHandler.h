@@ -13,7 +13,6 @@
 #include "ui.hpp"
 #include "admin_menu.hpp"
 #include "cell_phone.hpp"
-#include "wanted_list.hpp"
 #include "ticket.hpp"
 #include "clothing.hpp"
 #include "trunk.hpp"

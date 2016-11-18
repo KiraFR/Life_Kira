@@ -58,23 +58,6 @@ _unit spawn
 	waitUntil {if(speed _unit == 0) exitWith {true}; life_deathCamera camSetTarget _unit; life_deathCamera camSetRelPos [0,3.5,4.5]; life_deathCamera camCommit 0;};
 };
 
-//Make the killer wanted
-if(!isNull _killer && {_killer != _unit} && {side _killer != west} && {alive _killer}) then {
-	if(vehicle _killer isKindOf "LandVehicle") then {
-		[[getPlayerUID _killer,_killer getVariable["realname",name _killer],"187V"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		//Get rid of this if you don't want automatic vehicle license removal.
-		if(!local _killer) then {
-			[[2],"life_fnc_removeLicenses",_killer,FALSE] spawn life_fnc_MP;
-		};
-	} else {
-		[[getPlayerUID _killer,_killer getVariable["realname",name _killer],"187"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
-		
-		if(!local _killer) then {
-			[[3],"life_fnc_removeLicenses",_killer,FALSE] spawn life_fnc_MP;
-		};
-	};
-};
-
 //Killed by cop stuff...
 if(side _killer == west && playerSide != west) then {
 	life_copRecieve = _killer;
@@ -85,9 +68,6 @@ if(side _killer == west && playerSide != west) then {
 	};
 };
 
-if(!isNull _killer && {_killer != _unit}) then {
-	life_removeWanted = true;
-};
 
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
