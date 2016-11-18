@@ -3845,6 +3845,11 @@
 			<Italian>You can now run farther for 3 minutes</Italian>
 			<Portuguese>You can now run farther for 3 minutes</Portuguese>
 		</Key>
+		<Key ID="STR_ISTR_RedGullEffectFucked">
+			<Original>You consume too much redgull</Original>
+			<English>You consume too much redgull</English>
+			<French>Vous avez consommez trop de redgull</French>
+		</Key>
 		<Key ID="STR_ISTR_SpikesDeployment">
 			<Original>You already have a Spike Strip active in deployment</Original>
 			<English>You already have a Spike Strip active in deployment</English>

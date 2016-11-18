@@ -99,4 +99,17 @@ if(count (_this select 25) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 25);
 };
 
+_licence = [licence_civ_gouv ,license_civ_ebou];
+{ if(true) exitwith {life_paycheck = 0};} foreach (_x); //si licence paychek 0
+
+switch (true) do {
+	case (life_atmcash < 100 000):life_paycheck = 500};
+	case (life_atmcash > 100 000):life_paycheck = 200};
+	case (life_atmcash > 200 000):life_paycheck = 100};
+	case (life_atmcash > 300 000):life_paycheck = 50};
+	case (life_atmcash > 400 000):life_paycheck = 25};
+	case (life_atmcash > 500 000):life_paycheck = 0};
+	case (PlayerSide = west && independent):{life_paycheck = 1200};
+};
+
 life_session_completed = true;

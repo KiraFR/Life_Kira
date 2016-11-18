@@ -55,6 +55,28 @@ switch (true) do
 				player enableFatigue true;
 			};
 		};
+		if (([true,_item,1]call life_fnc_handleInv)) then
+		{
+			life_thirst = 100;
+			player setFatigue 1;
+			[] spawn
+			{
+				life_redgull_effect = time;
+				titleText[localize "STR_ISTR_RedGullEffectFucked","PLAIN"];
+				"redgullblur" ppEffectEnable true;
+				enableCamShake true;
+				"redgullblur" ppEffectAdjust [1,0.4,0,[0,0,0,0],[1,1,1,0],[1,1,1,1]];
+				addCamShake [5, 5, 25];
+				5 fadeSound 0.6;
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+				player enableFatigue true;
+				"dynamicBlur" ppEffectEnable false; // disable ppeffect
+				"dynamicBlur" ppEffectAdjust [0]; // enables normal vision
+				resetCamShake; // resets the shake
+				20 fadeSound 1;	 //fades the sound back to normal
+			};
+		
+		};
 	};
 	
 	case (_item == "spikeStrip"):
