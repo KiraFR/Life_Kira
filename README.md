@@ -9,8 +9,17 @@ Changelog 0.0.0.2:
   - Ajout d'un script d'emoji dans les messages de telephone
 
 Changelog 0.0.0.3:
-  -Ajout de la fourrière automobile , aerien , bateau
+  - Ajout de la fourrière automobile , aerien , bateau
   
 Changelog 0.0.0.4:
-  -Ajout de La Bourse Dynamique
+  - Ajout de La Bourse Dynamique
+ 
+ Changelog 0.0.0.5:
+  - Ajout d'un script de points permis
+  - Plus aucun points permis => suppression permis Voiture,Camion
+  - Plus aucun points permis => Attente de 30 min avant de pouvoir racheter les permis Voiture,Camion
+  - Ajout Table Permis
+  - Ajout Camera 3D pour les shops Vehicules
+  - Ajout de Radar sur les routes
+
   
