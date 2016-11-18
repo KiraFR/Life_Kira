@@ -32,7 +32,7 @@ _value = 0;
 
 if(_value > 0) then
 {
-	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]],RemoteExec ["life_fnc_broadcast",1];
+	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",1];
 	life_atmcash = life_atmcash + _value;
 	_vehicle setVariable["Trunk",[],true];
 }

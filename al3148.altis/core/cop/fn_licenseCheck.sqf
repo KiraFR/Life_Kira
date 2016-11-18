@@ -20,4 +20,4 @@ _licenses = "";
 
 if(_licenses == "") then {_licenses = (localize "STR_Cop_NoLicensesFound");};
 
-[profileName,_licenses],RemoteExecCall ["life_fnc_licensesRead",_cop];
+[profileName,_licenses] RemoteExecCall ["life_fnc_licensesRead",_cop];

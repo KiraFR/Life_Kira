@@ -34,7 +34,7 @@ while {true} do
 if(!alive (_search select 0) || (_search select 0) distance air_sp > 10) exitWith {life_action_inUse = false; hint localize "STR_Service_Chopper_Missing"};
 if(!local (_search select 0)) then
 {
-	[(_search select 0),1],RemoteExecCall ["life_fnc_setFuel",(_search select 0)];
+	[(_search select 0),1] RemoteExecCall ["life_fnc_setFuel",(_search select 0)];
 }
 	else
 {

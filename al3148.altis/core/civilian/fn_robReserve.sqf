@@ -11,13 +11,13 @@ _funds = [_this,1,-1,[0]] call BIS_fnc_param;
 _toFar = false;
 
 if(isNull _vault OR _funds == -1) exitWith {}; //Bad data
-if(player distance _vault > 10) exitWith {[_vault,-1],RemoteExecCall ["TON_fnc_robberyState",0]; hint "You were to stay within 10m of the vault!"};
+if(player distance _vault > 10) exitWith {[_vault,-1] RemoteExecCall ["TON_fnc_robberyState",0]; hint "You were to stay within 10m of the vault!"};
 
-if(_funds < 50000) exitWith{[_vault,-1],RemoteExecCall ["TON_fnc_robberyState",0]; hint "There wasn't enough funds in the reserve...";};
+if(_funds < 50000) exitWith{[_vault,-1] RemoteExecCall ["TON_fnc_robberyState",0]; hint "There wasn't enough funds in the reserve...";};
 
 _timer = time + (10 * 60); //Default timer is 10 minutes to rob.
 titleText["Cracking the safe...","PLAIN"];
-[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"],RemoteExec ["life_fnc_broadcast",nil];
+[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"] RemoteExec ["life_fnc_broadcast",nil];
 
 
 while {true} do
@@ -38,19 +38,19 @@ switch(true) do
 	case (_toFar):
 	{
 		hint "You went to far from the safe, the robbery has failed!";
-		[[_vault,0],RemoteExecCall ["TON_fnc_robberyState",0];
+		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
 	
 	case (!alive player):
 	{
 		hint "Because you died the robbery failed.";
-		[[_vault,0],RemoteExecCall ["TON_fnc_robberyState",0];
+		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
 	
 	case (life_istazed):
 	{
 		hint "You were tazed, the robbery has failed!";
-		[[_vault,0],RemoteExecCall ["TON_fnc_robberyState",0];
+		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
 	
 	case ((round(_timer - time)) < 1):
@@ -63,6 +63,6 @@ switch(true) do
 			life_use_atm = true;
 		};
 		life_cash = life_cash + _funds;
-		[[_vault,1,_funds],RemoteExecCall ["TON_fnc_robberyState",0];
+		[[_vault,1,_funds] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
 };

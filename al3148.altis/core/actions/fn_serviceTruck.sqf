@@ -19,7 +19,7 @@ if(count (_nearby) > 1) then
 	titleText[format["You have refueled/repaired %1",_name],"PLAIN"];
 	if(!local _vehicle) then
 	{
-		[{_vehicle setFuel 1;},RemoteExecCall ["BIS_fnc_spawn",_vehicle];
+		[{_vehicle setFuel 1;}] RemoteExecCall ["BIS_fnc_spawn",_vehicle];
 	}
 		else
 	{

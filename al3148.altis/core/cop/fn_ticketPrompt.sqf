@@ -27,7 +27,7 @@ _control ctrlSetStructuredText parseText format["<t align='center'><t size='.8px
 	waitUntil {life_ticket_paid OR (isNull (findDisplay 2600))};
 	if(isNull (findDisplay 2600) && !life_ticket_paid) then
 	{
-		[0,"STR_Cop_Ticket_Refuse",true,[profileName]],RemoteExec ["life_fnc_broadcast",west];
-		[1,"STR_Cop_Ticket_Refuse",true,[profileName]],RemoteExec ["life_fnc_broadcast",life_ticket_cop];
+		[0,"STR_Cop_Ticket_Refuse",true,[profileName]] RemoteExec ["life_fnc_broadcast",west];
+		[1,"STR_Cop_Ticket_Refuse",true,[profileName]] RemoteExec ["life_fnc_broadcast",life_ticket_cop];
 	};
 };

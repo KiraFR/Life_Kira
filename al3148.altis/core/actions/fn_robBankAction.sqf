@@ -18,4 +18,4 @@ hint "Attempting to open the safe...";
 sleep 1;
 bank_query_funds = nil;
 
-[[_funds],RemoteExecCall "bank_robbery",1];
+[_funds] RemoteExecCall ["bank_robbery",1];

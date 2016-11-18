@@ -17,4 +17,4 @@ if(!isPlayer _unit) exitWith {};
 
 _unit setVariable["restrained",true,true];
 [player], RemoteExecCall ["life_fnc_restrain", _unit];
-[0,"STR_NOTF_Restrained",true,[_unit getVariable["realname", name _unit], profileName]],RemoteExec ["life_fnc_broadcast",west];
+[0,"STR_NOTF_Restrained",true,[_unit getVariable["realname", name _unit], profileName]] RemoteExec ["life_fnc_broadcast",west];

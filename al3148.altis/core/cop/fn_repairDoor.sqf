@@ -46,7 +46,7 @@ switch (typeOf _building) do {
 while {true} do
 {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[player,"AinvPknlMstpSnonWnonDnon_medic_1"],RemoteExec ["life_fnc_animSync",1];
+		[player,"AinvPknlMstpSnonWnonDnon_medic_1"] RemoteExec ["life_fnc_animSync",1];
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	sleep 0.26;

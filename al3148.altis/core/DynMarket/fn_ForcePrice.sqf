@@ -26,7 +26,7 @@ _exists = false;
 
 if (_exists) then {
 	hint parseText "<t color='#01DF01'>--UPDATED--</t><br/><t color='#01DF01'>SUCCESSFULLY ADJUSTED THE PRICE, IT WILL UPDATE WITH THE NEXT PRICEUPDATES!</t>";
-	[_tochangeNameText,_tochangePriceNumber],RemoteExecCall ["TON_fnc_changePrice",0];
+	[_tochangeNameText,_tochangePriceNumber] RemoteExecCall ["TON_fnc_changePrice",0];
 } else {
 	hint parseText "<t color='#FF0000'>--ERROR--</t><br/><t color='#FF0000'>THE REQUESTED ITEM DOES NOT EXIST, MAYBE YOU MISSPELLED IT?</t>";
 };

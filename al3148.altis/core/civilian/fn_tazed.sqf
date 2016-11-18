@@ -32,11 +32,11 @@ if(_shooter isKindOf "Man" && alive player) then
 			{player addMagazine _x;} foreach _curMags;
 		};
 		
-		[_unit],RemoteExecCall ["life_fnc_tazeSound",1];
+		[_unit] RemoteExecCall ["life_fnc_tazeSound",1];
 		_obj = "Land_ClutterCutter_small_F" createVehicle (getPosATL _unit);
 		_obj setPosATL (getPosATL _unit);
 		[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],RemoteExec ["life_fnc_animSync",1];
-		[0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable["realname",name _shooter]]]RemoteExec,["life_fnc_broadcast",1];
+		[0,"STR_NOTF_Tazed",true,[profileName, _shooter getVariable["realname",name _shooter]]] RemoteExec ["life_fnc_broadcast",1];
 		_unit attachTo [_obj,[0,0,0]];
 		disableUserInput true;
 		sleep 15;

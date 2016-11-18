@@ -13,5 +13,5 @@ if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 
 if(_target getVariable["robbed",false]) exitWith {};
-[player],RemoteExecCall ["life_fnc_robPerson",_target];
+[player] RemoteExecCall ["life_fnc_robPerson",_target];
 _target setVariable["robbed",TRUE,TRUE];

@@ -14,7 +14,7 @@ if (isNil "DYNAMICMARKET_boughtItems") then {DYNAMICMARKET_boughtItems=[];};
 switch (_mode) do {
 	case 0:
 	{
-		[[DYNAMICMARKET_boughtItems],RemoteExecCall ["TON_fnc_getUpdate",0];
+		[[DYNAMICMARKET_boughtItems] RemoteExecCall ["TON_fnc_getUpdate",0];
 
 		DYNAMICMARKET_boughtItems = [];
 	};
