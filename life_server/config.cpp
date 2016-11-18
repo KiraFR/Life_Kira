@@ -139,10 +139,15 @@ class CfgFunctions
 			class removeContact {};
 			class findContact{};
 			class msgRequest {};
-			class delMsg {}
-			class insertRepertoire {}
-			class CheckRepertoire {}
+			class delMsg {};
+			class insertRepertoire {};
+			class CheckRepertoire {};
 		};
+	};
+	class ImpotKira {
+		tag = "IMPT";
+		file = "\life_server\Functions\impot";
+		class impot{};
 	};
 };
 
