@@ -5,7 +5,7 @@
 	Description:
 	fais les impôts
 */
-private["_all","_queryCashR","_queryuidGR","_bankE","_bankG","_listG"];
+private["_all","_queryCashR","_queryuidGR","_bankE","_bankG","_listG","_who"];
 params ["_type","_uid","_owner"];
 _all = 0;
 _listG = [];
@@ -16,36 +16,35 @@ switch(_type) do {
 
 	//joueur
 	case 0: {
-		//if(side _x == "civilian") then{
+		//
 			{
-				//if(getPlayerUID _x == _uid)exitwith {};
-				diag_log format["getPlayerUID _x: %1",getPlayerUID _x];
-				_queryCash = format["SELECT bankacc FROM players WHERE playerid='%1'",getPlayerUID _x];
-				_queryCashR = [_queryCash,2] call DB_fnc_asyncCall;
-				_queryCashR = _queryCashR select 0;
-				diag_log format["_queryCashR: %1",_queryCashR];
-				if(_queryCashR < 1000000) exitWith{};
-				if((1000000 < _queryCashR) && (_queryCashR < 5000000)) then {
-					_one = _queryCashR * 1/100;
-					_queryCashR = _queryCashR - _one;
-					_all = _all + _one;
+				if(side _x == civilian && getPlayerUID _x != _uid) then{
+					_queryCash = format["SELECT bankacc FROM players WHERE playerid='%1'",getPlayerUID _x];
+					_queryCashR = [_queryCash,2] call DB_fnc_asyncCall;
+					_queryCashR = _queryCashR select 0;
+					if(_queryCashR < 1000000) exitWith{};
+					if((1000000 < _queryCashR) && (_queryCashR < 5000000)) then {
+						_one = _queryCashR * 1/100;
+						_queryCashR = _queryCashR - _one;
+						_all = _all + _one;
+					};
+					if((5000000 < _queryCashR) && (_queryCashR < 10000000)) then {
+						_three = _queryCashR * 3/100;
+						_queryCashR = _queryCashR - _three;
+						_all = _all + _three;
+					};
+					if(10000000 < _queryCashR) then {
+						_six = _queryCashR * 6/100;
+						_queryCashR = _queryCashR - _six;
+						_all = _all + _six;
+					};
+					_query = format["UPDATE players SET bankacc='%1' WHERE playerid='%2'",_queryCashR,getPlayerUID _x];
+					[_query,1] call DB_fnc_asyncCall;
+					_ownerID = owner _x;
+					[[0,_queryCashR],"life_fnc_RefreshReceived",_ownerID,false] spawn life_fnc_MP;
 				};
-				if((5000000 < _queryCashR) && (_queryCashR < 10000000)) then {
-					_three = _queryCashR * 3/100;
-					_queryCashR = _queryCashR - _three;
-					_all = _all + _three;
-				};
-				if(10000000 < _queryCashR) then {
-					_six = _queryCashR * 6/100;
-					_queryCashR = _queryCashR - _six;
-					_all = _all + _six;
-				};
-				_query = format["UPDATE players SET bankacc='%1' WHERE playerid='%2'",_queryCashR,getPlayerUID _x];
-				[_query,1] call DB_fnc_asyncCall;
-				_ownerID = owner _x;
-				[[0,_queryCashR],"life_fnc_RefreshReceived",_ownerID,false] spawn life_fnc_MP;
 			}forEach playableUnits;
-		//};
+		_who = "civ";
 	};
 
 	//entreprise
@@ -78,40 +77,10 @@ switch(_type) do {
 			_listG pushBack _list;
 		}foreach _queryEntreR;
 		[[1,_listG],"life_fnc_RefreshReceived",true,false] spawn life_fnc_MP;
-	};
-	//gang
-	case 2:{
-		_querygang = "SELECT id,bank FROM gangs WHERE active = '1' AND entreprise='0'";
-		_querygangR = [_querygang,2,true] call DB_fnc_asyncCall;
-		{
-			_bankG = _x select 1;
-			switch(true) do {
-				case ((1000000 < _bankG) && (_bankG < 5000000)):{
-					_three = _bankG * 3/100;
-					_bankG = _bankG - _three;
-					_all = _all + _three;
-				};
-				case ((5000000 < _bankG) && (_bankG < 10000000)):{
-					_four = _bankG * 4/100;
-					_bankG = _bankG - _four;
-					_all = _all + _four;
-				};
-				case (10000000 < _bankG):{
-					_eight = _bankG * 8/100;
-					_bankG = _bankG - _eight;
-					_all = _all + _eight;
-				};
-				default{};
-			};
-			_query = format["UPDATE gangs SET bank='%1' WHERE id='%2'",_bankG,_x select 0];
-			[_query,1] call DB_fnc_asyncCall;
-			_list = [_x select 0,_bankG];
-			_listG pushBack _list;
-		}foreach _querygangR;
-		[[2,_listG],"life_fnc_RefreshReceived",true,false] spawn life_fnc_MP;
+		_who = "entreprise";
 	};
 };
-_all = _queryuidGR + _all;
-_query = format["UPDATE players SET bankacc='%2' WHERE playerid='%1'",_uid,_all];
+_total = _queryuidGR + _all;
+_query = format["INSERT INTO gouv (par,montant, type, pour, total) VALUE ('%1','%2,'""Impot""','%3','%4') WHERE playerid='%1'",_uid,_all,_who,_total];
 [_query,1] call DB_fnc_asyncCall;
 [[0,_all],"life_fnc_RefreshReceived",(owner _owner),false] spawn life_fnc_MP;
