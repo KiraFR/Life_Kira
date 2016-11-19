@@ -64,7 +64,7 @@ switch (true) do
 	{
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
-		[0,"STR_Jail_EscapeNOTF",true,[profileName]] RemoteExec ["life_fnc_broadcast",nil];
+		[0,"STR_Jail_EscapeNOTF",true,[profileName]] RemoteExec ["life_fnc_broadcast",west];
 		[5] call SOCK_fnc_updatePartial;
 	};
 	

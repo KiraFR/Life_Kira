@@ -13,7 +13,7 @@ if(isNull _target) exitWith {};
 if(!isPlayer _target) exitWith {};
 if(player distance _target > 4) exitWith {};
 life_knockout = true;
-[player,"AwopPercMstpSgthWrflDnon_End2"] RemoteExec ["life_fnc_animSync",nil];
+[player,"AwopPercMstpSgthWrflDnon_End2"] RemoteExecCall ["life_fnc_animSync",0];
 sleep 0.08;
 [_target,profileName] RemoteExecCall ["life_fnc_knockedOut",_target];
 

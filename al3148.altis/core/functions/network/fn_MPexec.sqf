@@ -46,7 +46,7 @@ if(_callerUID != "__SERVER__" && _callerName != "__SERVER__" && toLower(_functio
 		if(_reportUID != _callerUID) exitWith {
 			if(isServer && _mode == 0) then {
 				[_callerName,_callerUID,"false_reports_to_spyglass"] call SPY_fnc_cookieJar;
-				[[_callerName,"False reporting to SpyGlass (cheater)"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+				[_callerName,"False reporting to SpyGlass (cheater)"] RemoteExecCall ["SPY_fnc_notifyAdmins",0];
 			};
 			_exitScope = true;
 		};
@@ -57,7 +57,7 @@ if(_callerUID != "__SERVER__" && _callerName != "__SERVER__" && toLower(_functio
 	if(_callerName != _reportName) exitWith {
 		if(isServer && _mode == 0) then {
 			[_callerName,_callerUID,"false_reports_to_spyglass"] call SPY_fnc_cookieJar;
-			[[_callerName,"False reporting to SpyGlass (cheater)"],"SPY_fnc_notifyAdmins",true,false] spawn life_fnc_MP;
+			[_callerName,"False reporting to SpyGlass (cheater)"] RemoteExecCall ["SPY_fnc_notifyAdmins",0];
 		};
 		_exitScope = true;
 	};

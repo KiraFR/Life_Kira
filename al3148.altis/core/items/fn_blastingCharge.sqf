@@ -13,10 +13,10 @@ if(_vault getVariable["safe_open",false]) exitWith {hint localize "STR_ISTR_Blas
 if(!([false,"blastingcharge",1] call life_fnc_handleInv)) exitWith {}; //Error?
 
 _vault setVariable["chargeplaced",true,true];
-[[0,"STR_ISTR_Blast_Placed"],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+[0,"STR_ISTR_Blast_Placed"] RemoteExec ["life_fnc_broadcast",west];
 hint localize "STR_ISTR_Blast_KeepOff";
 _handle = [] spawn life_fnc_demoChargeTimer;
-[[],"life_fnc_demoChargeTimer",west,false] spawn life_fnc_MP;
+[] RemoteExecCall ["life_fnc_demoChargeTimer",west];
 
 waitUntil {scriptDone _handle};
 sleep 0.9;

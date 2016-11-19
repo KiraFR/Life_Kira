@@ -12,7 +12,7 @@ if(isNull _robber) exitWith {}; //No one to return it to?
 if(life_cash > 0) then
 {
 	[life_cash], RemoteExecCall ["life_fnc_robReceive",_robber];
-	[1,"STR_NOTF_Robbed",true,[_robber getVariable["realname",name _robber],profileName,[life_cash] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",nil];
+	[1,"STR_NOTF_Robbed",true,[_robber getVariable["realname",name _robber],profileName,[life_cash] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",rob];
 	life_cash = 0;
 }
 	else

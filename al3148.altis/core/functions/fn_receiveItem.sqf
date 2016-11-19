@@ -19,11 +19,11 @@ if(_diff != (parseNumber _val)) then
 	if(([true,_item,_diff] call life_fnc_handleInv)) then
 	{
 		hint format[localize "STR_MISC_TooMuch_3",_from getVariable["realname",name _from],_val,_diff,((parseNumber _val) - _diff)];
-		[[_from,_item,str((parseNumber _val) - _diff),_unit],"life_fnc_giveDiff",_from,false] spawn life_fnc_MP;
+		[_from,_item,str((parseNumber _val) - _diff),_unit] RemoteExecCall ["life_fnc_giveDiff",_from];
 	}
 		else
 	{
-		[[_from,_item,_val,_unit,false],"life_fnc_giveDiff",_from,false] spawn life_fnc_MP;
+		[_from,_item,_val,_unit,false] RemoteExecCall ["life_fnc_giveDiff",_from];
 	};
 }
 	else
@@ -37,6 +37,6 @@ if(_diff != (parseNumber _val)) then
 	}
 		else
 	{
-		[[_from,_item,_val,_unit,false],"life_fnc_giveDiff",_from,false] spawn life_fnc_MP;
+		[_from,_item,_val,_unit,false] RemoteExecCall ["life_fnc_giveDiff",_from];
 	};
 };

@@ -17,7 +17,7 @@ if(_funds < 50000) exitWith{[_vault,-1] RemoteExecCall ["TON_fnc_robberyState",0
 
 _timer = time + (10 * 60); //Default timer is 10 minutes to rob.
 titleText["Cracking the safe...","PLAIN"];
-[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"] RemoteExec ["life_fnc_broadcast",nil];
+[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"] RemoteExec ["life_fnc_broadcast",west];
 
 
 while {true} do

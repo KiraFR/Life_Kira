@@ -196,10 +196,10 @@ switch (_code) do
 				titleText [localize "STR_MISC_SirensON","PLAIN"];
 				_veh setVariable["siren",true,true];
 				if(playerSide == west) then {
-					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
+					[_veh] RemoteExecCall ["life_fnc_copSiren",0];
 				} else {
 					//I do not have a custom sound for this and I really don't want to go digging for one, when you have a sound uncomment this and change medicSiren.sqf in the medical folder.
-					//[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+					//[_veh] RemoteExecCall ["life_fnc_medicSiren",nil];
 				};
 			};
 		};
@@ -236,14 +236,14 @@ switch (_code) do
 						if(local _veh) then {
 							_veh lock 0;
 						} else {
-							[[_veh,0],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+							[_veh,0] RemoteExecCall ["life_fnc_lockVehicle",_veh];
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 					} else {
 						if(local _veh) then {
 							_veh lock 2;
 						} else {
-							[[_veh,2],"life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
+							[_veh,2] RemoteExecCall ["life_fnc_lockVehicle",_veh];
 						};	
 						systemChat localize "STR_MISC_VehLock";
 					};

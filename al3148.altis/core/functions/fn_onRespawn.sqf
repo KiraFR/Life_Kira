@@ -49,7 +49,7 @@ if(life_is_arrested) then
 
 _unit addRating 100000;
 
-[[_unit,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+[_unit,life_sidechat,playerSide] RemoteExecCall ["TON_fnc_managesc",2];
 [] call life_fnc_hudUpdate;
 cutText ["","BLACK IN"];
 

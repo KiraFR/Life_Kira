@@ -80,7 +80,7 @@ diag_log "----------------------------------------------------------------------
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
 life_sidechat = true;
-[[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+[player,life_sidechat,playerSide] RemoteExecCall ["TON_fnc_managesc",2];
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
@@ -105,7 +105,7 @@ life_fnc_garageRefund = compileFinal
 
 _boughtItems = [];
 
-	[[getPlayerUID player],"TON_fnc_playerLogged",false,false] 
+	[getPlayerUID player] RemoteExecCall ["TON_fnc_playerLogged",2];
 
-spawn life_fnc_MP;
+
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

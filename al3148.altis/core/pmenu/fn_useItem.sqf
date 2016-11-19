@@ -64,6 +64,7 @@ switch (true) do
 				life_redgull_effect = time;
 				titleText[localize "STR_ISTR_RedGullEffectFucked","PLAIN"];
 				"redgullblur" ppEffectEnable true;
+				"redgullblur" ppEffectCommit 5;
 				enableCamShake true;
 				"redgullblur" ppEffectAdjust [1,0.4,0,[0,0,0,0],[1,1,1,0],[1,1,1,1]];
 				addCamShake [5, 5, 25];

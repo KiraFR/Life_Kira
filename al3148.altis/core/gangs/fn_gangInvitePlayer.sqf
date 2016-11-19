@@ -24,7 +24,7 @@ _action = [
 ] call BIS_fnc_guiMessage;
 
 if(_action) then {
-	[[profileName,grpPlayer],"life_fnc_gangInvite",_unit,false] spawn life_fnc_MP;
+	[profileName,grpPlayer] RemoteExecCall ["life_fnc_gangInvite",owner _unit];
 	_members = grpPlayer getVariable "gang_members";
 	_members pushBack getPlayerUID _unit;
 	grpPlayer setVariable["gang_members",_members,true];

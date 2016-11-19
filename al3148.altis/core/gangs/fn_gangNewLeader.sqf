@@ -25,8 +25,8 @@ if(_action) then {
 	if(_unitID == "") exitWith {hint "Bad UID?"}; //Unlikely?
 	grpPlayer setVariable["gang_owner",_unitID,true];
 	grpPlayer selectLeader _unit;
-	[[_unit,grpPlayer],"TON_fnc_clientGangLeader",_unit,false] spawn life_fnc_MP; //Boot that bitch!
-	[[3,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP; //Update the database.
+	[_unit,grpPlayer] RemoteExecCall ["TON_fnc_clientGangLeader",_unit]; //Boot that bitch!
+	[3,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2]; //Update the database.
 } else {
 	hint localize "STR_GNOTF_TransferCancel";
 };

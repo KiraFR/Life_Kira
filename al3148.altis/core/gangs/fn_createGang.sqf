@@ -18,7 +18,7 @@ _badChar = false;
 if(_badChar) exitWith {hint localize "STR_GNOTF_IncorrectChar";};
 if(life_atmcash < (__GETC__(life_gangPrice))) exitWith {hint format[localize "STR_GNOTF_NotEnoughMoney",[((__GETC__(life_gangPrice))-life_atmcash)] call life_fnc_numberText];};
 
-[[player,getPlayerUID player,_gangName],"TON_fnc_insertGang",false,false] spawn life_fnc_MP;
+[player,getPlayerUID player,_gangName] RemoteExecCall ["TON_fnc_insertGang",2];
 hint localize "STR_NOTF_SendingData";
 closeDialog 0;
 life_action_gangInUse = true;

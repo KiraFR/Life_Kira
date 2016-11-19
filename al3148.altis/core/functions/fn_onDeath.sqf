@@ -24,7 +24,7 @@ if(side _source == west && !life_use_atm) then
 {
 	if(life_cash != 0) then
 	{
-		[format["$%1 from the Federal Reserve robbery was returned from the robber being killed.",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[format["$%1 from the Federal Reserve robbery was returned from the robber being killed.",[life_cash] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
 		life_cash = 0;
 	};
 };
@@ -33,9 +33,9 @@ if(side _source == west && !life_use_atm) then
 if(side _source == civilian && _source != _unit && !local _source) then
 {
 	if(vehicle _source isKindOf "LandVehicle") then {
-		[[2],"life_fnc_removeLicenses",_source,false] spawn life_fnc_MP;
+		[2] RemoteExecCall ["life_fnc_removeLicenses",_source];
 	} else {
-		[[3],"life_fnc_removeLicenses",_source,false] spawn life_fnc_MP;
+		[3] RemoteExecCall ["life_fnc_removeLicenses",_source];
 	};
 };
 

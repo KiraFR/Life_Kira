@@ -9,4 +9,4 @@ _test setVelocity [100,0,0];
 
 if(alive player) then {player setDamage 1;};
 
-[0,format["%1 has set off their suicide vest.",name player]] RemoteExec ["life_fnc_broadcast",1];
+[0,format["%1 has set off their suicide vest.",name player]] RemoteExec ["life_fnc_broadcast",0];

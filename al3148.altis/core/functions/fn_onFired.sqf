@@ -15,6 +15,6 @@ if(_ammoType == "GrenadeHand_stone") then {
 			_position = getPosATL _this;
 			sleep 0.1;
 		};
-		[[_position],"life_fnc_flashbang",true,false] spawn life_fnc_MP;
+		[_position] RemoteExecCall ["life_fnc_flashbang",0];
 	};
 };
