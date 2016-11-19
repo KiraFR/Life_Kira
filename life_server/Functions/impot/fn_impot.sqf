@@ -9,8 +9,7 @@ private["_all","_queryCashR","_queryuidGR","_bankE","_bankG","_listG","_who"];
 params ["_type","_uid","_owner"];
 _all = 0;
 _listG = [];
-_queryuidG = format["SELECT bankacc FROM players WHERE playerid='%1'",_uid];
-_queryuidGR = [_queryuidG,2] call DB_fnc_asyncCall;
+_queryuidGR = ["SELECT LAST(total) FROM gouv",2] call DB_fnc_asyncCall;
 _queryuidGR = _queryuidGR select 0;
 switch(_type) do {
 
@@ -41,7 +40,7 @@ switch(_type) do {
 					_query = format["UPDATE players SET bankacc='%1' WHERE playerid='%2'",_queryCashR,getPlayerUID _x];
 					[_query,1] call DB_fnc_asyncCall;
 					_ownerID = owner _x;
-					[[0,_queryCashR],"life_fnc_RefreshReceived",_ownerID,false] spawn life_fnc_MP;
+					[0,_queryCashR] RemoteExecCall ["life_fnc_RefreshReceived",_ownerID];
 				};
 			}forEach playableUnits;
 		_who = "civ";
@@ -76,11 +75,11 @@ switch(_type) do {
 			_list = [_x select 0,_bankE];
 			_listG pushBack _list;
 		}foreach _queryEntreR;
-		[[1,_listG],"life_fnc_RefreshReceived",true,false] spawn life_fnc_MP;
+		[1,_listG] RemoteExecCall ["life_fnc_RefreshReceived",RCLIENT];
 		_who = "entreprise";
 	};
 };
 _total = _queryuidGR + _all;
 _query = format["INSERT INTO gouv (par,montant, type, pour, total) VALUE ('%1','%2,'""Impot""','%3','%4') WHERE playerid='%1'",_uid,_all,_who,_total];
 [_query,1] call DB_fnc_asyncCall;
-[[0,_all],"life_fnc_RefreshReceived",(owner _owner),false] spawn life_fnc_MP;
+[0,_all] RemoteExecCall ["life_fnc_RefreshReceived",(owner _owner)];

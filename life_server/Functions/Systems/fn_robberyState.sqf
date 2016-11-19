@@ -19,7 +19,7 @@ switch(_state) do
 	case -1: {_vault setVariable["fed_rob_ip",false,true]; _vault setVariable["fed_locked",false,true];};
 	case 0:
 	{
-		[[2,(localize "STR_NOTF_FRRobbery_fail")],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+		[2,(localize "STR_NOTF_FRRobbery_fail")] remoteExecCall ["life_fnc_broadcast",west];
 		_vault setVariable["fed_locked",true,true];
 		sleep (10 * 60); //Wait 10 minutes
 		_vault setVariable["fed_locked",false,true];
@@ -28,7 +28,7 @@ switch(_state) do
 	
 	case 1:
 	{
-		[[1,format[(localize "STR_NOTF_FRRobbery_Success"),[_funds] call life_fnc_numberText]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+		[1,format[(localize "STR_NOTF_FRRobbery_Success"),[_funds] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
 		_vault setVariable["fed_locked",true,true];
 		sleep (30 * 60); //Wait 30 minutes
 		_vault setVariable["fed_locked",false,true];
@@ -44,6 +44,6 @@ switch(_state) do
 		};
 		
 		_funds = round(_funds / (count playableUnits) * 3);
-		[[_funds],"life_fnc_fedSuccess",false,false] spawn life_fnc_MP;
+		[_funds] remoteExecCall ["life_fnc_fedSuccess",RSERV];
 	};
 };

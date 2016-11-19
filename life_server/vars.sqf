@@ -8,7 +8,8 @@
 */
 
 //Calculate starting player base and times it by 1000 dollars to give initial bank funding.
-life_federal_funds = (count playableUnits) * 750;
+_query = ["SELECT LAST(total) FROM gouv",2] call DB_fnc_asyncCall;
+life_federal_funds = _query * 1/3;
 
 life_animals_spawned = false;
 life_animals_array = [];

@@ -7,6 +7,11 @@
 ###             WITH THIS HEADER / NOTIFICATION               ###
 #################################################################
 */
-
+private["_owner"];
 _playerUID = _this select 0;
-[[1,DYNMARKET_Items_CurrentPriceArr],"life_fnc_update",_playerUID,false] spawn life_fnc_MP;
+{
+	if(getplayerUID _x == _playerUID)exitWith{
+		_owner = owner _x;
+	};
+}foreach switchableUnits;
+[1,DYNMARKET_Items_CurrentPriceArr] RemoteExec ["life_fnc_update",_owner];

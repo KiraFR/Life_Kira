@@ -87,7 +87,6 @@ class CfgFunctions
 			class spikeStrip {};
 			class logIt {};
 			class federalUpdate {};
-			class chopShopSell {};
 			class clientDisconnect {};
 			class cleanupRequest {};
 			class setObjVar {};

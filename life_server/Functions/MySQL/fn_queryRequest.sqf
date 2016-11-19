@@ -16,9 +16,6 @@ params[
 	["_side",sideUnknown,[civilian]],
 	["_ownerID",ObjNull,[ObjNull]]
 ];
-_uid = [_this,0,"",[""]] call BIS_fnc_param;
-_side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
-_ownerID = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
 
 if(isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
@@ -44,11 +41,12 @@ if(Debug) then {
 	diag_log "------------------------------------------------";
 };
 if(typeName _queryResult == "STRING") exitWith {
-	[[],"SOCK_fnc_insertPlayerInfo",_ownerID,false,true] spawn life_fnc_MP;
+
+	[] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
 };
 
 if(count _queryResult == 0) exitWith {
-	[[],"SOCK_fnc_insertPlayerInfo",_ownerID,false,true] spawn life_fnc_MP;
+	[] remoteExecCall ["SOCK_fnc_insertPlayerInfo",_ownerID];
 };
 
 //Blah conversion thing from a2net->extdb
@@ -110,4 +108,4 @@ _queryResult set [22,_numreperResult];
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[25,_keyArr];
 
-[_queryResult,"SOCK_fnc_requestReceived",_ownerID,false] spawn life_fnc_MP;
+_queryResult remoteExecCall ["SOCK_fnc_requestReceived",_ownerID];

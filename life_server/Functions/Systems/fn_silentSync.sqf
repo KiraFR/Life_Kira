@@ -19,7 +19,8 @@ if(_uid == "") exitWith {};
 if(!isNil "hc_1" && {life_HC_isActive}) exitWith {
 	private["_packet"];
 	_packet = _this;
-	[_packet,"HC_fnc_silentSync",(owner hc_1),FALSE] spawn BIS_fnc_MP;
+
+	_packet remoteExecCall ["HC_fnc_silentSync",(owner hc_1)];
 };
 
 _cash = [_cash] call DB_fnc_numberSafe;

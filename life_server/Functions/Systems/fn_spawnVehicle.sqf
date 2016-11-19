@@ -37,13 +37,13 @@ if(count _vInfo == 0) exitWith {};
 if((_vInfo select 5) == 0) exitWith
 {
 
-	[[1,format[(localize "STR_Garage_SQLError_Destroyed"),_vInfo select 2]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	[1,format[(localize "STR_Garage_SQLError_Destroyed"),_vInfo select 2]] RemoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 if((_vInfo select 6) == 1) exitWith
 {
 
-	[[1,format[(localize "STR_Garage_SQLError_Active"),_vInfo select 2]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	[1,format[(localize "STR_Garage_SQLError_Active"),_vInfo select 2]] RemoteExecCall ["life_fnc_broadcast",_unit];
 };
 if(typeName _sp != "STRING") then {
 	_nearVehicles = nearestObjects[_sp,["Car","Air","Ship"],10];
@@ -52,9 +52,8 @@ if(typeName _sp != "STRING") then {
 };
 if(count _nearVehicles > 0) exitWith
 {
-
-	[[_price,_unit_return],"life_fnc_garageRefund",_unit,false] spawn life_fnc_MP;
-	[[1,(localize "STR_Garage_SpawnPointError")],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	[_price,_unit_return] RemoteExecCall ["life_fnc_garageRefund",_unit];
+	[[1,(localize "STR_Garage_SpawnPointError")] RemoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 _query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
@@ -78,11 +77,11 @@ if(typeName _sp == "STRING") then {
 };
 _vehicle allowDamage true;
 //Send keys over the network.
-[[_vehicle],"life_fnc_addVehicle2Chain",_unit,false] spawn life_fnc_MP;
+[_vehicle] RemoteExecCall ["life_fnc_addVehicle2Chain",_unit];
 [_pid,_side,_vehicle,1] call TON_fnc_keyManagement;
 _vehicle lock 2;
 //Reskin the vehicle 
-[[_vehicle,_vInfo select 8],"life_fnc_colorVehicle",nil,false] spawn life_fnc_MP;
+[_vehicle,_vInfo select 8] RemoteExecCall ["life_fnc_colorVehicle",RCLIENT];
 _vehicle setVariable["vehicle_info_owners",[[_pid,_name]],true];
 _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 //_vehicle addEventHandler["Killed","_this spawn TON_fnc_vehicleDead"]; //Obsolete function?
@@ -91,16 +90,17 @@ _vehicle setVariable["dbInfo",[(_vInfo select 4),_vInfo select 7]];
 //Sets of animations
 if((_vInfo select 1) == "civ" && (_vInfo select 2) == "B_Heli_Light_01_F" && _vInfo select 8 != 13) then
 {
-	[[_vehicle,"civ_littlebird",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
+
+	[_vehicle,"civ_littlebird",true] RemoteExecCall ["life_fnc_vehicleAnimate",_unit];
 };
 
 if((_vInfo select 1) == "cop" && (_vInfo select 2) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then
 {
-	[[_vehicle,"cop_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
+	[_vehicle,"cop_offroad",true] RemoteExecCall ["life_fnc_vehicleAnimate",_unit];
 };
 
 if((_vInfo select 1) == "med" && (_vInfo select 2) == "C_Offroad_01_F") then
 {
-	[[_vehicle,"med_offroad",true],"life_fnc_vehicleAnimate",_unit,false] spawn life_fnc_MP;
+	[_vehicle,"med_offroad",true] RemoteExecCall ["life_fnc_vehicleAnimate",_unit];
 };
-[[1,"Your vehicle is ready!"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+[1,"Your vehicle is ready!"] RemoteExecCall ["life_fnc_broadcast",_unit];

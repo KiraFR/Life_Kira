@@ -48,14 +48,14 @@ if(_impound) then
 {
 	if(count _vInfo == 0) exitWith
 	{
-		[[1,(localize "STR_Garage_Store_NotPersistent")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+		[[1,(localize "STR_Garage_Store_NotPersistent")] RemoteExecCall ["life_fnc_broadcast",(owner _unit)];
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
 	
 	if(_uid != getPlayerUID _unit) exitWith
 	{
-		[[1,(localize "STR_Garage_Store_NoOwnership")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+		[1,(localize "STR_Garage_Store_NoOwnership")] RemoteExecCall ["life_fnc_broadcast",(owner _unit)];
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};
@@ -69,5 +69,5 @@ if(_impound) then
 	};
 	life_garage_store = false;
 	(owner _unit) publicVariableClient "life_garage_store";
-	[[1,(localize "STR_Garage_Store_Success")],"life_fnc_broadcast",(owner _unit),false] spawn life_fnc_MP;
+	[1,(localize "STR_Garage_Store_Success")] RemoteExecCall ["life_fnc_broadcast",(owner _unit)];
 };

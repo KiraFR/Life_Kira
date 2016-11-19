@@ -8,7 +8,7 @@
 	any problems. The return method is 'hacky' but it's effective.
 */
 private["_array"];
-_array = [_this,0,[],[[]]] call BIS_fnc_param;
+params[["_array",[],[[]]];
 _array = str(str(_array));
 _array = toArray(_array);
 

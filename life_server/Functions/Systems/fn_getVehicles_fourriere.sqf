@@ -17,7 +17,8 @@ if(_pid == "" OR _side == sideUnknown OR _type == "" OR isNull _unit) exitWith
 {
 	if(!isNull _unit) then
 	{
-		[[[]],"life_fnc_fourriereMenu",(owner _unit),false] spawn life_fnc_MP;
+		[[]] remoteExecCall ["life_fnc_fourriereMenu",(owner _unit)];
+
 	};
 };
 
@@ -31,7 +32,7 @@ _side = switch(_side) do
 };
 
 if(_side == "Error") exitWith {
-	[[[]],"life_fnc_fourriereMenu",_unit,false] spawn life_fnc_MP;
+	[[]] remoteExecCall ["life_fnc_fourriereMenu",_unit];
 };
 
 _query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE pid='%1' AND alive='1' AND active='0' AND fourriere='1' AND side='%2' AND type='%3'",_pid,_side,_type];
@@ -47,7 +48,7 @@ if (Debug) then {
 	diag_log "------------------------------------------------";
 };
 if(typeName _queryResult == "STRING") exitWith {
-	[[[]],"life_fnc_fourriereMenu",_unit,false] spawn life_fnc_MP;
+	[[]] remoteExecCall ["life_fnc_fourriereMenu",_unit];
 };
 
-[[_queryResult],"life_fnc_fourriereMenu",_unit,false] spawn life_fnc_MP;
+[_queryResult] remoteExecCall ["life_fnc_fourriereMenu",_unit];

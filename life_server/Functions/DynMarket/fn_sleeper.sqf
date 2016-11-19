@@ -10,7 +10,7 @@
 
 while {true} do {
 	sleep (DYNMARKET_PriceUpdateInterval*60);
-	[[0],"life_fnc_update",true,false] spawn life_fnc_MP;
+	[0] RemoteExecCall ["life_fnc_update",RCLIENT];
 	sleep 5;
 	[] spawn TON_fnc_calculatePrices;
 	DYNMARKET_UpdateCount = DYNMARKET_UpdateCount + 1;

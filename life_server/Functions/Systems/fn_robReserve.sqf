@@ -18,14 +18,14 @@ _unit = owner _unit;
 
 if((_vault getVariable["fed_rob_ip",false])) exitWith
 {
-	[[1,localize "STR_FEDR_VInUse"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	[1,localize "STR_FEDR_VInUse"] remoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 if((_vault getVariable["fed_locked",false])) exitWith
 {
-	[[1,localize "STR_FEDR_VRecently"],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
+	[1,localize "STR_FEDR_VRecently"] remoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 if(_unit < 1) exitWith {}; //Bad unit number passed?!
 _vault setVariable["fed_rob_ip",true,true];
-[[_vault,life_federal_funds],"life_fnc_robReserve",_unit,false] spawn life_fnc_MP;
+[_vault,life_federal_funds] remoteExecCall ["life_fnc_robReserve",_unit];

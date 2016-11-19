@@ -9,9 +9,11 @@
 		1: INTEGER (1 = ASYNC + not return for update/insert, 2 = ASYNC + return for query's).
 */
 private["_queryStmt","_queryResult","_key","_mode","_return","_loop","_multiarr"];
-_queryStmt = [_this,0,"",[""]] call BIS_fnc_param;
-_mode = [_this,1,1,[0]] call BIS_fnc_param;
-_multiarr = [_this,2,false,[false]] call BIS_fnc_param;
+params[
+	["_queryStmt","",[""]],
+	["_mode",1,[0]],
+	["_multiarr",false,[false]]
+];
 
 _key = "extDB2" callExtension format["%1:%2:%3",_mode, (call life_sql_id), _queryStmt];
 
