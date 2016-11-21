@@ -1,4 +1,5 @@
 #define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
+#include "..\..\macro.h"
 /*
 	File: fn_safeTake.sqf
 	Author: Bryan "Tonic" Boardwine

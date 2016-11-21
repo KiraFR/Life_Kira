@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_findContact.sqf
 	Author: J `Kira` D

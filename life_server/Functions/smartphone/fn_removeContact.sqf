@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_removeContact.sqf
 	Author: J. `Kira` D.

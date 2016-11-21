@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_insertcontact.sqf
 	Author: J. `Kira` D.

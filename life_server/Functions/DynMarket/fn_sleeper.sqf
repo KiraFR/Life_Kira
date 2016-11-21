@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 ##################### DYNAMIC MARKET SCRIPT #####################
 ### AUTHOR: RYAN TT.                                          ###

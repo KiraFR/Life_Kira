@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_CheckRepertoire.sqf
 	Author: J. `Kira` D.

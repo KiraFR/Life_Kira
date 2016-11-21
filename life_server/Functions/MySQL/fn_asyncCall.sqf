@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_asyncCall.sqf
 	Author: Bryan "Tonic" Boardwine

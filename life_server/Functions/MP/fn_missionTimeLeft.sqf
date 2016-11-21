@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	Author: Karel Moricky
 

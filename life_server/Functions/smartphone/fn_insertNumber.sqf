@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_insertNumber.sqf
 	Author: J. `Kira` D.

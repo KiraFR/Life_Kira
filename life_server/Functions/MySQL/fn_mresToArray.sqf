@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_mresToArray.sqf
 	Author: Bryan "Tonic" Boardwine";

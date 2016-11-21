@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_getVehicles_fourriere.sqf
 	Author: Bryan "Tonic" Boardwine

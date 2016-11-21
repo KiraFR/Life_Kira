@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_bool.sqf
 	Author: TAW_Tonic

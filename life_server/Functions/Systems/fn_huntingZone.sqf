@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_huntingZone.sqf
 	Author: Bryan "Tonic" Boardwine
