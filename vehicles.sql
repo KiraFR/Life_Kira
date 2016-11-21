@@ -1,0 +1,1 @@
+ALTER TABLE `players` ADD `fourriere` tinyint(1) NOT NULL;
