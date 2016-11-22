@@ -21,5 +21,9 @@ Changelog 0.0.0.4:
   - Ajout Table Permis
   - Ajout Camera 3D pour les shops Vehicules
   - Ajout de Radar sur les routes
+ 
+ Changelog 0.0.0.6:
+  -Fin du RemoteExec (mission.sqm a faire)
+  -Ajout de L'opium
 
   
