@@ -41,7 +41,8 @@ switch (_mode) do
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
 			case "gouvernement": {_var = "licence_civ_gouv"};
-			case "licence_civ_ebou": {_var = "licence_civ_ebou"};
+			case "eboueur": {_var = "licence_civ_ebou"};
+			case "opium": {_var = "licence_civ_opium"};
 			default {_var = ""};
 		};
 	};
@@ -76,6 +77,7 @@ switch (_mode) do
 			case "license_civ_home": {_var = "home"};
 			case "licence_civ_gouv": {_var = "gouvernement"};
 			case "licence_civ_ebou": {_var = "eboueur"};
+			case "licence_civ_opium": {_var = "opium"};
 			default {_var = ""};
 		};
 	};

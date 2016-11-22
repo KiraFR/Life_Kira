@@ -3089,6 +3089,22 @@
 			<Italian>Marijuana</Italian>
 			<Portuguese>Maconha</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Opiumn">
+			<Original>Pavot somnifère</Original>
+			<English>Pavot somnifère</English>
+			<German>Pavot somnifère</German>
+			<French>Pavot somnifère</French>
+			<Italian>Pavot somnifère</Italian>
+			<Portuguese>Pavot somnifère</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Opium">
+			<Original>Opium</Original>
+			<English>Opium</English>
+			<German>Opium</German>
+			<French>Opium</French>
+			<Italian>Opium</Italian>
+			<Portuguese>Opium</Portuguese>
+		</Key>
 		<Key ID="STR_Item_RabbitMeat">
 			<Original>Rabbit Meat</Original>
 			<English>Rabbit Meat</English>
@@ -3555,6 +3571,27 @@
 			<Italian>Processo Marijuana</Italian>
 			<Portuguese>Treinamento de Maconha</Portuguese>
 		</Key>
+		<Key ID="STR_License_Opium">
+			<Original>Opium Training</Original>
+			<English>Opium Training</English>
+			<French>Traitement Opium</French>
+			<Italian>Processo Opium</Italian>
+			<Portuguese>Treinamento de Opium</Portuguese>
+		</Key>
+		<Key ID="STR_License_Gouv">
+			<Original>Governement</Original>
+			<English>Governement</English>
+			<French>Governement</French>
+			<Italian>Governement</Italian>
+			<Portuguese>Governement</Portuguese>
+		</Key>
+		<Key ID="STR_License_Ebou">
+			<Original>Eboueur</Original>
+			<English>Eboueur</English>
+			<French>Eboueur</French>
+			<Italian>Eboueur</Italian>
+			<Portuguese>Eboueur</Portuguese>
+		</Key>
 		<Key ID="STR_License_Cement">
 			<Original>Cement Mixing License</Original>
 			<English>Cement Mixing License</English>
@@ -3947,6 +3984,13 @@
 			<French>Traitement de Marijuana</French>
 			<Italian>Processando Marijuana</Italian>
 			<Portuguese>Processando Erva</Portuguese>
+		</Key>
+		<Key ID="STR_Process_Opium">
+			<Original>Processing Opium</Original>
+			<English>Processing Opium</English>
+			<French>Traitement de l'Opium</French>
+			<Italian>Processando Opium</Italian>
+			<Portuguese>Processando Opium</Portuguese>
 		</Key>
 		<Key ID="STR_Process_Cement">
 			<Original>Mixing Cement</Original>
