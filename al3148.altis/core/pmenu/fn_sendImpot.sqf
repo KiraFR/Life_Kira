@@ -10,10 +10,10 @@ params["_type"];
 switch(_type) do {
 	//joueur
 	case 0:{
-		[[0,getPlayerUID player,player],"IMPT_fnc_impot",false,false] spawn life_fnc_MP;
+		[0,getPlayerUID player,player] RemoteExecCall ["IMPT_fnc_impot",2];
 	};
 	//entreprise
 	case 1:{
-		[[1,getPlayerUID player,player],"IMPT_fnc_impot",false,false] spawn life_fnc_MP;
+		[1,getPlayerUID player,player]RemoteExecCall ["IMPT_fnc_impot",2];
 	};
 };

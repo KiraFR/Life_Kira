@@ -34,7 +34,7 @@ _cP = 0.01;
 while {true} do
 {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+		[player,"AinvPknlMstpSnonWnonDnon_medic_1"] RemoteExecCall ["life_fnc_animSync",0];
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	sleep 0.15;
@@ -64,7 +64,7 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR
 life_atmcash = life_atmcash + (call life_revive_fee);
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
-[[profileName],"life_fnc_revived",_target,FALSE] spawn life_fnc_MP;
+[profileName] RemoteExecCall ["life_fnc_revived",_target];
 titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
 
 sleep 0.6;

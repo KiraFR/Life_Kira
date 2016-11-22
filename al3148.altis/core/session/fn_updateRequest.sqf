@@ -22,4 +22,4 @@ switch (playerSide) do {
 	};
 };
 
-[_packet,"DB_fnc_updateRequest",false,false] spawn life_fnc_MP;
+[_packet] RemoteExecCall ["DB_fnc_updateRequest",2];

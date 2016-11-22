@@ -52,7 +52,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 			_funds = _funds - _price;
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[_item,true] spawn life_fnc_handleItem;
-			[[1,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
+			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
 		} else {
 			if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];

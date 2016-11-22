@@ -65,11 +65,11 @@ switch(_type) do {
 		if(!([str(_msg)] call life_fnc_prohibitedCharactersInMsgs)) exitWith {hint "Envoi impossible. Les caractères "":"" et ""&"" sont interdits dans les messages !"; ctrlShow[888895,true];};
 		
 
-		[[life_num,name player,_msg,getPlayerUID player,ObjNull,1,player],"SMPH_fnc_findContact",false,false] spawn life_fnc_MP;
+		[life_num,name player,_msg,getPlayerUID player,ObjNull,1,player] RemoteExecCall ["SMPH_fnc_findContact",2];
 		//[life_num,name player,_msg,getPlayerUID player,ObjNull,1,player] RemoteExecCall ["SMPH_fnc_findContact",RSERV];
 		_to = "Gendarmerie";
 		hint format["Message à la %1 : %2",_to,_msg];
-		[[life_num, position player],"life_fnc_createMarker",west,false] spawn life_fnc_MP;
+		[life_num, position player] RemoteExecCall ["life_fnc_createMarker",west];
 		//[life_num, position player] remoteExec ["life_fnc_createMarker",west];
 		closeDialog 8500;
 	};
@@ -80,7 +80,7 @@ switch(_type) do {
 		if(_msg == "") exitWith {hint "Vous devez écrire quelque chose !"; ctrlShow[8000,true];};
 		if(!([str(_msg)] call life_fnc_prohibitedCharactersInMsgs)) exitWith {hint "Envoi impossible. Les caractères "":"" et ""&"" sont interdits dans les messages !"; ctrlShow[888896,true];};
 
-		[[life_num,name player,_msg,getPlayerUID player,ObjNull,2,player],"SMPH_fnc_findContact",false,false] spawn life_fnc_MP;
+		[life_num,name player,_msg,getPlayerUID player,ObjNull,2,player] RemoteExecCall ["SMPH_fnc_findContact",2];
 		//[life_num,name player,_msg,getPlayerUID player,ObjNull,2,player] RemoteExecCall ["SMPH_fnc_findContact",RSERV];
 		
 
@@ -96,11 +96,11 @@ switch(_type) do {
 		if(_msg == "") exitWith {hint "Vous devez écrire quelque chose !"; ctrlShow[8000,true];};
 		if(!([str(_msg)] call life_fnc_prohibitedCharactersInMsgs)) exitWith {hint "Envoi impossible. Les caractères "":"" et ""&"" sont interdits dans les messages !"; ctrlShow[888899,true];};
 		
-		[[life_num,name player,_msg,getPlayerUID player,ObjNull,3,player],"SMPH_fnc_findContact",false,false] spawn life_fnc_MP;
+		[life_num,name player,_msg,getPlayerUID player,ObjNull,3,player] RemoteExecCall ["SMPH_fnc_findContact",2];
 		//[life_num,name player,_msg,getPlayerUID player,ObjNull,3,player] RemoteExecCall ["SMPH_fnc_findContact",RSERV];
 		
 		hint format["Vous avez envoyé un message aux Pompiers : %1",_msg];
-		[[life_num, position player],"life_fnc_createMarker",independent,false] spawn life_fnc_MP;
+		[life_num, position player] RemoteExecCall ["life_fnc_createMarker",independent];
 		//[life_num, position player] remoteExec ["life_fnc_createMarker",independent];
 		closeDialog 8500;
 	};
@@ -111,7 +111,7 @@ switch(_type) do {
 		if(isNil "life_adminlevel" OR (call life_adminlevel) < 1) exitWith {hint "Vous n'êtes pas Admin !";};
 		if(_msg == "") exitWith {hint "Vous devez écrire quelque chose !";};
 		if(!([str(_msg)] call life_fnc_prohibitedCharactersInMsgs)) exitWith {hint "Envoi impossible. Les caractères "":"" et ""&"" sont interdits dans les messages !";};
-		[[_msg,_name,5],"life_fnc_clientMessage",true,false] spawn life_fnc_MP;
+		[_msg,_name,5] RemoteExecCall ["life_fnc_clientMessage",0];
 		//[_msg,_name,5] RemoteExecCall ["life_fnc_clientMessage",-2];
 		systemChat format["Admin message à tous les joueurs: %1",_msg];
 		closeDialog 9000;
@@ -142,7 +142,7 @@ switch(_type) do {
 		if(isNull _to) exitWith {};
 		if(_msg == "") exitWith {hint "Vous devez écrire quelque chose !";};
 		if(!([str(_msg)] call life_fnc_prohibitedCharactersInMsgs)) exitWith {hint "Envoi impossible. Les caractères "":"" et ""&"" sont interdits dans les messages !";};
-		[[_msg,"Admin",4],"life_fnc_clientMessage",_to,false] spawn life_fnc_MP;
+		[_msg,"Admin",4] RemoteExecCall ["life_fnc_clientMessage",_to];
 		//[_msg,"Admin",4] RemoteExecCall ["life_fnc_clientMessage",_to];
 		
 		hint format["Admin Message envoyé à : %1 - Message: %2",name _to,_msg];

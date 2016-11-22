@@ -21,7 +21,7 @@ _cP = 0.01;
 while {true} do
 {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+		[player,"AinvPknlMstpSnonWnonDnon_medic_1"] RemoteExecCall ["life_fnc_animSync",0];
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	sleep 0.26;

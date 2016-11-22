@@ -35,7 +35,7 @@ _cP = 0.01;
 while {true} do
 {
 	if(animationState player != "AinvPknlMstpSnonWnonDnon_medic_1") then {
-		[[player,"AinvPknlMstpSnonWnonDnon_medic_1"],"life_fnc_animSync",true,false] spawn life_fnc_MP;
+		[player,"AinvPknlMstpSnonWnonDnon_medic_1"] RemoteExecCall ["life_fnc_animSync",0];
 		player playMoveNow "AinvPknlMstpSnonWnonDnon_medic_1";
 	};
 	sleep 0.26;
@@ -76,7 +76,7 @@ if(!_isVehicle) then {
 		titleText[localize "STR_ISTR_Lock_Success","PLAIN"];
 		life_vehicles pushBack _curTarget;
 	} else {
-		[[0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+		[0,"STR_ISTR_Lock_FailedNOTF",true,[profileName]] RemoteExec ["life_fnc_broadcast",west];
 		titleText[localize "STR_ISTR_Lock_Failed","PLAIN"];
 	};
 };

@@ -63,7 +63,7 @@ if(side _killer == west && playerSide != west) then {
 	life_copRecieve = _killer;
 	//Did I rob the federal reserve?
 	if(!life_use_atm && {life_cash > 0}) then {
-		[format[localize "STR_Cop_RobberDead",[life_cash] call life_fnc_numberText],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+		[format[localize "STR_Cop_RobberDead",[life_cash] call life_fnc_numberText]] RemoteExecCall ["life_fnc_broadcast",0];
 		life_cash = 0;
 	};
 };
@@ -78,7 +78,7 @@ life_carryWeight = 0;
 life_cash = 0;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
-[[player,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+[player,life_sidechat,playerSide] RemoteExecCall ["TON_fnc_managesc",2];
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
