@@ -3105,6 +3105,30 @@
 			<Italian>Opium</Italian>
 			<Portuguese>Opium</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Vinu">
+			<Original>Grappe de Raisin</Original>
+			<English>Grappe de Raisin</English>
+			<German>Grappe de Raisin</German>
+			<French>Grappe de Raisin</French>
+			<Italian>Grappe de Raisin</Italian>
+			<Portuguese>Grappe de Raisin</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Vin">
+			<Original>Bouteille de Vin</Original>
+			<English>Bouteille de Vin</English>
+			<German>Bouteille de Vin</German>
+			<French>Bouteille de Vin</French>
+			<Italian>Bouteille de Vin</Italian>
+			<Portuguese>Bouteille de Vin</Portuguese>
+		</Key>
+		<Key ID="STR_Item_Cidre">
+			<Original>Bouteille de Cidre</Original>
+			<English>Bouteille de Cidre</English>
+			<German>Bouteille de Cidre</German>
+			<French>Bouteille de Cidre</French>
+			<Italian>Bouteille de Cidre</Italian>
+			<Portuguese>Bouteille de Cidre</Portuguese>
+		</Key>
 		<Key ID="STR_Item_RabbitMeat">
 			<Original>Rabbit Meat</Original>
 			<English>Rabbit Meat</English>
@@ -3578,6 +3602,20 @@
 			<Italian>Processo Opium</Italian>
 			<Portuguese>Treinamento de Opium</Portuguese>
 		</Key>
+		<Key ID="STR_License_Cidre">
+			<Original>Cidre Training</Original>
+			<English>Cidre Training</English>
+			<French>Fermentation du Cidre</French>
+			<Italian>Processo Cidre</Italian>
+			<Portuguese>Treinamento de Cidre</Portuguese>
+		</Key>
+		<Key ID="STR_License_Vin">
+			<Original>Vin Training</Original>
+			<English>Vin Training</English>
+			<French>Echange de Vin</French>
+			<Italian>Processo Vin</Italian>
+			<Portuguese>Treinamento de Vin</Portuguese>
+		</Key>
 		<Key ID="STR_License_Gouv">
 			<Original>Governement</Original>
 			<English>Governement</English>
@@ -3991,6 +4029,20 @@
 			<French>Traitement de l'Opium</French>
 			<Italian>Processando Opium</Italian>
 			<Portuguese>Processando Opium</Portuguese>
+		</Key>
+		<Key ID="STR_Process_Cidre">
+			<Original>Processing Apples</Original>
+			<English>Processing Apples</English>
+			<French>Fermentation et Mise en bouteille du Cidre</French>
+			<Italian>Processando Apples</Italian>
+			<Portuguese>Processando Apples</Portuguese>
+		</Key>		
+		<Key ID="STR_Process_Wine">
+			<Original>Processing Raisin</Original>
+			<English>Processing Raisin</English>
+			<French>Fermentation et Mise en bouteille du Vin</French>
+			<Italian>Processando Raisin</Italian>
+			<Portuguese>Processando Raisin</Portuguese>
 		</Key>
 		<Key ID="STR_Process_Cement">
 			<Original>Mixing Cement</Original>

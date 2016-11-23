@@ -37,3 +37,7 @@ Changelog 0.0.0.4:
   - Ajout effet lorsque l'on boit trop de Redgull
   - Paycheck dynamique en fonction de l'argent actuel
   - Pas de Paycheck si le joueur à un boulot(par licence)
+  
+ Changelog 0.0.0.8:
+  -Ajout Vin
+  -Ajout Cidre

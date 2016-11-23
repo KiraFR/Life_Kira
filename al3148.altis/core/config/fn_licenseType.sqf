@@ -43,6 +43,8 @@ switch (_mode) do
 			case "gouvernement": {_var = "licence_civ_gouv"};
 			case "eboueur": {_var = "licence_civ_ebou"};
 			case "opium": {_var = "licence_civ_opium"};
+			case "vin": {_var = "licence_civ_vin"};
+			case "cidre": {_var = "licence_civ_fermenta"};
 			default {_var = ""};
 		};
 	};
@@ -78,6 +80,8 @@ switch (_mode) do
 			case "licence_civ_gouv": {_var = "gouvernement"};
 			case "licence_civ_ebou": {_var = "eboueur"};
 			case "licence_civ_opium": {_var = "opium"};
+			case "licence_civ_fermenta": {_var = "vin"};
+			case "licence_civ_vin": {_var = "cidre"};
 			default {_var = ""};
 		};
 	};

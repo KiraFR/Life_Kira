@@ -167,7 +167,10 @@ life_inv_items =
 	"life_inv_boltcutter",
 	"life_inv_defusekit",
 	"life_inv_storagesmall",
-	"life_inv_storagebig"
+	"life_inv_storagebig",
+	"life_inv_vinu",
+	"life_inv_vin",
+	"life_inv_cidre"
 ];
 
 //Setup variable inv vars.
@@ -198,7 +201,9 @@ life_licenses =
 	["license_civ_cement","civ"],
 	["license_med_air","med"],
 	["license_civ_home","civ"],
-	["license_civ_opium","civ"]
+	["license_civ_opium","civ"],
+	["license_civ_vin","civ"],
+	["licence_civ_fermenta","civ"]
 ];
 
 //Setup License Variables

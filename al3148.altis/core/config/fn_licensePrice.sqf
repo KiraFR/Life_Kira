@@ -48,4 +48,6 @@ switch (_type) do
 	case "mair": {15000};
 	case "home": {75000};
 	case "opium": {150000};
+	case "cidre": {150000};
+	case "vin": {150000};
 };

@@ -21,6 +21,9 @@ switch (_var) do
 	case "life_inv_marijuana": {(localize "STR_Item_Marijuana")};
 	case "life_inv_opiumn": {(localize "STR_Item_Opiumn")};
 	case "life_inv_oipum": {(localize "STR_Item_Opium")};
+	case "life_inv_vinu": {(localize "STR_Item_Vinu")};
+	case "life_inv_vin": {(localize "STR_Item_Vin")};
+	case "life_inv_cidre": {(localize "STR_Item_Cidre")};
 	case "life_inv_apple": {(localize "STR_Item_Apple")};
 	case "life_inv_rabbit": {(localize "STR_Item_RabbitMeat")};
 	case "life_inv_salema": {(localize "STR_Item_SalemaMeat")};
@@ -90,4 +93,6 @@ switch (_var) do
 	case "license_civ_opium": {(localize "STR_License_Opium")};
 	case "licence_civ_gouv": {(localize "STR_License_Gouv")};
     case "licence_civ_ebou": {(localize "STR_License_Ebou")};
+	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
+	case "licence_civ_vin": {(localize "STR_License_Vin")};
 };
