@@ -23,7 +23,17 @@ Changelog 0.0.0.4:
   - Ajout de Radar sur les routes
  
  Changelog 0.0.0.6:
-  -Fin du RemoteExec (mission.sqm a faire)
+  -Fin du RemoteExec
   -Ajout de L'opium
 
-  
+ Changelog 0.0.0.7:
+  - Ajout d'Impots
+  - WantedList Supprimé
+  - ChopShop(vente de vehicule) supprimé
+  - Ajout d'une table gouv
+  - Ajout colonne fourriere dans la table vehicle
+  - Ajout d'une macro coté serveur
+  - CfgRemoteExec terminé
+  - Ajout effet lorsque l'on boit trop de Redgull
+  - Paycheck dynamique en fonction de l'argent actuel
+  - Pas de Paycheck si le joueur à un boulot(par licence)
