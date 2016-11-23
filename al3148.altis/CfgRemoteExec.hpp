@@ -47,6 +47,14 @@ class CfgRemoteExec {
 		F(life_fnc_receiveMoney,CLIENT)
 		F(life_fnc_soundDevice,CLIENT)
 		F(life_fnc_setFuel,CLIENT)
+		F(life_fnc_copMedicRequest,CLIENT)
+		F(life_fnc_corpse,CLIENT)
+		F(life_fnc_revived,CLIENT)
+		F(life_fnc_receiveItem,CLIENT)
+		F(life_fnc_createMarker,CLIENT)
+		F(life_fnc_clientMessage,CLIENT)
+		F(TON_fnc_clientWireTransfer,CLIENT)
+		F(life_fnc_animSync,CLIENT)
 
 
 		F(TON_fnc_managesc,SERVER)
@@ -69,7 +77,16 @@ class CfgRemoteExec {
 		F(TON_fnc_vehicleCreate,SERVER)
 		F(TON_fnc_updateHouseTrunk,SERVER)
 		F(TON_fnc_cleanupRequest,SERVER)
+		F(TON_fnc_spikeStrip,SERVER)
+		F(TON_fnc_vehicleDelete,SERVER)
+		F(TON_fnc_spawnVehicle,SERVER)
+		F(TON_fnc_getVehicles_fourriere,SERVER)
+		F(TON_fnc_getVehicles,SERVER)
 
+
+		/* changement telephone Kira V3
+			F(SMPH_fnc_findContact,SERVER)
+		*/
 	};
 
 	class Commands {
