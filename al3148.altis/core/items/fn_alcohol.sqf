@@ -10,7 +10,7 @@ closeDialog 0;
 "dynamicBlur" ppEffectEnable true;
 enableCamShake true;
 
-titletext[localize "STR_ISTR_AlcoholEffect"];
+titletext[localize "STR_ISTR_AlcoholEffect","PLAIN"];
 
 for "_i" from 0 to 120 do // durée des effets
 {

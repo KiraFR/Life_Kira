@@ -10,7 +10,7 @@ closeDialog 0;
 "dynamicBlur" ppEffectEnable true;
 "chromAberration" ppEffectEnable true;
 
-titletext[localize "STR_ISTR_BeuhEffect"];
+titletext[localize "STR_ISTR_BeuhEffect","PLAIN"];
 
 for "_i" from 0 to 60 do // durée des effets
 {

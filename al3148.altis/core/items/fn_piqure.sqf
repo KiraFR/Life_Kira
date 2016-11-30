@@ -9,9 +9,7 @@ closeDialog 0;
 // Liste des effets activés
 "dynamicBlur" ppEffectEnable true;
 "chromAberration" ppEffectEnable true;
-player setFatigue 1;
-player enableFatigue false;
-titletext[localize "STR_ISTR_PiqureEffect"];
+titletext[localize "STR_ISTR_PiqureEffect","PLAIN"];
 
 for "_i" from 0 to 180 do // durée des effets
 {
@@ -19,6 +17,7 @@ for "_i" from 0 to 180 do // durée des effets
 	"dynamicBlur" ppEffectCommit 1;
 	"chromAberration" ppEffectAdjust [random 0.25,random 0.25,true];
 	"chromAberration" ppEffectCommit 1;
+	player setFatigue 1;
 	sleep 1;
 };
 
@@ -31,4 +30,3 @@ sleep 6;
 
 "chromAberration" ppEffectEnable false;
 "dynamicBlur" ppEffectEnable false;
-player enableFatigue true;
