@@ -26,7 +26,7 @@ class Life_my_smartphone_test {
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",1};
 		};
 	};
-	
+
 	class controls {
 		class ListMessage: Life_RscControlsGroup {
 			idc = 14002;
@@ -39,26 +39,26 @@ class Life_my_smartphone_test {
 			class HScrollbar : HScrollbar {
 			height = 0;
 			};
-			
-			
+
+
 			class controls {
-			
+
 				class showText : Life_RscStructuredText {
 					idc = 14006;
 					text = "";
 					colorBackground[] = {0.28,0.28,0.28,0.28};
-					size = 0.04
+					size = 0.04;
 					shadow = 0;
 					x = 0;
 					y = 0;
 					w = 0.435;
 					h = 1;//h = 2.15;
 				};
-			
+
 			};
 
 		};
-		
+
 		class Title: Life_RscText
 		{
 			idc = 14004;
