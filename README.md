@@ -41,3 +41,7 @@ Changelog 0.0.0.4:
  Changelog 0.0.0.8:
   -Ajout Vin
   -Ajout Cidre
+
+Changelog 0.0.0.9: 
+  -Vin et cidre consommable (effet camera + flou 2 minutes)
+  -Marijuana consommable (effet couleur + flou 1 minute)
