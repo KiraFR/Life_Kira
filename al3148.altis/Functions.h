@@ -343,6 +343,7 @@ class Life_Client_Core
 		class storageBox {};
 		class alcohol {};
 		class beuh {};
+		class piqure {};
 	};
 
 	class Dialog_Controls

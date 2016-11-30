@@ -3935,6 +3935,11 @@
 			<English>You are stone</English>
 			<French>Vous êtes défoncé</French>
 		</Key>
+		<Key ID="STR_ISTR_PiqureEffect">
+			<Original>You are stone</Original>
+			<English>You are stone</English>
+			<French>Vous êtes défoncé</French>
+		</Key>
 		<Key ID="STR_ISTR_SpikesDeployment">
 			<Original>You already have a Spike Strip active in deployment</Original>
 			<English>You already have a Spike Strip active in deployment</English>
