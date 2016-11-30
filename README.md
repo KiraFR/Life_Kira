@@ -45,3 +45,4 @@ Changelog 0.0.0.4:
 Changelog 0.0.0.9: 
   -Vin et cidre consommable (effet camera + flou 2 minutes)
   -Marijuana consommable (effet couleur + flou 1 minute)
+  -heroine consommable (effet couleur + flou 3 minutes)
