@@ -143,6 +143,19 @@ class CfgFunctions
 			class CheckRepertoire {};
 		};
 	};
+	class BanqueKronosD {
+		tag = "BQKS";
+		class Banque_KronosD {
+			file = "\life_server\Functions\Bank";
+			class CreateAccount {};
+			class CreateAccountEntre {};
+			class CreateAccountOff {};
+			class DeleteAccount {};
+			class GetAccount {};
+			class GetIDInfo{};
+			class SetDefaultAccount {};
+		};
+	};
 	class ImpotKira {
 		tag = "IMPT";
 		file = "\life_server\Functions\impot";
