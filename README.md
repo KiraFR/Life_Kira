@@ -46,6 +46,11 @@ Changelog 0.0.0.9:
   -Vin et cidre consommable (effet camera + flou 2 minutes)
   -Marijuana consommable (effet couleur + flou 1 minute)
   -heroine consommable (effet couleur + flou 3 minutes + pas d'endurance 3 minutes)
-  
+
 Changelog 0.0.1.0:
   - Ajout des compte en banques.
+
+Changelog 0.0.1.1:
+  - La cocaine est désormais sniffable (couleurs 30 sec, flou 2 minutes, energie max 5 min)
+  - L'opium est maintenant fumable (couleur, flou, pas d'endurance pendant 3 minutes)
+  - Amelioration des fonctions et ajustement des couleurs pour l'utilisation des drogues

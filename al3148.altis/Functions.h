@@ -28,7 +28,7 @@ class KiraScript
 class Life_Client_Core
 {
 	tag = "life";
-	
+
 	class Master_Directory
 	{
 		file = "core";
@@ -39,7 +39,7 @@ class Life_Client_Core
 		class initMedic {};
 		class welcomeNotification {};
 	};
-	
+
 	class Admin
 	{
 		file = "core\admin";
@@ -49,7 +49,7 @@ class Life_Client_Core
 		class adminMenu {};
 		class adminQuery {};
 	};
-	
+
 	class Medical_System
 	{
 		file = "core\medical";
@@ -67,7 +67,7 @@ class Life_Client_Core
 		class medicLights {};
 		class medicSiren {};
 	};
-	
+
 	class Actions
 	{
 		file = "core\actions";
@@ -102,7 +102,7 @@ class Life_Client_Core
 		class captureHideout {};
 		class gather {};
 	};
-	
+
 	class Housing
 	{
 		file = "core\housing";
@@ -119,7 +119,7 @@ class Life_Client_Core
 		class copHouseOwner {};
 		class lockHouse {};
 	};
-	
+
 	class Config
 	{
 		file = "core\config";
@@ -140,7 +140,7 @@ class Life_Client_Core
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
 		class houseConfig {};
-		
+
 		//Clothing Store Configs
 		class clothing_cop {};
 		class clothing_bruce {};
@@ -167,7 +167,7 @@ class Life_Client_Core
 		class settingsMenu {};
 		class settingsInit {};
 	};
-	
+
 	class Functions
 	{
 		file = "core\functions";
@@ -211,7 +211,7 @@ class Life_Client_Core
 		class loadGear {};
 		class stripDownPlayer {};
 	};
-	
+
 	class Network
 	{
 		file = "core\functions\network";
@@ -226,7 +226,7 @@ class Life_Client_Core
 		class setTexture {};
 		class say3D {};
 	};
-	
+
 	class Civilian
 	{
 		file = "core\civilian";
@@ -242,7 +242,7 @@ class Life_Client_Core
 		class civLoadout {};
 		class lessPoints {};
 	};
-	
+
 	class Vehicle
 	{
 		file = "core\vehicle";
@@ -258,7 +258,7 @@ class Life_Client_Core
 		class deviceMine {};
 		class addVehicle2Chain {};
 	};
-	
+
 	class Cop
 	{
 		file = "core\cop";
@@ -286,7 +286,7 @@ class Life_Client_Core
 		class copLoadout {};
 		class ticketPaid {};
 	};
-	
+
 	class Gangs
 	{
 		file = "core\gangs";
@@ -303,7 +303,7 @@ class Life_Client_Core
 		class gangDisband {};
 		class gangDisbanded {};
 	};
-	
+
 	class Shops
 	{
 		file = "core\shops";
@@ -328,7 +328,7 @@ class Life_Client_Core
 		class chopShopSell {};
 		class vehicleShopCam {};
 	};
-	
+
 	class Items
 	{
 		file = "core\items";
@@ -341,8 +341,13 @@ class Life_Client_Core
 		class blastingCharge {};
 		class defuseKit {};
 		class storageBox {};
+		class beuh {};
+		class alcohol {};
+		class piqure {};
+		class opiumFume {};
+		class rail {};
 	};
-	
+
 	class Dialog_Controls
 	{
 		file = "dialog\function";
@@ -366,13 +371,13 @@ class Life_Client_Core
 		class safeFix {};
 		class vehicleGarage {};
 		class gangDeposit {};
-		
+
 		class vehicleFourriere {};
 		class fourriereLBChange {};
 		class fourriereMenu {};
 		class unfourriere {};
 	};
-	
+
 	class DynMarket
     {
         file = "core\DynMarket";
@@ -384,7 +389,7 @@ class Life_Client_Core
         class DYNMARKET_getPrice {};
 		class DYNMARKET_getIcon {};
     };
-	
+
 	class Bank
     {
         file = "core\bank";
@@ -395,7 +400,7 @@ class Life_Client_Core
     };
 
 
-	
+
 	/*
 	class phone
 	{

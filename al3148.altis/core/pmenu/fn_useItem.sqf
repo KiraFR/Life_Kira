@@ -129,6 +129,22 @@ switch (true) do
 			};
 	};
 
+	case (_item == "opium"):
+	{
+		if (([false,_item,1] call life_fnc_handleInv)) then
+			{
+				[] spawn life_fnc_opiumFume;
+			};
+	};
+
+	case (_item == "cocainep"):
+	{
+		if (([false,_item,1] call life_fnc_handleInv)) then
+			{
+				[] spawn life_fnc_rail;
+			};
+	};
+
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;
