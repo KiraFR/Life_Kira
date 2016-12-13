@@ -31,7 +31,6 @@ class Life_AccountReq {
 			{
 				idc = 11400;
 				text = "Soumettre";
-				onButtonClick = "if(cbChecked (findDisplay 11000 displayCtrl 11040))then{[3] call life_fnc_RequestAccount}else{[1] call life_fnc_RequestAccount};"
 				x = 0.0375;
 				y = 0.66;
 				w = 0.225;

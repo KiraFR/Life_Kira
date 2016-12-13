@@ -6,9 +6,10 @@
 	Description:
 	Edit le default
 */
-
-_edit1 = ["UPDATE banque SET dflt='0' WHERE playerid='%1'",_uid];
-[_edit1,1] call DB_fnc_asyncCall;
-
-_edit2 = ["UPDATE banque SET dflt='1'WHERE playerid='%1',id='%2'",_uid,_id];
-[_edit2,1] call DB_fnc_asyncCall;
+params[
+	["_uid","",[""]],
+	["_id",0,[0]]
+];
+_edit = ["UPDATE banque SET dflt='0' WHERE playerid='%1' AND dflt='1';
+		   UPDATE banque SET dflt='1' WHERE playerid='%1' AND id='%2'",_uid,_id];
+[_edit,1] call DB_fnc_asyncCall;

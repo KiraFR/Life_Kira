@@ -152,7 +152,6 @@ class CfgFunctions
 			class CreateAccountOff {};
 			class DeleteAccount {};
 			class GetAccount {};
-			class GetIDInfo{};
 			class SetDefaultAccount {};
 		};
 	};

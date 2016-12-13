@@ -32,7 +32,11 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 
 //Parse basic player information.
 life_cash = parseNumber (_this select 2);
-life_atmcash = parseNumber (_this select 3);
+if(typeName (_this select 28) select 1 == "STRING")then{
+	life_atmcash = parseNumber ((_this select 28) select 1);
+}else{
+	life_atmcash =(_this select 28) select 1;
+}
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,0);
 
@@ -111,5 +115,8 @@ switch (true) do {
 	case (life_atmcash > 500 000):life_paycheck = 0};
 	case (PlayerSide = west && independent):{life_paycheck = 1200};
 };
-
+life_nbAcc = _this select 26;
+if(_this select 26 == 1){life_EnterAcc = true;};
+if(_this select 26 == 0){life_EnterAcc = false;};
+life_dflt = (_this select 28) select 0;
 life_session_completed = true;

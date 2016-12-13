@@ -7,13 +7,15 @@
 	Mettre un compte en default 
 */
 
-private["_Default","_uid","_deja"];
+private["_deja"];
+_uid = getPlayerUID player;
+_tabAcc = call compile _this;
+_idAcc = _tabAcc select 0; // id du compte
 
-_Default = (__GETC__(life_dflt) == 0);
-_deja = if (__GETC__(life_dflt) == 1)then {hint "Vous avez deja un compte en option default , il sera remplacé pas celui ci"};
-_owner = player;
-_uid = getPlayerUID _owner;
-_id = bq_id;
+if(_idAcc == str(__GETC__(life_dflt))) exitWith {hint "Ce compte est deja votre compte par default.";};
 
+_bankAcc = _tabAcc select 0; // argent du compte
+if(typeName _bankAcc == "STRING") then{life_atmcash = parsenumber(_bankAcc);}else{life_atmcash = _bankAcc;};
 
-if (_Default = 0)then {[_uid,_owner,_id] remoteExecCall ["BQKS_fnc_SetDefaultAccount",2];}else { if (_deja)then{[_uid,_owner,_id] remoteExecCall ["BQKS_fnc_SetDefaultAccount",2]};};
+[] call life_fnc_hudUpdate;
+[_uid,clientOwner,_id] remoteExecCall ["BQKS_fnc_SetDefaultAccount",2];

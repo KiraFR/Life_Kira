@@ -109,4 +109,20 @@ _queryResult set [22,_numreperResult];
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[25,_keyArr];
 
+_nbAcc = format["SELECT id FROM banque WHERE playerid='%1'",_uid];
+_nbAccResult = [_nbAcc,2,true] call DB_fnc_asyncCall;
+_queryResult set [26,(count _nbAccResult)];
+
+_nbAccEntre = format["SELECT id FROM banque WHERE playerid='%1' AND entreprise='1'",_uid];
+_nbAccEntreResult = [_nbAccEntre,2] call DB_fnc_asyncCall;
+if(count _nbAccEntreResult == 0) then{
+	_queryResult set [27,0];
+}else{
+	_queryResult set [27,1]
+};
+
+_dfltAcc = format["SELECT id, bankacc FROM banque WHERE playerid='%1' AND dflt='1'",_uid];
+_dfltAcc = [_nbAccEntre,2] call DB_fnc_asyncCall;
+_queryResult set [28,_dfltAcc];
+
 _queryResult remoteExecCall ["SOCK_fnc_requestReceived",_ownerID];

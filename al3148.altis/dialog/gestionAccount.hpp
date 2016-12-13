@@ -3,7 +3,7 @@ class Life_AccountMenu {
 	name = "life_AccountMenu";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[0] spawn life_fnc_accountgest;[1] spawn life_fnc_accountgest;"
+	onLoad = "[] spawn life_fnc_accountgest;"
 	
 	class BackgroundControls {
 	
@@ -60,7 +60,7 @@ class Life_AccountMenu {
 				{
 					idc = 16401;
 					text = "Definir comme Default";
-					OnButtonClick = "call life_fnc_SetDefaultAccount";
+					OnButtonClick = "[lnbData[16501,(lbCurSel 16501)]] spawn life_fnc_SetDefaultAccount";
 					x = 0.7;
 					y = 0.62;
 					w = 0.2875;
@@ -70,7 +70,7 @@ class Life_AccountMenu {
 				{
 					idc = 16402;
 					text = "Supprimer le compte";
-					OnButtonClick = "call life_fnc_DeleteAccount";
+					OnButtonClick = "[lnbData[16501,(lbCurSel 16501)]] spawn life_fnc_DeleteAccount";
 					x = 0.3875;
 					y = 0.62;
 					w = 0.2875;

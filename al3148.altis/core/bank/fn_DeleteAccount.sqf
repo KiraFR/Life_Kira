@@ -3,7 +3,7 @@
 	Author: R. `KronosD` R.
 
 	Description:
-	Lit merde
+	Lis merde
 */
 _owner = player;
 _uid = getPlayerUID _owner;
