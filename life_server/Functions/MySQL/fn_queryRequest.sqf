@@ -71,6 +71,10 @@ _queryResult set[6,_old];
 switch (_side) do {
 	case west: {
 		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
+		 // LOGS
+        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
+        //  UID , SIDE  , Informations , Type
+        [_uid,west,_list,0] call DB_fnc_logs;
 	};
 	
 	case civilian: {
@@ -89,6 +93,16 @@ switch (_side) do {
 			_queryResult set [14,_PermisResult select 2];
 			_queryResult set [15,_PermisResult select 3];
 		};
+		// LOGS
+        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
+        //  UID , SIDE  , Informations , Type
+        [_uid,west,_list,0] call DB_fnc_logs;
+	};
+	case independent:{
+		// LOGS
+        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
+        //  UID , SIDE, Informations , Type
+        [_uid,independent,_list,0] call DB_fnc_logs;
 	};
 };
 

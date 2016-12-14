@@ -39,10 +39,14 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			_funds = _funds - (_price * _amount);
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
+			//LOGS
+			[getPlayerUID player, playerSide, [name player, _amount, _name,_funds, grpPlayer getVariable "gang_name"],12] remoteExecCall ["DB_fnc_logs",2];
 		} else {
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 			__SUB__(life_cash,_price * _amount);
+			//LOGS
+			[getPlayerUID player, playerSide, [name player, _amount, _name,[(_price * _amount)] call life_fnc_numberText],11] remoteExecCall ["DB_fnc_logs",2];
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};

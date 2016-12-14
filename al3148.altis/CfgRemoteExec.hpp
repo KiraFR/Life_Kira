@@ -70,6 +70,7 @@ class CfgRemoteExec {
 		F(DB_fnc_updateRequest,SERVER)
 		F(DB_fnc_queryRequest,SERVER)
 		F(DB_fnc_insertRequest,SERVER)
+		F(DB_fnc_logs,SERVER)
 		F(IMPT_fnc_impot,SERVER)
 		F(TON_fnc_updateGang,SERVER)
 		F(TON_fnc_setObjVar,SERVER)

@@ -5,7 +5,7 @@
 	Description:
 	Sell a virtual item to the store / shop
 */
-private["_type","_index","_price","_var","_amount","_name"];
+private["_type","_index","_price","_var","_amount","_name","_val"];
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
 _index = [_type,sell_array] call TON_fnc_index;
@@ -41,12 +41,19 @@ if(life_shop_type == "heroin") then
 		_val = _val + _price;
 		_array set[_ind,[getPlayerUID player,profileName,_val]];
 		life_shop_npc setVariable["sellers",_array,true];
+		//LOGS
+		[getPlayerUID player, playerSide, [name player, _amount, _name, _val],13] remoteExecCall ["DB_fnc_logs",2];
 	}
 		else
 	{
 		_array pushBack [getPlayerUID player,profileName,_price];
 		life_shop_npc setVariable["sellers",_array,true];
+		//LOGS
+		[getPlayerUID player, playerSide, [name player, _amount, _name, _price],13] remoteExecCall ["DB_fnc_logs",2];
 	};
+}else{
+	//LOGS
+	[getPlayerUID player, playerSide, [name player, _amount, _name, _price],13] remoteExecCall ["DB_fnc_logs",2];
 };
 
 [0] call SOCK_fnc_updatePartial;

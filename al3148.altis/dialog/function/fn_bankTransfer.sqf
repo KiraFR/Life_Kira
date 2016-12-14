@@ -20,6 +20,8 @@ if((_val + _tax) > life_atmcash) exitWith {hint format[localize "STR_ATM_SentMon
 
 life_atmcash = life_atmcash - (_val + _tax);
 
+[getPlayerUID player, side player, [name player, _val, name _unit, getPlayerUID _unit, side _unit], 7] remoteExecCall ["DB_fnc_logs",2];
+
 [_val,profileName] RemoteExecCall ["TON_fnc_clientWireTransfer",_unit];
 [] call life_fnc_atmMenu;
 hint format[localize "STR_ATM_SentMoneySuccess",[_val] call life_fnc_numberText,_unit getVariable["realname",name _unit],[_tax] call life_fnc_numberText];
