@@ -13,7 +13,7 @@ params[
 ];
 if(isNil "_returnToSender")exitWith{};
 
-_query = format["SELECT id,nam_account, numcompte, offshore, entreprise, bankacc, dflt FROM banque WHERE playerid='%1'",_uid];
+_query = format["SELECT id, nam_account, numcompte, offshore, entreprise, bankacc, dflt FROM banque WHERE playerid='%1'",_uid];
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 //[_type, _data]

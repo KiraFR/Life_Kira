@@ -9,12 +9,14 @@
 private["_num","_name"];
 _type = _this;
 _uid = getPlayerUID player;
+
 if(isNil "_type") then {
 	_name = ctrlText ACHANGER;
 	if(cbChecked (findDisplay 11000 displayCtrl 11040))	then{_type = 3;}else{_type = 2;};
 };
 
-switch (_type) do {	
+switch (_type) do {
+
 	//offshore
 	case 1: {
 		_name = ctrlText ACHANGER;
@@ -23,14 +25,17 @@ switch (_type) do {
 		life_cash = life_cash - 20000;
 
 		_guid = (getPlayerUID Player) splitString "";
-		_guid = _guid select 10 + _guid select 11 + _guid select 12 + _guid select 13 + _guid select 14 + _guid select 15;
-		_guid = format["%1",_guid];
-		_num = "DT" + _guid + "1" + "0" + format["%1",life_nbAcc+1]];
-		
+
+		if(clientOwner < 10)then{_client = format["00%1",clientOwner];
+		}else if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
+		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
+		_num = "RD" + _guid + format["%1",life_nbAcc+1]];
+
 		hint "Votre compte offshore a bien été créé";
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name] remoteExecCall ["BQKS_fnc_CreateAccountOff",RSERV];
 	};
+
 	//normal
 	case 2: {
 		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
@@ -38,14 +43,16 @@ switch (_type) do {
 		life_cash = life_cash - 100;
 
 		_guid = (getPlayerUID Player) splitString "";
-		_guid = _guid select 10 + _guid select 11 + _guid select 12 + _guid select 13 + _guid select 14 + _guid select 15;
-		_guid = format["%1",_guid];
-		_num = "DT" + _guid + "0" + "0" + format["%1",life_nbAcc+1]];
+		if(clientOwner < 10)then{_client = format["00%1",clientOwner];
+		}else if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
+		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
+		_num = "RD" + _guid + format["%1",life_nbAcc+1]];
 
 		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
+
 	//entreprise
 	case 3: {
 		if(life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
@@ -54,9 +61,11 @@ switch (_type) do {
 		life_cash = life_cash - 10000;
 
 		_guid = (getPlayerUID Player) splitString "";
-		_guid = _guid select 10 + _guid select 11 + _guid select 12 + _guid select 13 + _guid select 14 + _guid select 15;
-		_guid = format["%1",_guid];
-		_num = "DT" + _guid + "0" + "1" + format["%1",life_nbAcc+1]];
+		_guid = format["%1%2%3%4",
+		_guid select 13,_guid select 12,_guid select 11,
+		_guid select 10,_guid select 9,_guid select 8,
+		_guid select 7];
+		_num = "ED" + _guid + format["%1",life_nbAcc+1]];
 
 		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
