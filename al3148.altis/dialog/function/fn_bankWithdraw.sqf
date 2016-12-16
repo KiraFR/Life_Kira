@@ -12,5 +12,6 @@ if(_val < 100 && life_atmcash > 20000000) exitWith {hint localize "STR_ATM_Withd
 life_cash = life_cash + _val;
 life_atmcash = life_atmcash - _val;
 hint format [localize "STR_ATM_WithdrawSuccess",[_val] call life_fnc_numberText];
+[getPlayerUID player, playerSide, [name player, _val],15] remoteExecCall ["DB_fnc_logs",2];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;

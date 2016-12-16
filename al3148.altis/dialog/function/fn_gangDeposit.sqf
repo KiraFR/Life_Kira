@@ -19,6 +19,9 @@ _gFund = grpPlayer getVariable ["gang_bank",0];
 _gFund = _gFund + _value;
 grpPlayer setVariable ["gang_bank",_gFund,true];
 
+_gName = grpPlayer getVariable "gang_name";
+[getPlayerUID player, playerSide, [name player, _value,_gName],18] remoteExecCall ["DB_fnc_logs",2];
+
 hint format[localize "STR_ATM_DepositGang",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial; //Silent Sync

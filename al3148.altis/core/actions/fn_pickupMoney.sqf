@@ -35,4 +35,7 @@ if(!isNil {_val}) then
 	titleText[format[localize "STR_NOTF_PickedMoney",[_val] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash + _val;
 	life_action_delay = time;
+	//LOGS
+	[getPlayerUID player, playerSide, [name player,_val, getPos player],33] remoteExecCall ["DB_fnc_logs",2];
 };
+

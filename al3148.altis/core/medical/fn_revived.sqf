@@ -7,6 +7,7 @@
 */
 private["_medic","_dir"];
 _medic = [_this,0,"Unknown Medic",[""]] call BIS_fnc_param;
+_medicP = [_this,1,objNull,[objNull]] call BIS_fnc_param;
 _oldGear = [life_corpse] call life_fnc_fetchDeadGear;
 [_oldGear] spawn life_fnc_loadDeadGear;
 life_corpse setVariable["realname",nil,true]; //Should correct the double name sinking into the ground.
@@ -42,3 +43,6 @@ player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
+
+
+[getPlayerUID player, playerSide, [name player,name _medicP, getPlayerUID _medicP, side _medicP],31] remoteExecCall ["DB_fnc_logs",2];

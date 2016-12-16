@@ -17,34 +17,25 @@
 		<LOG_VIRTBUY>true</LOG_VIRTBUY> fait
 		<LOG_VIRTBUYGANG>true</LOG_VIRTBUYGANG> fait
 		<LOG_VIRTSELL>true</LOG_VIRTSELL> fait
-		<LOG_CLOTHBUY>true</LOG_CLOTHBUY>
-		<LOG_BANKWITHDRAW>true</LOG_BANKWITHDRAW>
-		<LOG_BANKDEPOSITE>true</LOG_BANKDEPOSITE>
-		<LOG_GANGBANKWITHDRAW>true</LOG_GANGBANKWITHDRAW>
-		<LOG_GANGBANKDEPOSITE>true</LOG_GANGBANKDEPOSITE>
-		<LOG_WEAPONSELL>true</LOG_WEAPONSELL>
-		<LOG_WEAPONBUY>true</LOG_WEAPONBUY>
-		<LOG_WEAPONGANKBUY>true</LOG_WEAPONGANKBUY>
-		<LOG_ROB>true</LOG_ROB>
-		<LOG_TICKETGIVE>true</LOG_TICKETGIVE>
-		<LOG_TICKETPAID>true</LOG_TICKETPAID>
-		<LOG_JAIL>true</LOG_JAIL>
-		<LOG_GARAGESELL>true</LOG_GARAGESELL>
-		<LOG_JAILBAIL>true</LOG_JAILBAIL>
-		<LOG_JAILESCAPE>true</LOG_JAILESCAPE>
-		<LOG_JAILOVER>true</LOG_JAILOVER>
-		<LOG_JAILSPAWN>true</LOG_JAILSPAWN>
-		<LOG_BUYLICENSE>true</LOG_BUYLICENSE>
-		<LOG_REVIVE>true</LOG_REVIVE>
-		<LOG_RESPAWN>true</LOG_RESPAWN>
-		<LOG_EXPLOSION>true</LOG_EXPLOSION>
-		<LOG_COMPENSATE>true</LOG_COMPENSATE>
-		<LOG_TELEPORT>true</LOG_TELEPORT>
-		<LOG_TPHERE>true</LOG_TPHERE>
-		<LOG_MARKER>true</LOG_MARKER>
-		<LOG_GODMODE>true</LOG_GODMODE>
-		<LOG_MONEYPICKUP>true</LOG_MONEYPICKUP>
-		<LOG_INSURE>true</LOG_INSURE>
+		<LOG_CLOTHBUY>true</LOG_CLOTHBUY> fait
+		<LOG_BANKWITHDRAW>true</LOG_BANKWITHDRAW> fait
+		<LOG_BANKDEPOSITE>true</LOG_BANKDEPOSITE> fait
+		<LOG_GANGBANKWITHDRAW>true</LOG_GANGBANKWITHDRAW> fait
+		<LOG_GANGBANKDEPOSITE>true</LOG_GANGBANKDEPOSITE> fait
+		<LOG_WEAPONSELL>true</LOG_WEAPONSELL> fait 
+		<LOG_WEAPONBUY>true</LOG_WEAPONBUY> fait
+		<LOG_WEAPONGANKBUY>true</LOG_WEAPONGANKBUY> fait
+		<LOG_ROB>true</LOG_ROB> fait
+		<LOG_JAIL>true</LOG_JAIL> fait
+		<LOG_GARAGESELL>true</LOG_GARAGESELL> fait
+		<LOG_JAILESCAPE>true</LOG_JAILESCAPE> fait
+		<LOG_JAILOVER>true</LOG_JAILOVER> fait
+		<LOG_JAILSPAWN>true</LOG_JAILSPAWN> fait
+		<LOG_BUYLICENSE>true</LOG_BUYLICENSE> fait
+		<LOG_REVIVE>true</LOG_REVIVE> fait
+		<LOG_RESPAWN>true</LOG_RESPAWN> fait
+		<LOG_MONEYPICKUP>true</LOG_MONEYPICKUP> fait
+		<LOG_INSURE>true</LOG_INSURE> fait
 		<LOG_REPAIRACCEPTED>true</LOG_REPAIRACCEPTED>
 		<LOG_HOUSESELL>true</LOG_HOUSESELL>
 		<LOG_HOUSEBUY>true</LOG_HOUSEBUY>
@@ -130,65 +121,101 @@ switch (_type) do {
 		_msg = format["%1(%2)(%3) vient de vendre %4 %5s pour %6 euros.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
 		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Vente Virt', '%2')",_uid,_msg];
 	}; 
-	case 14 : {   
-
+	case 14 : {  		
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'acheter %4(%5) pour %6 euros.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Achat vetement', '%2')",_uid,_msg];
 	}; 
-	case 15 : {   
-
+	case 15 : {
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de retirer %4 euros.",_data select 0,_uid,_side,_data select 1];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Withdraw', '%2')",_uid,_msg];
 	}; 
-	case 16 : {   
-
+	case 16 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de deposer %4 euros.",_data select 0,_uid,_side,_data select 1];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Deposit', '%2')",_uid,_msg];
 	}; 
-	case 17 : {   
-
+	case 17 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de retirer %4 euros dans le compte du gang %5.",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'GangWithdraw', '%2')",_uid,_msg];
 	}; 
-	case 18 : {   
-
+	case 18 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de deposer %4 euros dans le compte du gang %5.",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'GangDeposit', '%2')",_uid,_msg];
 	}; 
-	case 19 : {   
-
+	case 19 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de vendre un(e) %4(%5) pour %6 euros .",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Vente Arme', '%2')",_uid,_msg];
 	}; 
-	case 20 : {   
-
+	case 20 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'acheter un(e) %4(%5) pour %6 euros .",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Achat Arme', '%2')",_uid,_msg];
 	}; 
-	case 21 : {   
-
+	case 21 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'acheter un(e) %4(%5) pour %6 euros avec le compte du gang %7.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3,_data select 4];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Achat Arme Gang', '%2')",_uid,_msg];
 	}; 
-	case 22 : {   
-
+	case 22 : { 
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de voler %4 euros a %5(%6)(%7).",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3,_data select 4];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 3];
 	}; 
-	case 23 : {   
+	case 23 : {
 
 	}; 
 	case 24 : {   
 
 	}; 
-	case 25 : {   
-
+	case 25 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de mettre %4(%5)(%6) en prison.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2,];
+	};
+	case 26 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de mettre %4(%5)(%6) en prison.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2,];
 	}; 
-	case 26 : {   
-
+	case 27 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de s'echapper de prison.",_data select 0,_uid,_side];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Escape Jail', '%2')",_uid,_msg];
 	}; 
-	case 27 : {   
-
+	case 28 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de sortir de prison.",_data select 0,_uid,_side];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Sortie Jail', '%2')",_uid,_msg];
 	}; 
-	case 28 : {   
-
+	case 29 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) retourne en prison apres une reconnexion.",_data select 0,_uid,_side];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Jail reco', '%2')",_uid,_msg];
 	}; 
-	case 29 : {   
-
+	case 30 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'acheter %4(%5) pour %6 euros.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Achat Licence', '%2')",_uid,_msg];
 	}; 
-	case 30 : {   
-
+	case 31 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'etre revive par %4(%5)(%6)",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Revive', '%2')",_uid,_msg,_data select 2];
 	}; 
-	case 31 : {   
-
+	case 32 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de respawn.",_data select 0,_uid,_side];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'Respawn', '%2')",_uid,_msg];
 	}; 
-	case 32 : {   
-
-	}; 
-	case 33 : {   
-
+	case 33 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de ramasser %4 euros par terre en %5",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOG (PID, Type, Text) VALUES('%1', 'PickUp Money', '%2')",_uid,_msg];
 	}; 
 	case 34 : {   
 

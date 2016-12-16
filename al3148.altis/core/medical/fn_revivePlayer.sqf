@@ -64,7 +64,7 @@ if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR
 life_atmcash = life_atmcash + (call life_revive_fee);
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
-[profileName] RemoteExecCall ["life_fnc_revived",_target];
+[profileName,player] RemoteExecCall ["life_fnc_revived",_target];
 titleText[format[localize "STR_Medic_RevivePayReceive",_targetName,[(call life_revive_fee)] call life_fnc_numberText],"PLAIN"];
 
 sleep 0.6;

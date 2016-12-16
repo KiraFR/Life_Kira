@@ -29,6 +29,8 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 {
 	life_cash = life_cash + _price;
 	[_item,false] call life_fnc_handleItem;
+	[getPlayerUID player, playerSide, [name player, _itemInfo select 1,_item,_price],19] remoteExecCall ["DB_fnc_logs",2];
+
 	hint parseText format[localize "STR_Shop_Weapon_Sold",_itemInfo select 1,[_price] call life_fnc_numberText];
 	[nil,(uiNamespace getVariable["Weapon_Shop_Filter",0])] call life_fnc_weaponShopFilter; //Update the menu.
 }
@@ -49,8 +51,11 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 		if(_action) then {
 			hint parseText format[localize "STR_Shop_Weapon_BoughtGang",_itemInfo select 1,[_price] call life_fnc_numberText];
 			_funds = grpPlayer getVariable "gang_bank";
+			_gName = grpPlayer getVariable "gang_name";
 			_funds = _funds - _price;
 			grpPlayer setVariable["gang_bank",_funds,true];
+
+			[getPlayerUID player, playerSide, [name player, _itemInfo select 1, _item, _price, _gName],21] remoteExecCall ["DB_fnc_logs",2];
 			[_item,true] spawn life_fnc_handleItem;
 			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
 		} else {
@@ -64,6 +69,8 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 		life_cash = life_cash - _price;
 		[_item,true] spawn life_fnc_handleItem;
+
+		[getPlayerUID player, playerSide, [name player, _itemInfo select 1, _item, _price],20] remoteExecCall ["DB_fnc_logs",2];
 	};
 };
 [] call life_fnc_saveGear;

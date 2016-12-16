@@ -15,6 +15,7 @@ waitUntil {!(isNull (findDisplay 46))};
 if(life_is_arrested) then
 {
 	life_is_arrested = false;
+	[getPlayerUID player, playerSide, [name player],29] remoteExecCall ["DB_fnc_logs",2];
 	[player,true] spawn life_fnc_jail;
 }
 	else

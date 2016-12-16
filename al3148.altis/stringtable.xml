@@ -286,6 +286,17 @@
 			<Italian>Hai prelevato €%1 dal tuo conto in banca</Italian>
 			<Portuguese>Você sacou R$%1 de sua conta bancária.</Portuguese>
  		</Key>
+        <Key ID="STR_ATM_WithdrawSuccessG">
+            <Original>You have withdrawn $%1 from your gang.</Original>
+            <Czech>Jste staženy $%1 z naší bandy</Czech>
+            <Spanish>Has retirado $%1 de tu pandilla</Spanish>
+            <Italian>Hai ritirato €%1 dal nostro gruppo.</Italian>
+            <Polish>Masz %1 $ wycofane z naszego gangu.</Polish>
+            <Russian></Russian>
+            <French>Vous avez retiré $%1 de votre gang</French>
+            <Portuguese>Você sacou R$%1 da sua gangue</Portuguese>
+            <German>Du hast $%1 vom Gang-Konto abgehoben.</German>
+        </Key>
  		<Key ID="STR_ATM_NotEnoughCash">
  			<Original>You do not have that much cash on you.</Original>
  			<English>You do not have that much cash on you.</English>
