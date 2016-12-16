@@ -18,7 +18,7 @@ if(_groupID == -1) exitWith {};
 
 _result = [format["SELECT id FROM gangs WHERE active='1' AND id='%1'",_groupID],2] call DB_fnc_asyncCall;
 if(count _result == 0) then {
-	[_group] RemoteExecCall ["life_fnc_gangDisbanded"(units _group)];
+	[_group] RemoteExecCall ["life_fnc_gangDisbanded",(units _group)];
 	sleep 5;
 	deleteGroup _group;
 };

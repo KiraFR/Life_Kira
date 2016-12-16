@@ -175,12 +175,12 @@ switch (_type) do {
 	case 25 : {    
 		_data = [_this,2,[],[[]]] call BIS_fnc_param;
 		_msg = format["%1(%2)(%3) vient de mettre %4(%5)(%6) en prison.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
-		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2,];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2];
 	};
 	case 26 : {    
 		_data = [_this,2,[],[[]]] call BIS_fnc_param;
 		_msg = format["%1(%2)(%3) vient de mettre %4(%5)(%6) en prison.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
-		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2,];
+		_query = format["INSERT INTO LOG (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 2];
 	}; 
 	case 27 : {    
 		_data = [_this,2,[],[[]]] call BIS_fnc_param;

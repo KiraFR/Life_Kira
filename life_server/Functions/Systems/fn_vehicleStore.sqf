@@ -49,7 +49,7 @@ if(_impound) then
 {
 	if(count _vInfo == 0) exitWith
 	{
-		[[1,(localize "STR_Garage_Store_NotPersistent")] RemoteExecCall ["life_fnc_broadcast",(owner _unit)];
+		[1,(localize "STR_Garage_Store_NotPersistent")] RemoteExecCall ["life_fnc_broadcast",(owner _unit)];
 		life_garage_store = false;
 		(owner _unit) publicVariableClient "life_garage_store";
 	};

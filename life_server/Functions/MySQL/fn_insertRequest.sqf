@@ -32,8 +32,8 @@ if(debug) then {
 	diag_log "------------------------------------------------";
 };
 //Double check to make sure the client isn't in the database...
-if(typeName _queryResult == "STRING") exitWith {[] remoteExecCall["SOCK_fnc_dataQuery",(owner _returnToSender);}; //There was an entry!
-if(count _queryResult != 0) exitWith {[] remoteExecCall["SOCK_fnc_dataQuery",(owner _returnToSender);};
+if(typeName _queryResult == "STRING") exitWith {[] remoteExecCall ["SOCK_fnc_dataQuery",(owner _returnToSender)]}; //There was an entry!
+if(count _queryResult != 0) exitWith {[] remoteExecCall ["SOCK_fnc_dataQuery",(owner _returnToSender)]};
 
 //Clense and prepare some information.
 _alias = [_name];
@@ -54,4 +54,4 @@ _query = format["INSERT INTO players (playerid, name, cash, bankacc, aliases, co
 _query = format["INSERT INTO permis (uid) VALUES('%1')",_uid];
 [_query,1] call DB_fnc_asyncCall;
 
-[] remoteExecCall["SOCK_fnc_dataQuery",(owner _returnToSender);
+[] remoteExecCall ["SOCK_fnc_dataQuery",(owner _returnToSender)];

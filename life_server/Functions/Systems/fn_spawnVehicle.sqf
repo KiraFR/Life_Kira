@@ -54,7 +54,7 @@ if(typeName _sp != "STRING") then {
 if(count _nearVehicles > 0) exitWith
 {
 	[_price,_unit_return] RemoteExecCall ["life_fnc_garageRefund",_unit];
-	[[1,(localize "STR_Garage_SpawnPointError")] RemoteExecCall ["life_fnc_broadcast",_unit];
+	[1,(localize "STR_Garage_SpawnPointError")] RemoteExecCall ["life_fnc_broadcast",_unit];
 };
 
 _query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
