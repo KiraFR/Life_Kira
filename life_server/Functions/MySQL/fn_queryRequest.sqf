@@ -87,7 +87,7 @@ switch (_side) do {
 		_queryResult set[19,missionNamespace getVariable[format["gang_%1",_uid],[]]];
 		_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
 		_PermisResult = [_Permis,2] call DB_fnc_asyncCall;
-		if(count _numAnnuResult > 0)then {
+		if(count _PermisResult > 0)then {
 			_queryResult set [12,_PermisResult select 0];
 			_queryResult set [13,_PermisResult select 1];
 			_queryResult set [14,_PermisResult select 2];
@@ -136,7 +136,7 @@ if(count _nbAccEntreResult == 0) then{
 };
 
 _dfltAcc = format["SELECT id, bankacc FROM banque WHERE playerid='%1' AND dflt='1'",_uid];
-_dfltAcc = [_nbAccEntre,2] call DB_fnc_asyncCall;
+_dfltAcc = [_dfltAcc,2] call DB_fnc_asyncCall;
 _queryResult set [28,_dfltAcc];
-
+diag_log format["%1",_queryResult];
 _queryResult remoteExecCall ["SOCK_fnc_requestReceived",_ownerID];

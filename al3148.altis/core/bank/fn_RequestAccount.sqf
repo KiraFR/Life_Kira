@@ -29,7 +29,7 @@ switch (_type) do {
 		if(clientOwner < 10)then{_client = format["00%1",clientOwner];
 		}else if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
 		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
-		_num = "RD" + _guid + format["%1",life_nbAcc+1]];
+		_num = "RD" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte offshore a bien été créé";
 		[] call life_fnc_hudUpdate;
@@ -46,7 +46,7 @@ switch (_type) do {
 		if(clientOwner < 10)then{_client = format["00%1",clientOwner];
 		}else if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
 		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
-		_num = "RD" + _guid + format["%1",life_nbAcc+1]];
+		_num = "RD" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
@@ -65,7 +65,7 @@ switch (_type) do {
 		_guid select 13,_guid select 12,_guid select 11,
 		_guid select 10,_guid select 9,_guid select 8,
 		_guid select 7];
-		_num = "ED" + _guid + format["%1",life_nbAcc+1]];
+		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;

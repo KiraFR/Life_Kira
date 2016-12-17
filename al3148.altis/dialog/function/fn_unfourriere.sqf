@@ -23,7 +23,7 @@ if(life_atmcash < _price) exitWith {hint format[(localize "STR_Garage_CashError"
 
 
 if(typeName life_fourriere_sp == "ARRAY") then {
-	[[_vid,_pid,life_fourriere_sp select 0,_unit,_price,life_fourriere_sp select 1] RemoteExecCall ["TON_fnc_spawnVehicle",2];
+	[_vid,_pid,life_fourriere_sp select 0,_unit,_price,life_fourriere_sp select 1] RemoteExecCall ["TON_fnc_spawnVehicle",2];
 } else {
 	if(life_fourriere_sp in ["medic_spawn_1","medic_spawn_2","medic_spawn_3"]) then {
 		[_vid,_pid,life_fourriere_sp,_unit,_price] RemoteExecCall ["TON_fnc_spawnVehicle",2];

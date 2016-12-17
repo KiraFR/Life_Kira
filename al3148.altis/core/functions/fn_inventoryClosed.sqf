@@ -20,5 +20,5 @@ if((typeOf _container) in ["Box_IND_Grenades_F","B_supplyCrate_F"]) exitWith {
 		};
 	};
 	if(!isNil "_exit" OR !(_house isKindOf "House_F")) exitWith {systemChat localize "STR_House_ContainerError"};
-	[_house] RemoteExecCall "TON_fnc_updateHouseContainers",2];
+	[_house] RemoteExecCall ["TON_fnc_updateHouseContainers",2];
 };

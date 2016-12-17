@@ -17,7 +17,7 @@ _price = 0;
 } foreach life_clothing_purchase;
 
 _detail = [uniform player] call life_fnc_fetchCfgDetails;
-_uniform = getText(configFile >> (_details select 6) >> (typeOf (uniform player)) >> "DisplayName")
+_uniform = getText(configFile >> (_details select 6) >> (typeOf (uniform player)) >> "DisplayName");
 
 if(_price > life_cash) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
 life_cash = life_cash - _price;

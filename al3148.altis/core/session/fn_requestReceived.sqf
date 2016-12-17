@@ -32,11 +32,15 @@ if(!isServer && (!isNil "life_adminlevel" OR !isNil "life_coplevel" OR !isNil "l
 
 //Parse basic player information.
 life_cash = parseNumber (_this select 2);
-if(typeName (_this select 28) select 1 == "STRING")then{
-	life_atmcash = parseNumber ((_this select 28) select 1);
-}else{
-	life_atmcash =(_this select 28) select 1;
-}
+_libank = (_this select 28);
+if(count _libank > 0) then{
+	diag_log format["_libank select 1: %1, typeName _libank select 1: %2",_libank select 1,typeName _libank select 1];
+	if(typeName (_libank select 1) == "STRING") then{
+		life_atmcash = parseNumber (_libank select 1);
+	}else{
+		life_atmcash = (_libank select 1);
+	};
+};
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,0);
 
@@ -107,16 +111,15 @@ _licence = [licence_civ_gouv ,license_civ_ebou];
 { if(true) exitwith {life_paycheck = 0};} foreach (_x); //si licence paychek 0
 
 switch (true) do {
-	case (life_atmcash < 100 000):life_paycheck = 500};
-	case (life_atmcash > 100 000):life_paycheck = 200};
-	case (life_atmcash > 200 000):life_paycheck = 100};
-	case (life_atmcash > 300 000):life_paycheck = 50};
-	case (life_atmcash > 400 000):life_paycheck = 25};
-	case (life_atmcash > 500 000):life_paycheck = 0};
-	case (PlayerSide = west && independent):{life_paycheck = 1200};
+	case (life_atmcash < 100000):{life_paycheck = 500;};
+	case (life_atmcash > 100000):{life_paycheck = 200;};
+	case (life_atmcash > 200000):{life_paycheck = 100;};
+	case (life_atmcash > 300000):{life_paycheck = 50;};
+	case (life_atmcash > 400000):{life_paycheck = 25;};
+	case (life_atmcash > 500000):{life_paycheck = 0;};
+	case (PlayerSide == west || PlayerSide == independent):{life_paycheck = 1200;};
 };
 life_nbAcc = _this select 26;
-if(_this select 26 == 1){life_EnterAcc = true;};
-if(_this select 26 == 0){life_EnterAcc = false;};
+if((_this select 27) == 1) then {life_EnterAcc = true;}else {life_EnterAcc = false;};
 life_dflt = (_this select 28) select 0;
 life_session_completed = true;

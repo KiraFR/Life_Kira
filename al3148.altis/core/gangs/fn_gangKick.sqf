@@ -21,5 +21,5 @@ _members = _members - [_unitID];
 grpPlayer setVariable["gang_members",_members,true];
 
 [_unit,grpPlayer] RemoteExecCall ["TON_fnc_clientGangKick",_unit]; //Boot that bitch!
-[4,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2] //Update the database.
+[4,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2]; //Update the database.
 [] call life_fnc_gangMenu;

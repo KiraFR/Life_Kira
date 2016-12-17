@@ -11,7 +11,7 @@ if(isNil "life_account")exitwith{hint "Vous n'avez pas de compte en banque, veui
 params[
 	["_type",0,[0]],
 	["_data",[],[[]]]
-]
+];
 
 switch(_type) do {
 
