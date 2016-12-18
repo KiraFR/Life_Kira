@@ -37,14 +37,14 @@
 		<LOGS_MONEYPICKUP>true</LOGS_MONEYPICKUP> fait
 		<LOGS_INSURE>true</LOGS_INSURE> fait
 		<LOGS_REPAIRACCEPTED>true</LOGS_REPAIRACCEPTED>
-		<LOGS_HOUSESELL>true</LOGS_HOUSESELL>
-		<LOGS_HOUSEBUY>true</LOGS_HOUSEBUY>
+		<LOGS_HOUSESELL>true</LOGS_HOUSESELL> fait
+		<LOGS_HOUSEBUY>true</LOGS_HOUSEBUY> fait
 		<LOGS_MAC>true</LOGS_MAC>
 		<LOGS_MANUALINTERPOL>true</LOGS_MANUALINTERPOL>
-		<LOGS_TRAITEMENT>true</LOGS_TRAITEMENT>
+		<LOGS_TRAITEMENT>true</LOGS_TRAITEMENT> fait
 		<LOGS_GOVRETRAIT>true</LOGS_GOVRETRAIT>
 		<LOGS_GOVDEPOT>true</LOGS_GOVDEPOT>
-		<LOGS_VEHFOUILLE>true</LOGS_VEHFOUILLE>
+		<LOGS_VEHFOUILLE>true</LOGS_VEHFOUILLE> fait
 */
 
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
@@ -167,10 +167,14 @@ switch (_type) do {
 		_query = format["INSERT INTO LOGS (PID, PID2, Type, Text) VALUES('%1', '%3', 'Vole', '%2')",_uid,_msg,_data select 3];
 	}; 
 	case 23 : {
-
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de se donner %4 euros.",_data select 0,_uid,_side,_data select 1];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Compensate', '%2')",_uid,_msg];
 	}; 
-	case 24 : {   
-
+	case 24 : {
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de se teleporter sur la position %4.",_data select 0,_uid,_side,_data select 1];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Teleporte', '%2')",_uid,_msg];
 	}; 
 	case 25 : {    
 		_data = [_this,2,[],[[]]] call BIS_fnc_param;
@@ -217,14 +221,20 @@ switch (_type) do {
 		_msg = format["%1(%2)(%3) vient de ramasser %4 euros par terre en %5",_data select 0,_uid,_side,_data select 1,_data select 2];
 		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'PickUp Money', '%2')",_uid,_msg];
 	}; 
-	case 34 : {   
-
+	case 34 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'assurer %4(%5) pour %6 euros.",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Insure', '%2')",_uid,_msg];
 	}; 
-	case 35 : {   
-
+	case 35 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de vendre sa maison en %4 pour %5 euros.",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Sell House', '%2')",_uid,_msg];
 	}; 
-	case 36 : {   
-
+	case 36 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient d'acheter une maison en %4 pour %5 euros.",_data select 0,_uid,_side,_data select 1,_data select 2];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Achat House', '%2')",_uid,_msg];
 	}; 
 	case 37 : {   
 
@@ -232,8 +242,10 @@ switch (_type) do {
 	case 38 : {   
 
 	}; 
-	case 39 : {   
-
+	case 39 : {    
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de traiter %4 %5 en %6.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOGS (PID, Type, Text) VALUES('%1', 'Traitement', '%2')",_uid,_msg];
 	}; 
 	case 40 : {   
 
@@ -241,35 +253,10 @@ switch (_type) do {
 	case 41 : {   
 
 	}; 
-	case 42 : {   
-
-	}; 
-	case 42 : {   
-
-	}; 
-	case 43 : {   
-
-	}; 
-	case 44 : {   
-
-	}; 
-	case 45 : {   
-
-	}; 
-	case 46 : {   
-
-	}; 
-	case 47 : {   
-
-	}; 
-	case 48 : {   
-
-	}; 
-	case 50 : {   
-
-	}; 
-	case 51 : {   
-
+	case 42 : {
+		_data = [_this,2,[],[[]]] call BIS_fnc_param;
+		_msg = format["%1(%2)(%3) vient de regarder dans le vehicule %4(%5) qui est un(e) %6.",_data select 0,_uid,_side,_data select 1,_data select 2,_data select 3];
+		_query = format["INSERT INTO LOGS (PID, PID2, Type, Text) VALUES('%1', '%3', 'Check Vehicule', '%2')",_uid,_msg,_data select 2]; 
 	}; 
 };
 

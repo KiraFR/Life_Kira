@@ -53,7 +53,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 			_funds = grpPlayer getVariable "gang_bank";
 			_gName = grpPlayer getVariable "gang_name";
 			_funds = _funds - _price;
-			grpPlayer setVariable["gang_bank",_funds,true];
+			grpPlayer getVariable "gang_bank";
 
 			[getPlayerUID player, playerSide, [name player, _itemInfo select 1, _item, _price, _gName],21] remoteExecCall ["DB_fnc_logs",2];
 			[_item,true] spawn life_fnc_handleItem;

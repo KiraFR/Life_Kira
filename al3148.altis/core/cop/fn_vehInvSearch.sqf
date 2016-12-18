@@ -30,6 +30,9 @@ _value = 0;
 	};
 } foreach (_vehicleInfo select 0);
 
+_owner = _vehicle getVariable "vehicle_info_owners";
+[getPlayerUID player, playerSide, [name player, _owner select 1, _owner select 0, typeOf(_vehicle)],42] remoteExecCall ["DB_fnc_logs",2];
+
 if(_value > 0) then
 {
 	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];

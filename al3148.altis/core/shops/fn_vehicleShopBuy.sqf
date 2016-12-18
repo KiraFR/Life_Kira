@@ -89,18 +89,19 @@ _vehicle allowDamage true;
 //life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 life_vehicles pushBack _vehicle;
 [getPlayerUID player,playerSide,_vehicle,1] RemoteExecCall ["TON_fnc_keyManagement",2];
-
+_coloveh = [_className,(_vehicle getVariable "Life_VEH_color")] call life_fnc_vehicleColorStr;
+if(isNil "_coloveh") then{
+	_coloveh = "Aucune";
+};
+_veh = [_className] call life_fnc_fetchVehInfo;
 if(_mode) then {
 	if(!(_className in ["B_G_Offroad_01_armed_F","B_MRAP_01_hmg_F"])) then {
 		[(getPlayerUID player),playerSide,_vehicle,_colorIndex] RemoteExecCall ["TON_fnc_vehicleCreate",2];
-		_coloveh = [_className,(_vehicle getVariable "Life_VEH_color")] call life_fnc_vehicleColorStr;
-		if(isNil "_coloveh") then{
-			_coloveh = "Aucune";
-		};
-		[getPlayerUID player, playerSide, [name player,([_className] call life_fnc_fetchVehInfo) select 3, typeOf _vehicle,_coloveh,_basePrice],9] remoteExecCall ["DB_fnc_logs",2];
+
+		[getPlayerUID player, playerSide, [name player,_veh select 3, typeOf _vehicle,_coloveh,_basePrice],9] remoteExecCall ["DB_fnc_logs",2];
 	};
 }else{
-	[getPlayerUID player, playerSide, [name player,([_className] call life_fnc_fetchVehInfo) select 3, typeOf _vehicle,_coloveh,_basePrice],10] remoteExecCall ["DB_fnc_logs",2];
+	[getPlayerUID player, playerSide, [name player,_veh select 3, typeOf _vehicle,_coloveh,_basePrice],10] remoteExecCall ["DB_fnc_logs",2];
 };
 
 [0] call SOCK_fnc_updatePartial;
