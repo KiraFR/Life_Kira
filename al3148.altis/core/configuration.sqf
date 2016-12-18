@@ -91,23 +91,28 @@ life_my_gang = ObjNull;
 
 life_vehicles = [];
 bank_robber = [];
-switch (playerSide) do
-{
-	case west: 
+if(life_nbAcc > 0) then {
+	switch (playerSide) do
 	{
-		life_atmcash = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
+		case west: 
+		{
+			life_atmcash = 0; //Starting Bank Money
+			life_paycheck = 500; //Paycheck Amount
+		};
+		case civilian: 
+		{
+			life_atmcash = 0; //Starting Bank Money
+			life_paycheck = 350; //Paycheck Amount
+		};
+		
+		case independent: {
+			life_atmcash = 0;
+			life_paycheck = 450;
+		};
 	};
-	case civilian: 
-	{
-		life_atmcash = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
-	};
-	
-	case independent: {
-		life_atmcash = 6500;
-		life_paycheck = 450;
-	};
+}else{
+	life_atmcash = 0;
+	life_paycheck = 0;
 };
 
 /*
