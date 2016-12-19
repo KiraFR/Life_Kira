@@ -33,5 +33,5 @@ if(typeName life_garage_sp == "ARRAY") then {
 
 hint localize "STR_Garage_SpawningVeh";
 
-life_atmcash = life_atmcash - _price;
+if (life_nbAcc == 0)then { life_cash = life_cash - _price } else {life_atmcash = life_atmcash - _price };
 [1] call SOCK_fnc_updatePartial;

@@ -36,7 +36,7 @@ _owner = _vehicle getVariable "vehicle_info_owners";
 if(_value > 0) then
 {
 	[0,"STR_NOTF_VehContraband",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
-	life_atmcash = life_atmcash + _value;
+	if (life_nbAcc == 0)then { life_cash = life_cash + _value } else { life_atmcash = life_atmcash + _value };
 	_vehicle setVariable["Trunk",[],true];
 }
 	else
