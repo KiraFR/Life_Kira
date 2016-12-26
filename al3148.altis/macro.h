@@ -9,3 +9,7 @@
 //Player based quick macros
 #define grpPlayer group player
 #define steamid getPlayerUID player
+
+#define RSERV 2 //Only server
+#define RCLIENT -2 //Except server
+#define RANY 0 //Global

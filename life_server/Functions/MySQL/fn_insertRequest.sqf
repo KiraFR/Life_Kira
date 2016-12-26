@@ -11,8 +11,8 @@ private["_uid","_name","_side","_money","_bank","_licenses","_handler","_thread"
 params[
 	["_uid","",[""]],
 	["_name","",[""]],
-	["_money",0,[""]],
-	["_bank",2500,[""]],
+	["_money",0,[0]],
+	["_bank",2500,[0]],
 	["_returnToSender",ObjNull,[ObjNull]]
 ];
 

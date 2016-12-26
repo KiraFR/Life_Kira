@@ -88,33 +88,27 @@ __CONST__(life_impound_boat,250);
 __CONST__(life_impound_air,850);
 life_istazed = false;
 life_my_gang = ObjNull;
-
+life_nbacc = 0;
 life_vehicles = [];
 bank_robber = [];
-if(life_nbAcc > 0) then {
-	switch (playerSide) do
+switch (playerSide) do
+{
+	case west: 
 	{
-		case west: 
-		{
-			life_atmcash = 0; //Starting Bank Money
-			life_paycheck = 500; //Paycheck Amount
-		};
-		case civilian: 
-		{
-			life_atmcash = 0; //Starting Bank Money
-			life_paycheck = 350; //Paycheck Amount
-		};
-		
-		case independent: {
-			life_atmcash = 0;
-			life_paycheck = 450;
-		};
+		life_atmcash = 0; //Starting Bank Money
+		life_paycheck = 500; //Paycheck Amount
 	};
-}else{
-	life_atmcash = 0;
-	life_paycheck = 0;
+	case civilian: 
+	{
+		life_atmcash = 0; //Starting Bank Money
+		life_paycheck = 350; //Paycheck Amount
+	};
+	
+	case independent: {
+		life_atmcash = 0;
+		life_paycheck = 450;
+	};
 };
-
 /*
 	Master Array of items?
 */

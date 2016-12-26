@@ -31,21 +31,23 @@ switch (_switch) do
 		_queryResult = [_query,2] call DB_fnc_asyncCall;
 		//DYNMARKET_Items_CurrentPriceArr = _queryResult select 0;
 		_pricearray = _queryResult select 0;
-		if (count _pricearray < 1) then {
-		} else {
-			DYNMARKET_Items_CurrentPriceArr = _pricearray;
-			{
-				_itemName = _x select 0;
-				_itemNewPrice = _x select 1;		
-				_index = -1;
+		if(!(isNil "_pricearray")) then{
+			if (count _pricearray < 1) then {
+			} else {
+				DYNMARKET_Items_CurrentPriceArr = _pricearray;
 				{
-					_index = _index + 1;
-					_curItemName = _x select 0;
-					if (_curItemName==_itemName) then {
-						DYNMARKET_sellarraycopy set [_index,[_itemName,_itemNewPrice]];
-					};
-				} forEach DYNMARKET_sellarraycopy;
-			} forEach DYNMARKET_Items_CurrentPriceArr;
+					_itemName = _x select 0;
+					_itemNewPrice = _x select 1;		
+					_index = -1;
+					{
+						_index = _index + 1;
+						_curItemName = _x select 0;
+						if (_curItemName==_itemName) then {
+							DYNMARKET_sellarraycopy set [_index,[_itemName,_itemNewPrice]];
+						};
+					} forEach DYNMARKET_sellarraycopy;
+				} forEach DYNMARKET_Items_CurrentPriceArr;
+			};
 		};
 	};
 };

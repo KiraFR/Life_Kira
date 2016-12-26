@@ -15,4 +15,6 @@ _playerUID = _this select 0;
 		_owner = owner _x;
 	};
 }foreach switchableUnits;
-[1,DYNMARKET_Items_CurrentPriceArr] RemoteExec ["life_fnc_update",_owner];
+if(isServer) then{
+	[1,DYNMARKET_Items_CurrentPriceArr] RemoteExec ["life_fnc_update",_owner];
+};

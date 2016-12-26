@@ -74,7 +74,7 @@ switch (_side) do {
 		 // LOGS
         _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
         //  UID , SIDE  , Informations , Type
-        [_uid,west,_list,0] call DB_fnc_logs;
+        [_uid,west,_list,0] spawn DB_fnc_logs;
 	};
 	
 	case civilian: {
@@ -85,7 +85,8 @@ switch (_side) do {
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
 		_queryResult set[19,missionNamespace getVariable[format["gang_%1",_uid],[]]];
-		_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
+		
+		/*_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
 		_PermisResult = [_Permis,2] call DB_fnc_asyncCall;
 		if(count _PermisResult > 0)then {
 			_queryResult set [12,_PermisResult select 0];
@@ -96,18 +97,18 @@ switch (_side) do {
 		// LOGS
         _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
         //  UID , SIDE  , Informations , Type
-        [_uid,west,_list,0] call DB_fnc_logs;
+        [_uid,civilian,_list,0] spawn DB_fnc_logs;*/
 	};
 	case independent:{
 		// LOGS
-        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
+        //_list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
         //  UID , SIDE, Informations , Type
-        [_uid,independent,_list,0] call DB_fnc_logs;
+        //[_uid,independent,_list,0] spawn DB_fnc_logs;
 	};
 };
 
 
-
+/*
 //Telephone
 _numAnnu = format["SELECT numero,annuaire FROM phonenumber WHERE pid_owner='%1'",_uid];
 _numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
@@ -119,10 +120,10 @@ if(count _numAnnuResult != 0)then {
 _numreper = format["SELECT nam_contact, num_contact, pid_contact, id FROM numberrepertoire WHERE pid_owner='%1'",_uid];
 _numreperResult = [_numreper,2,true] call DB_fnc_asyncCall;
 _queryResult set [22,_numreperResult];
-
+*/
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[25,_keyArr];
-
+/*
 _nbAcc = format["SELECT id FROM banque WHERE playerid='%1'",_uid];
 _nbAccResult = [_nbAcc,2,true] call DB_fnc_asyncCall;
 _queryResult set [26,(count _nbAccResult)];
@@ -138,5 +139,6 @@ if(count _nbAccEntreResult == 0) then{
 _dfltAcc = format["SELECT id, bankacc FROM banque WHERE playerid='%1' AND dflt='1'",_uid];
 _dfltAcc = [_dfltAcc,2] call DB_fnc_asyncCall;
 _queryResult set [28,_dfltAcc];
+*/
 diag_log format["%1",_queryResult];
 _queryResult remoteExecCall ["SOCK_fnc_requestReceived",_ownerID];

@@ -10,10 +10,30 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-11-21 23:30:23
+Date: 2016-12-24 00:37:54
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for banque
+-- ----------------------------
+DROP TABLE IF EXISTS `banque`;
+CREATE TABLE `banque` (
+  `id` int(55) NOT NULL AUTO_INCREMENT,
+  `playerid` varchar(30) NOT NULL,
+  `nam_account` text NOT NULL,
+  `numcompte` varchar(30) NOT NULL,
+  `offshore` tinyint(1) NOT NULL DEFAULT '0',
+  `entreprise` tinyint(1) NOT NULL DEFAULT '0',
+  `bankacc` int(100) NOT NULL DEFAULT '0',
+  `dflt` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of banque
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for dynmarket
@@ -24,6 +44,10 @@ CREATE TABLE `dynmarket` (
   `prices` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of dynmarket
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for gangs
@@ -42,6 +66,10 @@ CREATE TABLE `gangs` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of gangs
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for gouv
 -- ----------------------------
 DROP TABLE IF EXISTS `gouv`;
@@ -57,6 +85,10 @@ CREATE TABLE `gouv` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of gouv
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for houses
 -- ----------------------------
 DROP TABLE IF EXISTS `houses`;
@@ -69,6 +101,28 @@ CREATE TABLE `houses` (
   `owned` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`id`,`pid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of houses
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for logs
+-- ----------------------------
+DROP TABLE IF EXISTS `logs`;
+CREATE TABLE `logs` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `PID` varchar(32) NOT NULL,
+  `PID2` varchar(32) NOT NULL DEFAULT '',
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `Type` varchar(20) NOT NULL,
+  `Text` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of logs
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for message
@@ -86,6 +140,10 @@ CREATE TABLE `message` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of message
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for messagecop
 -- ----------------------------
 DROP TABLE IF EXISTS `messagecop`;
@@ -99,6 +157,10 @@ CREATE TABLE `messagecop` (
   `nowtime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of messagecop
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for messageinde
@@ -116,6 +178,10 @@ CREATE TABLE `messageinde` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of messageinde
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for numberrepertoire
 -- ----------------------------
 DROP TABLE IF EXISTS `numberrepertoire`;
@@ -128,6 +194,10 @@ CREATE TABLE `numberrepertoire` (
   `contact_isActive` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of numberrepertoire
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for permis
@@ -144,6 +214,10 @@ CREATE TABLE `permis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
+-- Records of permis
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for phonenumber
 -- ----------------------------
 DROP TABLE IF EXISTS `phonenumber`;
@@ -156,6 +230,10 @@ CREATE TABLE `phonenumber` (
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of phonenumber
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for players
@@ -182,11 +260,16 @@ CREATE TABLE `players` (
   `blacklist` tinyint(1) NOT NULL DEFAULT '0',
   `Ppermis` int(2) NOT NULL DEFAULT '0',
   `nbrPermis` int(10) NOT NULL DEFAULT '0',
+  `fourriere` tinyint(1) NOT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `playerid` (`playerid`),
   KEY `name` (`name`),
   KEY `blacklist` (`blacklist`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of players
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for vehicles
@@ -204,11 +287,16 @@ CREATE TABLE `vehicles` (
   `color` int(20) NOT NULL,
   `inventory` varchar(500) NOT NULL,
   `fourriere` tinyint(1) NOT NULL,
+  `insure` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `side` (`side`),
   KEY `pid` (`pid`),
   KEY `type` (`type`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of vehicles
+-- ----------------------------
 
 -- ----------------------------
 -- Procedure structure for deleteDeadVehicles
