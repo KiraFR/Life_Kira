@@ -47,19 +47,19 @@ switch (true) do
 {
 	case (_unit == _k):
 	{
-		[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit],2] remoteExecCall ["TON_fnc_logKill",RSERV];
+		[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit],2] remoteExecCall ["DB_fnc_logs",RSERV];
 	};
 	case (vehicle _k != _k):
 	{
 		if(typeOf _kVeh isKindOf "Air") then{
-			[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _vehName],4] remoteExecCall ["TON_fnc_logKill",RSERV];
+			[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _vehName],4] remoteExecCall ["DB_fnc_logs",RSERV];
 		}else{
-			[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _vehName],3] remoteExecCall ["TON_fnc_logKill",RSERV];
+			[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _vehName],3] remoteExecCall ["DB_fnc_logs",RSERV];
 		};
 	};
 	default
 	{//		UIDU 				SIDEU 			NAMEU 									POSU 				NAMEK 						 UIDK 			 SIDEK 			POSK 	WEAPONK	   DISK
-		[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _kWep, _distance],5] remoteExecCall ["TON_fnc_logKill",RSERV];
+		[getPlayerUID _unit, side _unit, [_unit getVariable["realname",name player], position _unit, _k getVariable["realname",name _k], getPlayerUID _k, side _k, position _k, _kWep, _distance],5] remoteExecCall ["DB_fnc_logs",RSERV];
 	};
 };
 

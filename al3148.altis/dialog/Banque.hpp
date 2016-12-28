@@ -4,74 +4,101 @@ class Life_AccountReq {
 	movingEnable = false;
 	enableSimulation = true;
 
-	class BackgroundControls
-	
-			class TitleBox: RscText
-			{
-				idc = -1;
-				text = "Creation d'un compte en banque";
-				x = 0;
-				y = 0;
-				w = 0.3;
-				h = 0.04;
-				colorBackground[] = {0.38,0.7,0.88,0.7};
-			};
-			class Background: Life_RscText
-			{
-				idc = -1;
-				x = 7.45058e-009;
-				y = 0.04;
-				w = 0.3;
-				h = 0.72;
-				colorBackground[] = {-1,-1,-1,0.7};
-			};
+	class controlsBackground
+	{
+		class Background: Life_RscText
+		{
+			idc = 1000;
+			text = "";
+			x = 0.1875;
+			y = 0.3;
+			w = 0.6375;
+			h = 0.46;
+			colorBackground[] = {0,0,0,0.7};
+		};
+		class TitleBox: Life_RscText
+		{
+			idc = 1001;
+			text = "Creation d'un compte en banque";
+			x = 0.1875;
+			y = 0.26;
+			w = 0.6375;
+			h = 0.04;
+			colorBackground[] = {0.38,0.7,0.88,0.7};
+		};
+	};
 	class controls
-	
-			class Validate_Button: Life_RscButtonMenu
-			{
-				idc = 11400;
-				text = "Soumettre";
-				x = 0.0375;
-				y = 0.66;
-				w = 0.225;
-				h = 0.06;
-			};
-			class Expli: Life_RscStructuredText
-			{
-				idc = 11100;
-				text = "Si vous etes une entreprise veulliez cocher la case entreprises.";
-				x = 0.025;
-				y = 0.08;
-				w = 0.25;
-				h = 0.12;
-				colorBackground[] = {-1,-1,-1,0.5};
-			};
-			class Entreprise: Life_RscText
-			{
-				idc = 11002;
-				text = ": Entreprise";
-				x = 0.0699495;
-				y = 0.278316;
-				w = 0.1625;
-				h = 0.04;
-			};
-			class CheckEnter: Life_Checkbox
-			{
-				idc = 11040;
-				type = 77;
-				x = 0.05;
-				y = 0.285051;
-				sizeEx = 0.04;
-				onCheckBoxesSelChanged = "";
-				tooltip = "Definir sur entreprise";
-			};
-			class Price: Life_RscStructuredText
-			{
-				idc = 11101;
-				x = 0.0375;
-				y = 0.6;
-				w = 0.225;
-				h = 0.04;
-				colorBackground[] = {-1,-1,-1,0.7};
-			};
+	{
+		class close: Life_RscButtonMenu
+		{
+			idc = 11001;
+			text = "FERMER"; 
+            onButtonClick = "closeDialog 0;";
+			x = 0.1875;
+			y = 0.76;
+			w = 0.15;
+			h = 0.04;
+			colorBackground[] = {0,0,0,1};
+		};
+		class Create: Life_RscButtonMenu
+		{
+			idc = 11002;
+			text = "Soumettre";
+            onButtonClick = "2 spawn life_fnc_requestAccount;";
+			x = 0.675;
+			y = 0.76;
+			w = 0.15;
+			h = 0.04;
+			colorBackground[] = {0,0,0,1};
+		};
+		class Reglement: Life_RscStructuredText
+		{
+			idc = 11003;
+			text = "";
+			x = 0.2;
+			y = 0.32;
+			w = 0.6125;
+			h = 0.24;
+			colorBackground[] = {0,0,0,0.9};
+		};
+		class TextCheckB: Life_RscText
+		{
+			idc = 11004;
+			text = "Entreprise ?"; 
+			x = 0.204489;
+			y = 0.58819;
+			w = 0.175;
+			h = 0.06;
+            sizeEx = 0.04;
+		};
+		class EntrepriseCheckbox: Life_Checkbox
+		{
+			idc = 11005;
+            type = 77;
+			x = 0.375;
+			y = 0.6;
+			w = 0.0375;
+			h = 0.04;
+		};
+		class TextEdit: Life_RscText
+		{
+			idc = 11006;
+			text = "Nom du compte :"; 
+			x = 0.206409;
+			y = 0.66;
+			w = 0.2125;
+			h = 0.06;
+            sizeEx = 0.04;
+		};
+		class EditName: Life_RscEdit
+		{
+			idc = 11007;
+			text = ""; 
+			x = 0.4375;
+			y = 0.67181;
+			w = 0.365705;
+			h = 0.04819;
+			colorBackground[] = {0,0,0,1};
+		};
+	};
 };

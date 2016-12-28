@@ -105,7 +105,7 @@ if(_hasLicense) then
 	titleText[format[localize "STR_Process_Processed2",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash - _cost;
 	life_is_processing = false;
-
-	_nameOld = [([_oldItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	[getPlayerUID player, civilian, [name player, _oldVal, _nameOld, _itemName],39] remoteExecCall ["DB_fnc_logs",2];
 };
+
+_nameOld = [([_oldItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
+[getPlayerUID player, civilian, [name player, _oldVal, _nameOld, _itemName],39] remoteExecCall ["DB_fnc_logs",2];

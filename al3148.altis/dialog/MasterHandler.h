@@ -28,3 +28,6 @@
 #include "dynmarket_changeprice.hpp"
 #include "dynmarket_prices.hpp"
 #include "impot.hpp"
+#include "banque.hpp"
+#include "gestionAccount.hpp"
+#include "fuelStat.hpp"

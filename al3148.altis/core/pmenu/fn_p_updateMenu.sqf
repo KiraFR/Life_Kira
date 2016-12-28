@@ -41,8 +41,11 @@ _near_units = [];
 		_near_i lbSetData [(lbSize _near)-1,str(_x)];
 	};
 } foreach _near_units;
-
-_mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>%1€</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>%2€</t>",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
+if(life_nbAcc > 0) then{
+	_mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>%1€</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>%2€</t>",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
+}else{
+	_mstatus ctrlSetStructuredText parseText format["<img size='1.2' image='icons\money.paa'/> <t size='0.8'>%1€</t>",[life_cash] call life_fnc_numberText];
+};
 _pstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\ppermis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
 
 ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];

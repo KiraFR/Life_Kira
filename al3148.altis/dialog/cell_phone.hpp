@@ -148,7 +148,7 @@ class Life_my_smartphone {
 		class MessageList : Life_RscListNBox {
 			idc = 3004;
 			onLBSelChanged = "[1,(lbCurSel 3004)] spawn life_fnc_select;";
-			size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+			sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
 			colorBackground[] = {0, 0, 0, 0.0};
 			columns[] = {0,0.235,0.43};
 			x = 0.11;

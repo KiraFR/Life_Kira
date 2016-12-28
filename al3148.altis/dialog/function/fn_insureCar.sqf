@@ -1,4 +1,4 @@
-#include "..\..\script_macros.hpp" 
+#include "..\..\macro.h"
 /* 
  File: fn_insureCar.sqf 
  Author: Guit0x "Lintox" 
@@ -27,7 +27,7 @@ if(life_atmcash < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_No
  [_vid,_pid,_insurancePrice,player,life_garage_type] remoteExecCall ["TON_fnc_insureCar",RSERV]; 
 
 _vehicleInfo = [_vehicleLife] call life_fnc_fetchVehInfo;
-[getPlayerUID player, side player, [name player, (_vehicleInfo select 3),_vehicleLife, _insurancePrice], 34] remoteExecCall ["DB_fnc_logs",2];
+[getPlayerUID player, side player, [name player, (_vehicleInfo select 3),_vehicleLife, _insurancePrice], 34] remoteExecCall ["DB_fnc_logs",RSERV];
 
 hint localize "STR_InsuranceApply";
 life_atmcash = life_atmcash - _insurancePrice;

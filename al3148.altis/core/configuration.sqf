@@ -66,6 +66,8 @@ life_pPermis = 0;
 life_amende = 550;
 life_nbrFoisPermis = 0;
 life_waitpermis = false;
+life_nbAcc = 0;
+life_maxPoints = 2;
 /*
 *****************************
 ****** Life Variables *******
@@ -82,13 +84,13 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
-life_cash = 0;
+life_cash = 10000;
 __CONST__(life_impound_car,350);
 __CONST__(life_impound_boat,250);
 __CONST__(life_impound_air,850);
 life_istazed = false;
 life_my_gang = ObjNull;
-life_nbacc = 0;
+
 life_vehicles = [];
 bank_robber = [];
 switch (playerSide) do
@@ -109,6 +111,7 @@ switch (playerSide) do
 		life_paycheck = 450;
 	};
 };
+
 /*
 	Master Array of items?
 */
@@ -202,7 +205,9 @@ life_licenses =
 	["license_civ_home","civ"],
 	["license_civ_opium","civ"],
 	["license_civ_vin","civ"],
-	["licence_civ_fermenta","civ"]
+	["licence_civ_fermenta","civ"],
+	["licence_civ_gouv","civ"],
+	["license_civ_ebou","civ"]
 ];
 
 //Setup License Variables

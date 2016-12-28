@@ -12,7 +12,6 @@ class Socket_Reciever
 		class updatePartial {};
 	};
 };
-
 class KiraScript
 {
 	tag = "Kira";
@@ -210,7 +209,6 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
-		class onPlayerDisconnected {};
 	};
 
 	class Network
@@ -398,9 +396,8 @@ class Life_Client_Core
         class DeleteAccount {};
         class RequestAccount {};
         class setAccountDefault {};
+        class lbAccounts {};
     };
-
-
 
 	/*
 	class phone

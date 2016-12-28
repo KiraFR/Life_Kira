@@ -9,4 +9,3 @@ player addEventHandler["Fired",{_this call life_fnc_onFired}];
 player addEventHandler["InventoryClosed", {_this call life_fnc_inventoryClosed}];
 player addEventHandler["InventoryOpened", {_this call life_fnc_inventoryOpened}];
 "life_fnc_MP_packet" addPublicVariableEventHandler {[_this select 0,_this select 1] call life_fnc_MPexec;};
-player addEventHandler["onPlayerDisconnected", {_this call life_fnc_onPlayerDisconnected}];

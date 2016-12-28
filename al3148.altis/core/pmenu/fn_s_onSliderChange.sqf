@@ -33,4 +33,10 @@ switch (_mode) do
 		ctrlSetText[2922,format["%1",round(_value)]];
 		[] call life_fnc_updateViewDistance;
 	};
+	case 3:{
+		_classname = lbData[20302,(lbCurSel 20302)];
+		_index =  lbvalue[20302,(lbCurSel 20302)];
+		ctrlSetText[20324,format["Points : 2",(12 - life_pPermis)]];
+		ctrlSetText [20323,format ["Prix : %1 €",]];
+	};
 };

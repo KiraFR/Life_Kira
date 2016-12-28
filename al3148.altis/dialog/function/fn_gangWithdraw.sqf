@@ -1,4 +1,4 @@
-#include "..\..\script_macros.hpp"
+#include "..\..\macro.h"
 /*
     File: fn_gangWithdraw.sqf
     Author: Bryan "Tonic" Boardwine
@@ -18,7 +18,7 @@ if (_value > _gFund) exitWith {hint localize "STR_ATM_NotEnoughFundsG"};
 if (_val < 100 && _gFund > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
 
 _gFund = _gFund - _value;
-life_cash = life_cash + _value;
+life_atmcash = life_atmcash + _value;
 group player setVariable ["gang_bank",_gFund,true];
 
 [1,group player] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
@@ -27,12 +27,3 @@ group player setVariable ["gang_bank",_gFund,true];
 hint format [localize "STR_ATM_WithdrawSuccessG",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
-
-if (LIFE_SETTINGS(getNumber,"player_moneyLog") isEqualTo 1) then {
-    if (LIFE_SETTINGS(getNumber,"battlEye_friendlyLogging") isEqualTo 1) then {
-        money_log = format [localize "STR_DL_ML_withdrewGang_BEF",_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
-    } else {
-        money_log = format [localize "STR_DL_ML_withdrewGang",profileName,(getPlayerUID player),_value,[_gFund] call life_fnc_numberText,[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
-    };
-    publicVariableServer "money_log";
-};

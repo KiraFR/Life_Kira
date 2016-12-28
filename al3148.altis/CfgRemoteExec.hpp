@@ -55,6 +55,7 @@ class CfgRemoteExec {
 		F(life_fnc_clientMessage,CLIENT)
 		F(TON_fnc_clientWireTransfer,CLIENT)
 		F(life_fnc_animSync,CLIENT)
+		F(life_fnc_lbAccounts,CLIENT)
 
 
 		F(TON_fnc_managesc,SERVER)
@@ -83,6 +84,14 @@ class CfgRemoteExec {
 		F(TON_fnc_spawnVehicle,SERVER)
 		F(TON_fnc_getVehicles_fourriere,SERVER)
 		F(TON_fnc_getVehicles,SERVER)
+
+		
+		F(BQKS_fnc_CreateAccount,SERVER)
+		F(BQKS_fnc_CreateAccountOff,SERVER)
+		F(BQKS_fnc_CreateAccountEntre,SERVER)
+		F(BQKS_fnc_GetAccount,SERVER)
+		F(BQKS_fnc_DeleteAccount,SERVER)
+		F(BQKS_fnc_SetDefaultAccount,SERVER)
 
 
 		/* changement telephone Kira V3

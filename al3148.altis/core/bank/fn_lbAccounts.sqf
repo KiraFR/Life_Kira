@@ -5,18 +5,24 @@
 	Description:
 	Kira: plein de Listes + modification dialog, j'ai pris celui de l'allemand et l'a bien modifié
 */
-Private["_tab","_default"];
+Private["_tab","_default","_offshore"];
 disableSerialization;
-waitUntil {!isNull findDisplay 16000};
-_display = findDisplay 16000;
-_AccountList = _display displayCtrl 16501;
+_display = findDisplay 1600;
+_AccountList = _display displayCtrl 1601;
+list_compte = _this;
+diag_log format["%1",list_compte];
 
 {
-	_default = _x select 6;
-	_tab = [_x select 1,_x select 2,_x select 3,_x select 4,_x select 5];
-	if(_default == 1) then{"Oui" pushBack _tab;}else{"Non" pushBack _tab;};
-	
-	diag_log format["%1",_tab];
+	_default = _x select 5;
+	_offshore = _x select 3;
+	_rowData = [_x select 0,_x select 4];
+	_tab = [
+		_x select 1,
+		_x select 2,
+		if(_offshore == 1)then{"Oui"}else{"Non"},
+		"Non",
+		format["%1€",_x select 4],
+		if(_default == 1) then{"Oui"}else{"Non"}];
 	_AccountList lnbAddRow _tab;
-	_AccountList lnbSetData [[((lnbSize _AccountList) select 0)-1,0],str([value select 0,value select 5])]
+	_AccountList lnbSetData [[((lnbSize _AccountList) select 0)-1,0],str(_rowData)];
 }foreach list_compte;

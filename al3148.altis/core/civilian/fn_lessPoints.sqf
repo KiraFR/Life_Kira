@@ -43,6 +43,6 @@ if(life_pPermis <= 0)then {
 	life_pPermis = 0;
 	[10] call SOCK_fnc_updatePartial;
 };
-if (life_nbAcc == 0) then {life_cash = life_cash - (life_amende*_nbrPoint)} else{ life_atmcash = life_atmcash - (life_amende *_nbrPoint)};
+life_atmcash = life_atmcash - (life_amende *_nbrPoint);
 [] call life_fnc_hudUpdate;
 [9] call SOCK_fnc_updatePartial;

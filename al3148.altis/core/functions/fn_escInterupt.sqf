@@ -30,7 +30,7 @@ _escSync = {
 	};
 	
 	_abortButton = (findDisplay 49) displayCtrl 104;
-	[] call SOCK_fnc_updateRequest; //call our silent sync.
+	if (life_session_completed)then{[] call SOCK_fnc_updateRequest;};
 	
 	if(_this) then {
 		_thread = [] spawn _syncManager;
@@ -48,7 +48,7 @@ while {true} do
 {
 	waitUntil{!isNull (findDisplay 49)};
 	_abortButton = (findDisplay 49) displayCtrl 104;
-	_abortButton buttonSetAction "[player] RemoteExecCall [""TON_fnc_cleanupRequest"",2]";
+	_abortButton buttonSetAction "[player] RemoteExec [""TON_fnc_cleanupRequest"",2];";
 	_respawnButton = (findDisplay 49) displayCtrl 1010;
 	_fieldManual = (findDisplay 49) displayCtrl 122;
 	

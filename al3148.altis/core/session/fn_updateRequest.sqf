@@ -21,5 +21,4 @@ switch (playerSide) do {
 		_packet pushBack life_is_arrested;
 	};
 };
-
-[_packet] RemoteExecCall ["DB_fnc_updateRequest",2];
+_packet RemoteExecCall ["DB_fnc_updateRequest",2];
