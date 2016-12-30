@@ -19,30 +19,58 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-		_ret pushBack ["U_Rangemaster","Cop Uniform",25];
-		if(__GETC__(life_coplevel) > 1) then
+		if(__GETC__(life_coplevel) == 1) then
 		{
-			_ret pushBack ["U_B_CombatUniform_mcam_tshirt",nil,350];
-			_ret pushBack ["U_B_survival_uniform",nil,1250];
+			_ret pushBack ["Kronos_Police_01",nil,350];
 		};
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) == 2) then
 		{
-			_ret pushBack ["U_B_CombatUniform_mcam_worn",nil,550];
+			_ret pushBack ["Kronos_Police_02",nil,350];
+		};
+		if(__GETC__(life_coplevel) == 3) then
+		{
+			_ret pushBack ["Kronos_Police_03",nil,350];
+		};
+		if(__GETC__(life_coplevel) == 4) then
+		{
+			_ret pushBack ["Kronos_Police_04",nil,350];
+		};
+		if(__GETC__(life_coplevel) == 5) then
+		{
+			_ret pushBack ["Kronos_Police_05",nil,550];
+		};
+		if(__GETC__(life_coplevel) == 6) then
+		{
+			_ret pushBack ["Kronos_Police_06",nil,550];
+		};
+		if(__GETC__(life_coplevel) == 7) then
+		{
+			_ret pushBack ["Kronos_Police_07",nil,550];
+		};
+		if(__GETC__(life_coplevel) == 8) then
+		{
+			_ret pushBack ["Kronos_Police_08",nil,550];
 		};
 	};
 	
 	//Hats
 	case 1:
 	{
-		if(__GETC__(life_coplevel) > 1) then
+		if(__GETC__(life_coplevel) > 0) then
 		{
-			_ret pushBack ["H_HelmetB_plain_mcamo",nil,75];
-			_ret pushBack ["H_Booniehat_mcamo",nil,120];
+			_ret pushBack ["KronosD_Police_cap_01",nil,75];
 		};
-		
-		if(__GETC__(life_coplevel) > 2) then
+		if(__GETC__(life_coplevel) == 3) then
 		{
-			_ret pushBack ["H_MilCap_mcamo",nil,100];
+			_ret pushBack ["H_Beret_blk",nil,100];
+		};
+		if(__GETC__(life_coplevel) == 6) then
+		{
+			_ret pushBack ["H_Beret_02",nil,100];
+		};
+		if(__GETC__(life_coplevel) > 7) then
+		{
+			_ret pushBack ["H_Beret_Colonel",nil,100];
 		};
 	};
 	
@@ -67,11 +95,15 @@ switch (_filter) do
 	//Vest
 	case 3:
 	{
-		_ret pushBack ["V_Rangemaster_belt",nil,800];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["V_PlateCarrier2_rgr",nil,1500];
+			_ret pushBack ["KronosD_POLICE_vest_01",nil,1500];
 		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
+			_ret pushBack ["KronosD_POLICE_vest_02",nil,1500];
+		};
+
 	};
 	
 	//Backpacks
