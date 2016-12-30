@@ -19,7 +19,7 @@ switch(_type) do {
 		//
 			{
 				if(side _x == civilian && getPlayerUID _x != _uid) then{
-					_queryCash = format["SELECT bankacc FROM players WHERE playerid='%1'",getPlayerUID _x];
+					_queryCash = format["SELECT bankacc FROM banque WHERE playerid='%1', offshore='0', entreprise='0'",getPlayerUID _x];
 					_queryCashR = [_queryCash,2] call DB_fnc_asyncCall;
 					_queryCashR = _queryCashR select 0;
 					if(_queryCashR < 1000000) exitWith{};
@@ -38,7 +38,7 @@ switch(_type) do {
 						_queryCashR = _queryCashR - _six;
 						_all = _all + _six;
 					};
-					_query = format["UPDATE players SET bankacc='%1' WHERE playerid='%2'",_queryCashR,getPlayerUID _x];
+					_query = format["UPDATE banque SET bankacc='%1' WHERE playerid='%2' offshore='0', entreprise='0'",_queryCashR,getPlayerUID _x];
 					[_query,1] call DB_fnc_asyncCall;
 					_ownerID = owner _x;
 					[0,_queryCashR] RemoteExecCall ["life_fnc_RefreshReceived",_ownerID];
@@ -49,7 +49,7 @@ switch(_type) do {
 
 	//entreprise
 	case 1:{
-		_queryEntre = "SELECT id,bank FROM gangs WHERE active = '1' AND entreprise='1'";
+		_queryEntre = format["SELECT bankacc FROM banque WHERE playerid='%1' AND entreprise='1'",getPlayerUID _x];
 		_queryEntreR = [_queryEntre,2,true] call DB_fnc_asyncCall;
 		{
 			_bankE = _x select 1;
@@ -71,7 +71,7 @@ switch(_type) do {
 				};
 				default{};
 			};
-			_query = format["UPDATE gangs SET bank='%1' WHERE id='%2'",_bankE,_x select 0];
+			_query = format["UPDATE banque SET banque='%1' WHERE playerid='%2' AND entreprise='1'",_bankE,_x select 0];
 			[_query,1] call DB_fnc_asyncCall;
 			_list = [_x select 0,_bankE];
 			_listG pushBack _list;
