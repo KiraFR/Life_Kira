@@ -54,3 +54,14 @@ Changelog 0.0.1.1:
   - La cocaine est désormais sniffable (couleurs 30 sec, flou 2 minutes, energie max 5 min)
   - L'opium est maintenant fumable (couleur, flou, pas d'endurance pendant 3 minutes)
   - Amelioration des fonctions et ajustement des couleurs pour l'utilisation des drogues
+
+Changelog 0.0.1.2:
+  - Ajout de logs (OMG ITS CREEPY)
+  - Mise a Jour des Impots avec le nouveau système de banque
+  - Assurance Vehicule Basique
+  - Achat Sans compte ou paiment sans compte possible (certaine chose)
+  - Patch-SQL mise A jour
+  - Ajout de Niveau au Flic & Admin
+  - Shop Tenue des Flic
+  - Modification Banque
+  - Cfg_Remote Mise a Jour
