@@ -65,3 +65,12 @@ Changelog 0.0.1.2:
   - Shop Tenue des Flic
   - Modification Banque
   - Cfg_Remote Mise a Jour
+
+Changelog 0.0.1.3:
+ -Ajout du Menu Admin Advanced
+      - TP, TPtoAdmin
+      - Markers
+      - God
+      - Remboursement IN-Game & ConsoleDebug (Supprimér)
+      - Freeze des Joueurs
+      - Puis la Base du Menu Altis Life

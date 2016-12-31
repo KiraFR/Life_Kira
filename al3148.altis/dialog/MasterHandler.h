@@ -31,3 +31,4 @@
 #include "banque.hpp"
 #include "gestionAccount.hpp"
 #include "fuelStat.hpp"
+#include "compensate.hpp" 
