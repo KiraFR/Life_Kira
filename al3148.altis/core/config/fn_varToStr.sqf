@@ -41,6 +41,8 @@ switch (_var) do
 	case "life_inv_fuelE": {(localize "STR_Item_FuelE")};
 	case "life_inv_fuelF": {(localize "STR_Item_FuelF")};
 	case "life_inv_pickaxe": {(localize "STR_Item_Pickaxe")};
+	case "life_inv_shovel": {(localize "STR_Item_Shovel")};
+	case "life_inv_bucket": {(localize "STR_Item_Bucket")};
 	case "life_inv_copperore": {(localize "STR_Item_CopperOre")};
 	case "life_inv_ironore": {(localize "STR_Item_IronOre")};
 	case "life_inv_ironr": {(localize "STR_Item_IronIngot")};

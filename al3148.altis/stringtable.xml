@@ -3417,6 +3417,16 @@
 			<Italian>Piccone</Italian>
 			<Portuguese>Picareta</Portuguese>
 		</Key>
+		<Key ID="STR_Item_Shovel">
+			<Original>Shovel</Original>
+			<English>Shovel</English>
+			<French>Pelle</French>
+		</Key>
+		<Key ID="STR_Item_Bucket">
+			<Original>Bucket</Original>
+			<English>Bucket</English>
+			<French>Seau</French>
+		</Key>
 		<Key ID="STR_Item_CopperOre">
 			<Original>Copper Ore</Original>
 			<English>Copper Ore</English>

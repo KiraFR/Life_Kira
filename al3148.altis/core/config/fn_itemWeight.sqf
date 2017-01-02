@@ -40,6 +40,8 @@ switch (_item) do
 	case "fuelF": {5};
 	case "money": {0};
 	case "pickaxe": {2};
+	case "shovel": {2};
+	case "bucket": {2};
 	case "copperore": {4};
 	case "ironore": {5};
 	case "copper_r": {3};

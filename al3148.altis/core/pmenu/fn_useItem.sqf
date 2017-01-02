@@ -149,6 +149,14 @@ switch (true) do
 	{
 		[] spawn life_fnc_pickAxeUse;
 	};
+	case (_item == "Shovel"):
+	{
+		[] spawn life_ShovelUse;
+	};
+	case (_item == "Bucket"):
+	{
+		[] spawn life_fnc_BucketUse;
+	};
 
 	default
 	{
