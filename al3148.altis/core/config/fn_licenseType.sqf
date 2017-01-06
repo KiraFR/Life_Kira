@@ -23,7 +23,7 @@ switch (_mode) do
 			case "dive": {_var = "license_civ_dive"}; //Diving license cost
 			case "oil": {_var = "license_civ_oil"}; //Oil processing license cost
 			case "cair": {_var = "license_cop_air"}; //Cop Pilot License cost
-			case "swat": {_var = "license_cop_swat"}; //Swat License cost
+			case "gdo": {_var = "license_cop_gdo"}; //Swat License cost
 			case "cg": {_var = "license_cop_cg"}; //Coast guard license cost
 			case "heroin": {_var = "license_civ_heroin"}; //Heroin processing license cost
 			case "marijuana": {_var = "license_civ_marijuana"}; //Marijuana processing license cost
@@ -60,7 +60,7 @@ switch (_mode) do
 			case "license_civ_dive": {_var = "dive"}; //Diving license cost
 			case "license_civ_oil": {_var = "oil"}; //Oil processing license cost
 			case "license_cop_air": {_var = "cair"}; //Cop Pilot License cost
-			case "license_cop_swat": {_var = "swat"}; //Swat License cost
+			case "license_cop_gdo": {_var = "gdo"}; //Swat License cost
 			case "license_cop_cg": {_var = "cg"}; //Coast guard license cost
 			case "license_civ_heroin": {_var = "heroin"}; //Heroin processing license cost
 			case "license_civ_marijuana": {_var = "marijuana"}; //Marijuana processing license cost

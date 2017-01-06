@@ -24,7 +24,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
 			default
 			{
 				["Altis Cop Shop",
@@ -73,22 +73,20 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 2): {"You are not at a patrol officer rank!"};
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 2): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
-						["arifle_MX_F",nil,35000],
-						["SMG_02_ACO_F",nil,30000],
-						["HandGrenade_Stone","Flashbang",1700],
-						["MineDetector",nil,1000],
-						["acc_flashlight",nil,750],
-						["optic_Holosight",nil,1200],
-						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
+						["arifle_mas_mp5",nil,30000],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["30Rnd_mas_9x21_Stanag",nil,130],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
 					]
 				];
 			};
@@ -99,21 +97,238 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
-			case (__GETC__(life_coplevel) < 3): {"You are not at a sergeant rank!"};
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 3): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
-				["Altis Sergeant Officer Shop",
+				["Altis Police Officer Shop",
 					[
-						["SMG_02_ACO_F",nil,15000],
-						["hgun_ACPC2_F",nil,17500],
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
 						["HandGrenade_Stone","Flashbang",1700],
-						["arifle_MXC_F",nil,30000],
-						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-						["30Rnd_65x39_caseless_mag",nil,100],
-						["30Rnd_9x21_Mag",nil,60],
-						["9Rnd_45ACP_Mag",nil,200]
+						["MineDetector",nil,1000],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_ser":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 4): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Altis Sergent Shop",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["MineDetector",nil,1000],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_lie":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 5): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Altis Lieutenant Shop",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_capi":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 6): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Altis Patrol Officer Shop",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["arifle_mas_arx_l",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_com":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 7): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Altis Patrol Officer Shop",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["arifle_mas_arx_l",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_comi":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (__GETC__(life_coplevel) == 8): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Altis Patrol Officer Shop",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["arifle_mas_arx_l",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
+					]
+				];
+			};
+		};
+	};
+
+	case "cop_gdo":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"Vous n'etes pas un flic !"};
+			case (license_cop_swat): {"Vous n'etes pas du bon niveau !"};
+			default
+			{
+				["Groupe de Defense et D'opération",
+					[
+						["arifle_mas_mp5",nil,30000],
+						["arifle_mas_m1014",nil,30000],
+						["arifle_mas_hk416",nil,35000],
+						["arifle_mas_hk416_gl",nil,30000],
+						["arifle_mas_hk416c",nil,30000],
+						["arifle_mas_arx_l",nil,30000],
+						["LMG_mas_M249_F",nil,30000],
+						["srifle_mas_sr25",nil,30000],
+						["srifle_mas_m107",nil,30000],
+						["srifle_mas_hk417",nil,30000],
+						["arifle_mas_hk417c",nil,30000],
+						["arifle_mas_hk417_m203c",nil,30000],
+						["HandGrenade_Stone","Flashbang",1700],
+						["optic_mas_Holosight_blk",nil,750],
+						["optic_Holosight",nil,1200],
+						["optic_Hamr",nil,2500],
+						["optic_mas_aim",nil,2750],
+						["optic_mas_zeiss",nil,2750],
+						["optic_mas_acog_eo",nil,2750],
+						["7Rnd_mas_12Gauge_Pellets",nil,130],
+						["7Rnd_mas_12Gauge_Slug",nil,130],
+						["30Rnd_mas_556x45_Stanag",nil,130],
+						["200Rnd_mas_556x45_Stanag",nil,130],
+						["5Rnd_mas_127x99_Stanag",nil,130],
+						["20Rnd_mas_762x51_Stanag",nil,130],
+						["3Rnd_UGL_FlareWhite_F",nil,250],
+						["FirstAidKit",nil,130],
+						["ToolKit",nil,130],
+						["Radio",nil,130]
 					]
 				];
 			};
