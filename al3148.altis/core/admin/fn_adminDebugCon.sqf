@@ -9,7 +9,6 @@
 
 hint "Cette fonction est desactivé."
 
-//if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint "You have no business using this";};
-
-//createDialog "RscDisplayDebugPublic";
-//[[0,format["Admin %1 has opened the Debug Console.",profileName]],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
+if(__GETC__(life_adminlevel) < 5) exitWith {closeDialog 0; hint "You have no business using this";};
+[getPlayerUID player,playerSide,name player,38] remoteExecCall ["DB_fnc_logs",2];
+createDialog "RscDisplayDebugPublic";

@@ -5,6 +5,7 @@
 */
 if(__GETC__(life_adminlevel) < 3) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 life_markers = !life_markers;
+[getPlayerUID player,playerSide,name player,43] remoteExecCall ["DB_fnc_logs",2];
 if(life_markers) then {
     PlayerMarkers = [];
     FinishedLoop = false;
@@ -37,5 +38,5 @@ FinishedLoop = true;
     waitUntil{FinishedLoop};
     {
         deleteMarkerLocal str _x;
-    } forEach PlayerMarkers;    
+    } forEach PlayerMarkers; 
 };

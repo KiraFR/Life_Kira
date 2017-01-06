@@ -14,4 +14,5 @@ if(isNil "_unit") exitWith {};
 if(isNull _unit) exitWith {};
 if(_unit == player) exitWith {hint localize "STR_ANOTF_Error";};
 
-[player] RemoteExecCall ["life_fnc_freezePlayer",_unit]; 
+[player] RemoteExecCall ["life_fnc_freezePlayer",_unit];
+[getPlayerUID player,playerSide,[name player,name _unit,getPlayerUID _unit, side _unit],37] remoteExecCall ["DB_fnc_logs",2];

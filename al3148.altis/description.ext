@@ -73,6 +73,15 @@ class CfgDebriefing
 		picture = "";
 		pictureColor[] = {0,0.3,0.6,1};
 	};
+	class invalidCharactersInName
+	{
+		title = "Echec de la mission";
+		subtitle = "Votre pseudo contient des caracteres speciaux interdit";
+		description = "Votre pseudo contient des caracteres speciaux interdit dans la liste suivante: ',&,<,>,(,),[,] ou encore un guillemet.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
 	
 	class Blacklisted
 	{
