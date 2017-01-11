@@ -74,3 +74,9 @@ Changelog 0.0.1.3:
       - Remboursement IN-Game & ConsoleDebug (Supprimér)
       - Freeze des Joueurs
       - Puis la Base du Menu Altis Life
+
+Changelog 0.0.1.4:
+ - Ajout Lacrymo
+ - Ajout de la pelle et du Seau
+ - Config cotés flic (License GDO , Flic)
+ - Oublie
