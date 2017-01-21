@@ -5,6 +5,10 @@
 	Description:
 	Figure it out again.
 */
+lbSetPicture [2710,_button,"\isons\ico_add.paa"];
+lbSetPicture [2711,_button,"\isons\ico_remove.paa"];
+lbSetPicture [2712,_button,"\icons\ico_edit.paa"];
+
 private["_val","_unit","_tax"];
 _val = parseNumber(ctrlText 2702);
 _unit = call compile format["%1",(lbData[2703,(lbCurSel 2703)])];
