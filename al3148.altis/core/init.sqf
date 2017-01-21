@@ -102,6 +102,7 @@ life_fnc_garageRefund = compileFinal
 ";
 
 [] execVM "core\init_survival.sqf";
+[] execVM "core\divers\Lacrymo.sqf";
 
 _boughtItems = [];
 
