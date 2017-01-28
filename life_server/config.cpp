@@ -161,14 +161,6 @@ class CfgFunctions
 		file = "\life_server\Functions\impot";
 		class impot{};
 	};
-	class AssasinDosta {
-		tag = "ASSA";
-		class AssassinDosta {
-			file = "\life_server\Functions\Murder"
-			class GetContract {};
-			class StopContrat {};
-		};
-	};
 };
 
 
