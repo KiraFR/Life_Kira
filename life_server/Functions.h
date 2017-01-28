@@ -407,6 +407,14 @@ class Life_Client_Core
         class setAccountDefault {};
         class lbAccounts {};
     };
+    class Assassin
+    {
+        file = "core\Murderer";
+        class calculatePrice {};
+        class murdererInfo {};
+        class murdererMenu {};
+        class termContrat {};
+    };
 
 	/*
 	class phone
