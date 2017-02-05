@@ -1,14 +1,13 @@
 /*
-    File: fn_calculatePrice.sqf
+    File: fn_SumContract.sqf
     Author: R. `KronosD` R.
     
     Description:
     Disposition de tout les infos dispo.
 */
-private["_Price"];
-params["_type"];
-ctrlShow[5000,false];
-_Price = 150000;
+private["_name","_job","_price"];
+_type = _this;
+_uid = getPlayerUID player;
 
 if (_type == 99) then {
 	_checkKidnapping = cbChecked (findDisplay 5000 displayCtrl 5007);
@@ -32,26 +31,33 @@ if (_type == 99) then {
 	if (_checkHarass) then {_type = 3;};
 };
 
-Switch(_type) do{
-	case 0: {hint "Vous devez cocher au moins une case";};
+switch (_type) do {
 
-	case 1: {_Price*1.5;
-		//BLUFOR
-		if (playerSide=west) then {_Price*2;};
-		//Gouvernement
-		if (license_civ_gouv) then {_Price*2.5;};
-		};
+	//kidnapping
+	case 1: {
+		_name = ctrlText 5002;
+		_job = ctrlText 5004;
+		_type = "Kidnapping";
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratKid",RSERV];
+	};
 
-	case 2: {_Price*2;
-		//BLUFOR
-		if (playerSide=west) then {_Price*2.5;};
-		//Gouvernement
-		if (license_civ_gouv) then {_Price*3;};
-		};
-	case 3: {_Price*1.25;
-		//BLUFOR
-		if (playerSide=west) then {_Price*1.75;};
-		//Gouvernement
-		if (license_civ_gouv) then {_Price*2;};
-		};
+	//normal
+	case 2: {
+		_name = ctrlText 5002;
+		_job = ctrlText 5004;
+		_type = "Assassinat";
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratMurd",RSERV];
+		
+	};
+
+	//harcelemnt
+	case 3: {
+		_name = ctrlText 5002;
+		_job = ctrlText 5004;
+		_type = "Harcelement";
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratHarass",RSERV];
+	};
 };
