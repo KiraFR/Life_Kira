@@ -38,8 +38,9 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Kidnapping";
+		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
 		_price = call life_fnc_calcualtePrice;
-		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratKid",RSERV];
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratKid",RSERV];
 	};
 
 	//normal
@@ -47,8 +48,9 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Assassinat";
+		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
 		_price = call life_fnc_calcualtePrice;
-		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratMurd",RSERV];
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratMurd",RSERV];
 		
 	};
 
@@ -57,7 +59,8 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Harcelement";
+		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
 		_price = call life_fnc_calcualtePrice;
-		[_uid,_type,_name,_job,_price] remoteExecCall ["ASSA_fnc_ContratHarass",RSERV];
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratHarass",RSERV];
 	};
 };

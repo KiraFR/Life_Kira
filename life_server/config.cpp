@@ -162,11 +162,13 @@ class CfgFunctions
 		class impot{};
 	};
 	class AssasinDosta {
-		tag = "ASSA";
-		class AssassinDosta {
+			tag = "ASSA";
 			file = "\life_server\Functions\Murder"
 			class GetContract {};
 			class StopContrat {};
+			class ContratHarass {};
+			class ContratKid {};
+			class ContratMurd {};
 		};
 	};
 };
