@@ -1,5 +1,5 @@
 /*
-    File: fn_murdererMenu.sqf
+    File: fn_ContratMenu.sqf
     Author: R. `KronosD` R.
     
     Description:
@@ -14,10 +14,10 @@ params[
 	["_price","",[""]],
 	["_type","",[""]]
 ];
-waitUntil {!isNull (findDisplay 4800)};
-_display = findDisplay 4800;
-_list = _display displayCtrl 4803;
-_contrat = [_name,getPlayerUID player,player] remoteExecCall ["ASSA_fnc_GetContractA",2];
+waitUntil {!isNull (findDisplay 5500)};
+_display = findDisplay 5500;
+_list = _display displayCtrl 5501;
+_contrat = [_name,getPlayerUID player,player] remoteExecCall ["ASSA_fnc_GetContract",2];
 
 lbClear _list;
 {
@@ -27,7 +27,7 @@ lbClear _list;
 
 }foreach _contrat;
 
-(getControl(4800,4804)) ctrlSetStructuredText parseText format[
+(getControl(5500,5502)) ctrlSetStructuredText parseText format[
 	(_name)+ " $%1<br/>
 	" +(_job)+ " $%2<br/>
 	" +(_price)+ " %3<br/>
@@ -35,5 +35,5 @@ lbClear _list;
 	"
 ];
 
-[_name,_job,_price,_type,getPlayerUID player,player] remoteExecCall ["ASSA_fnc_GetContractA",2];
+[_name,_job,_price,_type,getPlayerUID player,player] remoteExecCall ["ASSA_fnc_GetContract",2];
 if(__GETC__(life_murderlevel) == 0)exitWith {closeDialog 0;};
