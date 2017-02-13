@@ -37,20 +37,20 @@ Switch(_type) do{
 
 	case 1: {_Price*1.5;
 		//BLUFOR
-		if (playerSide=west) then {_Price*2;};
+		if (playerSide==west) then {_Price*2;};
 		//Gouvernement
 		if (license_civ_gouv) then {_Price*2.5;};
 		};
 
 	case 2: {_Price*2;
 		//BLUFOR
-		if (playerSide=west) then {_Price*2.5;};
+		if (playerSide==west) then {_Price*2.5;};
 		//Gouvernement
 		if (license_civ_gouv) then {_Price*3;};
 		};
 	case 3: {_Price*1.25;
 		//BLUFOR
-		if (playerSide=west) then {_Price*1.75;};
+		if (playerSide==west) then {_Price*1.75;};
 		//Gouvernement
 		if (license_civ_gouv) then {_Price*2;};
 		};
