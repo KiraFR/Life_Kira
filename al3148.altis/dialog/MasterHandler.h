@@ -35,3 +35,4 @@
 #include "ListMurder.hpp"
 #include "FormulaireAssasin.hpp"
 #include "RequestMenu.hpp"
+#include "call.hpp"
