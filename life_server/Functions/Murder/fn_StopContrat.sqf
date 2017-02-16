@@ -7,8 +7,8 @@
 	Lit merde
 */
 params[
-	"_id",
+	"_uid",
 	"_name"
 ];
-_remove = format ["DELETE FROM assasin WHERE murdid='%1',targetname='%2'",_id,_name];
+_remove = format ["DELETE FROM assasin WHERE deuid='%1',targetname='%2'",_uid,_name];
 [_remove,1] call DB_fnc_asyncCall;

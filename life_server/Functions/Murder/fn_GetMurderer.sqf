@@ -1,6 +1,5 @@
-#include "..\..\macro.h"
 /*
-	File: fn_GetContrat.sqf
+	File: fn_GetMurderer.sqf
 	Author: R. `KronosD` R.
 	
 	Description:
@@ -8,13 +7,13 @@
 */
 private["_query","_queryResult"];
 params[
-	["_uid","",[""]],
+	["_murduid","",[""]],
 	"_returnToSender"
 ];
 if(isNil "_returnToSender")exitWith{};
 
-_query = format["SELECT targetname, targetjob, price, type FROM assasin WHERE accepted '0'"];
+_query = format["SELECT murduid, targetname FROM assasin WHERE targetname"];
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 //[_type, _data]
-[1,_queryResult] remoteExecCall ["life_fnc_ContratMenu",_returnToSender];
+[1,_queryResult] remoteExecCall ["life_fnc_onPlayerKilled",_returnToSender];

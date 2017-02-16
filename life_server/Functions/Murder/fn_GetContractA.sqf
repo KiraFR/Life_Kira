@@ -13,8 +13,8 @@ params[
 ];
 if(isNil "_returnToSender")exitWith{};
 
-_query = format["SELECT targetname, targetjob, price, type FROM assasin WHERE accepted '0'"];
+_query = format["SELECT targetname, targetjob, price, type FROM assasin WHERE accepted '1' AND murduid '%1'",_uid];
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 //[_type, _data]
-[1,_queryResult] remoteExecCall ["life_fnc_ContratMenu",_returnToSender];
+[1,_queryResult] remoteExecCall ["life_fnc_murdererMenu",_returnToSender];

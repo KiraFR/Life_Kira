@@ -6,10 +6,12 @@
 	When the player dies collect various information about that player
 	and pull up the death dialog / camera functionality.
 */
-private["_unit","_k"];
+private["_unit","_k","_a"];
 disableSerialization;
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _k = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+_tagretnamme = _this select 2;
+if(life_murderlevel == 1) then {_a};
 
 //Set some vars
 _unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
@@ -100,7 +102,13 @@ if(side _k == west && playerSide != west) then {
 		life_cash = 0;
 	};
 };
-
+// murder
+if(_unit getVariable["realname",name player] == _targetname) then {
+		if(getPlayerUID _k == getPlayerUID _a) then {
+				parseText format["<t size='2' color='#FFFFFF'> Vous avez eté tué par un assassin , vous aviez un contrat sur votre tête !</t>"];
+				[_targetname,getPlayerUID _k] call life_fnc_ContraFinished;
+		};
+};
 
 _handle = [_unit] spawn life_fnc_dropItems;
 waitUntil {scriptDone _handle};
@@ -112,6 +120,7 @@ life_cash = 0;
 
 [] call life_fnc_hudUpdate; //Get our HUD updated.
 [player,life_sidechat,playerSide] RemoteExecCall ["TON_fnc_managesc",2];
+[player,_murduid,_targetname] RemoteExec ["ASSA_fnc_GetMurderer",2];
 
 [0] call SOCK_fnc_updatePartial;
 [3] call SOCK_fnc_updatePartial;
