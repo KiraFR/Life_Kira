@@ -163,7 +163,7 @@ class CfgFunctions
 	};
 	class AssasinDosta {
 			tag = "ASSA";
-			file = "\life_server\Functions\Murder"
+			file = "\life_server\Functions\Murder";
 			class GetContract {};
 			class StopContrat {};
 			class ContratHarass {};
