@@ -8,7 +8,7 @@ class Life_call_menu
 	
 	class controlsBackground
 	{
-		class backGround: RscText
+		class backGround: Life_RscText
 		{
 			idc = -1;
 			x = 0.225;
@@ -17,7 +17,7 @@ class Life_call_menu
 			h = 0.18;
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class Title: RscText
+		class Title: Life_RscText
 		{
 			idc = -1;
 			text = "Appeler un contact";
@@ -31,7 +31,7 @@ class Life_call_menu
 	
 	class controls
 	{
-		class ListPlayer: RscCombo
+		class ListPlayer: Life_RscCombo
 		{
 			idc = 3251;
 			x = 0.275;
@@ -39,7 +39,7 @@ class Life_call_menu
 			w = 0.4375;
 			h = 0.04;
 		};
-		class callbutton: RscButtonMenu
+		class callbutton: Life_RscButtonMenu
 		{
 			idc = -1;
 			text = "Appeler";
@@ -50,7 +50,7 @@ class Life_call_menu
 			h = 0.04;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 		};
-		class closebutton: RscButtonMenu
+		class closebutton: Life_RscButtonMenu
 		{
 			idc = -1;
 			text = "fermer";
