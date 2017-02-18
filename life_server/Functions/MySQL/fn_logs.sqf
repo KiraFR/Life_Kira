@@ -5,7 +5,7 @@
 	Description:
 */
 
-_uid = [_this,0,,[]] call BIS_fnc_param;
+_uid = [_this,0,"",[""]] call BIS_fnc_param;
 _side = [_this,1,sideUnknown,[civilian]] call BIS_fnc_param;
 _type = [_this,3,-1,[0]] call BIS_fnc_param;
 
