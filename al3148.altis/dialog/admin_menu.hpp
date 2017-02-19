@@ -1,4 +1,4 @@
-cclass life_admin_menu {
+class life_admin_menu {
     idd = 2900;
     name= "life_admin_menu";
     movingEnable = false;

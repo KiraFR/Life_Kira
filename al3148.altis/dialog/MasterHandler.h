@@ -32,3 +32,7 @@
 #include "gestionAccount.hpp"
 #include "fuelStat.hpp"
 #include "compensate.hpp" 
+#include "ListMurder.hpp"
+#include "FormulaireAssasin.hpp"
+#include "RequestMenu.hpp"
+#include "call.hpp"

@@ -173,8 +173,6 @@ class Life_Client_Core
 		class updateViewDistance {};
 		class settingsMenu {};
 		class settingsInit {};
-		class acceptCall {};
-		class callP {};
 	};
 
 	class Functions
@@ -413,10 +411,9 @@ class Life_Client_Core
     {
         file = "core\Murderer";
         class calculatePrice {};
+        class murdererInfo {};
         class murdererMenu {};
-        class ContratMenu {};
         class termContrat {};
-        class SumContract {};
     };
 
 	/*

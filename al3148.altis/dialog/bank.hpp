@@ -97,7 +97,7 @@ class Life_atm_management {
             h = 0.03;
         };
 
-        class GangWithdraw : TransferButton {
+        class GangWithdraw : Life_RscButtonMenu {
             idc = 2705;
             text = "$STR_ATM_WithdrawGang";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
@@ -107,7 +107,7 @@ class Life_atm_management {
             w = 0.275;
         };
 
-        class GangDeposit : TransferButton {
+        class GangDeposit : Life_RscButtonMenu {
             idc = 2706;
             text = "$STR_ATM_DepositGang";
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};

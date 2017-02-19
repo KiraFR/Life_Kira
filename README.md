@@ -14,7 +14,7 @@ Changelog 0.0.0.3:
 Changelog 0.0.0.4:
   - Ajout de La Bourse Dynamique
 
- Changelog 0.0.0.5:
+Changelog 0.0.0.5:
   - Ajout d'un script de points permis
   - Plus aucun points permis => suppression permis Voiture,Camion
   - Plus aucun points permis => Attente de 30 min avant de pouvoir racheter les permis Voiture,Camion
@@ -22,11 +22,11 @@ Changelog 0.0.0.4:
   - Ajout Camera 3D pour les shops Vehicules
   - Ajout de Radar sur les routes
 
- Changelog 0.0.0.6:
+Changelog 0.0.0.6:
   -Fin du RemoteExec
   -Ajout de L'opium
 
- Changelog 0.0.0.7:
+Changelog 0.0.0.7:
   - Ajout d'Impots
   - WantedList Supprimé
   - ChopShop(vente de vehicule) supprimé
@@ -38,7 +38,7 @@ Changelog 0.0.0.4:
   - Paycheck dynamique en fonction de l'argent actuel
   - Pas de Paycheck si le joueur à un boulot(par licence)
 
- Changelog 0.0.0.8:
+Changelog 0.0.0.8:
   -Ajout Vin
   -Ajout Cidre
 
@@ -67,13 +67,13 @@ Changelog 0.0.1.2:
   - Cfg_Remote Mise a Jour
 
 Changelog 0.0.1.3:
- -Ajout du Menu Admin Advanced
-      - TP, TPtoAdmin
-      - Markers
-      - God
-      - Remboursement IN-Game & ConsoleDebug (Supprimér)
-      - Freeze des Joueurs
-      - Puis la Base du Menu Altis Life
+ - Ajout du Menu Admin Advanced
+ - TP et TPtoAdmin
+ - Markers
+ - God
+ - Remboursement IN-Game & ConsoleDebug (Supprimér)
+ - Freeze des Joueurs
+ - Puis la Base du Menu Altis Life
 
 Changelog 0.0.1.4:
  - Ajout Lacrymo

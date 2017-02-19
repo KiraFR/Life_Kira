@@ -15,19 +15,3 @@ life_versionInfo = "Altis Life RPG v3.1.4.8";
 StartProgress = true;
 
 "BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};
-
-private["_value","_invalidCharacters","_array"];
-_value = name player;
-_invalidCharacters = ["'","&",'"',"<",">","(",")","[","]"];
-_array = [_value] call KRON_StrToArray;
-_return = true;
-{
-	if(_x in _invalidCharacters) exitWith
-	{
-		_return = false; 
-	};
-} foreach _array;
-if(!_return) exitWith {
-	["invalidCharactersInName",false,true] call BIS_fnc_endMission;
-	sleep 35;
-};
