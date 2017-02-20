@@ -54,7 +54,7 @@ class Life_AccountReq {
 		class Reglement: Life_RscStructuredText
 		{
 			idc = 11003;
-			text = "";
+			text = "Vous ne pouvez avoir qu'un seul compte";
 			x = 0.2;
 			y = 0.32;
 			w = 0.6125;

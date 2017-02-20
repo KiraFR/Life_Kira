@@ -46,8 +46,9 @@ if(life_nbAcc > 0) then{
 }else{
 	_mstatus ctrlSetStructuredText parseText format["<img size='1.2' image='icons\money.paa'/> <t size='0.8'>%1€</t>",[life_cash] call life_fnc_numberText];
 };
-_pstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\ppermis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
-
+if(!(isNil "life_pPermis")) then {
+	_pstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\ppermis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
+}else{ctrlShow[2016,false];};
 ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 {
 	_str = [_x] call life_fnc_varToStr;

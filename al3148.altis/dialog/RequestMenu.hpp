@@ -1,9 +1,9 @@
-class RequestAccept {
+class Life_RequestMenu {
 	idd = 5500;
 	name= "Life_RequestAccept";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn life_fnc_MurdererInfo;";
+	onLoad = "[] spawn life_fnc_ContratMenu;";
 
 class controlsBackground {
 
@@ -37,7 +37,7 @@ class controls {
 				w = 0.325;
 				h = 0.54;
 			};
-			class ListInfo: Life_RscListbox
+			class ListInfo: Life_RscStructuredText
 			{
 				idc = 5502;
 				x = -0.175;
@@ -48,7 +48,8 @@ class controls {
 			class ButtonAccept: Life_RscButtonMenu
 			{
 				idc = 5502;
-				text = "      Accepter"; 
+				text = "      Accepter";
+				OnButtonClick = "call life_fnc_AcceptContrat;";
 				x = -0.0625;
 				y = 0.54;
 				w = 0.2125;

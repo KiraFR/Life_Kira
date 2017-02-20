@@ -25,7 +25,7 @@ if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery
 //Parse basic player information.
 life_cash = parseNumber (_this select 2);
 
-life_gear = _this select 8;
+life_gear = _this select 7;
 [] call life_fnc_loadGear;
 
 _libank = _this select 28;
@@ -38,12 +38,12 @@ if(count _libank > 0) then{
 	life_dflt = _libank select 0;
 };
 
-__CONST__(life_adminlevel,parseNumber(_this select 4));
+__CONST__(life_adminlevel,parseNumber(_this select 3));
 __CONST__(life_donator,0);
 
 //Loop through licenses
-if(count (_this select 6) > 0) then {
-	{missionNamespace setVariable [(_x select 0),(_x select 1)];} foreach (_this select 6);
+if(count (_this select 5) > 0) then {
+	{missionNamespace setVariable [(_x select 0),(_x select 1)];} foreach (_this select 5);
 	_licence = [licence_civ_gouv ,license_civ_ebou];
 	{if(_x) then {life_paycheck = 0;};} foreach _licence;
 };
@@ -51,26 +51,27 @@ if(count (_this select 6) > 0) then {
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
-		__CONST__(life_coplevel, parseNumber(_this select 7));
+		__CONST__(life_coplevel, parseNumber(_this select 6));
 		__CONST__(life_medicLevel,0);
-		life_blacklisted = _this select 9;
+		life_blacklisted = _this select 8;
 	};
 	
 	case civilian: {
-		life_is_arrested = _this select 7;
+		life_is_arrested = _this select 6;
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
 
 		life_pPermis = _this select 12;
 		life_nbrFoisPermis = _this select 13;
 		_PermisDispo = _this select 14;
-
-		if(_PermisDispo == 1)then{
-			life_waitpermis = true;
-		}else{
-			life_waitpermis = false;
+		if(isNil "_PermisDispo") then {
+			if(_PermisDispo == 1)then{
+				life_waitpermis = true;
+			}else{
+				life_waitpermis = false;
+			};
+			waitsleep = _this select 15;
 		};
-		waitsleep = _this select 15;
 		life_houses = _this select 18;
 
 		{
@@ -86,13 +87,13 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		__CONST__(life_medicLevel, parseNumber(_this select 7));
+		__CONST__(life_medicLevel, parseNumber(_this select 6));
 		__CONST__(life_coplevel,0);
 	};
 };
 
-life_num = _this select 20;
-life_repertoire = _this select 22;
+//life_num = _this select 20;
+//life_repertoire = _this select 22;
 
 if(count (_this select 25) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 25);
