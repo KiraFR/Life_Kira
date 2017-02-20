@@ -11,8 +11,7 @@ params[
 	["_uid","",[""]],
 	["_name","",[""]],
 	["_side",sideUnknown,[civilian]],
-	["_cash",0,[0]],
-	["_bank",5000,[0]],
+	["_cash",10000,[0]],
 	["_licenses",[],[[]]],
 	["_gear",[],[[]]]
 ];
@@ -22,7 +21,6 @@ if((_uid == "") OR (_name == "")) exitWith {};
 
 //Parse and setup some data.
 _cash = [_cash] call DB_fnc_numberSafe;
-_bank = [_bank] call DB_fnc_numberSafe;
 
 //Does something license related but I can't remember I only know it's important?
 for "_i" from 0 to count(_licenses)-1 do {
@@ -31,9 +29,9 @@ for "_i" from 0 to count(_licenses)-1 do {
 };
 
 switch (_side) do {
-	case west: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', cop_gear='%4', cop_licenses='%5' WHERE playerid='%6'",_name,_cash,_bank,_gear,_licenses,_uid];};
-	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', civ_licenses='%4', civ_gear='%6', arrested='%7' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
-	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', bankacc='%3', med_licenses='%4', med_gear='%6' WHERE playerid='%5'",_name,_cash,_bank,_licenses,_uid,_gear];};
+	case west: {_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%6'",_name,_cash,_gear,_licenses,_uid];};
+	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', civ_licenses='%3', civ_gear='%5', arrested='%6' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
+	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', med_licenses='%3', med_gear='%5' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear];};
 };
 
 

@@ -1,4 +1,4 @@
-#include "..\..\macro.h"
+ #include "..\..\macro.h"
 /*
 	File: fn_ContratMurd.sqf
 	Author: R. `KronosD` R.
@@ -16,5 +16,5 @@ params[
 ];
 if((_uid == "") OR (_name == "")) exitWith {};
 
-_insertContrat = format["INSERT INTO assasin (deuid, targetname, targetjob, price, deside, type) VALUES('%1','""%3""', '""%2""', '""%4""','""%5""','""%6""')",_uid,_job,_name,_price,_side,_type];
+_insertContrat = format["INSERT INTO assasin (deuid, targetname, targetjob, price, deside, type) VALUES('%1','%3','%2','%4','%5','%6')",_uid,_job,_name,_price,_side,_type];
 [_insertContrat,1] call DB_fnc_asyncCall;
