@@ -1,3 +1,4 @@
+#include "..\..\macro"
 /*
     File: fn_ContratMenu.sqf
     Author: R. `KronosD` R.
@@ -5,7 +6,6 @@
     Description:
     Disposition de tout les infos dispo.
 */
-if(__GETC__(life_murderlevel) == 0)exitWith {closeDialog 0;};
 disableSerialization;
 private["_name","_job","_price","_type","_display","_list"];
 params[
@@ -36,4 +36,3 @@ lbClear _list;
 ];
 
 [_name,_job,_price,_type,getPlayerUID player,player] remoteExecCall ["ASSA_fnc_GetContract",2];
-if(__GETC__(life_murderlevel) == 0)exitWith {closeDialog 0;};
