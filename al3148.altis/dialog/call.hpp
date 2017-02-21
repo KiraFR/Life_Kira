@@ -4,7 +4,7 @@ class Life_call_menu
 	name="Life_call_menu";
 	movingEnabled = 0;
 	enableSimulation = 1;
-	onLoad = "[] spawn life_fnc_callP;";
+	onLoad = "[0] spawn Call_fnc_callP;";
 	
 	class controlsBackground
 	{
@@ -43,13 +43,26 @@ class Life_call_menu
 		{
 			idc = -1;
 			text = "Appeler";
-			onButtonClick = "[player] remoteExecCall [""life_fnc_acceptCall"",owner (call compile format[""%1"",lbData[3251,(lbCurSel 3251)]])];";
+			onButtonClick = "call Call_fnc_calling;";
 			x = 0.225;
 			y = 0.544;
 			w = 0.1375;
 			h = 0.04;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])","(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])","(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])","(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 		};
+
+		class callbutton2: Life_RscButtonMenu
+		{
+			idc = -1;
+			text = "Raccocher";
+			onButtonClick = "[true] call Call_fnc_stopAppel;";
+			x = 0.225;
+			y = 0.6;
+			w = 0.1375;
+			h = 0.04;
+			colorBackground[] = {0,0,0,1};
+		};
+
 		class closebutton: Life_RscButtonMenu
 		{
 			idc = -1;

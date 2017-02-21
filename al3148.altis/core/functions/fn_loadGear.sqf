@@ -83,5 +83,3 @@ if (!(_seco isEqualTo "")) then {_handle = [_seco,true,false,false,false] spawn 
         player addHandgunItem _x;
     };
 } forEach (_hItems);
-
-[] call life_fnc_playerSkins;

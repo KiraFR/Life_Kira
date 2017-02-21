@@ -5,7 +5,7 @@
     Description:
     Disposition de tout les infos dispo.
 */
-private["_name","_job","_price"];
+private["_name","_job","_price","_type"];
 _type = _this;
 _uid = getPlayerUID player;
 
@@ -38,9 +38,9 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Kidnapping";
-		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
-		_price = call life_fnc_calculatePrice;
-		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratKid",RSERV];
+		_side = if (PlayerSide == west) then{_side = "BLUFOR"}else { if (license_civ_gouv)then {_side = "gouv"};};
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratKid",2];
 	};
 
 	//normal
@@ -48,9 +48,9 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Assassinat";
-		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
-		_price = call life_fnc_calculatePrice;
-		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratMurd",RSERV];
+		_side = if (PlayerSide == west) then{_side = "BLUFOR"}else { if (license_civ_gouv)then {_side = "gouv"};};
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratMurd",2];
 		
 	};
 
@@ -59,8 +59,8 @@ switch (_type) do {
 		_name = ctrlText 5002;
 		_job = ctrlText 5004;
 		_type = "Harcelement";
-		_side = if (PlayerSide = west) then{_side = "BLUFOR"}else {if (license_civ_gouv)then {_side = "gouv"};};
-		_price = call life_fnc_calculatePrice;
-		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratHarass",RSERV];
+		_side = if (PlayerSide == west) then{_side = "BLUFOR"}else { if (license_civ_gouv)then {_side = "gouv"};};
+		_price = call life_fnc_calcualtePrice;
+		[_uid,_job,_name,_price,_type,_side] remoteExecCall ["ASSA_fnc_ContratHarass",2];
 	};
 };

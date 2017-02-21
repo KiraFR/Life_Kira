@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "..\..\macro"
+=======
+#include "..\..\macro.h"
+>>>>>>> origin/master
 /*
     File: fn_ContratMenu.sqf
     Author: R. `KronosD` R.

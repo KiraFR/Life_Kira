@@ -56,6 +56,10 @@ class CfgRemoteExec {
 		F(TON_fnc_clientWireTransfer,CLIENT)
 		F(life_fnc_animSync,CLIENT)
 		F(life_fnc_lbAccounts,CLIENT)
+		F(Call_fnc_acceptcall,CLIENT)
+		F(Call_fnc_stopAppel,CLIENT)
+		F(Call_fnc_refuseCall,CLIENT)
+		F(Call_fnc_calling_received,CLIENT)
 
 
 		F(TON_fnc_managesc,SERVER)
@@ -92,6 +96,17 @@ class CfgRemoteExec {
 		F(BQKS_fnc_GetAccount,SERVER)
 		F(BQKS_fnc_DeleteAccount,SERVER)
 		F(BQKS_fnc_SetDefaultAccount,SERVER)
+		
+		F(ASSA_fnc_GetContractA,SERVER)
+		F(ASSA_fnc_GetContract,SERVER)
+		F(ASSA_fnc_ContratKid,SERVER)
+		F(ASSA_fnc_ContratMurd,SERVER)
+		F(ASSA_fnc_ContratHarass,SERVER)
+		F(ASSA_fnc_StopContrat,SERVER)
+		F(ASSA_fnc_GetContractActif,SERVER)
+		F(ASSA_fnc_AcceptContrat,SERVER)
+		F(ASSA_fnc_TransferToMurd,SERVER)
+		
 
 
 		/* changement telephone Kira V3

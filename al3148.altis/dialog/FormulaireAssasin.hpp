@@ -29,12 +29,12 @@ class Life_Formcontrat {
 		class Notes_1: Life_RscText
 		{
 			idc = -1;
-			text = "Notes: Votre nom sera affichÃ©  , attention vous vous engager dans une voie dangereuse !";
+			text = "Notes: Votre nom sera affiche  , attention vous vous engager dans une voie dangereuse !";
 			x = 0.1875;
 			y = 0.82;
 			w = 0.675;
 			h = 0.04;
-			sizeEx = 0.9 * GUI_GRID_H;
+			sizeEx = 0.9;
 		};
 		class Notes_2: Life_RscText
 		{
@@ -44,7 +44,7 @@ class Life_Formcontrat {
 			y = -0.08;
 			w = 0.675;
 			h = 0.04;
-			sizeEx = 0.9 * GUI_GRID_H;
+			sizeEx = 0.9;
 		};
 	};
 	class controls {
@@ -75,7 +75,7 @@ class Life_Formcontrat {
 			y = -0.02;
 			w = 0.6625;
 			h = 0.04;
-			sizeEx = 0.9 * GUI_GRID_H;
+			sizeEx = 0.9;
 		};
 		class Text_Prof: Life_RscText
 		{
@@ -100,6 +100,7 @@ class Life_Formcontrat {
 		{
 			idc = 5005;
 			text = "           Soumettre le contrat";
+			OnButtonClick = "99 call life_fnc_SumContract;";
 			x = 0.2875;
 			y = 0.72;
 			w = 0.4625;
@@ -115,7 +116,7 @@ class Life_Formcontrat {
 			w = 0.2875;
 			h = 0.04;
 		};
-		class Checkbox_Kidnapp: Life_RscCheckbox
+		class Checkbox_Kidnapp: Life_Checkbox
 		{
 			idc = 5007;
 			x = 0.375;
@@ -132,7 +133,7 @@ class Life_Formcontrat {
 			w = 0.2875;
 			h = 0.04;
 		};
-		class Checkbox_Murder: Life_RscCheckbox
+		class Checkbox_Murder: Life_Checkbox
 		{
 			idc = 5009;
 			x = 0.375;
@@ -149,7 +150,7 @@ class Life_Formcontrat {
 			w = 0.2875;
 			h = 0.04;
 		};
-		class CheckBox_Harass: Life_RscCheckbox
+		class CheckBox_Harass: Life_Checkbox
 		{
 			idc = 5011;
 			x = 0.375;

@@ -7,12 +7,11 @@
 	Does something with inserting... Don't have time for
 	descriptions... Need to write it...
 */
-private["_uid","_name","_side","_money","_bank","_licenses","_handler","_thread","_queryResult","_query","_alias"];
+private["_uid","_name","_side","_money","_licenses","_handler","_thread","_queryResult","_query","_alias"];
 params[
 	["_uid","",[""]],
 	["_name","",[""]],
 	["_money",0,[0]],
-	["_bank",2500,[0]],
 	["_returnToSender",ObjNull,[ObjNull]]
 ];
 
@@ -38,14 +37,12 @@ if(count _queryResult != 0) exitWith {[] remoteExecCall ["SOCK_fnc_dataQuery",(o
 //Clense and prepare some information.
 _alias = [_name];
 _money = [_money] call DB_fnc_numberSafe;
-_bank = [_bank] call DB_fnc_numberSafe;
 
 //Prepare the query statement..
-_query = format["INSERT INTO players (playerid, name, cash, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear) VALUES('%1', '%2', '%3', '%4', '%5','[]','[]','[]','[]','[]','[]')",
+_query = format["INSERT INTO players (playerid, name, cash, aliases, cop_licenses, med_licenses, civ_licenses, civ_gear, cop_gear, med_gear) VALUES('%1', '%2', '%3', '%4','[]','[]','[]','[]','[]','[]')",
 	_uid,
 	_name,
 	_money,
-	_bank,
 	_alias
 ];
 

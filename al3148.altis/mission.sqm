@@ -47,7 +47,8 @@ class Mission
 		"A3_Structures_F_Ind_Tank",
 		"A3_Structures_F_Dominants_Lighthouse",
 		"A3_Structures_F_Exp_Naval_Piers",
-		"A3_Structures_F_Kart_Signs_Companies"
+		"A3_Structures_F_Kart_Signs_Companies",
+		"task_force_radio_items"
 	};
 	addOnsAuto[]=
 	{

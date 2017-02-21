@@ -54,31 +54,29 @@ if(count _queryResult == 0) exitWith {
 private["_tmp"];
 _tmp = _queryResult select 2;
 _queryResult set[2,[_tmp] call DB_fnc_numberSafe];
-_tmp = _queryResult select 3;
-_queryResult set[3,[_tmp] call DB_fnc_numberSafe];
 
 //Convert tinyint to boolean
-_old = _queryResult select 6;
+_old = _queryResult select 5;
 for "_i" from 0 to (count _old)-1 do
 {
 	_data = _old select _i;
 	_old set[_i,[_data select 0, ([_data select 1,1] call DB_fnc_bool)]];
 };
 
-_queryResult set[6,_old];
+_queryResult set[5,_old];
 
 //Parse data for specific side.
 switch (_side) do {
 	case west: {
-		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
+		_queryResult set[8,([_queryResult select 8,1] call DB_fnc_bool)];
 		 // LOGS
-        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
+        _list = [_queryResult select 0,_queryResult select 2,_queryResult select 1];
         //  UID , SIDE  , Informations , Type
         [_uid,west,_list,0] spawn DB_fnc_logs;
 	};
 	
 	case civilian: {
-		_queryResult set[7,([_queryResult select 7,1] call DB_fnc_bool)];
+		_queryResult set[6,([_queryResult select 6,1] call DB_fnc_bool)];
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
 		_queryResult set[18,missionNamespace getVariable[format["houses_%1",_uid],[]]];
@@ -86,7 +84,7 @@ switch (_side) do {
 		waitUntil{scriptDone _gangData};
 		_queryResult set[19,missionNamespace getVariable[format["gang_%1",_uid],[]]];
 		
-		/*_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
+		_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
 		_PermisResult = [_Permis,2] call DB_fnc_asyncCall;
 		if(count _PermisResult > 0)then {
 			_queryResult set [12,_PermisResult select 0];
@@ -94,16 +92,8 @@ switch (_side) do {
 			_queryResult set [14,_PermisResult select 2];
 			_queryResult set [15,_PermisResult select 3];
 		};
-		// LOGS
-        _list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
-        //  UID , SIDE  , Informations , Type
-        [_uid,civilian,_list,0] spawn DB_fnc_logs;*/
 	};
 	case independent:{
-		// LOGS
-        //_list = [_queryResult select 1,_queryResult select 3,_queryResult select 2];
-        //  UID , SIDE, Informations , Type
-        //[_uid,independent,_list,0] spawn DB_fnc_logs;
 	};
 };
 
@@ -123,7 +113,7 @@ _queryResult set [22,_numreperResult];
 */
 _keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 _queryResult set[25,_keyArr];
-/*
+
 _nbAcc = format["SELECT id FROM banque WHERE playerid='%1'",_uid];
 _nbAccResult = [_nbAcc,2,true] call DB_fnc_asyncCall;
 _queryResult set [26,(count _nbAccResult)];
@@ -139,6 +129,6 @@ if(count _nbAccEntreResult == 0) then{
 _dfltAcc = format["SELECT id, bankacc FROM banque WHERE playerid='%1' AND dflt='1'",_uid];
 _dfltAcc = [_dfltAcc,2] call DB_fnc_asyncCall;
 _queryResult set [28,_dfltAcc];
-*/
+
 diag_log format["%1",_queryResult];
-_queryResult remoteExecCall ["SOCK_fnc_requestReceived",_ownerID];
+_queryResult remoteExec ["SOCK_fnc_requestReceived",_ownerID];

@@ -3,7 +3,7 @@ class Life_listcontrat {
 	name= "Life_listcontrat";
 	movingEnable = false;
 	enableSimulation = true;
-	onLoad = "[] spawn life_fnc_keyMenu;";
+	onLoad = "[] spawn life_fnc_murdererMenu;";
 	
 class controlsBackground {
 
@@ -49,22 +49,13 @@ class controlsBackground {
 				w = 0.275;
 				h = 0.66;
 			};
-			class ListInfos: Life_RscListbox
+			class ListInfos: Life_RscStructuredText
 			{
 				idc = 4804;
 				x = 0.475;
 				y = 0.24;
 				w = 0.4;
 				h = 0.48;
-			};
-			class ButtonTerminated: Life_RscButtonMenu
-			{
-				idc = 4805;
-				text = "Contrat Termine"; 
-				x = 0.5125;
-				y = 0.8;
-				w = 0.3125;
-				h = 0.08;
 			};
 		};
 	};

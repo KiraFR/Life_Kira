@@ -414,9 +414,12 @@ class Life_Client_Core
         file = "core\Murderer";
         class calculatePrice {};
         class murdererMenu {};
-        class ContratMenu {};
         class termContrat {};
-        class SumContract {};
+		class AcceptContrat {};
+		class ContraFinished {};
+		class ContratMenu {};
+		class listActif {};
+		class SumContract {};
     };
 
 	/*
@@ -439,4 +442,20 @@ class Life_Client_Core
 		class sendadmin {};
 		class select {};
 	};*/
+};
+class CallKira
+{
+	tag = "Call";
+	class CallTel
+	{
+		file = "core\appel";
+		class acceptCall {};
+		class callP {};
+		class appelEnCours {};
+		class changeSendingDistance {};
+		class calling {};
+		class stopAppel {};
+		class calling_received {};
+		class refuseCall {};
+	};
 };
