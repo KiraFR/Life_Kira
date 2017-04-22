@@ -60,7 +60,8 @@ class CfgRemoteExec {
 		F(Call_fnc_stopAppel,CLIENT)
 		F(Call_fnc_refuseCall,CLIENT)
 		F(Call_fnc_calling_received,CLIENT)
-
+		F(KIRA_fnc_receivedMsg,CLIENT)
+		F(KIRA_fnc_HRadioPlayer,CLIENT)
 
 		F(TON_fnc_managesc,SERVER)
 		F(TON_fnc_updateHouseContainers,SERVER)
@@ -88,6 +89,9 @@ class CfgRemoteExec {
 		F(TON_fnc_spawnVehicle,SERVER)
 		F(TON_fnc_getVehicles_fourriere,SERVER)
 		F(TON_fnc_getVehicles,SERVER)
+		F(KIRA_fnc_transfertS,SERVER)
+		F(KIRA_fnc_impotPaye,SERVER)
+		F(KIRA_fnc_HCheckNearS,SERVER)
 
 		
 		F(BQKS_fnc_CreateAccount,SERVER)
