@@ -52,6 +52,17 @@ class CfgFunctions
 			class updatePartial {};
 			class logs {};
 		};
+	};	
+
+	class Transfert_money
+	{
+		tag = "KIRA";
+		class TransfertMoney
+		{
+			file = "\life_server\Functions\Transfert";
+			class isConnected {};
+			class transfertS {};
+		};
 	};
 	
 	class Life_System
