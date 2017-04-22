@@ -62,6 +62,7 @@ class CfgRemoteExec {
 		F(Call_fnc_calling_received,CLIENT)
 		F(KIRA_fnc_receivedMsg,CLIENT)
 		F(KIRA_fnc_HRadioPlayer,CLIENT)
+		F(life_fnc_play3D,CLIENT)
 
 		F(TON_fnc_managesc,SERVER)
 		F(TON_fnc_updateHouseContainers,SERVER)
@@ -129,6 +130,7 @@ class CfgRemoteExec {
 		F(addMagazine,ANYONE)
 		F(addPrimaryWeaponItem,ANYONE)
 		F(addHandgunItem,ANYONE)
+		F(life_fnc_jumpFnc,ANYONE)
 		F(life_fnc_jumpFnc,ANYONE)
 		
 		F(join,ANYONE)
