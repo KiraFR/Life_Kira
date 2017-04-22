@@ -64,6 +64,36 @@ class CfgFunctions
 			class transfertS {};
 		};
 	};
+
+	class Hacker
+	{
+		tag = "KIRA";
+		class Hacker
+		{
+			file = "\life_server\Functions\Hacker";
+			class HCheckNearS {};
+		};
+	};
+
+	class notaire
+	{
+		tag = "KIRA";
+		class notaire
+		{
+			file = "\life_server\Functions\notaire";
+			class InsertFormNot {};
+		};
+	};
+
+	class phoneNum
+	{
+		tag = "KIRA";
+		class phoneNum
+		{
+			file = "\life_server\Functions\phoneNum";
+			class phoneNum {};
+		};
+	};
 	
 	class Life_System
 	{

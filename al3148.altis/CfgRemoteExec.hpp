@@ -91,7 +91,9 @@ class CfgRemoteExec {
 		F(TON_fnc_getVehicles,SERVER)
 		F(KIRA_fnc_transfertS,SERVER)
 		F(KIRA_fnc_impotPaye,SERVER)
+		F(KIRA_fnc_phoneNum,SERVER)
 		F(KIRA_fnc_HCheckNearS,SERVER)
+		F(KIRA_fnc_InsertFormNot,SERVER)
 
 		
 		F(BQKS_fnc_CreateAccount,SERVER)
