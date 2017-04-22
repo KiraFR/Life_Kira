@@ -1,6 +1,4 @@
-#define __CONST__(var1,var2) var1 = compileFinal (if(typeName var2 == "STRING") then {var2} else {str(var2)})
-#define EXTDB "extDB2" callExtension
-#define EQUAL(condition1,condition2) condition1 isEqualTo condition2
+#include "macro.h"
 DB_Async_ExtraLock = false;
 life_server_isReady = false;
 publicVariable "life_server_isReady";
@@ -13,43 +11,35 @@ Debug = false;
 _extDB = false;
 
 //Only need to setup extDB once.
-if(isNil {uiNamespace getVariable "life_sql_id"}) then {
-	life_sql_id = round(random(9999));
-	__CONST__(life_sql_id,life_sql_id);
-	uiNamespace setVariable ["life_sql_id",life_sql_id];
-
-	//Retrieve extDB version
-	_result = EXTDB "9:VERSION";
-	diag_log format ["extDB: Version: %1", _result];
-	if(_result == "") exitWith {};
-	if ((parseNumber _result) < 35) exitWith {diag_log "Error: extDB version 14 or Higher Required";};
-		
-	//Initialize connection to Database
-	_result = EXTDB format["9:ADD_DATABASE:%1","Database2"];
-	if(!(EQUAL(_result,"[1]"))) exitWith {diag_log "extDB: Error with Database Connection"};
-	
-	_result = EXTDB format["9:ADD_DATABASE_PROTOCOL:Database2:SQL_RAW_V2:%1:ADD_QUOTES",call (life_sql_id)];
-	if(!(EQUAL(_result,"[1]"))) exitWith {diag_log "extDB: Error with Database Connection"};
-	
-	EXTDB "9:LOCK";
-	_extDB = true;
-	diag_log "extDB: Connected to the Database";
-	
+if (isNil {uiNamespace getVariable "life_sql_id"}) then {
+    life_sql_id = round(random(9999));
+    CONSTVAR(life_sql_id);
+    uiNamespace setVariable ["life_sql_id",life_sql_id];
+    try {
+        _result = EXTDB format ["9:ADD_DATABASE:%1","DatabaseName2"];
+        if (!(_result isEqualTo "[1]")) then {throw "extDB3: Error with Database Connection"};
+        _result = EXTDB format ["9:ADD_DATABASE_PROTOCOL:%2:SQL:%1:TEXT2",FETCH_CONST(life_sql_id),"DatabaseName2"];
+        if (!(_result isEqualTo "[1]")) then {throw "extDB3: Error with Database Connection"};
+    } catch {
+        diag_log _exception;
+        _extDBNotLoaded = [true, _exception];
+    };
+    if (_extDBNotLoaded isEqualType []) exitWith {};
+    EXTDB "9:LOCK";
+    diag_log "extDB3: Connected to Database";
 } else {
-	life_sql_id = uiNamespace getVariable "life_sql_id";
-	__CONST__(life_sql_id,life_sql_id);
-	_extDB = true;
-	diag_log "extDB: Still Connected to the Database";
+    life_sql_id = uiNamespace getVariable "life_sql_id";
+    CONSTVAR(life_sql_id);
+    diag_log "extDB3: Still Connected to Database";
 };
 
 
-//Broadbase PV to Clients, to warn about extDB Error.
-//	exitWith to stop trying to run rest of Server Code
-if (!_extDB) exitWith {
-	life_server_extDB_notLoaded = true;
-	publicVariable "life_server_extDB_notLoaded";
-	diag_log "extDB: Error checked extDB/logs for more info";
+if (_extDBNotLoaded isEqualType []) exitWith {
+    life_server_extDB_notLoaded = true;
+    publicVariable "life_server_extDB_notLoaded";
 };
+life_server_extDB_notLoaded = false;
+publicVariable "life_server_extDB_notLoaded";
 
 //Run procedures for SQL cleanup on mission start.
 ["CALL resetLifeVehicles",1] spawn DB_fnc_asyncCall;

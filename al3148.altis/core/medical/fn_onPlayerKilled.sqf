@@ -8,29 +8,28 @@
 */
 private["_unit","_k"];
 disableSerialization;
-_unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_unit = param[_this,0,ObjNull,[ObjNull]];
 _k = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;
+if ((vehicle _unit) != _unit) then {
+    UnAssignVehicle _unit;
+    _unit action ["getOut", vehicle _unit];
+    _unit setPosATL [(getPosATL _unit select 0) + 3, (getPosATL _unit select 1) + 1, 0];
+};
 
-//Set some vars
-_unit setVariable["Revive",FALSE,TRUE]; //Set the corpse to a revivable state.
-_unit setVariable["name",profileName,TRUE]; //Set my name so they can say my name.
-_unit setVariable["restrained",FALSE,TRUE];
-_unit setVariable["Escorting",FALSE,TRUE];
-_unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is it used?
-_unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
-
-//Setup our camera view
-life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);
-showCinemaBorder TRUE;
-life_deathCamera cameraEffect ["Internal","Back"];
-createDialog "DeathScreen";
-life_deathCamera camSetTarget _unit;
-life_deathCamera camSetRelPos [0,3.5,4.5];
-life_deathCamera camSetFOV .5;
-life_deathCamera camSetFocus [50,0];
-life_deathCamera camCommit 0;
-
-
+_unit setVariable ["name",profileName,true];
+_unit setVariable ["steam64id",(getPlayerUID player),true];
+if (_unit getVariable ["ACE_captives_isHandcuffed", false]) then {
+	[_unit, false] call ACE_captives_setHandcuffed;
+};
+if (_unit getVariable ["ACE_captives_isSurrendering", false]) then {
+	[_unit, false] call ACE_captives_setSurrendered;
+};
+if (_unit getVariable ["ACE_captives_isEscorting", false]) then {
+	_unit setVariable["ACE_captives_isEscorting",false,true];
+};
+if (_unit getVariable ["ACE_isUnconscious", false]) then {
+	_unit setVariable["ACE_isUnconscious",false,true];
+};
 
 _distance = _k distance _unit;
 _distance = floor(_distance);
@@ -64,32 +63,6 @@ switch (true) do
 };
 
 (findDisplay 7300) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
-
-//Create a thread for something?
-_unit spawn
-{
-	private["_maxTime","_RespawnBtn","_Timer"];
-	disableSerialization;
-	_RespawnBtn = ((findDisplay 7300) displayCtrl 7302);
-	_Timer = ((findDisplay 7300) displayCtrl 7301);
-	
-	_maxTime = time + (life_respawn_timer * 60);
-	_RespawnBtn ctrlEnable false;
-	waitUntil {_Timer ctrlSetText format[localize "STR_Medic_Respawn",[(_maxTime - time),"MM:SS.MS"] call BIS_fnc_secondsToString]; 
-	round(_maxTime - time) <= 0 OR isNull _this};
-	_RespawnBtn ctrlEnable true;
-	_Timer ctrlSetText localize "STR_Medic_Respawn_2";
-};
-
-[] spawn life_fnc_deathScreen;
-
-//Create a thread to follow with some what precision view of the corpse.
-[_unit] spawn
-{
-	private["_unit"];
-	_unit = _this select 0;
-	waitUntil {if(speed _unit == 0) exitWith {true}; life_deathCamera camSetTarget _unit; life_deathCamera camSetRelPos [0,3.5,4.5]; life_deathCamera camCommit 0;};
-};
 
 //Killed by cop stuff...
 if(side _k == west && playerSide != west) then {
