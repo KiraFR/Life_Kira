@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#include "..\..\macro"
-=======
 #include "..\..\macro.h"
->>>>>>> origin/master
 /*
     File: fn_murdererMenu.sqf
     Author: R. `KronosD` R.
