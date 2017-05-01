@@ -221,6 +221,7 @@ class Life_Client_Core
 		class loadGear {};
 		class stripDownPlayer {};
 		class play3D {};
+		class creatNum {};
 	};
 
 	class Network
@@ -423,41 +424,4 @@ class Life_Client_Core
 		class listActif {};
 		class SumContract {};
     };
-
-	/*
-	class phone
-	{
-		file = "core\smartphone";
-		class cellphone {};
-		class sendMsg {};
-		class cellphonesendMessage {};
-		class addcontact {};
-		class removecontact {};
-		class messageShow {};
-		class removeMsg {};
-		class editcontact {};
-		class editcontactApply {};
-		class creatNum {};
-		class addRepertoire {};
-		class addToAnnuaire {};
-		class sendSerUrg {};
-		class sendadmin {};
-		class select {};
-	};*/
-};
-class CallKira
-{
-	tag = "Call";
-	class CallTel
-	{
-		file = "core\appel";
-		class acceptCall {};
-		class callP {};
-		class appelEnCours {};
-		class changeSendingDistance {};
-		class calling {};
-		class stopAppel {};
-		class calling_received {};
-		class refuseCall {};
-	};
 };
