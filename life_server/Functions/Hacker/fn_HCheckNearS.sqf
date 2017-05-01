@@ -38,7 +38,10 @@ _list = [];
 	_query = format["SELECT numcompte,bankacc FROM banque WHERE dflt = '1' AND playerid='%1'",_x];
 	_compteBanque = [_query,2] call DB_fnc_asyncCall;
 	if(count _compteBanque == 0) then {_compteBanque = ["0","0"];};
-	(_listReturn select _forEachIndex) = (_listReturn select _forEachIndex) + _compteBanque;
+	_i = _forEachIndex;
+	{
+		(_listReturn select _i) pushBack _x;
+	}foreach _compteBanque;
 }foreach _list;
 
 [_listReturn] remoteExecCall ["KIRA_fnc_HCheckNear",_return];

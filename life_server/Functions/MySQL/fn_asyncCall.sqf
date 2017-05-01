@@ -11,7 +11,7 @@
 */
 private ["_queryStmt","_mode","_multiarr","_queryResult","_key","_return","_loop"];
 params[
-	["_queryStmt","";[""]],
+	["_queryStmt","",[""]],
 	["_mode",1,[0]],
 	["_multiarr",false,[false]]
 ];

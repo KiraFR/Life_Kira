@@ -1,6 +1,8 @@
 #include "macro.h"
+private["_extDBNotLoaded"];
 DB_Async_ExtraLock = false;
 life_server_isReady = false;
+_extDBNotLoaded = "";
 publicVariable "life_server_isReady";
 Debug = false;
 [] execVM "\life_server\functions.sqf";
@@ -37,6 +39,7 @@ if (isNil {uiNamespace getVariable "life_sql_id"}) then {
 if (_extDBNotLoaded isEqualType []) exitWith {
     life_server_extDB_notLoaded = true;
     publicVariable "life_server_extDB_notLoaded";
+    diag_log "Probleme EXTDB3";
 };
 life_server_extDB_notLoaded = false;
 publicVariable "life_server_extDB_notLoaded";
@@ -96,7 +99,7 @@ client_session_list = [];
 		sleep (30 * 60);
 		{
 			_x setVariable["sellers",[],true];
-		} foreach [Dealer_1,Dealer_2,Dealer_3];
+		} foreach [Dealer_1];
 	};
 };
 

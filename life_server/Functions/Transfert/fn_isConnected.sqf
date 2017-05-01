@@ -17,7 +17,7 @@
 private["_ret"];
 _uid = param[0,"",[""]];
 {
-	if(_uid = (getPlayerUID _x))exitWith{
+	if(_uid == (getPlayerUID _x))exitWith{
 		_ret = _x;
 	};
 }foreach playableUnits;

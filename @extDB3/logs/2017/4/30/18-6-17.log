@@ -1,0 +1,34 @@
+
+extDB3: https://bitbucket.org/torndeco/extdb3/wiki/Home
+extDB3: Version: 1.028
+extDB3: Windows Debug Version
+
+Message: All development for extDB3 is done on a Linux Dedicated Server
+Message: If you would like to Donate to extDB3 Development
+Message: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SUEFTGABTAM2
+Message: Also leave a message if there is any particular feature you would like to see added.
+Message: Thanks for all the people that have donated.
+Message: Torndeco: 18/05/15
+
+
+extDB3: Found extdb3-conf.ini
+extDB3: Detected 8 Cores, Setting up 6 Worker Threads
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+extDB3: ...
+
+
+[18:06:17:691477 +01:00] [Thread 2692] extDB3: Input from Server: 9:VERSION
+[18:06:17:691555 +01:00] [Thread 2692] extDB3: Output to Server: 1.028
+[18:06:19:901205 +01:00] [Thread 2692] extDB3: Input from Server: 9:ADD_DATABASE:DatabaseName2
+[18:06:19:904876 +01:00] [Thread 2692] extDB3: Output to Server: [1]
+[18:06:19:904965 +01:00] [Thread 2692] extDB3: Input from Server: 9:ADD_DATABASE_PROTOCOL:DatabaseName2:SQL:1824:TEXT2
+[18:06:19:905010 +01:00] [Thread 2692] extDB3: SQL: Initialized: Add Quotes around TEXT Datatypes mode: 2
+[18:06:19:905022 +01:00] [Thread 2692] extDB3: SQL: Initialized: NULL = ""
+[18:06:19:905034 +01:00] [Thread 2692] extDB3: Output to Server: [1]
+[18:06:19:905077 +01:00] [Thread 2692] extDB3: Input from Server: 9:LOCK
+[18:06:19:905093 +01:00] [Thread 2692] extDB3: Locked
+[18:06:19:905103 +01:00] [Thread 2692] extDB3: Output to Server: [1]

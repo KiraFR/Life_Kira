@@ -88,9 +88,9 @@ class CfgFunctions
 	class phoneNum
 	{
 		tag = "KIRA";
-		class phoneNum
+		class phone
 		{
-			file = "\life_server\Functions\phoneNum";
+			file = "\life_server\Functions\phone";
 			class phoneNum {};
 		};
 	};
