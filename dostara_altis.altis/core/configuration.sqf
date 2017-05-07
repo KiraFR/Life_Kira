@@ -66,6 +66,16 @@ life_pPermis = 0;
 life_amende = 550;
 life_nbrFoisPermis = 0;
 life_waitpermis = false;
+life_maxPoints = 2;
+/*
+*****************************
+****** KronosD Variables *****
+*****************************
+*/
+life_AccOffshore = 1;
+life_AccN = 1;
+life_EnterAcc = false;
+life_OrgaAcc = false;
 life_nbAcc = 0;
 life_maxPoints = 2;
 /*
@@ -95,19 +105,19 @@ life_vehicles = [];
 bank_robber = [];
 switch (playerSide) do
 {
-	case west: 
+	case west:
 	{
 		life_atmcash = 0; //Starting Bank Money
 		life_cash = 15000; //Starting Cash Money
 		life_paycheck = 500; //Paycheck Amount
 	};
-	case civilian: 
+	case civilian:
 	{
 		life_atmcash = 0; //Starting Bank Money
 		life_cash = 10000; //Starting Cash Money
 		life_paycheck = 350; //Paycheck Amount
 	};
-	
+
 	case independent: {
 		life_atmcash = 0; //Starting Cash Money
 		life_cash = 10000;
@@ -121,7 +131,7 @@ switch (playerSide) do
 life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
 __CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
 
-life_inv_items = 
+life_inv_items =
 [
 	"life_inv_oilu",
 	"life_inv_oilp",
@@ -226,7 +236,7 @@ life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocai
 /*
 	Sell / buy arrays
 */
-sell_array = 
+sell_array =
 [
 	["apple",50],
 	["heroinu",1850],

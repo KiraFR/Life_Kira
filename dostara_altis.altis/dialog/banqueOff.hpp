@@ -4,8 +4,8 @@ class Life_AccountReqOff {
 	movingEnable = false;
 	enableSimulation = true;
 
-class controlsBackground {			
-			
+class controlsBackground {
+
 		class Main_BackGround: Life_RscText
 			{
 				idc = -1;
@@ -15,7 +15,7 @@ class controlsBackground {
 				h = 0.8;
 				colorBackground[] = {-1,-1,-1,0.7};
 			};
-		
+
 		class Background_up: Life_RscText
 			{
 				idc = -1;
@@ -27,14 +27,14 @@ class controlsBackground {
 				colorBackground[] = {0.38,0.7,0.88,0.7};
 			};
 		};
-			
+
 class controls {
 
 		class Button_Validate: life_RscButtonMenu
 			{
 				idc = 12001;
 				colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-				onButtonClick = "[] call life_fnc_RequestAccountOff";
+				onButtonClick = "[1] call life_fnc_RequestAccount";
 				x = 0.075;
 				y = 0.7;
 				w = 0.175;
@@ -43,7 +43,7 @@ class controls {
 		class Text_Opt: Life_RscText
 			{
 				idc = 12002;
-				text = "Vous allez payer un certain montant pour la création d'un compte en banque offshore ce compte ne sera pas soumis au Impots.";
+				text = "Vous allez payer un certain montant pour la crï¿½ation d'un compte en banque offshore ce compte ne sera pas soumis au Impots.";
 				x = 0.00353535;
 				y = 0.046532;
 				w = 0.3125;
