@@ -77,7 +77,6 @@ life_AccN = 1;
 life_EnterAcc = false;
 life_OrgaAcc = false;
 life_nbAcc = 0;
-life_maxPoints = 2;
 /*
 *****************************
 ****** Life Variables *******
