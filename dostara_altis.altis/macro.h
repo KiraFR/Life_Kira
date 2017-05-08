@@ -14,8 +14,8 @@
 #define RCLIENT -2 //Except server
 #define RANY 0 //Global
 
-#define life_num (player getVariable "numeroTel")
+#define life_num (player getVariable "phoneNumber")
 #define life_numAcc (player getVariable "numeroAccount")
-#define life_numForeach(var1) (var1 getVariable "numeroTel")
+#define life_numForeach(var1) (var1 getVariable "phoneNumber")
 #define life_numAccForeach(var1) (var1 getVariable "numeroAccount")
-#define life_numModif(var1) (player setVariable ["numeroTel",(var1),true])
+#define life_numModif(var1) (player setVariable ["phoneNumber",(var1),true])

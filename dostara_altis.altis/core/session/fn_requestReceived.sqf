@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
 	File: fn_requestReceived.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -92,8 +92,7 @@ switch(playerSide) do {
 	};
 };
 
-//life_num = _this select 20;
-//life_repertoire = _this select 22;
+life_numModif(_this select 20);
 
 if(count (_this select 25) > 0) then {
 	{life_vehicles pushBack _x;} foreach (_this select 25);

@@ -173,6 +173,10 @@ switch (_code) do
 		};
 	};
 	
+	//I key
+	case 23:{
+		call life_fnc_openMenuI;
+	};
 	//F Key
 	case 33:
 	{

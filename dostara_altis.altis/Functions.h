@@ -10,18 +10,6 @@ class Socket_Reciever
 		class updateRequest {};
 		class syncData {};
 		class updatePartial {};
-		class updateBanque {};
-	};
-};
-class KiraScript
-{
-	tag = "Kira";
-	class Kira
-	{
-		file = "core\emoji";
-		class forEmoji {};
-		class emojiCfg {};
-		class test {};
 	};
 };
 
@@ -222,6 +210,7 @@ class Life_Client_Core
 		class stripDownPlayer {};
 		class play3D {};
 		class creatNum {};
+		class openMenuI {};
 	};
 
 	class Network

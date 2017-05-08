@@ -4,7 +4,7 @@
     Comme son nom l'indique ,sa lacrymote
 
 */
-
+/*
 While{true} do {
 "dynamicBlur" ppEffectEnable true; // enables ppeffect
 "dynamicBlur" ppEffectAdjust [0]; // enables normal vision
@@ -33,4 +33,4 @@ and
     };
     
     sleep 5;
-};
+};*/

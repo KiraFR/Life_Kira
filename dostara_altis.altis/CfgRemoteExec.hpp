@@ -63,6 +63,7 @@ class CfgRemoteExec {
 		F(KIRA_fnc_receivedMsg,CLIENT)
 		F(KIRA_fnc_HRadioPlayer,CLIENT)
 		F(life_fnc_play3D,CLIENT)
+		F(KIRA_fnc_receiveTestament,CLIENT)
 
 		F(TON_fnc_managesc,SERVER)
 		F(TON_fnc_updateHouseContainers,SERVER)

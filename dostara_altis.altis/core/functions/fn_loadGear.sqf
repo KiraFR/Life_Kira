@@ -65,8 +65,9 @@ if (!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false
 life_maxWeight = 100;
 
 {
-    [true,(_x select 0),(_x select 1)] call life_fnc_handleInv;
-} forEach (_yItems);
+    _item = [_x,1] call life_fnc_varHandle;
+    [true,_item,1] call life_fnc_handleInv;
+} foreach (_yItems);
 
 life_maxWeight = 24;
 //Primary & Secondary (Handgun) should be added last as magazines do not automatically load into the gun.

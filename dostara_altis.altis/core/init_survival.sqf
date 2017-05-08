@@ -135,7 +135,7 @@
 };
 
 []spawn {
-	while[true] do {
+	while{true} do {
 		if(life_hunger <30) then {
 			sleep random(30);
 			player say3D "ventre";
