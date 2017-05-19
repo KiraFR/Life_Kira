@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=1365;
+		nextID=1375;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3622.1509,20.930862,13167.616};
-		dir[]={-0.34210443,-0.48819011,-0.80292565};
-		up[]={-0.19136599,0.87272656,-0.4491407};
-		aside[]={-0.91999793,-2.7829083e-007,0.39198497};
+		pos[]={3636.7061,21.536203,13122.226};
+		dir[]={0.11057831,-0.490877,-0.86419374};
+		up[]={0.062304288,0.87122661,-0.48691621};
+		aside[]={-0.99192291,2.4898327e-008,-0.12692304};
 	};
 };
 binarizationWanted=0;
@@ -201,7 +201,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=479;
+		items=483;
 		class Item0
 		{
 			dataType="Marker";
@@ -16132,8 +16132,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3613.5601,9.9175463,13146.812};
-						angles[]={6.2681756,1.6684649,0.037035886};
+						position[]={3608.1094,10.403678,13157.258};
+						angles[]={0,1.6684649,0};
 					};
 					side="Civilian";
 					flags=6;
@@ -16142,9 +16142,8 @@ class Mission
 						skill=0.60000002;
 						init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""01"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
 					};
-					id=1362;
+					id=1366;
 					type="C_Man_casual_2_F_euro";
-					atlOffset=0.17700005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -16173,8 +16172,229 @@ class Mission
 			class Attributes
 			{
 			};
-			id=1361;
-			atlOffset=0.17700005;
+			id=1365;
+		};
+		class Item479
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13965.874,25.814884,18751.664};
+						angles[]={0,1.2755041,6.2826962};
+					};
+					side="Civilian";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""02"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
+					};
+					id=1368;
+					type="C_Man_casual_2_F_euro";
+					atlOffset=0.92700005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1367;
+			atlOffset=0.92700005;
+		};
+		class Item480
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={16979.408,16.719736,12639.818};
+						angles[]={0,0.25134486,0};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""03"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
+					};
+					id=1370;
+					type="C_Man_casual_2_F_euro";
+					atlOffset=0.00029563904;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1369;
+			atlOffset=0.00029563904;
+		};
+		class Item481
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25748.928,21.190084,21363.422};
+						angles[]={0,2.3711169,6.282208};
+					};
+					side="Civilian";
+					flags=2;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""04"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
+					};
+					id=1372;
+					type="C_Man_casual_2_F_euro";
+					atlOffset=0.47500038;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1371;
+			atlOffset=0.47500038;
+		};
+		class Item482
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3640.5979,10.143831,13110.99};
+						angles[]={0,1.6684649,0.0039968039};
+					};
+					side="Civilian";
+					flags=6;
+					class Attributes
+					{
+						skill=0.60000002;
+						init="this allowDamage false;  this enableSimulation false; this addAction[""Créer compte en banque"",{createDialog ""life_AccountRequest"";}];";
+					};
+					id=1374;
+					type="C_Man_casual_2_F_euro";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=1373;
 		};
 	};
 };

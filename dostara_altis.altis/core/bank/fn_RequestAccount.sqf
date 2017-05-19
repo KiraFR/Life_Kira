@@ -4,9 +4,9 @@
 	Author: R. `KronosD` R.
 
 	Description:
-	cr�er un num�ro et l'envoi au serveur
+	créer un numéro et l'envoi au serveur
 */
-private["_num","_name"];
+private["_num","_name","_client"];
 _type = _this;
 _uid = getPlayerUID player;
 
@@ -36,14 +36,14 @@ switch (_type) do {
 
 		life_AccOffshore = life_AccOffshore +1;
 		life_nbAcc = life_nbAcc +1;
-		hint "Votre compte offshore a bien �t� cr��";
+		hint "Votre compte offshore a bien été créé";
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 
 	//normal
 	case 2: {
-		if(isNil "_uid")exitwith{hint "Vous n'�tes pas un joueur."};
+		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
 		_Price = 100;
 		_PriceB = 100^life_AccN;
 		if(life_cash < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
@@ -57,7 +57,7 @@ switch (_type) do {
 		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
 		_num = "RD" + _client +_guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien �tait cree";
+		hint "Votre compte a bien était cree";
 		life_AccN = life_AccN +1;
 		life_nbAcc = life_nbAcc +1;
 		[] call life_fnc_hudUpdate;
@@ -68,7 +68,7 @@ switch (_type) do {
 	//entreprise
 	case 3: {
 		if(life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
-		if(isNil "_uid")exitwith{hint "Vous n'�tes pas un joueur."};
+		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
 		if(life_cash < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		life_cash = life_cash - 10000;
 
@@ -81,7 +81,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien �tait creer";
+		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
 		life_EnterAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -99,7 +99,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien �tait creer";
+		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
 		life_EparAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -107,7 +107,7 @@ switch (_type) do {
 	//Orga
 	case 5: {
 		if(life_OrgaAcc)exitWith{hint "Votre entreprise a deja un compte."};
-		if(isNil "_uid")exitwith{hint "Vous n'�tes pas un joueur."};
+		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
 		if(life_cash < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		life_cash = life_cash - 10000;
 
@@ -120,7 +120,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien �tait creer";
+		hint "Votre compte a bien était creer";
 		[] call life_fnc_hudUpdate;
 		life_OrgaAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];

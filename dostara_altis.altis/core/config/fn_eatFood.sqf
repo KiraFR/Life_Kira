@@ -32,7 +32,7 @@ if([false,_food,1] call life_fnc_handleInv) then {
 	if(_sum > 100) then {
 		_sum = 100;
 		player setFatigue 1;
-		hint "You have over eaten, you are now feeling fatigued.";
+		hint "Vous avez trop mangé...";
 		[] spawn KIRA_fnc_peterMalade;
 	};
 	life_hunger = _sum;
