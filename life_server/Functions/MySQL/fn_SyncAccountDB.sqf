@@ -3,7 +3,7 @@
 	Author: R. `KronosD` R.
 */
 private["_NumCompte","_Cash","_PlayerUID","_Info","_query"];
-params[["_Info","",[""]]["_PlayerUID","",[""]]];
+params[["_Info","",[""]],["_PlayerUID","",[""]]];
 
 _query = "";
 
