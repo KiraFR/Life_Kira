@@ -19,4 +19,4 @@ _amount = parseNumber (_amount);
 if(_amount > (missionNameSpace getVariable _var)) exitWith {hint localize "STR_Shop_Virt_NotEnough"};
 
 _sender = player;
-[_var,_amount,false,_sender] remoteExecCall ["bourse_fnc_vente",RSERV];
+[_type,_amount,false,_sender] remoteExecCall ["bourse_fnc_vente",2];

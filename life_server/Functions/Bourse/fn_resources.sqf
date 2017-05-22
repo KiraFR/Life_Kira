@@ -8,10 +8,10 @@ private ["_con","_return"];
 _con = param[0];
 _return = switch(_con) do {
 //      NAME                    MIN     MAX     SEIL    EVOL    VALUE   Ent     [ NAME coef ]
-case "Oranges" : {[             1,      5,      3,      0.1,    0,      0,      [["Peches",0.1],["Pommes",0.1],["Raisin",0.1],["Jus_MultiFruit",0.2]]]};
-case "Peches" : {[              1,      5,      3,      0.1,    0,      0,      [["Oranges",0.1],["Pommes",0.1],["Raisin",0.1],["Jus_MultiFruit",0.2]]]};
-case "Pommes" : {[              1,      5,      3,      0.1,    0,      0,      [["Peches",0.1],["Oranges",0.1],["Raisin",0.1],["Jus_De_Pomme",0.4]]]};
-case "Raisin" : {[              1,      5,      3,      0.1,    0,      0,      [["Peches",0.1],["Pommes",0.1],["Oranges",0.1],["Jus_De_Raisin",0.4]]]};
+case "Oranges" : {[             1,      5,      3,      0.1,    0,      0,      [["peach",0.1],["apple",0.1],["Raisin",0.1],["Jus_MultiFruit",0.2]]]};
+case "peach" : {[               1,      5,      3,      0.1,    0,      0,      [["Oranges",0.1],["apple",0.1],["Raisin",0.1],["Jus_MultiFruit",0.2]]]};
+case "apple" : {[               1,      5,      3,      0.1,    0,      0,      [["peach",0.1],["Oranges",0.1],["Raisin",0.1],["Jus_De_Pomme",0.4]]]};
+case "Raisin" : {[              1,      5,      3,      0.1,    0,      0,      [["peach",0.1],["apple",0.1],["Oranges",0.1],["Jus_De_Raisin",0.4]]]};
 
 case "Jus_MultiFruit" : {[      1,      15,     10,     0.1,    0,      0,      [["Jus_De_Raisin",0.4],["Jus_De_Pomme",0.4]]]};
 case "Jus_De_Pomme" : {[        1,      15,     10,     0.1,    0,      0,      [["Jus_MultiFruit",0.4],["Cidre",0.5],["Jus_De_Raisin",0.4]]]};
@@ -64,7 +64,7 @@ case "Speedball" : {[           1,      0,      76,     0.2,    0,      0,      
 
 case "Tortue" : {[              1,      100,    54,     0.2,    0,      0,      [["Girelle",0.2],["Maquereau",0.2],["Thon",0.2],["Mulet",0.2],["Roussette",0.2],["Saupe",0.2],["Soupe_De_Poisson",0.2],["Sel",0.2]]]};
 
-case "Name" : {["Oranges","Peches","Pommes","Raisin","Jus_MultiFruit","Jus_De_Pomme","Jus_De_Raisin","Cidre","Vin","Biere","Wisky","Cafe","Tabac","Saupe","Girelle","Maquereau","Thon","Mulet","Roussette","Soupe_De_Poisson","Aluminium","Argent" ,"Bois","Charbon","Chaux","Cuivre","Fer","Petrole","Pierres_Precieuses","Sable","Sel","Verre","Acier","Bijoux","Ciment","Essence","Cannabis","Coca","Opium","Cocaine","Heroine","Shit" ,"Meth","Pharmaceutique","Speedball","Tortue"]};
+case "Name" : {["Oranges","peach","apple","Raisin","Jus_MultiFruit","Jus_De_Pomme","Jus_De_Raisin","Cidre","Vin","Biere","Wisky","Cafe","Tabac","Saupe","Girelle","Maquereau","Thon","Mulet","Roussette","Soupe_De_Poisson","Aluminium","Argent" ,"Bois","Charbon","Chaux","Cuivre","Fer","Petrole","Pierres_Precieuses","Sable","Sel","Verre","Acier","Bijoux","Ciment","Essence","Cannabis","Coca","Opium","Cocaine","Heroine","Shit" ,"Meth","Pharmaceutique","Speedball","Tortue"]};
 
 default {false};
 };
