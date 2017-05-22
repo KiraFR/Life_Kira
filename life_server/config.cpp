@@ -51,6 +51,7 @@ class CfgFunctions
 			class mresString {};
 			class updatePartial {};
 			class logs {};
+			class SyncAccountDB {};
 		};
 	};
 
@@ -90,8 +91,9 @@ class CfgFunctions
 		tag = "KIRA";
 		class phoneNum
 		{
-			file = "\life_server\Functions\phoneNum";
+			file = "\life_server\Functions\phone";
 			class phoneNum {};
+			class creerNumero {};
 		};
 	};
 
@@ -169,33 +171,14 @@ class CfgFunctions
             class sleeper {};
         };
 	};
-	class SmartphoneKira {
-		tag = "SMPH";
-		class Smartphone_Kira {
-			file = "\life_server\Functions\smartphone";
-			class insertNumber {};
-			class insertContact {};
-			class contactRequest {};
-			class editcontact {};
-			class removeContact {};
-			class findContact{};
-			class msgRequest {};
-			class delMsg {};
-			class insertRepertoire {};
-			class CheckRepertoire {};
-		};
-	};
 	class BanqueKronosD {
 		tag = "BQKS";
 		class Banque_KronosD {
 			file = "\life_server\Functions\Bank";
 			class CreateAccount {};
-			class CreateAccountEntre {};
-			class CreateAccountOff {};
 			class DeleteAccount {};
 			class GetAccount {};
 			class SetDefaultAccount {};
-			class SyncAccountDB {};
 		};
 	};
 	class ImpotKira {
