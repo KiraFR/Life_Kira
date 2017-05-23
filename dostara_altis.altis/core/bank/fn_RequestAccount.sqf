@@ -7,7 +7,7 @@
 	créer un numéro et l'envoi au serveur
 */
 private["_num","_name","_client"];
-_type = _this;
+_type = (_this select 0);
 _uid = getPlayerUID player;
 
 if(_type == 2) then {

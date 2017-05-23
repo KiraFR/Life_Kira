@@ -104,9 +104,4 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 [] execVM "core\divers\Lacrymo.sqf";
 
-_boughtItems = [];
-
-	[getPlayerUID player] RemoteExecCall ["TON_fnc_playerLogged",2];
-
-
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.

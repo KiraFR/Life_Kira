@@ -115,7 +115,9 @@ class CfgRemoteExec {
 		F(ASSA_fnc_AcceptContrat,SERVER)
 		F(ASSA_fnc_TransferToMurd,SERVER)
 		
-
+        //Bourse
+        F(bourse_fnc_vente,SERVER)
+        F(life_fnc_virt_sellBourse,CLIENT)
 
 		/* changement telephone Kira V3
 			F(SMPH_fnc_findContact,SERVER)

@@ -97,6 +97,21 @@ class CfgFunctions
 		};
 	};
 
+	class bourse
+	{
+		tag = "bourse";
+		class bourse
+		{
+			file = "\life_server\Functions\Bourse";
+            class startServer {};
+            class setObject {};
+            class createObject {};
+            class saveObject {};
+            class resources {};
+            class vente {};
+		};
+	};
+
 	class Life_System
 	{
 		tag = "life";
@@ -159,17 +174,6 @@ class CfgFunctions
 			class removeGang {};
 			class updateGang {};
 		};
-
-		class DynMarket
-        {
-            file = "\life_server\Functions\DynMarket";
-            class calculatePrices {};
-            class config {};
-            class getUpdate {};
-            class HandleDB {};
-            class playerLogged {};
-            class sleeper {};
-        };
 	};
 	class BanqueKronosD {
 		tag = "BQKS";

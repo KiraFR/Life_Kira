@@ -325,6 +325,7 @@ class Life_Client_Core
 		class virt_menu {};
 		class virt_update {};
 		class virt_sell {};
+		class virt_sellBourse {};
 		class chopShopMenu {};
 		class chopShopSelection {};
 		class chopShopSell {};
@@ -379,18 +380,6 @@ class Life_Client_Core
 		class fourriereMenu {};
 		class unfourriere {};
 	};
-
-	class DynMarket
-    {
-        file = "core\DynMarket";
-        class bought {};
-        class update {};
-        class DisplayPrices {};
-        class LoadIntoListbox {};
-        class ForcePrice {};
-        class DYNMARKET_getPrice {};
-		class DYNMARKET_getIcon {};
-    };
 
 	class Bank
     {

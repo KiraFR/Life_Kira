@@ -27,7 +27,7 @@ switch (count _fiveNumber) do {
 	case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; }; 
 	case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; }; 
 	case 4 : { _fiveNumber = format["0%1",_fiveNumber joinString ""]; };
-	default:{_fiveNumber = _fiveNumber joinString "";}
+	default {_fiveNumber = _fiveNumber joinString "";}
 };
 
 while {(_allnumber find [_fiveNumber]) != -1} do {
@@ -40,7 +40,7 @@ while {(_allnumber find [_fiveNumber]) != -1} do {
 		case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; }; 
 		case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; }; 
 		case 4 : { _fiveNumber = format["0%1",_fiveNumber joinString ""]; };
-		default: { _fiveNumber = _fiveNumber joinString "";};
+		default { _fiveNumber = _fiveNumber joinString "";};
 	};
 };
 _query = format["INSERT INTO phonenumber(pid_owner,numero,active) VALUES(%1,%2,'1');",getPlayerUID _player,format["%1%2",_prefixe,_fiveNumber]];
