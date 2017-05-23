@@ -60,7 +60,7 @@ if (!(isNil 'Bourse_Object')) then {
                 if (_name == (_x select 0)) then {
                     _ValueArray = [_name,(_x select 1)];
                     _id = _Object find _valueArray;
-                    _newValueArray = [_name,(_x select 1) + (_valueModif)];
+                    _newValueArray = [_name,((_x select 1) + (_valueModif))];
                     _Object set [_id,_newValueArray];
                 };
             }forEach _Object;
