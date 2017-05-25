@@ -31,6 +31,7 @@ if (!(isNil 'Bourse_Object')) then {
                 if (_value <= _entValue) exitWith {[0,false] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];};
             };
         };
+
         if (_value >= _max) then {
             _prix = _count * _max;
             _prix = _prix;
@@ -43,11 +44,13 @@ if (!(isNil 'Bourse_Object')) then {
                 _prix = _prix; 
             };
         };
+
         if (_value >= _seil) then {
-            _valueNew = _value - (_count * _evol);
+            _valueNew = (_value - (_count * _evol));
         }else{
-            _valueNew = _value - (_count);
+            _valueNew = (_value - (_count));
         };
+
         _valueArray = [_resource,_value];
         _id = _Object find _valueArray;
         _newValueArray = [_resource,_valueNew];
