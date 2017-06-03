@@ -186,7 +186,27 @@ life_inv_items =
 	"life_inv_storagebig",
 	"life_inv_vinu",
 	"life_inv_vin",
-	"life_inv_cidre"
+	"life_inv_cidre",
+
+	//Add
+
+	"life_inv_Orange",
+    "life_inv_Raisin",
+    "life_inv_Jus_MultiFruit",
+    "life_inv_Jus_De_Pomme",
+    "life_inv_Jus_De_Raisin",
+    "life_inv_Cidre",
+    "life_inv_Vin",
+    "life_inv_Wisky",
+    "life_inv_Aluminium",
+    "life_inv_Bois",
+    "life_inv_Charbon",
+    "life_inv_Chaux",
+    "life_inv_Acier",
+    "life_inv_Shit",
+    "life_inv_Meth",
+    "life_inv_Pharmaceutique",
+    "life_inv_Speedball"
 ];
 
 //Setup variable inv vars.
@@ -273,7 +293,31 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000]
+	["goldbar",95000],
+
+	//Add
+
+    ["Orange",1],
+    ["Raisin",1],
+    ["Jus_MultiFruit",1],
+    ["Jus_De_Pomme",1],
+    ["Jus_De_Raisin",1],
+    ["Cidre",1],
+    ["Vin",1],
+    ["Biere",1],
+    ["Wisky",1],
+    ["Tabac",1],
+    ["Aluminium",1],
+    ["Argent",1],
+    ["Bois",1],
+    ["Charbon",1],
+    ["Chaux",1],
+    ["Acier",1],
+    ["Shit",1],
+    ["Meth",1],
+    ["Pharmaceutique",1],
+    ["Speedball",1]
+
 ];
 __CONST__(sell_array,sell_array);
 

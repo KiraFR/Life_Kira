@@ -3619,6 +3619,79 @@
 			<Italian>Striscia Chiodata</Italian>
 			<Portuguese>Spike Strip</Portuguese>
 		</Key>
+
+		<Key ID="STR_Item_Orange">
+			<Original>Orange</Original>
+		</Key>
+
+		<Key ID="STR_Item_Raisin">
+			<Original>Raisin</Original>
+		</Key>
+
+		<Key ID="STR_Item_Jus_MultiFruit">
+			<Original>Jus MultiFruit</Original>
+		</Key>
+
+		<Key ID="STR_Item_Jus_De_Pomme">
+			<Original>Jus De Pomme</Original>
+		</Key>
+
+		<Key ID="STR_Item_Jus_De_Raisin">
+			<Original>Jus De Raisin</Original>
+		</Key>
+
+		<Key ID="STR_Item_Cidre">
+			<Original>Cidre</Original>
+		</Key>
+
+		<Key ID="STR_Item_Vin">
+			<Original>Vin</Original>
+		</Key>
+
+		<Key ID="STR_Item_Biere">
+			<Original>Biere</Original>
+		</Key>
+
+		<Key ID="STR_Item_Tabac">
+			<Original>Tabac</Original>
+		</Key>
+
+		<Key ID="STR_Item_Aluminium">
+			<Original>Aluminium</Original>
+		</Key>
+
+		<Key ID="STR_Item_Argent">
+			<Original>Argent</Original>
+		</Key>
+
+		<Key ID="STR_Item_Charbon">
+			<Original>Charbon</Original>
+		</Key>
+
+		<Key ID="STR_Item_Chaux">
+			<Original>Chaux</Original>
+		</Key>
+
+		<Key ID="STR_Item_Acier">
+			<Original>Acier</Original>
+		</Key>
+
+		<Key ID="STR_Item_Shit">
+			<Original>Shit</Original>
+		</Key>
+
+		<Key ID="STR_Item_Meth">
+			<Original>Meth</Original>
+		</Key>
+
+		<Key ID="STR_Item_Pharmaceutique">
+			<Original>Pharmaceutique</Original>
+		</Key>
+
+		<Key ID="STR_Item_Speedball">
+			<Original>Speedball</Original>
+		</Key>
+
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">

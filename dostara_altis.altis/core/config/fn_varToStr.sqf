@@ -68,7 +68,28 @@ switch (_var) do
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
-	
+
+	//Add
+
+	case "life_inv_Orange" : {(localize "STR_Item_Orange")};
+    case "life_inv_Raisin" : {(localize "STR_Item_Raisin")};
+    case "life_inv_Jus_MultiFruit" : {(localize "STR_Item_Jus_MultiFruit")};
+    case "life_inv_Jus_De_Pomme" : {(localize "STR_Item_Jus_De_Pomme")};
+    case "life_inv_Jus_De_Raisin" : {(localize "STR_Item_Jus_De_Raisin")};
+    case "life_inv_Cidre" : {(localize "STR_Item_Cidre")};
+    case "life_inv_Vin" : {(localize "STR_Item_Vin")};
+    case "life_inv_Wisky" : {(localize "STR_Item_Wisky")};
+    case "life_inv_Tabac" : {(localize "STR_Item_Tabac")};
+    case "life_inv_Aluminium" : {(localize "STR_Item_Aluminium")};
+    case "life_inv_Bois" : {(localize "STR_Item_Argent")};
+    case "life_inv_Charbon" : {(localize "STR_Item_Charbon")};
+    case "life_inv_Chaux" : {(localize "STR_Item_Chaux")};
+    case "life_inv_Acier" : {(localize "STR_Item_Acier")};
+    case "life_inv_Shit" : {(localize "STR_Item_Shit")};
+    case "life_inv_Meth" : {(localize "STR_Item_Meth")};
+    case "life_inv_Pharmaceutique" : {(localize "STR_Item_Pharmaceutique")};
+    case "life_inv_Speedball" : {(localize "STR_Item_Speedball")};
+
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};
 	case "license_civ_air": {(localize "STR_License_Pilot")};
