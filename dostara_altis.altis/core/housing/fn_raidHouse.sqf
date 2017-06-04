@@ -65,7 +65,7 @@ _value = 0;
 			_value = _value + (_val * ((__GETC__(sell_array) select _vIndex) select 1));
 		};
 	};
-} foreach (_houseInv select 0);
+} forEach (_houseInv select 0);
 
 if(_value > 0) then {
 	[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];

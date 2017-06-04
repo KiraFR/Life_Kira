@@ -36,4 +36,4 @@ _list = [
 			_listBox ctrlSetStructuredText parseText life_listMessage;
 		};
 	}; 
-}foreach _list;
+}forEach _list;

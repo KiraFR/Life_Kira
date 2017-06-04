@@ -18,7 +18,7 @@ compileFinal "
 		if(_item in _x) exitWith {
 			_return = _forEachIndex;
 		};
-	} foreach _stack;
+	} forEach _stack;
 
 	_return;
 ";
@@ -64,7 +64,7 @@ compileFinal "
 		{
 			_return = false;
 		};
-	} foreach _array;
+	} forEach _array;
 	_return;
 ";
 

@@ -12,7 +12,7 @@
 	{
 		[_x,_index] spawn life_fnc_colorVehicle;
 	};
-} foreach (allMissionObjects "Car");
+} forEach (allMissionObjects "Car");
 
 {
 	_index = _x getVariable "life_VEH_color";
@@ -20,4 +20,4 @@
 	{
 		[_x,_index] spawn life_fnc_colorVehicle;
 	};
-} foreach (allMissionObjects "Air");
+} forEach (allMissionObjects "Air");

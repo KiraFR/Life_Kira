@@ -70,4 +70,4 @@ _units = _units - [player];
 	} else {
 		_idc ctrlShow false;
 	};
-} foreach _units;
+} forEach _units;

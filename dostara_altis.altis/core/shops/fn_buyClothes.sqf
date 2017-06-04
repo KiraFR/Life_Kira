@@ -14,15 +14,10 @@ _price = 0;
 	{
 		_price = _price + _x;
 	};
-} foreach life_clothing_purchase;
-
-_detail = [uniform player] call life_fnc_fetchCfgDetails;
-_uniform = getText(configFile >> (_details select 6) >> (typeOf (uniform player)) >> "DisplayName");
+} forEach life_clothing_purchase;
 
 if(_price > life_cash) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
 life_cash = life_cash - _price;
-//LOGS
-[getPlayerUID player, playerSide, [name player, _uniform,uniform player,_price],14] remoteExecCall ["DB_fnc_logs",2];
 
 life_clothesPurchased = true;
 closeDialog 0;

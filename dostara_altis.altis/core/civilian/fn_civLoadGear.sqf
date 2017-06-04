@@ -16,7 +16,7 @@ if(count _itemArray == 0) exitWith
 
 //Strip the unit down
 RemoveAllWeapons player;
-{player removeMagazine _x;} foreach (magazines player);
+{player removeMagazine _x;} forEach (magazines player);
 removeUniform player;
 removeVest player;
 removeBackpack player;
@@ -25,7 +25,7 @@ removeHeadGear player;
 {
 	player unassignItem _x;
 	player removeItem _x;
-} foreach (assignedItems player);
+} forEach (assignedItems player);
 
 _uniform = [_itemArray,0,"",[""]] call BIS_fnc_param;
 _backpack = [_itemArray,1,"",[""]] call BIS_fnc_param;
@@ -39,6 +39,6 @@ if(_uniform != "") then {_handle = [_uniform,true,false,false,false] spawn life_
 if(_backpack != "") then {_handle = [_backpack,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if(_goggles != "") then {_handle = [_goggles,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 if(_headgear != "") then {_handle = [_headgear,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
-{_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _items;
-{[_x,true,false,false,true] call life_fnc_handleItem;} foreach (_uItems);
-{[_x,true,true,false,false] call life_fnc_handleItem;} foreach (_bItems);
+{_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} forEach _items;
+{[_x,true,false,false,true] call life_fnc_handleItem;} forEach (_uItems);
+{[_x,true,true,false,false] call life_fnc_handleItem;} forEach (_bItems);

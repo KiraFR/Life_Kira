@@ -7,7 +7,7 @@
 	Description:
 	Checks what type of an attachment is passed and what it is compatible with.
 	Should now be compatible with the new compatibleItems class structure... This was not a fun task but thankfully
-	Robalo gave me some code that showed me the way. If it isn't 100% compatible then IDFK. The foreach in a foreach drove me nuts and
+	Robalo gave me some code that showed me the way. If it isn't 100% compatible then IDFK. The forEach in a forEach drove me nuts and
 	not the best way to do things, I really don't know what I was thinking but doing PHP code for two weeks and playing GTA V tends to make you
 	forget things.... Wow what a ramble... blah blah blah.
 	
@@ -47,7 +47,7 @@ _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon play
 		//Check new compatibleItems class structure
 		if(count _newItems > 0) then
 		{
-			//This gets weird with foreach in foreach :\
+			//This gets weird with forEach in forEach :\
 			{
 				if(_ret != 0) exitWith {};
 				_cfg = getNumber(configFile >> "CfgWeapons" >> _weapon >> "WeaponSlotsInfo" >> _x >> "compatibleItems" >> _item);
@@ -56,10 +56,10 @@ _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon play
 				{
 					_ret = switch(_weapon) do {case (primaryWeapon player): {1};case (secondaryWeapon player) : {2};case (handgunWeapon player): {3};default {0};};
 				};
-			} foreach _newItems;
+			} forEach _newItems;
 			if(_ret != 0) exitWith {}; //Make sure we exit the loop
 		};
 	};
-} foreach _weaponArray;
+} forEach _weaponArray;
 
 _ret;

@@ -16,6 +16,6 @@
 
 #define life_num (player getVariable "phoneNumber")
 #define life_numAcc (player getVariable "numeroAccount")
-#define life_numForeach(var1) (var1 getVariable "phoneNumber")
-#define life_numAccForeach(var1) (var1 getVariable "numeroAccount")
+#define life_numforEach(var1) (var1 getVariable "phoneNumber")
+#define life_numAccforEach(var1) (var1 getVariable "numeroAccount")
 #define life_numModif(var1) (player setVariable ["phoneNumber",(var1),true])

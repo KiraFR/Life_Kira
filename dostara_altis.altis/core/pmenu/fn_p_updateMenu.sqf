@@ -25,7 +25,7 @@ lbClear _near_i;
 
 //Near players
 _near_units = [];
-{ if(player distance _x < 10) then {_near_units pushBack _x};} foreach playableUnits;
+{ if(player distance _x < 10) then {_near_units pushBack _x};} forEach playableUnits;
 {
 	if(!isNull _x && alive _x && player distance _x < 10 && _x != player) then
 	{
@@ -34,7 +34,7 @@ _near_units = [];
 		_near_i lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
 		_near_i lbSetData [(lbSize _near)-1,str(_x)];
 	};
-} foreach _near_units;
+} forEach _near_units;
 if(life_nbAcc > 0) then{
 	_mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>%1€</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>%2€</t>",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
 }else{
@@ -53,7 +53,7 @@ ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 		_inv lbAdd format["%1x - %2",_val,_str];
 		_inv lbSetData [(lbSize _inv)-1,_shrt];
 	};
-} foreach life_inv_items;
+} forEach life_inv_items;
 {
 	if((_x select 1) == _side) then
 	{
@@ -64,7 +64,7 @@ ctrlSetText[2009,format["Weight: %1 / %2", life_carryWeight, life_maxWeight]];
 			_struct = _struct + format["%1<br/>",_str];
 		};
 	};
-} foreach life_licenses;
+} forEach life_licenses;
 
 if(_struct == "") then
 {

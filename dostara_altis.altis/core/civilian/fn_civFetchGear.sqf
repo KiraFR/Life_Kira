@@ -25,7 +25,7 @@ if(uniform player != "") then
 		{
 			_uItems set[count _uItems,_x];
 		};
-	} foreach (uniformItems player);
+	} forEach (uniformItems player);
 };
 
 if(backpack player != "") then
@@ -36,7 +36,7 @@ if(backpack player != "") then
 		{
 			_bItems set[count _bItems,_x];
 		};
-	} foreach (backpackItems player);
+	} forEach (backpackItems player);
 };
 
 _ret set[count _ret,_uItems];

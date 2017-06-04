@@ -32,7 +32,7 @@ lbClear _control;
 	_control lbSetData [(lbSize _control)-1,_tmp];
 	_control lbSetPicture [(lbSize _control)-1,_vehicleInfo select 2];
 	_control lbSetValue [(lbSize _control)-1,_x select 0];
-} foreach _vehicles;
+} forEach _vehicles;
 
 ctrlShow[2810,false];
 ctrlShow[2811,false];
@@ -49,5 +49,5 @@ ctrlShow[2811,false];
 	_control lbSetData [(lbSize _control)-1,(_x select 2)];
 	_control lbSetValue [(lbSize _control)-1,(call compile format["%1", _x select 0])];
 	_control lbSetPicture [(lbSize _control)-1,_picture];
-} foreach _vehicles;
+} forEach _vehicles;
 */

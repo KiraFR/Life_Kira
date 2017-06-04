@@ -10,7 +10,7 @@ life_action_gangInUse = nil;
 
 if(life_atmcash < (__GETC__(life_gangPrice))) exitWith {
 	hint format[localize "STR_GNOTF_NotEnoughMoney",[((__GETC__(life_gangPrice))-life_atmcash)] call life_fnc_numberText];
-	{(group player) setVariable[_x,nil,true];} foreach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
+	{(group player) setVariable[_x,nil,true];} forEach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
 };
 
 __SUB__(life_atmcash,(__GETC__(life_gangPrice)));

@@ -24,10 +24,10 @@ _spCfg = [playerSide] call life_fnc_spawnPointCfg;
 
 _ctrl = ((findDisplay 38500) displayCtrl 38510);
 {
-	_ctrl lnbAddRow[(_spCfg select _ForEachIndex) select 1,(_spCfg select _ForEachIndex) select 0,""];
-	_ctrl lnbSetPicture[[_ForEachIndex,0],(_spCfg select _ForEachIndex) select 2];
-	_ctrl lnbSetData[[_ForEachIndex,0],(_spCfg select _ForEachIndex) select 0];
-} foreach _spCfg;
+	_ctrl lnbAddRow[(_spCfg select _forEachIndex) select 1,(_spCfg select _forEachIndex) select 0,""];
+	_ctrl lnbSetPicture[[_forEachIndex,0],(_spCfg select _forEachIndex) select 2];
+	_ctrl lnbSetData[[_forEachIndex,0],(_spCfg select _forEachIndex) select 0];
+} forEach _spCfg;
 
 _sp = _spCfg select 0; //First option is set by default
 

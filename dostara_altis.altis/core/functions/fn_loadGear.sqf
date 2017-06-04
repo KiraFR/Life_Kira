@@ -67,7 +67,7 @@ life_maxWeight = 100;
 {
     _item = [_x,1] call life_fnc_varHandle;
     [true,_item,1] call life_fnc_handleInv;
-} foreach (_yItems);
+} forEach (_yItems);
 
 life_maxWeight = 24;
 //Primary & Secondary (Handgun) should be added last as magazines do not automatically load into the gun.

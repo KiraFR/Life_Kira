@@ -22,9 +22,9 @@ _uitems = [];
 _vitems = [];
 _bitems = [];
 
-if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
-if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
-if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
+if(_uniform != "") then {{_uitems set[count _uitems,_x];} forEach (uniformItems player);};
+if(_vest != "") then {{_vitems set[count _vitems,_x];} forEach (vestItems player);};
+if(_backpack != "") then {{_bitems set[count _bitems,_x];} forEach (backPackItems player);};
 
 if(goggles player != "") then { _items set[count _items, goggles player]; };
 if(headgear player != "") then { _items set[count _items, headgear player]; };
@@ -32,14 +32,14 @@ if(count (primaryWeaponMagazine player) > 0) then
 {
 	{
 		_magazines set[count _magazines,_x];
-	} foreach (primaryWeaponMagazine player);
+	} forEach (primaryWeaponMagazine player);
 };
 
 if(count (handgunMagazine player) > 0) then
 {
 	{
 		_magazines set[count _magazines,_x];
-	} foreach (handgunMagazine player);
+	} forEach (handgunMagazine player);
 };
 
 //Hard code for Laser Desigantor batteries

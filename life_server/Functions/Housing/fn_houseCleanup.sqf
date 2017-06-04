@@ -16,7 +16,7 @@ if(count _houses == 0) exitWith {};
 	_house = nearestBuilding _pos;
 	
 	if(!isNil {(_house getVariable "containers")}) then {
-		{if(!isNull _x) then {deleteVehicle _x;};} foreach (_house getVariable "containers");
+		{if(!isNull _x) then {deleteVehicle _x;};} forEach (_house getVariable "containers");
 		_house setVariable["containers",nil,true];
 	};
-} foreach _houses;
+} forEach _houses;

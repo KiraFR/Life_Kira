@@ -15,7 +15,7 @@ life_action_gathering = true;
 //Find out what zone we're near
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
-} foreach _resourceZones;
+} forEach _resourceZones;
 
 if(_zone == "") exitWith {
 	life_action_inUse = false;

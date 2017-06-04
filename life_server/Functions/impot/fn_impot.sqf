@@ -75,7 +75,7 @@ switch(_type) do {
 			[_query,1] call DB_fnc_asyncCall;
 			_list = [_x select 0,_bankE];
 			_listG pushBack _list;
-		}foreach _queryEntreR;
+		}forEach _queryEntreR;
 		[1,_listG] RemoteExecCall ["life_fnc_RefreshReceived",RCLIENT];
 		_who = "entreprise";
 	};

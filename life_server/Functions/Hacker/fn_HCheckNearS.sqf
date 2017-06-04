@@ -32,7 +32,7 @@ _list = [];
 			_list pushBack (getPlayerUID _x);
 		};
 	};
-}foreach allUnits;
+}forEach allUnits;
 
 {
 	_query = format["SELECT numcompte,bankacc FROM banque WHERE dflt = '1' AND playerid='%1'",_x];
@@ -41,7 +41,7 @@ _list = [];
 	_i = _forEachIndex;
 	{
 		(_listReturn select _i) pushBack _x;
-	}foreach _compteBanque;
-}foreach _list;
+	}forEach _compteBanque;
+}forEach _list;
 
 [_listReturn] remoteExecCall ["KIRA_fnc_HCheckNear",_return];

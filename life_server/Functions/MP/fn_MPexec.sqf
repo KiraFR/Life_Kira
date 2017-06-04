@@ -38,7 +38,7 @@ if (typename _target == typename []) then {
 	//--- Multi execution
 	{
 		[_varName,[_mode,_params,_functionName,_x,_isPersistent,_isCall]] call bis_fnc_MPexec;
-	} foreach _target;
+	} forEach _target;
 } else{
 	//--- Single execution
 	if (ismultiplayer && _mode == 0) then {

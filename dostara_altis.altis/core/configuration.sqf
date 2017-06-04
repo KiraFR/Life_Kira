@@ -185,8 +185,6 @@ life_inv_items =
 	"life_inv_storagesmall",
 	"life_inv_storagebig",
 	"life_inv_vinu",
-	"life_inv_vin",
-	"life_inv_cidre",
 
 	//Add
 
@@ -198,6 +196,7 @@ life_inv_items =
     "life_inv_Cidre",
     "life_inv_Vin",
     "life_inv_Wisky",
+    "life_inv_Tabac",
     "life_inv_Aluminium",
     "life_inv_Bois",
     "life_inv_Charbon",
@@ -210,7 +209,7 @@ life_inv_items =
 ];
 
 //Setup variable inv vars.
-{missionNamespace setVariable[_x,0];} foreach life_inv_items;
+{missionNamespace setVariable[_x,0];} forEach life_inv_items;
 //Licenses [license var, civ/cop]
 life_licenses =
 [
@@ -245,7 +244,7 @@ life_licenses =
 ];
 
 //Setup License Variables
-{missionNamespace setVariable[(_x select 0),false];} foreach life_licenses;
+{missionNamespace setVariable[(_x select 0),false];} forEach life_licenses;
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
@@ -293,30 +292,30 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000],
+	["goldbar",95000]
 
 	//Add
 
-    ["Orange",1],
-    ["Raisin",1],
-    ["Jus_MultiFruit",1],
-    ["Jus_De_Pomme",1],
-    ["Jus_De_Raisin",1],
-    ["Cidre",1],
-    ["Vin",1],
-    ["Biere",1],
-    ["Wisky",1],
-    ["Tabac",1],
-    ["Aluminium",1],
-    ["Argent",1],
-    ["Bois",1],
-    ["Charbon",1],
-    ["Chaux",1],
-    ["Acier",1],
-    ["Shit",1],
-    ["Meth",1],
-    ["Pharmaceutique",1],
-    ["Speedball",1]
+    //["Orange",0],
+    //["Raisin",0],
+    //["Jus_MultiFruit",0],
+    //["Jus_De_Pomme",0],
+    //["Jus_De_Raisin",0],
+    //["Cidre",0],
+    //["Vin",0],
+    //["Biere",0],
+    //["Wisky",0],
+    //["Tabac",0],
+    //["Aluminium",0],
+    //["Argent",0],
+    //["Bois",0],
+    //["Charbon",0],
+    //["Chaux",0],
+    //["Acier",0],
+    //["Shit",0],
+    //["Meth",0],
+    //["Pharmaceutique",0],
+    //["Speedball",0]
 
 ];
 __CONST__(sell_array,sell_array);

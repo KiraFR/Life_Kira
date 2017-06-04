@@ -18,7 +18,7 @@ _zone = "";
 //Find out what zone we're near
 {
 	if(player distance (getMarkerPos _x) < 150) exitWith {_zone = _x;};
-} foreach _resourceZones;
+} forEach _resourceZones;
 
 if(_zone == "") exitWith {
 	hint localize "STR_NOTF_notNearResource";

@@ -16,7 +16,7 @@ _licenses = "";
 	{
 		_licenses = _licenses + ([_x select 0] call life_fnc_varToStr) + "<br/>";
 	};
-} foreach life_licenses;
+} forEach life_licenses;
 
 if(_licenses == "") then {_licenses = (localize "STR_Cop_NoLicensesFound");};
 

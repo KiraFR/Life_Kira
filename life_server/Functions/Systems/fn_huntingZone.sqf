@@ -34,7 +34,7 @@ if(_bool) then
 		{
 			deleteVehicle _x;
 		};
-	} foreach life_animals_array;
+	} forEach life_animals_array;
 	
 	life_animals_array = [];
 	life_animals_spawned = false;

@@ -16,7 +16,7 @@ _names = "";
 		_val = round((_x select 2) / 16);
 	};
 	_names = _names + format["%1<br/>",_x select 1];
-} foreach _sellers;
+} forEach _sellers;
 
 hint parseText format[(localize "STR_Cop_DealerMSG")+ "<br/><br/>%1",_names];
 (_this select 0) setVariable["sellers",[],true];

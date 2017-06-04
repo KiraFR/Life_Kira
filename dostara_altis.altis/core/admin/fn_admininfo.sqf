@@ -26,7 +26,7 @@ if(primaryWeapon _unit != "") then
 			_tmp = getText(configFile >> "CfgWeapons" >> _x >> "displayName");
 			_attach pushBack _tmp;
 		};
-	} foreach (primaryWeaponItems _unit);
+	} forEach (primaryWeaponItems _unit);
 };
 
 if(count _attach == 0) then {_attach = "None"};

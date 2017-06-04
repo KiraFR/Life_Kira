@@ -29,5 +29,5 @@ lbClear _list;
     _side = switch(side _x) do {case west: {"Cop"}; case civilian : {"Civ"}; case independent : {"Med"}; default {"Unknown"};};
     _list lbAdd format["%1 - %2", _x getVariable["realname",name _x],_side];
     _list lbSetdata [(lbSize _list)-1,str(_x)];
-} foreach playableUnits;
+} forEach playableUnits;
 if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0;};

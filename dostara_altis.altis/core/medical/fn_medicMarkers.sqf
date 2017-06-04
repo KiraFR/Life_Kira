@@ -17,7 +17,7 @@ if(visibleMap) then {
 		if(!isNil "_name" && !_down) then {
 			_units pushBack _x;
 		};
-	} foreach allDeadMen;
+	} forEach allDeadMen;
 	
 	//Loop through and create markers.
 	{
@@ -26,8 +26,8 @@ if(visibleMap) then {
 		_marker setMarkerTypeLocal "loc_Hospital";
 		_marker setMarkerTextLocal format["%1",(_x getVariable["name","Unknown Player"])];
 		_markers pushBack _marker;
-	} foreach _units;
+	} forEach _units;
 	
 	waitUntil {!visibleMap};
-	{deleteMarkerLocal _x;} foreach _markers;
+	{deleteMarkerLocal _x;} forEach _markers;
 };

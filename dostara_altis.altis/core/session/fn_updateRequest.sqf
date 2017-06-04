@@ -11,7 +11,7 @@ _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case 
 	{
 		_array pushBack [_x select 0,(missionNamespace getVariable (_x select 0))];
 	};
-} foreach life_licenses;
+} forEach life_licenses;
 _packet pushBack _array;
 
 [] call life_fnc_saveGear;

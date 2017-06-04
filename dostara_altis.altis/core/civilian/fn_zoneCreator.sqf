@@ -24,7 +24,7 @@ _weedZones = ["weed_1"];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Apples = player addAction['Gather Apples',life_fnc_gatherApples,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Apples;"];
-} foreach _appleZones;
+} forEach _appleZones;
 
 //Create peach zones
 {
@@ -32,7 +32,7 @@ _weedZones = ["weed_1"];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Peaches = player addAction['Gather Peaches',life_fnc_gatherPeaches,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Peaches;"];
-} foreach _peachZones;
+} forEach _peachZones;
 
 //Create heroin zones
 {
@@ -40,7 +40,7 @@ _weedZones = ["weed_1"];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_heroin = player addAction['Gather Heroin',life_fnc_gatherHeroin,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Heroin;"];
-} foreach _heroinZones;
+} forEach _heroinZones;
 
 //Create Weed zones
 {
@@ -48,7 +48,7 @@ _weedZones = ["weed_1"];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Cannabis = player addAction['Gather Cannabis',life_fnc_gatherCannabis,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Cannabis;"];
-} foreach _weedZones;
+} forEach _weedZones;
 
 //Create cocaine zones
 {
@@ -56,4 +56,4 @@ _weedZones = ["weed_1"];
 	_zone setTriggerArea[50,50,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
 	_zone setTriggerStatements["player in thislist","LIFE_Action_Coke = player addAction['Gather Cocaine',life_fnc_gatherCocaine,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Coke;"];
-} foreach _cocaineZones;
+} forEach _cocaineZones;

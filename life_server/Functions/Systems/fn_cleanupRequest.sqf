@@ -17,7 +17,7 @@ while {true} do {
 	if(!alive _client) exitWith {
 		_containers = nearestObjects[_client,["WeaponHolderSimulated"],5];
 		if(count _containers > 0) then {
-			{deleteVehicle _x;} foreach _containers; //Delete the containers.
+			{deleteVehicle _x;} forEach _containers; //Delete the containers.
 		};
 		deleteVehicle _client; //Get rid of the corpse.
 	};

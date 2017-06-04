@@ -24,9 +24,9 @@ _goggles = goggles player;
 _uitems = [];
 _vitems = [];
 _bitems = [];
-if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
-if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
-if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
+if(_uniform != "") then {{_uitems set[count _uitems,_x];} forEach (uniformItems player);};
+if(_vest != "") then {{_vitems set[count _vitems,_x];} forEach (vestItems player);};
+if(_backpack != "") then {{_bitems set[count _bitems,_x];} forEach (backPackItems player);};
 	
 if(primaryWeapon player != "") then
 {

@@ -54,4 +54,4 @@ if(count _clothes == 0) exitWith {};
 	_list lbSetData [(lbSize _list)-1,_x select 0];
 	_list lbSetValue [(lbSize _list)-1,_x select 2];
 	_list lbSetPicture [(lbSize _list)-1,_pic];
-} foreach _clothes;
+} forEach _clothes;

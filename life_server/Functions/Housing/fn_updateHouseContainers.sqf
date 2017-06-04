@@ -21,7 +21,7 @@ _arr = [];
 	_backpacks = getBackpackCargo _x;
 	
 	_arr pushBack [_className,[_weapons,_magazines,_items,_backpacks]];
-} foreach _containers;
+} forEach _containers;
 
 _query = format["UPDATE houses SET containers='%1' WHERE id='%2'",_arr,_houseID];
 

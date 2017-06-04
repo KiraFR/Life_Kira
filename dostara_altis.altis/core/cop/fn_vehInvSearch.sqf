@@ -28,7 +28,7 @@ _value = 0;
 			_value = _value + (_val * ((__GETC__(sell_array) select _vIndex) select 1));
 		};
 	};
-} foreach (_vehicleInfo select 0);
+} forEach (_vehicleInfo select 0);
 
 _owner = _vehicle getVariable "vehicle_info_owners";
 [getPlayerUID player, playerSide, [name player, _owner select 1, _owner select 0, typeOf(_vehicle)],42] remoteExecCall ["DB_fnc_logs",2];

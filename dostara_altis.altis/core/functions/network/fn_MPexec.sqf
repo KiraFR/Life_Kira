@@ -73,7 +73,7 @@ if (ismultiplayer && _mode == 0) then {
 			//--- Multi execution
 			{
 				[_varName,[_mode,_params,_functionName,_x,_isPersistent,_isCall,_callerName,_callerUID]] call life_fnc_MPexec;
-			} foreach _target;
+			} forEach _target;
 		} else {
 
 			//--- Single execution

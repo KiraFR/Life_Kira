@@ -12,4 +12,4 @@ _objects = nearestObjects[visiblePositionASL player, ["Land_CargoBox_V1_F","Land
 {
 	player reveal _x;
 	(group player) reveal _x;
-} foreach _objects;
+} forEach _objects;

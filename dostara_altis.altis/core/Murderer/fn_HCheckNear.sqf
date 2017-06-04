@@ -41,10 +41,10 @@ _listnear = missionNamespace getVariable ["listnear",[]];
 /*
 {
 	if((_x distance player) < 10) then {
-			_listnear pushBack [life_numForeach(_x),name _x,life_numAccForeach(_x),_packet];
+			_listnear pushBack [life_numforEach(_x),name _x,life_numAccforEach(_x),_packet];
 		};
 	};
-}foreach allUnits;
+}forEach allUnits;
 */
 
 hackerBankRequest = nil;

@@ -25,7 +25,7 @@ lbClear _list;
 	_list lbAdd format ["%1",_name];
 	_list lbSetData [(lbSize _list)-1,str(_x)];
 
-}foreach _contrat;
+}forEach _contrat;
 
 (getControl(5500,5502)) ctrlSetStructuredText parseText format[
 	(_name)+ " $%1<br/>

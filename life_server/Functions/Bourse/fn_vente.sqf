@@ -17,7 +17,6 @@ if (!(isNil 'Bourse_Object')) then {
     _countArr = count _result;
     if (_countArr != 0) then {
         _valueNew = 0;
-        _prix = 0;
         _min = (_result select 0);
         _max = (_result select 1);
         _seil = (_result select 2);
@@ -32,18 +31,31 @@ if (!(isNil 'Bourse_Object')) then {
             };
         };
 
-        if (_value >= _max) then {
-            _prix = _count * _max;
-            _prix = _prix;
-        }else{
-            if (_value <= _min) then {
+        if (_max == -1) then {
+            if (_value < _min) then {
                 _prix = _count * _min;
-                _prix = _prix; 
+                diag_log "Min";
             }else{
                 _prix = _count * _value;
-                _prix = _prix; 
+                diag_log "Nor";
             };
+        }else{
+            if (_value > _max) then {
+                _prix = _count * _max;
+                diag_log "Max";
+            }else{
+                if (_value < _min) then {
+                    _prix = _count * _min;
+                    diag_log "Min";
+                }else{
+                    _prix = _count * _value;
+                    diag_log "Nor";
+                };
+             };
         };
+
+        diag_log format ["%1",_prix];
+        diag_log format ["%1",_value];
 
         if (_value >= _seil) then {
             _valueNew = (_value - (_count * _evol));
@@ -61,14 +73,16 @@ if (!(isNil 'Bourse_Object')) then {
             _valueModif = _count * _cofi;
             {
                 if (_name == (_x select 0)) then {
+
                     _ValueArray = [_name,(_x select 1)];
                     _id = _Object find _valueArray;
                     _newValueArray = [_name,((_x select 1) + (_valueModif))];
                     _Object set [_id,_newValueArray];
+
                 };
             }forEach _Object;
         }forEach _relation;
         Bourse_Object setVariable ["Bourse",_Object, true];
-        [_prix,false] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];
+        [_prix] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];
     };
 };

@@ -31,4 +31,4 @@ _control = ((findDisplay 39400) displayCtrl 39402);
 			_control lbSetValue [(lbSize _control)-1,_price];
 		};
 	};
-} foreach _nearVehicles;
+} forEach _nearVehicles;

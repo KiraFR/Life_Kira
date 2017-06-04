@@ -99,7 +99,7 @@ client_session_list = [];
 		sleep (30 * 60);
 		{
 			_x setVariable["sellers",[],true];
-		} foreach [Dealer_1];
+		} forEach [Dealer_1];
 	};
 };
 
@@ -111,9 +111,9 @@ client_session_list = [];
 			if(_x != "") then {
 				_npc removeWeapon _x;
 			};
-		} foreach [primaryWeapon _npc,secondaryWeapon _npc,handgunWeapon _npc];
+		} forEach [primaryWeapon _npc,secondaryWeapon _npc,handgunWeapon _npc];
 	};
-} foreach allUnits;
+} forEach allUnits;
 
 [] spawn TON_fnc_initHouses;
 [] call bourse_fnc_startServer;

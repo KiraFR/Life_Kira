@@ -43,7 +43,7 @@ if(life_inv_marijuana > 0) then {[false,"marijuana",life_inv_marijuana] call lif
 life_is_arrested = true;
 [getPlayerUID player, playerSide, [name player, name _unit, getPlayerUID _unit, side _unit],25] remoteExecCall ["DB_fnc_logs",2];
 removeAllWeapons player;
-{player removeMagazine _x} foreach (magazines player);
+{player removeMagazine _x} forEach (magazines player);
 
 [player,_bad] RemoteExecCall ["life_fnc_jailSys",0];
 [5] call SOCK_fnc_updatePartial;

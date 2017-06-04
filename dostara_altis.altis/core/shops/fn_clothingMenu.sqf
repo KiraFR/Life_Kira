@@ -84,14 +84,14 @@ if(isNil "life_clothesPurchased") exitWith
 			{
 				{
 					[_x,true,true] call life_fnc_handleItem;
-				} foreach life_oldBackpackItems;
+				} forEach life_oldBackpackItems;
 			};
 		};
 	};
 	
 	if(count life_oldUniformItems > 0) then
 	{
-		{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldUniformItems;
+		{[_x,true,false,false,true] call life_fnc_handleItem;} forEach life_oldUniformItems;
 	};
 	
 	if(vest player != "") then
@@ -105,7 +105,7 @@ if(isNil "life_clothesPurchased") exitWith
 			player addVest life_oldVest;
 			if(count life_oldVestItems > 0) then
 			{
-				{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldVestItems;
+				{[_x,true,false,false,true] call life_fnc_handleItem;} forEach life_oldVestItems;
 			};
 		};
 	};
@@ -145,7 +145,7 @@ if((life_clothing_purchase select 3) == -1) then
 		if(life_oldVest == "") then {removeVest player;} else
 		{
 			player addVest life_oldVest;
-			{[_x,true,false,false,true] call life_fnc_handleItem;} foreach life_oldVestItems;
+			{[_x,true,false,false,true] call life_fnc_handleItem;} forEach life_oldVestItems;
 		};
 	};
 };
@@ -159,7 +159,7 @@ if((life_clothing_purchase select 4) == -1) then
 		{
 			removeBackpack player;
 			player addBackpack life_oldBackpack;
-			{[_x,true,true] call life_fnc_handleItem;} foreach life_oldBackpackItems;
+			{[_x,true,true] call life_fnc_handleItem;} forEach life_oldBackpackItems;
 		};
 	};
 };

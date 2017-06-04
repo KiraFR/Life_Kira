@@ -24,7 +24,7 @@ if(count _invs > 0) then
 		{
 			_illegal = _illegal + ((_x select 1) * ((__GETC__(sell_array) select _index) select 1));
 		};
-	} foreach _invs;
+	} forEach _invs;
 	if(_illegal > 6000) then
 	{
 	};

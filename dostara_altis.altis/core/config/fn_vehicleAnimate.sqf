@@ -17,7 +17,7 @@ if(!_preset) then
 	{
 		{
 			_vehicle animate[_x select 0,_x select 1];
-		} foreach _animate;
+		} forEach _animate;
 	}
 		else
 	{

@@ -43,9 +43,9 @@ __CONST__(life_donator,0);
 
 //Loop through licenses
 if(count (_this select 5) > 0) then {
-	{missionNamespace setVariable [(_x select 0),(_x select 1)];} foreach (_this select 5);
+	{missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 5);
 	_licence = [licence_civ_gouv ,license_civ_ebou];
-	{if(_x) exitWith {life_paycheck = 0;};} foreach _licence;
+	{if(_x) exitWith {life_paycheck = 0;};} forEach _licence;
 };
 
 //Parse side specific information.
@@ -77,7 +77,7 @@ switch(playerSide) do {
 		{
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
-		} foreach life_houses;
+		} forEach life_houses;
 		
 		life_gangData = _This select 19;
 		if(count life_gangData != 0) then {
@@ -95,7 +95,7 @@ switch(playerSide) do {
 life_numModif(_this select 20);
 
 if(count (_this select 25) > 0) then {
-	{life_vehicles pushBack _x;} foreach (_this select 25);
+	{life_vehicles pushBack _x;} forEach (_this select 25);
 };
 
 switch (true) do {

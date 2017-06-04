@@ -18,18 +18,18 @@ if(_shooter isKindOf "Man" && alive player) then
 		_curWep = currentWeapon player;
 		_curMags = magazines player;
 		_attach = if(primaryWeapon player != "") then {primaryWeaponItems _unit} else {[]};
-		{player removeMagazine _x} foreach _curMags;
+		{player removeMagazine _x} forEach _curMags;
 		player removeWeapon _curWep;
 		player addWeapon _curWep;
 		if(count _attach != 0 && primaryWeapon _unit != "") then
 		{
 			{
 				_unit addPrimaryWeaponItem _x;
-			} foreach _attach;
+			} forEach _attach;
 		};
 		if(count _curMags != 0) then
 		{
-			{player addMagazine _x;} foreach _curMags;
+			{player addMagazine _x;} forEach _curMags;
 		};
 		
 		[_unit] RemoteExecCall ["life_fnc_tazeSound",1];

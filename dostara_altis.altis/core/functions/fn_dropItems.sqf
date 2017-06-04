@@ -134,4 +134,4 @@ _unit = _this select 0;
 			};
 		};
 	};
-} foreach (life_inv_items + ["life_cash"]);
+} forEach (life_inv_items + ["life_cash"]);

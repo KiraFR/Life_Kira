@@ -3648,6 +3648,10 @@
 			<Original>Vin</Original>
 		</Key>
 
+		<Key ID="STR_Item_Wisky">
+			<Original>Vin</Original>
+		</Key>
+
 		<Key ID="STR_Item_Biere">
 			<Original>Biere</Original>
 		</Key>

@@ -5,7 +5,7 @@
 	Description:
 	Kira: plein de Listes + modification dialog, j'ai pris celui de l'allemand et l'a bien modifié
 */
-Private["_tab","_default","_offshore"];
+private["_tab","_default","_offshore"];
 disableSerialization;
 _display = findDisplay 1600;
 _AccountList = _display displayCtrl 1601;
@@ -25,4 +25,4 @@ diag_log format["%1",list_compte];
 		if(_default == 1) then{"Oui"}else{"Non"}];
 	_AccountList lnbAddRow _tab;
 	_AccountList lnbSetData [[((lnbSize _AccountList) select 0)-1,0],str(_rowData)];
-}foreach list_compte;
+}forEach list_compte;

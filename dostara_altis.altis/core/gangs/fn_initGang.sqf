@@ -22,7 +22,7 @@ _exitLoop = false;
 		if(_groupOwner == "" OR isNil "_groupID") exitWith {}; //Seriously?
 		if((life_gangData select 0) == _groupID && {(life_gangData select 1) == _groupOwner}) exitWith {_group = _x; _exitLoop = true;};
 	};
-} foreach allGroups;
+} forEach allGroups;
 
 if(!isNil "_group") then {
 	[player] join _group;

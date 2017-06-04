@@ -28,7 +28,7 @@ switch(_mode) do {
 			{
 				_array pushBack [_x select 0,(missionNamespace getVariable (_x select 0))];
 			};
-		} foreach life_licenses;
+		} forEach life_licenses;
 		
 		_packet set[2,_array];
 	};

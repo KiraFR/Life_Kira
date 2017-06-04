@@ -19,7 +19,7 @@ _robber = false;
 		_inv pushBack [_x select 0,_val];
 		[false,(_x select 0),_val] call life_fnc_handleInv;
 	};
-} foreach life_illegal_items;
+} forEach life_illegal_items;
 
 if(!life_use_atm) then 
 {

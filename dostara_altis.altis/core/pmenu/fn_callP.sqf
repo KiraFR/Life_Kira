@@ -19,6 +19,6 @@ lbClear _units;
 		_units lbAdd format["%1",_x getVariable["realname",name _x]];
 		_units lbSetData [(lbSize _units)-1,str(_x)];
 	};
-} foreach playableUnits;
+} forEach playableUnits;
 lbSort _units;
 lbSetCurSel [3251,0];

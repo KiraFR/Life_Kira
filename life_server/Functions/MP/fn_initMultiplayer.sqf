@@ -52,6 +52,6 @@ if (isMultiplayer) then {
 				//--- Disabled
 			};
 		};
-	} foreach _queue;
+	} forEach _queue;
 	["BIS_fnc_initMultiplayer"] call bis_fnc_endLoadingScreen;
 };

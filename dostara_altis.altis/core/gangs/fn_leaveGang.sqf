@@ -25,7 +25,7 @@ if(getPlayerUID player == _ownerID) then
 			{
 				_new_owner = _x;
 			};
-		} foreach (units (group player));
+		} forEach (units (group player));
 		
 		life_gang_list set[_index,[_name,_group,_locked,str(_new_owner),(getPlayerUID _new_owner)]];
 		publicVariable "life_gang_list";

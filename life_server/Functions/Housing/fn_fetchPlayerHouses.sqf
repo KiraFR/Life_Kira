@@ -20,7 +20,7 @@ _return = [];
 	_containers = [];
 	_house setVariable["slots",[],true];
 	if(!isNil {(_house getVariable "containers")}) then {
-		{if(!isNull _x) then {deleteVehicle _x;};} foreach (_house getVariable "containers");
+		{if(!isNull _x) then {deleteVehicle _x;};} forEach (_house getVariable "containers");
 	};
 	
 	_trunk = _x select 2;
@@ -45,7 +45,7 @@ _return = [];
 				_house setVariable["slots",_slots,true];
 				_pos = _x;
 			};
-		} foreach _positions;
+		} forEach _positions;
 		
 		if(_pos isEqualTo [0,0,0]) exitWith {};
 		
@@ -63,30 +63,30 @@ _return = [];
 		{
 			_weaponCount = (_weapons select 1) select _forEachIndex;
 			_container addWeaponCargoGlobal [_x,_weaponCount];
-		} foreach (_weapons select 0);
+		} forEach (_weapons select 0);
 		
 		//Add magazines
 		{
 			_magazineCount = (_magazines select 1) select _forEachIndex;
 			_container addMagazineCargoGlobal [_x,_magazineCount];
-		} foreach (_magazines select 0);
+		} forEach (_magazines select 0);
 			
 		//Add items
 		{
 			_itemCount = (_items select 1) select _forEachIndex;
 			_container addItemCargoGlobal [_x,_itemCount];
-		} foreach (_items select 0);
+		} forEach (_items select 0);
 		
 		//Add backpacks
 		{
 			_backpackCount = (_backpacks select 1) select _forEachIndex;
 			_container addBackpackCargoGlobal [_x,_backpackCount];
-		} foreach (_backpacks select 0);
+		} forEach (_backpacks select 0);
 		
-	} foreach _containerData;
+	} forEach _containerData;
 	
 	_house setVariable["containers",_containers,true];
 	_return pushBack [_x select 1,_containers];
-} foreach _houses;
+} forEach _houses;
 
 missionNamespace setVariable[format["houses_%1",_this],_return];

@@ -20,4 +20,4 @@ _exec call bis_fnc_onPlayerConnected;
 //--- Execute on existing
 {
 	[_x] spawn _exec;
-} foreach (playableunits + switchableunits);
+} forEach (playableunits + switchableunits);

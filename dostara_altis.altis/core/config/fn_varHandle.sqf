@@ -26,7 +26,6 @@ switch (_mode) do
 			case "opium": {"life_inv_opium"};
 			case "vinu": {"life_inv_vinu"};
 			case "vin": {"life_inv_vin"};
-			case "cidre": {"life_inv_cidre"};
 			case "apple": {"life_inv_apple"};
 			case "water": {"life_inv_water"};
 			case "rabbit": {"life_inv_rabbit"};
@@ -111,7 +110,6 @@ switch (_mode) do
 			case "life_inv_opium": {"opium"};
 			case "life_inv_vinu": {"vinu"};
 			case "life_inv_vin": {"vin"};
-			case "life_inv_cidre": {"cidre"};
 			case "life_inv_apple": {"apple"};
 			case "life_inv_water": {"water"};
 			case "life_inv_rabbit": {"rabbit"};
@@ -167,7 +165,7 @@ switch (_mode) do
             case "life_inv_Jus_De_Raisin" : {"Jus_De_Raisin"};
             case "life_inv_Cidre" : {"Cidre"};
             case "life_inv_Vin" : {"Vin"};
-            case "life_inv_Wisky" : {"Biere"};
+            case "life_inv_Biere" : {"Biere"};
             case "life_inv_Aluminium" : {"Aluminium"};
             case "life_inv_Tabac" : {"Tabac"};
             case "life_inv_Bois" : {"Argent"};

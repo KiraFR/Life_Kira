@@ -93,7 +93,7 @@ for [{_i = 0}, {_i < 1000 && !_exit}, {_i = _i + 1}] do {
 		if ([_pos,_x] call SHK_pos_fnc_isBlacklisted) exitwith {
 		  _exit = false;
 		};
-	  } foreach _blist;
+	  } forEach _blist;
 	};
 };
 

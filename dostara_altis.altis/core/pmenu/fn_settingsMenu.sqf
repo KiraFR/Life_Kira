@@ -17,13 +17,13 @@ ctrlSetText[2912, format["%1", tawvd_car]];
 ctrlSetText[2922, format["%1", tawvd_air]];
 
 //Setup Sliders range
-{ slidersetRange [_x,100,12000];} foreach [2901,2911,2921];
+{ slidersetRange [_x,100,12000];} forEach [2901,2911,2921];
 //Setup Sliders speed
-{ ((findDisplay 2900) displayCtrl _x) sliderSetSpeed [100,100,100]; } foreach [2901,2911,2921];
+{ ((findDisplay 2900) displayCtrl _x) sliderSetSpeed [100,100,100]; } forEach [2901,2911,2921];
 //Setup Sliders position
 {
 	sliderSetPosition[_x select 0, _x select 1];
-} foreach [[2901,tawvd_foot],[2911,tawvd_car],[2921,tawvd_air]];
+} forEach [[2901,tawvd_foot],[2911,tawvd_car],[2921,tawvd_air]];
 
 private["_display","_side","_tags","_objs"];
 _display = findDisplay 2900;

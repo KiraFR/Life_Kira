@@ -24,7 +24,7 @@ _pos = [0,0,0];
 		_house setVariable["slots",_slots,true];
 		_pos = _x;
 	};
-} foreach _positions;
+} forEach _positions;
 if(_pos isEqualTo [0,0,0]) exitWith {hint localize "STR_ISTR_Box_HouseFull_2"};
 if(!([false,_boxType,1] call life_fnc_handleInv)) exitWith {};
 switch (_boxType) do {

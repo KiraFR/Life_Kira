@@ -4,10 +4,7 @@
 	returns: nothing
 */
 private["_type","_index","_price","_var","_amount","_name","_val"];
-params["_price","_error"];
-
-if (_error) exitWith {hint "Erreur Serveur";};
-if (_price == 0) exitWith {hint "Erreur Serveur";};
+params["_price"];
 
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];
@@ -16,7 +13,6 @@ _amount = ctrlText 2405;
 if(!([_amount] call TON_fnc_isnumber)) exitWith {hint localize "STR_Shop_Virt_NoNum";};
 _amount = parseNumber (_amount);
 if(_amount > (missionNameSpace getVariable _var)) exitWith {hint localize "STR_Shop_Virt_NotEnough"};
-
 
 _name = [_var] call life_fnc_vartostr;
 if(([false,_type,_amount] call life_fnc_handleInv)) then
