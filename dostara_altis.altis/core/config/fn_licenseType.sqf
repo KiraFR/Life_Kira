@@ -1,7 +1,7 @@
 /*
 	File: fn_licenseType.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Returns the short-var of the license name to a long var and display name.
 */
@@ -48,7 +48,7 @@ switch (_mode) do
 			default {_var = ""};
 		};
 	};
-	
+
 	case 1:
 	{
 		switch (_type) do
@@ -78,6 +78,7 @@ switch (_mode) do
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
 			case "licence_civ_gouv": {_var = "gouvernement"};
+			case "licence_cop_prefet": {_var = "Prefet"};
 			case "licence_civ_ebou": {_var = "eboueur"};
 			case "licence_civ_opium": {_var = "opium"};
 			case "licence_civ_fermenta": {_var = "vin"};

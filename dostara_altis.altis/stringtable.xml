@@ -3864,11 +3864,18 @@
 			<Portuguese>Treinamento de Vin</Portuguese>
 		</Key>
 		<Key ID="STR_License_Gouv">
-			<Original>Governement</Original>
-			<English>Governement</English>
-			<French>Governement</French>
-			<Italian>Governement</Italian>
-			<Portuguese>Governement</Portuguese>
+			<Original>Gouvernement</Original>
+			<English>Gouvernement</English>
+			<French>Gouvernement</French>
+			<Italian>Gouvernement</Italian>
+			<Portuguese>Gouvernement</Portuguese>
+		</Key>
+		<Key ID="STR_License_Prefet">
+			<Original>Prefet</Original>
+			<English>Prefet</English>
+			<French>Prefet</French>
+			<Italian>Prefet</Italian>
+			<Portuguese>Prefet</Portuguese>
 		</Key>
 		<Key ID="STR_License_Ebou">
 			<Original>Eboueur</Original>
@@ -4702,16 +4709,16 @@
 			<Italian>Vendi Garage</Italian>
 			<Portuguese>Vender Garagem</Portuguese>
 		</Key>
-        <Key ID="STR_InsuranceApply"> 
-			<Original>You just insure your vehicle you are now protected against explosions!</Original> 
-			<Czech> Now you insure your vehicle is now protected against explosions ! </Czech> 
-			<Spanish> You just make sure your vehicle is now protected against explosions ! </Spanish> 
-			<Italian> Just ensure your vehicle you are now protected against explosions ! </Italian> 
-			<Polish> Just insure your vehicle you are now protected from explosion ! </Polish> 
-			<Russian> You just insure your car, you are now protected against explosions ! </Russian> 
-			<French> Ton Vehicule est bien assurer </French> 
-			<Portuguese> You just hold your vehicle you are now protected against explosions ! </Portuguese> 
-			<German> They only insure your vehicle, you are now protected against explosions ! </German> 
+        <Key ID="STR_InsuranceApply">
+			<Original>You just insure your vehicle you are now protected against explosions!</Original>
+			<Czech> Now you insure your vehicle is now protected against explosions ! </Czech>
+			<Spanish> You just make sure your vehicle is now protected against explosions ! </Spanish>
+			<Italian> Just ensure your vehicle you are now protected against explosions ! </Italian>
+			<Polish> Just insure your vehicle you are now protected from explosion ! </Polish>
+			<Russian> You just insure your car, you are now protected against explosions ! </Russian>
+			<French> Ton Vehicule est bien assurer </French>
+			<Portuguese> You just hold your vehicle you are now protected against explosions ! </Portuguese>
+			<German> They only insure your vehicle, you are now protected against explosions ! </German>
 		</Key>
 		<Key ID="STR_pInAct_AccessGarage">
 			<Original>Garage</Original>

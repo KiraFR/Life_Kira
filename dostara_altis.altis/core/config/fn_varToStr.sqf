@@ -1,7 +1,7 @@
 /*
 	File: fn_varToStr.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Takes the long-name (variable) and returns a display name for our
 	virtual item.
@@ -115,6 +115,7 @@ switch (_var) do
 	case "license_civ_home": {(localize "STR_License_Home")};
 	case "license_civ_opium": {(localize "STR_License_Opium")};
 	case "licence_civ_gouv": {(localize "STR_License_Gouv")};
+	case "licence_cop_Prefet": {(localize "STR_License_Prefet")};
     case "licence_civ_ebou": {(localize "STR_License_Ebou")};
 	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
 	case "licence_civ_vin": {(localize "STR_License_Vin")};
