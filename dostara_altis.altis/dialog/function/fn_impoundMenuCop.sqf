@@ -36,18 +36,3 @@ lbClear _control;
 
 ctrlShow[12810,false];
 ctrlShow[12811,false];
-/*
-{
-	_displayName = getText(configFile >> "CfgVehicles" >> (_x select 2) >> "displayName");
-	_picture = getText(configFile >> "CfgVehicles" >> (_x select 2) >> "picture");
-	_price = [_x select 2,__GETC__(life_garage_prices)] call TON_fnc_index;
-	_sPrice = [_x select 2,__GETC__(life_garage_sell)] call TON_fnc_index;
-	if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_prices) select _price) select 1;};
-	if(_sPrice == -1) then {_sPrice = 1500;} else {_sPrice = (__GETC__(life_garage_sell) select _sPrice) select 1;};
-
-	_control lbAdd format["%1 - %4 Fee: $%2 || %5: $%3", _displayName,[_price] call life_fnc_numberText,[_sPrice] call life_fnc_numberText,localize "STR_Garage_SFee",localize "STR_Garage_SellPrice"];
-	_control lbSetData [(lbSize _control)-1,(_x select 2)];
-	_control lbSetValue [(lbSize _control)-1,(call compile format["%1", _x select 0])];
-	_control lbSetPicture [(lbSize _control)-1,_picture];
-} forEach _vehicles;
-*/

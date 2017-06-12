@@ -79,27 +79,6 @@ class Life_impoundCop_menu
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
-
-		/*class BuyCar : life_RscButtonMenu
-		{
-			idc = -1;
-			text = "$STR_Global_Sell";
-			onButtonClick = "[] call life_fnc_sellGarage;";
-			x = 0.26 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};*/
-
-		class InsureCar : life_RscButtonMenu {
-			idc = 97480;
-			text =  "Assurer" ;
-			onButtonClick = "[] call life_fnc_insureCar;";
-			x = 0.43 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.9 - (1 / 25);
-			w = (6.25 / 40);
-			h = (1 / 25);
-		};
 	};
 
 	class controls
