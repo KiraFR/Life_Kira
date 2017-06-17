@@ -1,7 +1,7 @@
 /*
 	File: fn_processAction.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master handling for processing an item.
 */
@@ -14,19 +14,19 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
-	case "oil": {["oilu","oilp",1200,(localize "STR_Process_Oil")];};
-	case "diamond": {["diamond","diamondc",1350,(localize "STR_Process_Diamond")];};
-	case "heroin": {["heroinu","heroinp",1750,(localize "STR_Process_Heroin")];};
-	case "copper": {["copperore","copper_r",750,(localize "STR_Process_Copper")];};
-	case "iron": {["ironore","iron_r",1120,(localize "STR_Process_Iron")];};
-	case "sand": {["sand","glass",650,(localize "STR_Process_Sand")];};
-	case "salt": {["salt","salt_r",450,(localize "STR_Process_Salt")];};
-	case "cocaine": {["cocaine","cocainep",1500,(localize "STR_Process_Cocaine")];};
-	case "marijuana": {["cannabis","marijuana",500,(localize "STR_Process_Marijuana")];};
-	case "opium": {["opiumn","opium",900,(localize "STR_Process_Opium")];};
-	case "cement": {["rock","cement",350,(localize "STR_Process_Cement")];};
-	case "cidre": {["apple","cidre",200,(localize "STR_Process_Cidre")];};
-	case "wine": {["vinu","vin",200,(localize "STR_Process_Wine")];};
+	case "oil": {["oilu","oilp",false,1200,(localize "STR_Process_Oil")];};
+	case "diamond": {["diamond","diamondc","sand",1350,(localize "STR_Process_Diamond")];};
+	case "heroin": {["heroinu","heroinp",false,1750,(localize "STR_Process_Heroin")];};
+	case "copper": {["copperore","copper_r",false,750,(localize "STR_Process_Copper")];};
+	case "iron": {["ironore","iron_r",false,1120,(localize "STR_Process_Iron")];};
+	case "sand": {["sand","glass",false,650,(localize "STR_Process_Sand")];};
+	case "salt": {["salt","salt_r",false,450,(localize "STR_Process_Salt")];};
+	case "cocaine": {["cocaine","cocainep",false,1500,(localize "STR_Process_Cocaine")];};
+	case "marijuana": {["cannabis","marijuana",false,500,(localize "STR_Process_Marijuana")];};
+	case "opium": {["opiumn","opium",false,900,(localize "STR_Process_Opium")];};
+	case "cement": {["rock","cement",false,350,(localize "STR_Process_Cement")];};
+	case "cidre": {["apple","cidre",false,200,(localize "STR_Process_Cidre")];};
+	case "wine": {["vinu","vin",false,200,(localize "STR_Process_Wine")];};
 	default {[];};
 };
 
@@ -36,14 +36,22 @@ if(count _itemInfo == 0) exitWith {};
 //Setup vars.
 _oldItem = _itemInfo select 0;
 _newItem = _itemInfo select 1;
-_cost = _itemInfo select 2;
-_upp = _itemInfo select 3;
+_multiple = _itemInfo select 2;
+_cost = _itemInfo select 3;
+_upp = _itemInfo select 4;
 
-if(_vendor in [mari_processor,coke_processor,heroin_processor,opium_processor]) then {
-	_hasLicense = true;
-} else {
-	_hasLicense = missionNamespace getVariable (([_type,0] call life_fnc_licenseType) select 0);
+if (typeName _multiple == "STRING") then {
+    _multipleTra = true;
+    _multipleVal = missionNamespace getVariable ([_multiple,0] call life_fnc_varHandle);
+
+    diag_log format ["%2 | %1",typeName _multiple,_multiple];
+    diag_log format ["%2 | %1",typeName _multipleVal,_multipleVal];
+    diag_log format ["%2 | %1",typeName _multipleTra,_multipleTra];
+    _cost = _cost * _multipleVal;
+    if(_multipleVal == 0) exitWith {};
 };
+
+_hasLicense = missionNamespace getVariable (([_type,0] call life_fnc_licenseType) select 0);
 
 _itemName = [([_newItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 _oldVal = missionNamespace getVariable ([_oldItem,0] call life_fnc_varHandle);
@@ -75,10 +83,19 @@ if(_hasLicense) then
 		if(_cP >= 1) exitWith {};
 		if(player distance _vendor > 10) exitWith {};
 	};
-	
+
 	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+
+    if(_multipleTra) then {
+        if(!([false,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+        if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+    }else{
+    	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+    };
+
 	5 cutText ["","PLAIN"];
 	titleText[format[localize "STR_Process_Processed",_oldVal,_itemName],"PLAIN"];
 	life_is_processing = false;
@@ -86,7 +103,7 @@ if(_hasLicense) then
 	else
 {
 	if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	
+
 	while{true} do
 	{
 		sleep  0.9;
@@ -96,12 +113,21 @@ if(_hasLicense) then
 		if(_cP >= 1) exitWith {};
 		if(player distance _vendor > 10) exitWith {};
 	};
-	
+
 	if(player distance _vendor > 10) exitWith {hint localize "STR_Process_Stay"; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 	if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-	5 cutText ["","PLAIN"];
+
+    if(_multipleTra) then {
+        if(!([false,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+        if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+    }else{
+    	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
+    	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+    };
+
+    5 cutText ["","PLAIN"];
 	titleText[format[localize "STR_Process_Processed2",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 	life_cash = life_cash - _cost;
 	life_is_processing = false;
