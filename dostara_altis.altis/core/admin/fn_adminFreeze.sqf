@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_adminFreeze.sqf
     Author: ColinM9991

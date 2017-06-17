@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_adminDebugCon.sqf
     Author: ColinM9991

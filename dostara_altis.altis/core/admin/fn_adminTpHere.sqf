@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_adminTpHere.sqf
     Author: ColinM9991

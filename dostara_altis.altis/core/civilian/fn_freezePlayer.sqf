@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_freezePlayer.sqf
     Author: ColinM9991

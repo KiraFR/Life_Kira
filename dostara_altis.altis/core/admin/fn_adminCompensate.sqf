@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_adminCompensate.sqf
     Author: ColinM9991

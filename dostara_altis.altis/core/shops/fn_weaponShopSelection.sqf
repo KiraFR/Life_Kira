@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
 	File: fn_weaponShopSelection.sqf
 	Author: Bryan "Tonic" Boardwine

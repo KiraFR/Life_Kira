@@ -10,21 +10,23 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2016-12-16 22:03:53
+Date: 2017-06-18 00:14:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
--- Table structure for logs
+-- Table structure for notaire
 -- ----------------------------
-DROP TABLE IF EXISTS `logs`;
-CREATE TABLE `logs` (
+DROP TABLE IF EXISTS `notaire`;
+CREATE TABLE `notaire` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
-  `PID` varchar(32) NOT NULL,
-  `PID2` varchar(32) NOT NULL DEFAULT '',
-  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `Type` varchar(20) NOT NULL,
-  `Text` text NOT NULL,
+  `uidPlayer` varchar(50) NOT NULL,
+  `amount` int(32) NOT NULL,
+  `realAmount` int(32) NOT NULL,
+  `toPlayer` varchar(50) NOT NULL,
+  `nomNotaire` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;

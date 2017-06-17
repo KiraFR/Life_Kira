@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\..\macro.h"
 /*
     File: fn_adminGodMode.sqf
     Author: Tobias 'Xetoxyc' Sittenauer

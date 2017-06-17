@@ -1,4 +1,4 @@
-#include <macro.h>
+#include "..\macro.h"
 /*
 	Master Life Configuration File
 	This file is to setup variables for the client, there are still other configuration files in the system
@@ -292,7 +292,7 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000],
+	["goldbar",95000]
 
 	//Add
 
