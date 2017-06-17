@@ -19,3 +19,5 @@
 #define life_numforEach(var1) (var1 getVariable "phoneNumber")
 #define life_numAccforEach(var1) (var1 getVariable "numeroAccount")
 #define life_numModif(var1) (player setVariable ["phoneNumber",(var1),true])
+#define hintFormat(var1,var2) hint format[var1,var2];
+#define sysFormat(var1,var2) systemChat format[var1,var2];
