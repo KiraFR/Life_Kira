@@ -292,7 +292,7 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["goldbar",95000]
+	["goldbar",95000],
 
 	//Add
 
@@ -320,34 +320,8 @@ sell_array =
 ];
 __CONST__(sell_array,sell_array);
 
-buy_array =  
-[ 
-  ["apple",65], 
-  ["rabbit",75], 
-  ["salema",55], 
-  ["ornate",50], 
-  ["mackerel",200], 
-  ["tuna",900], 
-  ["mullet",300], 
-  ["catshark",350], 
-  ["water",10], 
-  ["turtle",4000], 
-  ["turtlesoup",2500], 
-  ["donuts",120], 
-  ["coffee",10], 
-  ["tbacon",75], 
-  ["lockpick",150], 
-  ["pickaxe",1200], 
-  ["redgull",1500], 
-  ["fuelF",850], 
-  ["peach",68], 
-  ["spikeStrip",2500], 
-  ["blastingcharge",35000], 
-  ["boltcutter",7500], 
-  ["defusekit",2500], 
-  ["storagesmall",75000], 
-  ["storagebig",150000] 
-]; 
+//Bouse
+//buy_array =  [];
 
 life_weapon_shop_array =
 [
