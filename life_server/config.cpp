@@ -55,45 +55,20 @@ class CfgFunctions
 		};
 	};
 
-	class Transfert_money
+	class MySQLKira
 	{
 		tag = "KIRA";
-		class TransfertMoney
+		class MySQLKira
 		{
-			file = "\life_server\Functions\Transfert";
+			file = "\life_server\Functions\MySQLKira";
 			class isConnected {};
 			class transfertS {};
-		};
-	};
-
-	class Hacker
-	{
-		tag = "KIRA";
-		class Hacker
-		{
-			file = "\life_server\Functions\Hacker";
 			class HCheckNearS {};
-		};
-	};
-
-	class notaire
-	{
-		tag = "KIRA";
-		class notaire
-		{
-			file = "\life_server\Functions\notaire";
 			class InsertFormNot {};
-		};
-	};
-
-	class phoneNum
-	{
-		tag = "KIRA";
-		class phoneNum
-		{
-			file = "\life_server\Functions\phone";
 			class phoneNum {};
 			class creerNumero {};
+			class impot{};
+			class saveTestament{};
 		};
 	};
 
@@ -184,11 +159,6 @@ class CfgFunctions
 			class GetAccount {};
 			class SetDefaultAccount {};
 		};
-	};
-	class ImpotKira {
-		tag = "IMPT";
-		file = "\life_server\Functions\impot";
-		class impot{};
 	};
 	class AssasinDosta
 	{
