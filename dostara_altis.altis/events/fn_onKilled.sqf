@@ -1,6 +1,6 @@
 #include "..\..\macro.h"
 /*
-    File: fn_onPlayerKilled.sqf
+    File: fn_onKilled.sqf
     Author: Bryan "Tonic" Boardwine
     Description:
     When the player dies collect various information about that player
