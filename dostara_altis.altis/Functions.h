@@ -17,11 +17,19 @@ class Life_Client_Core
 {
 	tag = "life";
 
+	class events {
+		file = "events";
+		class initEventHandlers;
+		class onFired;
+		class onInventoryClosed;
+		class onInventoryOpened;
+		class onTake;
+	};
+
 	class Master_Directory
 	{
 		file = "core";
 		class setupActions {};
-		class setupEVH {};
 		class initCiv {};
 		class initCop {};
 		class initMedic {};
@@ -196,14 +204,10 @@ class Life_Client_Core
 		class loadDeadGear {};
 		class isnumeric {};
 		class escInterupt {};
-		class onTakeItem {};
 		class fetchVehInfo {};
 		class pushObject {};
-		class onFired {};
 		class revealObjects {};
 		class nearestDoor {};
-		class inventoryClosed {};
-		class inventoryOpened {};
 		class isUIDActive {};
 		class saveGear {};
 		class loadGear {};

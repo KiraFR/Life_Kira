@@ -1,13 +1,11 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	For the mean time it blocks the player from opening another persons backpack
 */
-private["_container","_unit"];
+params ["_unit","_container"];
 if(count _this == 1) exitWith {false};
-_unit = _this select 0;
-_container = _this select 1;
 
 _isPack = getNumber(configFile >> "CfgVehicles" >> (typeOf _container) >> "isBackpack");
 if(_isPack == 1) then {
