@@ -13,6 +13,30 @@ class Socket_Reciever
 	};
 };
 
+class Life_side {
+	tag = "side";
+
+	class core {
+		file = "side";
+		class initialization;
+	};
+
+	class civilian {
+		file = "side\civilian";
+		class initCiv;
+	};
+
+	class independent {
+		file = "side\independent";
+		class initMedic;
+	};
+
+	class west {
+		file = "side\west";
+		class initCop;
+	};
+};
+
 class Life_Client_Core
 {
 	tag = "life";
@@ -31,9 +55,6 @@ class Life_Client_Core
 	{
 		file = "core";
 		class setupActions {};
-		class initCiv {};
-		class initCop {};
-		class initMedic {};
 		class welcomeNotification {};
 	};
 
