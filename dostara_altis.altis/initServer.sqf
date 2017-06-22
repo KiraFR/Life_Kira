@@ -1,13 +1,13 @@
 /*
 	File: initServer.sqf
-	
+
 	Description:
 	Starts the initialization of the server.
 */
 if(!(_this select 0)) exitWith {}; //Not server
 [] call compile PreprocessFileLineNumbers "\life_server\init.sqf";
 
-onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
+onMapSingleClick "if ((getPlayerUID player) in ['76561197964675179','76561198051885600']) then {vehicle player setPos _pos; onMapSingleClick '';true;} else {if(_alt) then {vehicle player setPos _pos};};";
 /*
 //Spawn the new hospitals.
 {
@@ -18,7 +18,7 @@ onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
 	_var attachTo [_hs, [4.69775,32.6045,-0.1125]];
 	detach _var;
 	_var = createVehicle ["Land_Hospital_side2_F", [0,0,0], [], 0, "NONE"];
-	_var attachTo [_hs, [-28.0336,-10.0317,0.0889387]]; 
+	_var attachTo [_hs, [-28.0336,-10.0317,0.0889387]];
 	detach _var;
 } forEach ["hospital_2","hospital_3"];
 
