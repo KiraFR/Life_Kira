@@ -6,16 +6,19 @@
   Description : Initialize the player depending his side
 */
 switch playerSide do {
-	case west: {_handle = [] spawn side_fnc_initCop;};
-	case independent: {_handle = [] spawn side_fnc_initMedic;};
-	case civilian: {_handle = [] spawn side_fnc_initCiv;};
-  waitUntil {scriptDone _handle};
+	case west: {
+		[] call side_fnc_initCop;
+	};
+
+	case independent: {
+		[] call side_fnc_initMedic;
+	};
+
+	case civilian: {
+		[] call side_fnc_initCiv;
+	};
 };
 
-player setVariable ["restrained",false,true];
-player setVariable ["Escorting",false,true];
-player setVariable ["transporting",false,true];
-player setVariable ["steam64ID",getPlayerUID player];
-player setVariable ["realname",profileName,true];
-
 player addRating 99999999;
+// Set unit vars
+[] call side_fnc_initPlayerVars;

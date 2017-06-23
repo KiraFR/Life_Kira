@@ -19,6 +19,7 @@ class Life_side {
 	class core {
 		file = "side";
 		class initialization;
+		class initPlayerVars;
 	};
 
 	class civilian {
