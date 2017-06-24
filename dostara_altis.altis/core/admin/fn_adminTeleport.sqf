@@ -9,13 +9,13 @@
 if(__GETC__(life_adminlevel) == 0) exitWith {closeDialog 0;};
 
 [] spawn {
-while {dialog} do {
-closeDialog 0;
-sleep 0.01;
-};
+  while {dialog} do {
+    closeDialog 0;
+    sleep 0.01;
+  };
 };
 
-tele={
+tele = {
     _pos = [_this select 0, _this select 1, _this select 2];
     (vehicle player) setpos [_pos select 0, _pos select 1, 0];
     onMapSingleClick "";

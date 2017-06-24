@@ -9,10 +9,10 @@
 if(__GETC__(life_adminlevel) < 5) exitWith {closeDialog 0; hint localize "STR_ANOTF_ErrorLevel";};
 
 [] spawn {
-while {dialog} do {
-closeDialog 0;
-sleep 0.01;
-};
+  while {dialog} do {
+    closeDialog 0;
+    sleep 0.01;
+  };
 };
 
 if(life_god) then {
@@ -25,4 +25,4 @@ if(life_god) then {
     titleText ["God mode enabled","PLAIN"]; titleFadeOut 2;
 	[getPlayerUID player,playerSide,name player,40] remoteExecCall ["DB_fnc_logs",2];
     player allowDamage false;
-}; 
+};

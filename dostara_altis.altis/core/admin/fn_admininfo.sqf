@@ -1,15 +1,14 @@
 /*
 	File: fn_admininfo.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Output information received to admin menu.
 */
 private["_display","_ret","_text","_unit","_prim","_sec","_vest","_uni","_bp","_attach","_tmp"];
 _ret = _this;
 disableSerialization;
-_display = findDisplay 2900;
-_text = _display displayCtrl 2903;
+_text = getControl(2900,2903);
 _unit = _ret select 3;
 _prim = if(primaryWeapon _unit != "") then { getText(configFile >> "CfgWeapons" >> (primaryWeapon _unit) >> "DisplayName")} else {"None"};
 _sec = if(handgunWeapon _unit != "") then { getText(configFile >> "CfgWeapons" >> (handgunWeapon _unit) >> "DisplayName")} else {"None"};

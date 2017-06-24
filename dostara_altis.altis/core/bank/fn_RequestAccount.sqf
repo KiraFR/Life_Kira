@@ -7,15 +7,15 @@
 	créer un numéro et l'envoi au serveur
 */
 private["_num","_name","_client"];
-_type = (_this select 0);
+params ["_type"];
 _uid = getPlayerUID player;
 
 if(_type == 2) then {
 	_name = ctrlText 11007;
-	if(cbChecked ((findDisplay 11000) displayCtrl 11005))	then{_type = 3;};
+	if(cbChecked (getControl(11000,11005)) then {_type = 3;};
 };
 
-switch (_type) do {
+switch _type do {
 
 	//offshore
 	case 1: {
