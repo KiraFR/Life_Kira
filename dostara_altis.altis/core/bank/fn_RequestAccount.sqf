@@ -126,9 +126,4 @@ switch (_type) do {
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 };
-
-[getPlayerUID player, player] remoteExecCall ["BQKS_fnc_GetAccount",2];
-
-_Bank = format["%1%2%3%4%5",_Bank select 0,_Bank select 1,_Bank select 2,_Bank select 5,_Bank select 6];
-
-missionNamespace setVariable ["AccountBanque",_Bank];
+ call life_fnc_BankUpdate;
