@@ -2,7 +2,7 @@
 /*
 	File: fn_virt_buy.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Buy a virtual item from the store.
 */
@@ -44,14 +44,14 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 		} else {
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
-			__SUB__(life_cash,_price * _amount);
+			life_cash = life_cash - (_price * _amount);
 			//LOGS
 			[getPlayerUID player, playerSide, [name player, _amount, _name,[(_price * _amount)] call life_fnc_numberText],11] remoteExecCall ["DB_fnc_logs",2];
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
 		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
-		__SUB__(life_cash,(_price * _amount));
+		life_cash = life_cash - (_price * _amount);
 	};
 	[] call life_fnc_virt_update;
 };

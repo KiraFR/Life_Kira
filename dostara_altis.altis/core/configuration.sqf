@@ -32,20 +32,20 @@ life_action_gathering = false;
 life_listMessage = [];
 life_drop_weapons_onDeath = true;
 //Persistent Saving
-__CONST__(life_save_civ,TRUE); //Save weapons for civs?
-__CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
+CONSTANT(life_save_civ,TRUE); //Save weapons for civs?
+CONSTANT(life_save_yinv,TRUE); //Save Y-Inventory for players?
 
 //Revive constant variables.
-__CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
-__CONST__(life_revive_fee,250); //Fee for players to pay when revived.
+CONSTANT(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
+CONSTANT(life_revive_fee,250); //Fee for players to pay when revived.
 
 //House Limit
-__CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
+CONSTANT(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
 
 //Gang related stuff?
-__CONST__(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
-__CONST__(life_gangUpgradeBase,10000); //MASDASDASD
-__CONST__(life_gangUpgradeMultipler,2.5); //BLAH
+CONSTANT(life_gangPrice,75000); //Price for creating a gang (They're all persistent so keep it high to avoid 345345345 gangs).
+CONSTANT(life_gangUpgradeBase,10000); //MASDASDASD
+CONSTANT(life_gangUpgradeMultipler,2.5); //BLAH
 
 //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 life_clothing_purchase = [-1,-1,-1,-1,-1];
@@ -92,11 +92,11 @@ life_delivery_in_progress = false;
 life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
-__CONST__(life_paycheck_period,5); //Five minutes
+CONSTANT(life_paycheck_period,5); //Five minutes
 life_cash = 10000;
-__CONST__(life_impound_car,350);
-__CONST__(life_impound_boat,250);
-__CONST__(life_impound_air,850);
+CONSTANT(life_impound_car,350);
+CONSTANT(life_impound_boat,250);
+CONSTANT(life_impound_air,850);
 life_istazed = false;
 life_my_gang = ObjNull;
 
@@ -128,7 +128,7 @@ switch (playerSide) do
 	Master Array of items?
 */
 life_vShop_rentalOnly = ["B_MRAP_01_hmg_F","B_G_Offroad_01_armed_F"];
-__CONST__(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
+CONSTANT(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can never be bought and only 'rented'. Used as a balancer & money sink. If you want your server to be chaotic then fine.. Remove it..
 
 life_inv_items =
 [
@@ -318,7 +318,7 @@ sell_array =
     //["Speedball",0]
 
 ];
-__CONST__(sell_array,sell_array);
+CONSTANT(sell_array,sell_array);
 
 //Bouse
 //buy_array =  [];
@@ -366,7 +366,7 @@ life_weapon_shop_array =
 	["30Rnd_45ACP_Mag_SMG_01",60],
 	["30Rnd_9x21_Mag",30]
 ];
-__CONST__(life_weapon_shop_array,life_weapon_shop_array);
+CONSTANT(life_weapon_shop_array,life_weapon_shop_array);
 
 life_garage_prices =
 [
@@ -395,7 +395,7 @@ life_garage_prices =
 	["B_SDV_01_F",25000],
 	["B_MRAP_01_F",7500]
 ];
-__CONST__(life_garage_prices,life_garage_prices);
+CONSTANT(life_garage_prices,life_garage_prices);
 
 life_garage_sell =
 [
@@ -424,7 +424,7 @@ life_garage_sell =
 	["B_SDV_01_F",45000],
 	["B_MRAP_01_F",10000]
 ];
-__CONST__(life_garage_sell,life_garage_sell);
+CONSTANT(life_garage_sell,life_garage_sell);
 
 
 life_fourriere_prices =
@@ -454,4 +454,4 @@ life_fourriere_prices =
 	["B_SDV_01_F",25000],
 	["B_MRAP_01_F",7500]
 ];
-__CONST__(life_fourriere_prices,life_fourriere_prices);
+CONSTANT(life_fourriere_prices,life_fourriere_prices);

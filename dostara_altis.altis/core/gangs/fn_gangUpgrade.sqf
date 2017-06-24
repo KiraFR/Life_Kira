@@ -1,7 +1,7 @@
 #include "..\..\macro.h"
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Determinds the upgrade price and blah
 */
@@ -25,7 +25,7 @@ if(_action) then {
 			[_upgradePrice - life_atmcash] call life_fnc_numberText
 		];
 	};
-	__SUB__(life_atmcash,_upgradePrice);
+	life_atmcash = life_atmcash - _upgradePrice;
 	grpPlayer setVariable["gang_maxMembers",_slotUpgrade,true];
 	hint parseText format[localize "STR_GNOTF_UpgradeSuccess",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText];
 	[2,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];

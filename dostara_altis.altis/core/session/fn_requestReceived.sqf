@@ -38,8 +38,8 @@ if(count _libank > 0) then{
 	life_dflt = _libank select 0;
 };
 
-__CONST__(life_adminlevel,(_this select 3));
-__CONST__(life_donator,0);
+CONSTANT(life_adminlevel,(_this select 3));
+CONSTANT(life_donator,0);
 
 //Loop through licenses
 if(count (_this select 5) > 0) then {
@@ -51,15 +51,15 @@ if(count (_this select 5) > 0) then {
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
-		__CONST__(life_coplevel, parseNumber(_this select 6));
-		__CONST__(life_medicLevel,0);
+		CONSTANT(life_coplevel, parseNumber(_this select 6));
+		CONSTANT(life_medicLevel,0);
 		life_blacklisted = _this select 8;
 	};
 	
 	case civilian: {
 		life_is_arrested = _this select 6;
-		__CONST__(life_coplevel, 0);
-		__CONST__(life_medicLevel, 0);
+		CONSTANT(life_coplevel, 0);
+		CONSTANT(life_medicLevel, 0);
 
 		life_pPermis = _this select 12;
 		life_nbrFoisPermis = _this select 13;
@@ -87,8 +87,8 @@ switch(playerSide) do {
 	};
 	
 	case independent: {
-		__CONST__(life_medicLevel, parseNumber(_this select 6));
-		__CONST__(life_coplevel,0);
+		CONSTANT(life_medicLevel, parseNumber(_this select 6));
+		CONSTANT(life_coplevel,0);
 	};
 };
 

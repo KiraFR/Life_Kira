@@ -2,16 +2,15 @@
 /*
     File: fn_adminMenu.sqf
     Author: Bryan "Tonic" Boardwine
-    
+
     Description:
     Opens the admin menu, sorry nothing special in here. Take a look for yourself.
 */
 if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0;};
-private["_display","_list","_side"];
+private["_list","_side"];
 disableSerialization;
 waitUntil {!isNull (findDisplay 2900)};
-_display = findDisplay 2900;
-_list = _display displayCtrl 2902;
+_list = getControl(2900,2902);
 if(__GETC__(life_adminlevel) < 1) exitWith {closeDialog 0;};
 
 switch(__GETC__(life_adminlevel)) do

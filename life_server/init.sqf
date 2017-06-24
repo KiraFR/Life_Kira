@@ -55,7 +55,7 @@ life_medicLevel = 0;
 life_coplevel = 0;
 
 //Null out harmful things for the server.
-__CONST__(JxMxE_PublishVehicle,"No");
+CONSTANT(JxMxE_PublishVehicle,"No");
 
 //[] execVM "\life_server\fn_initHC.sqf";
 

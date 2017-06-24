@@ -7,7 +7,7 @@
 */
 if(!hasInterface) exitWith {}; //This is a headless client, he doesn't need to do anything but keep being headless..
 
-__CONST__(BIS_fnc_endMission,BIS_fnc_endMission);
+CONSTANT(BIS_fnc_endMission,BIS_fnc_endMission);
 [] execVM "core\init.sqf";
 
 //Execute JIP code.
