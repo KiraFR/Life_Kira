@@ -43,11 +43,6 @@ _upp = _itemInfo select 4;
 if (typeName _multiple == "STRING") then {
     _multipleTra = true;
     _multipleVal = missionNamespace getVariable ([_multiple,0] call life_fnc_varHandle);
-
-    diag_log format ["%2 | %1",typeName _multiple,_multiple];
-    diag_log format ["%2 | %1",typeName _multipleVal,_multipleVal];
-    diag_log format ["%2 | %1",typeName _multipleTra,_multipleTra];
-    _cost = _cost * _multipleVal;
     if(_multipleVal == 0) exitWith {};
 };
 
@@ -90,18 +85,20 @@ if(_hasLicense) then
         if(!([false,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-        if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+        if(!([true,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+        _name = _oldVal + "," + _multipleVal;
+	    5 cutText ["","PLAIN"];
+	    titleText[format[localize "STR_Process_Processed",_name,_itemName],"PLAIN"];
     }else{
     	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
-    	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+        if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
+	    5 cutText ["","PLAIN"];
+	    titleText[format[localize "STR_Process_Processed",_oldVal,_itemName],"PLAIN"];
     };
-
-	5 cutText ["","PLAIN"];
-	titleText[format[localize "STR_Process_Processed",_oldVal,_itemName],"PLAIN"];
 	life_is_processing = false;
-}
-	else
-{
+
+}else{
+
 	if(life_cash < _cost) exitWith {hint format[localize "STR_Process_License",[_cost] call life_fnc_numberText]; 5 cutText ["","PLAIN"]; life_is_processing = false;};
 
 	while{true} do
@@ -121,17 +118,17 @@ if(_hasLicense) then
         if(!([false,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-        if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+        if(!([true,_multiple,_multipleVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_multiple,_multipleVal] call life_fnc_handleInv; life_is_processing = false;};
+        _name = _oldVal + "," + _multipleVal;
+        5 cutText ["","PLAIN"];
+        titleText[format[localize "STR_Process_Processed",_name,_itemName],"PLAIN"];
     }else{
     	if(!([false,_oldItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; life_is_processing = false;};
     	if(!([true,_newItem,_oldVal] call life_fnc_handleInv)) exitWith {5 cutText ["","PLAIN"]; [true,_oldItem,_oldVal] call life_fnc_handleInv; life_is_processing = false;};
-    };
+        5 cutText ["","PLAIN"];
+    	titleText[format[localize "STR_Process_Processed2",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
 
-    5 cutText ["","PLAIN"];
-	titleText[format[localize "STR_Process_Processed2",_oldVal,_itemName,[_cost] call life_fnc_numberText],"PLAIN"];
-	life_cash = life_cash - _cost;
+    };
+    life_cash = life_cash - _cost;
 	life_is_processing = false;
 };
-
-_nameOld = [([_oldItem,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-[getPlayerUID player, civilian, [name player, _oldVal, _nameOld, _itemName],39] remoteExecCall ["DB_fnc_logs",2];

@@ -69,4 +69,6 @@ case "Name" : {["Orange","peach","apple","Raisin","Jus_MultiFruit","Jus_De_Pomme
 default {false};
 };
 
-_return;
+if (_return) then {
+    _return;
+};
