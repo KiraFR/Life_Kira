@@ -6,7 +6,7 @@
 	Description:
 	créer un numéro et l'envoi au serveur
 */
-private["_num","_name","_client"];
+private["_num","_name","_client","_Bank"];
 params ["_type"];
 _uid = getPlayerUID player;
 
@@ -37,6 +37,9 @@ switch _type do {
 		life_AccOffshore = life_AccOffshore +1;
 		life_nbAcc = life_nbAcc +1;
 		hint "Votre compte offshore a bien été créé";
+
+		_Bank = [_name,_num,0,false];
+
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
@@ -58,6 +61,9 @@ switch _type do {
 		_num = "RD" + _client +_guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était cree";
+
+		_Bank = [_name,_num,0,false];
+
 		life_AccN = life_AccN +1;
 		life_nbAcc = life_nbAcc +1;
 		[] call life_fnc_hudUpdate;
@@ -82,6 +88,10 @@ switch _type do {
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était creer";
+
+		_Solde = 0;
+		_Bank = [_name,_num,0,false];
+
 		[] call life_fnc_hudUpdate;
 		life_EnterAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -100,6 +110,10 @@ switch _type do {
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était creer";
+
+		_Solde = 0;
+		_Bank = [_name,_num,0,false];
+
 		[] call life_fnc_hudUpdate;
 		life_EparAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -121,9 +135,13 @@ switch _type do {
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
 		hint "Votre compte a bien était creer";
+
+		_Solde = 0;
+		_Bank = [_name,_num,0,false];
+
 		[] call life_fnc_hudUpdate;
 		life_OrgaAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 };
- call life_fnc_BankUpdate;
+_Bank call life_fnc_BankUpdate;
