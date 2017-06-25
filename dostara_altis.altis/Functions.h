@@ -419,6 +419,7 @@ class Life_Client_Core
         class RequestAccount {};
         class setAccountDefault {};
         class lbAccounts {};
+				class BankUpdate {};
     };
     class Assassin
     {
