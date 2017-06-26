@@ -1,7 +1,7 @@
 /*
 	author: Alexandre Debris
 	description: none
-	returns: nothing
+	returns: Retourne un tableau pour la ressource demander.
 */
 
 private ["_con","_return"];
