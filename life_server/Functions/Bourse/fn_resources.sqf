@@ -5,7 +5,7 @@
 */
 
 private ["_con","_return"];
-_con = param[0,"",[""]];
+_con = param[0];
 _return = switch(_con) do {
 //      NAME                    MIN     MAX     SEIL    EVOL    VALUE   Ent     [ NAME coef ]
 case "Orange" : {[              1,      5,      3,      0.1,    0,      0,      [["peach",0.1],["apple",0.1],["Raisin",0.1],["Jus_MultiFruit",0.2]]]};
@@ -66,7 +66,9 @@ case "turtle" : {[              1,      100,    54,     0.2,    0,      0,      
 
 case "Name" : {["Orange","peach","apple","Raisin","Jus_MultiFruit","Jus_De_Pomme","Jus_De_Raisin","Cidre","Vin","Biere","Wisky","coffee","Tabac","salema","ornate","mackerel","tuna","mullet","catshark","turtlesoup","Aluminium","Argent" ,"Bois","Charbon","Chaux","copper_r","iron_r","oilp","diamondc","Sable","salt_r","glass","Acier","diamond","cement","fuelF","marijuana","cocainep","opium","Cocaine","heroinp","Shit" ,"Meth","Pharmaceutique","Speedball","turtle"]};
 
-default {[]};
+default {false};
 };
 
-_return;
+if (_return) then {
+    _return;
+};

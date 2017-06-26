@@ -223,7 +223,6 @@ class Life_Client_Core
 		//ADD
 
 		class processSwitch {};
-		class minValue {};
 	};
 
 	class Network
