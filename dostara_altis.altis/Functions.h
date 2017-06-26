@@ -59,24 +59,6 @@ class Life_Client_Core
 		class welcomeNotification {};
 	};
 
-	class Admin
-	{
-		 file = "core\admin";
-        class admininfo {};
-        class adminid {};
-        class admingetID {};
-        class adminMenu {};
-        class adminQuery {};
-        class adminSpectate {};
-        class adminTeleport {};
-        class adminTpHere {};
-        class adminDebugCon {};
-        class adminCompensate {};
-        class adminGodMode {};
-        class adminFreeze {};
-        class adminMarkers {};
-	};
-
 	class Medical_System
 	{
 		file = "core\medical";
