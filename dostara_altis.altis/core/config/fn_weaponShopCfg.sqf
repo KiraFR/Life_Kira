@@ -2,13 +2,13 @@
 /*
 	File: fn_weaponShopCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration file for the weapon shops.
-	
+
 	Return:
 	String: Close the menu
-	Array: 
+	Array:
 	[Shop Name,
 	[ //Array of items to add to the store
 		[classname,Custom Name (set nil for default),price]
@@ -47,10 +47,10 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "med_basic":
 	{
-		switch (true) do 
+		switch (true) do
 		{
 			case (playerSide != independent): {"You are not an EMS Medic"};
 			default {
@@ -132,7 +132,6 @@ switch(_shop) do
 				["Altis Sergent Shop",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -166,7 +165,6 @@ switch(_shop) do
 				["Altis Lieutenant Shop",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -199,7 +197,6 @@ switch(_shop) do
 				["Altis Patrol Officer Shop",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -233,7 +230,6 @@ switch(_shop) do
 				["Altis Patrol Officer Shop",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -267,7 +263,6 @@ switch(_shop) do
 				["Altis Patrol Officer Shop",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -301,7 +296,6 @@ switch(_shop) do
 				["Groupe de Defense et D'opération",
 					[
 						["arifle_mas_mp5",nil,30000],
-						["arifle_mas_m1014",nil,30000],
 						["arifle_mas_hk416",nil,35000],
 						["arifle_mas_hk416_gl",nil,30000],
 						["arifle_mas_hk416c",nil,30000],
@@ -334,7 +328,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "rebel":
 	{
 		switch(true) do
@@ -363,7 +357,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "gun":
 	{
 		switch(true) do
@@ -389,7 +383,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "gang":
 	{
 		switch(true) do
@@ -414,7 +408,7 @@ switch(_shop) do
 			};
 		};
 	};
-	
+
 	case "genstore":
 	{
 		["Altis General Store",
