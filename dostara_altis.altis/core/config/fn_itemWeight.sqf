@@ -11,60 +11,75 @@ if(_item == "") exitWith {};
 
 switch (_item) do
 {
-	case "oilu": {7};
-	case "oilp": {6};
-	case "heroinu": {6};
-	case "heroinp": {4};
-	case "cannabis": {4};
-	case "opiumn": {3};
-	case "opium": {2};
-	case "vinu": {2};
-	case "vin": {1};
-	case "marijuana": {3};
 	case "apple": {1};
-	case "cidre": {2};
+	case "peach": {1};
+	case "orange": {1};
+	case "raisin": {1};
+	case "oil": {2};
+	case "heroine": {1};
+	case "vin": {1};
+	case "Calcaire" : {2};
+	case "ArgentB" : {3};
+	case "AluminiumB" : {3};
+	case "Jus_MultiFruit" : {1};
+	case "Jus_De_Pomme" : {1};
+	case "Jus_De_Raisin" : {1};
+	case "Cidre" : {1};
+	case "Vin" : {1};
+	case "Biere" : {1};
+	case "Tabac" : {1};
+	case "coffee": {1};
+    case "Wisky" : {1};
+    case "Aluminium" : {2};
+	case "Bois" : {5};
+	case "Argent" : {1};
+	case "Charbon" : {2};
+	case "Chaux" : {1};
+	case "Acier" : {6};
+	case "Shit" : {1};
+	case "Meth" : {1};
+	case "Pharmaceutique" : {1};
+	case "Speedball" : {1};
+	case "rock": {1};
+	case "rockB": {3};
+	case "copperB": {3};
+	case "FerB": {4};
+	case "cocaine": {1};
+	case "coca": {1};
+	case "cannabis": {1};
+	case "opium": {1};
 	case "water": {1};
 	case "rabbit": {1};
-	case "salema": {2};
-	case "ornate": {2};
-	case "mackerel": {4};
-	case "tuna": {6};
-	case "mullet": {4};
-	case "catshark": {6};
+
+	case "salema": {1}; // Saupe
+	case "ornate": {1}; // Girelle
+	case "mackerel": {2}; // Maquereau
+	case "tuna": {3}; // Thon
+	case "mullet": {2}; // Mullet
+	case "catshark": {3}; // Roussette
+
+
 	case "turtle": {6};
 	case "fishing": {2};
-	case "turtlesoup": {2};
+	case "fishsoup": {2};
 	case "donuts": {1};
-	case "coffee": {1};
-	case "fuelE": {2};
-	case "fuelF": {5};
+	case "fuelF": {1};
 	case "money": {0};
 	case "pickaxe": {2};
 	case "shovel": {2};
 	case "bucket": {2};
-	case "copperore": {4};
-	case "ironore": {5};
-	case "copper_r": {3};
-	case "iron_r": {3};
-	case "sand": {3};
-	case "salt": {3};
+	case "cement": {3};
+	case "copper_r": {2};
+	case "iron_r": {2};
+	case "sand": {2};
 	case "salt_r": {1};
 	case "glass": {1};
-	case "diamond": {4};
-	case "diamondc": {2};
-	case "cocaine": {6};
-	case "cocainep": {4};
 	case "spikeStrip": {15};
-	case "rock": {6};
-	case "cement": {5};
 	case "goldbar": {12};
 	case "blastingcharge": {15};
 	case "boltcutter": {5};
 	case "defusekit": {2};
 	case "storagesmall": {5};
 	case "storagebig": {10};
-
-
-
 	default {1};
 };
