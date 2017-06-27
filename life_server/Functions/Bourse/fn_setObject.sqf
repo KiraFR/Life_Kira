@@ -18,16 +18,18 @@ if (count _queryResult == 0) then {
     _count = 0;
     {
         _return = [_x] call bourse_fnc_resources;
-        _str = format[" ('""%2""','%1')",(_return select 4),_x];
+        if(count _return != 0) then{
+            _str = format[" ('""%2""','%1')",(_return select 4),_x];
 
-        if (_count != 0) then {
-            _query = _query + "," +_str;
-        }else{
-            _query = _query +_str;
+            if (_count != 0) then {
+                _query = _query + "," +_str;
+            }else{
+                _query = _query +_str;
+            };
+
+            _Object = _Object + [_x,_return];
+            _count = _count + 1;
         };
-
-        _Object = _Object + [_x,_return];
-        _count = _count + 1;
     }forEach _all;
     _query = _query + ";";
     [_query,1] call DB_fnc_asyncCall;
