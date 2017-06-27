@@ -22,7 +22,7 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 	[] call life_fnc_virt_update;
 };
 
-if(life_shop_type == "heroin") then
+if(life_shop_type == "heroine") then
 {
 	private["_array","_ind","_val"];
 	_array = life_shop_npc getVariable["sellers",[]];
@@ -33,19 +33,12 @@ if(life_shop_type == "heroin") then
 		_val = _val + _price;
 		_array set[_ind,[getPlayerUID player,profileName,_val]];
 		life_shop_npc setVariable["sellers",_array,true];
-		//LOGS
-		[getPlayerUID player, playerSide, [name player, _amount, _name, _val],13] remoteExecCall ["DB_fnc_logs",2];
 	}
 		else
 	{
 		_array pushBack [getPlayerUID player,profileName,_price];
 		life_shop_npc setVariable["sellers",_array,true];
-		//LOGS
-		[getPlayerUID player, playerSide, [name player, _amount, _name, _price],13] remoteExecCall ["DB_fnc_logs",2];
 	};
-}else{
-	//LOGS
-	[getPlayerUID player, playerSide, [name player, _amount, _name, _price],13] remoteExecCall ["DB_fnc_logs",2];
 };
 
 [0] call SOCK_fnc_updatePartial;

@@ -163,7 +163,10 @@ _rscInfo = [_rsc] call life_fnc_processSwitch;
 _rscName = _rscInfo select 0;
 _rscProcessedCount = _rscInfo select 1;
 _rscRecettes = _rscInfo select 2;
-_nameShown = [([_rscNameRec,0] call life_fnc_varHandle)] call life_fnc_varToStr; 
+//_rscLicense = _rscInfo select 3;
+//_lcs = missionNamespace getVariable _rscLicense;
+_lcs = true;//pour l'instant
+_nameShown = [([_rscNameRec,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -176,7 +179,7 @@ _cP = 0.01;
 
 life_is_processing = true;
 
-if(_hasLicense) then
+if(_lcs) then
 {
 	while{true} do
 	{

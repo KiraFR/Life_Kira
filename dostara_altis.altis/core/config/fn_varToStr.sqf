@@ -13,15 +13,11 @@ if(_var == "") exitWith {""};
 switch (_var) do
 {
 	//Virtual Inventory Items
-	case "life_inv_oilu": {(localize "STR_Item_OilU")};
-	case "life_inv_oilp": {(localize "STR_Item_OilP")};
-	case "life_inv_heroinu": {(localize "STR_Item_HeroinU")};
-	case "life_inv_heroinp": {(localize "STR_Item_HeroinP")};
+	case "life_inv_oil": {"Petrole"};
+	case "life_inv_heroine": {"Heroine"};
 	case "life_inv_cannabis": {(localize "STR_Item_Cannabis")};
-	case "life_inv_marijuana": {(localize "STR_Item_Marijuana")};
-	case "life_inv_opiumn": {(localize "STR_Item_Opiumn")};
-	case "life_inv_oipum": {(localize "STR_Item_Opium")};
-	case "life_inv_vinu": {(localize "STR_Item_Vinu")};
+	case "life_inv_shit": {"shit"};
+	case "life_inv_opium": {"opium"};
 	case "life_inv_vin": {(localize "STR_Item_Vin")};
 	case "life_inv_apple": {(localize "STR_Item_Apple")};
 	case "life_inv_rabbit": {(localize "STR_Item_RabbitMeat")};
@@ -35,31 +31,24 @@ switch (_var) do
 	case "life_inv_fishingpoles": {(localize "STR_Item_FishingPole")};
 	case "life_inv_water": {(localize "STR_Item_WaterBottle")};
 	case "life_inv_coffee": {(localize "STR_Item_Coffee")};
-	case "life_inv_turtlesoup": {(localize "STR_Item_TurtleSoup")};
+	case "life_inv_Fishsoup": {"Soupe de Poisson"};
 	case "life_inv_donuts": {(localize "STR_Item_Donuts")};
-	case "life_inv_fuelE": {(localize "STR_Item_FuelE")};
-	case "life_inv_fuelF": {(localize "STR_Item_FuelF")};
+	case "life_inv_fuelF": {"Essence"};
 	case "life_inv_pickaxe": {(localize "STR_Item_Pickaxe")};
 	case "life_inv_shovel": {(localize "STR_Item_Shovel")};
 	case "life_inv_bucket": {(localize "STR_Item_Bucket")};
-	case "life_inv_copperore": {(localize "STR_Item_CopperOre")};
-	case "life_inv_ironore": {(localize "STR_Item_IronOre")};
-	case "life_inv_ironr": {(localize "STR_Item_IronIngot")};
-	case "life_inv_copperr": {(localize "STR_Item_CopperIngot")};
+	case "life_inv_iron_r": {(localize "STR_Item_IronIngot")};
+	case "life_inv_copper_r": {(localize "STR_Item_CopperIngot")};
 	case "life_inv_sand": {(localize "STR_Item_Sand")};
-	case "life_inv_salt": {(localize "STR_Item_Salt")};
-	case "life_inv_saltr": {(localize "STR_Item_SaltR")};
+	case "life_inv_salt_r": {"Sel"};
 	case "life_inv_glass": {(localize "STR_Item_Glass")};
-	case "life_inv_diamond": {(localize "STR_Item_DiamondU")};
-	case "life_inv_diamondr": {(localize "STR_Item_DiamondC")};
 	case "life_inv_tbacon": {(localize "STR_Item_TBacon")};
 	case "life_inv_redgull": {(localize "STR_Item_RedGull")};
 	case "life_inv_lockpick": {(localize "STR_Item_Lockpick")};
 	case "life_inv_peach": {(localize "STR_Item_Peach")};
-	case "life_inv_coke": {(localize "STR_Item_CocaineU")};
-	case "life_inv_cokep": {(localize "STR_Item_CocaineP")};
+	case "life_inv_coca": {"Feuille de coca"};
+	case "life_inv_cocaine": {"Cocaine"};
 	case "life_inv_spikeStrip": {(localize "STR_Item_SpikeStrip")};
-	case "life_inv_rock": {(localize "STR_Item_Rock")};
 	case "life_inv_cement": {(localize "STR_Item_CementBag")};
 	case "life_inv_goldbar": {(localize "STR_Item_GoldBar")};
 	case "life_inv_blastingcharge": {(localize "STR_Item_BCharge")};
@@ -67,9 +56,12 @@ switch (_var) do
 	case "life_inv_defusekit": {(localize "STR_Item_DefuseKit")};
 	case "life_inv_storagesmall": {(localize "STR_Item_StorageBS")};
 	case "life_inv_storagebig": {(localize "STR_Item_StorageBL")};
-
-	//Add
-
+	case "life_inv_copperB": {"Cuivre Brut"};
+	case "life_inv_rock": {"Pierre Precieuse"};
+	case "life_inv_rockB": {"Pierre Brut"};
+	case "life_inv_Calcaire" : {"Calcaire"};
+	case "life_inv_ArgentB" : {"Argent Brut"};
+	case "life_inv_AluminiumB" : {"Aluminium Brut"};
 	case "life_inv_Orange" : {(localize "STR_Item_Orange")};
     case "life_inv_Raisin" : {(localize "STR_Item_Raisin")};
     case "life_inv_Jus_MultiFruit" : {(localize "STR_Item_Jus_MultiFruit")};
@@ -81,7 +73,8 @@ switch (_var) do
     case "life_inv_Biere" : {(localize "STR_Item_Biere")};
     case "life_inv_Tabac" : {(localize "STR_Item_Tabac")};
     case "life_inv_Aluminium" : {(localize "STR_Item_Aluminium")};
-    case "life_inv_Bois" : {(localize "STR_Item_Argent")};
+    case "life_inv_Bois" : {"Bois"};
+	case "life_inv_Argent" : {(localize "STR_Item_Argent")};
     case "life_inv_Charbon" : {(localize "STR_Item_Charbon")};
     case "life_inv_Chaux" : {(localize "STR_Item_Chaux")};
     case "life_inv_Acier" : {(localize "STR_Item_Acier")};

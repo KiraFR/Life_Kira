@@ -219,6 +219,7 @@ class Life_Client_Core
 		class play3D {};
 		class creatNum {};
 		class openMenuI {};
+		class index {};
 
 		//ADD
 

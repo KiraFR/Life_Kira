@@ -12,9 +12,7 @@ if (!isNil 'Bourse_Object') then {
 deleteVehicle Bourse_Object;
 };
 
-_Object = createSimpleObject ["a3\structures_f\civ\Garbage\GarbageBags_F.p3d", _pos];
-_Object setPos (_pos vectorAdd (getPosWorld _Object vectorDiff (_Object modelToWorld [0,0,0])));
-
-Bourse_Object = _Object;
+Bourse_Object = createSimpleObject ["a3\structures_f\civ\Garbage\GarbageBags_F.p3d", _pos];
+Bourse_Object setPos (_pos vectorAdd (getPosWorld Bourse_Object vectorDiff (Bourse_Object modelToWorld [0,0,0])));
 
 [] call bourse_fnc_setObject;

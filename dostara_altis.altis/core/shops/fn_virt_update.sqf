@@ -23,14 +23,16 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 
 {
 	_name = [([_x,0] call life_fnc_varHandle)] call life_fnc_vartostr;
-	_index = [_x,__GETC__(sell_array)] call TON_fnc_index;
-	if(_index != -1) then
-	{
+	_index = [_x,__GETC__(sell_array)] call life_fnc_index;
+	if(_index != -1) then{
 		_price = round(((__GETC__(sell_array) select _index) select 1) * 1.5);
-		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
-		_item_list lbSetData [(lbSize _item_list)-1,_x];
-		_item_list lbSetValue [(lbSize _item_list)-1,_price];
+	}else{
+		_price = [_x] call life_fnc_boursePrice;
+		if(_price == -1) then{_price = 20};
 	};
+	_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
+	_item_list lbSetData [(lbSize _item_list)-1,_x];
+	_item_list lbSetValue [(lbSize _item_list)-1,_price];
 } forEach (_shop_data select 1);
 
 {
