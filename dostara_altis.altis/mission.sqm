@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2295;
+		nextID=2311;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10077.592,98.400421,10213.586};
-		dir[]={-0.4529224,-0.82471305,0.33871782};
-		up[]={-0.66045135,0.56554759,0.49391913};
-		aside[]={0.59890366,2.9348303e-007,0.80083287};
+		pos[]={18808.32,102.61517,14308.849};
+		dir[]={-0.65403384,-0.73881352,-0.16255225};
+		up[]={-0.71701241,0.6738919,-0.17820476};
+		aside[]={-0.24120243,-5.0266681e-007,0.97048801};
 	};
 };
 binarizationWanted=0;
@@ -97,13 +97,15 @@ addons[]=
 	"A3_Structures_F_Argo_Commercial_Shop_02",
 	"A3_Structures_F_Argo_Civilian_House_Small02",
 	"A3_Structures_F_Argo_Industrial_Materials",
-	"A3_Structures_F_Civ_Garbage"
+	"A3_Structures_F_Civ_Garbage",
+	"A3_Rocks_F_Argo_Limestone",
+	"A3_Structures_F_Mil_Bunker"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -287,6 +289,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item27
+		{
+			className="A3_Rocks_F_Argo";
+			name="Arma 3 Malden - Rocks and Stones";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 randomSeed=4982936;
@@ -335,7 +344,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1095;
+		items=1109;
 		class Item0
 		{
 			dataType="Marker";
@@ -41336,7 +41345,7 @@ class Mission
 		class Item1062
 		{
 			dataType="Marker";
-			position[]={11717.192,-0.65698242,9267.6846};
+			position[]={11717.192,-2.7541328e-026,9267.6846};
 			name="Ress_Bois_01";
 			text="Abattage d'arbres";
 			type="mil_dot";
@@ -41344,7 +41353,7 @@ class Mission
 			a=2;
 			b=2;
 			id=2253;
-			atlOffset=-21.851501;
+			atlOffset=-21.194519;
 		};
 		class Item1063
 		{
@@ -41765,7 +41774,7 @@ class Mission
 			};
 			id=2265;
 			type="Land_Workbench_01_F";
-			atlOffset=-0.002117157;
+			atlOffset=-0.0020027161;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -42390,12 +42399,14 @@ class Mission
 		class Item1091
 		{
 			dataType="Marker";
-			position[]={4406.1118,-6.1484836e-027,12593.244};
-			name="Ress_PIF_04";
-			text="POINT 4";
+			position[]={4418.3091,37.421608,12602.939};
+			name="Ress_Calcaire_01";
+			text="Calcaire";
 			type="mil_dot";
+			colorName="ColorCIV";
+			a=2;
+			b=2;
 			id=2287;
-			atlOffset=-37.385925;
 		};
 		class Item1092
 		{
@@ -42409,18 +42420,6 @@ class Mission
 		};
 		class Item1093
 		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={9975.2344,7.8348374,10179.937};
-				angles[]={6.1232257,0,0.091734506};
-			};
-			init="(getPos this nearestObject 727529) hideObject true; " \n "(getPos this nearestObject 727529) allowDamage false;";
-			id=2289;
-			type="Logic";
-		};
-		class Item1094
-		{
 			dataType="Marker";
 			position[]={23716.311,-1.1835513e-020,16206.158};
 			name="Ress_Sel_01";
@@ -42431,6 +42430,515 @@ class Mission
 			b=2;
 			id=2292;
 			atlOffset=-5.23;
+		};
+		class Item1094
+		{
+			dataType="Marker";
+			position[]={23340.795,3.1900001,19228.389};
+			name="Ress_Calcaire_02";
+			text="Calcaire";
+			type="mil_dot";
+			colorName="ColorCIV";
+			a=2;
+			b=2;
+			id=2295;
+		};
+		class Item1095
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23341.637,2.9565666,19237.844};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2296;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1096
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23344.109,2.9565666,19228.912};
+				angles[]={0,1.8200816,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2297;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1097
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23335.988,2.9565666,19219.352};
+				angles[]={0,5.3888788,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2298;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1098
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23333.52,2.9565666,19231.154};
+				angles[]={0,2.7360306,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2299;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1099
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4419.4858,37.266567,12598.582};
+				angles[]={0,2.2613182,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2301;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1100
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4411.042,36.882294,12601.73};
+				angles[]={0.051714107,4.6539202,0.028448867};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2302;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1101
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4427.5972,37.146767,12601.895};
+				angles[]={0.026668631,1.3659122,6.2565165};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2303;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1102
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4419.5171,37.092346,12608.466};
+				angles[]={6.2565165,4.9969821,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2304;
+			type="Land_Limestone_01_erosion_F";
+			atlOffset=-0.20000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1103
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5618.9814,53.570301,11032.367};
+				angles[]={0,4.0455656,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2305;
+			type="Land_Bunker_F";
+			atlOffset=0.24345016;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1104
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5617.1631,55.495213,11054.138};
+				angles[]={0,4.7310815,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2306;
+			type="Land_Bunker_F";
+			atlOffset=0.099998474;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1105
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5612.2471,60.897453,11030.755};
+				angles[]={0,2.3685689,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=2307;
+			type="Land_LampHalogen_F";
+			atlOffset=2.2109985;
+		};
+		class Item1106
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5620.0586,61.611942,11067.391};
+				angles[]={0,4.2493181,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=2308;
+			type="Land_LampHalogen_F";
+			atlOffset=0.71173859;
+		};
+		class Item1107
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5623.854,55.105824,11067.061};
+				angles[]={0,5.513268,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=2309;
+			type="Land_Bunker_F";
+			atlOffset=0.20000076;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1108
+		{
+			dataType="Marker";
+			position[]={5632.5928,-2.4229854e-011,11051.13};
+			name="Ress_Cuivre_01";
+			text="Mine de Cuivre";
+			type="mil_dot";
+			colorName="ColorCIV";
+			a=2;
+			b=2;
+			id=2310;
+			atlOffset=-53.882881;
 		};
 	};
 };
