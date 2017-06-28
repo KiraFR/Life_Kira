@@ -42,40 +42,13 @@ waitUntil {life_session_completed};
 
 //diag_log "::Life Client:: Group Base Execution";
 [] spawn life_fnc_escInterupt;
-
-switch (playerSide) do
-{
-	case west:
-	{
-		_handle = [] spawn life_fnc_initCop;
-		waitUntil {scriptDone _handle};
-	};
-
-	case civilian:
-	{
-		//Initialize Civilian Settings
-		_handle = [] spawn life_fnc_initCiv;
-		waitUntil {scriptDone _handle};
-	};
-
-	case independent:
-	{
-		//Initialize Medics and blah
-		_handle = [] spawn life_fnc_initMedic;
-		waitUntil {scriptDone _handle};
-	};
-};
-
-player setVariable["restrained",false,true];
-player setVariable["Escorting",false,true];
-player setVariable["transporting",false,true];
+[] call side_fnc_initialization;
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
 diag_log "Executing client.fsm";
 waitUntil {!(isNull (findDisplay 46))};
 diag_log "Display 46 Found";
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
-player addRating 99999999;
 diag_log "------------------------------------------------------------------------------------------------------";
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
@@ -86,8 +59,6 @@ life_sidechat = true;
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 [] call life_fnc_settingsInit;
-player setVariable["steam64ID",getPlayerUID player];
-player setVariable["realname",profileName,true];
 life_fnc_moveIn = compileFinal
 "
 	player moveInCargo (_this select 0);

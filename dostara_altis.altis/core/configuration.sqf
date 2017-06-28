@@ -72,8 +72,8 @@ life_maxPoints = 2;
 ****** KronosD Variables *****
 *****************************
 */
-life_AccOffshore = 1;
-life_AccN = 1;
+life_AccOffshore = 0;
+life_AccN = 0;
 life_EnterAcc = false;
 life_OrgaAcc = false;
 life_nbAcc = 0;
@@ -200,7 +200,7 @@ life_inv_items =
 	"life_inv_catshark",
 	"life_inv_coffee",
     "life_inv_Wisky",
-    "life_inv_Tabac",
+    "life_inv_Tabac"
 ];
 
 //Setup variable inv vars.
@@ -288,30 +288,6 @@ sell_array =
 	["spikeStrip",1200],
 	["cement",1950],
 	["goldbar",95000]
-
-	//Add
-
-    //["Orange",0],
-    //["Raisin",0],
-    //["Jus_MultiFruit",0],
-    //["Jus_De_Pomme",0],
-    //["Jus_De_Raisin",0],
-    //["Cidre",0],
-    //["Vin",0],
-    //["Biere",0],
-    //["Wisky",0],
-    //["Tabac",0],
-    //["Aluminium",0],
-    //["Argent",0],
-    //["Bois",0],
-    //["Charbon",0],
-    //["Chaux",0],
-    //["Acier",0],
-    //["Shit",0],
-    //["Meth",0],
-    //["Pharmaceutique",0],
-    //["Speedball",0]
-
 ];
 CONSTANT(sell_array,sell_array);
 

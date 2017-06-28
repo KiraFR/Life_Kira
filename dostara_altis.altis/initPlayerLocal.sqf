@@ -1,4 +1,4 @@
-#include "..\macro.h"
+#define CONSTANT(var1,var2) var1 = compileFinal (if(typeName var2 == "STRING") then {var2} else {str(var2)})
 /*
 	File: initPlayerLocal.sqf
 

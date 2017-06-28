@@ -5,8 +5,7 @@
 
   Description : Initialize variable of players
 */
-params [["_unit", player, [objNull]]];
-
+_unit = player;
 _unit setVariable ["restrained", false, true];
 _unit setVariable ["Escorting", false, true];
 _unit setVariable ["transporting", false, true];

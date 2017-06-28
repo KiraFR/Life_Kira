@@ -16,6 +16,7 @@ switch (_var) do
 	case "life_inv_oil": {"Petrole"};
 	case "life_inv_heroine": {"Heroine"};
 	case "life_inv_cannabis": {(localize "STR_Item_Cannabis")};
+	case "life_inv_shit": {"shit"};
 	case "life_inv_opium": {"opium"};
 	case "life_inv_vin": {(localize "STR_Item_Vin")};
 	case "life_inv_apple": {(localize "STR_Item_Apple")};
@@ -67,6 +68,7 @@ switch (_var) do
     case "life_inv_Jus_De_Pomme" : {(localize "STR_Item_Jus_De_Pomme")};
     case "life_inv_Jus_De_Raisin" : {(localize "STR_Item_Jus_De_Raisin")};
     case "life_inv_Cidre" : {(localize "STR_Item_Cidre")};
+    case "life_inv_Vin" : {(localize "STR_Item_Vin")};
     case "life_inv_Wisky" : {(localize "STR_Item_Wisky")};
     case "life_inv_Biere" : {(localize "STR_Item_Biere")};
     case "life_inv_Tabac" : {(localize "STR_Item_Tabac")};

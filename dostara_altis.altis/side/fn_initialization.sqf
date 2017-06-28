@@ -5,7 +5,7 @@
 
   Description : Initialize the player depending his side
 */
-switch playerSide do {
+switch (playerSide) do {
 	case west: {
 		[] call side_fnc_initCop;
 	};

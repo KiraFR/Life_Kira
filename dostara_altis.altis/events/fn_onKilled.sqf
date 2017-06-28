@@ -1,4 +1,4 @@
-#include "..\..\macro.h"
+#include "..\macro.h"
 /*
     File: fn_onKilled.sqf
     Author: Bryan "Tonic" Boardwine

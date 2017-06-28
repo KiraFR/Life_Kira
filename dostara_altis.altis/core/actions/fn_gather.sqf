@@ -7,7 +7,8 @@
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
 private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone"];
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2"];
+_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2","Ress_Sable_2","Ress_Sable_1","Ress_Sel_1",
+				  "Ress_Bois_1","Ress_Bois_2","Ress_Bois_3","Ress_Bois_4"];
 _zone = "";
 
 if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
@@ -30,11 +31,14 @@ switch(true) do {
 	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1;};
 	case (_zone in ["weed_1"]): {_gather = "cannabis"; _val = 1;};
 	case (_zone in ["opium_1"]): {_gather = "opiumn"; _val = 1;};
+	case (_zone in ["Ress_Bois_1","Ress_Bois_2","Ress_Bois_3","Ress_Bois_4"]): {_gather = "Bois"; _val = floor(random(4));};
+	case (_zone in ["Ress_Sable_2","Ress_Sable_1"]): {_gather = "sand"; _val = floor(random(5));};
+	case (_zone in ["Ress_Sel_1"]): {_gather = "salt_f"; _val = floor(random(3));};
 	default {""};
 };
 //gather check??
 if(vehicle player != player) exitWith {};
-
+if(_val == 0) exitWith{hint "Votre recolte est pas bonne, vous avez jeter ce que vous avez recolté.";};
 _diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
 life_action_inUse = true;

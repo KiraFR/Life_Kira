@@ -72,6 +72,7 @@ switch (_mode) do
 			case "Jus_De_Pomme" : {"life_inv_Jus_De_Pomme"};
 			case "Jus_De_Raisin" : {"life_inv_Jus_De_Raisin"};
 			case "Cidre" : {"life_inv_Cidre"};
+			case "Vin" : {"life_inv_Vin"};
 			case "Biere" : {"life_inv_Wisky"};
 			case "Tabac" : {"life_inv_Tabac"};
             case "Aluminium" : {"life_inv_Aluminium"};
@@ -148,6 +149,7 @@ switch (_mode) do
             case "life_inv_Jus_De_Pomme" : {"Jus_De_Pomme"};
             case "life_inv_Jus_De_Raisin" : {"Jus_De_Raisin"};
             case "life_inv_Cidre" : {"Cidre"};
+            case "life_inv_Vin" : {"Vin"};
             case "life_inv_Biere" : {"Biere"};
             case "life_inv_Aluminium" : {"Aluminium"};
             case "life_inv_Tabac" : {"Tabac"};
