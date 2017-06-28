@@ -225,6 +225,8 @@ class Life_Client_Core
 
 		class processSwitch {};
 		class minValue {};
+		class loadAccount {};
+		class Bool {};
 	};
 
 	class Network

@@ -25,7 +25,7 @@ private["_query"];
 _query = "INSERT INTO notaire(uidPlayer,nomCl,amount,realAmount,nomNotaire,description,date,toPlayer) VALUES(";
 
 {
-	_query = _query + ":" _x;
+	_query = _query + "," + _x;
 }foreach _this;
 _query = _query + ");";
 diag_log _query;

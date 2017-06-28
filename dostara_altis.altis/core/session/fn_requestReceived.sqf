@@ -28,16 +28,6 @@ life_cash = parseNumber (_this select 2);
 life_gear = _this select 7;
 [] call life_fnc_loadGear;
 
-_libank = _this select 28;
-if(count _libank > 0) then{
-	if(typeName (_libank select 1) == "STRING") then{
-		life_atmcash = parseNumber (_libank select 1);
-	}else{
-		life_atmcash = (_libank select 1);
-	};
-	life_dflt = _libank select 0;
-};
-
 CONSTANT(life_adminlevel,(_this select 3));
 CONSTANT(life_donator,0);
 
@@ -54,48 +44,75 @@ switch(playerSide) do {
 		CONSTANT(life_coplevel, parseNumber(_this select 6));
 		CONSTANT(life_medicLevel,0);
 		life_blacklisted = _this select 8;
+		_num = _this select 11;
+		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+
+		_bank = _this select 12;
+		_nbBank = _bank select 1;
+		if(_nbBank > 0)then{[(_bank select 0)] call life_fnc_loadAccount;};
+
+
+		if(count (_this select 13) > 0) then {
+			{life_vehicles pushBack _x;} forEach (_this select 13);
+		};
 	};
-	
+
 	case civilian: {
 		life_is_arrested = _this select 6;
 		CONSTANT(life_coplevel, 0);
 		CONSTANT(life_medicLevel, 0);
 
-		life_pPermis = _this select 12;
-		life_nbrFoisPermis = _this select 13;
-		_PermisDispo = _this select 14;
+		life_houses = _this select 10;
+		{
+			_house = nearestBuilding (call compile format["%1", _x select 0]);
+			life_vehicles pushBack _house;
+		}forEach life_houses;
+		
+		life_gangData = _This select 11;
+		if(count life_gangData != 0) then {
+			[] spawn life_fnc_initGang;
+		};
+		[] spawn life_fnc_initHouses;
+
+		_num = _this select 12;
+		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+
+		life_pPermis = _this select 13;
+		life_nbrFoisPermis = _this select 14;
+		_PermisDispo = _this select 15;
 		if(isNil "_PermisDispo") then {
 			if(_PermisDispo == 1)then{
 				life_waitpermis = true;
 			}else{
 				life_waitpermis = false;
 			};
-			waitsleep = _this select 15;
+			waitsleep = _this select 16;
 		};
-		life_houses = _this select 18;
 
-		{
-			_house = nearestBuilding (call compile format["%1", _x select 0]);
-			life_vehicles pushBack _house;
-		} forEach life_houses;
-		
-		life_gangData = _This select 19;
-		if(count life_gangData != 0) then {
-			[] spawn life_fnc_initGang;
+		_bank = _this select 17;
+		_nbBank = _bank select 1;
+		if(_nbBank > 0)then{[(_bank select 0)] call life_fnc_loadAccount;};
+
+		if(count (_this select 18) > 0) then {
+			{life_vehicles pushBack _x;} forEach (_this select 18);
 		};
-		[] spawn life_fnc_initHouses;
 	};
 	
 	case independent: {
 		CONSTANT(life_medicLevel, parseNumber(_this select 6));
 		CONSTANT(life_coplevel,0);
+
+		_num = _this select 10;
+		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+
+		_bank = _this select 11;
+		_nbBank = _bank select 1;
+		if(_nbBank > 0)then{[(_bank select 0)] call life_fnc_loadAccount;};
+
+		if(count (_this select 12) > 0) then {
+			{life_vehicles pushBack _x;} forEach (_this select 12);
+		};
 	};
-};
-
-life_numModif(_this select 20);
-
-if(count (_this select 25) > 0) then {
-	{life_vehicles pushBack _x;} forEach (_this select 25);
 };
 
 switch (true) do {
@@ -107,13 +124,5 @@ switch (true) do {
 	case (life_atmcash > 500000):{life_paycheck = 0;};
 	case (PlayerSide == west || PlayerSide == independent):{life_paycheck = 1200;};
 };
-
-life_nbAcc = _this select 26;
-if((_this select 27) == 1) then {
-	life_EnterAcc = true;
-}else {
-	life_EnterAcc = false;
-};
-
 
 life_session_completed = true;

@@ -11,7 +11,7 @@
 	ARRAY - If array has 0 elements it should be handled as an error in client-side files.
 	STRING - The request had invalid handles or an unknown error and is logged to the RPT.
 */
-private["_uid","_side","_query","_return","_queryResult","_qResult","_handler","_thread","_tickTime","_loops","_returnCount"];
+private["_uid","_side","_query","_numAnnuResult","_return","_queryResult","_qResult","_handler","_thread","_tickTime","_loops","_returnCount"];
 params[
 	["_uid","",[""]],
 	["_side",sideUnknown,[civilian]],
@@ -26,9 +26,12 @@ _ownerID = owner _ownerID;
 	The other part is well the SQL statement.
 */
 _query = switch(_side) do {
-	case west: {_returnCount = 10; format["SELECT playerid, name, cash, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
-	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear FROM players WHERE playerid='%1'",_uid];};
-	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear FROM players WHERE playerid='%1'",_uid];};
+					// 10 (en partant de 0)
+	case west: {_returnCount = 10; format["SELECT playerid, name, cash, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist, position, alive FROM players WHERE playerid='%1'",_uid];};
+					// 9 (en partant de 0)
+	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, position, alive FROM players WHERE playerid='%1'",_uid];};
+					// 9 (en partant de 0)
+	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, position, alive FROM players WHERE playerid='%1'",_uid];};
 };
 
 
@@ -69,66 +72,92 @@ _queryResult set[5,_old];
 switch (_side) do {
 	case west: {
 		_queryResult set[8,([_queryResult select 8,1] call DB_fnc_bool)];
-		 // LOGS
-        _list = [_queryResult select 0,_queryResult select 2,_queryResult select 1];
-        //  UID , SIDE  , Informations , Type
-        [_uid,west,_list,0] spawn DB_fnc_logs;
+
+		//Telephone
+		_numAnnu = format["SELECT numero FROM phonenumber WHERE pid_owner='%1' AND active='1'",_uid];
+		_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
+		if(count _numAnnuResult > 0)then {
+			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
+			_queryResult pushBack _numAnnuResult; // select 11
+		}else{
+			_numAnnuResult = "";
+			_queryResult pushBack _numAnnuResult; // select 11
+		};
+		_compteBanque = [_uid] call KIRA_fnc_queryAccountRequest;
+		_queryResult pushBack _compteBanque; //12
+		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
+		_queryResult pushBack _keyArr; //13
 	};
 	
 	case civilian: {
 		_queryResult set[6,([_queryResult select 6,1] call DB_fnc_bool)];
+
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
-		_queryResult set[18,missionNamespace getVariable[format["houses_%1",_uid],[]]];
+
+
+
+		_house = missionNamespace getVariable[format["houses_%1",_uid],[]];
+		_queryResult pushBack _house; // select 10
+
+
+
 		_gangData = _uid spawn TON_fnc_queryPlayerGang;
 		waitUntil{scriptDone _gangData};
-		_queryResult set[19,missionNamespace getVariable[format["gang_%1",_uid],[]]];
-		
+		_gang = missionNamespace getVariable[format["gang_%1",_uid],[]];
+		_queryResult pushBack _gang; // select 11
+
+
+
+		//Telephone
+		_numAnnu = format["SELECT numero FROM phonenumber WHERE pid_owner='%1' AND active='1'",_uid];
+		_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
+		if(count _numAnnuResult > 0)then {
+			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
+			_queryResult pushBack _numAnnuResult; // select 12
+		}else{
+			_numAnnuResult = "";
+			_queryResult pushBack _numAnnuResult; // select 12
+		};
+
+
+
 		_Permis = format["SELECT Ppermis, nbrPermis, PermisDispo, waitTime FROM permis WHERE uid='%1'",_uid];
 		_PermisResult = [_Permis,2] call DB_fnc_asyncCall;
 		if(count _PermisResult > 0)then {
-			_queryResult set [12,_PermisResult select 0];
-			_queryResult set [13,_PermisResult select 1];
-			_queryResult set [14,_PermisResult select 2];
-			_queryResult set [15,_PermisResult select 3];
+			_queryResult pushBack (_PermisResult select 0); //13
+			_queryResult pushBack (_PermisResult select 1); //14
+			_queryResult pushBack (_PermisResult select 2); //15
+			_queryResult pushBack (_PermisResult select 3); //16
 		};
+		_compteBanque = [_uid] call KIRA_fnc_queryAccountRequest;
+		_queryResult pushBack _compteBanque; //17
+		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
+		_queryResult pushBack _keyArr; //18
 	};
 	case independent:{
+
+		//Telephone
+		_numAnnu = format["SELECT numero FROM phonenumber WHERE pid_owner='%1' AND active='1'",_uid];
+		_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
+		if(count _numAnnuResult > 0)then {
+			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
+			_queryResult pushBack _numAnnuResult; // select 10
+		}else{
+			_numAnnuResult = "";
+			_queryResult pushBack _numAnnuResult; // select 10
+		};
+
+		_compteBanque = [_uid] call KIRA_fnc_queryAccountRequest;
+		_queryResult pushBack _compteBanque; //11
+		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
+		_queryResult pushBack _keyArr; //12
 	};
 };
 
 
-/*
-//Telephone
-_numAnnu = format["SELECT numero,annuaire FROM phonenumber WHERE pid_owner='%1'",_uid];
-_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
-if(count _numAnnuResult != 0)then {
-	_queryResult set [20,_numAnnuResult select 0];
-	_queryResult set [21,_numAnnuResult select 1];
-};
 
-_numreper = format["SELECT nam_contact, num_contact, pid_contact, id FROM numberrepertoire WHERE pid_owner='%1'",_uid];
-_numreperResult = [_numreper,2,true] call DB_fnc_asyncCall;
-_queryResult set [22,_numreperResult];
-*/
-_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-_queryResult set[25,_keyArr];
 
-_nbAcc = format["SELECT id FROM banque WHERE playerid='%1'",_uid];
-_nbAccResult = [_nbAcc,2,true] call DB_fnc_asyncCall;
-_queryResult set [26,(count _nbAccResult)];
-
-_nbAccEntre = format["SELECT id FROM banque WHERE playerid='%1' AND entreprise='1'",_uid];
-_nbAccEntreResult = [_nbAccEntre,2] call DB_fnc_asyncCall;
-if(count _nbAccEntreResult == 0) then{
-	_queryResult set [27,0];
-}else{
-	_queryResult set [27,1]
-};
-
-_dfltAcc = format["SELECT id, bankacc FROM banque WHERE playerid='%1' AND dflt='1'",_uid];
-_dfltAcc = [_dfltAcc,2] call DB_fnc_asyncCall;
-_queryResult set [28,_dfltAcc];
 
 diag_log format["%1",_queryResult];
 _queryResult remoteExec ["SOCK_fnc_requestReceived",_ownerID];

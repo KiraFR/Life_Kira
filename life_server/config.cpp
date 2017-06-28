@@ -64,11 +64,11 @@ class CfgFunctions
 			class isConnected {};
 			class transfertS {};
 			class HCheckNearS {};
-			class InsertFormNot {};
 			class phoneNum {};
 			class creerNumero {};
 			class impot{};
 			class saveTestament{};
+			class queryAccountRequest{};
 		};
 	};
 
