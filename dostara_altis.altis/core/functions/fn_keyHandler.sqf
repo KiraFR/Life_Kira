@@ -32,7 +32,7 @@ if(life_action_inUse) exitWith {
 //Hotfix for Interaction key not being able to be bound on some operation systems.
 if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
-	if(!life_action_inUse) then {
+	if(!life_action_inUse && !(player getVariable "ACE_Captives_isHandcuffed")) then {
 		[] spawn 
 		{
 			private["_handle"];
@@ -46,17 +46,6 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 
 switch (_code) do
 {
-	//Space key for Jumping
-	case 57:
-	{
-		if(isNil "jumpActionTime") then {jumpActionTime = 0;};
-		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested} && {(velocity player) select 2 < 2.5} && {time - jumpActionTime > 1.5}) then {
-			jumpActionTime = time; //Update the time.
-			[player,true] spawn life_fnc_jumpFnc; //Local execution
-			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution 
-			_handled = true;
-		};
-	};
 	
 	//Map Key
 	case _mapKey:

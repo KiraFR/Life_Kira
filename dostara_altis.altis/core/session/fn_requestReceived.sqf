@@ -46,6 +46,7 @@ switch(playerSide) do {
 		life_blacklisted = _this select 8;
 		_num = _this select 11;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+		profileNamespace setVariable ["conversations",[]];
 
 		_bank = _this select 12;
 		_nbBank = _bank select 1;
@@ -76,6 +77,7 @@ switch(playerSide) do {
 
 		_num = _this select 12;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+		profileNamespace setVariable ["conversations",[]];
 
 		life_pPermis = _this select 13;
 		life_nbrFoisPermis = _this select 14;
@@ -104,6 +106,7 @@ switch(playerSide) do {
 
 		_num = _this select 10;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
+		profileNamespace setVariable ["conversations",[]];
 
 		_bank = _this select 11;
 		_nbBank = _bank select 1;
