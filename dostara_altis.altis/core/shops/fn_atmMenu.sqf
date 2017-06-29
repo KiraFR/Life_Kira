@@ -19,30 +19,18 @@ if(!dialog) then
 };
 
 disableSerialization;
-
-_display = findDisplay 2700;
-_text = _display displayCtrl 2701;
-_units = _display displayCtrl 2703;
+_text = getControl(2700,2701);
+_units = getControl(2700,2703);
 
 lbClear _units;
-_text ctrlSetStructuredText parseText format["<img size='1.7' image='icons\bank.paa'/> $%1<br/><img size='1.6' image='icons\money.paa'/> $%2",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
-
+_text ctrlSetStructuredText parseText format["<img size='1.7' image='\Kira_assets\hud\bank.paa'/> $%1<br/><img size='1.6' image='\Kira_assets\hud\money.paa'/> $%2",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
+_repertoire = profileNamespace getVariable ["repertoireBanque",[]];
 {
-	if(alive _x) then
-	{
-		switch (side _x) do
-		{
-			case west: {_type = "Cop"};
-			case civilian: {_type = "Civ"};
-			case independent: {_type = "EMS"};
-		};
-		_units lbAdd format["%1 (%2)",_x getVariable["realname",name _x],_type];
-		_units lbSetData [(lbSize _units)-1,str(_x)];
-	};
-} forEach playableUnits;
-
+	_name = _x select 
+	_units lbAdd format["%1 (%2)",_x select 0, _x select 1];
+	_units lbSetData [(lbSize _units)-1,str(_x select 1)];
+} forEach _repertoire;
 lbSetCurSel [2703,0];
-
 if(isNil {(grpPlayer getVariable "gang_bank")}) then {
 	(getControl(2700,2705)) ctrlEnable false;
 };
