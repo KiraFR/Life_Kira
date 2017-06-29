@@ -20,16 +20,12 @@ if(isNull _curTarget) exitWith {
 			[_fish] call life_fnc_catchFish;
 		};
 	} else {
-	diag_log "gatherDebut";
 		if(!life_action_gathering) then {
 			life_action_gathering = true;
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};
 			life_action_gathering = false;
-		}else{
-			diag_log "gather fonctionne pas";
 		};
-	diag_log "gatherFin";
 	};
 };
 
