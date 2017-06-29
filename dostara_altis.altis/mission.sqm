@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2327;
+		nextID=2328;
 	};
 	class MarkerIDProvider
 	{
@@ -100,13 +100,16 @@ addons[]=
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Rocks_F_Argo_Limestone",
 	"A3_Structures_F_Mil_Bunker",
-	"Kira_assets"
+	"Kira_assets",
+	"A3_Signs_F",
+	"ace_interaction",
+	"ace_dragging"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=31;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -302,6 +305,20 @@ class AddonsMetaData
 			className="Kira_assets";
 			name="Kira_assets";
 		};
+		class Item29
+		{
+			className="ace_interaction";
+			name="ACE3 - Interaction";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item30
+		{
+			className="ace_dragging";
+			name="ACE3 - Dragging";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
 	};
 };
 randomSeed=4982936;
@@ -350,7 +367,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1115;
+		items=1116;
 		class Item0
 		{
 			dataType="Marker";
@@ -4937,7 +4954,6 @@ class Mission
 						angles[]={0,4.7121973,0};
 					};
 					side="Civilian";
-					flags=4;
 					class Attributes
 					{
 						skill=0.60000002;
@@ -4947,7 +4963,7 @@ class Mission
 					};
 					id=661;
 					type="C_Man_casual_2_F_euro";
-					atlOffset=0.057557106;
+					atlOffset=0.79999924;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -43020,6 +43036,23 @@ class Mission
 			b=2;
 			id=2323;
 			atlOffset=-12.65249;
+		};
+		class Item1115
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={8473.8408,109.58645,25041.148};
+				angles[]={6.244544,0,0.15865043};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="OBJECTMAP";
+			};
+			id=2327;
+			type="RoadBarrier_F";
 		};
 	};
 };
