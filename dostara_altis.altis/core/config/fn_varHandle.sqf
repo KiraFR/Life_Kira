@@ -21,7 +21,6 @@ switch (_mode) do
 			case "heroine": {"life_inv_heroine"};
 			case "cannabis": {"life_inv_cannabis"};
 			case "opium": {"life_inv_opium"};
-			case "vin": {"life_inv_vin"};
 			case "apple": {"life_inv_apple"};
 			case "water": {"life_inv_water"};
 			case "rabbit": {"life_inv_rabbit"};
@@ -32,6 +31,7 @@ switch (_mode) do
 			case "mullet": {"life_inv_mullet"};
 			case "catshark": {"life_inv_catshark"};
 			case "turtle": {"life_inv_turtle"};
+			case "turtleD": {"life_inv_turtleD"};
 			case "fishing": {"life_inv_fishingpoles"};
 			case "coffee": {"life_inv_coffee"};
 			case "Fishsoup": {"life_inv_Fishsoup"};
@@ -86,6 +86,7 @@ switch (_mode) do
 			case "Pharmaceutique" : {"life_inv_Pharmaceutique"};
 			case "Speedball" : {"life_inv_Speedball"};
 		    case "Wisky" : {"life_inv_Wisky"};
+		    case "bijoux" : {"life_inv_bijoux"};
 		};
 	};
 	
@@ -109,6 +110,7 @@ switch (_mode) do
 			case "life_inv_mullet": {"mullet"};
 			case "life_inv_catshark": {"catshark"};
 			case "life_inv_turtle": {"turtle"};
+			case "life_inv_turtleD": {"turtleD"};
 			case "life_inv_fishing": {"fishingpoles"};
 			case "life_inv_coffee": {"coffee"};
 			case "life_inv_Fishsoup": {"Fishsoup"};
@@ -128,8 +130,10 @@ switch (_mode) do
 			case "life_inv_lockpick": {"lockpick"};
 			case "life_inv_redgull": {"redgull"};
 			case "life_inv_peach": {"peach"};
+
 			case "life_inv_rock": {"rock"};
 			case "life_inv_rockB": {"rockB"};
+
 			case "life_inv_cocaine": {"cocaine"};
 			case "life_inv_coca": {"coca"};
 			case "life_inv_spikeStrip": {"spikeStrip"};
@@ -149,7 +153,6 @@ switch (_mode) do
             case "life_inv_Jus_De_Pomme" : {"Jus_De_Pomme"};
             case "life_inv_Jus_De_Raisin" : {"Jus_De_Raisin"};
             case "life_inv_Cidre" : {"Cidre"};
-            case "life_inv_Vin" : {"Vin"};
             case "life_inv_Biere" : {"Biere"};
             case "life_inv_Aluminium" : {"Aluminium"};
             case "life_inv_Tabac" : {"Tabac"};
@@ -163,7 +166,7 @@ switch (_mode) do
             case "life_inv_Pharmaceutique" : {"Pharmaceutique"};
             case "life_inv_Speedball" : {"Speedball"};
             case "life_inv_Wisky" : {"Wisky"};
-
+		    case "life_inv_bijoux" : {"bijoux"};
 		};
 	};
 };

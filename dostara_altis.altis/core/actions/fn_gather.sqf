@@ -10,9 +10,6 @@ private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zo
 _resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2","Ress_Sable_2","Ress_Sable_1","Ress_Sel_1",
 				  "Ress_Bois_1","Ress_Bois_2","Ress_Bois_3","Ress_Bois_4"];
 _zone = "";
-
-if(life_action_gathering) exitWith {}; //Action is in use, exit to prevent spamming.
-life_action_gathering = true;
 //Find out what zone we're near
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
@@ -21,7 +18,6 @@ life_action_gathering = true;
 if(_zone == "") exitWith {
 	life_action_inUse = false;
 };
-
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
 	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = "apple"; _val = 3;};

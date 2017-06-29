@@ -13,6 +13,7 @@ _dialog = uiNameSpace getVariable ["RscDisplayInventory",displayNull];
 _inv = _dialog displayCtrl 2005;
 _lic = _dialog displayCtrl 2014;
 _near = _dialog displayCtrl 2022;
+_itemsPoids = _dialog displayCtrl 2009;
 _near_i = _dialog displayCtrl 2023;
 _mstatus = _dialog displayCtrl 2015;
 _pstatus = _dialog displayCtrl 2016;
@@ -36,6 +37,7 @@ _near_units = [];
 		_near_i lbSetData [(lbSize _near)-1,str(_x)];
 	};
 } forEach _near_units;
+/*
 if(life_nbAcc > 0) then{
 	_mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>%1€</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>%2€</t>",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
 }else{
@@ -43,8 +45,9 @@ if(life_nbAcc > 0) then{
 };
 if(life_pPermis > 0) then {
 	_pstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\ppermis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
-}else{ctrlShow[2016,false];};
-ctrlSetText[2009,format["%3,place: %1 / %2", life_carryWeight, life_maxWeight,ctrlText 2009]];
+}else{ctrlShow[2016,false];};*/
+
+_itemsPoids ctrlSetText format["Items, place: %1 / %2", life_carryWeight, life_maxWeight];
 {
 	_str = [_x] call life_fnc_varToStr;
 	_shrt = [_x,1] call life_fnc_varHandle;

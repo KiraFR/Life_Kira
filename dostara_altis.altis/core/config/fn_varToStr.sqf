@@ -18,7 +18,6 @@ switch (_var) do
 	case "life_inv_cannabis": {(localize "STR_Item_Cannabis")};
 	case "life_inv_shit": {"shit"};
 	case "life_inv_opium": {"opium"};
-	case "life_inv_vin": {(localize "STR_Item_Vin")};
 	case "life_inv_apple": {(localize "STR_Item_Apple")};
 	case "life_inv_rabbit": {(localize "STR_Item_RabbitMeat")};
 	case "life_inv_salema": {(localize "STR_Item_SalemaMeat")};
@@ -28,6 +27,7 @@ switch (_var) do
 	case "life_inv_mullet": {(localize "STR_Item_MulletMeat")};
 	case "life_inv_catshark": {(localize "STR_Item_CatSharkMeat")};
 	case "life_inv_turtle": {(localize "STR_Item_TurtleMeat")};
+	case "life_inv_turtleD": {"Tortue morte"};
 	case "life_inv_fishingpoles": {(localize "STR_Item_FishingPole")};
 	case "life_inv_water": {(localize "STR_Item_WaterBottle")};
 	case "life_inv_coffee": {(localize "STR_Item_Coffee")};
@@ -82,6 +82,7 @@ switch (_var) do
     case "life_inv_Meth" : {(localize "STR_Item_Meth")};
     case "life_inv_Pharmaceutique" : {(localize "STR_Item_Pharmaceutique")};
     case "life_inv_Speedball" : {(localize "STR_Item_Speedball")};
+	case "life_inv_bijoux" : {"Bijoux"};
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

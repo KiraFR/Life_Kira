@@ -182,6 +182,7 @@ life_inv_items =
 	"life_inv_opium",
 	"life_inv_cannabis",
 	"life_inv_turtle",
+	"life_inv_turtleD",
 	"life_inv_peach",
 	"life_inv_apple",
 	"life_inv_Orange",

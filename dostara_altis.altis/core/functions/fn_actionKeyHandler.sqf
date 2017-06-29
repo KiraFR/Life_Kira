@@ -25,6 +25,8 @@ if(isNull _curTarget) exitWith {
 			_handle = [] spawn life_fnc_gather;
 			waitUntil {scriptDone _handle};
 			life_action_gathering = false;
+		}else{
+			diag_log "gather fonctionne pas";
 		};
 	};
 };
