@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=2328;
+		nextID=2330;
 	};
 	class MarkerIDProvider
 	{
@@ -100,7 +100,6 @@ addons[]=
 	"A3_Structures_F_Civ_Garbage",
 	"A3_Rocks_F_Argo_Limestone",
 	"A3_Structures_F_Mil_Bunker",
-	"Kira_assets",
 	"A3_Signs_F",
 	"ace_interaction",
 	"ace_dragging"
@@ -109,7 +108,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=31;
+		items=30;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -302,17 +301,12 @@ class AddonsMetaData
 		};
 		class Item28
 		{
-			className="Kira_assets";
-			name="Kira_assets";
-		};
-		class Item29
-		{
 			className="ace_interaction";
 			name="ACE3 - Interaction";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item30
+		class Item29
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
@@ -367,7 +361,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1116;
+		items=1113;
 		class Item0
 		{
 			dataType="Marker";
@@ -42987,58 +42981,6 @@ class Mission
 		};
 		class Item1111
 		{
-			dataType="Marker";
-			position[]={5815.1118,-1.8925235e-008,14721.04};
-			name="marker_Cop_01";
-			text="QG - Police Insulaire";
-			type="kiraShield";
-			colorName="ColorBlack";
-			a=2;
-			b=2;
-			id=2320;
-			atlOffset=-23.675543;
-		};
-		class Item1112
-		{
-			dataType="Marker";
-			position[]={14289.953,-3.8566833e-014,18614.465};
-			name="marker_Cop_02";
-			text="Police Insulaire";
-			type="kiraShield";
-			colorName="ColorBlack";
-			a=2;
-			b=2;
-			id=2321;
-			atlOffset=-26.11083;
-		};
-		class Item1113
-		{
-			dataType="Marker";
-			position[]={17179.145,-9.9165176e-011,13178.368};
-			name="marker_Cop_03";
-			text="Police Insulaire";
-			type="kiraShield";
-			colorName="ColorBlack";
-			a=2;
-			b=2;
-			id=2322;
-			atlOffset=-16.063675;
-		};
-		class Item1114
-		{
-			dataType="Marker";
-			position[]={25803.725,-9.9165176e-011,21035.746};
-			name="marker_Cop_04";
-			text="Police Insulaire";
-			type="kiraShield";
-			colorName="ColorBlack";
-			a=2;
-			b=2;
-			id=2323;
-			atlOffset=-12.65249;
-		};
-		class Item1115
-		{
 			dataType="Object";
 			class PositionInfo
 			{
@@ -43053,6 +42995,80 @@ class Mission
 			};
 			id=2327;
 			type="RoadBarrier_F";
+		};
+		class Item1112
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4536.7729,264.0766,15416.66};
+						angles[]={0,1.5543553,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						init="call{this enableSimulation false;this allowDamage false;[""Publier Annonce"",{call KIRA_fnc_initNewPubli}];}";
+					};
+					id=2329;
+					type="C_journalist_F";
+					atlOffset=-3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male05GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=2328;
+			atlOffset=-3.0517578e-005;
 		};
 	};
 };
