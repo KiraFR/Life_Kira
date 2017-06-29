@@ -369,7 +369,7 @@ class Life_Client_Core
 
 	class Dialog_Controls
 	{
-		file = "dialog\function";
+		file = "core\dialog";
 		class setMapPosition {};
 		class displayHandler {};
 		class spawnConfirm {};
