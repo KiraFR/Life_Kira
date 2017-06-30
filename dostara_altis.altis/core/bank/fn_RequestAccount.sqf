@@ -6,7 +6,7 @@
 	Description:
 	créer un numéro et l'envoi au serveur
 */
-private["_num","_name","_client","_Bank","_PriceB"];
+private["_num","_name","_client","_Bank","_PriceB","_first"];
 params ["_type"];
 _uid = getPlayerUID player;
 
@@ -21,7 +21,8 @@ switch (_type) do {
 	case 1: {
 		_name = ctrlText 11007;
 		_PriceB = (life_AccOffshore)*(100000*3);
-		if(_PriceB == 0)then{_PriceB = 100000;};
+		_first = false;
+		if(_PriceB == 0)then{_PriceB = 100000;_first = true;};
 		if(life_cash < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		life_cash = life_cash - _PriceB;
 		_type = 1;
@@ -36,7 +37,7 @@ switch (_type) do {
 		life_nbAcc = life_nbAcc +1;
 		hint "Votre compte offshore a bien été créé";
 
-		_Bank = [_name,_num,0,false];
+		_Bank = [_name,_num,0,false,_first];
 
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -46,7 +47,8 @@ switch (_type) do {
 	case 2: {
 		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
 		_PriceB = (20*25)*(life_AccN);
-		if(_PriceB == 0)then{_PriceB = 25;};
+		_first = false;
+		if(_PriceB == 0)then{_PriceB = 25;_first = true;};
 		if(life_cash < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		life_cash = life_cash - _PriceB;
 
@@ -60,7 +62,7 @@ switch (_type) do {
 
 		hint "Votre compte a bien était cree";
 
-		_Bank = [_name,_num,0,false];
+		_Bank = [_name,_num,0,false,_first];
 
 		life_AccN = life_AccN +1;
 		life_nbAcc = life_nbAcc +1;
@@ -88,7 +90,7 @@ switch (_type) do {
 		hint "Votre compte a bien était creer";
 
 		_Solde = 0;
-		_Bank = [_name,_num,0,false];
+		_Bank = [_name,_num,0,false,false];
 
 		[] call life_fnc_hudUpdate;
 		life_EnterAcc = true;
@@ -108,7 +110,7 @@ switch (_type) do {
 		hint "Votre compte a bien était creer";
 
 		_Solde = 0;
-		_Bank = [_name,_num,0,false];
+		_Bank = [_name,_num,0,false,false];
 
 		[] call life_fnc_hudUpdate;
 		life_EparAcc = true;
@@ -131,7 +133,7 @@ switch (_type) do {
 		hint "Votre compte a bien était creer";
 
 		_Solde = 0;
-		_Bank = [_name,_num,0,false];
+		_Bank = [_name,_num,0,false,false];
 
 		[] call life_fnc_hudUpdate;
 		life_OrgaAcc = true;

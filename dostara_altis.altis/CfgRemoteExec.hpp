@@ -78,8 +78,8 @@ class CfgRemoteExec {
 		F(DB_fnc_updateRequest,SERVER)
 		F(DB_fnc_queryRequest,SERVER)
 		F(DB_fnc_insertRequest,SERVER)
-		F(DB_fnc_logs,SERVER)
-		F(IMPT_fnc_impot,SERVER)
+		F(DB_fnc_syncAccountDB,SERVER)
+		F(KIRA_fnc_impot,SERVER)
 		F(TON_fnc_updateGang,SERVER)
 		F(TON_fnc_setObjVar,SERVER)
 		F(TON_fnc_keyManagement,SERVER)
@@ -96,15 +96,12 @@ class CfgRemoteExec {
 		F(KIRA_fnc_phoneNum,SERVER)
 		F(KIRA_fnc_HCheckNearS,SERVER)
 		F(KIRA_fnc_InsertFormNot,SERVER)
-
-		
 		F(BQKS_fnc_CreateAccount,SERVER)
 		F(BQKS_fnc_CreateAccountOff,SERVER)
 		F(BQKS_fnc_CreateAccountEntre,SERVER)
 		F(BQKS_fnc_GetAccount,SERVER)
 		F(BQKS_fnc_DeleteAccount,SERVER)
 		F(BQKS_fnc_SetDefaultAccount,SERVER)
-		
 		F(ASSA_fnc_GetContractA,SERVER)
 		F(ASSA_fnc_GetContract,SERVER)
 		F(ASSA_fnc_ContratKid,SERVER)
@@ -114,7 +111,6 @@ class CfgRemoteExec {
 		F(ASSA_fnc_GetContractActif,SERVER)
 		F(ASSA_fnc_AcceptContrat,SERVER)
 		F(ASSA_fnc_TransferToMurd,SERVER)
-		
         //Bourse
         F(bourse_fnc_vente,SERVER)
         F(life_fnc_virt_sellBourse,CLIENT)

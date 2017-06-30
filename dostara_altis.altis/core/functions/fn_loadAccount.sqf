@@ -28,7 +28,15 @@ if(count _courant > 0) then{
 	_accCourant = missionNamespace getVariable ["AccountBanque",[]];
 	_nb = missionNameSpace getVariable ["life_AccN",0];
 	{
-		_tab = [_x select 0,_x select 1,_x select 2,([_x select 3] call life_fnc_bool)];
+		_default = [_x select 3] call life_fnc_bool;
+		if(_default)then{
+			life_atmCash = if(typeName (_x select 2) == "STRING") then{
+				parseNumber(_x select 2);
+			}else{
+				(_x select 2);
+			};
+		};
+		_tab = [_x select 0,_x select 1,_x select 2,_default];
 		_accCourant pushBack _tab;
 		_nb = _nb +1;
 	}foreach _courant;

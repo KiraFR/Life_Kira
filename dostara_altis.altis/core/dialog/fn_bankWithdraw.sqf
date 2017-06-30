@@ -14,4 +14,5 @@ life_atmcash = life_atmcash - _val;
 hint format [localize "STR_ATM_WithdrawSuccess",[_val] call life_fnc_numberText];
 [getPlayerUID player, playerSide, [name player, _val],15] remoteExecCall ["DB_fnc_logs",2];
 [] call life_fnc_atmMenu;
+call SOCK_fnc_updateBanque;
 [6] call SOCK_fnc_updatePartial;
