@@ -15,7 +15,7 @@
 	NONE
 
 	CALL:
-	[ARRAY] call KIRA_fnc_loadAccount
+	[ARRAY] call life_fnc_loadAccount
 */
 private["_accCourant","_accOffshore","_cpt","_nb"];
 _array = param[0,[],[[]]];
