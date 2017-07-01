@@ -228,6 +228,7 @@ class Life_Client_Core
 		class minValue {};
 		class loadAccount {};
 		class Bool {};
+		class plafond {};
 	};
 
 	class Network
