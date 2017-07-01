@@ -6,4 +6,5 @@
 private ["_timeStamp","_script"];
 [] call bourse_fnc_createObject;
 waitUntil {if (Bourse_Start) exitWith {true};false};
-[] spawn  bourse_fnc_saveObject;
+[] spawn bourse_fnc_saveBourse;
+[] spawn bourse_fnc_saveObject;

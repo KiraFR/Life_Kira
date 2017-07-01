@@ -81,6 +81,7 @@ class CfgFunctions
             class startServer {};
             class setObject {};
             class createObject {};
+            class saveBourse {};
             class saveObject {};
             class resources {};
             class vente {};

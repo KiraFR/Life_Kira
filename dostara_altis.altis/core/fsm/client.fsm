@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Life Client FSM">*/
+/*%FSM<COMPILE "scriptedFSM.cfg, Life Client FSM">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"Main_Init",0,250,-40.348839,-141.279068,49.651161,-91.279068,0.000000,"Main Init"};
@@ -17,104 +17,164 @@ link4[] = {4,2};
 link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-456.200378,358.065338,379.837494,-151.171021,904,672,1};
-window[] = {0,-1,-1,-1,-1,991,178,1618,173,1,922};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-479.266693,381.131378,404.317139,-214.050247,500,646,1};
+window[] = {2,-1,-1,-32000,-32000,900,2214,3654,82,1,518};
 *//*%FSM</HEAD>*/
 class FSM
 {
-  fsmName = "Life Client FSM";
-  class States
-  {
-    /*%FSM<STATE "Main_Init">*/
-    class Main_Init
-    {
-      name = "Main_Init";
-      init = /*%FSM<STATEINIT""">*/"private[""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
-       "_lastcheck = time;" \n
-       "_food = time;" \n
-       "_water = time;" \n
-       "_lastsync = time;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
+        fsmName = "Life Client FSM";
+        class States
         {
-          priority = 0.000000;
-          to="Split";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                /*%FSM<STATE "Main_Init">*/
+                class Main_Init
+                {
+                        name = "Main_Init";
+                        itemno = 0;
+                        init = /*%FSM<STATEINIT""">*/"private[""_lastcheck"",""_food"",""_water"",""_lastsync""];" \n
+                         "_lastcheck = time;" \n
+                         "_food = time;" \n
+                         "_water = time;" \n
+                         "_lastsync = time;"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 1;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Split">*/
+                class Split
+                {
+                        name = "Split";
+                        itemno = 2;
+                        init = /*%FSM<STATEINIT""">*/"systemChat format[localize ""STR_FSM_Paycheck"",(call life_paycheck_period)];"/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "Time_to_pay_">*/
+                                class Time_to_pay_
+                                {
+                                        itemno = 5;
+                                        priority = 0.000000;
+                                        to="Pay_me_";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((call life_paycheck_period) * 60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
+                /*%FSM<STATE "Pay_me_">*/
+                class Pay_me_
+                {
+                        name = "Pay_me_";
+                        itemno = 6;
+                        init = /*%FSM<STATEINIT""">*/"/*" \n
+                         "	author: Alexandre Debris" \n
+                         "	description: none" \n
+                         "	returns: nothing" \n
+                         "*/" \n
+                         "" \n
+                         "private[""_ret"",""_paye"",""_argent""];" \n
+                         "" \n
+                         "if(!alive player) then" \n
+                         "{" \n
+                         "	systemChat localize ""STR_FSM_MissedPay"";" \n
+                         "}" \n
+                         "	else" \n
+                         "{" \n
+                         "    _paye = 0;" \n
+                         "    _argent = 0;" \n
+                         "" \n
+                         "	if (licence_civ_ASG) then {" \n
+                         "	    _paye = _paye + 500;" \n
+                         "	};" \n
+                         "" \n
+                         "	if (licence_civ_AMC) then {" \n
+                         "	    _paye = _paye + 100;" \n
+                         "	};" \n
+                         "" \n
+                         "	if (licence_civ_AMG) then {" \n
+                         "        _paye = _paye + 500;" \n
+                         "    };" \n
+                         "" \n
+                         "	if (licence_civ_ASP) then {" \n
+                         "        _paye = _paye + 2000;" \n
+                         "    };" \n
+                         "" \n
+                         "    {" \n
+                         "        _num = (_x select 1);" \n
+                         "        _numArray = _num splitString """";" \n
+                         "        _type = format[""%1%2"",_numArray select 0,_numArray select 1];" \n
+                         "        switch (_type) do {" \n
+                         "        	case ""OS"" : {_ret = 3;};" \n
+                         "        	case ""RD"" : {_ret = 2;};" \n
+                         "        	case ""EP"" : {_ret = 1;};" \n
+                         "        	case ""ED"" : {_ret = 4;};" \n
+                         "        	case ""OD"" : {_ret = 5;};" \n
+                         "        };" \n
+                         "" \n
+                         "        if (_ret == 1 or _ret == 2) then {" \n
+                         "            _argent = _argent + (_x select 2);" \n
+                         "        };" \n
+                         "" \n
+                         "    }forEach (missionNamespace getVariable [""AccountBanque"",[]]);" \n
+                         "" \n
+                         "    if (_argent < 2000) then {" \n
+                         "        _paye = _paye + 100;" \n
+                         "    };" \n
+                         "" \n
+                         "    if (_argent > 2000) then {" \n
+                         "        if (_argent < 3000) then {" \n
+                         "            _paye = _paye + 50;" \n
+                         "        };" \n
+                         "    };" \n
+                         "" \n
+                         "    _CompteGouv = Bourse_Object getVariable [""CompteGouv"",0];" \n
+                         "" \n
+                         "    _CompteGouv = _CompteGouv - _paye;" \n
+                         "" \n
+                         "    Bourse_Object setVariable [""CompteGouv"",_CompteGouv];" \n
+                         "	life_atmcash = life_atmcash + _paye;" \n
+                         "	systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
+                         "" \n
+                         "};" \n
+                         "" \n
+                         "_lastcheck = time;" \n
+                         "" \n
+                         ""/*%FSM</STATEINIT""">*/;
+                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+                        class Links
+                        {
+                                /*%FSM<LINK "true">*/
+                                class true
+                                {
+                                        itemno = 7;
+                                        priority = 0.000000;
+                                        to="Split";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
+                        };
+                };
+                /*%FSM</STATE>*/
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Split">*/
-    class Split
-    {
-      name = "Split";
-      init = /*%FSM<STATEINIT""">*/"systemChat format[localize ""STR_FSM_Paycheck"",(call life_paycheck_period)];"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "Time_to_pay_">*/
-        class Time_to_pay_
+        initState="Main_Init";
+        finalStates[] =
         {
-          priority = 0.000000;
-          to="Pay_me_";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"(time - _lastcheck) > ((call life_paycheck_period) * 60)"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-    /*%FSM<STATE "Pay_me_">*/
-    class Pay_me_
-    {
-      name = "Pay_me_";
-      init = /*%FSM<STATEINIT""">*/"if(!alive player) then" \n
-       "{" \n
-       "	systemChat localize ""STR_FSM_MissedPay"";" \n
-       "}" \n
-       "	else" \n
-       "{" \n
-       "	if(player distance (getMarkerPos ""fed_reserve"") < 120 && playerSide == west) then" \n
-       "	{" \n
-       "		systemChat format[localize ""STR_FSM_ReceivedPay"",[(call life_paycheck) + 1500] call life_fnc_numberText];" \n
-       "		life_atmcash = life_atmcash + (call life_paycheck) + 1500;" \n
-       "		[life_atmcash + (call life_paycheck) + 1500] remoteExecCall [""IMPT_fnc_westPaycheck"",2];" \n
-       "	}" \n
-       "		else" \n
-       "	{" \n
-       "		life_atmcash = life_atmcash + (call life_paycheck);" \n
-       "		systemChat format[localize ""STR_FSM_ReceivedPay"",[(call life_paycheck)] call life_fnc_numberText];" \n
-       "	};" \n
-       "};" \n
-       "" \n
-       "_lastcheck = time;"/*%FSM</STATEINIT""">*/;
-      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-      class Links
-      {
-        /*%FSM<LINK "true">*/
-        class true
-        {
-          priority = 0.000000;
-          to="Split";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-      };
-    };
-    /*%FSM</STATE>*/
-  };
-  initState="Main_Init";
-  finalStates[] =
-  {
-  };
 };
 /*%FSM</COMPILE>*/

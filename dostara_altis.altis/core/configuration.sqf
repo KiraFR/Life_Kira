@@ -236,7 +236,13 @@ life_licenses =
 	["license_civ_vin","civ"],
 	["licence_civ_fermenta","civ"],
 	["licence_civ_gouv","civ"],
-	["license_civ_ebou","civ"]
+	["license_civ_ebou","civ"],
+
+	["licence_civ_ASG","civ"],
+	["licence_civ_AMC","civ"],
+	["licence_civ_AMG","civ"],
+	["licence_civ_ASP","civ"]
+
 ];
 
 //Setup License Variables

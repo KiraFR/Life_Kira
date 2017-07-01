@@ -45,6 +45,12 @@ switch (_mode) do
 			case "opium": {_var = "licence_civ_opium"};
 			case "vin": {_var = "licence_civ_vin"};
 			case "cidre": {_var = "licence_civ_fermenta"};
+
+			case "ASG": {_var = "licence_civ_ASG"};
+            case "AMC": {_var = "licence_civ_AMC"};
+            case "AMG": {_var = "licence_civ_AMG"};
+            case "ASP": {_var = "licence_civ_ASP"};
+
 			default {_var = ""};
 		};
 	};
@@ -83,6 +89,12 @@ switch (_mode) do
 			case "licence_civ_opium": {_var = "opium"};
 			case "licence_civ_fermenta": {_var = "vin"};
 			case "licence_civ_vin": {_var = "cidre"};
+
+			case "licence_civ_ASG": {_var = "ASG"};
+			case "licence_civ_AMC": {_var = "AMC"};
+			case "licence_civ_AMG": {_var = "AMG"};
+			case "licence_civ_ASP": {_var = "ASP"};
+
 			default {_var = ""};
 		};
 	};

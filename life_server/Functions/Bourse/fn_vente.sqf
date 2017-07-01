@@ -53,9 +53,6 @@ if (!(isNil 'Bourse_Object')) then {
              };
         };
 
-        diag_log format ["%1",_prix];
-        diag_log format ["%1",_value];
-
         if (_value >= _seil) then {
             _valueNew = (_value - (_count * _evol));
         }else{
@@ -81,7 +78,7 @@ if (!(isNil 'Bourse_Object')) then {
                 };
             }forEach _Object;
         }forEach _relation;
-        Bourse_Object setVariable ["Bourse",_Object, true];
+        Bourse_Resource_Save pushBack [_resource,_count];
         [_prix] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];
     };
 };
