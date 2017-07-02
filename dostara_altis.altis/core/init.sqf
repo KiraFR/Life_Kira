@@ -42,12 +42,14 @@ waitUntil {life_session_completed};
 
 //diag_log "::Life Client:: Group Base Execution";
 [] spawn life_fnc_escInterupt;
+
+waitUntil {!(isNull (findDisplay 46))};
+diag_log "Display 46 Found";
+
 [] call side_fnc_initialization;
 diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
 diag_log "Executing client.fsm";
-waitUntil {!(isNull (findDisplay 46))};
-diag_log "Display 46 Found";
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
 diag_log "------------------------------------------------------------------------------------------------------";
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
