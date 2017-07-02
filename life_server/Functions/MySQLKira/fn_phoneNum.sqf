@@ -14,18 +14,22 @@
 	CALL:
 	[] call KIRA_fnc_phoneNum
 */
-_prefixe = param[0,"",[""]];
-_player = param[1,objNull,[objNull]];
-_allnumber = ["SELECT numero FROM phonenumber",2,true] call DB_fnc_asyncCall;
+params [
+	["_prefixe","",[""]],
+	["_player",objNull,[objNull]]
+];
 
-_fiveNumber = floor(random(99999));
+private _allnumber = ["SELECT numero FROM phonenumber",2,true] call DB_fnc_asyncCall;
+
+private _fiveNumber = floor(random(99999));
+
 _fiveNumber = str(_fiveNumber);
 
 _fiveNumber = _fiveNumber splitString "";
-switch (count _fiveNumber) do { 
-	case 1 : { _fiveNumber = format["0000%1",_fiveNumber joinString ""]; }; 
-	case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; }; 
-	case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; }; 
+switch (count _fiveNumber) do {
+	case 1 : { _fiveNumber = format["0000%1",_fiveNumber joinString ""]; };
+	case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; };
+	case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; };
 	case 4 : { _fiveNumber = format["0%1",_fiveNumber joinString ""]; };
 	default {_fiveNumber = _fiveNumber joinString "";}
 };
@@ -36,9 +40,9 @@ while {(_allnumber find [_fiveNumber]) != -1} do {
 
 	_fiveNumber = _fiveNumber splitString "";
 	switch (count _fiveNumber) do {
-		case 1 : { _fiveNumber = format["0000%1",_fiveNumber joinString ""]; }; 
-		case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; }; 
-		case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; }; 
+		case 1 : { _fiveNumber = format["0000%1",_fiveNumber joinString ""]; };
+		case 2 : { _fiveNumber = format["000%1",_fiveNumber joinString ""]; };
+		case 3 : { _fiveNumber = format["00%1",_fiveNumber joinString ""]; };
 		case 4 : { _fiveNumber = format["0%1",_fiveNumber joinString ""]; };
 		default { _fiveNumber = _fiveNumber joinString "";};
 	};
