@@ -19,6 +19,5 @@ switch (playerSide) do {
 	};
 };
 
-player addRating 99999999;
 // Set unit vars
 [] call side_fnc_initPlayerVars;
