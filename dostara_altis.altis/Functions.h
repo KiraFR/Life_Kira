@@ -72,7 +72,6 @@ class Life_Client_Core
 		class medicRequest {};
 		class deathScreen {};
 		class medicLoadout {};
-		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
 	};

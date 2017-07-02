@@ -141,11 +141,7 @@ switch (_code) do
 		if(_shift && playerSide in [west,independent]) then {
 			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
-					if(playerSide == west) then {
-						[vehicle player] call life_fnc_sirenLights;
-					} else {
-						[vehicle player] call life_fnc_medicSirenLights;
-					};
+					[vehicle player] call life_fnc_sirenLights;
 					_handled = true;
 				};
 			};
