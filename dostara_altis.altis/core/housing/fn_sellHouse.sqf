@@ -1,7 +1,7 @@
 #include "..\..\macro.h"
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sells the house?
 */
@@ -31,14 +31,14 @@ if(_action) then {
 	_house setVariable["containers",nil,true];
 	deleteMarkerLocal format["house_%1",_house getVariable "uid"];
 	_house setVariable["uid",nil,true];
-	
-	life_atmcash = life_atmcash + (round((_houseCfg select 0)/2));
+
+	BANK = BANK + (round((_houseCfg select 0)/2));
 	_index = life_vehicles find _house;
 	if(_index != -1) then {
 		life_vehicles set[_index,-1];
 		life_vehicles = life_vehicles - [-1];
 	};
-	
+
 	_index = [str(getPosATL _house),life_houses] call TON_fnc_index;
 	if(_index != -1) then {
 		life_houses set[_index,-1];
@@ -50,4 +50,3 @@ if(_action) then {
 	};
 	[getPlayerUID player, playerSide, [name player, position _house,(round((_houseCfg select 0)/2))],35] remoteExecCall ["DB_fnc_logs",2];
 };
-

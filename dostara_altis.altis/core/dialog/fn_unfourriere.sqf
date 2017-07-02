@@ -2,7 +2,7 @@
 /*
 	File: fn_unfourriere.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Yeah... Gets the vehicle from the garage.
 */
@@ -19,7 +19,7 @@ if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error";};
 
 _price = [_vehicle,__GETC__(life_fourriere_prices)] call TON_fnc_index;
 if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_fourriere_prices) select _price) select 1;};
-if(life_atmcash < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
+if(BANK < _price) exitWith {hint format[(localize "STR_Garage_CashError"),[_price] call life_fnc_numberText];};
 
 
 if(typeName life_fourriere_sp == "ARRAY") then {
@@ -34,5 +34,5 @@ if(typeName life_fourriere_sp == "ARRAY") then {
 
 hint localize "STR_Garage_SpawningVeh";
 
-life_atmcash = life_atmcash - _price;
+BANK = BANK - _price;
 [1] call SOCK_fnc_updatePartial;

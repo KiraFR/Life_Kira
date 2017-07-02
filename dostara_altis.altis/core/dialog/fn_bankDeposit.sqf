@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_bankDeposit.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Figure it out.
 */
@@ -12,7 +13,7 @@ _value = parseNumber(ctrlText 2702);
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 0) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
-if(_value > life_cash) exitWith {hint localize "STR_ATM_NotEnoughCash"};
+if(_value > CASH) exitWith {hint localize "STR_ATM_NotEnoughCash"};
 
 _ac = missionNamespace getVariable ["accountBanque",[]];
 {
@@ -46,11 +47,11 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 	};
 }foreach _ac;
 
-_valTot = life_atmcash + _value;
+_valTot = BANK + _value;
 if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
 
-life_cash = life_cash - _value;
-life_atmcash = life_atmcash + _value;
+CASH = CASH - _value;
+BANK = BANK + _value;
 hint format[localize "STR_ATM_DepositMSG",[_value] call life_fnc_numberText];
 call SOCK_fnc_updateBanque;
 [] call life_fnc_atmMenu;

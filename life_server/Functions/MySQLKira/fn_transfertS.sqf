@@ -14,11 +14,10 @@
 	CALL:
 	[] call KIRA_fnc_transfertS
 */
-private["_queryResult","_taxes","_amountSender","_amount","_unit"];
 params[["_amount",0,[0]],["_numAcc","",[""]],["_amountSender",0,[0]],["_numAccSender","",[""]],["_taxes",0,[0]],["_player",objNull,[objNull]]];
 
-_queryResult = [format["SELECT playerid FROM banque WHERE numcompte='%1'",_numAcc],2] call DB_fnc_asyncCall;
-if(count _queryResult == 0) exitWith{
+private _queryResult = [format["SELECT playerid FROM banque WHERE numcompte='%1'",_numAcc],2] call DB_fnc_asyncCall;
+if (count _queryResult == 0) exitWith {
 	[(_amount+_taxes),_numAccSender] remoteExecCall ["KIRA_fnc_rembourser",_player];
 };
 if(typeName _queryResult == "ARRAY")then{_queryResult = _queryResult select 0;};
@@ -37,6 +36,6 @@ _query = format["UPDATE banque SET bankacc=bankacc+%2 WHERE numcompte='%1';
 [_query,1] call DB_fnc_asyncCall;
 
 
-_unit = [_queryResult] call KIRA_fnc_isConnected;
-if(isNull _unit)exitWith{};
+private _unit = [_queryResult] call KIRA_fnc_isConnected;
+if (isNull _unit) exitWith {};
 [_amount,_numAcc,false] remoteExecCall ["KIRA_fnc_saveMoney",_unit];

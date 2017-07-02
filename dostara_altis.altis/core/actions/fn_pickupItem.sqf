@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_pickupItem.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master handling for picking up an item.
 */
@@ -17,7 +18,7 @@ _illegal = [_itemInfo select 0,life_illegal_items] call TON_fnc_index;
 if(playerSide == west && _illegal != -1) exitWith
 {
 	titleText[format[localize "STR_NOTF_PickedEvidence",_itemName,[(life_illegal_items select _illegal) select 1] call life_fnc_numberText],"PLAIN"];
-	life_atmcash = life_atmcash + ((life_illegal_items select _illegal) select 1);
+	BANK = BANK + ((life_illegal_items select _illegal) select 1);
 	deleteVehicle _obj;
 	//waitUntil {isNull _obj};
 	life_action_delay = time;

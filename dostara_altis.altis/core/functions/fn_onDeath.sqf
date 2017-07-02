@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_onDeath.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Does whatever it needs to when a player dies.
 */
@@ -22,10 +23,10 @@ hideBody _unit;
 
 if(side _source == west && !life_use_atm) then
 {
-	if(life_cash != 0) then
+	if(CASH != 0) then
 	{
-		[format["$%1 from the Federal Reserve robbery was returned from the robber being killed.",[life_cash] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
-		life_cash = 0;
+		[format["$%1 from the Federal Reserve robbery was returned from the robber being killed.",[CASH] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
+		CASH = 0;
 	};
 };
 
@@ -47,6 +48,6 @@ life_carryWeight = 0;
 life_thirst = 100;
 life_hunger = 100;
 life_use_atm = true;
-life_cash = 0;
+CASH = 0;
 
 [] call SOCK_fnc_updateRequest;

@@ -18,7 +18,7 @@ if (_value > _gFund) exitWith {hint localize "STR_ATM_NotEnoughFundsG"};
 if (_val < 100 && _gFund > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
 
 _gFund = _gFund - _value;
-life_atmcash = life_atmcash + _value;
+BANK = BANK + _value;
 group player setVariable ["gang_bank",_gFund,true];
 
 [1,group player] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.

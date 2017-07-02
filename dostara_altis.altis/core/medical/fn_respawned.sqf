@@ -1,17 +1,18 @@
+#include "..\..\macro.h"
 /*
 	File: fn_respawned.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sets the player up if he/she used the respawn option.
 */
-private["_handle"];
+private "_handle";
 //Reset our weight and other stuff
 life_use_atm = TRUE;
 life_hunger = 100;
 life_thirst = 100;
 life_carryWeight = 0;
-life_cash = 0; //Make sure we don't get our cash back.
+CASH = 0; //Make sure we don't get our cash back.
 life_respawned = false;
 player playMove "amovpercmstpsnonwnondnon";
 

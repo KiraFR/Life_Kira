@@ -1,7 +1,7 @@
 #include "..\..\macro.h"
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Raids the players house?
 */
@@ -54,7 +54,7 @@ _value = 0;
 {
 	_var = _x select 0;
 	_val = _x select 1;
-	
+
 	_index = [_var,life_illegal_items] call TON_fnc_index;
 	if(_index != -1) then {
 		_vIndex = [_var,__GETC__(sell_array)] call TON_fnc_index;
@@ -69,7 +69,7 @@ _value = 0;
 
 if(_value > 0) then {
 	[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
-	if (life_nbAcc == 0)then { life_cash = life_cash + _value } else { life_atmcash = life_atmcash + _value };
+	if (life_nbAcc == 0)then { CASH = CASH + _value } else { BANK = BANK + _value };
 	_house setVariable["Trunk",[_houseInvData,_houseInvVal],true];
 	[_house],RemoteExecCall ["TON_fnc_updateHouseTrunk",2];
 } else {

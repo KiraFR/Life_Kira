@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_buyClothes.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Buys the current set of clothes and closes out of the shop interface.
 */
@@ -16,8 +17,8 @@ _price = 0;
 	};
 } forEach life_clothing_purchase;
 
-if(_price > life_cash) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
-life_cash = life_cash - _price;
+if(_price > CASH) exitWith {titleText[localize "STR_Shop_NotEnoughClothes","PLAIN"];};
+CASH = CASH - _price;
 
 life_clothesPurchased = true;
 closeDialog 0;

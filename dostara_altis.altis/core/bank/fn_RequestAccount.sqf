@@ -23,8 +23,8 @@ switch (_type) do {
 		_PriceB = (life_AccOffshore)*(100000*3);
 		_first = false;
 		if(_PriceB == 0)then{_PriceB = 100000;_first = true;};
-		if(life_cash < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
-		life_cash = life_cash - _PriceB;
+		if(CASH < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
+		CASH = CASH - _PriceB;
 		_type = 1;
 		_guid = (getPlayerUID Player) splitString "";
 		if(clientOwner < 10)then{_client = format["00%1",clientOwner];};
@@ -49,8 +49,8 @@ switch (_type) do {
 		_PriceB = (20*25)*(life_AccN);
 		_first = false;
 		if(_PriceB == 0)then{_PriceB = 25;_first = true;};
-		if(life_cash < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
-		life_cash = life_cash - _PriceB;
+		if(CASH < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
+		CASH = CASH - _PriceB;
 
 		_type = 2;
 
@@ -75,8 +75,8 @@ switch (_type) do {
 	case 3: {
 		if(life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
 		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
-		if(life_cash < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
-		life_cash = life_cash - 10000;
+		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
+		CASH = CASH - 10000;
 
 		_type = 3;
 
@@ -120,7 +120,7 @@ switch (_type) do {
 	case 5: {
 		if(life_OrgaAcc)exitWith{hint "Votre entreprise a deja un compte."};
 		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
-		if(life_cash < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
+		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		_type = 5;
 
 		_guid = (getPlayerUID Player) splitString "";

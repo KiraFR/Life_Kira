@@ -1,9 +1,10 @@
+#include "..\..\macro.h"
 /*
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
 private["_packet","_array","_flag"];
-_packet = [getPlayerUID player,(profileName),playerSide,life_cash];
+_packet = [getPlayerUID player,(profileName),playerSide,CASH];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
 {

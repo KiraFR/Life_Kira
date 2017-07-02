@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File:  fn_loadAccount.sqf
 	Auteur: J. `Kira` D.
@@ -19,9 +20,11 @@
 */
 private["_accCourant","_accOffshore","_cpt","_nb"];
 _array = param[0,[],[[]]];
-_courant = _array param[0,[],[[]]];
-_entreprise = _array param[1,[],[[]]];
-_offshore = _array param[2,[],[[]]];
+_array params [
+	["_courant",[],[[]]],
+	["_entreprise",[],[[]]],
+	["_offshore",[],[[]]],
+];
 _cpt = 0;
 //_orga = _array param[3,[],[[]]];
 if(count _courant > 0) then{
@@ -31,7 +34,7 @@ if(count _courant > 0) then{
 		_default = [_x select 3] call life_fnc_bool;
 		diag_log format["%1 %2",(_x select 2),typeName (_x select 2)];
 		if(_default)then{
-			life_atmCash = if(typeName (_x select 2) == "STRING") then{
+			BANK = if(typeName (_x select 2) == "STRING") then{
 				parseNumber(_x select 2);
 			}else{
 				(_x select 2);

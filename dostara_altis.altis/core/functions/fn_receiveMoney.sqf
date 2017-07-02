@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_receiveMoney.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Receives money
 */
@@ -15,4 +16,4 @@ if(!([_val] call TON_fnc_isnumber)) exitWith {};
 if(_unit == _from) exitWith {}; //Bad boy, trying to exploit his way to riches.
 
 hint format[localize "STR_NOTF_GivenMoney",_from getVariable["realname",name _from],[(parseNumber (_val))] call life_fnc_numberText];
-life_cash = life_cash + (parseNumber(_val));
+CASH = CASH + (parseNumber(_val));

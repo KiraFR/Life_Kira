@@ -28,7 +28,7 @@ if(_bad != "") exitWith {hint _bad};
 
 if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 {
-	life_cash = life_cash + _price;
+	CASH = CASH + _price;
 	[_item,false] call life_fnc_handleItem;
 	[getPlayerUID player, playerSide, [name player, _itemInfo select 1,_item,_price],19] remoteExecCall ["DB_fnc_logs",2];
 
@@ -40,7 +40,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 		_action = [
 			format[(localize "STR_Shop_Virt_Gang_FundsMSG")+ "<br/><br/>" +(localize "STR_Shop_Virt_Gang_Funds")+ " <t color='#8cff9b'>$%1</t><br/>" +(localize "STR_Shop_Virt_YourFunds")+ " <t color='#8cff9b'>$%2</t>",
 				[(grpPlayer getVariable "gang_bank")] call life_fnc_numberText,
-				[life_cash] call life_fnc_numberText
+				[CASH] call life_fnc_numberText
 			],
 			localize "STR_Shop_Virt_YourorGang",
 			localize "STR_Shop_Virt_UI_GangFunds",
@@ -57,15 +57,15 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 			[_item,true] spawn life_fnc_handleItem;
 			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
 		} else {
-			if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+			if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
-			life_cash = life_cash - _price;
+			CASH = CASH - _price;
 			[_item,true] spawn life_fnc_handleItem;
 		};
 	} else {
-		if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
+		if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
-		life_cash = life_cash - _price;
+		CASH = CASH - _price;
 		[_item,true] spawn life_fnc_handleItem;
 
 		[getPlayerUID player, playerSide, [name player, _itemInfo select 1, _item, _price],20] remoteExecCall ["DB_fnc_logs",2];

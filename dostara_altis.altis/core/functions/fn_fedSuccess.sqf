@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_fedSuccess.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Ugh coming up with a name for it was stupid but whatever.
 	If the robbery was successful on the Federal reserve then punish
@@ -15,10 +16,10 @@ if(_funds == -1) exitWith {};
 if(!life_use_atm) exitWith {};
 sleep 45;
 
-if(_funds >= life_atmcash && !life_has_insurance) then
+if(_funds >= BANK && !life_has_insurance) then
 {
 	hint "Due to the robbery on the Federal Reserve you have lost a percentage of your money but you have went bankrupt.\n\nNext time buy some banking insurance on your next visit to a ATM to better protect your assets!";
-	life_atmcash = 0;
+	BANK = 0;
 }
 	else
 {
@@ -30,6 +31,6 @@ if(_funds >= life_atmcash && !life_has_insurance) then
 		else
 	{
 		hint format["Due to the recent robbery on the Federal Reserve you have lost $%1 from your bank account, next time buy some banking insurance!\n\nYou can buy banking insurance from a ATM!",[_funds] call life_fnc_numberText];
-		life_atmcash = life_atmcash - _funds;
+		BANK = BANK - _funds;
 	};
 };

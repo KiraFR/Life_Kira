@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_pickupMoney.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Picks up money
 */
@@ -22,7 +23,7 @@ if(!isNil {_val}) then
 {
 	deleteVehicle _obj;
 	//waitUntil {isNull _obj};
-	
+
 	//Stop people picking up huge values of money which should stop spreading dirty money.
 	switch (true) do
 	{
@@ -30,12 +31,11 @@ if(!isNil {_val}) then
 		case (_val > 5000000) : {_val = 250000;}; //VAL>5mil->250k
 		default {};
 	};
-	
+
 	player playmove "AinvPknlMstpSlayWrflDnon";
 	titleText[format[localize "STR_NOTF_PickedMoney",[_val] call life_fnc_numberText],"PLAIN"];
-	life_cash = life_cash + _val;
+	CASH = CASH + _val;
 	life_action_delay = time;
 	//LOGS
 	[getPlayerUID player, playerSide, [name player,_val, getPos player],33] remoteExecCall ["DB_fnc_logs",2];
 };
-

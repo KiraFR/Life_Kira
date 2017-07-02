@@ -6,6 +6,6 @@
 	Description:
 	Lol tu comprend rien
 */
-_Bank = missionNamespace getVariable "AccountBanque";
-_Bank pushBack _this;
-missionNamespace setVariable ["AccountBanque",_Bank];
+private _bank = missionNamespace getVariable "AccountBanque";
+_bank pushBack _this;
+missionNamespace setVariable ["AccountBanque",_bank];

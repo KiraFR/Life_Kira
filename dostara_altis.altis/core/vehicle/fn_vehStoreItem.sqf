@@ -1,8 +1,8 @@
-#define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
+#include "..\..\macro.h"
 /*
 	File: fn_vehStoreItem.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Used in the vehicle trunk menu, stores the selected item and puts it in the vehicles virtual inventory
 	if the vehicle has room for the item.
@@ -32,7 +32,7 @@ if(_ctrl == "goldbar" && {!(life_trunk_vehicle isKindOf "LandVehicle" OR life_tr
 if(_ctrl == "money") then
 {
 	_index = [_ctrl,_inv] call TON_fnc_index;
-	if(life_cash < _num) exitWith {hint "You don't have that much cash on you to store in the vehicle!"};
+	if(CASH < _num) exitWith {hint "You don't have that much cash on you to store in the vehicle!"};
 	if(_index == -1) then
 	{
 		_inv pushBack [_ctrl,_num];
@@ -42,8 +42,8 @@ if(_ctrl == "money") then
 		_val = _inv select _index select 1;
 		_inv set[_index,[_ctrl,_val + _num]];
 	};
-	
-	life_cash = life_cash - _num;
+
+	CASH = CASH - _num;
 	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 }
@@ -62,7 +62,7 @@ if(_ctrl == "money") then
 		_val = _inv select _index select 1;
 		_inv set[_index,[_ctrl,_val + _num]];
 	};
-	
+
 	life_trunk_vehicle setVariable["Trunk",[_inv,(_veh_data select 1) + _itemWeight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 };

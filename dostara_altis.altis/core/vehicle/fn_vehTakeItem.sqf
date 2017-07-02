@@ -1,8 +1,8 @@
-#define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
+#include "..\..\macro.h"
 /*
 	File: fn_vehTakeItem.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Used in the vehicle trunk menu, takes the selected item and puts it in the players virtual inventory
 	if the player has room.
@@ -39,8 +39,8 @@ if(_ctrl == "money") then
 	{
 		_data set[_index,[_ctrl,(_value - _num)]];
 	};
-	
-	life_cash = life_cash + _num;
+
+	CASH = CASH + _num;
 	life_trunk_vehicle setVariable["Trunk",[_data,(_old select 1) - _weight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
 }

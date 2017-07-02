@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_updateBanque.sqf
 	Author: R. `KronosD` R.
@@ -12,7 +13,7 @@ _Info = missionNamespace getVariable ["AccountBanque",[]];
 	_tab = _x;
 	_dft = _x select 3;
 	if(_dft)exitWith{
-		_tab set [2,life_atmCash];
+		_tab set [2,BANK];
 		_index = _forEachIndex;
 	};
 }foreach _Info;

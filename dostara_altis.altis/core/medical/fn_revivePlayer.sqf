@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_revivePlayer.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Starts the revive process on the player.
 */
@@ -61,7 +62,7 @@ if((player getVariable["restrained",false])) exitWith {life_action_inUse = false
 if(!isNil "_badDistance") exitWith {titleText[localize "STR_Medic_TooFar","PLAIN"]; life_action_inUse = false;};
 if(life_interrupted) exitWith {life_interrupted = false; titleText[localize "STR_NOTF_ActionCancel","PLAIN"]; life_action_inUse = false;};
 
-life_atmcash = life_atmcash + (call life_revive_fee);
+BANK = BANK + (call life_revive_fee);
 life_action_inUse = false;
 _target setVariable["Revive",TRUE,TRUE];
 [profileName,player] RemoteExecCall ["life_fnc_revived",_target];

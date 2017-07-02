@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_vehInventory.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Used a refresher for the vehicle inventory / trunk menu items.
 */
@@ -45,9 +46,9 @@ if(count _data == 0) then {_veh setVariable["Trunk",[[],0],true]; _data = [];} e
 	}
 		else
 	{
-		if(life_cash > 0) then
+		if(CASH > 0) then
 		{
-			_pInv lbAdd format["$%1",[life_cash] call life_fnc_numberText];
+			_pInv lbAdd format["$%1",[CASH] call life_fnc_numberText];
 			_pInv lbSetData [(lbSize _pInv)-1,"money"];
 		};
 	};

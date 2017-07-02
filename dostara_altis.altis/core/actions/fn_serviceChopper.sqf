@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_serviceChopper.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main functionality for the chopper service paid, to be replaced in later version.
 */
@@ -10,8 +11,8 @@ private["_search","_ui","_progress","_cP","_pgText","_title"];
 if(life_action_inUse) exitWith {hint localize "STR_NOTF_Action"};
 _search = nearestObjects[getPos air_sp, ["Air"],5];
 if(count _search == 0) exitWith {hint localize "STR_Service_Chopper_NoAir"};
-if(life_cash < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
-life_cash = life_cash - 1000;
+if(CASH < 1000) exitWith {hint localize "STR_Serive_Chopper_NotEnough"};
+CASH = CASH - 1000;
 life_action_inUse = true;
 _title = localize "STR_Service_Chopper_Servicing";
 5 cutRsc ["life_progress","PLAIN"];

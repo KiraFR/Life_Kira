@@ -2,7 +2,7 @@
 /*
 	File: fn_sellOil.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sells the oil to the oil trader.
 	Will be revised.
@@ -16,5 +16,5 @@ _price = _price * _val;
 if(([false,"oilp",_val] call life_fnc_handleInv)) then
 {
 	titleText[format["You have sold %1 barrels of oil for $%2",_val,[_price] call life_fnc_numberText],"PLAIN"];
-	life_cash = life_cash + _price;
+	CASH = CASH + _price;
 };

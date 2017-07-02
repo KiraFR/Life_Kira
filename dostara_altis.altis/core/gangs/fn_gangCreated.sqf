@@ -8,11 +8,11 @@
 private "_group";
 life_action_gangInUse = nil;
 
-if(life_atmcash < (__GETC__(life_gangPrice))) exitWith {
-	hint format[localize "STR_GNOTF_NotEnoughMoney",[((__GETC__(life_gangPrice))-life_atmcash)] call life_fnc_numberText];
+if(BANK < (__GETC__(life_gangPrice))) exitWith {
+	hint format[localize "STR_GNOTF_NotEnoughMoney",[((__GETC__(life_gangPrice))-BANK)] call life_fnc_numberText];
 	{(group player) setVariable[_x,nil,true];} forEach ["gang_id","gang_owner","gang_name","gang_members","gang_maxmembers","gang_bank"];
 };
 
-life_atmcash = life_atmcash - (__GETC__(life_gangPrice));
+BANK = BANK - (__GETC__(life_gangPrice));
 
 hint format[localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(__GETC__(life_gangPrice))] call life_fnc_numberText];

@@ -1,3 +1,4 @@
+#include "..\..\macro.h"
 /*
 	File: fn_vehicleShopBuyCop.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -8,16 +9,16 @@
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
 _mode = _this select 0;
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
-_className = lbData[2302,(lbCurSel 2302)];
-_vIndex = lbValue[2302,(lbCurSel 2302)];
+_className = getSelData(2302);
+_vIndex = getSelValue(2302);
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
  if(_mode) then {_basePrice = round(_basePrice * 1.5)};
-_colorIndex = lbValue[2304,(lbCurSel 2304)];
+_colorIndex = getSelValue(2304);
 if (license_cop_prefet == 0)then {closeDialog 0;}
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
-if(life_cash < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - life_cash] call life_fnc_numberText];};
+if(CASH < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - CASH] call life_fnc_numberText];};
 if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint localize "STR_Shop_Veh_NoLicense"};
 
 _spawnPoints = life_veh_shop select 1;
@@ -37,7 +38,7 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
-life_cash = life_cash - _basePrice;
+CASH = CASH - _basePrice;
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.

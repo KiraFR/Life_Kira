@@ -21,8 +21,7 @@
 	CALL:
 	[STRING,STRING,STRING,STRING,STRING,STRING,STRING] remoteExecCall KIRA_fnc_SaveTestament
 */
-private["_query"];
-_query = "INSERT INTO notaire(uidPlayer,nomCl,amount,realAmount,nomNotaire,description,date,toPlayer) VALUES(";
+private _query = "INSERT INTO notaire(uidPlayer,nomCl,amount,realAmount,nomNotaire,description,date,toPlayer) VALUES(";
 
 {
 	_query = _query + "," + _x;
@@ -30,5 +29,5 @@ _query = "INSERT INTO notaire(uidPlayer,nomCl,amount,realAmount,nomNotaire,descr
 _query = _query + ");";
 diag_log _query;
 
-if(_query == "")exitWith{};
+if (_query == "") exitWith {};
 [_query,1] call DB_fnc_asyncCall;

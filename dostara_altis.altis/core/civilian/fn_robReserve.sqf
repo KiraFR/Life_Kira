@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_robReserve.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main functionality for robbing the federal reserve.
 */
@@ -40,19 +41,19 @@ switch(true) do
 		hint "You went to far from the safe, the robbery has failed!";
 		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
-	
+
 	case (!alive player):
 	{
 		hint "Because you died the robbery failed.";
 		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
-	
+
 	case (life_istazed):
 	{
 		hint "You were tazed, the robbery has failed!";
 		[[_vault,0] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
-	
+
 	case ((round(_timer - time)) < 1):
 	{
 		hint format["You have successfully robbed $%1\n\nTo avoid the cops tracing you, your bank card will not work for 8 minutes",[_funds] call life_fnc_numberText];
@@ -62,7 +63,7 @@ switch(true) do
 			sleep 480;
 			life_use_atm = true;
 		};
-		life_cash = life_cash + _funds;
+		CASH = CASH + _funds;
 		[[_vault,1,_funds] RemoteExecCall ["TON_fnc_robberyState",0];
 	};
 };

@@ -1,15 +1,16 @@
+#include "..\..\macro.h"
 /*
 	File: fn_RefreshReceived.sqf
 	Author: J `Kira` D
-	
+
 	Description:
 	update les chiffres
 */
 params ["_type","_data"];
-switch (_type) do {
+switch _type do {
 	//joueurs
 	case 0:{
-			life_atmcash = _data;
+			BANK = _data;
 			[] call life_fnc_hudUpdate;
 			hint "les impôts sont tombés.";
 	};

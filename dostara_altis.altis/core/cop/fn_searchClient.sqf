@@ -1,7 +1,8 @@
+#include "..\..\macro.h"
 /*
 	File: fn_searchClient.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Searches the player and he returns information back to the player.
 */
@@ -21,9 +22,9 @@ _robber = false;
 	};
 } forEach life_illegal_items;
 
-if(!life_use_atm) then 
+if(!life_use_atm) then
 {
-	life_cash = 0;
+	CASH = 0;
 	_robber = true;
 };
 

@@ -2,10 +2,10 @@
 /*
 	File: fn_requestReceived.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
-	Called by the server saying that we have a response so let's 
-	sort through the information, validate it and if all valid 
+	Called by the server saying that we have a response so let's
+	sort through the information, validate it and if all valid
 	set the client up.
 */
 life_session_tries = life_session_tries + 1;
@@ -23,7 +23,7 @@ if((_this select 0) == "Error") exitWith {[] call SOCK_fnc_insertPlayerInfo;};
 if((getPlayerUID player) != _this select 0) exitWith {[] call SOCK_fnc_dataQuery;};
 
 //Parse basic player information.
-life_cash = parseNumber (_this select 2);
+CASH = parseNumber (_this select 2);
 
 life_gear = _this select 7;
 [] call life_fnc_loadGear;
@@ -68,7 +68,7 @@ switch(playerSide) do {
 			_house = nearestBuilding (call compile format["%1", _x select 0]);
 			life_vehicles pushBack _house;
 		}forEach life_houses;
-		
+
 		life_gangData = _This select 11;
 		if(count life_gangData != 0) then {
 			[] spawn life_fnc_initGang;
@@ -99,7 +99,7 @@ switch(playerSide) do {
 			{life_vehicles pushBack _x;} forEach (_this select 18);
 		};
 	};
-	
+
 	case independent: {
 		CONSTANT(life_medicLevel, parseNumber(_this select 6));
 		CONSTANT(life_coplevel,0);
@@ -118,13 +118,13 @@ switch(playerSide) do {
 	};
 };
 
-switch (true) do {
-	case (life_atmcash < 100000):{life_paycheck = 500;};
-	case (life_atmcash > 100000):{life_paycheck = 200;};
-	case (life_atmcash > 200000):{life_paycheck = 100;};
-	case (life_atmcash > 300000):{life_paycheck = 50;};
-	case (life_atmcash > 400000):{life_paycheck = 25;};
-	case (life_atmcash > 500000):{life_paycheck = 0;};
+switch true do {
+	case (BANK < 100000):{life_paycheck = 500;};
+	case (BANK > 100000):{life_paycheck = 200;};
+	case (BANK > 200000):{life_paycheck = 100;};
+	case (BANK > 300000):{life_paycheck = 50;};
+	case (BANK > 400000):{life_paycheck = 25;};
+	case (BANK > 500000):{life_paycheck = 0;};
 	case (PlayerSide == west || PlayerSide == independent):{life_paycheck = 1200;};
 };
 

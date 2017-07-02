@@ -14,7 +14,6 @@
 	CALL:
 	[STRING] call KIRA_fnc_queryAccountRequest
 */
-private["_tab"];
 _uid = param[0,"",[""]];
 _total = [];
 _cpt = 0;
