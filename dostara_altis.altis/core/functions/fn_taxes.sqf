@@ -85,7 +85,7 @@ switch (_type) do {
 				*/
 				_ret = switch (_type) do {
 					case 1 : {0}//impossible
-					case 2 : {if(_first)then{0.05}else{0.1};};
+					case 2 : {if(_first)then{0.05}else{0.1}};
 					case 3 : {
 						if(_first)then{
 							if(_type == 3)then{0.05}else{0.15};
