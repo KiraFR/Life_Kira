@@ -1,7 +1,7 @@
 #include "..\..\macro.h"
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Inserts the gang into the database.
 */
@@ -50,12 +50,12 @@ if(count _queryResult != 0) then {
 
 _queryResult = [_query,1] call DB_fnc_asyncCall;
 
-_group setVariable["gang_name",_gangName,true];
-_group setVariable["gang_owner",_uid,true];
-_group setVariable["gang_bank",0,true];
-_group setVariable["gang_maxMembers",8,true];
-_group setVariable["gang_members",[_uid],true];
-[[_group],"life_fnc_gangCreated",_ownerID,false] spawn life_fnc_MP;
+_group setVariable ["gang_name",_gangName,true];
+_group setVariable ["gang_owner",_uid,true];
+_group setVariable ["gang_bank",0,true];
+_group setVariable ["gang_maxMembers",8,true];
+_group setVariable ["gang_members",[_uid],true];
+[_group] remoteExecCall ["life_fnc_gangCreated",_ownerID];
 
 sleep 0.35;
 _query = format["SELECT id FROM gangs WHERE owner='%1' AND active='1'",_uid];

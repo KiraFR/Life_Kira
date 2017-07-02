@@ -1,12 +1,3 @@
-life_fnc_sidechat =
-compileFinal "
-	if(life_sidechat) then {life_sidechat = false;} else {life_sidechat = true;};
-	[[player,life_sidechat,playerSide],""TON_fnc_managesc"",false,false] spawn life_fnc_MP;
-	[] call life_fnc_settingsMenu;
-";
-
-publicVariable "life_fnc_sidechat";
-
 TON_fnc_index =
 compileFinal "
 	params ['_item','_stack'];
@@ -25,9 +16,9 @@ TON_fnc_player_query =
 compileFinal "
 	params ['_ret'];
 	if(isNull _ret) exitWith {};
-	
-	[[life_atmcash,life_cash,owner player,player],""life_fnc_admininfo"",_ret,false] spawn life_fnc_MP;
 	if(isNil '_ret') exitWith {};
+
+	[life_atmbank,life_cash,owner player,player] remoteExecCall ['life_fnc_adminInfo',_ret];
 ";
 publicVariable "TON_fnc_player_query";
 
@@ -51,7 +42,7 @@ compileFinal "
 	_valid = ['0','1','2','3','4','5','6','7','8','9'];
 	_array = [_value] call KRON_StrToArray;
 	_return = true;
-	
+
 	{
 		if!(_x in _valid) then {
 			_return = false;
@@ -84,7 +75,7 @@ compileFinal "
 		_name = getText(configFile >> 'CfgVehicles' >> (typeOf _vehicle) >> 'displayName');
 		hint format['%1 has gave you keys for a %2',_giver,_name];
 		life_vehicles pushBack _vehicle;
-		[[getPlayerUID player,playerSide,_vehicle,1],""TON_fnc_keyManagement"",false,false] spawn life_fnc_MP;
+		[getPlayerUID player,playerSide,_vehicle,1] remoteExecCall [""TON_fnc_keyManagement"",2];
 	};
 ";
 
@@ -96,8 +87,9 @@ compileFinal "
 	if(isNil '_unit' OR isNil '_group') exitWith {};
 	if(player == _unit && (group player) == _group) then
 	{
+		player setRank 'COLONEL';
 		_group selectLeader _unit;
-		hint ""You have been made the new leader."";
+		hint 'You have been made the new leader.';
 	};
 ";
 

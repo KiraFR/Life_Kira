@@ -234,8 +234,6 @@ class Life_Client_Core
 	{
 		file = "core\functions\network";
 		class broadcast {};
-		class MP {};
-		class MPexec {};
 		class netSetVar {};
 		class corpse {};
 		class jumpFnc {};
