@@ -1,4 +1,4 @@
-#include "..\..\macro.h"
+#include "\life_server\script_macros.hpp"
 /*
 	File: fn_chopShopSell.sqf
 	Author: Bryan "Tonic" Boardwine

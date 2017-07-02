@@ -1,4 +1,4 @@
-#include "..\..\macro.h"
+#include "\life_server\script_macros.hpp"
 /*
 	Author: Karel Moricky
 

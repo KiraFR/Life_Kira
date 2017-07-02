@@ -1,5 +1,5 @@
 #define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
-#include "..\..\macro.h"
+#include "\life_server\script_macros.hpp"
 /*
 	File: fn_safeStore.sqf
 	Author: Bryan "Tonic" Boardwine
