@@ -260,7 +260,6 @@ class Life_Client_Core
 		class demoChargeTimer {};
 		class civLoadout {};
 		class lessPoints {};
-		class freezePlayer {}; //Admin Menu
 	};
 
 	class Vehicle
