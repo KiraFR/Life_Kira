@@ -1,5 +1,5 @@
 #include "macro.h"
-private["_extDBNotLoaded"];
+private "_extDBNotLoaded";
 DB_Async_ExtraLock = false;
 life_server_isReady = false;
 _extDBNotLoaded = "";
