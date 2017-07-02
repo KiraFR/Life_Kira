@@ -59,10 +59,6 @@ life_sidechat = true;
 LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 [] call life_fnc_settingsInit;
-life_fnc_moveIn = compileFinal
-"
-	player moveInCargo (_this select 0);
-";
 
 life_fnc_garageRefund = compileFinal
 "
