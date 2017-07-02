@@ -5,7 +5,7 @@
 */
 private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_Resources","_Resource_2","_Id_Object2","_newValueArray","_Object_Bourse","_resource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_name"];
 uiSleep 5;
-while{true} do {
+while {true} do {
     _ObjectLast = Bourse_Resource_Save;
     uiSleep (30);
     _Object = Bourse_Resource_Save;
@@ -22,14 +22,14 @@ while{true} do {
                     if (_Resources == _Resources_2) exitWith {
                         _Id_Object2  = (_Object2 find [_Resources_2,_Sell_2]);
                     };
-                }forEach _Object2;
+                } forEach _Object2;
                 if (_Id_Object2 == -1) then {
                     _Object2 pushBack [_Resources,_Sell];
-                }else{
+                } else {
                     _newValueArray = (((_Object select _Id_Object2) select 1) + _Sell);
                     _Object set [_Id_Object2,[_Resources,_newValueArray]];
                 };
-            }forEach _Object;
+            } forEach _Object;
 
             {
                 _Object_Bourse = Bourse_Object getVariable "Bourse";
@@ -39,12 +39,7 @@ while{true} do {
                 _countArr = count _result;
                 if (_countArr != 0) then {
                     _valueNew = 0;
-                    _min = (_result select 0);
-                    _max = (_result select 1);
-                    _seil = (_result select 2);
-                    _evol = (_result select 3);
-                    _entValue = (_result select 5);
-                    _relation = (_result select 6);
+                    _result params ["_min","_max","_seil","_evol","_entValue","_relation","_value"];
                     _value = {if (_resource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object_Bourse;
                     if (_ent) then {
                         if (_entValue != 0) then {
@@ -54,23 +49,23 @@ while{true} do {
                     if (_max == -1) then {
                         if (_value < _min) then {
                             _prix = _count * _min;
-                        }else{
+                        } else {
                             _prix = _count * _value;
                         };
-                    }else{
+                    } else {
                         if (_value > _max) then {
                             _prix = _count * _max;
-                        }else{
+                        } else {
                             if (_value < _min) then {
                                 _prix = _count * _min;
-                            }else{
+                            } else {
                                 _prix = _count * _value;
                             };
                          };
                     };
                     if (_value >= _seil) then {
                         _valueNew = (_value - (_count * _evol));
-                    }else{
+                    } else {
                         _valueNew = (_value - (_count));
                     };
                     _valueArray = [_resource,_value];
@@ -88,11 +83,11 @@ while{true} do {
                                 _newValueArray = [_name,((_x select 1) + (_valueModif))];
                                 _Object_Bourse set [_id,_newValueArray];
                             };
-                        }forEach _Object_Bourse;
-                    }forEach _relation;
+                        } forEach _Object_Bourse;
+                    } forEach _relation;
                     Bourse_Object setVariable ["Bourse",_Object_Bourse, true];
                 };
-            }forEach _Object2;
+            } forEach _Object2;
         };
     };
 };

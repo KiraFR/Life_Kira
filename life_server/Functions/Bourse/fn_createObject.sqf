@@ -3,13 +3,10 @@
 	description: none
 	returns: nothing
 */
-
-private ["_pos","_Object"];
-
-_pos = [-1,-1,-1];
+private _pos = [-1,-1,-1];
 
 if (!isNil 'Bourse_Object') then {
-deleteVehicle Bourse_Object;
+  deleteVehicle Bourse_Object;
 };
 
 Bourse_Object = createSimpleObject ["a3\structures_f\civ\Garbage\GarbageBags_F.p3d", _pos];
