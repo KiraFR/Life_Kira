@@ -1,4 +1,5 @@
-#include "macro.h"
+#include "\life_server\script_macros.hpp"
+
 private "_extDBNotLoaded";
 DB_Async_ExtraLock = false;
 life_server_isReady = false;
@@ -6,7 +7,6 @@ _extDBNotLoaded = "";
 publicVariable "life_server_isReady";
 Debug = false;
 [] execVM "\life_server\functions.sqf";
-[] execVM "\life_server\eventhandlers.sqf";
 
 //I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
 
