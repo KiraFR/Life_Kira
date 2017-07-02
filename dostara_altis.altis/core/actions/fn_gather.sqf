@@ -22,16 +22,26 @@ if(_zone == "") exitWith {
 };
 //Get the resource that will be gathered from the zone name...
 switch(true) do {
-	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {_gather = "apple"; _val = 3;};
+	case (_zone in ["Ress_Pomme_01","Ress_Pomme_02"]): {_gather = "apple"; _val = 3;};
 	case (_zone in ["Ress_Pêche_01","Ress_Pêche_02"]): {_gather = "peach"; _val = 3;};
 	case (_zone in ["heroin_1"]): {_gather = "heroinu"; _val = 1;};
 	case (_zone in ["wine_1","wine_2"]): {_gather = "vinu"; _val = 3;};
 	case (_zone in ["cocaine_1"]): {_gather = "cocaine"; _val = 1;};
 	case (_zone in ["weed_1"]): {_gather = "cannabis"; _val = 1;};
 	case (_zone in ["opium_1"]): {_gather = "opiumn"; _val = 1;};
-	case (_zone in ["Ress_Bois_1","Ress_Bois_2","Ress_Bois_3","Ress_Bois_4"]): {_gather = "Bois"; _val = floor(random(4));};
-	case (_zone in ["Ress_Sable_2","Ress_Sable_1"]): {_gather = "sand"; _val = floor(random(5));};
-	case (_zone in ["Ress_Sel_1"]): {_gather = "salt_f"; _val = floor(random(3));};
+	case (_zone in ["Ress_Bois_01","Ress_Bois_02","Ress_Bois_03","Ress_Bois_04"]): {_gather = "Bois"; _val = floor(random(4));};
+	case (_zone in ["Ress_Sable_02","Ress_Sable_01"]): {_gather = "sand"; _val = floor(random(5));};
+	case (_zone in ["Ress_Raisin_01","Ress_Raisin_02"]): {_gather = "sand"; _val = floor(random(5));};
+	case (_zone in ["Ress_Alu_01","Ress_Alu_02"]): {_gather = "AluminiumB"; _val = floor(random(3));};
+	case (_zone in ["Ress_Orange_01","Ress_Orange_02"]): {_gather = "Orange"; _val = floor(random(3));};
+	case (_zone in ["Ress_Calcaire_01","Ress_Calcaire_02"]): {_gather = "Calcaire"; _val = floor(random(3));};
+	case (_zone in ["Ress_Charbon_01","Ress_Charbon_02"]): {_gather = "Charbon"; _val = floor(random(3));};
+	case (_zone in ["Ress_Cuivre_01"]): {_gather = "copperB"; _val = floor(random(3));};
+	case (_zone in ["Ress_Fer_01","Ress_Fer_02"]): {_gather = "FerB"; _val = floor(random(3));};
+	case (_zone in ["Ress_Sel_01"]): {_gather = "salt_f"; _val = floor(random(3));};
+	case (_zone in ["Ress_PP_01"]): {_gather = "//"; _val = floor(random(3));};
+	case (_zone in ["Ress_Petrole_01"]): {_gather = "oil"; _val = floor(random(3));};
+	case (_zone in ["Ress_Argent_01"]): {_gather = "ArgentB"; _val = floor(random(3));};
 	default {""};
 };
 //gather check??
