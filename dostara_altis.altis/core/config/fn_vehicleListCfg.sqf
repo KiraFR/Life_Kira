@@ -2,7 +2,7 @@
 /*
 	File:
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration list / array for buyable vehicles & prices and their shop.
 */
@@ -24,78 +24,88 @@ switch (_shop) do
 	case "med_shop":
 	{
 		_return = [
-			["C_Offroad_01_F",10000],
-			["I_Truck_02_medical_F",25000],
-			["O_Truck_03_medical_F",45000],
-			["B_Truck_01_medical_F",60000]
+			["VL_SIM",10000],
+			["VSAV_SIM",25000]
 		];
 	};
-	
+
 	case "med_air_hs": {
 		_return = [
-			["B_Heli_Light_01_F",50000],
-			["O_Heli_Light_02_unarmed_F",75000]
+			["O_Heli_Transport_04_medevac_F",50000]
 		];
 	};
-	
+
 	case "civ_car":
 	{
-		_return = 
+		_return =
 		[
-			["B_Quadbike_01_F",2500],
-			["C_Hatchback_01_F",9500],
-			["C_Offroad_01_F",12500],
-			["C_SUV_01_F",35000],
-			["C_Van_01_transport_F",40000]
+			["C_Hatchback_01_F",2500],
+			["C_Offroad_01_F",5000],
+			["C_SUV_01_F",5000],
+			["C_Van_01_transport_F",35000],
+			["ivory_rs4",80000],
+			["ivory_c",200000],
+			["ivory_e36",15900],
+			["ivory_veyron",1100000],
+			["ivory_suburban",60000],
+			["ivory_isf",40000],
+			["ivory_elise",40000],
+			["ivory_f1",12000000],
+			["ivory_mp4",357000],
+			["ivory_190e",19999],
+			["ivory_evox",20999],
+			["ivory_r34",108000],
+			["ivory_gt500",147000],
+			["ivory_supra",40000],
+			["ivory_supra_topsecret",50000],
+			["ivory_gti",38750],
+			["ivory_m3",90500],
+			["ivory_lfa",575000],
+			["ivory_wrx",35000]
+
 		];
 	};
-	
+
 	case "civ_truck":
 	{
 		_return =
 		[
-			["C_Van_01_box_F",60000],
-			["I_Truck_02_transport_F",75000],
-			["I_Truck_02_covered_F",100000],
-			["B_Truck_01_transport_F",275000],
-			["O_Truck_03_transport_F",200000],
-			["O_Truck_03_covered_F",250000],
-			["B_Truck_01_box_F",350000],
-			["O_Truck_03_device_F",450000]
-		];	
+			["C_Van_01_box_F",15000],
+			["I_Truck_02_covered_F",120000]
+
+		];
 	};
-	
-	
+
+
 	case "reb_car":
 	{
 		_return =
 		[
-			["B_Quadbike_01_F",2500],
 			["B_G_Offroad_01_F",15000],
 			["O_MRAP_02_F",150000],
 			["B_Heli_Light_01_F",325000]
 		];
-		
+
 		if(license_civ_rebel) then
 		{
 			_return pushBack
 			["B_G_Offroad_01_armed_F",750000];
 		};
 	};
-	
+
 	case "cop_car":
 	{
 		_return pushBack
-		["C_Offroad_01_F",5000];
-		_return pushBack
-		["C_SUV_01_F",20000];
-		if(__GETC__(life_coplevel) > 2) then
+		["DAR_ChargerPolice",5000],
+		["DAR_ExplorerPolice",5000],
+		["M3_POLICE",5000]
+		if(license_cop_gdo) then
 		{
 			_return pushBack
-			["B_MRAP_01_F",30000];
+			["Gurkha_f5",30000];
 		};
 	};
-	
+
 	case "civ_air":
 	{
 		_return =
@@ -104,18 +114,19 @@ switch (_shop) do
 			["O_Heli_Light_02_unarmed_F",750000]
 		];
 	};
-	
+
 	case "cop_air":
 	{
 		_return pushBack
-		["B_Heli_Light_01_F",75000];
+		["HummingBird_Police",12500],
+		["HummingBird_GDO",12500],
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return pushBack
-			["B_Heli_Transport_01_F",200000];
+			["EC635_Police",75000];
 		};
 	};
-	
+
 	case "cop_airhq":
 	{
 		_return pushBack
@@ -128,7 +139,7 @@ switch (_shop) do
 			["B_MRAP_01_hmg_F",750000];
 		};
 	};
-	
+
 	case "civ_ship":
 	{
 		_return =
