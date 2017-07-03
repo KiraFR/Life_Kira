@@ -36,10 +36,10 @@ switch (_type) do {
 				*/
 				_ret = switch (_type) do {
 					case 1 : {50}; //50€ et non 5000%
-					case 2 : {1};
+					case 2 : {0};
 					case 3 : {0.05};
 					case 4 : {0.02};
-					default {1};
+					default {0};
 				};
 			};
 		}foreach _ac;
@@ -62,7 +62,7 @@ switch (_type) do {
 					case 2 : {if(_first)then{1}else{0.05};};
 					case 3 : {0.1};
 					case 4 : {0.02};
-					default {1};
+					default {0};
 				};
 			};
 		}foreach _ac;
@@ -84,7 +84,7 @@ switch (_type) do {
 					5. Organisme
 				*/
 				_ret = switch (_type) do {
-					case 1 : {0}//impossible
+					case 1 : {false}//impossible
 					case 2 : {if(_first)then{0.05}else{0.1}};
 					case 3 : {
 						if(_first)then{

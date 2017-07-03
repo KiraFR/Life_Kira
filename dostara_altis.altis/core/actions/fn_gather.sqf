@@ -38,8 +38,8 @@ switch(true) do {
 	case (_zone in ["Ress_Charbon_01","Ress_Charbon_02"]): {_gather = "Charbon"; _val = floor(random(3));};
 	case (_zone in ["Ress_Cuivre_01"]): {_gather = "copperB"; _val = floor(random(3));};
 	case (_zone in ["Ress_Fer_01","Ress_Fer_02"]): {_gather = "FerB"; _val = floor(random(3));};
-	case (_zone in ["Ress_Sel_01"]): {_gather = "salt_f"; _val = floor(random(3));};
-	case (_zone in ["Ress_PP_01"]): {_gather = "//"; _val = floor(random(3));};
+	case (_zone in ["Ress_Sel_01"]): {_gather = "salt_r"; _val = floor(random(3));};
+	case (_zone in ["Ress_PP_01"]): {_gather = "rockB"; _val = floor(random(3));};
 	case (_zone in ["Ress_Petrole_01"]): {_gather = "oil"; _val = floor(random(3));};
 	case (_zone in ["Ress_Argent_01"]): {_gather = "ArgentB"; _val = floor(random(3));};
 	default {""};

@@ -6,7 +6,7 @@
 	Description:
 	Figure it out.
 */
-private["_value","_dftfound","_plafond"];
+private["_value","_dftfound","_plafond","_taxe","_taxes"];
 _value = parseNumber(ctrlText 2702);
 
 //Series of stupid checks
@@ -49,10 +49,19 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 
 _valTot = BANK + _value;
 if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
-
+_taxe = [0] call life_fnc_taxes;
+if(_taxe == 50)then{
+	_value = _value - _taxe;
+	if(_value < 0) exitWith{hint "Vous ne pouvez pas deposer moins de 50 dostar."};
+}else{
+	_taxes = _value * _taxe;
+	_value = _value - _taxes;	
+};
 CASH = CASH - _value;
 BANK = BANK + _value;
-hint format[localize "STR_ATM_DepositMSG",[_value] call life_fnc_numberText];
+hint format["Vous venez de deposer %1 dostar, %2 dostar de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 call SOCK_fnc_updateBanque;
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
+
+[CASH,BANK,_value,_taxes,"Depot"] remoteExecCall ["KIRA_fnc_taxes",2];
