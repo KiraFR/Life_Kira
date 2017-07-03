@@ -50,6 +50,7 @@ class CfgFunctions
 			class impot{};
 			class saveTestament{};
 			class queryAccountRequest{};
+			class taxes{};
 		};
 	};
 
