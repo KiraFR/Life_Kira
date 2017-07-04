@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3136;
+		nextID=3138;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={3468.6489,188.75098,12730.036};
-		dir[]={0.49516171,-0.28688499,0.82007635};
-		up[]={0.14829066,0.95796204,0.24559546};
-		aside[]={0.85605937,-1.648441e-007,-0.51688814};
+		pos[]={3174.8967,22.575901,12897.311};
+		dir[]={0.026780196,-0.83355129,0.5518055};
+		up[]={0.040406927,0.55243009,0.83257854};
+		aside[]={0.99883145,1.8109859e-008,-0.048476391};
 	};
 };
 binarizationWanted=0;
@@ -396,7 +396,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1515;
+		items=1517;
 		class Item0
 		{
 			dataType="Marker";
@@ -747,7 +747,7 @@ class Mission
 			name="atm_marker_2_1";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=227.08566;
+			angle=227.08563;
 			id=124;
 		};
 		class Item35
@@ -4689,7 +4689,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3758.4602,12.157346,13317.771};
+						position[]={3758.46,12.157639,13317.771};
 						angles[]={0,3.7411134,0};
 					};
 					side="Civilian";
@@ -4697,13 +4697,14 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de camions"",life_fnc_vehicleShopMenu,[""civ_truck"",civilian,""civ_truck_1"",""civ"",""Bruce's New & Used Trucks""]];";
+						init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de camions"",life_fnc_vehicleShopMenu,[""civ_truck"",civilian,""civ_truck_1"",""civ"",""Concessionnaire Samer""]];}";
 						name="carshop1_2";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
 					id=648;
 					type="C_man_polo_1_F";
+					atlOffset=0.00029277802;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -4999,7 +5000,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="call{this enableSimulation false; this allowDamage false; this addAction[""Assistance Medical"",life_fnc_healHospital];}";
+						init="call{this enableSimulation false; this allowDamage false; this addAction[""Assistance Médicale"",life_fnc_healHospital];}";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
@@ -5105,7 +5106,7 @@ class Mission
 					};
 					id=661;
 					type="C_Man_casual_2_F_euro";
-					atlOffset=0.05755806;
+					atlOffset=0.057557106;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -5173,7 +5174,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3745.0061,11.893426,13328.604};
+						position[]={3745.0061,11.8939,13328.604};
 						angles[]={0,3.8897803,0};
 					};
 					side="Civilian";
@@ -5181,13 +5182,14 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionaire"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_1""],""civ"",""Bruce's New & Used Auto's""]]; this setVariable[""realname"", ""Car Shop""];";
+						init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionaire"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_1""],""civ"",""Concessionnaire Samer""]]; this setVariable[""realname"", ""Car Shop""];}";
 						name="carshop1";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
 					id=662;
 					type="C_man_polo_1_F_afro";
+					atlOffset=0.00047397614;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14780,20 +14782,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3640.5979,10.143831,13110.99};
-						angles[]={0,1.6684649,0.0039968039};
+						position[]={3686.3069,11.12611,13156.475};
+						angles[]={0,3.1440187,0};
 					};
 					side="Civilian";
 					flags=6;
 					class Attributes
 					{
 						skill=0.60000002;
-						init="this allowDamage false;  this enableSimulation false; this addAction[""Créer compte en banque"",{createDialog ""life_AccountRequest"";}];";
+						init="call{this allowDamage false;  this enableSimulation false; this addAction[""Créer compte en banque"",{createDialog ""life_AccountReq"";}];}";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
 					id=1374;
 					type="C_Man_casual_2_F_euro";
+					atlOffset=0.0003786087;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -14861,6 +14864,7 @@ class Mission
 			{
 			};
 			id=1373;
+			atlOffset=0.0003786087;
 		};
 		class Item358
 		{
@@ -18570,7 +18574,7 @@ class Mission
 			position[]={5772.2437,24.218733,14715.216};
 			name="cop_spawn_1";
 			type="Empty";
-			angle=286.44611;
+			angle=102.9109;
 			id=8;
 		};
 		class Item449
@@ -18607,7 +18611,7 @@ class Mission
 			position[]={14159.138,27.422968,18663.791};
 			name="car_g_3";
 			type="Empty";
-			angle=26.741312;
+			angle=26.74131;
 			id=102;
 		};
 		class Item453
@@ -22257,7 +22261,9 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];  }";
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]]; this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_air_1""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 			};
 			id=1563;
 			type="Land_DieselGroundPowerUnit_01_F";
@@ -24005,7 +24011,9 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == west'];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];  }";
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]]; this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_1""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+				createAsSimpleObject=1;
+				disableSimulation=1;
 				aiRadarUsage=206914;
 			};
 			id=1607;
@@ -30006,7 +30014,7 @@ class Mission
 			};
 			id=1773;
 			type="VR_Area_01_circle_4_grey_F";
-			atlOffset=3.7910101;
+			atlOffset=0.0062398911;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -30569,6 +30577,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];  this addAction[""Vehicules de Fonction"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place du Vehicule""];   life_garage_sp = ""med_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent '];  this addAction[""Ranger son Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 				aiRadarUsage=87085312;
 			};
@@ -30773,7 +30783,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false;  this allowDamage false;  this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];  this addAction[""EMS Item Shop"",life_fnc_weaponShopMenu,""med_basic""];  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];  this addAction[""Helicopter Shop"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""medic_spawn_1"",""med"",""Kavala Hosptial""]];  this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""med_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent '];  this addAction[""Helicopter Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""medic_car_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent '];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
+				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_air_1"",""med"",""Kavala Hosptial""]]; this addAction[""Reserves d Heliportes"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place de l Heliporte""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent '];  this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 				aiRadarUsage=334151;
 			};
@@ -33298,11 +33309,10 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3174.165,6.2121615,12936.376};
+				position[]={3174.165,6.2117157,12936.376};
 				angles[]={0,4.7181311,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
@@ -33310,6 +33320,7 @@ class Mission
 			};
 			id=1879;
 			type="Fridge_01_closed_F";
+			atlOffset=0.28284883;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33339,17 +33350,17 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={3174.011,6.4257479,12937.437};
+				position[]={3174.011,6.4255195,12937.437};
 				angles[]={0,4.7181311,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
 				disableSimulation=1;
 			};
 			id=1880;
 			type="Land_WaterCooler_01_new_F";
+			atlOffset=0.26028967;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -33752,11 +33763,9 @@ class Mission
 			flags=5;
 			class Attributes
 			{
-				disableSimulation=1;
 			};
 			id=1890;
 			type="Land_FuelStation_01_pump_malevil_F";
-			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35231,19 +35240,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14294.678,26.420624,18603.811};
-				angles[]={6.2405448,6.0686145,0.069222413};
+				position[]={14294.678,26.420647,18603.811};
+				angles[]={6.2405472,6.0686145,0.069219761};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 				aiRadarUsage=206914;
 			};
 			id=1969;
 			type="Land_Portable_generator_F";
-			atlOffset=-2.2888184e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35273,18 +35283,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={14300.707,27.353928,18607.525};
+				position[]={14300.707,27.353628,18607.525};
 				angles[]={6.2698507,2.2357841,0.046635196};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=1970;
 			type="Land_DieselGroundPowerUnit_01_F";
-			atlOffset=-0.001701355;
+			atlOffset=-0.0020008087;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36383,19 +36395,21 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={25791.662,13.137325,21039.865};
-				angles[]={6.2687855,3.5626774,6.2656422};
+				position[]={25791.662,13.137492,21039.865};
+				angles[]={6.268786,3.5626709,6.2656446};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_4""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 				aiRadarUsage=206914;
 			};
 			id=2019;
 			type="Land_Portable_generator_F";
-			atlOffset=0.0088329315;
+			atlOffset=0.0089998245;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -36425,18 +36439,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={25802.334,13.872035,21050.215};
-				angles[]={6.2566085,1.4655663,6.2774668};
+				position[]={25802.334,13.871881,21050.215};
+				angles[]={6.2566037,1.4655704,6.2774606};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2020;
 			type="Land_DieselGroundPowerUnit_01_F";
-			atlOffset=0.007153511;
+			atlOffset=0.0069999695;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37707,17 +37723,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17160.746,16.924755,13164.659};
-				angles[]={0.017332481,1.8481935,0.010664274};
+				position[]={17160.746,16.924768,13164.66};
+				angles[]={0.01733112,1.8481989,0.010663962};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "}";
 			};
 			id=2068;
 			type="Land_BeachBooth_01_F";
-			atlOffset=-0.003027916;
+			atlOffset=-0.0030002594;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -37747,13 +37764,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17184.545,16.499195,13166.303};
-				angles[]={6.2671871,2.9242971,0.0093286335};
+				position[]={17184.545,16.499208,13166.304};
+				angles[]={6.2671809,2.9242992,0.0093200579};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_3""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 				aiRadarUsage=206914;
 			};
@@ -37788,18 +37807,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17189.182,16.728928,13185.215};
-				angles[]={0.059928458,2.602324,6.2418742};
+				position[]={17189.182,16.729069,13185.215};
+				angles[]={0.059934605,2.6023209,6.2418733};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_3""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west']; this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2070;
 			type="Land_DieselGroundPowerUnit_01_F";
-			atlOffset=-0.0021409988;
+			atlOffset=-0.001999855;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -38658,6 +38679,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""];}";
 			};
 			id=2134;
 			type="Land_BeachBooth_01_F";
@@ -39180,12 +39202,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={14272.96,27.260309,18629.643};
-				angles[]={6.26719,3.2189896,6.2805991};
+				angles[]={6.2671981,3.218998,6.280602};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""];}";
 			};
 			id=2150;
 			type="Land_BeachBooth_01_F";
@@ -42437,7 +42460,7 @@ class Mission
 		class Item1071
 		{
 			dataType="Marker";
-			position[]={4418.3091,37.421608,12602.939};
+			position[]={4418.3091,0,12602.939};
 			name="Ress_Calcaire_01";
 			text="Calcaire";
 			type="mil_dot";
@@ -42445,6 +42468,7 @@ class Mission
 			a=2;
 			b=2;
 			id=2287;
+			atlOffset=-37.421608;
 		};
 		class Item1072
 		{
@@ -43218,8 +43242,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8367.4658,64.815216,25256.096};
-				angles[]={0.0079935296,5.6524229,0.18711878};
+				position[]={8367.4658,64.814812,25256.096};
+				angles[]={0.0079936078,5.6524229,0.18711674};
 			};
 			side="Empty";
 			flags=4;
@@ -43231,7 +43255,7 @@ class Mission
 			};
 			id=2405;
 			type="Land_CargoBox_V1_F";
-			atlOffset=0.048408508;
+			atlOffset=0.04800415;
 		};
 		class Item1100
 		{
@@ -43873,6 +43897,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 			};
 			id=2452;
 			type="Land_BeachBooth_01_F";
@@ -43912,6 +43937,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 			};
 			id=2453;
 			type="Land_BeachBooth_01_F";
@@ -43951,6 +43977,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 			};
 			id=2454;
 			type="Land_BeachBooth_01_F";
@@ -43990,7 +44017,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Cop Item Shop"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Cop Clothing Shop"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -44052,6 +44079,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -44112,6 +44140,7 @@ class Mission
 			side="Empty";
 			class Attributes
 			{
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -44173,7 +44202,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this addAction[""GDO"",life_fnc_weaponShopMenu,""cop_gdo""];}";
+				init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -44209,18 +44238,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5794.2119,26.222866,14692.374};
+				position[]={5794.2119,26.222757,14692.374};
 				angles[]={0,2.0863667,0};
 			};
 			side="Empty";
-			flags=4;
 			class Attributes
 			{
+				init="call{this addAction[""Reserve du GDO"",life_fnc_weaponShopMenu,""cop_gdo""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2461;
 			type="Box_NATO_Equip_F";
+			atlOffset=1.1510029;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -44697,18 +44727,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={11462.336,20.394939,14179.988};
+				position[]={11462.336,20.395212,14179.988};
 				angles[]={6.2698507,1.4641218,6.2338972};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Fournir des materiaux de Construction"",life_fnc_virt_menu,""build""];}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2485;
 			type="Land_WheelCart_F";
-			atlOffset=-0.00027275085;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -45582,7 +45613,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];  " \n "this addAction[""Acheter la license de cimenterie"",life_fnc_buyLicense,""cement"",0,false,false,"""",' !licence_civ_cement && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du Ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];  " \n "}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50295,7 +50326,7 @@ class Mission
 			name="atm_marker_6";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=3.5541825;
+			angle=3.5541821;
 			id=2810;
 		};
 		class Item1298
@@ -50310,7 +50341,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du Ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];  " \n "}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50607,7 +50638,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Faire de la Chaux"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50682,7 +50713,7 @@ class Mission
 			class Attributes
 			{
 				health=0;
-				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
+				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre l Aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre l Argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre le Cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre le Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre le Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50772,7 +50803,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""iron""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources Metallurgiques"",life_fnc_virt_menu,""iron""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -51016,7 +51047,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""Eluxe""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de produits de Luxe"",life_fnc_virt_menu,""Eluxe""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -51178,8 +51209,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18299.285,49.842083,15604.484};
-				angles[]={6.1742382,4.5750208,6.2239265};
+				position[]={18299.285,49.84219,15604.484};
+				angles[]={6.1742415,4.5750141,6.2239313};
 			};
 			side="Empty";
 			flags=5;
@@ -51189,7 +51220,7 @@ class Mission
 			};
 			id=2867;
 			type="Land_Rampart_F";
-			atlOffset=-0.074108124;
+			atlOffset=-0.074001312;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51310,7 +51341,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""build""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Fournir des materiaux de Construction"",life_fnc_virt_menu,""build""];}";
+				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2872;
@@ -52593,7 +52625,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""ECombustible""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources Combustibles"",life_fnc_virt_menu,""ECombustible""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -52828,7 +52860,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
+				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre l Aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre l Argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre le Cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre le Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre le Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -52901,7 +52933,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Faire de la Chaux"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53453,7 +53485,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53653,7 +53685,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Faire du multifruit"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53866,7 +53898,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53919,7 +53951,7 @@ class Mission
 		class Item1399
 		{
 			dataType="Marker";
-			position[]={14124.55,-2.8637397e-021,18425.316};
+			position[]={14124.55,0,18425.316};
 			name="Trait_Pressoir_02";
 			text="Pressoir";
 			type="mil_triangle";
@@ -54079,7 +54111,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Faire du multifruit"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -55211,7 +55243,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Faire de l acier"",life_fnc_processAction,""Acier"",0,false,false,"""",' life_inv_Charbon && life_inv_Aluminium && life_inv_iron_r > 0 && licence_civ_Acier && !life_is_processing'];  " \n "this addAction[""Acheter la license d Acier"",life_fnc_buyLicense,""Acier"",0,false,false,"""",' !licence_civ_Acier && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Faire de l Acier"",life_fnc_processAction,""Acier"",0,false,false,"""",' life_inv_Charbon && life_inv_Aluminium && life_inv_iron_r > 0 && licence_civ_Acier && !life_is_processing'];  " \n "}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -55825,7 +55857,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""fishmarket""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -55908,20 +55940,20 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23084.027,19.087542,20097.361};
+				position[]={23084.027,19.086542,20097.361};
 				angles[]={6.2525201,0,6.2578607};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""fishmarket""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3053;
 			type="Land_CargoBox_V1_F";
-			atlOffset=0.00099754333;
+			atlOffset=-1.9073486e-006;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -56621,7 +56653,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""fishmarket""];}";
+				init="call{this allowDamage false; this enableSimulation false; this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -58052,6 +58084,57 @@ class Mission
 			};
 			id=3124;
 			atlOffset=0.00018310547;
+		};
+		class Item1515
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3156.4336,-17.448421,12896.531};
+				angles[]={0,5.4672961,0};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+				disableSimulation=1;
+			};
+			id=3136;
+			type="Land_Pier_Box_F";
+			atlOffset=3.807343;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1516
+		{
+			dataType="Marker";
+			position[]={3172.1809,0,12914.328};
+			name="med_air_1";
+			type="Empty";
+			angle=260.40198;
+			id=3137;
+			atlOffset=-2.3189056;
 		};
 	};
 };
