@@ -3516,12 +3516,8 @@
 			<Portuguese>Tactical Bacon</Portuguese>
 		</Key>
 		<Key ID="STR_Item_RedGull">
-			<Original>RedGull</Original>
-			<English>RedGull</English>
-			<German>RedGull</German>
-			<French>RedGull</French>
-			<Italian>RedGull</Italian>
-			<Portuguese>RedGull</Portuguese>
+			<Original>Soda Extra Energy Drink</Original>
+			<French>Soda Extra Energy Drink</French>
 		</Key>
 		<Key ID="STR_Item_Lockpick">
 			<Original>Lockpick</Original>
