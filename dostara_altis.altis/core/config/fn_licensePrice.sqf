@@ -1,7 +1,7 @@
 /*
 	File: fn_licensePrice.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Returns the license price.
 */
@@ -17,7 +17,7 @@ switch (_type) do
 		}else{
 			500 * life_nbrFoisPermis
 		};
-	}; 
+	};
 	case "boat": {1000}; //Boating license cost
 	case "pilot": {25000}; //Pilot/air license cost
 	case "gun": {10000}; //Firearm/gun license cost
@@ -37,7 +37,7 @@ switch (_type) do
 		}else{
 			20000 * life_nbrFoisPermis
 		};
-	}; 
+	};
 	case "diamond": {35000};
 	case "salt": {12000};
 	case "cocaine": {30000};
@@ -50,4 +50,8 @@ switch (_type) do
 	case "opium": {150000};
 	case "cidre": {150000};
 	case "vin": {150000};
+	case "fonderie": {150000};
+	case "usinage": {150000};
+	case "presseur": {150000};
+
 };

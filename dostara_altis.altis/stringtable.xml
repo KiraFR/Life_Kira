@@ -3850,16 +3850,30 @@
 			<Portuguese>Treinamento de Opium</Portuguese>
 		</Key>
 		<Key ID="STR_License_Cidre">
-			<Original>Cidre Training</Original>
+			<Original>Fermentation</Original>
 			<English>Cidre Training</English>
-			<French>Fermentation du Cidre</French>
+			<French>Fermentation</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
-		<Key ID="STR_License_Vin">
-			<Original>Vin Training</Original>
+		<Key ID="STR_License_presseur">
+			<Original>Fermentation</Original>
+			<English>Cidre Training</English>
+			<French>Art du pressoir</French>
+			<Italian>Processo Cidre</Italian>
+			<Portuguese>Treinamento de Cidre</Portuguese>
+		</Key>
+		<Key ID="STR_License_Usine">
+			<Original>Fermentation</Original>
+			<English>Cidre Training</English>
+			<French>Usinage</French>
+			<Italian>Processo Cidre</Italian>
+			<Portuguese>Treinamento de Cidre</Portuguese>
+		</Key>
+		<Key ID="STR_License_Fonderie">
+			<Original>Fonte Training</Original>
 			<English>Vin Training</English>
-			<French>Echange de Vin</French>
+			<French>Fondeur de pere en Fils</French>
 			<Italian>Processo Vin</Italian>
 			<Portuguese>Treinamento de Vin</Portuguese>
 		</Key>

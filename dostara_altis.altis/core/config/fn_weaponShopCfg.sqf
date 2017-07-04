@@ -74,7 +74,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 2): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 1): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -100,7 +100,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 3): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 2): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Police Officer Shop",
@@ -128,7 +128,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 4): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 3): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Sergent Shop",
@@ -159,7 +159,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 5): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 4): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Lieutenant Shop",
@@ -190,7 +190,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 6): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 5): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -221,7 +221,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 7): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 6): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -252,7 +252,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 8): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) == 7): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -283,37 +283,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (license_cop_swat): {"Vous n'etes pas du bon niveau !"};
+			case (license_cop_gdo): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Groupe de Defense et D'opération",
 					[
-						["arifle_mas_mp5",nil,350],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["LMG_mas_M249_F",nil,30000],
-						["srifle_mas_sr25",nil,30000],
-						["srifle_mas_m107",nil,30000],
-						["srifle_mas_hk417",nil,30000],
-						["arifle_mas_hk417c",nil,30000],
-						["arifle_mas_hk417_m203c",nil,30000],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
-						["optic_mas_zeiss",nil,2750],
-						["optic_mas_acog_eo",nil,2750],
-						["7Rnd_mas_12Gauge_Pellets",nil,130],
-						["7Rnd_mas_12Gauge_Slug",nil,130],
-						["30Rnd_mas_556x45_Stanag",nil,10],
-						["200Rnd_mas_556x45_Stanag",nil,130],
-						["5Rnd_mas_127x99_Stanag",nil,130],
-						["20Rnd_mas_762x51_Stanag",nil,130],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["FirstAidKit",nil,1],
-						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["arifle_mas_mp5",nil,0],
+						["arifle_mas_hk416",nil,0],
+						["arifle_mas_hk416c",nil,0],
+						["LMG_mas_M249_F",nil,0],
+						["srifle_mas_sr25",nil,0],
+						["srifle_mas_m107",nil,0],
+						["srifle_mas_hk417",nil,0],
+						["arifle_mas_hk417c",nil,0],
+						["arifle_mas_hk417_m203c",nil,0],
+						["HandGrenade_Stone","Flashbang",0],
+						["optic_mas_Holosight_blk",nil,0],
+						["optic_Holosight",nil,0],
+						["optic_Hamr",nil,0],
+						["optic_mas_aim",nil,0],
+						["optic_mas_zeiss",nil,0],
+						["optic_mas_acog_eo",nil,0],
+						["7Rnd_mas_12Gauge_Pellets",nil,0],
+						["7Rnd_mas_12Gauge_Slug",nil,0],
+						["30Rnd_mas_556x45_Stanag",nil,0],
+						["200Rnd_mas_556x45_Stanag",nil,0],
+						["5Rnd_mas_127x99_Stanag",nil,0],
+						["20Rnd_mas_762x51_Stanag",nil,0],
+						["3Rnd_UGL_FlareWhite_F",nil,0],
+						["FirstAidKit",nil,0],
+						["ToolKit",nil,0],
+						["Radio",nil,0]
 					]
 				];
 			};

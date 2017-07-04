@@ -119,7 +119,7 @@ switch (_shop) do
 	{
 		_return pushBack
 		["HummingBird_Police",12500],
-		["HummingBird_GDO",12500],
+		["HummingBird_GDO",12500]
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return pushBack

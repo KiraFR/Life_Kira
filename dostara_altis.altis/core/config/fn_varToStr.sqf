@@ -113,6 +113,12 @@ switch (_var) do
 	case "licence_civ_gouv": {(localize "STR_License_Gouv")};
 	case "licence_cop_Prefet": {(localize "STR_License_Prefet")};
     case "licence_civ_ebou": {(localize "STR_License_Ebou")};
-	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
 	case "licence_civ_vin": {(localize "STR_License_Vin")};
+
+	//New License
+
+	case "licence_civ_fonderie": {(localize "STR_License_Fonderie")};
+	case "licence_civ_Usine": {(localize "STR_License_Usine")};
+	case "license_civ_presseur": {(localize "STR_License_presseur")};
+	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
 };

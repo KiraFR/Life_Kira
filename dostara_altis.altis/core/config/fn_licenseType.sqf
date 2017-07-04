@@ -44,12 +44,19 @@ switch (_mode) do
 			case "eboueur": {_var = "licence_civ_ebou"};
 			case "opium": {_var = "licence_civ_opium"};
 			case "vin": {_var = "licence_civ_vin"};
-			case "cidre": {_var = "licence_civ_fermenta"};
+
 
 			case "ASG": {_var = "licence_civ_ASG"};
             case "AMC": {_var = "licence_civ_AMC"};
             case "AMG": {_var = "licence_civ_AMG"};
             case "ASP": {_var = "licence_civ_ASP"};
+
+			//New License
+
+			case "fonderie": {_var = "licence_civ_fonderie"};
+			case "usinage": {_var = "licence_civ_Usine"};
+			case "presseur": {_var = "license_civ_presseur"};
+			case "fermenta": {_var = "licence_civ_fermenta"};
 
 			default {_var = ""};
 		};
@@ -87,13 +94,17 @@ switch (_mode) do
 			case "licence_cop_prefet": {_var = "Prefet"};
 			case "licence_civ_ebou": {_var = "eboueur"};
 			case "licence_civ_opium": {_var = "opium"};
-			case "licence_civ_fermenta": {_var = "vin"};
 			case "licence_civ_vin": {_var = "cidre"};
 
 			case "licence_civ_ASG": {_var = "ASG"};
 			case "licence_civ_AMC": {_var = "AMC"};
 			case "licence_civ_AMG": {_var = "AMG"};
 			case "licence_civ_ASP": {_var = "ASP"};
+// New License
+			case "licence_civ_fonderie": {_var = "fonderie"};
+			case "licence_civ_Usine": {_var = "usinage"};
+			case "license_civ_presseur": {_var = "presseur"};
+			case "licence_civ_fermenta": {_var = "fermenta"};
 
 			default {_var = ""};
 		};
