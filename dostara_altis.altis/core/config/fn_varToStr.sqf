@@ -99,7 +99,6 @@ switch (_var) do
 	case "license_civ_Terroristes": {"Terroriste"};
 	case "license_civ_petiteF": {"Petite Frappe"};
 	case "license_civ_truck": {(localize "STR_License_Truck")};
-	case "license_civ_diamond": {(localize "STR_License_Diamond")};
 	case "license_civ_copper": {(localize "STR_License_Copper")};
 	case "license_civ_iron": {(localize "STR_License_Iron")};
 	case "license_civ_sand": {(localize "STR_License_Sand")};
@@ -117,8 +116,13 @@ switch (_var) do
 
 	//New License
 
+	case "license_civ_Acier": {(localize "STR_License_Acier")};
+	case "license_civ_PPrecieuse": {(localize "STR_License_PPrecieuse")};
+	case "license_civ_diamond": {(localize "STR_License_Diamond")}; // Bijoux
 	case "licence_civ_fonderie": {(localize "STR_License_Fonderie")};
-	case "licence_civ_Usine": {(localize "STR_License_Usine")};
+	case "licence_civ_fonderieExp": {(localize "STR_License_FonderieExp")};
+	case "licence_civ_Chaux": {(localize "STR_License_Usine")};
 	case "license_civ_presseur": {(localize "STR_License_presseur")};
 	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
+	case "licence_civ_fishsoup": {"Soupe de poisson"};
 };

@@ -3787,10 +3787,10 @@
 			<Portuguese>Licença de Caminhão</Portuguese>
 		</Key>
 		<Key ID="STR_License_Diamond">
-			<Original>Diamond Processing</Original>
+			<Original>Jewelry Maker</Original>
 			<English>Diamond Processing</English>
 			<German>Diamantenverarbeitung</German>
-			<French>Taillage des Diamands</French>
+			<French>Conception de Bijoux</French>
 			<Italian>Processo Diamanti</Italian>
 			<Portuguese>Lapidação de Diamante</Portuguese>
 		</Key>
@@ -3852,21 +3852,28 @@
 		<Key ID="STR_License_Cidre">
 			<Original>Fermentation</Original>
 			<English>Cidre Training</English>
-			<French>Fermentation</French>
+			<French>Fermentation d'alcool</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
 		<Key ID="STR_License_presseur">
 			<Original>Fermentation</Original>
-			<English>Cidre Training</English>
+			<English>Pressoir arté</English>
 			<French>Art du pressoir</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
+		<Key ID="STR_License_presseur">
+			<Original>Steel formation</Original>
+			<English>Steel Formation</English>
+			<French>Licence Acier</French>
+			<Italian>Processo Cidre</Italian>
+			<Portuguese>Treinamento de Cidre</Portuguese>
+		</Key>
 		<Key ID="STR_License_Usine">
-			<Original>Fermentation</Original>
+			<Original>Calcaire</Original>
 			<English>Cidre Training</English>
-			<French>Usinage</French>
+			<French>License de Calcaire</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
@@ -3874,6 +3881,13 @@
 			<Original>Fonte Training</Original>
 			<English>Vin Training</English>
 			<French>Fondeur de pere en Fils</French>
+			<Italian>Processo Vin</Italian>
+			<Portuguese>Treinamento de Vin</Portuguese>
+		</Key>
+		<Key ID="STR_License_FonderieExp">
+			<Original>Fonte Training</Original>
+			<English>Vin Training</English>
+			<French>Fondeur de pere en Fils ++ </French>
 			<Italian>Processo Vin</Italian>
 			<Portuguese>Treinamento de Vin</Portuguese>
 		</Key>

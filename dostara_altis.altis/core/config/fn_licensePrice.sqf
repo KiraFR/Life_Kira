@@ -18,7 +18,7 @@ switch (_type) do
 			500 * life_nbrFoisPermis
 		};
 	};
-	case "boat": {1000}; //Boating license cost
+	case "boat": {500}; //Boating license cost
 	case "pilot": {25000}; //Pilot/air license cost
 	case "gun": {10000}; //Firearm/gun license cost
 	case "dive": {2000}; //Diving license cost
@@ -38,20 +38,24 @@ switch (_type) do
 			20000 * life_nbrFoisPermis
 		};
 	};
-	case "diamond": {35000};
+	case "diamond": {4350};
 	case "salt": {12000};
 	case "cocaine": {30000};
-	case "sand": {14500};
-	case "iron": {9500};
-	case "copper": {8000};
-	case "cement": {6500};
+	case "sand": {460};
+	case "iron": {690};
+	case "copper": {570};
+	case "cement": {1600};
 	case "mair": {15000};
 	case "home": {75000};
 	case "opium": {150000};
-	case "cidre": {150000};
-	case "vin": {150000};
-	case "fonderie": {150000};
-	case "usinage": {150000};
-	case "presseur": {150000};
+	case "cidre": {1000};
+	case "vin": {1000};
+	case "PPrecieuse": {3240};
+	case "fonderie": {800};
+	case "fonderieExp": {4300};
+	case "Chaux": {430};
+	case "presseur": {230};
+	case "fishsoup": {500};
+	case "Acier": {2300};
 
 };

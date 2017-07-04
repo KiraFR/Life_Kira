@@ -31,7 +31,6 @@ switch (_mode) do
 			case "gang": {_var = "license_civ_gang"}; //Gang license cost
 			case "rebel": {_var = "license_civ_rebel"}; //Rebel License
 			case "truck":{_var = "license_civ_truck"}; //Truck License
-			case "diamond": {_var = "license_civ_diamond"};
 			case "salt": {_var = "license_civ_salt"};
 			case "cocaine": {_var = "license_civ_coke"};
 			case "sand": {_var = "license_civ_sand"};
@@ -51,12 +50,18 @@ switch (_mode) do
             case "AMG": {_var = "licence_civ_AMG"};
             case "ASP": {_var = "licence_civ_ASP"};
 
-			//New License
+			//New License # KronosD
 
+			case "diamond": {_var = "license_civ_diamond"};
+			case "Acier": {_var = "license_civ_Acier"};
+			case "PPrecieuse": {_var = "license_civ_PPrecieuse"};
 			case "fonderie": {_var = "licence_civ_fonderie"};
-			case "usinage": {_var = "licence_civ_Usine"};
+			case "fonderieExp": {_var = "licence_civ_fonderieExp"};
+			case "Chaux": {_var = "licence_civ_Chaux"};
 			case "presseur": {_var = "license_civ_presseur"};
 			case "fermenta": {_var = "licence_civ_fermenta"};
+			case "vin": {_var = "licence_civ_vin"};
+			case "fishsoup": {_var = "licence_civ_fishsoup"};
 
 			default {_var = ""};
 		};
@@ -81,7 +86,6 @@ switch (_mode) do
 			case "license_civ_gang": {_var = "gang"}; //Gang license cost
 			case "license_civ_rebel": {_var = "rebel"}; //Rebel License
 			case "license_civ_truck":{_var = "truck"}; //Truck License
-			case "license_civ_diamond": {_var = "diamond"};
 			case "license_civ_salt": {_var = "salt"};
 			case "license_civ_coke": {_var = "cocaine"};
 			case "license_civ_sand": {_var = "sand"};
@@ -94,17 +98,24 @@ switch (_mode) do
 			case "licence_cop_prefet": {_var = "Prefet"};
 			case "licence_civ_ebou": {_var = "eboueur"};
 			case "licence_civ_opium": {_var = "opium"};
-			case "licence_civ_vin": {_var = "cidre"};
 
 			case "licence_civ_ASG": {_var = "ASG"};
 			case "licence_civ_AMC": {_var = "AMC"};
 			case "licence_civ_AMG": {_var = "AMG"};
 			case "licence_civ_ASP": {_var = "ASP"};
-// New License
+
+// New License # KronosD
+
+			case "license_civ_diamond": {_var = "diamond"};
+			case "license_civ_Acier": {_var = "Acier"};
+			case "license_civ_PPrecieuse": {_var = "PPrecieuse"};
 			case "licence_civ_fonderie": {_var = "fonderie"};
-			case "licence_civ_Usine": {_var = "usinage"};
+			case "licence_civ_fonderieExp": {_var = "fonderieExp"};
+			case "licence_civ_Chaux": {_var = "Chaux"};
 			case "license_civ_presseur": {_var = "presseur"};
 			case "licence_civ_fermenta": {_var = "fermenta"};
+			case "licence_civ_vin": {_var = "vin"};
+			case "licence_civ_fishsoup": {_var = "fishsoup"};
 
 			default {_var = ""};
 		};

@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3128;
+		nextID=3136;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={12405.925,27.7544,14071.961};
-		dir[]={0.019763084,-0.64143878,0.76691997};
-		up[]={0.016524015,0.76717401,0.6412257};
-		aside[]={0.999668,-3.8562575e-010,-0.025760863};
+		pos[]={3468.6489,188.75098,12730.036};
+		dir[]={0.49516171,-0.28688499,0.82007635};
+		up[]={0.14829066,0.95796204,0.24559546};
+		aside[]={0.85605937,-1.648441e-007,-0.51688814};
 	};
 };
 binarizationWanted=0;
@@ -747,7 +747,7 @@ class Mission
 			name="atm_marker_2_1";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=227.08569;
+			angle=227.08566;
 			id=124;
 		};
 		class Item35
@@ -5099,13 +5099,13 @@ class Mission
 					class Attributes
 					{
 						skill=0.60000002;
-						init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian '];  this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian '];  this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian '];  this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian ']; this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian ']; this setVariable[""realname"",""License Shop""];}";
+						init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderie""] call life_fnc_varToStr,[([""fonderie""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !license_civ_fonderie && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_fonderieExp""] call life_fnc_varToStr,[([""fonderieExp""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderieExp"",0,false,false,"""",' !license_civ_fonderieExp && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_presseur""] call life_fnc_varToStr,[([""presseur""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""presseur"",0,false,false,"""",' !license_civ_presseur && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_cement""] call life_fnc_varToStr,[([""cement""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cement"",0,false,false,"""",' !license_civ_cement && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fishsoup""] call life_fnc_varToStr,[([""fishsoup""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fishsoup"",0,false,false,"""",' !license_civ_fishsoup && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_diamond""] call life_fnc_varToStr,[([""diamond""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_PPrecieuse""] call life_fnc_varToStr,[([""PPrecieuse""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_Acier""] call life_fnc_varToStr,[([""Acier""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""Acier"",0,false,false,"""",' !license_civ_Acier && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fermenta""] call life_fnc_varToStr,[([""fermenta""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_oil""] call life_fnc_varToStr,[([""oil""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian ']; " \n "this setVariable[""realname"",""License Shop""];}";
 						disableSimulation=1;
 						ignoreByDynSimulGrid=1;
 					};
 					id=661;
 					type="C_Man_casual_2_F_euro";
-					atlOffset=0.057557106;
+					atlOffset=0.05755806;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -18551,7 +18551,7 @@ class Mission
 			position[]={5814.3882,0,14718.77};
 			name="cop_car_1";
 			type="Empty";
-			angle=123.85199;
+			angle=123.85197;
 			id=61;
 			atlOffset=-23.702127;
 		};
@@ -18607,7 +18607,7 @@ class Mission
 			position[]={14159.138,27.422968,18663.791};
 			name="car_g_3";
 			type="Empty";
-			angle=26.741316;
+			angle=26.741312;
 			id=102;
 		};
 		class Item453
@@ -45582,6 +45582,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];  " \n "this addAction[""Acheter la license de cimenterie"",life_fnc_buyLicense,""cement"",0,false,false,"""",' !licence_civ_cement && playerSide == civilian '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50294,7 +50295,7 @@ class Mission
 			name="atm_marker_6";
 			type="loc_Tourism";
 			colorName="ColorGreen";
-			angle=3.554183;
+			angle=3.5541825;
 			id=2810;
 		};
 		class Item1298
@@ -50302,13 +50303,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={9215.2031,118.45837,16010.547};
+				position[]={9215.3086,118.42733,16011.044};
 				angles[]={0.059934605,0,6.2711945};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50605,7 +50607,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Presser vos fruits"",life_fnc_processAction,""apple"",0,false,false,"""",' life_inv_apple > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""presseur"",0,false,false,"""",' !licence_civ_presseur && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Faire de la Chaux"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -50680,7 +50682,7 @@ class Mission
 			class Attributes
 			{
 				health=0;
-				init="call{this enableSimulation false; this allowDamage false; this addAction[""Fondre aluminium"",life_fnc_processAction,""AluminiumB"",0,false,false,"""",' life_inv_AluminiumB > 0 && !life_is_processing']; this addAction[""Fondre argent"",life_fnc_processAction,""ArgentB"",0,false,false,"""",' life_inv_ArgentB > 0 && !life_is_processing']; this addAction[""Fondre cuivre"",life_fnc_processAction,""copperB"",0,false,false,"""",' life_inv_copperB > 0 && !life_is_processing']; this addAction[""Fondre Fer"",life_fnc_processAction,""FerB"",0,false,false,"""",' life_inv_FerB > 0 && !life_is_processing']; this addAction[""Fondre Sable"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing']; this addAction[""Acheter la license de fonderie"",life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !licence_civ_fonderie && playerSide == civilian '];}";
+				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -51127,6 +51129,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Tailler vos Pierre Precieuse"",life_fnc_processAction,""rock"",0,false,false,"""",' life_inv_rockB > 0 && license_civ_PPrecieuse && !life_is_processing']; " \n "this addAction[""Acheter la license de Taillage"",life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -52596,7 +52599,6 @@ class Mission
 			};
 			id=2930;
 			type="Land_CargoBox_V1_F";
-			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52826,7 +52828,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; this addAction[""Fondre aluminium"",life_fnc_processAction,""AluminiumB"",0,false,false,"""",' life_inv_AluminiumB > 0 && !life_is_processing']; this addAction[""Fondre argent"",life_fnc_processAction,""ArgentB"",0,false,false,"""",' life_inv_ArgentB > 0 && !life_is_processing']; this addAction[""Fondre cuivre"",life_fnc_processAction,""copperB"",0,false,false,"""",' life_inv_copperB > 0 && !life_is_processing']; this addAction[""Fondre Fer"",life_fnc_processAction,""FerB"",0,false,false,"""",' life_inv_FerB > 0 && !life_is_processing']; this addAction[""Fondre Sable"",life_fnc_processAction,""sand"",0,false,false,"""",' life_inv_sand > 0 && !life_is_processing']; this addAction[""Acheter la license de fonderie"",life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !licence_civ_fonderie && playerSide == civilian '];}";
+				init="call{this enableSimulation false; " \n " this allowDamage false; " \n "  this addAction[""Fondre aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n " this addAction[""Fondre argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing']; " \n "  this addAction[""Fondre cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "   this addAction[""Fondre Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing']; " \n "    this addAction[""Fondre Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -52899,7 +52901,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Fondre aluminium"",life_fnc_processAction,""Calcaire"",0,false,false,"""",' life_inv_Calcaire > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !licence_civ_Usine && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Faire de la Chaux"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53451,7 +53453,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Presser vos Oranges"",life_fnc_processAction,""Orange"",0,false,false,"""",' life_inv_Orange > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""presseur"",0,false,false,"""",' !licence_civ_presseur && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -53644,20 +53646,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16663.021,3.246222,12351.238};
+				position[]={16663.021,3.2472219,12351.238};
 				angles[]={6.2471962,4.9123511,0.066566855};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Presser vos fruits"",life_fnc_processAction,""apple"",0,false,false,"""",' life_inv_apple > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""presseur"",0,false,false,"""",' !licence_civ_presseur && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Faire du multifruit"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2970;
 			type="Land_CargoBox_V1_F";
-			atlOffset=-0.00099992752;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -53865,7 +53866,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Presser vos Raisin"",life_fnc_processAction,""Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""presseur"",0,false,false,"""",' !licence_civ_presseur && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -54078,13 +54079,13 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Presser vos fruits"",life_fnc_processAction,""apple"",0,false,false,"""",' life_inv_apple > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license d Usinage"",life_fnc_buyLicense,""presseur"",0,false,false,"""",' !licence_civ_presseur && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Presser vos pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Presser vos Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n "this addAction[""Faire du multifruit"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=2982;
 			type="Land_CargoBox_V1_F";
-			atlOffset=-0.0010004044;
+			atlOffset=-0.001001358;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -54711,7 +54712,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && !life_is_processing']; " \n " this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license de fermentation"",life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Cidre"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && licence_civ_fermenta && !life_is_processing']; " \n " this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Vin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && licence_civ_fermenta && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -55041,7 +55042,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && !life_is_processing']; " \n " this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license de fermentation"",life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Cidre"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && licence_civ_fermenta && !life_is_processing']; " \n " this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Vin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && licence_civ_fermenta && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
@@ -55203,19 +55204,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16431.107,21.541418,17902.127};
-				angles[]={6.2378831,2.4758351,6.2578578};
+				position[]={16431.107,21.541693,17902.127};
+				angles[]={6.2378764,2.4758368,6.2578607};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Faire de l acier"",life_fnc_processAction,""Acier"",0,false,false,"""",' life_inv_Charbon && life_inv_Aluminium && life_inv_iron_r > 0 && licence_civ_Acier && !life_is_processing'];  " \n "this addAction[""Acheter la license d Acier"",life_fnc_buyLicense,""Acier"",0,false,false,"""",' !licence_civ_Acier && playerSide == civilian '];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3027;
 			type="Land_CargoBox_V1_F";
-			atlOffset=-0.0002746582;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -55722,18 +55723,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18777.529,30.538685,16365.34};
-				angles[]={0,3.9417057,0};
+				position[]={18777.529,30.538294,16365.34};
+				angles[]={0,3.941704,0};
 			};
 			side="Empty";
 			class Attributes
 			{
+				init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire des bijoux"",life_fnc_processAction,""bijoux"",0,false,false,"""",' life_inv_Argent && life_inv_rock > 0 && license_civ_diamond && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
 			id=3045;
 			type="Land_CashDesk_F";
-			atlOffset=0.3903904;
+			atlOffset=0.38999939;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -57641,7 +57643,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Raffiner le Petrole"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing']; " \n "     this addAction[""Acheter la license de Raffinement"",life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian '];}";
+				init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Raffiner le Petrole"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing'];}";
 				createAsSimpleObject=1;
 				disableSimulation=1;
 			};
