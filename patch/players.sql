@@ -42,6 +42,7 @@ CREATE TABLE `players` (
   `nbrPermis` int(10) NOT NULL DEFAULT '0',
   `fourriere` tinyint(1) NOT NULL,
   `position` text NOT NULL,
+  `alive` text NOT NULL,
   PRIMARY KEY (`uid`),
   UNIQUE KEY `playerid` (`playerid`),
   KEY `name` (`name`),
