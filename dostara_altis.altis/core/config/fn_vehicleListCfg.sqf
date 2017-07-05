@@ -96,9 +96,9 @@ switch (_shop) do
 	case "cop_car":
 	{
 		_return pushBack
-		["DAR_ChargerPolice",5000],
-		["DAR_ExplorerPolice",5000],
-		["M3_POLICE",5000]
+		["DAR_ChargerPolice",5000];
+		["DAR_ExplorerPolice",5000];
+		["M3_POLICE",5000];
 		if(license_cop_gdo) then
 		{
 			_return pushBack
@@ -118,8 +118,8 @@ switch (_shop) do
 	case "cop_air":
 	{
 		_return pushBack
-		["HummingBird_Police",12500],
-		["HummingBird_GDO",12500]
+		["HummingBird_Police",12500];
+		["HummingBird_GDO",12500];
 		if(__GETC__(life_coplevel) > 2) then
 		{
 			_return pushBack

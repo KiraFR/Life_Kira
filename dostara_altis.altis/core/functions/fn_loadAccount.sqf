@@ -23,7 +23,7 @@ _array = param[0,[],[[]]];
 _array params [
 	["_courant",[],[[]]],
 	["_entreprise",[],[[]]],
-	["_offshore",[],[[]]],
+	["_offshore",[],[[]]]
 ];
 _cpt = 0;
 //_orga = _array param[3,[],[[]]];
