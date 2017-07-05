@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=23;
+		nextID=32;
 	};
 	class Camera
 	{
-		pos[]={3171.9739,83.528008,12844.384};
-		dir[]={0.50874639,-0.61201859,0.60548884};
-		up[]={0.39370766,0.79084313,0.46857402};
-		aside[]={0.76562244,1.071021e-007,-0.64329505};
+		pos[]={16591.779,39.777145,16133.085};
+		dir[]={-0.55862361,-0.70910263,-0.43026772};
+		up[]={-0.5617848,0.70509964,-0.4327029};
+		aside[]={-0.61021191,1.299195e-007,0.7922473};
 	};
 };
 binarizationWanted=0;
@@ -8825,7 +8825,7 @@ class Mission
 					};
 					id=1597;
 					type="Land_OfficeChair_01_F";
-					atlOffset=1.0079556;
+					atlOffset=1.0081291;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8866,7 +8866,7 @@ class Mission
 					};
 					id=1598;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.94587898;
+					atlOffset=0.94601631;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8907,7 +8907,7 @@ class Mission
 					};
 					id=1599;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.94028091;
+					atlOffset=0.94040108;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8948,7 +8948,7 @@ class Mission
 					};
 					id=1600;
 					type="Land_OfficeChair_01_F";
-					atlOffset=1.0163422;
+					atlOffset=1.0165157;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8989,7 +8989,7 @@ class Mission
 					};
 					id=1601;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.956007;
+					atlOffset=0.95616531;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9030,7 +9030,7 @@ class Mission
 					};
 					id=1602;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.94897842;
+					atlOffset=0.94913673;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9071,7 +9071,7 @@ class Mission
 					};
 					id=1604;
 					type="Land_OfficeChair_01_F";
-					atlOffset=1.049469;
+					atlOffset=1.049736;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9112,7 +9112,7 @@ class Mission
 					};
 					id=1605;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.9590416;
+					atlOffset=0.95938683;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9153,7 +9153,7 @@ class Mission
 					};
 					id=1606;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.95998383;
+					atlOffset=0.96030235;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9194,7 +9194,7 @@ class Mission
 					};
 					id=1609;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.25072479;
+					atlOffset=0.25700188;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9235,7 +9235,7 @@ class Mission
 					};
 					id=1610;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.39349174;
+					atlOffset=0.39900208;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9276,7 +9276,7 @@ class Mission
 					};
 					id=1611;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.53035545;
+					atlOffset=0.53199959;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9317,7 +9317,7 @@ class Mission
 					};
 					id=1612;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.61430168;
+					atlOffset=0.61599922;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9358,7 +9358,7 @@ class Mission
 					};
 					id=1613;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.60330391;
+					atlOffset=0.60499954;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9399,7 +9399,7 @@ class Mission
 					};
 					id=1614;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.52035713;
+					atlOffset=0.52199936;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9440,7 +9440,7 @@ class Mission
 					};
 					id=1615;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.43687057;
+					atlOffset=0.44000053;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9481,7 +9481,7 @@ class Mission
 					};
 					id=1616;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.27524948;
+					atlOffset=0.28499985;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9522,7 +9522,7 @@ class Mission
 					};
 					id=1617;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.57637596;
+					atlOffset=0.57799911;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9563,7 +9563,7 @@ class Mission
 					};
 					id=1618;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.49232292;
+					atlOffset=0.49399948;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9604,7 +9604,7 @@ class Mission
 					};
 					id=1619;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.41884613;
+					atlOffset=0.42000008;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9645,7 +9645,7 @@ class Mission
 					};
 					id=1620;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.26158905;
+					atlOffset=0.27399826;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9944,7 +9944,6 @@ class Mission
 					};
 					id=1802;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.065765381;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9987,7 +9986,6 @@ class Mission
 					};
 					id=1804;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.065765381;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10030,7 +10028,6 @@ class Mission
 					};
 					id=1805;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.065765381;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10073,7 +10070,6 @@ class Mission
 					};
 					id=1806;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10116,7 +10112,6 @@ class Mission
 					};
 					id=1807;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10159,7 +10154,6 @@ class Mission
 					};
 					id=1808;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10202,7 +10196,6 @@ class Mission
 					};
 					id=1809;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10245,7 +10238,6 @@ class Mission
 					};
 					id=1810;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10288,7 +10280,6 @@ class Mission
 					};
 					id=1811;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.031936646;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10331,7 +10322,6 @@ class Mission
 					};
 					id=1813;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.11763954;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10374,7 +10364,6 @@ class Mission
 					};
 					id=1814;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.11763954;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10417,7 +10406,6 @@ class Mission
 					};
 					id=1815;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.11523056;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10460,7 +10448,6 @@ class Mission
 					};
 					id=1816;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.11523056;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10503,7 +10490,6 @@ class Mission
 					};
 					id=1817;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.10895348;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10546,7 +10532,6 @@ class Mission
 					};
 					id=1818;
 					type="Land_OfficeChair_01_F";
-					atlOffset=0.11523056;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11091,7 +11076,7 @@ class Mission
 					};
 					id=1179;
 					type="Land_RattanChair_01_F";
-					atlOffset=2.4355917;
+					atlOffset=2.4351587;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11132,7 +11117,7 @@ class Mission
 					};
 					id=1180;
 					type="Land_RattanChair_01_F";
-					atlOffset=2.4367342;
+					atlOffset=2.4363012;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11174,7 +11159,7 @@ class Mission
 					};
 					id=1181;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.014418602;
+					atlOffset=0.013985634;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11216,7 +11201,7 @@ class Mission
 					};
 					id=1182;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.019990921;
+					atlOffset=0.019557953;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11292,7 +11277,6 @@ class Mission
 						angles[]={0.0093200579,5.655129,6.2791882};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11300,7 +11284,7 @@ class Mission
 					};
 					id=1196;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.0017614365;
+					atlOffset=1.2611418;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11334,7 +11318,6 @@ class Mission
 						angles[]={0,0.94272214,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11342,7 +11325,7 @@ class Mission
 					};
 					id=1197;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.0017728806;
+					atlOffset=1.2611418;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11623,7 +11606,6 @@ class Mission
 						angles[]={0.0093286335,5.6551204,6.2791886};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11631,7 +11613,7 @@ class Mission
 					};
 					id=1211;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.00057220459;
+					atlOffset=2.4394541;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11665,7 +11647,6 @@ class Mission
 						angles[]={0,0.94272214,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11673,7 +11654,7 @@ class Mission
 					};
 					id=1212;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.00026512146;
+					atlOffset=2.4394541;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11749,7 +11730,6 @@ class Mission
 						angles[]={0.00086440815,4.8754034,0.0052559176};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11757,7 +11737,7 @@ class Mission
 					};
 					id=1215;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.00042533875;
+					atlOffset=2.4401693;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -11791,7 +11771,6 @@ class Mission
 						angles[]={0.0019680934,1.7337998,0.003726772};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -11799,7 +11778,7 @@ class Mission
 					};
 					id=1216;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.00059604645;
+					atlOffset=2.4401722;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12257,7 +12236,7 @@ class Mission
 					};
 					id=1247;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.26984119;
+					atlOffset=0.26984215;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12298,7 +12277,7 @@ class Mission
 					};
 					id=1248;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.27201557;
+					atlOffset=0.27201748;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12339,7 +12318,7 @@ class Mission
 					};
 					id=1249;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.25321388;
+					atlOffset=0.25321484;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12380,7 +12359,7 @@ class Mission
 					};
 					id=1250;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.26945305;
+					atlOffset=0.269454;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12421,7 +12400,6 @@ class Mission
 					};
 					id=1848;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.026435852;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12463,7 +12441,7 @@ class Mission
 					};
 					id=1850;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.095561981;
+					atlOffset=0.00018501282;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12505,7 +12483,6 @@ class Mission
 					};
 					id=1851;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.090183258;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -12547,7 +12524,6 @@ class Mission
 					};
 					id=1852;
 					type="Land_RattanChair_01_F";
-					atlOffset=0.097370148;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -13919,8 +13895,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16562.021,17.893837,16129.447};
-						angles[]={0,5.2862711,0};
+						position[]={16573.527,18.066292,16120.238};
+						angles[]={0,5.6015277,0};
 					};
 					side="Empty";
 					flags=5;
@@ -14971,7 +14947,7 @@ class Mission
 					};
 					id=2465;
 					type="Land_Cargo20_white_F";
-					atlOffset=2.4709549;
+					atlOffset=2.4709568;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15054,7 +15030,6 @@ class Mission
 					};
 					id=3041;
 					type="Land_Cargo20_light_blue_F";
-					atlOffset=0.0002746582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15095,7 +15070,7 @@ class Mission
 					};
 					id=2466;
 					type="Land_Cargo20_blue_F";
-					atlOffset=2.6500969;
+					atlOffset=2.6540298;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -21855,7 +21830,7 @@ class Mission
 					};
 					id=1821;
 					type="Land_OfficeCabinet_01_F";
-					atlOffset=0.089384079;
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36179,7 +36154,7 @@ class Mission
 					};
 					id=1633;
 					type="Fridge_01_closed_F";
-					atlOffset=0.73811722;
+					atlOffset=0.73900032;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36221,7 +36196,7 @@ class Mission
 					};
 					id=1879;
 					type="Fridge_01_closed_F";
-					atlOffset=0.28273726;
+					atlOffset=0.28284883;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36264,7 +36239,6 @@ class Mission
 					};
 					id=1883;
 					type="Fridge_01_closed_F";
-					atlOffset=0.00011825562;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36603,7 +36577,7 @@ class Mission
 					};
 					id=1632;
 					type="Land_WaterCooler_01_new_F";
-					atlOffset=0.76773071;
+					atlOffset=0.7689991;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36644,7 +36618,7 @@ class Mission
 					};
 					id=1880;
 					type="Land_WaterCooler_01_new_F";
-					atlOffset=0.26146269;
+					atlOffset=0.26028967;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -36686,7 +36660,6 @@ class Mission
 					};
 					id=1884;
 					type="Land_WaterCooler_01_new_F";
-					atlOffset=0.00011062622;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37601,7 +37574,6 @@ class Mission
 						angles[]={0,0.5798682,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -37609,7 +37581,7 @@ class Mission
 					};
 					id=1520;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.00020980835;
+					atlOffset=11.723751;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37670,7 +37642,7 @@ class Mission
 					};
 					id=1654;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.97474861;
+					atlOffset=0.97485924;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37731,7 +37703,7 @@ class Mission
 					};
 					id=1655;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.98611832;
+					atlOffset=0.98622894;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37792,7 +37764,7 @@ class Mission
 					};
 					id=1656;
 					type="OfficeTable_01_new_F";
-					atlOffset=1.0073433;
+					atlOffset=1.0074558;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37853,7 +37825,7 @@ class Mission
 					};
 					id=1797;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.26960564;
+					atlOffset=0.26969719;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37906,7 +37878,6 @@ class Mission
 						angles[]={0,4.7279162,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -37915,7 +37886,7 @@ class Mission
 					};
 					id=1799;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.02793026;
+					atlOffset=1.0916004;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -37977,7 +37948,6 @@ class Mission
 					};
 					id=1803;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.041189194;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38039,7 +38009,6 @@ class Mission
 					};
 					id=1824;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.031350136;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38101,7 +38070,6 @@ class Mission
 					};
 					id=1825;
 					type="OfficeTable_01_new_F";
-					atlOffset=0.039719582;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38358,7 +38326,6 @@ class Mission
 						angles[]={0,1.578912,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38366,7 +38333,7 @@ class Mission
 					};
 					id=1831;
 					type="Land_TablePlastic_01_F";
-					atlOffset=9.5367432e-006;
+					atlOffset=2.5247526;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38399,7 +38366,6 @@ class Mission
 						position[]={3179.9724,8.6619034,12934.875};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38407,7 +38373,7 @@ class Mission
 					};
 					id=1839;
 					type="Land_TablePlastic_01_F";
-					atlOffset=0.02945137;
+					atlOffset=2.5246897;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38441,7 +38407,6 @@ class Mission
 						angles[]={0,0.94272214,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38449,7 +38414,7 @@ class Mission
 					};
 					id=1183;
 					type="Land_RattanTable_01_F";
-					atlOffset=5.1498413e-005;
+					atlOffset=2.4406605;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38502,7 +38467,6 @@ class Mission
 						angles[]={0.035988688,0.94272214,0.013334315};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38510,7 +38474,7 @@ class Mission
 					};
 					id=1194;
 					type="Land_RattanTable_01_F";
-					atlOffset=0.0012292862;
+					atlOffset=1.2611227;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38683,7 +38647,6 @@ class Mission
 						angles[]={0.001972222,0.16299629,0.0037350047};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38691,6 +38654,7 @@ class Mission
 					};
 					id=1214;
 					type="Land_RattanTable_01_F";
+					atlOffset=2.4397488;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38810,7 +38774,7 @@ class Mission
 					};
 					id=1235;
 					type="Land_RattanTable_01_F";
-					atlOffset=1.5088644;
+					atlOffset=1.5089998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38863,7 +38827,6 @@ class Mission
 						angles[]={0.0086044734,0.15461873,6.2778096};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						disableSimulation=1;
@@ -38871,7 +38834,7 @@ class Mission
 					};
 					id=1240;
 					type="Land_RattanTable_01_F";
-					atlOffset=0.00085926056;
+					atlOffset=1.1210003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -38992,7 +38955,7 @@ class Mission
 					};
 					id=1251;
 					type="Land_RattanTable_01_F";
-					atlOffset=0.25584412;
+					atlOffset=0.25584507;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39053,7 +39016,6 @@ class Mission
 					};
 					id=1847;
 					type="Land_RattanTable_01_F";
-					atlOffset=0.064342499;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39095,7 +39057,7 @@ class Mission
 					};
 					id=1608;
 					type="MapBoard_altis_F";
-					atlOffset=0.20353889;
+					atlOffset=0.22400093;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39138,7 +39100,7 @@ class Mission
 					};
 					id=1819;
 					type="MapBoard_altis_F";
-					atlOffset=0.045883179;
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39180,7 +39142,7 @@ class Mission
 					};
 					id=1820;
 					type="MapBoard_seismic_F";
-					atlOffset=0.15652847;
+					atlOffset=1.9073486e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -39221,7 +39183,7 @@ class Mission
 					};
 					id=1621;
 					type="Land_MapBoard_F";
-					atlOffset=0.68333435;
+					atlOffset=0.68499947;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -44865,7 +44827,6 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2422;
-					atlOffset=0.36927032;
 				};
 				class Item3
 				{
@@ -44948,7 +44909,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=0.28009796;
+					atlOffset=9.5367432e-007;
 				};
 				class Item9
 				{
@@ -45482,7 +45443,7 @@ class Mission
 					name="atm_marker_2_1";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=227.08553;
+					angle=227.08551;
 					id=124;
 				};
 				class Item54
@@ -45634,7 +45595,7 @@ class Mission
 					name="atm_marker_6";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=3.5541804;
+					angle=3.5541801;
 					id=2810;
 				};
 				class Item69
@@ -46524,20 +46485,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16564.084,15.226439,16127.715};
-						angles[]={0,3.0895991,0};
+						position[]={16574.951,15.416208,16117.952};
+						angles[]={-0,3.4048555,0};
 					};
 					side="Empty";
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Tailler vos Pierre Precieuse"",life_fnc_processAction,""rock"",0,false,false,"""",' life_inv_rockB > 0 && license_civ_PPrecieuse && !life_is_processing'];  " \n " " \n "this addAction[""Acheter la license de Taillage"",life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian '];}";
+						init="call{this addAction[""Tailler vos Pierre Precieuse"",life_fnc_processAction,""rock"",0,false,false,"""",' life_inv_rockB > 0 && license_civ_PPrecieuse && !life_is_processing']; this addAction[""Acheter la license de Taillage"",life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2841;
 					type="Land_CashDesk_F";
-					atlOffset=0.0025930405;
+					atlOffset=0.019906998;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -46575,7 +46535,6 @@ class Mission
 					{
 						init="call{this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""Caviste""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2990;
 					type="Land_CashDesk_F";
@@ -46617,7 +46576,6 @@ class Mission
 					{
 						init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""Caviste""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2992;
 					type="Land_CashDesk_F";
@@ -46659,7 +46617,6 @@ class Mission
 					{
 						init="call{this allowDamage false; this enableSimulation false; this addAction[""Export de ressources primaire"",life_fnc_virt_menu,""Caviste""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2995;
 					type="Land_CashDesk_F";
@@ -46701,7 +46658,6 @@ class Mission
 					{
 						init="call{this addAction[""Faire des bijoux"",life_fnc_processAction,""bijoux"",0,false,false,"""",' life_inv_Argent > 0 && life_inv_rock > 0 && license_civ_diamond && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3045;
 					type="Land_CashDesk_F";
@@ -46744,11 +46700,10 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2457;
 					type="Box_NATO_Equip_F";
-					atlOffset=0.0047168732;
+					atlOffset=3.8146973e-006;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -46806,11 +46761,10 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2458;
 					type="Box_NATO_Equip_F";
-					atlOffset=0.0010204315;
+					atlOffset=0.00023841858;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -46863,16 +46817,14 @@ class Mission
 						angles[]={0,3.6571627,0};
 					};
 					side="Empty";
-					flags=4;
 					class Attributes
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2459;
 					type="Box_NATO_Equip_F";
-					atlOffset=0.00039482117;
+					atlOffset=0.75300026;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -46930,11 +46882,10 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2460;
 					type="Box_NATO_Equip_F";
-					atlOffset=0.00078201294;
+					atlOffset=0.00033378601;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -46972,11 +46923,10 @@ class Mission
 					{
 						init="call{this addAction[""Reserve du GDO"",life_fnc_weaponShopMenu,""cop_gdo""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2461;
 					type="Box_NATO_Equip_F";
-					atlOffset=1.1509247;
+					atlOffset=1.1510029;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -47015,7 +46965,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; this allowDamage false;  " \n "this addAction[""Faire du Ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux > 0 && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];   " \n "}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2565;
 					type="Land_CargoBox_V1_F";
@@ -47076,7 +47025,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; this allowDamage false; " \n "this addAction[""Faire du Ciment"",life_fnc_processAction,""cement"",0,false,false,"""",' life_inv_Chaux > 0 && life_inv_sand > 0 && licence_civ_cement && !life_is_processing'];  " \n "}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2811;
 					type="Land_CargoBox_V1_F";
@@ -47137,7 +47085,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; this allowDamage false; " \n " this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing']; " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2823;
 					type="Land_CargoBox_V1_F";
@@ -47199,7 +47146,6 @@ class Mission
 						health=0;
 						init="call{ " \n "this addAction[""Fondre l Aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing'];  " \n " " \n "this addAction[""Fondre l Argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing'];  " \n " " \n "this addAction[""Fondre le Cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing'];  " \n " " \n "this addAction[""Fondre le Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing'];  " \n " " \n "this addAction[""Fondre le Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2825;
 					type="Land_CargoBox_V1_F";
@@ -47259,7 +47205,6 @@ class Mission
 					{
 						init="call{this addAction[""Export de ressources Metallurgiques"",life_fnc_virt_menu,""iron""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2828;
 					type="Land_CargoBox_V1_F";
@@ -47320,7 +47265,6 @@ class Mission
 					{
 						init="call{this addAction[""Export de produits de Luxe"",life_fnc_virt_menu,""Eluxe""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2836;
 					type="Land_CargoBox_V1_F";
@@ -47381,7 +47325,6 @@ class Mission
 					{
 						init="call{this addAction[""Export de ressources Combustibles"",life_fnc_virt_menu,""ECombustible""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2930;
 					type="Land_CargoBox_V1_F";
@@ -47442,7 +47385,6 @@ class Mission
 					{
 						init="call{this addAction[""Fondre l Aluminium"",life_fnc_processAction,""Aluminium"",0,false,false,"""",' life_inv_AluminiumB > 0 && licence_civ_fonderieExp && !life_is_processing'];   " \n "  " \n "this addAction[""Fondre l Argent"",life_fnc_processAction,""Argent"",0,false,false,"""",' life_inv_ArgentB > 0 && licence_civ_fonderieExp && !life_is_processing'];   " \n "  " \n "this addAction[""Fondre le Cuivre"",life_fnc_processAction,""copper_r"",0,false,false,"""",' life_inv_copperB > 0 && licence_civ_fonderie && !life_is_processing'];   " \n "  " \n "this addAction[""Fondre le Fer"",life_fnc_processAction,""iron_r"",0,false,false,"""",' life_inv_FerB > 0 && licence_civ_fonderie && !life_is_processing'];   " \n "  " \n "this addAction[""Fondre le Sable"",life_fnc_processAction,""glass"",0,false,false,"""",' life_inv_sand > 0 && licence_civ_fonderieExp && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2936;
 					type="Land_CargoBox_V1_F";
@@ -47502,7 +47444,6 @@ class Mission
 					{
 						init="call{this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_usine && !life_is_processing'];   " \n "  " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2938;
 					type="Land_CargoBox_V1_F";
@@ -47564,7 +47505,6 @@ class Mission
 					{
 						init="call{this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing'];  " \n " " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n " " \n "this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach > 0 && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2964;
 					type="Land_CargoBox_V1_F";
@@ -47625,7 +47565,6 @@ class Mission
 					{
 						init="call{this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing'];  " \n " " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n " " \n "this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach > 0 && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2970;
 					type="Land_CargoBox_V1_F";
@@ -47686,7 +47625,6 @@ class Mission
 					{
 						init="call{this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing'];  " \n " " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing']; " \n " " \n "this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach > 0 && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2976;
 					type="Land_CargoBox_V1_F";
@@ -47748,7 +47686,6 @@ class Mission
 					{
 						init="call{this addAction[""Presser vos Pommes"",life_fnc_processAction,""Jus_De_Pomme"",0,false,false,"""",' life_inv_apple > 0 && licence_civ_presseur && !life_is_processing'];  " \n "  " \n "this addAction[""Presser votre Raisin"",life_fnc_processAction,""Jus_De_Raisin"",0,false,false,"""",' life_inv_Raisin > 0 && licence_civ_presseur && !life_is_processing'];  " \n "  " \n "this addAction[""Faire du Jus Multifruits"",life_fnc_processAction,""Jus_MultiFruit"",0,false,false,"""",' life_inv_peach > 0 && life_inv_Orange > 0 && licence_civ_presseur && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2982;
 					type="Land_CargoBox_V1_F";
@@ -47810,7 +47747,6 @@ class Mission
 					{
 						init="call{this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Cidre"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && licence_civ_fermenta && !life_is_processing'];  " \n " " \n "this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Vin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && licence_civ_fermenta && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3009;
 					type="Land_CargoBox_V1_F";
@@ -47871,7 +47807,6 @@ class Mission
 					{
 						init="call{this addAction[""Fermenter le Jus de Pomme"",life_fnc_processAction,""Cidre"",0,false,false,"""",' life_inv_Jus_De_Pomme > 0 && licence_civ_fermenta && !life_is_processing'];  " \n " " \n "this addAction[""Fermenter le Jus de Raisin"",life_fnc_processAction,""Vin"",0,false,false,"""",' life_inv_Jus_De_Raisin > 0 && licence_civ_fermenta && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3018;
 					type="Land_CargoBox_V1_F";
@@ -47932,7 +47867,6 @@ class Mission
 					{
 						init="call{this addAction[""Faire de l Acier"",life_fnc_processAction,""Acier"",0,false,false,"""",' life_inv_Charbon > 0 && life_inv_Aluminium > 0 && life_inv_iron_r > 0 && licence_civ_Acier && !life_is_processing'];   " \n "}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3027;
 					type="Land_CargoBox_V1_F";
@@ -47993,7 +47927,6 @@ class Mission
 					{
 						init="call{this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3049;
 					type="Land_CargoBox_V1_F";
@@ -48055,7 +47988,6 @@ class Mission
 					{
 						init="call{this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3053;
 					type="Land_CargoBox_V1_F";
@@ -48117,7 +48049,6 @@ class Mission
 					{
 						init="call{this addAction[""Poissonnerie"",life_fnc_virt_menu,""fishmarket""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3075;
 					type="Land_CargoBox_V1_F";
@@ -48178,7 +48109,6 @@ class Mission
 					{
 						init="call{this addAction[""Raffiner le Petrole"",life_fnc_processAction,""oil"",0,false,false,"""",' life_inv_oil > 0 && !life_is_processing'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=3110;
 					type="Land_CargoBox_V1_F";
@@ -48242,7 +48172,6 @@ class Mission
 						init="this allowDamage false; this enableSimulation false; this addAction[""Open Vault"",life_fnc_safeOpen,"""",0,false,false,"""",' playerSide == civilian && {_target getVariable[""safe_open"",false]} '];  this addAction[""Fix Vault"",life_fnc_safeFix,"""",0,false,false,"""",' playerSide == west && {_target getVariable [""safe_open"",false]} ' ];";
 						name="fed_bank";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2405;
 					type="Land_CargoBox_V1_F";
@@ -48285,7 +48214,6 @@ class Mission
 					{
 						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_1""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west'];  " \n " " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=206914;
 					};
 					id=1607;
@@ -48328,7 +48256,6 @@ class Mission
 					{
 						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];   " \n " " \n "this addAction[""Vehicules de Fonction"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place du Vehicule""];   life_garage_sp = ""med_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent '];   " \n " " \n "this addAction[""Ranger son Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=87085312;
 					};
 					id=1787;
@@ -48371,7 +48298,6 @@ class Mission
 					{
 						init="call{this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=206914;
 					};
 					id=1969;
@@ -48414,7 +48340,6 @@ class Mission
 					{
 						init="call{this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_4""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=206914;
 					};
 					id=2019;
@@ -48458,7 +48383,6 @@ class Mission
 					{
 						init="call{this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_3""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=206914;
 					};
 					id=2069;
@@ -48500,7 +48424,6 @@ class Mission
 					{
 						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=1888;
 					type="Land_BeachBooth_01_F";
@@ -48543,7 +48466,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""]; " \n "}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2068;
 					type="Land_BeachBooth_01_F";
@@ -48586,7 +48508,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2134;
 					type="Land_BeachBooth_01_F";
@@ -48628,7 +48549,6 @@ class Mission
 					{
 						init="call{this enableSimulation false; " \n "this allowDamage false; " \n "this addAction[""Fournitures"",life_fnc_virt_menu,""cop""]; " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""]; " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol""]; " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant""]; " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser""]; " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie""]; " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi""]; " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com""]; " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2150;
 					type="Land_BeachBooth_01_F";
@@ -48670,7 +48590,6 @@ class Mission
 					{
 						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2452;
 					type="Land_BeachBooth_01_F";
@@ -48712,7 +48631,6 @@ class Mission
 					{
 						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2453;
 					type="Land_BeachBooth_01_F";
@@ -48754,7 +48672,6 @@ class Mission
 					{
 						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2454;
 					type="Land_BeachBooth_01_F";
@@ -48797,7 +48714,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2418;
 					type="Land_Atm_01_F";
@@ -48840,7 +48756,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=259;
 					type="Land_Atm_02_F";
@@ -48884,7 +48799,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=260;
 					type="Land_Atm_02_F";
@@ -48928,7 +48842,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=263;
 					type="Land_Atm_02_F";
@@ -48972,7 +48885,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=265;
 					type="Land_Atm_02_F";
@@ -49016,7 +48928,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=266;
 					type="Land_Atm_02_F";
@@ -49060,7 +48971,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=267;
 					type="Land_Atm_02_F";
@@ -49104,7 +49014,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=268;
 					type="Land_Atm_02_F";
@@ -49148,7 +49057,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=269;
 					type="Land_Atm_02_F";
@@ -49192,7 +49100,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=270;
 					type="Land_Atm_02_F";
@@ -49235,7 +49142,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=271;
 					type="Land_Atm_02_F";
@@ -49278,7 +49184,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=272;
 					type="Land_Atm_02_F";
@@ -49322,7 +49227,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=273;
 					type="Land_Atm_02_F";
@@ -49365,7 +49269,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=274;
 					type="Land_Atm_02_F";
@@ -49408,7 +49311,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=261;
 					type="Land_Atm_02_F";
@@ -49452,7 +49354,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=276;
 					type="Land_Atm_02_F";
@@ -49496,7 +49397,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2419;
 					type="Land_Atm_02_F";
@@ -49539,7 +49439,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2420;
 					type="Land_Atm_02_F";
@@ -49582,7 +49481,6 @@ class Mission
 						skill=0.60000002;
 						init="call{this addAction[""<t color='#ADFF2F'>ATM</t>"",life_fnc_atmMenu,"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2417;
 					type="Land_Atm_02_F";
@@ -49624,7 +49522,6 @@ class Mission
 					{
 						init="call{this addAction[""Fournir des materiaux de Construction"",life_fnc_virt_menu,""build""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2872;
 					type="Land_WheelCart_F";
@@ -49666,7 +49563,6 @@ class Mission
 					{
 						init="call{this allowDamage false; this enableSimulation false; this addAction[""Fournir des materiaux de Construction"",life_fnc_virt_menu,""build""];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2485;
 					type="Land_WheelCart_F";
@@ -49708,7 +49604,6 @@ class Mission
 					{
 						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_air_1""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west'];  " \n " " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=1563;
 					type="Land_DieselGroundPowerUnit_01_F";
@@ -49750,7 +49645,6 @@ class Mission
 					{
 						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_air_1"",""med"",""Kavala Hosptial""]];  " \n "this addAction[""Reserves d Heliportes"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place de l Heliporte""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent '];   " \n "this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
 						disableSimulation=1;
-						dynamicSimulation=1;
 						aiRadarUsage=334151;
 					};
 					id=1792;
@@ -49793,7 +49687,6 @@ class Mission
 					{
 						init="call{this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=1970;
 					type="Land_DieselGroundPowerUnit_01_F";
@@ -49836,11 +49729,10 @@ class Mission
 					{
 						init="call{this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_2""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2020;
 					type="Land_DieselGroundPowerUnit_01_F";
-					atlOffset=0.0069999695;
+					atlOffset=0.0069990158;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -49879,7 +49771,6 @@ class Mission
 					{
 						init="call{this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impound_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_3""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west'];  " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; }";
 						disableSimulation=1;
-						dynamicSimulation=1;
 					};
 					id=2070;
 					type="Land_DieselGroundPowerUnit_01_F";
@@ -49910,7 +49801,7 @@ class Mission
 				};
 			};
 			id=3145;
-			atlOffset=-6.6778831;
+			atlOffset=-6.6778851;
 		};
 		class Item4
 		{
