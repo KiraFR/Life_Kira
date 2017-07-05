@@ -1,3 +1,4 @@
+#define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
 #include "..\..\macro.h"
 /*
 	File: fn_vehStoreItem.sqf
@@ -12,7 +13,9 @@ disableSerialization;
 
 _ctrl = ctrlSelData(3503);
 _num = ctrlText 3506;
+
 if(!([_num] call TON_fnc_isnumber)) exitWith {hint "Invalid Number format";};
+
 _num = parseNumber(_num);
 if(_num < 1) exitWith {hint "You can't enter anything below 1!";};
 
