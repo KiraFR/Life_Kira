@@ -58,12 +58,13 @@ _units = _units - [player];
 				};
 			};
 			
-			_idc ctrlSetStructuredText parseText _text;
-			_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
-			_idc ctrlSetScale scale;
-			_idc ctrlSetFade 0;
-			_idc ctrlCommit 0;
-			_idc ctrlShow true;
+			//_idc ctrlSetStructuredText parseText _text;
+			//_idc ctrlSetPosition [_sPos select 0, _sPos select 1, 0.4, 0.65];
+			//_idc ctrlSetScale scale;
+			//_idc ctrlSetFade 0;
+			//_idc ctrlCommit 0;
+			//_idc ctrlShow true;
+			_idc ctrlShow false;
 		} else {
 			_idc ctrlShow false;
 		};
