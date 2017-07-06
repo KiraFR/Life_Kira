@@ -39,7 +39,12 @@ while {true} do {
                 _countArr = count _result;
                 if (_countArr != 0) then {
                     _valueNew = 0;
-                    _result params ["_min","_max","_seil","_evol","_entValue","_Null","_relation"];
+                    _min = (_result select 0);
+                    _max = (_result select 1);
+                    _seil = (_result select 2);
+                    _evol = (_result select 3);
+                    _entValue = (_result select 5);
+                    _relation = (_result select 6);
                     _value = {if (_resource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object_Bourse;
                     if (_ent) then {
                         if (_entValue != 0) then {
