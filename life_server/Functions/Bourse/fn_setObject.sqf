@@ -39,6 +39,5 @@ if (count _queryResult == 0) then {
 };
 
 Bourse_Object setVariable ["Bourse",_queryResult, true];
-Bourse_Object setVariable ["CompteGouv",0,true];
 Bourse_Resource_Save = [];
 Bourse_Start = true;

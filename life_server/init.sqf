@@ -117,6 +117,7 @@ client_session_list = [];
 
 [] spawn TON_fnc_initHouses;
 [] call bourse_fnc_startServer;
+[] call gouv_fnc_SetGouv;
 
 //Lockup the dome
 private["_dome","_rsb"];

@@ -70,6 +70,16 @@ class CfgFunctions
 		};
 	};
 
+	class gouv
+    {
+    	tag = "gouv";
+    	class gouv
+    	{
+    		file = "\life_server\Functions\Gouv";
+            class SetGouv {};
+    	};
+    };
+
 	class Life_System
 	{
 		tag = "life";

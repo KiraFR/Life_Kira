@@ -17,8 +17,8 @@ link4[] = {4,2};
 link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-479.266693,381.131378,404.317139,-214.050247,500,646,1};
-window[] = {2,-1,-1,-32000,-32000,900,2214,3654,82,1,518};
+globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-143.868546,156.133667,440.767822,53.164932,500,646,1};
+window[] = {0,-1,-1,-1,-1,919,2400,3840,101,1,518};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -98,7 +98,7 @@ class FSM
                          "    _argent = 0;" \n
                          "" \n
                          "	if (licence_civ_ASG) then {" \n
-                         "	    _paye = _paye + 500;" \n
+                         "	    _paye = _paye + 1500;" \n
                          "	};" \n
                          "" \n
                          "	if (licence_civ_AMC) then {" \n
@@ -141,12 +141,12 @@ class FSM
                          "        };" \n
                          "    };" \n
                          "" \n
-                         "    _CompteGouv = Bourse_Object getVariable [""CompteGouv"",0];" \n
-                         "" \n
+                         "    _CompteGouv = CompteGouvernement;" \n
+                         "	 _paye = _paye / 12;" \n
                          "    _CompteGouv = _CompteGouv - _paye;" \n
                          "" \n
-                         "    Bourse_Object setVariable [""CompteGouv"",_CompteGouv];" \n
-                         "	life_atmcash = life_atmcash + _paye;" \n
+                         "    CompteGouvernement = _CompteGouv;" \n
+                         "	CASH = CASH + _paye;" \n
                          "	systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
                          "" \n
                          "};" \n
