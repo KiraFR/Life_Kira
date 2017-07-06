@@ -18,7 +18,7 @@ link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
 globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-143.868546,156.133667,440.767822,53.164932,500,646,1};
-window[] = {0,-1,-1,-1,-1,919,2400,3840,101,1,518};
+window[] = {0,-1,-1,-32000,-32000,888,2086,3526,70,1,518};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -121,32 +121,28 @@ class FSM
                          "        	case ""OS"" : {_ret = 3;};" \n
                          "        	case ""RD"" : {_ret = 2;};" \n
                          "        	case ""EP"" : {_ret = 1;};" \n
-                         "        	case ""ED"" : {_ret = 4;};" \n
-                         "        	case ""OD"" : {_ret = 5;};" \n
-                         "        };" \n
+                         "       	case ""ED"" : {_ret = 4;};" \n
+                         "       	case ""OD"" : {_ret = 5;};" \n
+                         "       };" \n
                          "" \n
-                         "        if (_ret == 1 or _ret == 2) then {" \n
-                         "            _argent = _argent + (_x select 2);" \n
-                         "        };" \n
+                         "       if (_ret == 1 or _ret == 2) then {" \n
+                         "           _argent = _argent + (_x select 2);" \n
+                         "       };" \n
                          "" \n
-                         "    }forEach (missionNamespace getVariable [""AccountBanque"",[]]);" \n
+                         "   }forEach (missionNamespace getVariable [""AccountBanque"",[]]);" \n
                          "" \n
-                         "    if (_argent < 2000) then {" \n
-                         "        _paye = _paye + 100;" \n
-                         "    };" \n
+                         "   if (_argent < 2000) then {" \n
+                         "       _paye = _paye + 100;" \n
+                         "   };" \n
                          "" \n
-                         "    if (_argent > 2000) then {" \n
-                         "        if (_argent < 3000) then {" \n
-                         "            _paye = _paye + 50;" \n
-                         "        };" \n
-                         "    };" \n
+                         "   if (_argent > 2000) then {" \n
+                         "       if (_argent < 3000) then {" \n
+                         "           _paye = _paye + 50;" \n
+                         "       };" \n
+                         "   };" \n
                          "" \n
-                         "    _CompteGouv = CompteGouvernement;" \n
-                         "	 _paye = _paye / 12;" \n
-                         "    _CompteGouv = _CompteGouv - _paye;" \n
-                         "" \n
-                         "    CompteGouvernement = _CompteGouv;" \n
-                         "	CASH = CASH + _paye;" \n
+                         "	_paye = _paye / 12;" \n
+                         "	life_atmcash = life_atmcash + _paye;" \n
                          "	systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
                          "" \n
                          "};" \n
