@@ -38,6 +38,7 @@ switch (_type) do {
 		hint "Votre compte offshore a bien été créé";
 
 		_Bank = [_name,_num,0,false,_first];
+		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
@@ -63,6 +64,7 @@ switch (_type) do {
 		hint "Votre compte a bien était cree";
 
 		_Bank = [_name,_num,0,false,_first];
+		_Bank call life_fnc_BankUpdate;
 
 		life_AccN = life_AccN +1;
 		life_nbAcc = life_nbAcc +1;
@@ -89,8 +91,8 @@ switch (_type) do {
 
 		hint "Votre compte a bien était creer";
 
-		_Solde = 0;
 		_Bank = [_name,_num,0,false,false];
+		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
 		life_EnterAcc = true;
@@ -109,8 +111,8 @@ switch (_type) do {
 
 		hint "Votre compte a bien était creer";
 
-		_Solde = 0;
 		_Bank = [_name,_num,0,false,false];
+		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
 		life_EparAcc = true;
@@ -132,12 +134,11 @@ switch (_type) do {
 
 		hint "Votre compte a bien était creer";
 
-		_Solde = 0;
 		_Bank = [_name,_num,0,false,false];
+		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
 		life_OrgaAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 };
-_Bank call life_fnc_BankUpdate;
