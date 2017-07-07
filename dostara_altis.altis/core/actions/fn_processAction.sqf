@@ -86,7 +86,7 @@ if(_lcs) then
 					_rscNameRec = _x select 0;
 					[false,_rscNameRec,(_min * (_x select 1))] call life_fnc_handleInv;
 				}foreach (_rscRecettes select _i);
-				[true,_rsc,_min] call life_fnc_handleInv;
+				[true,_rsc,_min*(_rscProcessedCount)] call life_fnc_handleInv;
 			};
 			5 cutText ["","PLAIN"];
 		};
