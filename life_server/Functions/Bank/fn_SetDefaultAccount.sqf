@@ -8,8 +8,8 @@
 */
 params[
 	["_uid","",[""]],
-	["_id",0,[0]]
+	["_numcompte","",[""]]
 ];
 _edit = ["UPDATE banque SET dflt='0' WHERE playerid='%1' AND dflt='1';
-		   UPDATE banque SET dflt='1' WHERE playerid='%1' AND id='%2'",_uid,_id];
+		   UPDATE banque SET dflt='1' WHERE playerid='%1' AND numcompte='%2'",_uid,_numcompte];
 [_edit,1] call DB_fnc_asyncCall;

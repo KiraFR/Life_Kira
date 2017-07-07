@@ -28,7 +28,7 @@ switch (_type) do {
 		_type = 1;
 		_guid = (getPlayerUID Player) splitString "";
 		if(clientOwner < 10)then{_client = format["00%1",clientOwner];};
-		if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
+		if(clientOwner > 10 and clientOwner < 100) then{_client = format["0%1",clientOwner];};
 		_guid = format["%1%2%3%4",
 			_guid select 10,_guid select 11,_guid select 12,_guid select 13];
 		_num = "OS" + _guid + format["%1",life_nbAcc+1];
