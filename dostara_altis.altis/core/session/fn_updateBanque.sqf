@@ -16,7 +16,7 @@ _Info = missionNamespace getVariable ["AccountBanque",[]];
 		_tab set [2,BANK];
 		_index = _forEachIndex;
 	};
-}foreach _Info;
+}forEach _Info;
 _Info set[_index,_tab];
 missionNamespace getVariable ["AccountBanque",_Info];
 //_Info pushBack missionNamespace setVariable ["AccountBanqueOrga",[]];

@@ -45,7 +45,7 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 			};
 		};
 	};
-}foreach _ac;
+}forEach _ac;
 
 _valTot = BANK + _value;
 if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
