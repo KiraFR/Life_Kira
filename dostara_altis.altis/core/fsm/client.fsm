@@ -18,7 +18,7 @@ link5[] = {5,6};
 link6[] = {6,7};
 link7[] = {7,3};
 globals[] = {0.000000,0,0,0,0,640,480,1,26,6316128,1,-338.946808,304.134247,605.100281,-227.233017,683,884,1};
-window[] = {2,-1,-1,-1,-1,1052,234,1674,234,3,701};
+window[] = {2,-1,-1,-1,-1,1000,182,1622,182,3,701};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -140,9 +140,10 @@ class FSM
                          "           _paye = _paye + 50;" \n
                          "       };" \n
                          "   };" \n
-                         "" \n
-                         "	_paye = _paye / 12;" \n
-                         "	life_atmcash = life_atmcash + (round _paye);" \n
+                         "	_time = (60 / (call life_paycheck_period));" \n
+                         "	_paye = _paye / _time;" \n
+                         "	_paye = (round _paye);" \n
+                         "	life_atmcash = life_atmcash + _paye;" \n
                          "	systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
                          "" \n
                          "};" \n

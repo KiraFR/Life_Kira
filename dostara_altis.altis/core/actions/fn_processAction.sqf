@@ -22,6 +22,7 @@ _rsc = param[3,"",[""]];
 
 // [	Resource Name,	Count,	[[[Required,Count],...],...]	]
 _rscInfo = [_rsc] call life_fnc_processSwitch;
+_rsc = _rscInfo select 0;
 _rscProcessedCount = _rscInfo select 1;
 _rscRecettes = _rscInfo select 2;
 

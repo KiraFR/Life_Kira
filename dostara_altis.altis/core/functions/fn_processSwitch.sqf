@@ -7,7 +7,7 @@
 private ["_con","_return"];
 _con = param[0,"",[""]];
 _return = switch(_con) do {
-//  Case    Resource Name            Resource Name ,        Count   [[Required,Count],[R...,C...]...]
+//  Case    Traitement Name             Resource Name ,             Count       [[Required,Count],[R...,C...]...]
     case    "Jus_MultiFruit":           {["Jus_MultiFruit",         1,          [[["Orange",1],["Peche",1]]]]};
     case    "Jus_de_pommes":            {["Jus_de_pommes",          1,          [[["Pommes",2]]]]};
     case    "Jus_de_raisin":            {["Jus_de_raisin",          1,          [[["Raisin",2]]]]};
@@ -35,7 +35,7 @@ _return = switch(_con) do {
     case    "Fer":                      {["Fer",                    1,          [[["Fer",4]]]]};
     case    "Bijoux":                   {["Bijoux",                 1,          [[["Pierres_Precieuses",3]]]]};
     case    "Acier":                    {["Acier",                  1,          [[["Aluminium",1],["Charbon",1],["Fer",1]]]]};
-    case    "Bijoux_2":                 {["Bijoux",                 1,          [[["Argent",1],["Pierres_Precieuses",1]]]]};
+    case    "Bijoux_2":                 {["Bijoux",                 3,          [[["Argent",1],["Pierres_Precieuses",1]]]]};
     case    "cement":                   {["Ciment",                 1,          [[["Chaux",1],["Sable",1]]]]};
     case    "Essence":                  {["Essence",                1,          [[["Petrole",1]]]]};
     case    "Verre":                    {["Verre",                  1,          [[["Sable",2]]]]};
