@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3169;
+		nextID=3171;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=97;
+		nextID=136;
 	};
 	class Camera
 	{
-		pos[]={3161.4658,12.150095,12931.49};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={3501.1394,317.80573,13107.738};
+		dir[]={-0.70950025,-0.66694975,-0.22763833};
+		up[]={-0.63510025,0.74506587,-0.20376679};
+		aside[]={-0.30551016,2.4621841e-008,0.95220405};
 	};
 };
 binarizationWanted=0;
@@ -45513,6 +45513,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2422;
+					atlOffset=0.36927032;
 				};
 				class Item3
 				{
@@ -45595,7 +45596,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -46130,7 +46131,7 @@ class Mission
 					name="atm_marker_2_1";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=227.08539;
+					angle=227.08533;
 					id=124;
 				};
 				class Item54
@@ -46282,7 +46283,7 @@ class Mission
 					name="atm_marker_6";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=3.5541782;
+					angle=3.5541773;
 					id=2810;
 				};
 				class Item69
@@ -47634,7 +47635,6 @@ class Mission
 					};
 					id=2930;
 					type="Land_CargoBox_V1_F";
-					atlOffset=9.5367432e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -47996,7 +47996,7 @@ class Mission
 					};
 					id=2982;
 					type="Land_CargoBox_V1_F";
-					atlOffset=-0.0010004044;
+					atlOffset=-0.001001358;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -57977,7 +57977,7 @@ class Mission
 									class Attributes
 									{
 										skill=0.60000002;
-										init="call{this enableSimulation false; this allowDamage false; this addAction[""Accéder au garage publique"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; life_garage_type = ""Car"";   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""];   life_garage_sp = ""car_g_1"";  }];  this addAction[""Demander au garagiste de ranger mon véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+										init="call{this addAction[ " \n "    ""Accéder au garage publique"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""car_g_1"";   " \n " " \n "    } " \n "];   " \n " " \n "this addAction[""Demander au garagiste de ranger mon véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
 									};
