@@ -62,6 +62,16 @@
 
 [] spawn
 {
+	while{true} do
+	{
+		sleep 910;
+		[] spawn SOCK_fnc_syncData;
+		[] call SOCK_fnc_updateBanque;
+	};
+};
+
+[] spawn
+{
 	while {true} do
 	{
 		sleep 1.5;

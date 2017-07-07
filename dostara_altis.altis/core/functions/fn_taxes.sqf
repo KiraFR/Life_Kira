@@ -84,7 +84,7 @@ switch (_type) do {
 					5. Organisme
 				*/
 				_ret = switch (_type) do {
-					case 1 : {false}//impossible
+					case 1 : {false};//impossible
 					case 2 : {if(_first)then{0.05}else{0.1}};
 					case 3 : {
 						if(_first)then{
