@@ -20,7 +20,7 @@ if((_itemInfo select 6) != "CfgVehicles") then
 {
 	if((_itemInfo select 4) in [4096,131072]) then
 	{
-		if(!(player canAdd _item) && (uiNamespace getVariable["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = (localize "STR_NOTF_NoRoom")};
+		if(!(player canAdd _item) && (uiNamespace getVariable["Weapon_Shop_Filter",0]) != 1) exitWith {_bad = (localize "STR_NOTF_NoRoom");};
 	};
 };
 
@@ -55,7 +55,7 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 
 			[getPlayerUID player, playerSide, [name player, _itemInfo select 1, _item, _price, _gName],21] remoteExecCall ["DB_fnc_logs",2];
 			[_item,true] spawn life_fnc_handleItem;
-			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
+			[1,grpPlayer] remoteExecCall ["TON_fnc_updateGang",2];
 		} else {
 			if(_price > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
