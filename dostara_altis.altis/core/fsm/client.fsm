@@ -142,7 +142,7 @@ class FSM
                          "   };" \n
                          "" \n
                          "	_paye = _paye / 12;" \n
-                         "	life_atmcash = life_atmcash + _paye;" \n
+                         "	life_atmcash = life_atmcash + (round _paye);" \n
                          "	systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
                          "" \n
                          "};" \n

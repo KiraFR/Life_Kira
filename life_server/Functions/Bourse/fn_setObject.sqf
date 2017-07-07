@@ -8,7 +8,7 @@
 private ["_return","_all","_query","_queryResult","_return","_str"];
 
 _all = ["Name"] call bourse_fnc_resources;
-_query = "SELECT id,name,valeur FROM bourse WHERE id='1'";
+_query = "SELECT name,valeur FROM bourse";
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
 if (count _queryResult == 0) then {
