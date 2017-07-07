@@ -226,7 +226,18 @@ life_licenses =
 	["licence_civ_ASG","civ"],
 	["licence_civ_AMC","civ"],
 	["licence_civ_AMG","civ"],
-	["licence_civ_ASP","civ"]
+	["licence_civ_ASP","civ"],
+
+	["license_civ_diamond","civ"],
+    ["license_civ_Acier","civ"],
+    ["license_civ_PPrecieuse","civ"],
+    ["licence_civ_fonderie","civ"],
+    ["licence_civ_fonderieExp","civ"],
+    ["licence_civ_Chaux","civ"],
+    ["license_civ_presseur","civ"],
+    ["licence_civ_fermenta","civ"],
+    ["licence_civ_vin","civ"],
+    ["licence_civ_fishsoup","civ"]
 
 ];
 
