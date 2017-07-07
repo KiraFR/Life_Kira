@@ -118,14 +118,4 @@ switch(playerSide) do {
 	};
 };
 
-switch true do {
-	case (BANK < 100000):{life_paycheck = 500;};
-	case (BANK > 100000):{life_paycheck = 200;};
-	case (BANK > 200000):{life_paycheck = 100;};
-	case (BANK > 300000):{life_paycheck = 50;};
-	case (BANK > 400000):{life_paycheck = 25;};
-	case (BANK > 500000):{life_paycheck = 0;};
-	case (PlayerSide == west || PlayerSide == independent):{life_paycheck = 1200;};
-};
-
 life_session_completed = true;
