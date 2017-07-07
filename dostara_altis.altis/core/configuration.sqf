@@ -185,7 +185,12 @@ life_inv_items =
     "life_resource_meth",
     "life_resource_pharmceutique",
     "life_resource_speedball",
-    "life_resource_tortue"
+    "life_resource_tortue",
+    "life_resource_calcaire",
+    "life_resource_aluminium_brut",
+    "life_resource_argent_brut",
+    "life_resource_cuivre_brut",
+    "life_resource_fer_brut"
 
 ];
 

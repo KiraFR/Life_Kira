@@ -70,6 +70,12 @@ switch (_mode) do
             case "Speed_Ball" : {"life_resource_speedball"};
             case "Tortue" : {"life_resource_tortue"};
 
+            case "Calcaire" : {"life_resource_calcaire"};
+            case "Aluminium_Brut" : {"life_resource_aluminium_brut"};
+            case "Argent_Brut" : {"life_resource_argent_brut"};
+            case "Cuivre_Brut" : {"life_resource_cuivre_brut"};
+            case "Fer_Brut" : {"life_resource_fer_brut"};
+
 		};
 	};
 	
@@ -130,6 +136,12 @@ switch (_mode) do
             case "life_resource_pharmceutique" : {"Pharmaceutique"};
             case "life_resource_speedball" : {"Speed_Ball"};
             case "life_resource_tortue" : {"Tortue"};
+
+            case "life_resource_calcaire" : {"Calcaire"};
+            case "life_resource_aluminium_brut" : {"Aluminium_Brut"};
+            case "life_resource_argent_brut" : {"Argent_Brut"};
+            case "life_resource_cuivre_brut" : {"Cuivre_Brut"};
+            case "life_resource_fer_brut" : {"Fer_Brut"};
 		};
 	};
 };

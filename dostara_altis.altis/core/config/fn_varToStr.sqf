@@ -67,6 +67,11 @@ switch (_var) do
     case "life_resource_pharmceutique" : {"Pharmaceutique"};
     case "life_resource_speedball" : {"Speed Ball"};
     case "life_resource_tortue" : {"Tortue"};
+    case "life_resource_calcaire" : {"Calcaire"};
+    case "life_resource_aluminium_brut" : {"Aluminium Brut"};
+    case "life_resource_argent_brut" : {"Argent Brut"};
+    case "life_resource_cuivre_brut" : {"Cuivre Brut"};
+    case "life_resource_fer_brut" : {"Fer Brut"};
 
 
 	//License Block

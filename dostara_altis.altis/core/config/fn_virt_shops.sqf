@@ -55,4 +55,7 @@ switch (_shop) do
     case "Pharmaceutique" : {["Pharmaceutique",["Pharmaceutique"]]};
     case "Speed_Ball" : {["Speed_Ball",["Speed_Ball"]]};
     case "Tortue" : {["Tortue",["Tortue"]]};
+    case "Construction" : {["Construction",["Bois","Fer","Cuivre","Sable","Verre","Acier","Ciment"]]};
+    case "Poissonnerie" : {["Poissonnerie",["Saupe","Girelle","Maquereau","Thon","Mulet","Roussette"]]};
+    case "Boisson": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multisfruits","Soda_Extra_Energy_Drink"]]};
 };
