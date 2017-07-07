@@ -49,14 +49,19 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 
 _valTot = BANK + _value;
 if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
+_taxe = 0;
+/*
+
 _taxe = [0] call life_fnc_taxes;
 if(_taxe == 50)then{
 	_value = _value - _taxe;
 	if(_value < 0) exitWith{hint "Vous ne pouvez pas deposer moins de 50 dostar."};
 }else{
 	_taxes = _value * _taxe;
-	_value = _value - _taxes;	
+	_value = _value - _taxes;
 };
+
+*/
 CASH = CASH - _value;
 BANK = BANK + _value;
 hint format["Vous venez de deposer %1 dostar, %2 dostar de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];

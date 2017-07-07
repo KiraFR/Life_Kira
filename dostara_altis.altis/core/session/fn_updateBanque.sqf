@@ -4,21 +4,17 @@
 	Author: R. `KronosD` R.
 */
 
-private["_Info","_PlayerUID","_tab","_index"];
+private["_Info","_PlayerUID","_tab","_save","_num"];
 
 _PlayerUID = getPlayerUID player;
-
 _Info = missionNamespace getVariable ["AccountBanque",[]];
+_save = [];
 {
 	_tab = _x;
 	_dft = _x select 3;
 	if(_dft)exitWith{
-		_tab set [2,BANK];
-		_index = _forEachIndex;
+		_num = _x select 1;
+		_save = [_num,BANK];
 	};
 }forEach _Info;
-_Info set[_index,_tab];
-missionNamespace getVariable ["AccountBanque",_Info];
-//_Info pushBack missionNamespace setVariable ["AccountBanqueOrga",[]];
-
-[_Info,_PlayerUID] remoteExecCall ["DB_fnc_SyncAccountDB",2];
+[_save] remoteExecCall ["DB_fnc_SyncAccountDB",2];

@@ -22,7 +22,7 @@ _type = param[0,0,[0]];
 _ret = 1;
 switch (_type) do {
 	case 0 : {
-		_ac = missionNamespace getVariable ["accountBanque",[]];
+		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
 			_type = [(_x select 1)] call life_fnc_typeCompte;
@@ -45,7 +45,7 @@ switch (_type) do {
 		}foreach _ac;
 	}; 
 	case 1 : {		
-		_ac = missionNamespace getVariable ["accountBanque",[]];
+		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
 			_first = _x select 4;
@@ -70,7 +70,7 @@ switch (_type) do {
 	case 2 : {
 		_dest = param[1,"",[""]];
 		_type = [_dest] call life_fnc_typeCompte;
-		_ac = missionNamespace getVariable ["accountBanque",[]];
+		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
 			_first = _x select 4;
