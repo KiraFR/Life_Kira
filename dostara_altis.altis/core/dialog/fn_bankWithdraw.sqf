@@ -13,7 +13,7 @@ diag_log format["%1",_val];
 _taxe = [1] call life_fnc_taxes;
 diag_log format["%1",_taxe];
 _taxes = _val * _taxe;
-diag_log format["%1",_taxe];
+diag_log format["%1",_taxes];
 _val = _val - _taxes;
 diag_log format["%1",_val];
 CASH = CASH + _val;
