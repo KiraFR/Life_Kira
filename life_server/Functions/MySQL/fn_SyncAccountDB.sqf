@@ -19,11 +19,11 @@
 	[ARRAY] call DB_fnc_syncAccountDB
 */
 
-private["_NumCompte","_Cash","_PlayerUID","_Info","_query","_type"];
-params[["_Info"]];
+private["_NumCompte","_Cash","_query"];
+params[["_NumCompte", ""],["_Cash", 0]];
 
-_NumCompte = _Info select 0;
-_Cash = _Info select 1;
+diag_log format["%1 : %2",_NumCompte,_Cash];
+
 _query = format["UPDATE banque SET bankacc = '%1' WHERE numcompte = '%2';",_Cash,_NumCompte];
 
 [_query,1] call DB_fnc_asyncCall;
