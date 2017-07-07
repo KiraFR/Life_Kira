@@ -75,7 +75,6 @@ switch (_mode) do
             case "Argent_Brut" : {"life_resource_argent_brut"};
             case "Cuivre_Brut" : {"life_resource_cuivre_brut"};
             case "Fer_Brut" : {"life_resource_fer_brut"};
-
 		};
 	};
 	
