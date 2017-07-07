@@ -60,7 +60,7 @@ if(_taxe == 50)then{
 CASH = CASH - _value;
 BANK = BANK + _value;
 hint format["Vous venez de deposer %1 dostar, %2 dostar de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
-call SOCK_fnc_updateBanque;
+[] call SOCK_fnc_updateBanque;
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 

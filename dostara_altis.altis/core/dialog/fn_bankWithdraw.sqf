@@ -9,13 +9,17 @@ if(!([str(_val)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notn
 if(_val > BANK) exitWith {hint localize "STR_ATM_NotEnoughFunds"};
 if(_val < 100 && BANK > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
 
-
+diag_log format["%1",_val];
 _taxe = [1] call life_fnc_taxes;
+diag_log format["%1",_taxe];
 _taxes = _val * _taxe;
+diag_log format["%1",_taxe];
 _val = _val - _taxes;
+diag_log format["%1",_val];
 CASH = CASH + _val;
+diag_log format["%1",CASH];
 BANK = BANK - _val;
-
+diag_log format["%1",BANK];
 
 hint format ["Vous venez de retirer %1 dostar, %2 dostar de taxe ont été retiré.",[_val] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 call life_fnc_atmMenu;
