@@ -12,8 +12,11 @@ _Info = missionNamespace getVariable ["AccountBanque",[]];
 	_tab = _x;
 	_dft = _x select 3;
 	if(_dft)exitWith{
+	    _tab set [2,BANK];
 		_num = _x select 1;
 		_save = BANK;
+
 	};
 }forEach _Info;
+missionNamespace setVariable ["AccountBanque",_Info];
 [_num,_save] remoteExecCall ["DB_fnc_SyncAccountDB",2];
