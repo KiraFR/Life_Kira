@@ -107,7 +107,7 @@ switch (_var) do
 	//New License
 
 	case "license_civ_Acier": {(localize "STR_License_Acier")};
-	case "license_civ_PPrecieuse": {(localize "STR_License_PPrecieuse")};
+	case "license_civ_PPrecieuse": {"Taille de piere precieuse"};
 	case "license_civ_diamond": {(localize "STR_License_Diamond")}; // Bijoux
 	case "licence_civ_fonderie": {(localize "STR_License_Fonderie")};
 	case "licence_civ_fonderieExp": {(localize "STR_License_FonderieExp")};
