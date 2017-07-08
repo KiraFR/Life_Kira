@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3171;
+		nextID=3172;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=136;
+		nextID=150;
 	};
 	class Camera
 	{
-		pos[]={3501.1394,317.80573,13107.738};
-		dir[]={-0.70950025,-0.66694975,-0.22763833};
-		up[]={-0.63510025,0.74506587,-0.20376679};
-		aside[]={-0.30551016,2.4621841e-008,0.95220405};
+		pos[]={3315.9285,115.96629,12966.581};
+		dir[]={-0.63664383,-0.72274911,-0.26898611};
+		up[]={-0.66579646,0.69107223,-0.28130233};
+		aside[]={-0.38920128,-9.7432348e-008,0.92116904};
 	};
 };
 binarizationWanted=0;
@@ -33511,7 +33511,7 @@ class Mission
 						};
 					};
 					id=3157;
-					atlOffset=185.97;
+					atlOffset=1.0319691;
 				};
 				class Item498
 				{
@@ -42312,7 +42312,7 @@ class Mission
 						};
 					};
 					id=3158;
-					atlOffset=185.97;
+					atlOffset=1.6358891;
 				};
 				class Item499
 				{
@@ -45454,7 +45454,7 @@ class Mission
 						};
 					};
 					id=3159;
-					atlOffset=185.97;
+					atlOffset=82.598595;
 				};
 				class Item500
 				{
@@ -45471,6 +45471,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Marqueurs";
+			state=3;
 			class Entities
 			{
 				items=138;
@@ -46131,7 +46132,7 @@ class Mission
 					name="atm_marker_2_1";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=227.08533;
+					angle=227.08531;
 					id=124;
 				};
 				class Item54
@@ -46283,7 +46284,7 @@ class Mission
 					name="atm_marker_6";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=3.5541773;
+					angle=3.554177;
 					id=2810;
 				};
 				class Item69
@@ -46388,7 +46389,7 @@ class Mission
 				class Item77
 				{
 					dataType="Marker";
-					position[]={11583.442,61.116993,18387.76};
+					position[]={11583.442,-1.3720393e-030,18387.76};
 					name="Ress_Cuivre_02";
 					text="Mine de Cuivre";
 					type="mil_dot";
@@ -46396,6 +46397,7 @@ class Mission
 					a=2;
 					b=2;
 					id=2539;
+					atlOffset=-61.116993;
 				};
 				class Item78
 				{
@@ -47050,9 +47052,10 @@ class Mission
 		{
 			dataType="Layer";
 			name="PNJ";
+			state=3;
 			class Entities
 			{
-				items=82;
+				items=83;
 				class Item0
 				{
 					dataType="Object";
@@ -50916,9 +50919,1520 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item82
+				{
+					dataType="Layer";
+					name="Civ";
+					class Entities
+					{
+						items=5;
+						class Item0
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3627.2571,10.584383,13063.979};
+										angles[]={0.064140849,0.042481314,6.2536545};
+									};
+									side="Civilian";
+									flags=6;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this allowDamage false; this enableSimulation false; this addAction[""Passer à la caisse du supermarché"",life_fnc_virt_menu,""market""];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=636;
+									type="C_man_polo_1_F";
+									atlOffset=-9.5367432e-007;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.97000003;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3687.323,11.017052,13103.274};
+										angles[]={0,4.312377,0};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Parler au vendeur d'équipement de plongée"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide == civilian '];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=637;
+									type="C_man_polo_1_F";
+									atlOffset=0.1200304;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.94999999;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=635;
+							atlOffset=-9.5367432e-007;
+						};
+						class Item1
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=11;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={8353.25,85.198563,24952.229};
+										angles[]={6.1336441,2.7590213,0.16125455};
+									};
+									side="Civilian";
+									flags=6;
+									class Attributes
+									{
+										skill=0.60000002;
+										rank="COLONEL";
+										init="this enableSimulation false; this allowDamage false; this hideObject true;";
+										name="master_group";
+										description="Master Group for NPC's";
+									};
+									id=641;
+									type="C_man_1";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="male06gre";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.0448729;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3758.46,12.157639,13317.771};
+										angles[]={0,3.7411134,0};
+									};
+									side="Civilian";
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de camions"",life_fnc_vehicleShopMenu,[""civ_truck"",civilian,""civ_truck_1"",""civ"",""Concessionnaire Samer""]];}";
+										name="carshop1_2";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=648;
+									type="C_man_polo_1_F";
+									atlOffset=0.45030499;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.02;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={14676.675,17.911438,16773.133};
+										angles[]={0,2.9987898,0};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this enableSimulation false; this allowDamage false; this addAction[""Commander un appareil"",life_fnc_vehicleShopMenu,[""civ_air"",civilian,[""civ_air_1"",""civ_air_1_2""],""civ"",""Carl's Airial Auto's""]];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=650;
+									type="C_man_polo_1_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male05GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.97000003;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3685.9641,11.372509,13122.493};
+										angles[]={6.2829933,3.8411729,6.2823648};
+									};
+									side="Civilian";
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this allowDamage false; this enableSimulation false; this addAction[""Parler au poissonier"",life_fnc_virt_menu,""fishmarket""];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=657;
+									type="C_man_polo_1_F";
+									atlOffset=0.51900005;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.94999999;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3773.4751,18.85664,12985.358};
+										angles[]={0,4.7835979,0};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this enableSimulation false; this allowDamage false; this addAction[""Assistance Médicale"",life_fnc_healHospital];}";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=658;
+									type="C_man_polo_3_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3695.77,11.18329,13151.407};
+										angles[]={0,4.7121973,0};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderie""] call life_fnc_varToStr,[([""fonderie""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !license_civ_fonderie && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_fonderieExp""] call life_fnc_varToStr,[([""fonderieExp""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderieExp"",0,false,false,"""",' !license_civ_fonderieExp && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_presseur""] call life_fnc_varToStr,[([""presseur""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""presseur"",0,false,false,"""",' !license_civ_presseur && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_cement""] call life_fnc_varToStr,[([""cement""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cement"",0,false,false,"""",' !license_civ_cement && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fishsoup""] call life_fnc_varToStr,[([""fishsoup""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fishsoup"",0,false,false,"""",' !license_civ_fishsoup && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_diamond""] call life_fnc_varToStr,[([""diamond""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_PPrecieuse""] call life_fnc_varToStr,[([""PPrecieuse""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_Acier""] call life_fnc_varToStr,[([""Acier""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""Acier"",0,false,false,"""",' !license_civ_Acier && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fermenta""] call life_fnc_varToStr,[([""fermenta""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_oil""] call life_fnc_varToStr,[([""oil""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian ']; " \n "this setVariable[""realname"",""License Shop""];}";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=661;
+									type="C_Man_casual_2_F_euro";
+									atlOffset=0.057557106;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item6
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3745.0061,11.8939,13328.604};
+										angles[]={0,3.8897803,0};
+									};
+									side="Civilian";
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionaire"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_1""],""civ"",""Concessionnaire Samer""]]; this setVariable[""realname"", ""Car Shop""];}";
+										name="carshop1";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=662;
+									type="C_man_polo_1_F_afro";
+									atlOffset=0.69999981;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item7
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3687.9319,10.953671,13112.45};
+										angles[]={0,4.2078319,0};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this enableSimulation false; this allowDamage false; this addAction[""Parler à 'l'outilleur"",life_fnc_weaponShopMenu,""genstore""];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=663;
+									type="C_man_polo_1_F_euro";
+									atlOffset=0.013064384;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+								class Item8
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3771.3511,12.090717,13306.756};
+										angles[]={0,3.8524477,0};
+									};
+									side="Civilian";
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this addAction[ " \n "    ""Accéder au garage publique"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""car_g_1"";   " \n " " \n "    } " \n "];   " \n " " \n "this addAction[""Demander au garagiste de ranger mon véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=691;
+									type="C_man_1";
+									atlOffset=0.85999966;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male04GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+								class Item9
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={8368.2129,96.637207,25125.379};
+										angles[]={0.06656827,2.7590215,0.25311893};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="removeAllWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Pay Bail"",life_fnc_postBail,"""",0,false,false,"""",' isNil ""life_canpay_bail"" && life_is_arrested '];";
+									};
+									id=703;
+									type="B_RangeMaster_F";
+								};
+								class Item10
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={14168.042,16.735796,16520.379};
+										angles[]={0,5.4992251,6.2826967};
+									};
+									side="Civilian";
+									flags=4;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de kartings"",life_fnc_vehicleShopMenu,[""kart_shop"",civilian,""kart_shop_1"",""civ"",""Bobby's Kart Shack""]]; this addAction[""Parler au vendeur pour acheter des vêtements de course"",life_fnc_clothingMenu,""kart""];";
+									};
+									id=704;
+									type="C_man_polo_1_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="male05gre";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.96361428;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=1;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=640;
+						};
+						class Item2
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3685.6609,11.086231,13095.169};
+										angles[]={0,3.2713406,0};
+									};
+									side="Civilian";
+									flags=2;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this allowDamage false; this enableSimulation false; this addAction[""Parler au vendeur de prêt-à-porter"",life_fnc_clothingMenu,""bruce""];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=660;
+									type="C_man_polo_1_F";
+									atlOffset=0.56999969;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03GRE";
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.01;
+												};
+											};
+										};
+										class Attribute3
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=4;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=1360;
+							atlOffset=0.56999969;
+						};
+						class Item3
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3608.1089,10.403817,13157.258};
+										angles[]={0,1.6684649,0};
+									};
+									side="Civilian";
+									flags=6;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""01"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=1366;
+									type="C_Man_casual_2_F_euro";
+									atlOffset=0.00013923645;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=1365;
+							atlOffset=0.00013923645;
+						};
+						class Item4
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={3686.3069,11.12611,13156.475};
+										angles[]={0,3.1440187,0};
+									};
+									side="Civilian";
+									flags=6;
+									class Attributes
+									{
+										skill=0.60000002;
+										init="call{this allowDamage false;  this enableSimulation false; this addAction[""Créer compte en banque"",{createDialog ""life_AccountReq"";}];}";
+										disableSimulation=1;
+										ignoreByDynSimulGrid=1;
+									};
+									id=1374;
+									type="C_Man_casual_2_F_euro";
+									atlOffset=0.0003786087;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="allowDamage";
+											expression="_this allowdamage _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										class Attribute2
+										{
+											property="enableStamina";
+											expression="_this enablestamina _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"BOOL"
+														};
+													};
+													value=0;
+												};
+											};
+										};
+										nAttributes=3;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=1373;
+							atlOffset=0.0003786087;
+						};
+					};
+					id=3171;
+					atlOffset=-18.504042;
+				};
 			};
 			id=3145;
-			atlOffset=-0.45296478;
+			atlOffset=-20.140705;
 		};
 		class Item4
 		{
@@ -54400,7 +55914,7 @@ class Mission
 					name="Civ";
 					class Entities
 					{
-						items=82;
+						items=77;
 						class Item0
 						{
 							dataType="Group";
@@ -54476,7 +55990,7 @@ class Mission
 							{
 							};
 							id=485;
-							atlOffset=185.97;
+							atlOffset=7.6293945e-006;
 						};
 						class Item1
 						{
@@ -54510,7 +56024,6 @@ class Mission
 							{
 							};
 							id=487;
-							atlOffset=185.97;
 						};
 						class Item2
 						{
@@ -54544,7 +56057,6 @@ class Mission
 							{
 							};
 							id=489;
-							atlOffset=185.97;
 						};
 						class Item3
 						{
@@ -54578,7 +56090,6 @@ class Mission
 							{
 							};
 							id=491;
-							atlOffset=185.97;
 						};
 						class Item4
 						{
@@ -54612,7 +56123,6 @@ class Mission
 							{
 							};
 							id=493;
-							atlOffset=185.97;
 						};
 						class Item5
 						{
@@ -54646,7 +56156,6 @@ class Mission
 							{
 							};
 							id=495;
-							atlOffset=185.97;
 						};
 						class Item6
 						{
@@ -54680,7 +56189,6 @@ class Mission
 							{
 							};
 							id=497;
-							atlOffset=185.97;
 						};
 						class Item7
 						{
@@ -54714,7 +56222,6 @@ class Mission
 							{
 							};
 							id=499;
-							atlOffset=185.97;
 						};
 						class Item8
 						{
@@ -54748,7 +56255,6 @@ class Mission
 							{
 							};
 							id=501;
-							atlOffset=185.97;
 						};
 						class Item9
 						{
@@ -54782,7 +56288,6 @@ class Mission
 							{
 							};
 							id=503;
-							atlOffset=185.97;
 						};
 						class Item10
 						{
@@ -54816,7 +56321,6 @@ class Mission
 							{
 							};
 							id=505;
-							atlOffset=185.97;
 						};
 						class Item11
 						{
@@ -54850,7 +56354,6 @@ class Mission
 							{
 							};
 							id=507;
-							atlOffset=185.97;
 						};
 						class Item12
 						{
@@ -54884,7 +56387,6 @@ class Mission
 							{
 							};
 							id=509;
-							atlOffset=185.97;
 						};
 						class Item13
 						{
@@ -54918,7 +56420,6 @@ class Mission
 							{
 							};
 							id=511;
-							atlOffset=185.97;
 						};
 						class Item14
 						{
@@ -54952,7 +56453,6 @@ class Mission
 							{
 							};
 							id=513;
-							atlOffset=185.97;
 						};
 						class Item15
 						{
@@ -54986,7 +56486,6 @@ class Mission
 							{
 							};
 							id=515;
-							atlOffset=185.97;
 						};
 						class Item16
 						{
@@ -55020,7 +56519,6 @@ class Mission
 							{
 							};
 							id=517;
-							atlOffset=185.97;
 						};
 						class Item17
 						{
@@ -55054,7 +56552,6 @@ class Mission
 							{
 							};
 							id=519;
-							atlOffset=185.97;
 						};
 						class Item18
 						{
@@ -55088,7 +56585,6 @@ class Mission
 							{
 							};
 							id=521;
-							atlOffset=185.97;
 						};
 						class Item19
 						{
@@ -55122,7 +56618,6 @@ class Mission
 							{
 							};
 							id=523;
-							atlOffset=185.97;
 						};
 						class Item20
 						{
@@ -55156,7 +56651,6 @@ class Mission
 							{
 							};
 							id=525;
-							atlOffset=185.97;
 						};
 						class Item21
 						{
@@ -55190,7 +56684,6 @@ class Mission
 							{
 							};
 							id=527;
-							atlOffset=185.97;
 						};
 						class Item22
 						{
@@ -55224,7 +56717,6 @@ class Mission
 							{
 							};
 							id=529;
-							atlOffset=185.97;
 						};
 						class Item23
 						{
@@ -55258,7 +56750,6 @@ class Mission
 							{
 							};
 							id=531;
-							atlOffset=185.97;
 						};
 						class Item24
 						{
@@ -55292,7 +56783,6 @@ class Mission
 							{
 							};
 							id=533;
-							atlOffset=185.97;
 						};
 						class Item25
 						{
@@ -55326,7 +56816,6 @@ class Mission
 							{
 							};
 							id=535;
-							atlOffset=185.97;
 						};
 						class Item26
 						{
@@ -55360,7 +56849,6 @@ class Mission
 							{
 							};
 							id=537;
-							atlOffset=185.97;
 						};
 						class Item27
 						{
@@ -55394,7 +56882,6 @@ class Mission
 							{
 							};
 							id=539;
-							atlOffset=185.97;
 						};
 						class Item28
 						{
@@ -55428,7 +56915,6 @@ class Mission
 							{
 							};
 							id=541;
-							atlOffset=185.97;
 						};
 						class Item29
 						{
@@ -55462,7 +56948,6 @@ class Mission
 							{
 							};
 							id=543;
-							atlOffset=185.97;
 						};
 						class Item30
 						{
@@ -55496,7 +56981,6 @@ class Mission
 							{
 							};
 							id=545;
-							atlOffset=185.97;
 						};
 						class Item31
 						{
@@ -55530,7 +57014,6 @@ class Mission
 							{
 							};
 							id=547;
-							atlOffset=185.97;
 						};
 						class Item32
 						{
@@ -55564,7 +57047,6 @@ class Mission
 							{
 							};
 							id=549;
-							atlOffset=185.97;
 						};
 						class Item33
 						{
@@ -55598,7 +57080,6 @@ class Mission
 							{
 							};
 							id=551;
-							atlOffset=185.97;
 						};
 						class Item34
 						{
@@ -55632,7 +57113,6 @@ class Mission
 							{
 							};
 							id=553;
-							atlOffset=185.97;
 						};
 						class Item35
 						{
@@ -55666,7 +57146,6 @@ class Mission
 							{
 							};
 							id=555;
-							atlOffset=185.97;
 						};
 						class Item36
 						{
@@ -55700,7 +57179,6 @@ class Mission
 							{
 							};
 							id=557;
-							atlOffset=185.97;
 						};
 						class Item37
 						{
@@ -55734,7 +57212,6 @@ class Mission
 							{
 							};
 							id=559;
-							atlOffset=185.97;
 						};
 						class Item38
 						{
@@ -55768,7 +57245,6 @@ class Mission
 							{
 							};
 							id=561;
-							atlOffset=185.97;
 						};
 						class Item39
 						{
@@ -55802,7 +57278,6 @@ class Mission
 							{
 							};
 							id=563;
-							atlOffset=185.97;
 						};
 						class Item40
 						{
@@ -55836,7 +57311,6 @@ class Mission
 							{
 							};
 							id=565;
-							atlOffset=185.97;
 						};
 						class Item41
 						{
@@ -55870,7 +57344,6 @@ class Mission
 							{
 							};
 							id=567;
-							atlOffset=185.97;
 						};
 						class Item42
 						{
@@ -55904,7 +57377,6 @@ class Mission
 							{
 							};
 							id=569;
-							atlOffset=185.97;
 						};
 						class Item43
 						{
@@ -55938,7 +57410,6 @@ class Mission
 							{
 							};
 							id=571;
-							atlOffset=185.97;
 						};
 						class Item44
 						{
@@ -55972,7 +57443,6 @@ class Mission
 							{
 							};
 							id=573;
-							atlOffset=185.97;
 						};
 						class Item45
 						{
@@ -56006,7 +57476,6 @@ class Mission
 							{
 							};
 							id=575;
-							atlOffset=185.97;
 						};
 						class Item46
 						{
@@ -56040,7 +57509,6 @@ class Mission
 							{
 							};
 							id=577;
-							atlOffset=185.97;
 						};
 						class Item47
 						{
@@ -56074,7 +57542,6 @@ class Mission
 							{
 							};
 							id=579;
-							atlOffset=185.97;
 						};
 						class Item48
 						{
@@ -56108,7 +57575,6 @@ class Mission
 							{
 							};
 							id=581;
-							atlOffset=185.97;
 						};
 						class Item49
 						{
@@ -56142,7 +57608,6 @@ class Mission
 							{
 							};
 							id=583;
-							atlOffset=185.97;
 						};
 						class Item50
 						{
@@ -56176,7 +57641,6 @@ class Mission
 							{
 							};
 							id=585;
-							atlOffset=185.97;
 						};
 						class Item51
 						{
@@ -56210,7 +57674,6 @@ class Mission
 							{
 							};
 							id=587;
-							atlOffset=185.97;
 						};
 						class Item52
 						{
@@ -56244,7 +57707,6 @@ class Mission
 							{
 							};
 							id=589;
-							atlOffset=185.97;
 						};
 						class Item53
 						{
@@ -56278,7 +57740,6 @@ class Mission
 							{
 							};
 							id=591;
-							atlOffset=185.97;
 						};
 						class Item54
 						{
@@ -56312,7 +57773,6 @@ class Mission
 							{
 							};
 							id=593;
-							atlOffset=185.97;
 						};
 						class Item55
 						{
@@ -56346,7 +57806,6 @@ class Mission
 							{
 							};
 							id=595;
-							atlOffset=185.97;
 						};
 						class Item56
 						{
@@ -56380,7 +57839,6 @@ class Mission
 							{
 							};
 							id=597;
-							atlOffset=185.97;
 						};
 						class Item57
 						{
@@ -56414,7 +57872,6 @@ class Mission
 							{
 							};
 							id=599;
-							atlOffset=185.97;
 						};
 						class Item58
 						{
@@ -56448,7 +57905,6 @@ class Mission
 							{
 							};
 							id=601;
-							atlOffset=185.97;
 						};
 						class Item59
 						{
@@ -56482,7 +57938,6 @@ class Mission
 							{
 							};
 							id=603;
-							atlOffset=185.97;
 						};
 						class Item60
 						{
@@ -56516,7 +57971,6 @@ class Mission
 							{
 							};
 							id=605;
-							atlOffset=185.97;
 						};
 						class Item61
 						{
@@ -56550,7 +58004,6 @@ class Mission
 							{
 							};
 							id=607;
-							atlOffset=185.97;
 						};
 						class Item62
 						{
@@ -56584,7 +58037,6 @@ class Mission
 							{
 							};
 							id=609;
-							atlOffset=185.97;
 						};
 						class Item63
 						{
@@ -56618,7 +58070,6 @@ class Mission
 							{
 							};
 							id=611;
-							atlOffset=185.97;
 						};
 						class Item64
 						{
@@ -56652,7 +58103,6 @@ class Mission
 							{
 							};
 							id=613;
-							atlOffset=185.97;
 						};
 						class Item65
 						{
@@ -56686,7 +58136,6 @@ class Mission
 							{
 							};
 							id=615;
-							atlOffset=185.97;
 						};
 						class Item66
 						{
@@ -56720,7 +58169,6 @@ class Mission
 							{
 							};
 							id=617;
-							atlOffset=185.97;
 						};
 						class Item67
 						{
@@ -56754,7 +58202,6 @@ class Mission
 							{
 							};
 							id=619;
-							atlOffset=185.97;
 						};
 						class Item68
 						{
@@ -56788,7 +58235,6 @@ class Mission
 							{
 							};
 							id=621;
-							atlOffset=185.97;
 						};
 						class Item69
 						{
@@ -56822,7 +58268,6 @@ class Mission
 							{
 							};
 							id=623;
-							atlOffset=185.97;
 						};
 						class Item70
 						{
@@ -56856,7 +58301,6 @@ class Mission
 							{
 							};
 							id=625;
-							atlOffset=185.97;
 						};
 						class Item71
 						{
@@ -56890,7 +58334,6 @@ class Mission
 							{
 							};
 							id=627;
-							atlOffset=185.97;
 						};
 						class Item72
 						{
@@ -56924,7 +58367,6 @@ class Mission
 							{
 							};
 							id=629;
-							atlOffset=185.97;
 						};
 						class Item73
 						{
@@ -56958,7 +58400,6 @@ class Mission
 							{
 							};
 							id=631;
-							atlOffset=185.97;
 						};
 						class Item74
 						{
@@ -56992,1510 +58433,8 @@ class Mission
 							{
 							};
 							id=633;
-							atlOffset=185.97;
 						};
 						class Item75
-						{
-							dataType="Group";
-							side="Civilian";
-							class Entities
-							{
-								items=2;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3627.2571,10.584383,13063.979};
-										angles[]={0.064140849,0.042481314,6.2536545};
-									};
-									side="Civilian";
-									flags=6;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this allowDamage false; this enableSimulation false; this addAction[""Passer à la caisse du supermarché"",life_fnc_virt_menu,""market""];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=636;
-									type="C_man_polo_1_F";
-									atlOffset=-9.5367432e-007;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male05GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.97000003;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item1
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3687.323,11.017052,13103.274};
-										angles[]={0,4.312377,0};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Parler au vendeur d'équipement de plongée"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide == civilian '];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=637;
-									type="C_man_polo_1_F";
-									atlOffset=0.1200304;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male03GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.94999999;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=635;
-							atlOffset=185.97;
-						};
-						class Item76
-						{
-							dataType="Group";
-							side="Civilian";
-							class Entities
-							{
-								items=11;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={8353.25,85.198563,24952.229};
-										angles[]={6.1336441,2.7590213,0.16125455};
-									};
-									side="Civilian";
-									flags=6;
-									class Attributes
-									{
-										skill=0.60000002;
-										rank="COLONEL";
-										init="this enableSimulation false; this allowDamage false; this hideObject true;";
-										name="master_group";
-										description="Master Group for NPC's";
-									};
-									id=641;
-									type="C_man_1";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="male06gre";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1.0448729;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item1
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3758.46,12.157639,13317.771};
-										angles[]={0,3.7411134,0};
-									};
-									side="Civilian";
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de camions"",life_fnc_vehicleShopMenu,[""civ_truck"",civilian,""civ_truck_1"",""civ"",""Concessionnaire Samer""]];}";
-										name="carshop1_2";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=648;
-									type="C_man_polo_1_F";
-									atlOffset=0.45030499;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male01GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1.02;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item2
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={14676.675,17.911438,16773.133};
-										angles[]={0,2.9987898,0};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this enableSimulation false; this allowDamage false; this addAction[""Commander un appareil"",life_fnc_vehicleShopMenu,[""civ_air"",civilian,[""civ_air_1"",""civ_air_1_2""],""civ"",""Carl's Airial Auto's""]];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=650;
-									type="C_man_polo_1_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male05GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.97000003;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item3
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3685.9641,11.372509,13122.493};
-										angles[]={6.2829933,3.8411729,6.2823648};
-									};
-									side="Civilian";
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this allowDamage false; this enableSimulation false; this addAction[""Parler au poissonier"",life_fnc_virt_menu,""fishmarket""];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=657;
-									type="C_man_polo_1_F";
-									atlOffset=0.51900005;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male01GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.94999999;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item4
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3773.4751,18.85664,12985.358};
-										angles[]={0,4.7835979,0};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this enableSimulation false; this allowDamage false; this addAction[""Assistance Médicale"",life_fnc_healHospital];}";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=658;
-									type="C_man_polo_3_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male01GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.99000001;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item5
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3695.77,11.18329,13151.407};
-										angles[]={0,4.7121973,0};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderie""] call life_fnc_varToStr,[([""fonderie""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !license_civ_fonderie && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_fonderieExp""] call life_fnc_varToStr,[([""fonderieExp""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderieExp"",0,false,false,"""",' !license_civ_fonderieExp && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_presseur""] call life_fnc_varToStr,[([""presseur""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""presseur"",0,false,false,"""",' !license_civ_presseur && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_cement""] call life_fnc_varToStr,[([""cement""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cement"",0,false,false,"""",' !license_civ_cement && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fishsoup""] call life_fnc_varToStr,[([""fishsoup""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fishsoup"",0,false,false,"""",' !license_civ_fishsoup && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_diamond""] call life_fnc_varToStr,[([""diamond""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_PPrecieuse""] call life_fnc_varToStr,[([""PPrecieuse""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_Acier""] call life_fnc_varToStr,[([""Acier""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""Acier"",0,false,false,"""",' !license_civ_Acier && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fermenta""] call life_fnc_varToStr,[([""fermenta""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_oil""] call life_fnc_varToStr,[([""oil""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian ']; " \n "this setVariable[""realname"",""License Shop""];}";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=661;
-									type="C_Man_casual_2_F_euro";
-									atlOffset=0.057557106;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
-									};
-								};
-								class Item6
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3745.0061,11.8939,13328.604};
-										angles[]={0,3.8897803,0};
-									};
-									side="Civilian";
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionaire"",life_fnc_vehicleShopMenu,[""civ_car"",civilian,[""civ_car_1""],""civ"",""Concessionnaire Samer""]]; this setVariable[""realname"", ""Car Shop""];}";
-										name="carshop1";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=662;
-									type="C_man_polo_1_F_afro";
-									atlOffset=0.69999981;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.99000001;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
-									};
-								};
-								class Item7
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3687.9319,10.953671,13112.45};
-										angles[]={0,4.2078319,0};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this enableSimulation false; this allowDamage false; this addAction[""Parler à 'l'outilleur"",life_fnc_weaponShopMenu,""genstore""];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=663;
-									type="C_man_polo_1_F_euro";
-									atlOffset=0.013064384;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
-									};
-								};
-								class Item8
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3771.3511,12.090717,13306.756};
-										angles[]={0,3.8524477,0};
-									};
-									side="Civilian";
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this addAction[ " \n "    ""Accéder au garage publique"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""car_g_1"";   " \n " " \n "    } " \n "];   " \n " " \n "this addAction[""Demander au garagiste de ranger mon véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=691;
-									type="C_man_1";
-									atlOffset=0.85999966;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male04GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-								class Item9
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={8368.2129,96.637207,25125.379};
-										angles[]={0.06656827,2.7590215,0.25311893};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="removeAllWeapons this; this enableSimulation false; this allowDamage false; this addAction[""Pay Bail"",life_fnc_postBail,"""",0,false,false,"""",' isNil ""life_canpay_bail"" && life_is_arrested '];";
-									};
-									id=703;
-									type="B_RangeMaster_F";
-								};
-								class Item10
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={14168.042,16.735796,16520.379};
-										angles[]={0,5.4992251,6.2826967};
-									};
-									side="Civilian";
-									flags=4;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this enableSimulation false; this allowDamage false; this addAction[""Parler au concessionnaire de kartings"",life_fnc_vehicleShopMenu,[""kart_shop"",civilian,""kart_shop_1"",""civ"",""Bobby's Kart Shack""]]; this addAction[""Parler au vendeur pour acheter des vêtements de course"",life_fnc_clothingMenu,""kart""];";
-									};
-									id=704;
-									type="C_man_polo_1_F";
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="male05gre";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.96361428;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=1;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=640;
-							atlOffset=185.97;
-						};
-						class Item77
-						{
-							dataType="Group";
-							side="Civilian";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3685.6609,11.086231,13095.169};
-										angles[]={0,3.2713406,0};
-									};
-									side="Civilian";
-									flags=2;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this allowDamage false; this enableSimulation false; this addAction[""Parler au vendeur de prêt-à-porter"",life_fnc_clothingMenu,""bruce""];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=660;
-									type="C_man_polo_1_F";
-									atlOffset=0.56999969;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="speaker";
-											expression="_this setspeaker _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"STRING"
-														};
-													};
-													value="Male03GRE";
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=1.01;
-												};
-											};
-										};
-										class Attribute3
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=4;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=1360;
-							atlOffset=185.97;
-						};
-						class Item78
-						{
-							dataType="Group";
-							side="Civilian";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3608.1089,10.403817,13157.258};
-										angles[]={0,1.6684649,0};
-									};
-									side="Civilian";
-									flags=6;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="this allowDamage false;  this enableSimulation false; this addAction[""Acheter carte SIM"",life_fnc_creatNum,""01"",0,false,false,"""",'isNil {player getVariable ""phoneNumber""}'];";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=1366;
-									type="C_Man_casual_2_F_euro";
-									atlOffset=0.00013923645;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=1365;
-							atlOffset=185.97;
-						};
-						class Item79
-						{
-							dataType="Group";
-							side="Civilian";
-							class Entities
-							{
-								items=1;
-								class Item0
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={3686.3069,11.12611,13156.475};
-										angles[]={0,3.1440187,0};
-									};
-									side="Civilian";
-									flags=6;
-									class Attributes
-									{
-										skill=0.60000002;
-										init="call{this allowDamage false;  this enableSimulation false; this addAction[""Créer compte en banque"",{createDialog ""life_AccountReq"";}];}";
-										disableSimulation=1;
-										ignoreByDynSimulGrid=1;
-									};
-									id=1374;
-									type="C_Man_casual_2_F_euro";
-									atlOffset=0.0003786087;
-									class CustomAttributes
-									{
-										class Attribute0
-										{
-											property="allowDamage";
-											expression="_this allowdamage _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										class Attribute1
-										{
-											property="pitch";
-											expression="_this setpitch _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"SCALAR"
-														};
-													};
-													value=0.98000002;
-												};
-											};
-										};
-										class Attribute2
-										{
-											property="enableStamina";
-											expression="_this enablestamina _value;";
-											class Value
-											{
-												class data
-												{
-													class type
-													{
-														type[]=
-														{
-															"BOOL"
-														};
-													};
-													value=0;
-												};
-											};
-										};
-										nAttributes=3;
-									};
-								};
-							};
-							class Attributes
-							{
-							};
-							id=1373;
-							atlOffset=185.97;
-						};
-						class Item80
 						{
 							dataType="Group";
 							side="Civilian";
@@ -58607,9 +58546,9 @@ class Mission
 							{
 							};
 							id=2328;
-							atlOffset=185.97;
+							atlOffset=-3.0517578e-005;
 						};
-						class Item81
+						class Item76
 						{
 							dataType="Group";
 							side="Civilian";
@@ -58704,11 +58643,11 @@ class Mission
 							{
 							};
 							id=3124;
-							atlOffset=185.97;
+							atlOffset=0.62599945;
 						};
 					};
 					id=3154;
-					atlOffset=185.97;
+					atlOffset=-97.162437;
 				};
 				class Item1
 				{
@@ -58809,11 +58748,9 @@ class Mission
 							{
 							};
 							id=713;
-							atlOffset=185.97;
 						};
 					};
 					id=3153;
-					atlOffset=185.97;
 				};
 				class Item2
 				{
@@ -59233,15 +59170,13 @@ class Mission
 							{
 							};
 							id=465;
-							atlOffset=185.97;
 						};
 					};
 					id=3152;
-					atlOffset=185.97;
 				};
 			};
 			id=3155;
-			atlOffset=185.97;
+			atlOffset=113.43795;
 		};
 		class Item6
 		{

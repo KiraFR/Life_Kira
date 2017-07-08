@@ -21,6 +21,7 @@ switch (_shop) do
 			["C_Kart_01_Vrana_F",15000]
 		];
 	};
+
 	case "med_shop":
 	{
 		_return = [
