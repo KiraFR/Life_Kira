@@ -4,7 +4,7 @@
 	Description:
 	Called upon first spawn selection and welcomes our player.
 */
-format["Welcome %1, Please read the following as it is important!",profileName] hintC
+format["Bienvenue %1, Merci de lire le message cela est important!",profileName] hintC
 [
 	"Bienvenue sur le serveur Dostara ! Le serveur est en devellopement ! Alpha-Ouverte.",
 	"Si vous rencontrer des bugs veuiller le signaler.",
