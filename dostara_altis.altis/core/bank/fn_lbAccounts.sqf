@@ -9,7 +9,7 @@
 private["_tab","_default"];
 disableSerialization;
 _AccountList = getControl(1600,1601);
-_Account = missionNamespace getVariable "AccountBanque";
+_Account = missionNamespace getVariable ["AccountBanque",[]];
 diag_log format["%1",_Account];
 
 {
