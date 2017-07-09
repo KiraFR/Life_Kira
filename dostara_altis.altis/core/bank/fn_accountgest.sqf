@@ -15,5 +15,6 @@ lbClear 1601;
 ctrlEnable[1603,false];
 ctrlEnable[1604,false];
 _MessageHeader lnbAddRow ["Nom","Numero","Solde","Default"];
+[] call life_fnc_lbAccounts;
 
 [getPlayerUID player, player] remoteExecCall ["BQKS_fnc_GetAccount",2];
