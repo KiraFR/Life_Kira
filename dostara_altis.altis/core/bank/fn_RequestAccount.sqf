@@ -46,7 +46,7 @@ switch (_type) do {
 
 	//normal
 	case 2: {
-		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
+		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		_PriceB = (20*25)*(life_AccN);
 		_first = false;
 		if(_PriceB == 0)then{_PriceB = 25;_first = true;};
@@ -57,7 +57,7 @@ switch (_type) do {
 
 		_guid = (getPlayerUID Player) splitString "";
 		if(clientOwner < 10)then{_client = format["00%1",clientOwner];};
-		if(clientOwner > 10 AND clientOwner < 100) then{_client = format["0%1",clientOwner];};
+		if(clientOwner > 10 and clientOwner < 100) then{_client = format["0%1",clientOwner];};
 		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
 		_num = "RD" + _client +_guid + format["%1",life_nbAcc+1];
 
@@ -76,7 +76,7 @@ switch (_type) do {
 	//entreprise
 	case 3: {
 		if(life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
-		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
+		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		CASH = CASH - 10000;
 
@@ -121,7 +121,7 @@ switch (_type) do {
 	//Orga
 	case 5: {
 		if(life_OrgaAcc)exitWith{hint "Votre entreprise a deja un compte."};
-		if(isNil "_uid")exitwith{hint "Vous n'êtes pas un joueur."};
+		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		_type = 5;
 
