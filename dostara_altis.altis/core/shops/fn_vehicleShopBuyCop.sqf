@@ -14,7 +14,7 @@ _vIndex = getSelValue(2302);
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
  if(_mode) then {_basePrice = round(_basePrice * 1.5)};
 _colorIndex = getSelValue(2304);
-if (license_cop_prefet == 0)then {closeDialog 0;}
+if (license_cop_prefet == 0)then {closeDialog 0;};
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
