@@ -6,7 +6,7 @@
 	Description:
 	Edit le default
 */
-params[["_uid"],["_NumCompte"]];
+params[["_uid",""],["_NumCompte",""]];
 
 diag_log format["%1 - %2",typeName _uid,typeName _NumCompte];
 diag_log format["%1 - %2",_uid,_NumCompte];
