@@ -329,8 +329,10 @@ class Life_Client_Core
 		class clothingMenu {};
 		class clothingFilter {};
 		class vehicleShopMenu {};
+		class vehicleShopMenuCop {};
 		class vehicleShopLBChange {};
 		class vehicleShopBuy {};
+		class vehicleShopBuyCop {};
 		class weaponShopFilter {};
 		class weaponShopMenu {};
 		class weaponShopSelection {};

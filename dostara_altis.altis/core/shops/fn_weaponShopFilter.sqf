@@ -8,7 +8,7 @@
 private["_itemList","_index","_config","_priceTag"];
 _index = [_this,1,-1,[0]] call BIS_fnc_param;
 _shop = uiNamespace getVariable ["Weapon_Shop",""];
-if(_index == -1 OR _shop == "") exitWith {systemChat "Bad Data Filter"; closeDialog 0;}; //Bad data passing.
+if(_index == -1 or _shop == "") exitWith {systemChat "Bad Data Filter"; closeDialog 0;}; //Bad data passing.
 
 uiNamespace setVariable["Weapon_Shop_Filter",_index];
 //Setup List Control & Purge it.
@@ -29,7 +29,7 @@ switch (_index) do
 			_itemList lbSetData[(lbSize _itemList)-1,_itemInfo select 0];
 			_itemList lbSetPicture[(lbSize _itemList)-1,_itemInfo select 2];
 			_itemList lbSetValue[(lbSize _itemList)-1,_x select 2];
-		} foreach (_config select 1);
+		} forEach (_config select 1);
 		
 		((findDisplay 38400) displayCtrl 38405) ctrlSetText localize "STR_Global_Buy";
 	};
@@ -70,7 +70,7 @@ switch (_index) do
 				_itemList lbSetData[(lbSize _itemList)-1,_itemInfo select 0];
 				_itemList lbSetPicture[(lbSize _itemList)-1,_itemInfo select 2];
 			};
-		} foreach _config;
+		} forEach _config;
 	};
 };
 
