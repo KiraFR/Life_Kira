@@ -32,22 +32,17 @@ if (!(isNil 'Bourse_Object')) then {
         if (_max == -1) then {
             if (_value < _min) then {
                 _prix = _count * _min;
-                diag_log "Min";
             }else{
                 _prix = _count * _value;
-                diag_log "Nor";
             };
         }else{
             if (_value > _max) then {
                 _prix = _count * _max;
-                diag_log "Max";
             }else{
                 if (_value < _min) then {
                     _prix = _count * _min;
-                    diag_log "Min";
                 }else{
                     _prix = _count * _value;
-                    diag_log "Nor";
                 };
              };
         };
