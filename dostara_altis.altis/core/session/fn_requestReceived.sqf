@@ -41,7 +41,7 @@ if(count (_this select 5) > 0) then {
 //Parse side specific information.
 switch(playerSide) do {
 	case west: {
-		CONSTANT(life_coplevel, parseNumber(_this select 6));
+		CONSTANT(life_coplevel, parseNumber(_this select 7));
 		CONSTANT(life_medicLevel,0);
 		life_blacklisted = _this select 8;
 		_num = _this select 11;
