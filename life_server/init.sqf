@@ -59,9 +59,9 @@ CONSTANT(JxMxE_PublishVehicle,"No");
 
 //[] execVM "\life_server\fn_initHC.sqf";
 
-life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
-life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+//life_radio_west = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+//life_radio_civ = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
+//life_radio_indep = radioChannelCreate [[0, 0.95, 1, 0.8], "Side Channel", "%UNIT_NAME", []];
 
 serv_sv_use = [];
 
@@ -91,17 +91,6 @@ client_session_list = [];
 };
 
 [] spawn TON_fnc_federalUpdate;
-
-[] spawn
-{
-	while {true} do
-	{
-		sleep (30 * 60);
-		{
-			_x setVariable["sellers",[],true];
-		} forEach [Dealer_1];
-	};
-};
 
 //Strip NPC's of weapons
 {
