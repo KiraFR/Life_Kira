@@ -6,7 +6,7 @@
 uiSleep 5;
 while{true} do {
     _ObjectLast = Bourse_Object getVariable "Bourse";
-    uiSleep (150); // 2m 30s
+    Sleep 150; // 2m 30s
     _Object = Bourse_Object getVariable "Bourse";
     if (!(_ObjectLast isEqualTo _Object)) then {
          _query = "UPDATE bourse SET valeur = CASE";
