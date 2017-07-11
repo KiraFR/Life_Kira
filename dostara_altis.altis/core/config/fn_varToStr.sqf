@@ -73,6 +73,12 @@ switch (_var) do
     case "life_resource_cuivre_brut" : {"Cuivre Brut"};
     case "life_resource_fer_brut" : {"Fer Brut"};
 
+    case "life_inv_grand_coffre" : {"Grand Coffre"};
+    case "life_inv_petit_coffre" : {"Petit Coffre"};
+    case "life_inv_herse" : {"Herse"};
+    case "life_inv_outil_crochetage" : {"Outil de crochetage"};
+
+
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

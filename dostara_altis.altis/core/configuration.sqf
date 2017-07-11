@@ -93,7 +93,7 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 CONSTANT(life_paycheck_period,15);
-CASH = 10000;
+CASH = 150;
 CONSTANT(life_impound_car,350);
 CONSTANT(life_impound_boat,250);
 CONSTANT(life_impound_air,850);
@@ -140,6 +140,8 @@ life_inv_items =
     "life_inv_seau",
     "life_inv_pelle",
     "life_inv_pioche",
+    "life_inv_grand_coffre",
+    "life_inv_petit_coffre",
     "life_resource_pommes",
     "life_resource_raisin",
     "life_resource_jus_pomme",
@@ -266,6 +268,11 @@ sell_array =
     ["Seau",45],
     ["Pelle",45],
     ["Pioche",55],
+    ["Herse",20],
+    ["Outil_Crochetage",200],
+    ["Grand_Coffre",6000],
+    ["Petit_Coffre",2000]
+    /*
     ["Pommes",-1],
     ["Raisin",-1],
     ["Jus_de_pommes" ,-1],
@@ -309,6 +316,7 @@ sell_array =
     ["Pharmaceutique",-1],
     ["Speed_Ball",-1],
     ["Tortue",-1]
+   */
 
 ];
 CONSTANT(sell_array,sell_array);

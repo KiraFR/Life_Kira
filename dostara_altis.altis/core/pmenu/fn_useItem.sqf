@@ -12,7 +12,7 @@ _item = lbData[2005,(lbCurSel 2005)];
 
 switch (true) do
 {
-	case (_item == "water" or _item == "coffee"):
+	case (_item == "Bouteille_d_eau" or _item == "Cafe"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -36,11 +36,11 @@ switch (true) do
 		[cursorTarget] spawn life_fnc_defuseKit;
 	};
 
-	case (_item in ["storagesmall","storagebig"]): {
+	case (_item in ["Petit_Coffre","Grand_Coffre"]): {
 		[_item] call life_fnc_storageBox;
 	};
 
-	case (_item == "redgull"):
+	case (_item == "Soda_Extra_Energy_Drink"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
@@ -80,7 +80,7 @@ switch (true) do
 		};
 	};
 
-	case (_item == "spikeStrip"):
+	case (_item == "Herse"):
 	{
 		if(!isNull life_spikestrip) exitWith {hint localize "STR_ISTR_SpikesDeployment"};
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -89,23 +89,23 @@ switch (true) do
 		};
 	};
 
-	case (_item == "fuelF"):
+	case (_item == "Essence"):
 	{
 		if(vehicle player != player) exitWith {hint localize "STR_ISTR_RefuelInVehicle"};
 		[] spawn life_fnc_jerryRefuel;
 	};
 
-	case (_item == "lockpick"):
+	case (_item == "Outil_Crochetage"):
 	{
 		[] spawn life_fnc_lockpick;
 	};
 
-	case (_item in ["apple","rabbit","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach"]):
+	case (_item in ["Pommes","Big_Burger","Soupe_de_poisson","Wrap_Poulet","Peche"]):
 	{
 		[_item] call life_fnc_eatFood;
 	};
 
-	case (_item == "vin" or _item == "cidre"):
+	case (_item == "Vin" or _item == "Biere"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 			{
@@ -113,7 +113,7 @@ switch (true) do
 			};
 	};
 
-	case (_item == "marijuana"):
+	case (_item == "Canabis"):
 	{
 		if (([false,_item,1] call life_fnc_handleInv)) then
 			{
@@ -121,7 +121,7 @@ switch (true) do
 			};
 	};
 
-	case (_item == "heroinp"):
+	case (_item == "Heroine"):
 	{
 		if (([false,_item,1] call life_fnc_handleInv)) then
 			{
@@ -129,7 +129,7 @@ switch (true) do
 			};
 	};
 
-	case (_item == "opium"):
+	case (_item == "Opium"):
 	{
 		if (([false,_item,1] call life_fnc_handleInv)) then
 			{
@@ -137,7 +137,7 @@ switch (true) do
 			};
 	};
 
-	case (_item == "cocainep"):
+	case (_item == "Cocaine"):
 	{
 		if (([false,_item,1] call life_fnc_handleInv)) then
 			{
@@ -145,15 +145,15 @@ switch (true) do
 			};
 	};
 
-	case (_item == "pickaxe"):
+	case (_item == "Pioche"):
 	{
 		[] spawn life_fnc_pickAxeUse;
 	};
-	case (_item == "Shovel"):
+	case (_item == "Pelle"):
 	{
 		[] spawn life_ShovelUse;
 	};
-	case (_item == "Bucket"):
+	case (_item == "Seau"):
 	{
 		[] spawn life_fnc_BucketUse;
 	};

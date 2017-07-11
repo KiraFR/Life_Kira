@@ -75,6 +75,11 @@ switch (_mode) do
             case "Argent_Brut" : {"life_resource_argent_brut"};
             case "Cuivre_Brut" : {"life_resource_cuivre_brut"};
             case "Fer_Brut" : {"life_resource_fer_brut"};
+
+            case "Grand_Coffre" : {"life_inv_grand_coffre"};
+            case "Petit_Coffre" : {"life_inv_petit_coffre"};
+            case "Herse" : {"life_inv_herse"};
+            case "Outil_Crochetage" : {"life_inv_outil_crochetage"};
 		};
 	};
 	
@@ -141,6 +146,11 @@ switch (_mode) do
             case "life_resource_argent_brut" : {"Argent_Brut"};
             case "life_resource_cuivre_brut" : {"Cuivre_Brut"};
             case "life_resource_fer_brut" : {"Fer_Brut"};
+
+            case "life_inv_grand_coffre" : {"Grand_Coffre"};
+            case "life_inv_petit_coffre" : {"Petit_Coffre"};
+            case "life_inv_herse" : {"Herse"};
+            case "life_inv_outil_crochetage" : {"Outil_Crochetage"};
 		};
 	};
 };
