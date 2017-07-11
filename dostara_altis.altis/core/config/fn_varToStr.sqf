@@ -114,5 +114,5 @@ switch (_var) do
 	case "licence_civ_Chaux": {(localize "STR_License_Usine")};
 	case "license_civ_presseur": {(localize "STR_License_presseur")};
 	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
-	case "licence_civ_fishsoup": {"Soupe de poisson"};
+	case "licence_civ_fishsoup": {"Licence Soupe de poisson"};
 };
