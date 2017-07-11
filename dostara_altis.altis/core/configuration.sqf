@@ -140,6 +140,8 @@ life_inv_items =
     "life_inv_seau",
     "life_inv_pelle",
     "life_inv_pioche",
+    "life_inv_herse",
+    "life_inv_outil_crochetage",
     "life_inv_grand_coffre",
     "life_inv_petit_coffre",
     "life_resource_pommes",
