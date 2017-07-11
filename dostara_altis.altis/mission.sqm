@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3435;
+		nextID=3436;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=192;
+		nextID=206;
 	};
 	class Camera
 	{
-		pos[]={14505.41,68.53257,16848.111};
-		dir[]={0.41810179,-0.5010826,-0.75772542};
-		up[]={0.24211401,0.8653568,-0.43878219};
-		aside[]={-0.87556887,-9.1618858e-008,-0.48312908};
+		pos[]={3726.095,366.59244,13389.042};
+		dir[]={0.47777498,-0.40140316,0.78153545};
+		up[]={0.20943043,0.91584313,0.34258473};
+		aside[]={0.85329068,4.8881338e-007,-0.5216403};
 	};
 };
 binarizationWanted=0;
@@ -112,7 +112,6 @@ addons[]=
 	"ace_map",
 	"ace_winddeflection",
 	"A3_Modules_F",
-	"A3_Modules_F_Curator_Curator",
 	"ace_nametags",
 	"ace_respawn",
 	"task_force_radio_items",
@@ -123,7 +122,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=34;
+		items=33;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -312,40 +311,33 @@ class AddonsMetaData
 		};
 		class Item28
 		{
-			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item29
-		{
 			className="ace_nametags";
 			name="ACE3 - Name Tags";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item30
+		class Item29
 		{
 			className="ace_respawn";
 			name="ACE3 - Respawn";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item31
+		class Item30
 		{
 			className="task_force_radio_items";
 			name="task_force_radio_items";
 			author="[TF]Nkey";
 			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
-		class Item32
+		class Item31
 		{
 			className="ace_common";
 			name="ACE3 - Common";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item33
+		class Item32
 		{
 			className="ace_nightvision";
 			name="ACE3 - Night Vision";
@@ -50008,7 +50000,7 @@ class Mission
 				};
 			};
 			id=3146;
-			atlOffset=-0.0031509399;
+			atlOffset=-1.2658062;
 		};
 		class Item2
 		{
@@ -50016,7 +50008,7 @@ class Mission
 			name="Marqueurs";
 			class Entities
 			{
-				items=142;
+				items=143;
 				class Item0
 				{
 					dataType="Marker";
@@ -50139,7 +50131,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -50652,7 +50644,7 @@ class Mission
 					name="atm_marker_2_1";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=227.08505;
+					angle=227.08504;
 					id=124;
 				};
 				class Item52
@@ -51244,7 +51236,7 @@ class Mission
 					position[]={14617.422,17.91,16646.379};
 					name="civ_air_1";
 					type="Empty";
-					angle=131.70604;
+					angle=131.70602;
 					id=67;
 				};
 				class Item103
@@ -51371,7 +51363,7 @@ class Mission
 					position[]={3172.1809,0,12914.328};
 					name="med_air_1";
 					type="Empty";
-					angle=260.40192;
+					angle=56.950401;
 					id=3137;
 					atlOffset=-2.3189056;
 				};
@@ -51583,7 +51575,7 @@ class Mission
 					position[]={25864.611,2.4272461,21321.869};
 					name="civ_truck_4";
 					type="Empty";
-					angle=319.37943;
+					angle=319.37939;
 					id=3331;
 					atlOffset=-15.21447;
 				};
@@ -51638,13 +51630,23 @@ class Mission
 					text="Armurerie";
 					type="mil_box";
 					colorName="ColorUNKNOWN";
-					angle=330.04797;
+					angle=330.04794;
 					id=3421;
 					atlOffset=-112.20341;
 				};
+				class Item142
+				{
+					dataType="Marker";
+					position[]={3172.2241,0,12914.364};
+					name="med_air_hs";
+					type="Empty";
+					angle=56.949997;
+					id=3435;
+					atlOffset=-2.3209076;
+				};
 			};
 			id=3147;
-			atlOffset=2.7459484e+015;
+			atlOffset=1.103616e+016;
 		};
 		class Item3
 		{
@@ -53120,7 +53122,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];   " \n " " \n "this addAction[""Vehicules de Fonction"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place du Vehicule""];   life_garage_sp = ""med_car_1""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide == independent '];   " \n " " \n "this addAction[""Ranger son Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];   " \n " " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""med_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger son Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=87085312;
 					};
@@ -53155,10 +53157,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3201.7539,3.1144171,12866.07};
-						angles[]={0.0016231562,3.1415927,0};
+						position[]={3201.968,3.1148472,12866.264};
+						angles[]={0.0016194459,3.1415927,-0};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
@@ -53166,7 +53169,6 @@ class Mission
 					};
 					id=1888;
 					type="Land_BeachBooth_01_F";
-					atlOffset=1.1960001;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -53203,7 +53205,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
+						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];this addAction[""Uniformes"",life_fnc_clothingMenu,""med""];}";
 						disableSimulation=1;
 					};
 					id=2452;
@@ -53244,7 +53246,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
+						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];this addAction[""Uniformes"",life_fnc_clothingMenu,""med""];}";
 						disableSimulation=1;
 					};
 					id=2453;
@@ -53285,7 +53287,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];}";
+						init="call{this enableSimulation false;  this allowDamage false;  this addAction[""Fournitures du SIM"",life_fnc_weaponShopMenu,""med_basic""]; this addAction[format[""%1 ($%2)"",[""license_med_air""] call life_fnc_varToStr,[([""mair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""mair"",0,false,false,"""",' !license_med_air && playerSide == independent '];this addAction[""Uniformes"",life_fnc_clothingMenu,""med""];}";
 						disableSimulation=1;
 					};
 					id=2454;
@@ -54217,7 +54219,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_air_1"",""med"",""Kavala Hosptial""]];  " \n "this addAction[""Reserves d Heliportes"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Mise en place de l Heliporte""];   life_garage_sp = ""med_air_1""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide == independent '];   " \n "this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
+						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_air_1"",""med"",""Kavala Hosptial""]];  " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""med_air_1"";   " \n " " \n "    } " \n "];this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']}";
 						disableSimulation=1;
 						aiRadarUsage=334151;
 					};
@@ -54858,7 +54860,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenuCop,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[""Vehicules de Fonction"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impoundCop_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_car_1""; life_garage_type = ""Car""; },"""",0,false,false,"""",'playerSide == west'];  " \n " " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenuCop,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""cop_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Garer le Vehicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=206914;
 					};
@@ -54900,7 +54902,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenuCop,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[""Reserves d Heliportes"", { [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; createDialog ""Life_impoundCop_menu""; disableSerialization; ctrlSetText[2802,""Mise en place du Vehicule""]; life_garage_sp = ""cop_air_1""; life_garage_type = ""Air""; },"""",0,false,false,"""",'playerSide == west'];  " \n " " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenuCop,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Le garagiste est en train de sortir le véhicule""]; " \n "        life_garage_sp = ""cop_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Heliporte"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 					};
 					id=1563;
@@ -56267,13 +56269,13 @@ class Mission
 									class Attributes
 									{
 										skill=0.60000002;
-										init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderie""] call life_fnc_varToStr,[([""fonderie""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !license_civ_fonderie && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_fonderieExp""] call life_fnc_varToStr,[([""fonderieExp""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderieExp"",0,false,false,"""",' !license_civ_fonderieExp && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_presseur""] call life_fnc_varToStr,[([""presseur""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""presseur"",0,false,false,"""",' !license_civ_presseur && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_cement""] call life_fnc_varToStr,[([""cement""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cement"",0,false,false,"""",' !license_civ_cement && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fishsoup""] call life_fnc_varToStr,[([""fishsoup""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fishsoup"",0,false,false,"""",' !license_civ_fishsoup && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_diamond""] call life_fnc_varToStr,[([""diamond""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_PPrecieuse""] call life_fnc_varToStr,[([""PPrecieuse""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_Acier""] call life_fnc_varToStr,[([""Acier""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""Acier"",0,false,false,"""",' !license_civ_Acier && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fermenta""] call life_fnc_varToStr,[([""fermenta""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_oil""] call life_fnc_varToStr,[([""oil""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian ']; " \n "this setVariable[""realname"",""License Shop""];}";
+										init="call{this allowDamage false;  this enableSimulation false;  this addAction[format[""%1 ($%2)"",[""license_civ_driver""] call life_fnc_varToStr,[([""driver""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""driver"",0,false,false,"""",' !license_civ_driver && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_boat""] call life_fnc_varToStr,[([""boat""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""boat"",0,false,false,"""",' !license_civ_boat && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_air""] call life_fnc_varToStr,[([""pilot""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""pilot"",0,false,false,"""",' !license_civ_air && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_truck""] call life_fnc_varToStr,[([""truck""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""truck"",0,false,false,"""",' !license_civ_truck && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_home""] call life_fnc_varToStr,[([""home""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""home"",0,false,false,"""",' !license_civ_home && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderie""] call life_fnc_varToStr,[([""fonderie""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderie"",0,false,false,"""",' !license_civ_fonderie && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fonderieExp""] call life_fnc_varToStr,[([""fonderieExp""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fonderieExp"",0,false,false,"""",' !license_civ_fonderieExp && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_presseur""] call life_fnc_varToStr,[([""presseur""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""presseur"",0,false,false,"""",' !license_civ_presseur && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_cement""] call life_fnc_varToStr,[([""cement""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cement"",0,false,false,"""",' !license_civ_cement && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fishsoup""] call life_fnc_varToStr,[([""fishsoup""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fishsoup"",0,false,false,"""",' !license_civ_fishsoup && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_diamond""] call life_fnc_varToStr,[([""diamond""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""diamond"",0,false,false,"""",' !license_civ_diamond && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""license_civ_PPrecieuse""] call life_fnc_varToStr,[([""PPrecieuse""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""PPrecieuse"",0,false,false,"""",' !license_civ_PPrecieuse && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_Acier""] call life_fnc_varToStr,[([""Acier""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""Acier"",0,false,false,"""",' !license_civ_Acier && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_fermenta""] call life_fnc_varToStr,[([""fermenta""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""fermenta"",0,false,false,"""",' !licence_civ_fermenta && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_oil""] call life_fnc_varToStr,[([""oil""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""oil"",0,false,false,"""",' !license_civ_oil && playerSide == civilian ']; " \n "this addAction[format[""%1 ($%2)"",[""license_civ_gun""] call life_fnc_varToStr,[([""gun""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""gun"",0,false,false,"""",' !license_civ_gun && playerSide == civilian '];  " \n "this addAction[format[""%1 ($%2)"",[""licence_civ_vin""] call life_fnc_varToStr,[([""vin""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""vin"",0,false,false,"""",' !license_civ_vin && playerSide == civilian '];   " \n "this setVariable[""realname"",""License Shop""];}";
 										disableSimulation=1;
 										ignoreByDynSimulGrid=1;
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.057557106;
+									atlOffset=0.05755806;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57160,7 +57162,7 @@ class Mission
 										angles[]={0,0.67219484,6.2820935};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -57170,6 +57172,7 @@ class Mission
 									};
 									id=3360;
 									type="C_man_polo_3_F";
+									atlOffset=0.47954369;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57256,6 +57259,7 @@ class Mission
 							{
 							};
 							id=3359;
+							atlOffset=0.47954369;
 						};
 						class Item7
 						{
@@ -58185,6 +58189,7 @@ class Mission
 									};
 									id=3377;
 									type="C_man_polo_1_F";
+									atlOffset=1.9073486e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58371,6 +58376,7 @@ class Mission
 							{
 							};
 							id=3376;
+							atlOffset=1.9073486e-006;
 						};
 						class Item14
 						{
@@ -58488,7 +58494,6 @@ class Mission
 										angles[]={0,3.2468708,6.2820935};
 									};
 									side="Civilian";
-									flags=4;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -58498,6 +58503,7 @@ class Mission
 									};
 									id=3381;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.27424908;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58786,6 +58792,7 @@ class Mission
 									};
 									id=3386;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=1.9073486e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58853,6 +58860,7 @@ class Mission
 							{
 							};
 							id=3385;
+							atlOffset=1.9073486e-006;
 						};
 						class Item17
 						{
@@ -58870,7 +58878,7 @@ class Mission
 										angles[]={0,1.9838265,0};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -58880,6 +58888,7 @@ class Mission
 									};
 									id=3388;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.28265095;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58947,6 +58956,7 @@ class Mission
 							{
 							};
 							id=3387;
+							atlOffset=0.28265095;
 						};
 						class Item18
 						{
@@ -59287,6 +59297,7 @@ class Mission
 									};
 									id=3394;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.17152023;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -59669,6 +59680,7 @@ class Mission
 									};
 									id=3401;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.17005157;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -59736,6 +59748,7 @@ class Mission
 							{
 							};
 							id=3400;
+							atlOffset=0.17005157;
 						};
 						class Item23
 						{
@@ -63242,7 +63255,7 @@ class Mission
 						};
 					};
 					id=3154;
-					atlOffset=-5.2668972;
+					atlOffset=7.2907658;
 				};
 				class Item1
 				{
@@ -63771,7 +63784,7 @@ class Mission
 				};
 			};
 			id=3155;
-			atlOffset=153.32867;
+			atlOffset=154.12848;
 		};
 		class Item5
 		{
@@ -63779,7 +63792,7 @@ class Mission
 			name="System";
 			class Entities
 			{
-				items=18;
+				items=15;
 				class Item0
 				{
 					dataType="Logic";
@@ -64395,337 +64408,6 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={3701.8535,10.93965,13141.821};
-						angles[]={0.037316564,0,0.070549726};
-					};
-					id=1898;
-					type="ModuleCurator_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="GM1";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleInfo";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=2;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-				class Item11
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={3702.749,10.954,13143.164};
-						angles[]={0.035988688,0,0.071872659};
-					};
-					id=1899;
-					type="ModuleCurator_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="GM2";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleInfo";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=2;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-				class Item12
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={3703.6348,10.972095,13144.434};
-						angles[]={0.035984326,0,0.071875811};
-					};
-					id=1900;
-					type="ModuleCurator_F";
-					atlOffset=-9.5367432e-007;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="ModuleCurator_F_Owner";
-							expression="_this setVariable ['Owner',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="GM3";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ModuleCurator_F_Forced";
-							expression="_this setVariable ['Forced',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="ModuleCurator_F_Name";
-							expression="_this setVariable ['Name',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="";
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="ModuleInfo";
-							expression="false";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute4
-						{
-							property="ModuleCurator_F_Addons";
-							expression="_this setVariable ['Addons',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=2;
-								};
-							};
-						};
-						nAttributes=5;
-					};
-				};
-				class Item13
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
 						position[]={8561.8994,111.40141,25011.406};
 						angles[]={6.137557,0,6.0883551};
 					};
@@ -64832,7 +64514,7 @@ class Mission
 						nAttributes=5;
 					};
 				};
-				class Item14
+				class Item11
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -64885,7 +64567,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item15
+				class Item12
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -65033,7 +64715,7 @@ class Mission
 						nAttributes=7;
 					};
 				};
-				class Item16
+				class Item13
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -65105,7 +64787,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item17
+				class Item14
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -65141,7 +64823,7 @@ class Mission
 				};
 			};
 			id=3156;
-			atlOffset=113.24831;
+			atlOffset=113.34414;
 		};
 		class Item6
 		{
@@ -65828,7 +65510,7 @@ class Mission
 			};
 			id=3275;
 			type="xcam_city_W10_L11";
-			atlOffset=0.00020885468;
+			atlOffset=0.0002746582;
 			class CustomAttributes
 			{
 				class Attribute0
