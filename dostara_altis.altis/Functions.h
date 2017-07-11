@@ -155,7 +155,7 @@ class Life_Client_Core
 		class clothing_reb {};
 		class clothing_dive {};
 		class clothing_kart {};
-		class fn_clothing_med {};
+		class clothing_med {};
 	};
 
 	class Player_Menu
