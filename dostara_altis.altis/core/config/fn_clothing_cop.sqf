@@ -88,7 +88,8 @@ switch (_filter) do
 			["G_Aviator",nil,75],
 			["G_Squares",nil,10],
 			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55]
+			["G_Combat",nil,55],
+			["G_mas_wpn_gasmask",nil,50]
 		];
 	};
 
@@ -96,10 +97,6 @@ switch (_filter) do
 	case 3:
 	{
 		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret pushBack ["KronosD_POLICE_vest_01",nil,50];
-		};
-		if(__GETC__(life_coplevel) > 6) then
 		{
 			_ret pushBack ["KronosD_POLICE_vest_02",nil,50];
 		};

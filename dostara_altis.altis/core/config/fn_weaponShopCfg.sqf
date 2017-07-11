@@ -87,8 +87,10 @@ switch(_shop) do
 						["30Rnd_mas_9x21_Stanag",nil,10],
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["FirstAidKit",nil,1],
+						["NVGoggles_mas_h",nil,500],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -116,7 +118,10 @@ switch(_shop) do
 						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12]
+						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
+						["ACE_CableTie",nil,1],
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -145,9 +150,11 @@ switch(_shop) do
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
 						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
 						["FirstAidKit",nil,1],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -176,9 +183,11 @@ switch(_shop) do
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
 						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
 						["FirstAidKit",nil,1],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -207,9 +216,11 @@ switch(_shop) do
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
 						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
 						["FirstAidKit",nil,1],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -238,9 +249,11 @@ switch(_shop) do
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
 						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
 						["FirstAidKit",nil,1],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -269,9 +282,11 @@ switch(_shop) do
 						["12Rnd_mas_45acp_Mag",nil,5],
 						["30Rnd_mas_556x45_Stanag",nil,10],
 						["3Rnd_UGL_FlareWhite_F",nil,12],
+						["NVGoggles_mas_h",nil,500],
 						["FirstAidKit",nil,1],
+						["ACE_CableTie",nil,1],
 						["ToolKit",nil,5],
-						["Radio",nil,2]
+						["tf_anprc152",nil,2]
 					]
 				];
 			};
@@ -311,9 +326,11 @@ switch(_shop) do
 						["5Rnd_mas_127x99_Stanag",nil,0],
 						["20Rnd_mas_762x51_Stanag",nil,0],
 						["3Rnd_UGL_FlareWhite_F",nil,0],
+						["NVGoggles_mas_h",nil,0],
 						["FirstAidKit",nil,0],
+						["ACE_CableTie",nil,0],
 						["ToolKit",nil,0],
-						["Radio",nil,0]
+						["tf_anprc152",nil,0]
 					]
 				];
 			};
