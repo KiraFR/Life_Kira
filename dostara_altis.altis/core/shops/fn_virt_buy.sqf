@@ -17,8 +17,8 @@ _amount = parseNumber(_amount);
 if(_diff <= 0) exitWith {hint localize "STR_NOTF_NoSpace"};
 _amount = _diff;
 _hideout = (nearestObjects[getPosATL player,["Land_u_Barracks_V2_F","Land_i_Barracks_V2_F"],25]) select 0;
+if((_price == -1)) exitWith {};
 if((_price * _amount) > CASH && {!isNil "_hideout" && {!isNil {grpPlayer getVariable "gang_bank"}} && {(grpPlayer getVariable "gang_bank") <= _price * _amount}}) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
-
 _name = [([_type,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 
 if(([true,_type,_amount] call life_fnc_handleInv)) then
@@ -39,14 +39,10 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			_funds = _funds - (_price * _amount);
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[1,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];
-			//LOGS
-			[getPlayerUID player, playerSide, [name player, _amount, _name,_funds, grpPlayer getVariable "gang_name"],12] remoteExecCall ["DB_fnc_logs",2];
 		} else {
 			if((_price * _amount) > CASH) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 			CASH = CASH - (_price * _amount);
-			//LOGS
-			[getPlayerUID player, playerSide, [name player, _amount, _name,[(_price * _amount)] call life_fnc_numberText],11] remoteExecCall ["DB_fnc_logs",2];
 		};
 	} else {
 		if((_price * _amount) > CASH) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};

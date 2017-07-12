@@ -273,8 +273,8 @@ sell_array =
     ["Herse",20],
     ["Outil_Crochetage",200],
     ["Grand_Coffre",6000],
-    ["Petit_Coffre",2000]
-    /*
+    ["Petit_Coffre",2000],
+
     ["Pommes",-1],
     ["Raisin",-1],
     ["Jus_de_pommes" ,-1],
@@ -318,7 +318,6 @@ sell_array =
     ["Pharmaceutique",-1],
     ["Speed_Ball",-1],
     ["Tortue",-1]
-   */
 
 ];
 CONSTANT(sell_array,sell_array);
