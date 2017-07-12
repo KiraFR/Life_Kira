@@ -40,10 +40,10 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["C_Hatchback_01_F",2500],
-			["C_Offroad_01_F",5000],
-			["C_SUV_01_F",5000],
-			["C_Van_01_transport_F",35000],
+			["C_Hatchback_01_F",1667],
+			["C_Offroad_01_F",3335],
+			["C_SUV_01_F",3335],
+			["C_Van_01_transport_F",23335],
 			["ivory_rs4",53335],
 			["ivory_c",133335],
 			["ivory_e36",10600],
@@ -71,8 +71,8 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["C_Van_01_box_F",15000],
-			["I_Truck_02_covered_F",120000]
+			["C_Van_01_box_F",23335],
+			["I_Truck_02_covered_F",80000]
 
 		];
 	};
@@ -149,8 +149,8 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["C_Rubberboat",5000],
-			["C_Boat_Civil_01_F",22000]
+			["C_Rubberboat",1300],
+			["C_Boat_Civil_01_F",9533]
 		];
 	};
 
