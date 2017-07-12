@@ -11,7 +11,10 @@ _shop = _this select 0;
 switch (_shop) do
 {
 	case "marche": {["Marché",["Orange","Peche","Bouteille_d_eau","Jus_Multisfruits","Wrap_Poulet","Big_Burger","Soda_Extra_Energy_Drink"]]};
+	case "flic": {["Marché Police",["Wrap_Poulet","Cafe","Herse","Bouteille_d_eau","Soda_Extra_Energy_Drink","Essence"]]};
 	case "outillage": {["Outillage",["Seau","Pelle","Pioche"]]};
+	case "Export_luxe": {["Export Luxe",["Argent","Pierres_Precieuses","Bijoux"]]};
+	case "Export_Combustible": {["Export de ",["Bois","Charbon","fuelF","oil"]]};
 	case "Pommes" : {["Pommes",["Pommes"]]};
     case "Raisin" : {["Raisin",["Raisin"]]};
     case "Jus_de_pommes" : {["Jus_de_pommes",["Jus_de_pommes"]]};
