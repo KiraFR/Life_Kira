@@ -14,12 +14,13 @@ switch (_shop) do
 	case "flic": {["Marché Police",["Wrap_Poulet","Cafe","Herse","Bouteille_d_eau","Soda_Extra_Energy_Drink","Essence"]]};
 	case "outillage": {["Outillage",["Seau","Pelle","Pioche"]]};
 	case "Export_luxe": {["Export Luxe",["Argent","Pierres_Precieuses","Bijoux"]]};
-	case "Export_Combustible": {["Export de ",["Bois","Charbon","fuelF","oil"]]};
+	case "Export_Combustible": {["Export de Combustible ",["Bois","Charbon","fuelF","oil"]]};
+	case "Export_Metalurgie": {["Export de Metallurgie ",["Fer","Cuivre","Aluminium","Acier"]]};
 	case "Pommes" : {["Pommes",["Pommes"]]};
     case "Raisin" : {["Raisin",["Raisin"]]};
     case "Jus_de_pommes" : {["Jus_de_pommes",["Jus_de_pommes"]]};
     case "Jus_de_raisin" : {["Jus_de_raisin",["Jus_de_raisin"]]};
-    case "Cidre" : {["Cidre",["Cidre"]]};
+    case "Caviste" : {["Caviste",["Cidre","Vin"]]};
     case "Vin" : {["Vin",["Vin"]]};
     case "Biere" : {["Biere",["Biere"]]};
     case "Whisky" : {["Whisky",["Whisky"]]};
@@ -61,4 +62,5 @@ switch (_shop) do
     case "Construction" : {["Construction",["Bois","Fer","Cuivre","Sable","Verre","Acier","Ciment"]]};
     case "Poissonnerie" : {["Poissonnerie",["Saupe","Girelle","Maquereau","Thon","Mulet","Roussette"]]};
     case "Boisson": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multisfruits","Soda_Extra_Energy_Drink"]]};
+		case "Frigo": {["Frigidaire a nourriture",["Wrap_Poulet","Big_Burger"]]};
 };

@@ -298,7 +298,7 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (license_cop_gdo): {"Vous n'etes pas du bon niveau !"};
+			case (!license_cop_gdo): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Groupe de Defense et D'opération",

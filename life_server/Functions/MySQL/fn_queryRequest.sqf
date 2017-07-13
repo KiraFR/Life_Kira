@@ -2,11 +2,11 @@
 /*
 	File: fn_queryRequest.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
-	Handles the incoming request and sends an asynchronous query 
+	Handles the incoming request and sends an asynchronous query
 	request to the database.
-	
+
 	Return:
 	ARRAY - If array has 0 elements it should be handled as an error in client-side files.
 	STRING - The request had invalid handles or an unknown error and is logged to the RPT.
@@ -88,7 +88,7 @@ switch (_side) do {
 		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
 		_queryResult pushBack _keyArr; //13
 	};
-	
+
 	case civilian: {
 		_queryResult set[6,([_queryResult select 6,1] call DB_fnc_bool)];
 
@@ -144,7 +144,7 @@ switch (_side) do {
 			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
 			_queryResult pushBack _numAnnuResult; // select 10
 		}else{
-			_numAnnuResult = "";
+			_numAnnuResult = format["0%1",_numAnnuResult];
 			_queryResult pushBack _numAnnuResult; // select 10
 		};
 
