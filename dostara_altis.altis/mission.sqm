@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=206;
+		nextID=220;
 	};
 	class Camera
 	{
-		pos[]={3726.095,366.59244,13389.042};
-		dir[]={0.47777498,-0.40140316,0.78153545};
-		up[]={0.20943043,0.91584313,0.34258473};
-		aside[]={0.85329068,4.8881338e-007,-0.5216403};
+		pos[]={3843.6831,520.73346,13645.979};
+		dir[]={0.37712961,-0.32505599,0.86735374};
+		up[]={0.12966788,0.94564372,0.29822463};
+		aside[]={0.91716188,5.8590376e-007,-0.398785};
 	};
 };
 binarizationWanted=0;
@@ -50644,7 +50644,7 @@ class Mission
 					name="atm_marker_2_1";
 					type="loc_Tourism";
 					colorName="ColorGreen";
-					angle=227.08504;
+					angle=227.08502;
 					id=124;
 				};
 				class Item52
@@ -51236,7 +51236,7 @@ class Mission
 					position[]={14617.422,17.91,16646.379};
 					name="civ_air_1";
 					type="Empty";
-					angle=131.70602;
+					angle=131.70601;
 					id=67;
 				};
 				class Item103
@@ -51363,7 +51363,7 @@ class Mission
 					position[]={3172.1809,0,12914.328};
 					name="med_air_1";
 					type="Empty";
-					angle=56.950401;
+					angle=56.950397;
 					id=3137;
 					atlOffset=-2.3189056;
 				};
@@ -51630,7 +51630,7 @@ class Mission
 					text="Armurerie";
 					type="mil_box";
 					colorName="ColorUNKNOWN";
-					angle=330.04794;
+					angle=330.04791;
 					id=3421;
 					atlOffset=-112.20341;
 				};
@@ -51640,7 +51640,7 @@ class Mission
 					position[]={3172.2241,0,12914.364};
 					name="med_air_hs";
 					type="Empty";
-					angle=56.949997;
+					angle=56.949993;
 					id=3435;
 					atlOffset=-2.3209076;
 				};
@@ -53158,7 +53158,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={3201.968,3.1148472,12866.264};
-						angles[]={0.0016194459,3.1415927,-0};
+						angles[]={0.0016194459,3.1415927,0};
 					};
 					side="Empty";
 					flags=4;
@@ -56275,7 +56275,7 @@ class Mission
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.05755806;
+									atlOffset=0.057557106;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -64573,7 +64573,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={8552.4824,113.52014,25011.885};
-						angles[]={6.2392135,0,6.0640936};
+						angles[]={6.2392201,0,6.0640941};
 					};
 					id=3140;
 					type="tfar_ModuleTaskForceRadioEnforceUsage";
@@ -64594,7 +64594,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="ploplol";
+									value="cul";
 								};
 							};
 						};
@@ -64632,7 +64632,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="[cspacer]- - - Task Force Radio - - -";
+									value="TFR";
 								};
 							};
 						};
@@ -64823,7 +64823,7 @@ class Mission
 				};
 			};
 			id=3156;
-			atlOffset=113.34414;
+			atlOffset=124.40256;
 		};
 		class Item6
 		{
