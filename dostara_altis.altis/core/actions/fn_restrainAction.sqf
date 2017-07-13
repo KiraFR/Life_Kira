@@ -1,7 +1,7 @@
 /*
 	File: fn_restrainAction.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Retrains the target.
 */
@@ -16,5 +16,5 @@ if(!isPlayer _unit) exitWith {};
 //Broadcast!
 
 _unit setVariable["restrained",true,true];
-[player], RemoteExecCall ["life_fnc_restrain", _unit];
-[0,"STR_NOTF_Restrained",true,[_unit getVariable["realname", name _unit], profileName]] RemoteExec ["life_fnc_broadcast",west];
+[player], RemoteExec ["life_fnc_restrain", _unit];
+[0,"STR_NOTF_Restrained",true,[_unit getVariable["realname", name _unit], profileName]] RemoteExecCall ["life_fnc_broadcast",west];
