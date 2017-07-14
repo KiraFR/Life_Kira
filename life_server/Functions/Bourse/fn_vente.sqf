@@ -4,7 +4,7 @@
 	description: none
 	returns: nothing
 */
-private ["_resource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name"];
+private ["_resource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name","_newValueArray"];
 params["_resource","_count","_ent","_ownerID"];
 
 if (isNull _ownerID) exitWith {};
