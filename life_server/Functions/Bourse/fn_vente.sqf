@@ -30,16 +30,16 @@ if (!(isNil 'Bourse_Object')) then {
         };
 
         if (_max == -1) then {
-            if (_value < _min) then {
+            if (_value <= _min) then {
                 _prix = _count * _min;
             }else{
                 _prix = _count * _value;
             };
         }else{
-            if (_value > _max) then {
+            if (_value >= _max) then {
                 _prix = _count * _max;
             }else{
-                if (_value < _min) then {
+                if (_value <= _min) then {
                     _prix = _count * _min;
                 }else{
                     _prix = _count * _value;

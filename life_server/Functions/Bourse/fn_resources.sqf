@@ -9,7 +9,7 @@ _con = param[0,"",[""]];
 _return = switch(_con) do {
 //      NAME                    MIN     MAX     SEIL    EVOL    VALUE   Ent     [ NAME coef ]
 case "Orange" : {[              1,      5,      3,      0.1,    0,      0,      [["Pommes",0.1],["Peche",0.1],["Raisin",0.1],["Jus_Multisfruits",0.2]]]};
-case "Pommes" : {[               1,      5,      3,      0.1,    0,      0,      [["Orange",0.1],["Peche",0.1],["Raisin",0.1],["Jus_Multisfruits",0.2]]]};
+case "Pommes" : {[              1,      5,      3,      0.1,    0,      0,      [["Orange",0.1],["Peche",0.1],["Raisin",0.1],["Jus_Multisfruits",0.2]]]};
 case "Peche" : {[               1,      5,      3,      0.1,    0,      0,      [["Pommes",0.1],["Orange",0.1],["Raisin",0.1],["Jus_de_pommes",0.4]]]};
 case "Raisin" : {[              1,      5,      3,      0.1,    0,      0,      [["Pommes",0.1],["Peche",0.1],["Orange",0.1],["Jus_de_raisin",0.4]]]};
 
@@ -21,7 +21,7 @@ case "Cidre" : {[               1,      25,     0,      0.2,    0,      0,      
 case "Vin" : {[                 1,      25,     0,      0.2,    0,      0,      [["Cidre",0.4],["Biere",0.3],["Whisky",0.3]]]};
 
 case "Biere" : {[               1,     -1,      0,      0,      0,      0,      [["Cidre",0.2],["Whisky",0.4]]]};
-case "Whisky" : {[               1,     -1,      0,      0,      0,      0,      [["Vin",0.2],["Biere",0.4]]]};
+case "Whisky" : {[              1,     -1,      0,      0,      0,      0,      [["Vin",0.2],["Biere",0.4]]]};
 case "Cafe" : {[                1,     -1,      0,      0,      0,      0,      [["Tabac",0.5]]]};
 case "Tabac" : {[               1,     -1,      0,      0,      0,      0,      [["Cafe",0.5]]]};
 
@@ -36,7 +36,7 @@ case "Soupe_de_poisson" : {[    1,      43,     15,     0.5,    0,      0,      
 case "Aluminium" : {[           1,     -1,      33,     0.2,    0,      0,      [["Argent",0.1],["Charbons",0.2],["Cuivre",0.1],["Fer",0.2],["Acier",0.3]]]};
 case "Argent" : {[              1,     -1,      35,     0.2,    0,      0,      [["Aluminium",0.1],["Cuivre",0.1],["Fer",0.1],["Pierres_Precieuses",0.5],["Bijoux",0.3]]]};
 case "Bois" : {[                1,     -1,      18,     0.3,    0,      0,      [["Charbons",0.1],["Chaux",0.1],["Cuivre",0.1],["Fer",0.1],["Petrole",0.1],["Sable",0.1],["Verre",0.1],["Acier",0.1],["Ciment",0.1],["Essence",0.1]]]};
-case "Charbons" : {[             1,     -1,      22,     0.2,    0,      0,      [["Aluminium",0.2],["Bois",0.1],["Fer",0.2],["Petrole",0.1],["Acer",0.3],["Essence",0.1]]]};
+case "Charbons" : {[            1,     -1,      22,     0.2,    0,      0,      [["Aluminium",0.2],["Bois",0.1],["Fer",0.2],["Petrole",0.1],["Acer",0.3],["Essence",0.1]]]};
 case "Chaux" : {[               1,     -1,      21,     0.2,    0,      0,      [["Bois",0.1],["Cuivre",0.1],["Fer",0.1],["Sable",0.2],["Verre",0.1],["Acier",0.1],["Ciment",0.3]]]};
 case "Cuivre" : {[              1,     -1,      24,     0.2,    0,      0,      [["Aluminium",0.1],["Argent",0.1],["Bois",0.1],["Chaux",0.1],["Fer",0.1],["Salbe",0.1],["Verre",0.1],["Acier",0.1],["Ciment",0.1]]]};
 case "Fer" : {[                 1,     -1,      27,     0.1,    0,      0,      [["Aluminium",0.2],["Argent",0.1],["Bois",0.1],["Charbons",0.2],["Chaux",0.1],["Cuivre",0.1],["Sable",0.1],["Verre",0.1],["Acier",0.3],["Ciment",0.1]]]};
