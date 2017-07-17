@@ -54,7 +54,7 @@ diag_log "Executing client.fsm";
 
 [player,"life_fnc_initBourse_client"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
 waitUntil {life_bourse_completed};
-diag_log format["%1",Bourse_Object];
+diag_log format["%1",Bourse_Iteams];
 diag_log "------------------------------------------------------------------------------------------------------";
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
