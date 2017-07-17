@@ -7,7 +7,7 @@
 private ["_Object","_Return"];
 params[["_ownerID",""],["_Return",""]];
 if (isNull _ownerID) exitWith {};
-if (isNull _Return) exitWith {};
+if (isNil _Return) exitWith {};
 _ownerID = owner _ownerID;
 _Object = Bourse_Object getVariable "Bourse";
 [_Object] remoteExecCall [_Return,_ownerID];
