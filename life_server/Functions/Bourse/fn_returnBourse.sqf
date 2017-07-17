@@ -4,9 +4,10 @@
 	returns: nothing
 */
 
-private ["_Object"];
-params[["_ownerID",""]];
+private ["_Object","_Return"];
+params[["_ownerID",""],["_Return",""]];
 if (isNull _ownerID) exitWith {};
+if (isNull _Return) exitWith {};
 _ownerID = owner _ownerID;
 _Object = Bourse_Object getVariable "Bourse";
-[_Object] remoteExecCall ["KIRA_fnc_initBourse_Recive",_ownerID];
+[_Object] remoteExecCall [_Return,_ownerID];

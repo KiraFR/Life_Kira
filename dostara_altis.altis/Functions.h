@@ -229,6 +229,7 @@ class Life_Client_Core
 		class loadAccount {};
 		class Bool {};
 		class plafond {};
+		class initBourse_client {};
 	};
 
 	class Network

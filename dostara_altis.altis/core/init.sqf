@@ -51,6 +51,10 @@ diag_log "Past Settings Init";
 [] execFSM "core\fsm\client.fsm";
 diag_log "Executing client.fsm";
 (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call life_fnc_keyHandler"];
+
+[player,"life_fnc_initBourse_client"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
+waitUntil {life_bourse_completed};
+diag_log format["%1",Bourse_Object];
 diag_log "------------------------------------------------------------------------------------------------------";
 diag_log format["                End of Altis Life Client Init :: Total Execution Time %1 seconds ",(diag_tickTime) - _timeStamp];
 diag_log "------------------------------------------------------------------------------------------------------";
