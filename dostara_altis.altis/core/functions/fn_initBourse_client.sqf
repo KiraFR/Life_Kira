@@ -20,9 +20,3 @@ Bourse_Iteams = _Iteams;
 Bourse_Object = _bourseObject;
 Bourse_Var = _Var;
 life_bourse_completed = true;
-
-uiSleep 5;
-while{true} do {
-    uiSleep 60;
-    [player,"life_fnc_bourseUpdate"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
-};

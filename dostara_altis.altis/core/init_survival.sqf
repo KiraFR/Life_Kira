@@ -44,6 +44,14 @@
 
 [] spawn
 {
+    while{true} do {
+        Sleep 60;
+        [player,"life_fnc_bourseUpdate"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
+    };
+};
+
+[] spawn
+{
 	private["_bp","_load","_cfg"];
 	while{true} do
 	{
