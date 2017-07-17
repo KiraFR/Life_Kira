@@ -6,7 +6,7 @@
 	Description:
 	Update and fill the virtual shop menu.
 */
-private["_display","_item_list","_gear_list","_shop_data","_name","_price"];
+private["_display","_item_list","_gear_list","_shop_data","_name","_price","_id","_val"];
 disableSerialization;
 
 //Setup control vars.
@@ -25,7 +25,7 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	_name = [([_x,0] call life_fnc_varHandle)] call life_fnc_vartostr;
 	_index = [_x,__GETC__(sell_array)] call life_fnc_index;
 	if(_index != -1) then{
-		_price = round(((__GETC__(sell_array) select _index) select 1) * 1.5);
+		_price = round(((__GETC__(sell_array) select _index) select 1));
 		if (_price != -1) then {
             _item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
             _item_list lbSetData [(lbSize _item_list)-1,_x];
@@ -39,10 +39,14 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	_var = [_x,0] call life_fnc_varHandle;
 	_val = missionNameSpace getVariable _var;
 	_name = [_var] call life_fnc_vartostr;
-    if (_x in Bourse_Iteams) then {
+    if (_var in Bourse_VarIteams) then {
 	    if(_val > 0) then
 	    {
-		    _gear_list lbAdd format["%1x %2",_val,_name];
+
+	        _id = Bourse_VarIteams find _var;
+	        _Obj = Bourse_Object select _id;
+	        _price = round(_Obj select 1);
+		    _gear_list lbAdd format["%1x %2  ( %3€ )",_val,_name,_price];
 		    _gear_list lbSetData [(lbSize _gear_list)-1,_x];
 	    };
     };

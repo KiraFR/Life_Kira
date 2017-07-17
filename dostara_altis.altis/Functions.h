@@ -230,6 +230,7 @@ class Life_Client_Core
 		class Bool {};
 		class plafond {};
 		class initBourse_client {};
+		class bourseUpdate {};
 	};
 
 	class Network
