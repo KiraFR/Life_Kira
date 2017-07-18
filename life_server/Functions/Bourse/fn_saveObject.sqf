@@ -35,7 +35,6 @@ while {true} do {
 
             {
                 _Object_Bourse = Bourse_Object getVariable "Bourse";
-                _ent = false;
                 _result = [_x select 0] call bourse_fnc_resources;
                 _count = (_x select 1);
                 _countArr = count _result;
@@ -98,6 +97,7 @@ while {true} do {
                     Bourse_Object setVariable ["Bourse",_Object_Bourse, true];
                 };
             } forEach _Object2;
+            Bourse_Resource_Save = [];
         };
     };
 };
