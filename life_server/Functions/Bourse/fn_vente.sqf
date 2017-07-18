@@ -4,8 +4,8 @@
 	description: none
 	returns: nothing
 */
-private ["_resource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name","_newValueArray"];
-params["_resource","_count","_ent","_ownerID"];
+private ["_resource","_count","_ent","_ownerID","_result","_minFor","_maxFor","_resultFor","_valueModif","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name","_newValueArray"];
+params[["_resource",""],["_count",""],["_ent",""],["_ownerID",""]];
 
 if (isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
@@ -32,25 +32,32 @@ if (!(isNil 'Bourse_Object')) then {
         if (_max == -1) then {
             if (_value <= _min) then {
                 _prix = _count * _min;
+                _valueNew = _min;
             }else{
                 _prix = _count * _value;
+                if (_value >= _seil) then {
+                    _valueNew = (_value - (_count * _evol));
+                }else{
+                    _valueNew = (_value - (_count));
+                };
             };
         }else{
             if (_value >= _max) then {
                 _prix = _count * _max;
+                _valueNew = _max;
             }else{
                 if (_value <= _min) then {
                     _prix = _count * _min;
+                    _valueNew = _min;
                 }else{
                     _prix = _count * _value;
+                    if (_value >= _seil) then {
+                        _valueNew = (_value - (_count * _evol));
+                    }else{
+                        _valueNew = (_value - (_count));
+                    };
                 };
              };
-        };
-
-        if (_value >= _seil) then {
-            _valueNew = (_value - (_count * _evol));
-        }else{
-            _valueNew = (_value - (_count));
         };
 
         _valueArray = [_resource,_value];
@@ -64,11 +71,22 @@ if (!(isNil 'Bourse_Object')) then {
             {
                 if (_name == (_x select 0)) then {
 
+                    _resultFor = [_name] call bourse_fnc_resources;
+                    _minFor = (_resultFor select 0);
+                    _maxFor = (_resultFor select 1);
+
+                    if (_maxFor == -1) then {
+                        if (_valueModif <= _minFor) then {_valueModif = _minFor;};
+                    }else{
+                        if (_valueModif >= _maxFor) then {_valueModif = _maxFor;};
+                        if (_valueModif <= _minFor) then {_valueModif = _minFor;};
+                    };
+
                     _ValueArray = [_name,(_x select 1)];
                     _id = _Object find _valueArray;
                     _newValueArray = [_name,((_x select 1) + (_valueModif))];
                     _Object set [_id,_newValueArray];
-
+                    if (true) exitWith {};
                 };
             }forEach _Object;
         }forEach _relation;
