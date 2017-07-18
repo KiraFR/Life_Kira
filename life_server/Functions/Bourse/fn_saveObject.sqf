@@ -7,8 +7,10 @@ private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_Resources","_Reso
 uiSleep 5;
 while {true} do {
     _ObjectLast = Bourse_Resource_Save;
+    diag_log format["%1",Bourse_Resource_Save];
     Sleep 30;
     _Object = Bourse_Resource_Save;
+    diag_log format["%1",Bourse_Resource_Save];
     if ((count _Object) != 0) then {
         if (!(_ObjectLast isEqualTo _Object)) then {
             _Object2 = [];
