@@ -68,6 +68,7 @@ class CfgFunctions
             class resources {};
             class vente {};
             class returnBourse {};
+            class forceSaveObject {};
 		};
 	};
 

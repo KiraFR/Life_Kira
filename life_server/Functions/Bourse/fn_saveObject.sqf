@@ -52,44 +52,66 @@ while {true} do {
                         };
                     };
                     if (_max == -1) then {
-                        if (_value < _min) then {
+                        if (_value <= _min) then {
                             _prix = _count * _min;
-                        } else {
+                            _valueNew = _min;
+                        }else{
                             _prix = _count * _value;
+                            if (_value >= _seil) then {
+                                _valueNew = (_value - (_count * _evol));
+                            }else{
+                                _valueNew = (_value - (_count));
+                            };
                         };
-                    } else {
-                        if (_value > _max) then {
+                    }else{
+                        if (_value >= _max) then {
                             _prix = _count * _max;
-                        } else {
-                            if (_value < _min) then {
+                            _valueNew = _max;
+                        }else{
+                            if (_value <= _min) then {
                                 _prix = _count * _min;
-                            } else {
+                                _valueNew = _min;
+                            }else{
                                 _prix = _count * _value;
+                                if (_value >= _seil) then {
+                                    _valueNew = (_value - (_count * _evol));
+                                }else{
+                                    _valueNew = (_value - (_count));
+                                };
                             };
                          };
                     };
-                    if (_value >= _seil) then {
-                        _valueNew = (_value - (_count * _evol));
-                    } else {
-                        _valueNew = (_value - (_count));
-                    };
+
                     _valueArray = [_resource,_value];
-                    _id = _Object_Bourse find _valueArray;
+                    _id = _Object find _valueArray;
                     _newValueArray = [_resource,_valueNew];
-                    _Object_Bourse set [_id,_newValueArray];
+                    _Object set [_id,_newValueArray];
                     {
                         _name = (_x select 0);
                         _cofi = (_x select 1);
                         _valueModif = _count * _cofi;
                         {
                             if (_name == (_x select 0)) then {
+
+                                _resultFor = [_name] call bourse_fnc_resources;
+                                _minFor = (_resultFor select 0);
+                                _maxFor = (_resultFor select 1);
+
+                                if (_maxFor == -1) then {
+                                    if (_valueModif <= _minFor) then {_valueModif = _minFor;};
+                                }else{
+                                    if (_valueModif >= _maxFor) then {_valueModif = _maxFor;};
+                                    if (_valueModif <= _minFor) then {_valueModif = _minFor;};
+                                };
+
                                 _ValueArray = [_name,(_x select 1)];
-                                _id = _Object_Bourse find _valueArray;
+                                _id = _Object find _valueArray;
                                 _newValueArray = [_name,((_x select 1) + (_valueModif))];
-                                _Object_Bourse set [_id,_newValueArray];
+                                _Object set [_id,_newValueArray];
+                                if (true) exitWith {};
                             };
-                        } forEach _Object_Bourse;
-                    } forEach _relation;
+                        }forEach _Object;
+                    }forEach _relation;
                     Bourse_Object setVariable ["Bourse",_Object_Bourse, true];
                 };
             } forEach _Object2;
