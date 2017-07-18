@@ -110,7 +110,7 @@ while {true} do {
                                 _Object set [_id,_newValueArray];
                                 if (true) exitWith {};
                             };
-                        }forEach _Object;
+                        }forEach _Object_Bourse;
                     }forEach _relation;
                     Bourse_Object setVariable ["Bourse",_Object_Bourse, true];
                 };

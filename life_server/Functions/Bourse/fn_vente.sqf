@@ -9,9 +9,6 @@ params[["_resource",""],["_count",""],["_ent",""],["_ownerID",""]];
 
 if (isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
-Force_Save_Bourse = false;
-[] call bourse_fnc_forceSaveObject;
-waitUntil {if (Force_Save_Bourse) exitWith {true};false};
 if (!(isNil 'Bourse_Object')) then {
     _Object = Bourse_Object getVariable "Bourse";
     _result = [_resource] call bourse_fnc_resources;
