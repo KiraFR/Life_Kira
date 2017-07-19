@@ -7,6 +7,7 @@
 ****** Backend Variables *****
 *****************************
 */
+Time_Bourse = time;
 life_bourse_completed = false;
 life_query_time = time;
 life_action_delay = time;

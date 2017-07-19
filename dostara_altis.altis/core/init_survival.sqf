@@ -45,7 +45,7 @@
 [] spawn
 {
     while{true} do {
-        Sleep 60;
+        Sleep 120;
         [player,"life_fnc_bourseUpdate"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
     };
 };

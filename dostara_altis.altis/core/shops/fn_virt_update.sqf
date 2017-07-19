@@ -9,6 +9,8 @@
 private["_display","_item_list","_gear_list","_shop_data","_name","_price","_id","_val"];
 disableSerialization;
 
+[player,"life_fnc_bourseUpdate"] remoteExecCall ["Bourse_fnc_ReturnBourse",2];
+
 //Setup control vars.
 _display = findDisplay 2400;
 _item_list = _display displayCtrl 2401;
