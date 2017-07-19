@@ -4,7 +4,7 @@
 	
 	Description:
 	Setup the settings menu.
-*/
+
 if(isNull (findDisplay 2900)) then
 {
 	if(!createDialog "SettingsMenu") exitWith {hint "Something went wrong, the menu won't open?"};
@@ -64,3 +64,4 @@ if(life_sidechat) then {
 	_side ctrlSetTextColor [1,0,0,1];
 	_side ctrlSetText "OFF";
 };
+*/
