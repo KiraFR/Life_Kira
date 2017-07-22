@@ -4,7 +4,7 @@
 	Description
 	Main gear handling functionality.
 */
-private["_item","_details","_bool","_ispack","_items","_isgun","_ongun","_override","_toUniform","_toVest","_preview"];
+private ["_item","_details","_bool","_ispack","_items","_isgun","_ongun","_override","_toUniform","_toVest","_preview","_acecheck"];
 params[
 	["_item","",[""]],
 	["_bool",false,[false]],
@@ -15,6 +15,10 @@ params[
 	["_toVest",false,[false]],
 	["_preview",false,[false]]
 ];
+
+// ACE items
+_acecheck = ["ACE_atropine","ACE_morphine","ACE_epinephrine","ACE_EarPlugs","ACE_fieldDressing","ACE_elasticBandage","ACE_quikclot","ACE_packingBandage","ACE_salineIV_250","ACE_salineIV_500","ACE_salineIV","ACE_tourniquet","ACE_personalAidKit","ACE_bloodIV_250","ACE_bloodIV_500","ACE_bloodIV","ACE_plasmaIV_250","ACE_plasmaIV_500","ACE_plasmaIV","ACE_surgicalKit","ACE_bodyBag"];
+
 //Some checks
 if(_item == "") exitWith {};
 _isgun = false;
@@ -85,6 +89,7 @@ if(_bool) then
 
 			if((_details select 4) in [1,2,4,5,4096]) then
 			{
+			    if(_item in _acecheck) then{player addItem _item;}; // Whitelisting ACE objects
 				if((_details select 4) == 4096) then
 				{
 					if((_details select 5) == -1) then
