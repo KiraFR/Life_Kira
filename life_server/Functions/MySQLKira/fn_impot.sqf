@@ -81,6 +81,6 @@ switch(_type) do {
 	};
 };
 _total = _queryuidGR + _all;
-_query = format["INSERT INTO gouv (par,montant, type, pour, total) VALUE ('%1','%2,'""Impot""','%3','%4') WHERE playerid='%1'",_uid,_all,_who,_total];
+//_query = format["INSERT INTO gouv (par,montant, type, pour, total) VALUE ('%1','%2,'""Impot""','%3','%4') WHERE playerid='%1'",_uid,_all,_who,_total];
 [_query,1] call DB_fnc_asyncCall;
 [0,_all] RemoteExecCall ["life_fnc_RefreshReceived",(owner _owner)];
