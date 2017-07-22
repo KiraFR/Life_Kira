@@ -32,7 +32,6 @@ if(count _courant > 0) then{
 	_nb = missionNameSpace getVariable ["life_AccN",0];
 	{
 		_default = [_x select 3] call life_fnc_bool;
-		diag_log format["%1 %2",(_x select 2),typeName (_x select 2)];
 		if(_default)then{
 			BANK = if(typeName (_x select 2) == "STRING") then{
 				parseNumber(_x select 2);
