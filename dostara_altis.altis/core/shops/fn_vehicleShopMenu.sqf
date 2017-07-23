@@ -55,6 +55,7 @@ if(typeName _spawnPoints == "ARRAY")then{
 	_spawnPos = _spawnPoints;
 };
 life_shop_cam = "CAMERA" camCreate (position player);
+azimut = 0;
 showCinemaBorder false;
 life_shop_cam cameraEffect ["Internal", "Back"];
 life_shop_cam camSetTarget (getMarkerPos _spawnPos);
@@ -62,6 +63,7 @@ life_shop_cam camSetPos (player modelToWorld [0,0,5]);
 life_shop_cam camSetFOV .50;
 life_shop_cam camCommit 0;
 waitUntil {isNull (findDisplay 2300)};
+azimut = nil;
 life_shop_cam cameraEffect ["TERMINATE","BACK"];
 camDestroy life_shop_cam;
 if(!(isNil "vehPreview"))then{deleteVehicle vehPreview;};

@@ -29,7 +29,7 @@ vehPreview enableSimulation false;
 {
     // Until we left the visualization.
     for "_i" from 0 to 1 step 0 do {
-        private ["_objet","_distance","_azimut"];
+        private ["_objet","_distance"];
 
         // Waiting for a view object.
         waitUntil {!isNull vehPreview};
@@ -41,18 +41,17 @@ vehPreview enableSimulation false;
             distance
                 [boundingBoxReal _objet select 1 select 0, boundingBoxReal _objet select 1 select 2]
         );
-        _azimut = 0;
 
         life_shop_cam camSetTarget _objet;
-        life_shop_cam camSetPos (_objet modelToWorld [_distance * sin _azimut, _distance * cos _azimut, _distance * 0.33]);
+        life_shop_cam camSetPos (_objet modelToWorld [_distance * sin azimut, _distance * cos azimut, _distance * 0.33]);
         life_shop_cam camCommit 0;
 
         // rotation
         for "_i" from 0 to 1 step 0 do {
             if (!(vehPreview isEqualTo _objet)) exitWith {};
-            _azimut = _azimut + 1.00;
+            azimut = azimut + 1.00;
 
-            life_shop_cam camSetPos (_objet modelToWorld [_distance * sin _azimut, _distance * cos _azimut, _distance * 0.33]);
+            life_shop_cam camSetPos (_objet modelToWorld [_distance * sin azimut, _distance * cos azimut, _distance * 0.33]);
             life_shop_cam camCommit 0.05;
 
             sleep 0.05;
