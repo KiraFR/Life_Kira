@@ -65,7 +65,7 @@ class CfgFunctions
             class createObject {};
             class saveBourse {};
             class saveObject {};
-            class resources {};
+            class ressources {};
             class vente {};
             class returnBourse {};
             class forceSaveObject {};

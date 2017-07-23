@@ -7,7 +7,7 @@
 
 private ["_return","_all","_query","_queryResult","_return","_str"];
 
-_all = ["Name"] call bourse_fnc_resources;
+_all = ["Name"] call bourse_fnc_ressources;
 _query = "SELECT name,valeur FROM bourse";
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 
@@ -17,7 +17,7 @@ if (count _queryResult == 0) then {
     _Object = [];
     _count = 0;
     {
-        _return = [_x] call bourse_fnc_resources;
+        _return = [_x] call bourse_fnc_ressources;
         if(count _return != 0) then{
             _str = format[" ('""%2""','%1')",(_return select 4),_x];
 
@@ -39,5 +39,5 @@ if (count _queryResult == 0) then {
 };
 
 Bourse_Object setVariable ["Bourse",_queryResult, true];
-Bourse_Resource_Save = [];
+Bourse_ressource_Save = [];
 Bourse_Start = true;

@@ -1759,9 +1759,9 @@
 			<Italian>Il veicolo è pieno</Italian>
 			<Portuguese>O veículo está cheio.</Portuguese>
 		</Key>
-		<Key ID="STR_NOTF_notNearResource">
-			<Original>You are not near a resource field</Original>
-			<English>You are not near a resource field</English>
+		<Key ID="STR_NOTF_notNearressource">
+			<Original>You are not near a ressource field</Original>
+			<English>You are not near a ressource field</English>
 			<German>Du bist nicht in der Nähe einer Mine</German>
 			<French>Vous n'êtes pas à proximité d'un champ de ressources</French>
 			<Italian>Non sei vicino ad un campo risorse</Italian>

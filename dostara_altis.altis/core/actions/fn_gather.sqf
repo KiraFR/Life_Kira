@@ -6,8 +6,8 @@
 	Main functionality for gathering.
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
-private["_gather","_itemWeight","_diff","_itemName","_val","_resourceZones","_zone"];
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2","Ress_Orange_01","Ress_Orange_02","Ress_Pêche_01","Ress_Pêche_02",
+private["_gather","_itemWeight","_diff","_itemName","_val","_ressourceZones","_zone"];
+_ressourceZones = ["apple_1","apple_2","apple_3","apple_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2","Ress_Orange_01","Ress_Orange_02","Ress_Pêche_01","Ress_Pêche_02",
 					"Ress_Pomme_01","Ress_Pomme_02","Ress_Raisin_01","Ress_Raisin_02","Ress_Alu_01","Ress_Alu_02","Ress_Argent_01","Ress_Bois_01","Ress_Bois_02","Ress_Bois_03","Ress_Bois_04",
 					"Ress_Charbon_01","Ress_Charbon_02","Ress_Calcaire_01","Ress_Calcaire_02","Ress_Cuivre_01","Ress_Fer_01","Ress_Fer_02","Ress_Petrole_01","Ress_PP_01","Ress_Sable_01",
 					"Ress_Sable_02","Ress_Sel_01","Ress_Cuivre_02"];
@@ -15,12 +15,12 @@ _zone = "";
 //Find out what zone we're near
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
-} forEach _resourceZones;
+} forEach _ressourceZones;
 
 if(_zone == "") exitWith {
 	life_action_inUse = false;
 };
-//Get the resource that will be gathered from the zone name...
+//Get the ressource that will be gathered from the zone name...
 switch(true) do {
 	case (_zone in ["Ress_Pomme_01","Ress_Pomme_02"]): {_gather = "Pommes"; _val = 3;};
 	case (_zone in ["Ress_Pêche_01","Ress_Pêche_02"]): {_gather = "Peche"; _val = 3;};

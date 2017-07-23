@@ -20,7 +20,7 @@ private["_rscInfo","_min","_bon","_nameShown"];
 _pnj = param[0,objNull,[objNull]];
 _rsc = param[3,"",[""]];
 
-// [	Resource Name,	Count,	[[[Required,Count],...],...]	]
+// [	ressource Name,	Count,	[[[Required,Count],...],...]	]
 _rscInfo = [_rsc] call life_fnc_processSwitch;
 _rsc = _rscInfo select 0;
 _rscProcessedCount = _rscInfo select 1;

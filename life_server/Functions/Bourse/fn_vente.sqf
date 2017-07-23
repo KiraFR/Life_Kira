@@ -4,14 +4,14 @@
 	description: none
 	returns: nothing
 */
-private ["_resource","_count","_ent","_ownerID","_result","_minFor","_maxFor","_resultFor","_valueModif","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name","_newValueArray"];
-params[["_resource",""],["_count",""],["_ent",""],["_ownerID",""]];
+private ["_ressource","_count","_ent","_ownerID","_result","_minFor","_maxFor","_resultFor","_valueModif","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_Object","_name","_newValueArray"];
+params[["_ressource",""],["_count",""],["_ent",""],["_ownerID",""]];
 
 if (isNull _ownerID) exitWith {};
 _ownerID = owner _ownerID;
 if (!(isNil 'Bourse_Object')) then {
     _Object = Bourse_Object getVariable "Bourse";
-    _result = [_resource] call bourse_fnc_resources;
+    _result = [_ressource] call bourse_fnc_ressources;
     _countArr = count _result;
     if (_countArr != 0) then {
         _valueNew = 0;
@@ -20,7 +20,7 @@ if (!(isNil 'Bourse_Object')) then {
         _seil = (_result select 2);
         _evol = (_result select 3);
         _entValue = (_result select 5);
-        _value = {if (_resource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object;
+        _value = {if (_ressource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object;
 
         if (_ent) then {
             if (_entValue != 0) then {
@@ -45,7 +45,7 @@ if (!(isNil 'Bourse_Object')) then {
                 };
              };
         };
-        Bourse_Resource_Save pushBack [_resource,_count];
+        Bourse_ressource_Save pushBack [_ressource,_count];
         [_prix] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];
     };
 };

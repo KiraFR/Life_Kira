@@ -2,9 +2,9 @@
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	Starts automated mining of resource from the tempest device.
+	Starts automated mining of ressource from the tempest device.
 */
-private["_vehicle","_resourceZones","_zone","_weight","_item","_vInv","_itemIndex"];
+private["_vehicle","_ressourceZones","_zone","_weight","_item","_vInv","_itemIndex"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vehicle) exitWith {}; //Null was passed?
 if(!isNil {_vehicle getVariable "mining"}) exitWith {hint localize "STR_NOTF_DeviceIsMining";}; //Mining is already in process..
@@ -12,20 +12,20 @@ closeDialog 0; //Close the interaction menu.
 life_action_inUse = true; //Lock out the interaction menu for a bit..
 _weight = [_vehicle] call life_fnc_vehicleWeight;
 if((_weight select 1) >= (_weight select 0)) exitWith {hint localize "STR_NOTF_DeviceFull"; life_action_inUse = false;};
-_resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","lead_1","iron_1","salt_1","sand_1","diamond_1","oil_1","oil_2","rock_1"];
+_ressourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","lead_1","iron_1","salt_1","sand_1","diamond_1","oil_1","oil_2","rock_1"];
 _zone = "";
 
 //Find out what zone we're near
 {
 	if(player distance (getMarkerPos _x) < 150) exitWith {_zone = _x;};
-} forEach _resourceZones;
+} forEach _ressourceZones;
 
 if(_zone == "") exitWith {
-	hint localize "STR_NOTF_notNearResource";
+	hint localize "STR_NOTF_notNearressource";
 	life_action_inUse = false;
 };
 
-//Get the resource that will be gathered from the zone name...
+//Get the ressource that will be gathered from the zone name...
 _item = switch(true) do {
 	case (_zone in ["apple_1","apple_2","apple_3","apple_4"]): {"apple"};
 	case (_zone in ["peaches_1","peaches_2","peaches_3","peaches_4"]): {"peach"};
@@ -42,7 +42,7 @@ _item = switch(true) do {
 	default {""};
 };
 
-if(_item == "") exitWith {hint "Bad Resource?"; life_action_inUse = false;};
+if(_item == "") exitWith {hint "Bad ressource?"; life_action_inUse = false;};
 _vehicle setVariable ["mining",true,true]; //Lock the device
 [_vehicle] RemoteExecCall ["life_fnc_soundDevice",0]; //Broadcast the 'mining' sound of the device for nearby units.
 
