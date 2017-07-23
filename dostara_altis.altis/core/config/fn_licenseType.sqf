@@ -54,11 +54,11 @@ switch (_mode) do
 			//New License # KronosD
 
 			case "diamond": {_var = "license_civ_diamond"};
-			case "Acier": {_var = "license_civ_Acier"};
-			case "PPrecieuse": {_var = "license_civ_PPrecieuse"};
+			case "acier": {_var = "license_civ_acier"};
+			case "pprecieuse": {_var = "license_civ_pprecieuse"};
 			case "fonderie": {_var = "licence_civ_fonderie"};
 			case "fonderieExp": {_var = "licence_civ_fonderieExp"};
-			case "Chaux": {_var = "licence_civ_Chaux"};
+			case "chaux": {_var = "licence_civ_chaux"};
 			case "presseur": {_var = "license_civ_presseur"};
 			case "fermenta": {_var = "licence_civ_fermenta"};
 			case "vin": {_var = "licence_civ_vin"};
@@ -109,11 +109,11 @@ switch (_mode) do
 // New License # KronosD
 
 			case "license_civ_diamond": {_var = "diamond"};
-			case "license_civ_Acier": {_var = "Acier"};
-			case "license_civ_PPrecieuse": {_var = "PPrecieuse"};
+			case "license_civ_acier": {_var = "acier"};
+			case "license_civ_pprecieuse": {_var = "pprecieuse"};
 			case "licence_civ_fonderie": {_var = "fonderie"};
 			case "licence_civ_fonderieExp": {_var = "fonderieExp"};
-			case "licence_civ_Chaux": {_var = "Chaux"};
+			case "licence_civ_chaux": {_var = "chaux"};
 			case "license_civ_presseur": {_var = "presseur"};
 			case "licence_civ_fermenta": {_var = "fermenta"};
 			case "licence_civ_vin": {_var = "vin"};
