@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3470;
+		nextID=3474;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=275;
+		nextID=301;
 	};
 	class Camera
 	{
-		pos[]={2522.9407,86.813919,9359.7461};
-		dir[]={-0.28572345,-0.67435545,0.68106467};
-		up[]={-0.26094517,0.73818427,0.62199986};
-		aside[]={0.92227292,1.2914388e-006,0.38691315};
+		pos[]={3721.1824,244.09363,12986.087};
+		dir[]={-0.27171162,-0.89138824,0.36305192};
+		up[]={-0.53409761,0.45323944,0.71364307};
+		aside[]={0.80069065,1.2903038e-006,0.59924144};
 	};
 };
 binarizationWanted=0;
@@ -42303,7 +42303,7 @@ class Mission
 						};
 					};
 					id=3158;
-					atlOffset=0.78913021;
+					atlOffset=1.0577536;
 				};
 				class Item498
 				{
@@ -50066,7 +50066,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -51718,7 +51718,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Faire du Ciment"",life_fnc_processAction,""Ciment"",0,false,false,"""",' life_resource_chaux > 0 && life_resource_sable > 0 && license_civ_cement && !life_is_processing && player distance _target < 4'];    " \n " " \n "this addAction[""Acheter la license de Cimenterie"",life_fnc_buyLicense,""cement"",0,false,false,"""",'playerSide == civilian && player distance _target < 4 && !license_civ_cement'];}";
+						init="call{this addAction[""Faire du Ciment"",life_fnc_processAction,""Ciment"",0,false,false,"""",' life_ressource_chaux > 0 && life_ressource_sable > 0 && license_civ_cement && !life_is_processing && player distance _target < 4'];    " \n " " \n "this addAction[""Acheter la license de Cimenterie"",life_fnc_buyLicense,""cement"",0,false,false,"""",'playerSide == civilian && player distance _target < 4 && !license_civ_cement'];}";
 						disableSimulation=1;
 					};
 					id=2565;
@@ -51838,7 +51838,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_inv_Calcaire > 0 && licence_civ_Chaux && !life_is_processing && player distance _target < 4'];  " \n " " \n "this addAction[""Faire de la soupe de poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing && player distance _target < 4'];}";
+						init="call{this addAction[""Broyer le Calcaire"",life_fnc_processAction,""Chaux"",0,false,false,"""",' life_ressource_calcaire > 0 && licence_civ_Chaux && !life_is_processing && player distance _target < 4'];  " \n " " \n "this addAction[""Faire de la Soupe de Poisson"",life_fnc_processAction,""Fishsoup"",0,false,false,"""",'licence_civ_fishsoup && !life_is_processing && player distance _target < 4'];}";
 						disableSimulation=1;
 					};
 					id=2823;
@@ -56139,7 +56139,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3695.77,11.18329,13151.407};
-										angles[]={0,4.4593258,-0};
+										angles[]={0,4.4593258,0};
 									};
 									side="Civilian";
 									flags=4;
@@ -56152,7 +56152,7 @@ class Mission
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.05755806;
+									atlOffset=0.057557106;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -56518,7 +56518,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3685.3308,11.077223,13094.133};
-										angles[]={-0,3.2713406,0};
+										angles[]={0,3.2713406,0};
 									};
 									side="Civilian";
 									flags=6;
@@ -56631,7 +56631,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={3689.9417,11.125732,13144.517};
-										angles[]={-0,5.031033,0};
+										angles[]={0,5.031033,0};
 									};
 									side="Civilian";
 									flags=6;
@@ -56937,7 +56937,7 @@ class Mission
 										angles[]={0,0.67219484,6.2820935};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -56947,6 +56947,7 @@ class Mission
 									};
 									id=3360;
 									type="C_man_polo_3_F";
+									atlOffset=0.47954369;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57033,6 +57034,7 @@ class Mission
 							{
 							};
 							id=3359;
+							atlOffset=0.47954369;
 						};
 						class Item7
 						{
@@ -59074,6 +59076,7 @@ class Mission
 									};
 									id=3394;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.17152023;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -59456,6 +59459,7 @@ class Mission
 									};
 									id=3401;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.17005157;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -59523,6 +59527,7 @@ class Mission
 							{
 							};
 							id=3400;
+							atlOffset=0.17005157;
 						};
 						class Item23
 						{
@@ -59942,7 +59947,7 @@ class Mission
 					};
 					id=3450;
 					type="Land_Atm_01_F";
-					atlOffset=0.00010681152;
+					atlOffset=0.22999573;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -60197,6 +60202,7 @@ class Mission
 					};
 					id=3456;
 					type="Land_Atm_02_F";
+					atlOffset=0.1618824;
 					class CustomAttributes
 					{
 						class Attribute0
