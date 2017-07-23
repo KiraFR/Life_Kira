@@ -44,7 +44,7 @@ if(count _courant > 0) then{
 		_nb = _nb +1;
 	}foreach _courant;
 	missionNamespace setVariable ["AccountBanque",_accCourant];
-	missionNameSpace setVariable ["life_AccOffshore",_nb];
+	missionNameSpace setVariable ["life_AccN",_nb];
 	_cpt = _cpt + _nb;
 };
 
