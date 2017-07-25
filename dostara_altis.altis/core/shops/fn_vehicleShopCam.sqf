@@ -49,6 +49,7 @@ vehPreview enableSimulation false;
         // rotation
         for "_i" from 0 to 1 step 0 do {
             if (!(vehPreview isEqualTo _objet)) exitWith {};
+            if ((isNil azimut)) exitWith {};
             azimut = azimut + 1.00;
 
             life_shop_cam camSetPos (_objet modelToWorld [_distance * sin azimut, _distance * cos azimut, _distance * 0.33]);
