@@ -113,7 +113,7 @@ switch (true) do
 			};
 	};
 
-	case (_item == "Canabis"):
+	case (_item == "Cannabis"):
 	{
 		if (([false,_item,1] call life_fnc_handleInv)) then
 			{

@@ -19,7 +19,7 @@ switch (_mode) do
             case "Orange" : {"life_inv_orange"};
             case "Peche" : {"life_inv_peche"};
             case "Bouteille_d_eau" : {"life_inv_eau"};
-            case "Jus_Multisfruits" : {"life_inv_jus_multifruits"};
+            case "Jus_Multifruit" : {"life_inv_Jus_Multifruit"};
             case "Wrap_Poulet" : {"life_inv_wrap"};
             case "Big_Burger" : {"life_inv_burger"};
             case "Soda_Extra_Energy_Drink" : {"life_inv_soda"};
@@ -59,7 +59,7 @@ switch (_mode) do
             case "Bijoux" : {"life_ressource_bijoux"};
             case "Ciment" : {"life_ressource_ciment"};
             case "Essence" : {"life_ressource_essence"};
-            case "Canabis" : {"life_ressource_cannabis"};
+            case "Cannabis" : {"life_ressource_cannabis"};
             case "Coca" : {"life_ressource_coca"};
             case "Opium" : {"life_ressource_opium"};
             case "Cocaine" : {"life_ressource_cocaine"};
@@ -90,7 +90,7 @@ switch (_mode) do
             case "life_inv_orange" : {"Orange"};
             case "life_inv_peche" : {"Peche"};
             case "life_inv_eau" : {"Bouteille_d_eau"};
-            case "life_inv_jus_multifruits" : {"Jus_Multisfruits"};
+            case "life_inv_Jus_Multifruit" : {"Jus_Multifruit"};
             case "life_inv_wrap" : {"Wrap_Poulet"};
             case "life_inv_burger" : {"Big_Burger"};
             case "life_inv_soda" : {"Soda_Extra_Energy_Drink"};
@@ -130,7 +130,7 @@ switch (_mode) do
             case "life_ressource_bijoux" : {"Bijoux"};
             case "life_ressource_ciment" : {"Ciment"};
             case "life_ressource_essence" : {"Essence"};
-            case "life_ressource_cannabis" : {"Canabis"};
+            case "life_ressource_cannabis" : {"Cannabis"};
             case "life_ressource_coca" : {"Coca"};
             case "life_ressource_opium" : {"Opium"};
             case "life_ressource_cocaine" : {"Cocaine"};

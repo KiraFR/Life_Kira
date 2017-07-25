@@ -17,7 +17,7 @@ switch (_var) do
     case "life_inv_orange" : {"Orange"};
     case "life_inv_peche" : {"Peche"};
     case "life_inv_eau" : {"Bouteille d'eau"};
-    case "life_inv_jus_multifruits" : {"Jus Multisfruits"};
+    case "life_inv_Jus_Multifruit" : {"Jus Multisfruits"};
     case "life_inv_wrap" : {"Wrap Poulet"};
     case "life_inv_burger" : {"Big Burger"};
     case "life_inv_soda" : {"Soda Extra Energy Drink"};
@@ -57,7 +57,7 @@ switch (_var) do
     case "life_ressource_bijoux" : {"Bijoux"};
     case "life_ressource_ciment" : {"Ciment"};
     case "life_ressource_essence" : {"Essence"};
-    case "life_ressource_cannabis" : {"Canabis"};
+    case "life_ressource_cannabis" : {"Cannabis"};
     case "life_ressource_coca" : {"Coca"};
     case "life_ressource_opium" : {"Opium"};
     case "life_ressource_cocaine" : {"Cocaine"};

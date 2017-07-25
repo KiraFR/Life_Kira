@@ -150,7 +150,7 @@ if(count (handGunItems player) > 0) then
     ["life_inv_orange",life_inv_orange],
     ["life_inv_peche",life_inv_peche],
     ["life_inv_eau",life_inv_eau],
-    ["life_inv_jus_multifruits",life_inv_jus_multifruits],
+    ["life_inv_Jus_Multifruit",life_inv_Jus_Multifruit],
     ["life_inv_wrap",life_inv_wrap],
     ["life_inv_burger",life_inv_burger],
     ["life_inv_soda",life_inv_soda],
