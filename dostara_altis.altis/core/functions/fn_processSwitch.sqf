@@ -19,7 +19,7 @@ _return = switch(_con) do {
                                                                                         ["Saupe",1],["Maquereau",1],["Sel",1]]
                                                                                     ],
                                                                                     [
-                                                                                        [["thon",1],["Sel",2]],
+                                                                                        [["Thon",1],["Sel",2]],
                                                                                         [["Roussette",1],["Sel",2]]
                                                                                     ],
                                                                                     [
