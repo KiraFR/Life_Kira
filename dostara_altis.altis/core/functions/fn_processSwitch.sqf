@@ -8,6 +8,7 @@ private ["_con","_return"];
 _con = param[0,"",[""]];
 _return = switch(_con) do {
 //  Case    Traitement Name             ressource Name ,             Count       [[Required,Count],[R...,C...]...]
+    case    "Jus_Multifruit":           {["Jus_Multifruit",       1,          [[["Orange",1],["Peche",1]]]]};
     case    "Jus_de_pommes":            {["Jus_de_pommes",          1,          [[["Pommes",2]]]]};
     case    "Jus_de_raisin":            {["Jus_de_raisin",          1,          [[["Raisin",2]]]]};
     case    "Cidre":                    {["Cidre",                  1,          [[["Jus_de_pommes",1],["Verre",1]]]]};
