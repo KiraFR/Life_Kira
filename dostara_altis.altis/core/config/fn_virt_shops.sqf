@@ -26,6 +26,6 @@ switch (_shop) do
     case "Dealer" : {["Dealer",["Cannabis","Coca","Opium","Cocaine","Heroine","Shit","Meth","Speed_Ball"]]};
     case "Pharmaceutique" : {["Pharmaceutique",["Pharmaceutique"]]};
     case "Contrebandier" : {["Contrebandier",["Tortue"]]};
-    case "Boissons": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multifruit","Soda_Extra_Energy_Drink"]]};
+    case "Boissons": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multifruit"]]};
 	case "Frigo": {["Frigidaire a nourriture",["Wrap_Poulet","Big_Burger"]]};
 };
