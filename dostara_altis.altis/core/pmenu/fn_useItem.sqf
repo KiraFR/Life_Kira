@@ -145,19 +145,6 @@ switch (true) do
 			};
 	};
 
-	case (_item == "Pioche"):
-	{
-		[] spawn life_fnc_pickAxeUse;
-	};
-	case (_item == "Pelle"):
-	{
-		[] spawn life_ShovelUse;
-	};
-	case (_item == "Seau"):
-	{
-		[] spawn life_fnc_BucketUse;
-	};
-
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";
