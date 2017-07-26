@@ -3,37 +3,33 @@
 	Auteur: J. `Kira` D.
 
 	Description:
-	flemme
+	1. Epargne
+	2. Courant
+	3. Offshore
+	4. Entreprise
+	5. Organisme
 
 	PARAMETRES:
 	1. SCALAR(type)
 		0. Depot
 		1. Retrait
 		2. virement
-		3. achat
 	RETURNS:
 	1. SCALAR(%)
 
 	CALL:
 	[SCALAR] call life_fnc_taxes
 */
-private["_dftfound"];
-_type = param[0,0,[0]];
-_ret = 1;
-switch (_type) do {
+private["_ret","_typeSender","_typeDest","_first"];
+_typeC = param[0,0,[0]];
+switch (_typeC) do {
 	case 0 : {
 		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
 			_type = [(_x select 1)] call life_fnc_typeCompte;
 			if(_dft)exitWith{
-				/*
-					1. Epargne
-					2. Courant
-					3. Offshore
-					4. Entreprise
-					5. Organisme
-				*/
+				// Pour les types, voir description
 				_ret = switch (_type) do {
 					case 1 : {50}; //50€ et non 5000%
 					case 2 : {0};
@@ -42,22 +38,23 @@ switch (_type) do {
 					default {0};
 				};
 			};
+			_ret = switch (_type) do {
+				case 1 : {50}; //50€ et non 5000%
+				case 2 : {0};
+				case 3 : {0.05};
+				case 4 : {0.02};
+				default {0};
+			};
 		}foreach _ac;
 	}; 
 	case 1 : {		
 		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
-			_first = _x select 4;
+				_first = [(_x select 4)] call life_fnc_bool;
 			_type = [(_x select 1)] call life_fnc_typeCompte;
 			if(_dft)exitWith{
-				/*
-					1. Epargne
-					2. Courant
-					3. Offshore
-					4. Entreprise
-					5. Organisme
-				*/
+				// Pour les types, voir description
 				_ret = switch (_type) do {
 					case 2 : {if(_first)then{1}else{0.05};};
 					case 3 : {0.1};
@@ -65,32 +62,39 @@ switch (_type) do {
 					default {0};
 				};
 			};
+			_ret = switch (_type) do {
+				case 2 : {if(_first)then{1}else{0.05};};
+				case 3 : {0.1};
+				case 4 : {0.02};
+				default {0};
+			};
 		}foreach _ac;
 	}; 
 	case 2 : {
 		_dest = param[1,"",[""]];
-		_type = [_dest] call life_fnc_typeCompte;
+		_sender = param[2,"",[""]];
 		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
-			_dft = _x select 3;
-			_first = _x select 4;
-			_type = [(_x select 1)] call life_fnc_typeCompte;
-			if(_dft)exitWith{
-				/*
-					1. Epargne
-					2. Courant
-					3. Offshore
-					4. Entreprise
-					5. Organisme
-				*/
-				_ret = switch (_type) do {
+			if(_sender == (_x select 1)) exitWith{
+
+				// Pour les types, voir description
+				_typeSender = [_sender] call life_fnc_typeCompte;
+				_typeDest = [_dest] call life_fnc_typeCompte;
+				_first = [(_x select 4)] call life_fnc_bool;
+				_ret = switch (_typeSender) do {
 					case 1 : {0}; //impossible
-					case 2 : {if(_first)then{0.05}else{0.1}};
+					case 2 : {
+						if(_first)then{
+							0.05
+						}else{
+							0.1
+						};
+					};
 					case 3 : {
 						if(_first)then{
-							if(_type == 3)then{0.05}else{0.15};
+							if(_typeDest isEqualTo _typeSender)then{0.05}else{0.15};
 						}else{
-							if(_type == 3)then{0.1}else{0.2};
+							if(_typeDest isEqualTo _typeSender)then{0.1}else{0.2};
 						};
 					};
 					case 4 : {0.05};
@@ -98,9 +102,7 @@ switch (_type) do {
 				};
 			};
 		}foreach _ac;
-	}; 
-	case 3 : {}; 
-	default {_ret = 1;}; 
+	};
+	default {_ret = 0;}; 
 };
-
 _ret;

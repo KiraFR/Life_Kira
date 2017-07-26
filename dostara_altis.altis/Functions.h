@@ -231,6 +231,8 @@ class Life_Client_Core
 		class plafond {};
 		class initBourse_client {};
 		class bourseUpdate {};
+		class taxes {};
+		class typeCompte {};
 	};
 
 	class Network
