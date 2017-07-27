@@ -23,10 +23,10 @@ _array = param[0,[],[[]]];
 _array params [
 	["_courant",[],[[]]],
 	["_entreprise",[],[[]]],
-	["_offshore",[],[[]]]
+	["_offshore",[],[[]]],
+	["_organisme",[],[[]]]
 ];
 _cpt = 0;
-//_orga = _array param[3,[],[[]]];
 if(count _courant > 0) then{
 	_accCourant = missionNamespace getVariable ["AccountBanque",[]];
 	_nb = missionNameSpace getVariable ["life_AccN",0];
@@ -64,5 +64,8 @@ if(count _entreprise > 0) then{
 	missionNamespace setVariable ["AccountBanque",_accCourant];
 	missionNameSpace setVariable ["life_EnterAcc",true];
 };
-//if(count _offshore > 0) then{missionNamespace setVariable ["AccountBanqueOrga",_orga];missionNameSpace setVariable ["life_OrgaAcc",true];};
+if(count _organisme > 0) then{
+	missionNamespace setVariable ["AccountBanqueOrga",_orga];
+	missionNameSpace setVariable ["life_OrgaAcc",true];
+};
 missionNameSpace setVariable ["life_nbAcc",_cpt];
