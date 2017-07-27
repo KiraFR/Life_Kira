@@ -29,7 +29,7 @@ diag_log format["2 - %1",_this];
 [_amount,_numAccSender,_taxes,false] remoteExecCall ["KIRA_fnc_saveMoney",_player];
 private _unit = [_queryResult] call KIRA_fnc_isConnected;
 if(isNull _unit) exitWith {
-	_query = format["UPDATE banque SET bankacc=bankacc+%1 WHERE numero=%2",_amount,_numAcc];
+	_query = format["UPDATE banque SET bankacc=bankacc+%1 WHERE numcompte='%2'",_amount,_numAcc];
 	[_query,1] call DB_fnc_asyncCall;
 };
 diag_log format["3 - %1",_this];

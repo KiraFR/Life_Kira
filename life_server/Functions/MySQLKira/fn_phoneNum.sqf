@@ -47,6 +47,6 @@ while {(_allnumber find [_fiveNumber]) != -1} do {
 		default { _fiveNumber = _fiveNumber joinString "";};
 	};
 };
-_query = format["INSERT INTO phonenumber(pid_owner,numero,active) VALUES(%1,%2,'1');",getPlayerUID _player,format["%1%2",_prefixe,_fiveNumber]];
+_query = format["INSERT INTO phonenumber(pid_owner,numero,active) VALUES(%1,'%2','1');",getPlayerUID _player,format["%1%2",_prefixe,_fiveNumber]];
 [_query,1] call DB_fnc_asyncCall;
 _player setVariable ["phonenumber",format["%1%2",_prefixe,_fiveNumber],true];

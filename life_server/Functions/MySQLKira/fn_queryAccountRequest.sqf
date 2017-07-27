@@ -31,5 +31,11 @@ _accOffShore = format["SELECT nam_account,numcompte,bankacc,dflt,first FROM banq
 _accResultOff = [_accOffShore,2,true] call DB_fnc_asyncCall;
 _total pushBack _accResultOff;
 _cpt = _cpt + count _accResultOff;
+
+_accOrga = format["SELECT nam_account,numcompte,bankacc,dflt,first FROM banque WHERE playerid='%1' AND organisme='1';",_uid];
+_AccResultOrga = [_accOrga,2,true] call DB_fnc_asyncCall;
+_total pushBack _AccResultOrga;
+_cpt = _cpt + count _AccResultOrga;
+
 _ret = [_total,_cpt];
 _ret;
