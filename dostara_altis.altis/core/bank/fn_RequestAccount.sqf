@@ -6,7 +6,7 @@
 	Description:
 	créer un numéro et l'envoi au serveur
 */
-private["_num","_name","_client","_Bank","_PriceB","_first"];
+private["_num","_name","_client","_Bank","_PriceB","_first","_life_Accn"];
 params ["_type"];
 _uid = getPlayerUID player;
 
@@ -20,9 +20,11 @@ switch (_type) do {
 	//offshore
 	case 1: {
 		_name = ctrlText 11007;
-		_PriceB = (life_AccOffshore)*(100000*3);
+		_life_AccOffshore = missionNameSpace setVariable ["life_AccOffshore",_nb];
+		_PriceB = (_life_AccOffshore)*(100000*3);
 		_first = false;
-		if(_PriceB == 0)then{_PriceB = 100000;_first = true;};
+		if(_PriceB == 0)then{_PriceB = 100000;};
+		if(_life_AccOffshore == 0)then{_first = true;};
 		if(CASH < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		CASH = CASH - _PriceB;
 		_type = 1;
@@ -33,7 +35,6 @@ switch (_type) do {
 			_guid select 10,_guid select 11,_guid select 12,_guid select 13];
 		_num = "OS" + _guid + format["%1",life_nbAcc+1];
 
-        _life_AccOffshore = missionNameSpace getVariable ["life_AccOffshore",0];
 		_life_AccOffshore = _life_AccOffshore + 1;
 		missionNameSpace setVariable ["life_AccOffshore",_life_AccOffshore];
 
@@ -53,7 +54,8 @@ switch (_type) do {
 		_life_Accn = missionNameSpace getVariable ["life_AccN",0];
 		_PriceB = (20*25)*(_life_Accn);
 		_first = false;
-		if(_PriceB == 0)then{_PriceB = 25;_first = true;};
+		if(_PriceB == 0)then{_PriceB = 25;};
+		if(_life_Accn == 0)then{_first = true;};
 		if(CASH < _PriceB) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		CASH = CASH - _PriceB;
 
@@ -80,7 +82,8 @@ switch (_type) do {
 
 	//entreprise
 	case 3: {
-		if(life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
+		_life_EnterAcc = missionNameSpace getVariable ["life_EnterAcc",false];
+		if(_life_EnterAcc)exitWith{hint "Votre entreprise a deja un compte."};
 		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		CASH = CASH - 10000;
@@ -100,12 +103,11 @@ switch (_type) do {
 		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
-		life_EnterAcc = true;
+		missionNameSpace setVariable ["life_EnterAcc",true];
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 	//Epargne
 	case 4: {
-		if(life_EparAcc)exitWith{hint "Votre entreprise a deja un compte."};
 		_type = 4;
 		_guid = (getPlayerUID Player) splitString "";
 		_guid = format["%1%2%3%4%5%6%7",
@@ -120,12 +122,12 @@ switch (_type) do {
 		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
-		life_EparAcc = true;
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 	//Orga
 	case 5: {
-		if(life_OrgaAcc)exitWith{hint "Votre entreprise a deja un compte."};
+		_life_OrgaAcc = missionNameSpace getVariable ["life_OrgaAcc",false];
+		if(_life_OrgaAcc)exitWith{hint "Votre entreprise a deja un compte."};
 		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		if(CASH < 10000) exitWith{hint "Vous n'avez pas assez d'argent pour creer votre premier compte en banque";};
 		_type = 5;
@@ -143,7 +145,7 @@ switch (_type) do {
 		_Bank call life_fnc_BankUpdate;
 
 		[] call life_fnc_hudUpdate;
-		life_OrgaAcc = true;
+		missionNameSpace getVariable ["life_OrgaAcc",true];
 		[_uid,_num,_name,_type] remoteExecCall ["BQKS_fnc_CreateAccount",RSERV];
 	};
 };

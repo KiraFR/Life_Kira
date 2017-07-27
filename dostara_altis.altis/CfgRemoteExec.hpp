@@ -65,6 +65,7 @@ class CfgRemoteExec {
 		F(life_fnc_play3D,CLIENT)
 		F(KIRA_fnc_receiveTestament,CLIENT)
 		F(KIRA_fnc_saveMoney,CLIENT)
+		F(KIRA_fnc_rembourser,CLIENT)
 
 		F(TON_fnc_managesc,SERVER)
 		F(TON_fnc_updateHouseContainers,SERVER)

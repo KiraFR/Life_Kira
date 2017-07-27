@@ -26,6 +26,8 @@ if(_action) then {
 		];
 	};
 	BANK = BANK - _upgradePrice;
+	call life_fnc_refreshAC;
+	call SOCK_fnc_updateBanque;
 	grpPlayer setVariable["gang_maxMembers",_slotUpgrade,true];
 	hint parseText format[localize "STR_GNOTF_UpgradeSuccess",_maxMembers,_slotUpgrade,[_upgradePrice] call life_fnc_numberText];
 	[2,grpPlayer] RemoteExecCall ["TON_fnc_updateGang",2];

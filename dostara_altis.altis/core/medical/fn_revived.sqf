@@ -26,7 +26,8 @@ if(BANK > (call life_revive_fee)) then {
 } else {
 	BANK = 0;
 };
-
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;
 //Retexturing of units clothing, vanilla files only retexture the EMS unit.
 switch(playerSide) do {
 	case independent: {[player,0,"textures\medic_uniform.jpg"] RemoteExecCall ["life_fnc_setTexture",0];};

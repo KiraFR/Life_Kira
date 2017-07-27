@@ -32,5 +32,7 @@ if(_funds >= BANK && !life_has_insurance) then
 	{
 		hint format["Due to the recent robbery on the Federal Reserve you have lost $%1 from your bank account, next time buy some banking insurance!\n\nYou can buy banking insurance from a ATM!",[_funds] call life_fnc_numberText];
 		BANK = BANK - _funds;
+		call life_fnc_refreshAC;
+	call SOCK_fnc_updateBanque;
 	};
 };

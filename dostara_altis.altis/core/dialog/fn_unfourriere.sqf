@@ -35,4 +35,5 @@ if(typeName life_fourriere_sp == "ARRAY") then {
 hint localize "STR_Garage_SpawningVeh";
 
 BANK = BANK - _price;
-[1] call SOCK_fnc_updatePartial;
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;

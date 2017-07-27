@@ -233,6 +233,7 @@ class Life_Client_Core
 		class bourseUpdate {};
 		class taxes {};
 		class typeCompte {};
+		class refreshAC {};
 	};
 
 	class Network
@@ -387,7 +388,6 @@ class Life_Client_Core
 		class sellGarage {};
 		class bankDeposit {};
 		class bankWithdraw {};
-		class bankTransfer {};
 		class garageLBChange {};
 		class safeInventory {};
 		class safeOpen {};

@@ -17,6 +17,8 @@ if(CASH < life_ticket_val) exitWith
 	};
 	hint format[localize "STR_Cop_Ticket_Paid",[life_ticket_val] call life_fnc_numberText];
 	BANK = BANK - life_ticket_val;
+	call life_fnc_refreshAC;
+	call SOCK_fnc_updateBanque;
 	life_ticket_paid = true;
 	[0,"STR_Cop_Ticket_PaidNOTF",true,[profileName,[life_ticket_val] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",west];
 	[1,"STR_Cop_Ticket_PaidNOTF_2",true,[profileName]] RemoteExec ["life_fnc_broadcast",life_ticket_cop];

@@ -69,7 +69,7 @@ _value = 0;
 
 if(_value > 0) then {
 	[0,"STR_House_Raid_Successful",true,[[_value] call life_fnc_numberText]] RemoteExec ["life_fnc_broadcast",0];
-	if (life_nbAcc == 0)then { CASH = CASH + _value } else { BANK = BANK + _value };
+	//if (life_nbAcc == 0)then { CASH = CASH + _value } else { BANK = BANK + _value };
 	_house setVariable["Trunk",[_houseInvData,_houseInvVal],true];
 	[_house],RemoteExecCall ["TON_fnc_updateHouseTrunk",2];
 } else {

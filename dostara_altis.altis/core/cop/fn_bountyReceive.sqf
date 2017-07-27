@@ -20,3 +20,5 @@ if(_val == _total) then
 };
 
 BANK = BANK + _val;
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;

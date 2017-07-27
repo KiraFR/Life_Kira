@@ -14,5 +14,6 @@ if(BANK < (__GETC__(life_gangPrice))) exitWith {
 };
 
 BANK = BANK - (__GETC__(life_gangPrice));
-
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;
 hint format[localize "STR_GNOTF_CreateSuccess",(group player) getVariable "gang_name",[(__GETC__(life_gangPrice))] call life_fnc_numberText];

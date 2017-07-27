@@ -14,6 +14,8 @@ if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_no
 if(_value > BANK) exitWith {hint localize "STR_NOTF_NotEnoughFunds"};
 
 BANK = BANK - _value;
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;
 _gFund = grpPlayer getVariable ["gang_bank",0];
 _gFund = _gFund + _value;
 grpPlayer setVariable ["gang_bank",_gFund,true];

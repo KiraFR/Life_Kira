@@ -22,7 +22,6 @@ switch (_var) do
     case "life_inv_burger" : {"Big Burger"};
     case "life_inv_soda" : {"Soda Extra Energy Drink"};
     case "life_inv_seau" : {"Seau"};
-    case "life_inv_hache" : {"Hache"};
     case "life_inv_pelle" : {"Pelle"};
     case "life_inv_pioche" : {"Pioche"};
     case "life_ressource_pommes" : {"Pommes"};

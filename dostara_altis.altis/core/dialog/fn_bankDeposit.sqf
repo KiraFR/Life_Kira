@@ -6,7 +6,7 @@
 	Description:
 	Figure it out.
 */
-private["_value","_dftfound","_plafond","_taxe","_taxes"];
+private["_value","_dftfound","_plafond","_taxe","_taxes","_ac"];
 _value = parseNumber(ctrlText 2702);
 
 //Series of stupid checks
@@ -17,10 +17,9 @@ if(_value > CASH) exitWith {hint localize "STR_ATM_NotEnoughCash"};
 
 _ac = missionNamespace getVariable ["accountBanque",[]];
 {
-	_tab = _x;
 	_dft = _x select 3;
-	_first = _x select 4;
-	_type = [(_x select 1)] call life_fnc_typeCompte;
+
+	
 	if(_dft)exitWith{
 		/*
 			1. Epargne
@@ -29,6 +28,8 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 			4. Entreprise
 			5. Organisme
 		*/
+		_first = [(_x select 4)] call life_fnc_bool;
+		_type = [(_x select 1)] call life_fnc_typeCompte;
 		switch (_type) do {
 			case 1 : {
 				_plafond = [0] call life_fnc_plafond;
@@ -62,6 +63,7 @@ if(_taxe == 50)then{
 
 CASH = CASH - _value;
 BANK = BANK + _value;
+call life_fnc_refreshAC;
 hint format["Vous venez de deposer %1 dostar, %2 dostar de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 [] call SOCK_fnc_updateBanque;
 [] call life_fnc_atmMenu;

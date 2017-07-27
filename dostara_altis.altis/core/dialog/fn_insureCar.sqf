@@ -31,5 +31,7 @@ _vehicleInfo = [_vehicleLife] call life_fnc_fetchVehInfo;
 
 hint localize "STR_InsuranceApply";
 BANK = BANK - _insurancePrice;
+call life_fnc_refreshAC;
+call SOCK_fnc_updateBanque;
 life_action_delay = time;
 closeDialog 0;

@@ -10,14 +10,15 @@ if(_val > BANK) exitWith {hint localize "STR_ATM_NotEnoughFunds"};
 if(_val < 100 && BANK > 20000000) exitWith {hint localize "STR_ATM_WithdrawMin"}; //Temp fix for something.
 _taxe = 0;
 
-/*
+
 _taxe = [1] call life_fnc_taxes;
 _taxes = _val * _taxe;
 _val = _val - _taxes;
-*/
+
 
 CASH = CASH + _val;
 BANK = BANK - _val;
+call life_fnc_refreshAC;
 
 hint format ["Vous venez de retirer %1 dostar, %2 dostar de taxe ont été retiré.",[_val] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 [] call life_fnc_atmMenu;

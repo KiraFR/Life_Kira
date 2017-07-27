@@ -44,6 +44,6 @@ if (life_pPermis <= 0) then {
 	life_pPermis = 0;
 	[10] call SOCK_fnc_updatePartial;
 };
-BANK = BANK - (life_amende *_nbrPoint);
+CASH = CASH - (life_amende *_nbrPoint);
 [] call life_fnc_hudUpdate;
 [9] call SOCK_fnc_updatePartial;

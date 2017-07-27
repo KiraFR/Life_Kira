@@ -21,9 +21,8 @@
 */
 private["_ret"];
 _num = param[0,"",[""]];
-
 _numArray = _num splitString "";
-_type = format["%1%2",_numArray select 0,_numArray select 1];
+_type = [_numArray select 0,_numArray select 1] joinString "";
 switch (_type) do { 
 	case "OS": {_ret = 3;}; //offshore
 	case "RD" : {_ret = 2;}; //courant
@@ -31,5 +30,4 @@ switch (_type) do {
 	case "ED" : {_ret = 4;}; //Enteprise
 	case "OD" : {_ret = 5;}; //Organisme
 };
-
 _ret;

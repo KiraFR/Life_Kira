@@ -2,21 +2,11 @@
 /*
 	File: fn_updateBanque.sqf
 	Author: R. `KronosD` R.
+	Edited by : J. `Kira` D.
 */
 
-private["_Info","_PlayerUID","_tab","_save","_num"];
-
-_PlayerUID = getPlayerUID player;
+private["_Info","_tab","_save","_num"];
+diag_log "fn_updateBanque 1";
 _Info = missionNamespace getVariable ["AccountBanque",[]];
-{
-	_tab = _x;
-	_dft = _x select 3;
-	if(_dft)exitWith{
-	    _tab set [2,BANK];
-		_num = _x select 1;
-		_save = BANK;
-
-	};
-}forEach _Info;
-missionNamespace setVariable ["AccountBanque",_Info];
-[_num,_save] remoteExecCall ["DB_fnc_SyncAccountDB",2];
+diag_log format["fn_updateBanque 2 : %1",_Info];
+[_Info] remoteExecCall ["DB_fnc_SyncAccountDB",2];

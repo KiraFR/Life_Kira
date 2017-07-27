@@ -62,6 +62,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		hint format[localize "STR_NOTF_Impounded",_type,_price];
 		[0,"STR_NOTF_HasImpounded",true,[profileName,(_vehicleData select 0) select 1,_vehicleName]] RemoteExec ["life_fnc_broadcast",0];
 		BANK = BANK + _price;
+		call life_fnc_refreshAC;
 	}
 		else
 	{

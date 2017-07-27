@@ -35,6 +35,8 @@ if(_action) then {
 	_house setVariable["containers",[],true];
 	_house setVariable["uid",round(random 99999),true];
 	BANK = BANK - (_houseCfg select 0);
+	call life_fnc_refreshAC;
+	call SOCK_fnc_updateBanque;
 	life_vehicles pushBack _house;
 	life_houses pushBack [str(getPosATL _house),[]];
 	_marker = createMarkerLocal [format["house_%1",(_house getVariable "uid")],getPosATL _house];

@@ -270,7 +270,6 @@ sell_array =
     ["Wrap_Poulet",10],
     ["Big_Burger",15],
     ["Soda_Extra_Energy_Drink",50],
-    ["Hache",45],
     ["Seau",45],
     ["Pelle",45],
     ["Pioche",55],

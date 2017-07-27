@@ -22,6 +22,7 @@
 */
 private["_ret","_typeSender","_typeDest","_first"];
 _typeC = param[0,0,[0]];
+_ret = 0;
 switch (_typeC) do {
 	case 0 : {
 		_ac = missionNamespace getVariable ["AccountBanque",[]];
@@ -51,7 +52,7 @@ switch (_typeC) do {
 		_ac = missionNamespace getVariable ["AccountBanque",[]];
 		{
 			_dft = _x select 3;
-				_first = [(_x select 4)] call life_fnc_bool;
+			_first = [(_x select 4)] call life_fnc_bool;
 			_type = [(_x select 1)] call life_fnc_typeCompte;
 			if(_dft)exitWith{
 				// Pour les types, voir description
@@ -81,6 +82,7 @@ switch (_typeC) do {
 				_typeSender = [_sender] call life_fnc_typeCompte;
 				_typeDest = [_dest] call life_fnc_typeCompte;
 				_first = [(_x select 4)] call life_fnc_bool;
+				diag_log str(_first);
 				_ret = switch (_typeSender) do {
 					case 1 : {0}; //impossible
 					case 2 : {
