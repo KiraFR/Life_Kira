@@ -8,10 +8,8 @@
 private ["_itemArray","_handle"];
 _itemArray = life_gear;
 waitUntil {!(isNull (findDisplay 46))};
-diag_log '1';
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
-diag_log '2';
 if (count _itemArray isEqualTo 0) exitWith {
     switch (playerSide) do {
         case west: {
@@ -49,12 +47,17 @@ _itemArray params [
 ];
 
 if (!(_goggles isEqualTo "")) then {_handle = [_goggles,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+diag_log format["%1",_goggles];
 if (!(_headgear isEqualTo "")) then {_handle = [_headgear,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+diag_log format["%1",_headgear];
 if (!(_uniform isEqualTo "")) then {_handle = [_uniform,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+diag_log format["%1",_uniform];
 if (!(_vest isEqualTo "")) then {_handle = [_vest,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+diag_log format["%1",_vest];
 if (!(_backpack isEqualTo "")) then {_handle = [_backpack,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
+diag_log format["%1",_backpack];
 
-{_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} forEach _items;
+{diag_log format["%1",_x]; _handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} forEach _items;
 
 {player addItemToUniform _x;} forEach (_uItems);
 {(uniformContainer player) addItemCargoGlobal [_x,1];} forEach (_uMags);
