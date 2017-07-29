@@ -8,10 +8,10 @@
 private ["_itemArray","_handle"];
 _itemArray = life_gear;
 waitUntil {!(isNull (findDisplay 46))};
-
+diag_log '1';
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
-
+diag_log '2';
 if (count _itemArray isEqualTo 0) exitWith {
     switch (playerSide) do {
         case west: {
