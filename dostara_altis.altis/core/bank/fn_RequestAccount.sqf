@@ -67,7 +67,7 @@ switch (_type) do {
 		_guid = format["%1%2%3%4",_guid select 10,_guid select 11,_guid select 12,_guid select 13];
 		_num = "RD" + _client +_guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien était cree";
+		hint "Votre compte a bien été créé";
 
 		_Bank = [_name,_num,0,false,_first];
 		_Bank call life_fnc_BankUpdate;
@@ -97,7 +97,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "ED" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien était creer";
+		hint "Votre compte a bien été créé";
 
 		_Bank = [_name,_num,0,false,false];
 		_Bank call life_fnc_BankUpdate;
@@ -116,7 +116,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "EP" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien était creer";
+		hint "Votre compte a bien été créé";
 
 		_Bank = [_name,_num,0,false,false];
 		_Bank call life_fnc_BankUpdate;
@@ -139,7 +139,7 @@ switch (_type) do {
 			_guid select 7];
 		_num = "OD" + _guid + format["%1",life_nbAcc+1];
 
-		hint "Votre compte a bien était creer";
+		hint "Votre compte a bien été créé";
 
 		_Bank = [_name,_num,0,false,false];
 		_Bank call life_fnc_BankUpdate;
