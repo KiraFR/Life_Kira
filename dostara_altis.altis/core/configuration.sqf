@@ -242,7 +242,6 @@ life_licenses =
     ["license_civ_acier","civ"],
     ["license_civ_pprecieuse","civ"],
     ["license_civ_fonderie","civ"],
-    ["license_civ_fonderieExp","civ"],
     ["license_civ_chaux","civ"],
     ["license_civ_presseur","civ"],
     ["license_civ_fermenta","civ"],
