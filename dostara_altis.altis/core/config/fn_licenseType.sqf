@@ -40,29 +40,29 @@ switch (_mode) do
 			case "cement": {_var = "license_civ_cement"};
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
-			case "gouvernement": {_var = "licence_civ_gouv"};
-			case "eboueur": {_var = "licence_civ_ebou"};
-			case "opium": {_var = "licence_civ_opium"};
-			case "vin": {_var = "licence_civ_vin"};
+			case "gouvernement": {_var = "license_civ_gouv"};
+			case "eboueur": {_var = "license_civ_ebou"};
+			case "opium": {_var = "license_civ_opium"};
+			case "vin": {_var = "license_civ_vin"};
 
 
-			case "ASG": {_var = "licence_civ_ASG"};
-            case "AMC": {_var = "licence_civ_AMC"};
-            case "AMG": {_var = "licence_civ_AMG"};
-            case "ASP": {_var = "licence_civ_ASP"};
+			case "ASG": {_var = "license_civ_ASG"};
+            case "AMC": {_var = "license_civ_AMC"};
+            case "AMG": {_var = "license_civ_AMG"};
+            case "ASP": {_var = "license_civ_ASP"};
 
 			//New License # KronosD
 
 			case "diamond": {_var = "license_civ_diamond"};
 			case "acier": {_var = "license_civ_acier"};
 			case "pprecieuse": {_var = "license_civ_pprecieuse"};
-			case "fonderie": {_var = "licence_civ_fonderie"};
-			case "fonderieExp": {_var = "licence_civ_fonderieExp"};
-			case "chaux": {_var = "licence_civ_chaux"};
+			case "fonderie": {_var = "license_civ_fonderie"};
+			case "fonderieExp": {_var = "license_civ_fonderieExp"};
+			case "chaux": {_var = "license_civ_chaux"};
 			case "presseur": {_var = "license_civ_presseur"};
-			case "fermenta": {_var = "licence_civ_fermenta"};
-			case "vin": {_var = "licence_civ_vin"};
-			case "fishsoup": {_var = "licence_civ_fishsoup"};
+			case "fermenta": {_var = "license_civ_fermenta"};
+			case "vin": {_var = "license_civ_vin"};
+			case "fishsoup": {_var = "license_civ_fishsoup"};
 
 			default {_var = ""};
 		};
@@ -96,28 +96,28 @@ switch (_mode) do
 			case "license_civ_cement": {_var = "cement"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
-			case "licence_civ_gouv": {_var = "gouvernement"};
-			case "licence_cop_prefet": {_var = "Prefet"};
-			case "licence_civ_ebou": {_var = "eboueur"};
-			case "licence_civ_opium": {_var = "opium"};
+			case "license_civ_gouv": {_var = "gouvernement"};
+			case "license_cop_prefet": {_var = "Prefet"};
+			case "license_civ_ebou": {_var = "eboueur"};
+			case "license_civ_opium": {_var = "opium"};
 
-			case "licence_civ_ASG": {_var = "ASG"};
-			case "licence_civ_AMC": {_var = "AMC"};
-			case "licence_civ_AMG": {_var = "AMG"};
-			case "licence_civ_ASP": {_var = "ASP"};
+			case "license_civ_ASG": {_var = "ASG"};
+			case "license_civ_AMC": {_var = "AMC"};
+			case "license_civ_AMG": {_var = "AMG"};
+			case "license_civ_ASP": {_var = "ASP"};
 
 // New License # KronosD
 
 			case "license_civ_diamond": {_var = "diamond"};
 			case "license_civ_acier": {_var = "acier"};
 			case "license_civ_pprecieuse": {_var = "pprecieuse"};
-			case "licence_civ_fonderie": {_var = "fonderie"};
-			case "licence_civ_fonderieExp": {_var = "fonderieExp"};
-			case "licence_civ_chaux": {_var = "chaux"};
+			case "license_civ_fonderie": {_var = "fonderie"};
+			case "license_civ_fonderieExp": {_var = "fonderieExp"};
+			case "license_civ_chaux": {_var = "chaux"};
 			case "license_civ_presseur": {_var = "presseur"};
-			case "licence_civ_fermenta": {_var = "fermenta"};
-			case "licence_civ_vin": {_var = "vin"};
-			case "licence_civ_fishsoup": {_var = "fishsoup"};
+			case "license_civ_fermenta": {_var = "fermenta"};
+			case "license_civ_vin": {_var = "vin"};
+			case "license_civ_fishsoup": {_var = "fishsoup"};
 
 			default {_var = ""};
 		};

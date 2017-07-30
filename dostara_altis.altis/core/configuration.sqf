@@ -69,6 +69,7 @@ life_amende = 550;
 life_nbrFoisPermis = 0;
 life_waitpermis = false;
 life_maxPoints = 2;
+nbNotif = 0;
 /*
 *****************************
 ****** KronosD Variables *****
@@ -228,25 +229,25 @@ life_licenses =
 	["license_civ_home","civ"],
 	["license_civ_opium","civ"],
 	["license_civ_vin","civ"],
-	["licence_civ_fermenta","civ"],
-	["licence_civ_gouv","civ"],
+	["license_civ_fermenta","civ"],
+	["license_civ_gouv","civ"],
 	["license_civ_ebou","civ"],
 
-	["licence_civ_ASG","civ"],
-	["licence_civ_AMC","civ"],
-	["licence_civ_AMG","civ"],
-	["licence_civ_ASP","civ"],
+	["license_civ_ASG","civ"],
+	["license_civ_AMC","civ"],
+	["license_civ_AMG","civ"],
+	["license_civ_ASP","civ"],
 
 	["license_civ_diamond","civ"],
     ["license_civ_acier","civ"],
     ["license_civ_pprecieuse","civ"],
-    ["licence_civ_fonderie","civ"],
-    ["licence_civ_fonderieExp","civ"],
-    ["licence_civ_chaux","civ"],
+    ["license_civ_fonderie","civ"],
+    ["license_civ_fonderieExp","civ"],
+    ["license_civ_chaux","civ"],
     ["license_civ_presseur","civ"],
-    ["licence_civ_fermenta","civ"],
-    ["licence_civ_vin","civ"],
-    ["licence_civ_fishsoup","civ"]
+    ["license_civ_fermenta","civ"],
+    ["license_civ_vin","civ"],
+    ["license_civ_fishsoup","civ"]
 
 ];
 

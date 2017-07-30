@@ -97,19 +97,19 @@ class FSM
                          "    _paye = 0;" \n
                          "    _argent = 0;" \n
                          "" \n
-                         "	if (licence_civ_ASG) then {" \n
+                         "	if (license_civ_ASG) then {" \n
                          "	    _paye = _paye + 1500;" \n
                          "	};" \n
                          "" \n
-                         "	if (licence_civ_AMC) then {" \n
+                         "	if (license_civ_AMC) then {" \n
                          "	    _paye = _paye + 100;" \n
                          "	};" \n
                          "" \n
-                         "	if (licence_civ_AMG) then {" \n
+                         "	if (license_civ_AMG) then {" \n
                          "        _paye = _paye + 500;" \n
                          "    };" \n
                          "" \n
-                         "	if (licence_civ_ASP) then {" \n
+                         "	if (license_civ_ASP) then {" \n
                          "        _paye = _paye + 2000;" \n
                          "    };" \n
                          "" \n

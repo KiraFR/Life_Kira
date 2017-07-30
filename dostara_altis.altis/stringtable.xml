@@ -3695,7 +3695,7 @@
 	</Package>
 	<Package name="Life_License">
 		<Key ID="STR_License_Driver">
-			<Original>Driver License</Original>
+			<Original>Permis de Conduire</Original>
 			<English>Driver License</English>
 			<German>Führerschein</German>
 			<French>Permis de Conduire</French>
@@ -3703,7 +3703,7 @@
 			<Portuguese>Licença de Motorista</Portuguese>
 		</Key>
 		<Key ID="STR_License_Pilot">
-			<Original>Pilot License</Original>
+			<Original>License de Pilote</Original>
 			<English>Pilot License</English>
 			<German>Pilotenschein</German>
 			<French>License de Pilote</French>
@@ -3719,10 +3719,10 @@
 			<Portuguese>Treinamento de Heroina</Portuguese>
 		</Key>
 		<Key ID="STR_License_Oil">
-			<Original>Oil Processing</Original>
+			<Original>Accès Raffinerie de pétrole</Original>
 			<English>Oil Processing</English>
 			<German>Ölverarbeitung</German>
-			<French>Raffinage de du pétrole</French>
+			<French>Accès Raffinerie de pétrole</French>
 			<Italian>Processo Olio</Italian>
 			<Portuguese>Refinamento de Petróleo</Portuguese>
 		</Key>
@@ -3735,7 +3735,7 @@
 			<Portuguese>Licença de Mergulho</Portuguese>
 		</Key>
 		<Key ID="STR_License_Boat">
-			<Original>Boating License</Original>
+			<Original>Permis Bateau</Original>
 			<English>Boating License</English>
 			<German>Bootsschein</German>
 			<French>Permis Bateau</French>
@@ -3743,7 +3743,7 @@
 			<Portuguese>Licença de Barco</Portuguese>
 		</Key>
 		<Key ID="STR_License_Firearm">
-			<Original>Firearm License</Original>
+			<Original>Permis de Port d'Arme</Original>
 			<English>Firearm License</English>
 			<German>Waffenschein</German>
 			<French>Permis de Port d'Arme</French>
@@ -3766,6 +3766,10 @@
 			<Italian>Licenza Guardia Costiera</Italian>
 			<Portuguese>Licença de Guarda Costeira</Portuguese>
 		</Key>
+		<Key ID="STR_License_Vin">
+			<Original>Vigneron</Original>
+			<French>Vigneron</French>
+		</Key>
 		<Key ID="STR_License_Rebel">
 			<Original>Rebel Training</Original>
 			<English>Rebel Training</English>
@@ -3775,7 +3779,7 @@
 			<Portuguese>Treinamento Rebelde</Portuguese>
 		</Key>
 		<Key ID="STR_License_Truck">
-			<Original>Truck License</Original>
+			<Original>Permis Poids Lourds</Original>
 			<English>Truck License</English>
 			<German>LKW-Führerschein</German>
 			<French>Permis Poids Lourds</French>
@@ -3783,7 +3787,7 @@
 			<Portuguese>Licença de Caminhão</Portuguese>
 		</Key>
 		<Key ID="STR_License_Diamond">
-			<Original>Jewelry Maker</Original>
+			<Original>Conception de Bijoux</Original>
 			<English>Diamond Processing</English>
 			<German>Diamantenverarbeitung</German>
 			<French>Conception de Bijoux</French>
@@ -3846,9 +3850,9 @@
 			<Portuguese>Treinamento de Opium</Portuguese>
 		</Key>
 		<Key ID="STR_License_Cidre">
-			<Original>Fermentation</Original>
+			<Original>Fermenteur (Alcool)</Original>
 			<English>Cidre Training</English>
-			<French>Fermentation d'alcool</French>
+			<French>Fermenteur (Alcool)</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
@@ -3860,9 +3864,9 @@
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
 		<Key ID="STR_License_Acier">
-			<Original>Steel formation</Original>
+			<Original>Ferronnier (Acier)</Original>
 			<English>Steel Formation</English>
-			<French>Licence Acier</French>
+			<French>Ferronnier (Acier)</French>
 			<Italian>Processo Cidre</Italian>
 			<Portuguese>Treinamento de Cidre</Portuguese>
 		</Key>
@@ -3876,14 +3880,14 @@
 		<Key ID="STR_License_Fonderie">
 			<Original>Fonte Training</Original>
 			<English>Vin Training</English>
-			<French>Fondeur de pere en Fils</French>
+			<French>Fondeur</French>
 			<Italian>Processo Vin</Italian>
 			<Portuguese>Treinamento de Vin</Portuguese>
 		</Key>
 		<Key ID="STR_License_FonderieExp">
 			<Original>Fonte Training</Original>
 			<English>Vin Training</English>
-			<French>Fondeur de pere en Fils ++ </French>
+			<French>Fondeur experimenté</French>
 			<Italian>Processo Vin</Italian>
 			<Portuguese>Treinamento de Vin</Portuguese>
 		</Key>
@@ -3909,7 +3913,7 @@
 			<Portuguese>Eboueur</Portuguese>
 		</Key>
 		<Key ID="STR_License_Cement">
-			<Original>Cement Mixing License</Original>
+			<Original>Fabrication du Ciment</Original>
 			<English>Cement Mixing License</English>
 			<German>Zementmisch-Lizenz</German>
 			<French>Fabrication du Ciment</French>
@@ -3917,7 +3921,7 @@
 			<Portuguese>Licença de Cimento</Portuguese>
 		</Key>
 		<Key ID="STR_License_Home">
-			<Original>Home Owners License</Original>
+			<Original>Droit de Propriété</Original>
 			<English>Home Owners License</English>
 			<German>Eigentumsurkunde</German>
 			<French>Droit de Propriété</French>

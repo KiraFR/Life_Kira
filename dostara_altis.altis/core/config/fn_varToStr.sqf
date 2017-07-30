@@ -106,20 +106,20 @@ switch (_var) do
 	case "license_med_air": {(localize "STR_License_Pilot")};
 	case "license_civ_home": {(localize "STR_License_Home")};
 	case "license_civ_opium": {(localize "STR_License_Opium")};
-	case "licence_civ_gouv": {(localize "STR_License_Gouv")};
-	case "licence_cop_Prefet": {(localize "STR_License_Prefet")};
-    case "licence_civ_ebou": {(localize "STR_License_Ebou")};
-	case "licence_civ_vin": {(localize "STR_License_Vin")};
+	case "license_civ_gouv": {(localize "STR_License_Gouv")};
+	case "license_cop_Prefet": {(localize "STR_License_Prefet")};
+    case "license_civ_ebou": {(localize "STR_License_Ebou")};
+	case "license_civ_vin": {(localize "STR_License_Vin")};
 
 	//New License
 
 	case "license_civ_acier": {(localize "STR_License_Acier")};
-	case "license_civ_pprecieuse": {"Taille de pierre precieuse"};
+	case "license_civ_pprecieuse": {"Tailleur de pierre precieuse"};
 	case "license_civ_diamond": {(localize "STR_License_Diamond")}; // Bijoux
-	case "licence_civ_fonderie": {(localize "STR_License_Fonderie")};
-	case "licence_civ_fonderieExp": {(localize "STR_License_FonderieExp")};
-	case "licence_civ_chaux": {(localize "STR_License_Usine")};
+	case "license_civ_fonderie": {(localize "STR_License_Fonderie")};
+	case "license_civ_fonderieExp": {(localize "STR_License_FonderieExp")};
+	case "license_civ_chaux": {(localize "STR_License_Usine")};
 	case "license_civ_presseur": {"Justificatif Pressoir"};
-	case "licence_civ_fermenta": {(localize "STR_License_Cidre")};
-	case "licence_civ_fishsoup": {"Licence Soupe de poisson"};
+	case "license_civ_fermenta": {(localize "STR_License_Cidre")};
+	case "license_civ_fishsoup": {"Cuisinier en poissonnerie"};
 };

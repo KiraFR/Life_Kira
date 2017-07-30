@@ -57,5 +57,5 @@ switch (_type) do
 	case "presseur": {230};
 	case "fishsoup": {500};
 	case "Acier": {2300};
-
+	case "fermenta": {2000};
 };

@@ -34,7 +34,7 @@ CONSTANT(life_donator,0);
 //Loop through licenses
 if(count (_this select 5) > 0) then {
 	{missionNamespace setVariable [(_x select 0),(_x select 1)];} forEach (_this select 5);
-	_licence = [licence_civ_gouv ,license_civ_ebou];
+	_licence = [license_civ_gouv ,license_civ_ebou];
 	{if(_x) exitWith {life_paycheck = 0;};} forEach _licence;
 };
 
