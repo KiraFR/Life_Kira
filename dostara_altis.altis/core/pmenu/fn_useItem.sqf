@@ -55,28 +55,28 @@ switch (true) do
 				player enableFatigue true;
 			};
 		};
-		if (([true,_item,1]call life_fnc_handleInv)) then
-		{
-			life_thirst = 100;
-			player setFatigue 1;
-			[] spawn
-			{
-				life_redgull_effect = time;
-				titleText[localize "STR_ISTR_RedGullEffectFucked","PLAIN"];
-				"redgullblur" ppEffectEnable true;
-				"redgullblur" ppEffectCommit 5;
-				enableCamShake true;
-				"redgullblur" ppEffectAdjust [1,0.4,0,[0,0,0,0],[1,1,1,0],[1,1,1,1]];
-				addCamShake [5, 5, 25];
-				5 fadeSound 0.6;
-				waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
-				player enableFatigue true;
-				"dynamicBlur" ppEffectEnable false; // disable ppeffect
-				"dynamicBlur" ppEffectAdjust [0]; // enables normal vision
-				resetCamShake; // resets the shake
-				20 fadeSound 1;	 //fades the sound back to normal
-			};
+		if((time - life_redgull_effect) > 0)then{
 
+			if (([false,_item,1]call life_fnc_handleInv)) then{
+				life_thirst = 100;
+				player setFatigue 1;
+				[] spawn{
+					life_redgull_effect = time;
+					titleText[localize "STR_ISTR_RedGullEffectFucked","PLAIN"];
+					"redgullblur" ppEffectEnable true;
+					"redgullblur" ppEffectCommit 5;
+					enableCamShake true;
+					"redgullblur" ppEffectAdjust [1,0.4,0,[0,0,0,0],[1,1,1,0],[1,1,1,1]];
+					addCamShake [5, 5, 25];
+					5 fadeSound 0.6;
+					waitUntil {!alive player OR ((time - life_redgull_effect) > (3 * 60))};
+					player enableFatigue true;
+					"dynamicBlur" ppEffectEnable false; // disable ppeffect
+					"dynamicBlur" ppEffectAdjust [0]; // enables normal vision
+					resetCamShake; // resets the shake
+					20 fadeSound 1;	 //fades the sound back to normal
+				};
+			};
 		};
 	};
 
@@ -100,7 +100,7 @@ switch (true) do
 		[] spawn life_fnc_lockpick;
 	};
 
-	case (_item in ["Pommes","Big_Burger","Soupe_de_poisson","Wrap_Poulet","Peche"]):
+	case (_item in ["Girelle","Jus_de_pommes","Jus_de_raisin","Jus_Multifruit","Maquereau","Mulet","Orange","Peche","Pommes","Raisin","Roussette","Saupe","Soupe_de_poisson","Thon","Tortue","Tortue","Wrap_Poulet","Big_Burger"]):
 	{
 		[_item] call life_fnc_eatFood;
 	};
