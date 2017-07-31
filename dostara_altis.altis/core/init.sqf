@@ -73,7 +73,5 @@ life_fnc_garageRefund = compileFinal
 	if(_unit != player) exitWith {};
 	life_atmcash = life_atmcash + _price;
 ";
-
 [] execVM "core\init_survival.sqf";
-
-[] execVM "core\fn_welcomeNotification.sqf";
+//[] execVM "core\fn_welcomeNotification.sqf";
