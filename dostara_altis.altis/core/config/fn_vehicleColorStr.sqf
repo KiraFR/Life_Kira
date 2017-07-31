@@ -213,6 +213,274 @@ switch (_vehicle) do
 			case 0: {_color = "Black"};
 		};
 	};
+	case "ivory_gt500":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_rs4":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_m3":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_wrx":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_evox":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_c":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_e36":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_veyron":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_suburban":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_isf":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_elise":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_f1":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_mp4":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_190e":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_r34":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_supra":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+
+	case "ivory_supra_topsecret":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_gti":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+	case "ivory_lfa":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Beige";};
+			case 1: {_color = "Green";};
+			case 2: {_color = "Blue";};
+			case 3: {_color = "Dark Blue";};
+			case 4: {_color = "Yellow";};
+			case 5: {_color = "White"};
+			case 6: {_color = "Grey"};
+			case 7: {_color = "Black"};
+		};
+	};
+
 };
 
 _color;
