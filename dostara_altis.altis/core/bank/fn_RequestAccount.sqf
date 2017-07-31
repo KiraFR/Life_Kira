@@ -52,7 +52,7 @@ switch (_type) do {
 	case 2: {
 		if(isNil "_uid")exitWith{hint "Vous n'êtes pas un joueur."};
 		_life_Accn = missionNameSpace getVariable ["life_AccN",0];
-		_PriceB = (20*25)*(_life_Accn);
+		_PriceB = (25)*(_life_Accn);
 		_first = false;
 		if(_PriceB == 0)then{_PriceB = 25;};
 		if(_life_Accn == 0)then{_first = true;};
