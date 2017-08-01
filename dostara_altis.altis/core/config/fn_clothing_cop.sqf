@@ -59,6 +59,7 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 0) then
 		{
 			_ret pushBack ["KronosD_Police_cap_01",nil,10];
+			_ret pushBack ["KronosD_Police_02",nil,10];
 		};
 		if(__GETC__(life_coplevel) == 3) then
 		{
