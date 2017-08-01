@@ -7,31 +7,29 @@
 	THANK YOU JESUS I WAS SAVED!
 */
 private["_medic","_dir"];
-_medic = [_this,0,"Unknown Medic",[""]] call BIS_fnc_param;
-_medicP = [_this,1,objNull,[objNull]] call BIS_fnc_param;
+params[
+	["_medic","Unknown Medic",[""]],
+	["_medicP",objNull,[objNull]]
+];
+
+
 _oldGear = [life_corpse] call life_fnc_fetchDeadGear;
 [_oldGear] spawn life_fnc_loadDeadGear;
 life_corpse setVariable["realname",nil,true]; //Should correct the double name sinking into the ground.
 [life_corpse] RemoteExecCall ["life_fnc_corpse",nil];
 _dir = getDir life_corpse;
-hint format[localize "STR_Medic_RevivePay",_medic,[(call life_revive_fee)] call life_fnc_numberText];
 
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
 
-//Take fee for services.
-if(BANK > (call life_revive_fee)) then {
-	BANK = BANK - (call life_revive_fee);
-} else {
-	BANK = 0;
-};
 call life_fnc_refreshAC;
 call SOCK_fnc_updateBanque;
-//Retexturing of units clothing, vanilla files only retexture the EMS unit.
-switch(playerSide) do {
-	case independent: {[player,0,"textures\medic_uniform.jpg"] RemoteExecCall ["life_fnc_setTexture",0];};
-};
+
+[player, false] call ACE_captives_fnc_setSurrendered;
+player setVariable ["ACE_captives_isEscorting", false, true];
+[player, false] call ACE_captives_fnc_setHandcuffed;
+
 
 //Bring me back to life.
 player setDir _dir;

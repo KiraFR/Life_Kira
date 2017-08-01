@@ -22,6 +22,11 @@ life_corpse setVariable["Reviving",nil,TRUE];
 player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
+[player, false] call ACE_captives_fnc_setSurrendered;
+player setVariable ["ACE_captives_isEscorting", false, true];
+[player, false] call ACE_captives_fnc_setHandcuffed;
+
+
 
 //Load gear for a 'new life'
 switch(playerSide) do
