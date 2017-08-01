@@ -6,7 +6,5 @@
 */
 
 private["_Info","_tab","_save","_num"];
-diag_log "fn_updateBanque 1";
 _Info = missionNamespace getVariable ["AccountBanque",[]];
-diag_log format["fn_updateBanque 2 : %1",_Info];
-[_Info] remoteExecCall ["DB_fnc_SyncAccountDB",2];
+[_Info,getPlayerUID player] remoteExecCall ["DB_fnc_SyncAccountDB",2];
