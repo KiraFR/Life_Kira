@@ -14,6 +14,8 @@ while{true} do {
        _str = format[" WHEN name = '""%2""' THEN '%1'",_x select 1,_x select 0];
        _query = _query +_str;
     }forEach _Object;
-    _query = _query + " END;" + format["UPDATE banque SET bankacc=bankacc+%1 WHERE numcompte='GD0000001'",_gouv];
+    _query = _query + " END;";
     [_query,1] call DB_fnc_asyncCall;
+    _queryBourse = format["UPDATE banque SET bankacc=bankacc+%1 WHERE numcompte='GD0000001'",_gouv];
+    [_queryBourse,1] call DB_fnc_asyncCall;
 };
