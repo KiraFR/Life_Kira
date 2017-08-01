@@ -93,6 +93,7 @@ class CfgRemoteExec {
 		F(TON_fnc_spawnVehicle,SERVER)
 		F(TON_fnc_getVehicles_fourriere,SERVER)
 		F(TON_fnc_getVehicles,SERVER)
+		F(TON_fnc_insureCar,SERVER)
 		F(KIRA_fnc_transfertS,SERVER)
 		F(KIRA_fnc_impotPaye,SERVER)
 		F(KIRA_fnc_phoneNum,SERVER)

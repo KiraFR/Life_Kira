@@ -26,9 +26,6 @@ if(BANK < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_NotEnoughM
 
  [_vid,_pid,_insurancePrice,player,life_garage_type] remoteExecCall ["TON_fnc_insureCar",RSERV];
 
-_vehicleInfo = [_vehicleLife] call life_fnc_fetchVehInfo;
-[getPlayerUID player, side player, [name player, (_vehicleInfo select 3),_vehicleLife, _insurancePrice], 34] remoteExecCall ["DB_fnc_logs",RSERV];
-
 hint localize "STR_InsuranceApply";
 BANK = BANK - _insurancePrice;
 call life_fnc_refreshAC;
