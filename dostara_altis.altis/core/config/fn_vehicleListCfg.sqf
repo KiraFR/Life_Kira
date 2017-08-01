@@ -40,6 +40,7 @@ switch (_shop) do
 	{
 		_return =
 		[
+			["dh2o_smart",350],
 			["C_Hatchback_01_F",1667],
 			["C_Offroad_01_F",3335],
 			["C_SUV_01_F",3335],
