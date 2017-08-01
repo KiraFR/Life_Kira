@@ -54,9 +54,10 @@ if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasse
 _taxe = 0;
 
 _taxe = [0] call life_fnc_taxes;
+if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{hint "Vous ne pouvez pas deposer moins ou égale à 50 dostar."};
 if(_taxe == 50)then{
 	_value = _value - _taxe;
-	if(_value < 0) exitWith{hint "Vous ne pouvez pas deposer moins de 50 dostar."};
+	_taxes = _taxe;
 }else{
 	_taxes = floor(_value * _taxe);
 	_value = floor(_value - _taxes);

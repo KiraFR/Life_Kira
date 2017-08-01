@@ -50,17 +50,11 @@ switch (_typeC) do {
 			if(_dft)exitWith{
 				// Pour les types, voir description
 				_ret = switch (_type) do {
-					case 2 : {if(_first)then{1}else{0.05};};
+					case 1 : {0};
+					case 2 : {if(_first)then{0}else{0.05};};
 					case 3 : {0.1};
 					case 4 : {0.02};
-					default {0};
 				};
-			};
-			_ret = switch (_type) do {
-				case 2 : {if(_first)then{1}else{0.05};};
-				case 3 : {0.1};
-				case 4 : {0.02};
-				default {0};
 			};
 		}foreach _ac;
 	}; 
@@ -75,7 +69,6 @@ switch (_typeC) do {
 				_typeSender = [_sender] call life_fnc_typeCompte;
 				_typeDest = [_dest] call life_fnc_typeCompte;
 				_first = [(_x select 4)] call life_fnc_bool;
-				diag_log str(_first);
 				_ret = switch (_typeSender) do {
 					case 1 : {0}; //impossible
 					case 2 : {
@@ -101,5 +94,4 @@ switch (_typeC) do {
 	default {_ret = 0;}; 
 };
 
-diag_log str(_ret);
 _ret;
