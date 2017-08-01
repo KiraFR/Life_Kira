@@ -65,7 +65,6 @@ switch (true) do
 		life_is_arrested = false;
 		hint localize "STR_Jail_EscapeSelf";
 		[0,"STR_Jail_EscapeNOTF",true,[profileName]] RemoteExec ["life_fnc_broadcast",west];
-		[getPlayerUID player, playerSide, [name player],27] remoteExecCall ["DB_fnc_logs",2];
 		[5] call SOCK_fnc_updatePartial;
 	};
 	
@@ -74,7 +73,6 @@ switch (true) do
 		life_is_arrested = false;
 		hint localize "STR_Jail_Released";
 		player setPos (getMarkerPos "jail_release");
-		[getPlayerUID player, playerSide, [name player],28] remoteExecCall ["DB_fnc_logs",2];
 		[5] call SOCK_fnc_updatePartial;
 	};
 };

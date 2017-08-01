@@ -39,13 +39,6 @@ switch (_typeC) do {
 					default {0};
 				};
 			};
-			_ret = switch (_type) do {
-				case 1 : {50}; //50€ et non 5000%
-				case 2 : {0};
-				case 3 : {0.05};
-				case 4 : {0.02};
-				default {0};
-			};
 		}foreach _ac;
 	}; 
 	case 1 : {		
@@ -107,4 +100,6 @@ switch (_typeC) do {
 	};
 	default {_ret = 0;}; 
 };
+
+diag_log str(_ret);
 _ret;

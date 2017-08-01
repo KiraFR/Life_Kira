@@ -27,5 +27,3 @@ if((_license select 0) == "license_civ_driver" || (_license select 0) == "licens
 CASH = CASH - _price;
 titleText[format[localize "STR_NOTF_B_1", _license select 1,[_price] call life_fnc_numberText],"PLAIN"];
 missionNamespace setVariable[(_license select 0),true];
-
-[getPlayerUID player, playerSide, [name player,_license select 1,_license select 0,_price],30] remoteExecCall ["DB_fnc_logs",2];

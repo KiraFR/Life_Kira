@@ -41,7 +41,6 @@ if(life_inv_turtle > 0) then {[false,"turtle",life_inv_turtle] call life_fnc_han
 if(life_inv_cannabis > 0) then {[false,"cannabis",life_inv_cannabis] call life_fnc_handleInv;};
 if(life_inv_marijuana > 0) then {[false,"marijuana",life_inv_marijuana] call life_fnc_handleInv;};
 life_is_arrested = true;
-[getPlayerUID player, playerSide, [name player, name _unit, getPlayerUID _unit, side _unit],25] remoteExecCall ["DB_fnc_logs",2];
 removeAllWeapons player;
 {player removeMagazine _x} forEach (magazines player);
 

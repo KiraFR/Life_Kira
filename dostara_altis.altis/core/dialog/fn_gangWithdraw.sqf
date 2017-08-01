@@ -24,8 +24,6 @@ call SOCK_fnc_updateBanque;
 group player setVariable ["gang_bank",_gFund,true];
 
 [1,group player] remoteExec ["TON_fnc_updateGang",RSERV]; //Update the database.
-
- [getPlayerUID player, playerSide, [group getVariable "bank_name", _value],17] remoteExecCall ["DB_fnc_logs",2];
 hint format [localize "STR_ATM_WithdrawSuccessG",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;

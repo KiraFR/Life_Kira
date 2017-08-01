@@ -48,5 +48,4 @@ if(_action) then {
 	for "_i" from 1 to _numOfDoors do {
 		_house setVariable[format["bis_disabled_Door_%1",_i],0,true];
 	};
-	[getPlayerUID player, playerSide, [name player, position _house,(round((_houseCfg select 0)/2))],35] remoteExecCall ["DB_fnc_logs",2];
 };

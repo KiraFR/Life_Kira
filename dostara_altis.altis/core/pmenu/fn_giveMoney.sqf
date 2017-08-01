@@ -28,7 +28,4 @@ CASH = CASH - (parseNumber(_amount));
 [0] call SOCK_fnc_updatePartial;
 [_unit,_amount,player] RemoteExecCall ["life_fnc_receiveMoney",_unit];
 [] call life_fnc_p_updateMenu;
-
-[getPlayerUID player, side player,[name Player, _amount, name _unit, getPlayerUID _unit, side _unit],6] remoteExecCall ["DB_fnc_logs",2];
-
 ctrlShow[2001,true];

@@ -67,5 +67,3 @@ if(life_is_arrested) exitWith {
 [] call SOCK_fnc_updateRequest;
 [] call life_fnc_hudUpdate; //Request update of hud.
 
-
-[getPlayerUID player, playerSide, [name player],32] remoteExecCall ["DB_fnc_logs",2];

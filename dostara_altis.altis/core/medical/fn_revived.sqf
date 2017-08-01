@@ -43,6 +43,3 @@ player setVariable["Revive",nil,TRUE];
 player setVariable["name",nil,TRUE];
 player setVariable["Reviving",nil,TRUE];
 [] call life_fnc_hudUpdate; //Request update of hud.
-
-
-[getPlayerUID player, playerSide, [name player,name _medicP, getPlayerUID _medicP, side _medicP],31] remoteExecCall ["DB_fnc_logs",2];
