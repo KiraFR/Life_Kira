@@ -11,7 +11,7 @@ _shop = _this select 0;
 switch (_shop) do
 {
 	case "marche": {["Marché",["Orange","Peche","Pommes","Raisin","Bouteille_d_eau","Jus_de_raisin","Jus_de_pommes","Jus_Multifruit","Wrap_Poulet","Big_Burger","Soda_Extra_Energy_Drink","Soupe_de_poisson"]]};
-	case "flic": {["Marché Police",["Wrap_Poulet","Cafe","Herse","Bouteille_d_eau","Soda_Extra_Energy_Drink","Essence"]]};
+	case "cop": {["Marché Police",["Cafe","Herse","Bouteille_d_eau","Essence"]]};
 	case "outillage": {["Outillage",["Seau","Pelle","Pioche"]]};
 	case "Export_luxe": {["Export Luxe",["Argent","Pierres_Precieuses","Bijoux"]]};
 	case "Export_Combustible": {["Export de Combustible ",["Bois","Charbon","fuelF","oil"]]};
@@ -26,6 +26,6 @@ switch (_shop) do
     case "Dealer" : {["Dealer",["Cannabis","Coca","Opium","Cocaine","Heroine","Shit","Meth","Speed_Ball"]]};
     case "Pharmaceutique" : {["Pharmaceutique",["Pharmaceutique"]]};
     case "Contrebandier" : {["Contrebandier",["Tortue"]]};
-    case "Boissons": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multifruit","Soda_Extra_Energy_Drink"]]};
+    case "Boissons": {["Distributeur de boisson",["Bouteille_d_eau","Jus_Multifruit"]]};
 	case "Frigo": {["Frigidaire a nourriture",["Wrap_Poulet","Big_Burger"]]};
 };

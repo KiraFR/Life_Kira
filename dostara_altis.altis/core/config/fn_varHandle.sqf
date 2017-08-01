@@ -52,6 +52,7 @@ switch (_mode) do
             case "Fer" : {"life_ressource_fer"};
             case "Petrole" : {"life_ressource_petrole"};
             case "Pierres_Precieuses" : {"life_ressource_pierres_precieuses"};
+            case "Pierres_Precieuses_Brut" : {"life_ressource_pierres_precieuses_brut"};
             case "Sable" : {"life_ressource_sable"};
             case "Sel" : {"life_ressource_sel"};
             case "Verre" : {"life_ressource_verre"};
@@ -123,6 +124,7 @@ switch (_mode) do
             case "life_ressource_fer" : {"Fer"};
             case "life_ressource_petrole" : {"Petrole"};
             case "life_ressource_pierres_precieuses" : {"Pierres_Precieuses"};
+            case "life_ressource_pierres_precieuses_brut" : {"Pierres_Precieuses_Brut"};
             case "life_ressource_sable" : {"Sable"};
             case "life_ressource_sel" : {"Sel"};
             case "life_ressource_verre" : {"Verre"};

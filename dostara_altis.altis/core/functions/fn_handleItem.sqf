@@ -17,7 +17,7 @@ params[
 ];
 
 // ACE items
-_acecheck = ["ACE_CableTie"];
+_acecheck = ["ACE_CableTie","ACE_Chemlight_HiYellow","ACE_EarPlugs"];
 
 //Some checks
 if(_item == "") exitWith {};

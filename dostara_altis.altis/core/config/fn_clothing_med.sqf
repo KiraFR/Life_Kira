@@ -18,9 +18,9 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["Kronos_Medic_02",nil,100],
-			["Kronos_Medic_01",nil,100],
-			["U_B_Wetsuit",nil,200]
+			["Kronos_Medic_02",nil,30],
+			["Kronos_Medic_01",nil,50],
+			["U_B_Wetsuit",nil,150]
 		];
 	};
 	
@@ -28,7 +28,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
-		    ["KronosD_Medic_helmet",nil,100],
+		    ["KronosD_Medic_helmet",nil,200],
             ["KronosD_Medic_Caquette",nil,10],
             ["KronosD_Medic_BR",nil,10],
             ["KronosD_Medic_BN",nil,10],
@@ -42,17 +42,17 @@ switch (_filter) do
 	case 2:
 	{
 		[
-			["G_Shades_Black",nil,25],
-            ["G_Shades_Blue",nil,20],
-            ["G_Sport_Blackred",nil,20],
-            ["G_Sport_Checkered",nil,20],
-            ["G_Sport_Blackyellow",nil,20],
-            ["G_Sport_BlackWhite",nil,20],
-            ["G_Aviator",nil,75],
+			["G_Shades_Black",nil,10],
+            ["G_Shades_Blue",nil,10],
+            ["G_Sport_Blackred",nil,10],
+            ["G_Sport_Checkered",nil,10],
+            ["G_Sport_Blackyellow",nil,10],
+            ["G_Sport_BlackWhite",nil,10],
+            ["G_Aviator",nil,10],
             ["G_Squares",nil,10],
-            ["G_Lowprofile",nil,30],
-            ["G_Combat",nil,55],
-            ["G_Diving",nil,50]
+            ["G_Lowprofile",nil,10],
+            ["G_Combat",nil,10],
+            ["G_Diving",nil,30]
 		];
 	};
 	
@@ -60,7 +60,7 @@ switch (_filter) do
 	case 3:
 	{
 		[
-			["V_RebreatherB",nil,500]
+			["V_RebreatherB",nil,300]
 		];
 	};
 	
@@ -68,7 +68,7 @@ switch (_filter) do
 	case 4:
 	{
 		[
-		["SIM_SAC",nil,100]
+		["SIM_SAC",nil,35]
 		];
 	};
 };

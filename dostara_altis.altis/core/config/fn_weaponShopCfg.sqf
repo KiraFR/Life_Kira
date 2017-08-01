@@ -54,15 +54,21 @@ switch(_shop) do
 		{
 			case (playerSide != independent): {"You are not an EMS Medic"};
 			default {
-				["Hospital EMS Shop",
+				["Fourniture du SIM",
 					[
+					    ["ACE_Chemlight_HiYellow",nil,2],
+					    ["ACE_EarPlugs",nil,2],
+						["Binocular",nil,50],
+						["NVGoggles_OPFOR",nil,550],
+						["hgun_Pistol_Signal_F",nil,100],
+						["6Rnd_GreenSignal_F",nil,5],
+						["tf_anprc152",nil,30],
 						["ItemGPS",nil,100],
-						["Binocular",nil,150],
-						["ToolKit",nil,250],
-						["FirstAidKit",nil,150],
-						["Medikit",nil,500],
-						["NVGoggles",nil,1200],
-						["B_FieldPack_ocamo",nil,3000]
+						["ItemMap",nil,30],
+						["I_IR_Grenade",nil,50],
+						["Medikit",nil,200],
+						["ToolKit",nil,60],
+						["FirstAidKit",nil,20]
 					]
 				];
 			};
@@ -74,23 +80,33 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 1): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 1): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
-						["hgun_mas_usp_F",nil,210],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["30Rnd_mas_9x21_Stanag",nil,10],
+						["hgun_mas_usp_F",nil,210],
 						["12Rnd_mas_45acp_Mag",nil,5],
-						["FirstAidKit",nil,1],
-						["NVGoggles_mas_h",nil,500],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -102,26 +118,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 2): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 2): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Police Officer Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["ACE_CableTie",nil,1],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -133,28 +160,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 3): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 3): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Sergent Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["FirstAidKit",nil,1],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -166,28 +202,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 4): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 4): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Lieutenant Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["FirstAidKit",nil,1],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -199,28 +244,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 5): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 5): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["FirstAidKit",nil,1],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -232,28 +286,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 6): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 6): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["FirstAidKit",nil,1],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -265,28 +328,37 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) == 7): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) > 7): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
 					[
+					    ["ACE_Chemlight_HiWhite",nil,2],
+                        ["ACE_EarPlugs",nil,2],
+					    ["ACE_CableTie",nil,1],
+					    ["Chemlight_blue",nil,2],
+                        ["Binocular",nil,50],
+                        ["NVGoggles_OPFOR",nil,550],
+                        ["hgun_Pistol_Signal_F",nil,100],
+                        ["6Rnd_GreenSignal_F",nil,5],
+                        ["tf_anprc152",nil,30],
+                        ["ItemGPS",nil,100],
+                        ["ItemMap",nil,30],
+                        ["I_IR_Grenade",nil,50],
+                        ["Medikit",nil,200],
+                        ["ToolKit",nil,60],
 						["arifle_mas_mp5",nil,350],
+						["30Rnd_mas_9x21_Stanag",nil,10],
 						["hgun_mas_usp_F",nil,210],
-						["arifle_mas_hk416",nil,570],
-						["arifle_mas_hk416c",nil,550],
-						["HandGrenade_Stone","Flashbang",15],
-						["optic_mas_Holosight_blk",nil,7],
-						["optic_Holosight",nil,10],
-						["optic_Hamr",nil,25],
-						["optic_mas_aim",nil,27],
 						["12Rnd_mas_45acp_Mag",nil,5],
+						["arifle_mas_hk416",nil,570],
 						["30Rnd_mas_556x45_Stanag",nil,10],
-						["3Rnd_UGL_FlareWhite_F",nil,12],
-						["NVGoggles_mas_h",nil,500],
-						["FirstAidKit",nil,1],
-						["ACE_CableTie",nil,1],
-						["ToolKit",nil,5],
-						["tf_anprc152",nil,2]
+						["arifle_mas_hk416c",nil,550],
+						["30Rnd_mas_556x45_Stanag",nil,10],
+						["optic_mas_Holosight_blk",nil,100],
+						["optic_Holosight",nil,120],
+						["optic_Hamr",nil,150],
+						["optic_mas_aim",nil,120]
 					]
 				];
 			};
@@ -564,11 +636,16 @@ switch(_shop) do
 	{
 		["Altis General Store",
 			[
-				["Binocular",nil,25],
-				["ItemGPS",nil,50],
-				["ToolKit",nil,15],
-				["FirstAidKit",nil,7],
-				["NVGoggles",nil,600]
+			    ["Chemlight_green",nil,4],
+			    ["Chemlight_red",nil,4],
+				["Binocular",nil,67],
+				["ItemWatch",nil,54],
+				["ItemMap",nil,32],
+				["ItemGPS",nil,146],
+				["ToolKit",nil,95],
+				["NVGoggles",nil,621],
+				["tf_anprc148jem",nil,36],
+				["ACE_Flashlight_XL50",nil,24]
 			]
 		];
 	};

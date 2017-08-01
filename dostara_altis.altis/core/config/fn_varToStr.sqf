@@ -17,7 +17,7 @@ switch (_var) do
     case "life_inv_orange" : {"Orange"};
     case "life_inv_peche" : {"Peche"};
     case "life_inv_eau" : {"Bouteille d'eau"};
-    case "life_inv_Jus_Multifruit" : {"Jus Multisfruits"};
+    case "life_inv_Jus_Multifruit" : {"Jus Multifruits"};
     case "life_inv_wrap" : {"Wrap Poulet"};
     case "life_inv_burger" : {"Big Burger"};
     case "life_inv_soda" : {"Soda Extra Energy Drink"};
@@ -50,6 +50,7 @@ switch (_var) do
     case "life_ressource_fer" : {"Fer"};
     case "life_ressource_petrole" : {"Petrole"};
     case "life_ressource_pierres_precieuses" : {"Pierres Precieuses"};
+    case "life_ressource_pierres_precieuses_brut" : {"Pierres Precieuses Brut"};
     case "life_ressource_sable" : {"Sable"};
     case "life_ressource_sel" : {"Sel"};
     case "life_ressource_verre" : {"Verre"};
@@ -104,7 +105,7 @@ switch (_var) do
 	case "license_civ_marijuana": {(localize "STR_License_Marijuana")};
 	case "license_civ_cement": {(localize "STR_License_Cement")};
 	case "license_med_air": {(localize "STR_License_Pilot")};
-	case "license_civ_home": {(localize "STR_License_Home")};
+	case "license_civ_home": {"Droit de séjour"};
 	case "license_civ_opium": {(localize "STR_License_Opium")};
 	case "license_civ_gouv": {(localize "STR_License_Gouv")};
 	case "license_cop_Prefet": {(localize "STR_License_Prefet")};
@@ -122,4 +123,7 @@ switch (_var) do
 	case "license_civ_presseur": {"Justificatif Pressoir"};
 	case "license_civ_fermenta": {(localize "STR_License_Cidre")};
 	case "license_civ_fishsoup": {"Cuisinier en poissonnerie"};
+
+	case "licence_civ_silver": {"Argent"};
+    case "licence_civ_aluminium": {"Aluminium"};
 };

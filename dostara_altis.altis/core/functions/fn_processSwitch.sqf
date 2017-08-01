@@ -32,6 +32,7 @@ _return = switch(_con) do {
     case    "Cuivre":                   {["Cuivre",                 1,          [[["Cuivre_Brut",1]]]]};
     case    "Fer":                      {["Fer",                    1,          [[["Fer_Brut",1]]]]};
     case    "Acier":                    {["Acier",                  1,          [[["Aluminium",1],["Charbon",1],["Fer",1]]]]};
+    case    "Tailleur":                 {["Pierres_Precieuses",     1,          [[["Pierres_Precieuses_Brut",1]]]]};
     case    "Bijoux":                   {["Bijoux",                 1,          [[["Argent",1],["Pierres_Precieuses",1]]]]};
     case    "Ciment":                   {["Ciment",                 1,          [[["Chaux",1],["Sable",1]]]]};
     case    "Essence":                  {["Essence",                1,          [[["Petrole",1]]]]};

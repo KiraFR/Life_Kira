@@ -5,7 +5,7 @@
 	Description:
 	Master configuration for vehicle colors.
 */
-private["_vehicle","_ret","_path"];
+private["_vehicle","_ret","_path","_dirivory"];
 _vehicle = [_this,0,"",[""]] call BIS_fnc_param;
 if(_vehicle == "") exitWith {[]};
 _ret = [];

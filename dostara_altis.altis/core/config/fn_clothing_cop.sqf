@@ -21,35 +21,35 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) == 1) then
 		{
-			_ret pushBack ["Kronos_Police_01",nil,15];
+			_ret pushBack ["Kronos_Police_01",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 2) then
 		{
-			_ret pushBack ["Kronos_Police_02",nil,15];
+			_ret pushBack ["Kronos_Police_02",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 3) then
 		{
-			_ret pushBack ["Kronos_Police_03",nil,15];
+			_ret pushBack ["Kronos_Police_03",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 4) then
 		{
-			_ret pushBack ["Kronos_Police_04",nil,15];
+			_ret pushBack ["Kronos_Police_04",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 5) then
 		{
-			_ret pushBack ["Kronos_Police_05",nil,15];
+			_ret pushBack ["Kronos_Police_05",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 6) then
 		{
-			_ret pushBack ["Kronos_Police_06",nil,15];
+			_ret pushBack ["Kronos_Police_06",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 7) then
 		{
-			_ret pushBack ["Kronos_Police_07",nil,15];
+			_ret pushBack ["Kronos_Police_07",nil,40];
 		};
 		if(__GETC__(life_coplevel) == 8) then
 		{
-			_ret pushBack ["Kronos_Police_08",nil,15];
+			_ret pushBack ["Kronos_Police_08",nil,40];
 		};
 	};
 
@@ -59,6 +59,8 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 0) then
 		{
 			_ret pushBack ["KronosD_Police_cap_01",nil,10];
+			_ret pushBack ["KronosD_Police_cap_02",nil,10];
+			_ret pushBack ["KronosD_Police_01",nil,10];
 			_ret pushBack ["KronosD_Police_02",nil,10];
 		};
 		if(__GETC__(life_coplevel) == 3) then
@@ -80,17 +82,17 @@ switch (_filter) do
 	{
 		_ret =
 		[
-			["G_Shades_Black",nil,25],
-			["G_Shades_Blue",nil,20],
-			["G_Sport_Blackred",nil,20],
-			["G_Sport_Checkered",nil,20],
-			["G_Sport_Blackyellow",nil,20],
-			["G_Sport_BlackWhite",nil,20],
-			["G_Aviator",nil,75],
+			["G_Shades_Black",nil,10],
+			["G_Shades_Blue",nil,10],
+			["G_Sport_Blackred",nil,10],
+			["G_Sport_Checkered",nil,10],
+			["G_Sport_Blackyellow",nil,10],
+			["G_Sport_BlackWhite",nil,10],
+			["G_Aviator",nil,10],
 			["G_Squares",nil,10],
-			["G_Lowprofile",nil,30],
-			["G_Combat",nil,55],
-			["G_mas_wpn_gasmask",nil,50]
+			["G_Lowprofile",nil,10],
+			["G_Combat",nil,10],
+			["G_mas_wpn_gasmask",nil,10]
 		];
 	};
 
@@ -99,7 +101,7 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["KronosD_POLICE_vest_02",nil,50];
+			_ret pushBack ["KronosD_POLICE_vest_02",nil,1000];
 		};
 
 	};
@@ -107,14 +109,7 @@ switch (_filter) do
 	//Backpacks
 	case 4:
 	{
-		_ret =
-		[
-			["B_Kitbag_cbr",nil,800],
-			["B_FieldPack_cbr",nil,500],
-			["B_AssaultPack_cbr",nil,700],
-			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
-		];
+
 	};
 };
 
