@@ -5,7 +5,7 @@
 	returns: nothing
 */
 
-private ["_return","_all","_query","_queryResult","_return","_str"];
+private ["_return","_all","_query","_queryResult","_return","_str","_queryResultGouv"];
 
 _all = ["Name"] call bourse_fnc_ressources;
 _query = "SELECT name,valeur FROM bourse";
@@ -37,7 +37,15 @@ if (count _queryResult == 0) then {
     _query = "SELECT name,valeur FROM bourse";
     _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 };
-
-Bourse_Object setVariable ["Bourse",_queryResult, true];
+_queryGouv = "SELECT bankacc FROM banque WHERE numcompte='GD0000001';";
+_queryResultGouv = [_queryGouv,2] call DB_fnc_asyncCall;
+if(typeName _queryResultGouv == "ARRAY") then{
+    _queryResultGouv = _queryResultGouv select 0;
+    if(typeName _queryResultGouv == "STRING")then{
+        _queryResultGouv = parseNumber(_queryResultGouv);
+    };
+};
+Bourse_Object setVariable ["MontantGouvernement",_queryResultGouv];
+Bourse_Object setVariable ["Bourse",_queryResult];
 Bourse_ressource_Save = [];
 Bourse_Start = true;

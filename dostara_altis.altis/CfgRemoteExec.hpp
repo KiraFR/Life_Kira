@@ -99,6 +99,7 @@ class CfgRemoteExec {
 		F(KIRA_fnc_HCheckNearS,SERVER)
 		F(KIRA_fnc_InsertFormNot,SERVER)
 		F(KIRA_fnc_taxes,SERVER)
+		F(KIRA_fnc_modifComptGouv,SERVER)
 		F(BQKS_fnc_CreateAccount,SERVER)
 		F(BQKS_fnc_CreateAccountOff,SERVER)
 		F(BQKS_fnc_CreateAccountEntre,SERVER)
@@ -114,13 +115,11 @@ class CfgRemoteExec {
 		F(ASSA_fnc_GetContractActif,SERVER)
 		F(ASSA_fnc_AcceptContrat,SERVER)
 		F(ASSA_fnc_TransferToMurd,SERVER)
+		
         //Bourse
         F(bourse_fnc_vente,SERVER)
         F(life_fnc_virt_sellBourse,CLIENT)
 
-		/* changement telephone Kira V3
-			F(SMPH_fnc_findContact,SERVER)
-		*/
 	};
 
 	class Commands {

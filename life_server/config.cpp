@@ -51,6 +51,7 @@ class CfgFunctions
 			class saveTestament{};
 			class queryAccountRequest{};
 			class taxes{};
+			class modifComptGouv{};
 		};
 	};
 

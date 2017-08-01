@@ -6,7 +6,7 @@
 	Description:
 	Figure it out.
 */
-private["_value","_dftfound","_plafond","_taxe","_taxes","_ac"];
+private["_value","_dftfound","_plafond","_taxe","_taxes","_ac","_first"];
 _value = parseNumber(ctrlText 2702);
 
 //Series of stupid checks
@@ -28,7 +28,8 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 			4. Entreprise
 			5. Organisme
 		*/
-		_first = [(_x select 4)] call life_fnc_bool;
+		_first = (_x select 4);
+		if(typeName _first == "SCALAR")then{_first = [(_x select 4)] call life_fnc_bool;};
 		_type = [(_x select 1)] call life_fnc_typeCompte;
 		switch (_type) do {
 			case 1 : {
