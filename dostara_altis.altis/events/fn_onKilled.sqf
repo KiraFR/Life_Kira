@@ -19,13 +19,15 @@ if  !((vehicle _unit) isEqualTo _unit) then {
 };
 
 //Set some vars
-_unit setVariable ["Revive",true,true];
+_unit setVariable ["Revive",false,true];
 _unit setVariable ["name",profileName,true]; //Set my name so they can say my name.
-_unit setVariable ["restrained",false,true];
-_unit setVariable ["Escorting",false,true];
-_unit setVariable ["transporting",false,true];
-_unit setVariable ["playerSurrender",false,true];
-_unit setVariable ["steam64id",(getPlayerUID player),true]; //Set the UID.
+
+[_unit, false] call ACE_captives_fnc_setSurrendered;
+_unit setVariable ["ACE_captives_isEscorting", false, true];
+[_unit, false] call ACE_captives_fnc_setHandcuffed;
+_unit spawn {life_cantInteract = true;};
+
+_unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);

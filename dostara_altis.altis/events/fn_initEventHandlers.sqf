@@ -7,3 +7,4 @@ player addEventHandler ["InventoryClosed", life_fnc_onInventoryClosed];
 player addEventHandler ["InventoryOpened", life_fnc_onInventoryOpened];
 player addEventHandler ["Killed", life_fnc_onKilled];
 player addEventHandler ["Take", life_fnc_onTake];
+player addEventHandler["Respawn",life_fnc_onRespawn];

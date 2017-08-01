@@ -51,6 +51,7 @@ class Life_Client_Core
 		class onInventoryOpened;
 		class onTake;
 		class onKilled;
+		class onRespawn {};
 	};
 
 	class Master_Directory
@@ -63,7 +64,6 @@ class Life_Client_Core
 	class Medical_System
 	{
 		file = "core\medical";
-		class onPlayerRespawn {};
 		class respawned {};
 		class revivePlayer {};
 		class revived {};

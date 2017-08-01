@@ -134,6 +134,8 @@ class CfgRemoteExec {
 		F(addHandgunItem,ANYONE)
 		F(life_fnc_jumpFnc,ANYONE)
 		F(life_fnc_jumpFnc,ANYONE)
+		F(life_fnc_medicRequest,ANYONE)
+		F(life_fnc_copMedicRequest,ANYONE)
 		
 		F(join,ANYONE)
 	};

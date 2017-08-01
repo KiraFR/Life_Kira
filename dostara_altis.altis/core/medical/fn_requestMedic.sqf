@@ -11,9 +11,6 @@ _medicsOnline = {_x != player && {side _x == independent} && {alive _x}} count p
 if(_medicsOnline) then {
 	//There is medics let's send them the request.
 	[life_corpse,profileName] RemoteExecCall ["life_fnc_medicRequest",independent];
-} else {
-	//No medics were online, send it to the police.
-	[life_corpse,profileName] RemoteExecCall ["life_fnc_copMedicRequest",west];
 };
 
 //Create a thread to monitor duration since last request (prevent spammage).
