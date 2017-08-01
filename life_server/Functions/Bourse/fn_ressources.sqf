@@ -13,7 +13,7 @@ case "Pommes" : {[              1,      5,      3,      0.1,    1,      0,      
 case "Peche" : {[               1,      5,      3,      0.1,    1,      0,      [["Pommes",0.1],["Orange",0.1],["Raisin",0.1],["Jus_de_pommes",0.4]]]};
 case "Raisin" : {[              1,      5,      3,      0.1,    1,      0,      [["Pommes",0.1],["Peche",0.1],["Orange",0.1],["Jus_de_raisin",0.4]]]};
 
-case "Jus_Multifruit" : {[    1,      15,     10,     0.1,    1,      0,      [["Jus_de_raisin",0.4],["Jus_de_pommes",0.4]]]};
+case "Jus_Multifruit" : {[      1,      15,     10,     0.1,    1,      0,      [["Jus_de_raisin",0.4],["Jus_de_pommes",0.4]]]};
 case "Jus_de_pommes" : {[       1,      15,     10,     0.1,    1,      0,      [["Jus_Multifruit",0.4],["Cidre",0.5],["Jus_de_raisin",0.4]]]};
 case "Jus_de_raisin" : {[       1,      15,     10,     0.1,    1,      0,      [["Jus_Multifruit",0.4],["Vin",0.5],["Jus_de_pommes",0.4]]]};
 
@@ -51,8 +51,8 @@ case "Bijoux" : {[              1,     -1,      70,     0.1,    1,      0,      
 case "Ciment" : {[              1,     -1,      38,     0.1,    1,      0,      [["Chaux",0.2],["Sables",0.2],["Acier",0.2]]]};
 case "Essence" : {[             1,      100,    42,     0.2,    1,      0,      [["Charbons",0.1],["Bois",0.1],["Petrole",0.3]]]};
 
-case "Cannabis" : {[             1,      35,     29,     0.1,    1,      0,      [["Cocaine",0.1],["Opium",0.2],["Shit",0.3],["Cocaine",0.1],["Heroine",0.1],["Pharmaceutique",0.2],["Meth",0.1],["Tortue",0.1]]]};
-case "Cocaine" : {[             1,      40,     33,     0.1,    1,      0,      [["Cannabis",0.1],["Opium",0.1],["Shit",0.1],["Cocaine",0.3],["Heroine",0.1],["Speed_Ball",0.1]]]};
+case "Cannabis" : {[            1,      35,     29,     0.1,    1,      0,      [["Cocaine",0.1],["Opium",0.2],["Shit",0.3],["Cocaine",0.1],["Heroine",0.1],["Pharmaceutique",0.2],["Meth",0.1],["Tortue",0.1]]]};
+case "Coca" : {[             	1,      40,     33,     0.1,    1,      0,      [["Cannabis",0.1],["Opium",0.1],["Shit",0.1],["Cocaine",0.3],["Heroine",0.1],["Speed_Ball",0.1]]]};
 case "Opium" : {[               1,      40,     36,     0.1,    1,      0,      [["Cocaine",0.1],["Cannabis",0.2],["Shit",0.1],["Cocaine",0.1],["Heroine",0.3],["Pharmaceutique",0.2],["Meth",0.1],["Speed_Ball",0.1]]]};
 case "Cocaine" : {[             1,     -1,      45,     0.2,    1,      0,      [["Cocaine",0.2],["Shit",0.1],["Cannabis",0.1],["Heroine",0.1],["Pharmaceutique",0.1],["Meth",0.1],["Speed_Ball",0.3]]]};
 case "Heroine" : {[             1,     -1,      51,     0.2,    1,      0,      [["Opium",0.2],["Shit",0.1],["Cannabis",0.1],["Cocaine",0.1],["Pharmaceutique",0.1],["Meth",0.1],["Speed_Ball",0.3]]]};

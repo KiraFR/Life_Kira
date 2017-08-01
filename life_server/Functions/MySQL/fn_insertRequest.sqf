@@ -11,7 +11,7 @@ private["_uid","_name","_side","_money","_licenses","_handler","_thread","_query
 params[
 	["_uid","",[""]],
 	["_name","",[""]],
-	["_money",0,[""]],
+	["_money",300,[0]],
 	["_returnToSender",ObjNull,[ObjNull]]
 ];
 
