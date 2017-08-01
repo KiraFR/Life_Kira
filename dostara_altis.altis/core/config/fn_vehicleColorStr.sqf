@@ -217,224 +217,448 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_rs4":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_m3":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_wrx":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_evox":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_c":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_e36":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_veyron":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_suburban":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_isf":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_elise":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_f1":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_mp4":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_190e":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_r34":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_supra":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 
@@ -442,42 +666,84 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_gti":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 	case "ivory_lfa":
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Beige";};
-			case 1: {_color = "Green";};
-			case 2: {_color = "Blue";};
-			case 3: {_color = "Dark Blue";};
-			case 4: {_color = "Yellow";};
-			case 5: {_color = "White"};
-			case 6: {_color = "Grey"};
-			case 7: {_color = "Black"};
+			case 0: {_color = "Jaune"};
+			case 1: {_color = "Noir"};
+			case 2: {_color = "Aqua"};
+			case 3: {_color = "Baby Bleu"};
+			case 4: {_color = "Baby Rose"};
+			case 5: {_color = "Rouge"};
+			case 6: {_color = "Bourgogne"};
+			case 7: {_color = "Cardinal"};
+			case 8: {_color = "Vert foncé"};
+			case 9: {_color = "Or"};
+			case 10: {_color = "Vert"};
+			case 11: {_color = "Gris"};
+			case 12: {_color = "Lavande"};
+			case 13: {_color = "Bleu Ligth"};
+			case 14: {_color = "Jaune Ligth"};
+			case 15: {_color = "Citron Vert"};
+			case 16: {_color = "Marina Bleu"};
+			case 17: {_color = "Bleu Marine"};
+			case 18: {_color = "Orange"};
+			case 19: {_color = "Sable"};
+			case 20: {_color = "Argent"};
+			case 21: {_color = "Blanc"};
 		};
 	};
 

@@ -9,6 +9,7 @@ private["_vehicle","_ret","_path"];
 _vehicle = [_this,0,"",[""]] call BIS_fnc_param;
 if(_vehicle == "") exitWith {[]};
 _ret = [];
+_dirivory = "\ivory_skin\skins\";
 
 switch (_vehicle) do
 {
@@ -196,14 +197,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-			["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-			["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-			["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-			["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-			["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-			["#(argb,255,255,255)color(1,1,1,1)","civ"],
-			["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-			["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -211,14 +226,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -226,14 +255,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -241,14 +284,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -256,14 +313,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -271,14 +342,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -286,14 +371,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -301,14 +400,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -316,14 +429,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -331,14 +458,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -346,14 +487,28 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 
@@ -361,112 +516,224 @@ switch (_vehicle) do
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_mp4":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_190e":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_r34":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_supra":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_supra_topsecret":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_gti":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 	case "ivory_lfa":
 	{
 		_ret =
 		[
-		["#(argb,254,218,213)color(0.99,0.85,0.83,1)","civ"],
-		["#(argb,9,105,0)color(0.03,0.41,0,1)","civ"],
-		["#(argb,3,71,201)color(0.01,0.27,0.78,1)","civ"],
-		["#(argb,11,14,150)color(0.04,0.05,0.58,1)","civ"],
-		["#(argb,254,247,14)color(0.99,0.96,0.05,1)","civ"],
-		["#(argb,255,255,255)color(1,1,1,1)","civ"],
-		["#(argb,200,230,251)color(0.78,0.9,0.98,1)","civ"],
-		["#(argb,0,0,0)color(0,0,0,1)","civ"]
+		[_dirivory + "yellow_co.paa","civ"],
+		[_dirivory + "skin_black_co.paa","civ"],
+		[_dirivory + "aqua_co.paa","civ"],
+		[_dirivory + "skin_blue_co.paa","civ"],
+		[_dirivory + "skin_pink_co.paa","civ"],
+		[_dirivory + "red_co.paa","civ"],
+		[_dirivory + "burgundy_co.paa","civ"],
+		[_dirivory + "cardinal_co.paa","civ"],
+		[_dirivory + "dark_green_co.paa","civ"],
+		[_dirivory + "gold_co.paa","civ"],
+		[_dirivory + "green_co.paa","civ"],
+		[_dirivory + "grey_co.paa","civ"],
+		[_dirivory + "lavender_co.paa","civ"],
+		[_dirivory + "light_blue_co.paa","civ"],
+		[_dirivory + "light_yellow_co.paa","civ"],
+		[_dirivory + "lime_co.paa","civ"],
+		[_dirivory + "marina_blue_co.paa","civ"],
+		[_dirivory + "navy_blue_co.paa","civ"],
+		[_dirivory + "orange_co.paa","civ"],
+		[_dirivory + "sand_co.paa","civ"],
+		[_dirivory + "silver_co.paa","civ"],
+		[_dirivory + "skin_white_co.paa","civ"]
 		];
 	};
 };
