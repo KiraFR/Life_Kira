@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=641;
+	toggles=513;
 	class ItemIDProvider
 	{
 		nextID=3478;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=405;
+		nextID=392;
 	};
 	class Camera
 	{
-		pos[]={23211.178,38.41,20025.873};
-		dir[]={-0.90747726,-0.38982964,-0.1566159};
-		up[]={-0.38415325,0.92088336,-0.066298723};
-		aside[]={-0.17007005,-4.8428774e-008,0.98543501};
+		pos[]={23223.232,38.41,20027.953};
+		dir[]={-0.85561854,-0.51330703,-0.0666444};
+		up[]={-0.51175827,0.8582015,-0.039860938};
+		aside[]={-0.077655077,3.8853614e-009,0.99698234};
 	};
 };
 binarizationWanted=0;
@@ -55815,7 +55815,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "    this addAction[  " \n "    ""Véhicules de Fonction"",  " \n "    {     " \n "        [   " \n "            playerSide,  " \n "            ""Air"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2];  " \n "  " \n "        life_garage_type = ""Air"";  " \n "        createDialog ""Life_impoundCop_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[12802,""Mise en place du Véhicule""];  " \n "        life_garage_sp = ""cop_car_1"";    " \n "  " \n "    }  " \n "];    " \n "this addAction[""Ranger son Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""cop_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger le Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=206914;
 					};
@@ -55857,7 +55857,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique Aérienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "  this addAction[  " \n "    ""Véhicules de Fonction"",  " \n "    {     " \n "        [   " \n "            playerSide,  " \n "            ""Air"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2];  " \n "  " \n "        life_garage_type = ""Air"";  " \n "        createDialog ""Life_impoundCop_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[12802,""Mise en place du Véhicule""];  " \n "        life_garage_sp = ""cop_air_1"";    " \n "  " \n "    }  " \n "];  this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique Aérienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Réserve d'Héliportés"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place de l'Héliporté""]; " \n "        life_garage_sp = ""cop_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 					};
 					id=1563;
@@ -56409,7 +56409,7 @@ class Mission
 					};
 					id=2071;
 					type="Fridge_01_closed_F";
-					atlOffset=-0.040999413;
+					atlOffset=-0.041000366;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -57230,7 +57230,7 @@ class Mission
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.057557106;
+									atlOffset=0.05755806;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57395,7 +57395,7 @@ class Mission
 									};
 									id=663;
 									type="C_man_polo_1_F_euro";
-									atlOffset=0.00041007996;
+									atlOffset=0.00040912628;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -61287,7 +61287,6 @@ class Mission
 					};
 					id=3456;
 					type="Land_Atm_02_F";
-					atlOffset=0.1618824;
 					class CustomAttributes
 					{
 						class Attribute0
