@@ -7,7 +7,6 @@
 	Does something with vehicle purchasing.
 */
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
-_mode = _this select 0;
 if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = getSelData(2302);
 _vIndex = getSelValue(2302);
@@ -94,6 +93,7 @@ _coloveh = [_className,(_vehicle getVariable "Life_VEH_color")] call life_fnc_ve
 if(isNil "_coloveh") then{
 	_coloveh = "Aucune";
 };
+[(getPlayerUID player),playerSide,_vehicle,_colorIndex] RemoteExecCall ["TON_fnc_vehicleCreate",2];
 [0] call SOCK_fnc_updatePartial;
 closeDialog 0; //Exit the menu.
 true;
