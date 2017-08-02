@@ -17,7 +17,7 @@ if(_type == 2) then {
 
 switch (_type) do {
 
-	//offshore
+	//offshoree
 	case 1: {
 		_name = ctrlText 11007;
 		_life_AccOffshore = missionNameSpace setVariable ["life_AccOffshore",_nb];
