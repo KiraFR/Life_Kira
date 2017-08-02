@@ -60,8 +60,8 @@ switch (_filter) do
 		{
 			_ret pushBack ["KronosD_Police_cap_01",nil,10];
 			_ret pushBack ["KronosD_Police_cap_02",nil,10];
-			_ret pushBack ["KronosD_Police_01",nil,10];
-			_ret pushBack ["KronosD_Police_02",nil,10];
+			_ret pushBack ["KronosD_Police_MilCap_Noir",nil,10];
+			_ret pushBack ["KronosD_Police_MilCap_Blanc",nil,10];
 		};
 		if(__GETC__(life_coplevel) == 3) then
 		{
@@ -101,6 +101,7 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 1) then
 		{
+			_ret pushBack ["KronosD_POLICE_vest_01",nil,1000];
 			_ret pushBack ["KronosD_POLICE_vest_02",nil,1000];
 		};
 
