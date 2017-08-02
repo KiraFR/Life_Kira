@@ -7,7 +7,7 @@
     Description:
     Saves the players gear for syncing to the database for persistence..
 */
-private["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_uni","_ves","_bag","_handled"];
+private["_return","_uItems","_bItems","_vItems","_pItems","_hItems","_sItems","_yItems","_uMags","_vMags","_bMags","_pMag","_hMag","_sMag","_uni","_ves","_bag","_handled"];
 _return = [];
 
 _return pushBack uniform player;
@@ -18,6 +18,7 @@ _return pushBack headgear player;
 _return pushBack assignedITems player;
 _return pushBack primaryWeapon player;
 _return pushBack handgunWeapon player;
+
 _uItems = [];
 _uMags  = [];
 _bItems = [];
@@ -26,6 +27,7 @@ _vItems = [];
 _vMags  = [];
 _pItems = [];
 _hItems = [];
+_sItems = [];
 _yItems = [];
 _uni = [];
 _ves = [];
@@ -118,6 +120,33 @@ if(count (handgunMagazine player) > 0 && alive player) then
     };
 };
 
+if(count (secondaryWeaponMagazine player) > 0 && alive player) then
+{
+    _sMag = ((secondaryWeaponMagazine player) select 0);
+    if(_sMag != "") then
+    {
+        _uni = player canAddItemToUniform _sMag;
+        _ves = player canAddItemToVest _sMag;
+        _bag = player canAddItemToBackpack _sMag;
+        _handled = false;
+        if(_ves) then
+        {
+            _vMags = _vMags + [_sMag];
+            _handled = true;
+        };
+        if(_uni && !_handled) then
+        {
+            _uMags = _uMags + [_sMag];
+            _handled = true;
+        };
+        if(_bag && !_handled) then
+        {
+            _bMags = _bMags + [_sMag];
+            _handled = true;
+        };
+    };
+};
+
 if(count (primaryWeaponItems player) > 0) then
 {
     {
@@ -132,6 +161,13 @@ if(count (handGunItems player) > 0) then
     } forEach (handGunItems player);
 };
 
+if(count (secondaryWeaponItems player) > 0) then
+{
+    {
+        _sItems = _sItems + [_x];
+    } forEach (secondaryWeaponItems player);
+};
+
 {
     _name = (_x select 0);
     _val = (_x select 1);
@@ -141,7 +177,7 @@ if(count (handGunItems player) > 0) then
         };
     };
 } forEach [
-    ["life_inv_orange",life_inv_orange],
+        ["life_inv_orange",life_inv_orange],
     ["life_inv_peche",life_inv_peche],
     ["life_inv_eau",life_inv_eau],
     ["life_inv_Jus_Multifruit",life_inv_Jus_Multifruit],
@@ -205,5 +241,8 @@ _return pushBack _vMags;
 _return pushBack _pItems;
 _return pushBack _hItems;
 _return pushBack _yItems;
+_return pushBack _sItems;
+_return pushBack secondaryWeapon player;
+
 
 life_gear = _return;
