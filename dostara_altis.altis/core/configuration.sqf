@@ -96,7 +96,6 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 CONSTANT(life_paycheck_period,15);
-CASH = 150;
 CONSTANT(life_impound_car,350);
 CONSTANT(life_impound_boat,250);
 CONSTANT(life_impound_air,850);
@@ -110,17 +109,17 @@ switch (playerSide) do
 	case west:
 	{
 		BANK = 0; //Starting Bank Money
-		CASH = 150; //Starting Cash Money
+		CASH = 300; //Starting Cash Money
 	};
 	case civilian:
 	{
 		BANK = 0; //Starting Bank Money
-		CASH = 150; //Starting Cash Money
+		CASH = 300; //Starting Cash Money
 	};
 
 	case independent: {
 		BANK = 0; //Starting Cash Money
-		CASH = 150;
+		CASH = 300;
 	};
 };
 

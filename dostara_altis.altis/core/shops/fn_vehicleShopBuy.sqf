@@ -11,7 +11,7 @@ if((lbCurSel 2302) == -1) exitWith {hint localize "STR_Shop_Veh_DidntPick"};
 _className = getSelData(2302);
 _vIndex = getSelValue(2302);
 _vehicleList = [life_veh_shop select 0] call life_fnc_vehicleListCfg; _basePrice = (_vehicleList select _vIndex) select 1;
- if(_mode) then {_basePrice = round(_basePrice * 1.5)};
+_basePrice = round(_basePrice * 1.5);
 _colorIndex = getSelValue(2304);
 
 //Series of checks (YAY!)
@@ -88,11 +88,9 @@ _vehicle allowDamage true;
 
 //life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 life_vehicles pushBack _vehicle;
+
 [getPlayerUID player,playerSide,_vehicle,1] RemoteExecCall ["TON_fnc_keyManagement",2];
-_coloveh = [_className,(_vehicle getVariable "Life_VEH_color")] call life_fnc_vehicleColorStr;
-if(isNil "_coloveh") then{
-	_coloveh = "Aucune";
-};
+
 [(getPlayerUID player),playerSide,_vehicle,_colorIndex] RemoteExecCall ["TON_fnc_vehicleCreate",2];
 [0] call SOCK_fnc_updatePartial;
 closeDialog 0; //Exit the menu.

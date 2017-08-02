@@ -338,7 +338,6 @@ class Life_Client_Core
 		class vehicleShopMenuCop {};
 		class vehicleShopLBChange {};
 		class vehicleShopBuy {};
-		class vehicleShopBuyCop {};
 		class weaponShopFilter {};
 		class weaponShopMenu {};
 		class weaponShopSelection {};
