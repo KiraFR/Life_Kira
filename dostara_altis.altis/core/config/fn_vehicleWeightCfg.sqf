@@ -53,5 +53,6 @@ switch (_className) do
 	case "ivory_m3": {30};
 	case "ivory_lfa": {30};
 	case "ivory_wrx": {30};
+	case "dh2o_smart": {10};
 	default {-1};
 };

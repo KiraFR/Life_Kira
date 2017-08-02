@@ -5,7 +5,7 @@
 	Main functionality for gathering.
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
-private["_gather","_itemWeight","_diff","_itemName","_val","_ressourceZones","_zone","_object"];
+private["_gather","_itemWeight","_diff","_itemName","_val","_ressourceZones","_zone","_object","_hasObject"];
 _ressourceZones = ["apple_1","apple_2","apple_3","apple_4","heroin_1","cocaine_1","weed_1","opium_1","wine_1","wine_2","Ress_Orange_01","Ress_Orange_02","Ress_Pêche_01","Ress_Pêche_02",
 					"Ress_Pomme_01","Ress_Pomme_02","Ress_Raisin_01","Ress_Raisin_02","Ress_Alu_01","Ress_Alu_02","Ress_Argent_01","Ress_Bois_01","Ress_Bois_02","Ress_Bois_03","Ress_Bois_04",
 					"Ress_Charbon_01","Ress_Charbon_02","Ress_Calcaire_01","Ress_Calcaire_02","Ress_Cuivre_01","Ress_Fer_01","Ress_Fer_02","Ress_Petrole_01","Ress_PP_01","Ress_Sable_01",
@@ -15,7 +15,7 @@ _zone = "";
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } forEach _ressourceZones;
-
+_hasObject = true;
 if(_zone == "") exitWith {
 	life_action_inUse = false;
 };
@@ -42,11 +42,14 @@ switch(true) do {
 if(vehicle player != player) exitWith {};
 if(_val == 0) exitWith{hint "Votre récolte n'est pas bonne, vous avez jeté ce que vous avez recolté.";};
 
+
+
 if (!(_object == "")) then {
     _var = [_object,0] call life_fnc_varHandle;
-    if((missionNamespace getVariable _var) <= 0) exitWith{hint format["Vous n'avez pas de %1 pour récolter la ressource : %2.",_object,_gather];};
+    if((missionNamespace getVariable _var) <= 0) exitWith{_hasObject = false;};
 };
 
+if(!_hasObject)exitWith{hint format["Vous n'avez pas de %1 pour récolter la ressource : %2.",_object,_gather];};
 _diff = [_gather,_val,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 if(_diff == 0) exitWith {hint localize "STR_NOTF_InvFull"};
 life_action_inUse = true;
@@ -58,7 +61,7 @@ for "_i" from 0 to 2 do
 	sleep 2.5;
 };
 
-if(([true,_gather,_diff] call life_fnc_handleInv)) then
+if([true,_gather,_diff] call life_fnc_handleInv) then
 {
 	_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 	titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
