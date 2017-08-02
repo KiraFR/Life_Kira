@@ -9,16 +9,12 @@ private["_handle"];
 _handle = [] spawn life_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-player addUniform "U_Rangemaster";
-player addItem "FirstAidKit";
-player addItem "FirstAidKit";
+player addUniform "Kronos_Medic_01";
+player addHeadgear "KronosD_Medic_BBLEU";
 player addItem "ItemMap";
 player assignItem "ItemMap";
 player addItem "ItemCompass";
 player assignItem "ItemCompass";
 player addItem "ItemWatch";
 player assignItem "ItemWatch";
-
-[player,0,"textures\medic_uniform.jpg"] RemoteExecCall ["life_fnc_setTexture",0];
-
 [] call life_fnc_saveGear;
