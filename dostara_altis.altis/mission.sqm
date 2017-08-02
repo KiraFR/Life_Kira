@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3478;
+		nextID=3482;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=392;
+		nextID=444;
 	};
 	class Camera
 	{
-		pos[]={23223.232,38.41,20027.953};
-		dir[]={-0.85561854,-0.51330703,-0.0666444};
-		up[]={-0.51175827,0.8582015,-0.039860938};
-		aside[]={-0.077655077,3.8853614e-009,0.99698234};
+		pos[]={8417.3672,130.6015,25236.561};
+		dir[]={0.49661428,-0.68222833,-0.53666419};
+		up[]={0.46337712,0.73111427,-0.50074756};
+		aside[]={-0.73398787,-2.5815098e-007,-0.67921299};
 	};
 };
 binarizationWanted=0;
@@ -392,7 +392,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=6;
+		items=7;
 		class Item0
 		{
 			dataType="Group";
@@ -55754,7 +55754,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[""Reserve du GDO"",life_fnc_weaponShopMenu,""cop_gdo"",' vehicle player == player && player distance _target < 4 ']}";
+						init="call{this addAction[""<t color='#8A0707'>Réserve du GDO</t>"",life_fnc_weaponShopMenu,""cop_gdo"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 ']}";
 						disableSimulation=1;
 					};
 					id=2461;
@@ -56409,7 +56409,7 @@ class Mission
 					};
 					id=2071;
 					type="Fridge_01_closed_F";
-					atlOffset=-0.041000366;
+					atlOffset=-0.040999413;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -57230,7 +57230,7 @@ class Mission
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.05755806;
+									atlOffset=0.057557106;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57395,7 +57395,7 @@ class Mission
 									};
 									id=663;
 									type="C_man_polo_1_F_euro";
-									atlOffset=0.00040912628;
+									atlOffset=0.00041007996;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -61757,8 +61757,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8446.5459,83.457657,25236.496};
-										angles[]={6.2818937,0.29628709,0.24560273};
+										position[]={8445.1104,83.373108,25235.18};
+										angles[]={0.12074353,0.29628709,0.12730782};
 									};
 									side="Civilian";
 									flags=6;
@@ -61766,12 +61766,11 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_1";
-										description="Civ 1";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=486;
 									type="C_man_1";
-									atlOffset=7.6293945e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -61820,7 +61819,6 @@ class Mission
 							{
 							};
 							id=485;
-							atlOffset=7.6293945e-006;
 						};
 						class Item1
 						{
@@ -61834,8 +61832,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8448.6963,83.99556,25235.621};
-										angles[]={6.2818937,0.51037616,0.2456056};
+										position[]={8447.2607,83.754578,25234.305};
+										angles[]={0.12074353,0.51037616,0.12730782};
 									};
 									side="Civilian";
 									flags=6;
@@ -61843,7 +61841,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_2";
-										description="Civ 2";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=488;
@@ -61867,8 +61865,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8450.8818,84.54142,25234.168};
-										angles[]={6.2818937,0.29627663,0.2456056};
+										position[]={8449.4463,84.210701,25232.852};
+										angles[]={0.12074353,0.29627663,0.12730782};
 									};
 									side="Civilian";
 									flags=6;
@@ -61876,7 +61874,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_3";
-										description="Civ 3";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=490;
@@ -61900,8 +61898,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8452.584,84.954285,25232.859};
-										angles[]={6.2818484,0.51037616,0.10758245};
+										position[]={8451.1484,84.604706,25231.543};
+										angles[]={6.2818937,0.51037616,0.2456056};
 									};
 									side="Civilian";
 									flags=6;
@@ -61909,7 +61907,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_4";
-										description="Civ 4";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=492;
@@ -61933,8 +61931,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8455.1162,85.225624,25231.242};
-										angles[]={6.2818484,0.29627663,0.10758245};
+										position[]={8453.6807,85.041435,25229.926};
+										angles[]={6.0653634,0.29627663,0.10758245};
 									};
 									side="Civilian";
 									flags=6;
@@ -61942,7 +61940,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_5";
-										description="Civ 5";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=494;
@@ -61966,7 +61964,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.8975,83.403572,25234.66};
+										position[]={8443.4619,83.304909,25233.344};
 										angles[]={0.12074402,0.29628009,0.17809302};
 									};
 									side="Civilian";
@@ -61975,7 +61973,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_6";
-										description="Civ 6";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=496;
@@ -61999,7 +61997,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8447.9111,83.974861,25233.176};
+										position[]={8446.4756,83.950844,25231.859};
 										angles[]={0.12074353,0.51037616,0.12730782};
 									};
 									side="Civilian";
@@ -62008,7 +62006,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_7";
-										description="Civ 7";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=498;
@@ -62032,7 +62030,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8450.0967,84.430763,25231.723};
+										position[]={8448.6611,84.406761,25230.406};
 										angles[]={0.12074353,0.29627663,0.12730782};
 									};
 									side="Civilian";
@@ -62041,7 +62039,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_8";
-										description="Civ 8";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=500;
@@ -62065,8 +62063,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8452.1455,84.871216,25230.254};
-										angles[]={0.12074353,0.51037616,0.12730782};
+										position[]={8450.71,84.616013,25228.938};
+										angles[]={6.1967349,0.51037616,0.12730736};
 									};
 									side="Civilian";
 									flags=6;
@@ -62074,7 +62072,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_9";
-										description="Civ 9";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=502;
@@ -62098,8 +62096,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8454.3311,84.861992,25228.797};
-										angles[]={6.0653634,0.29627663,0.10758245};
+										position[]={8452.8955,84.70826,25227.48};
+										angles[]={6.1967349,0.29627663,6.256525};
 									};
 									side="Civilian";
 									flags=6;
@@ -62107,7 +62105,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_10";
-										description="Civ 10";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=504;
@@ -62131,8 +62129,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.1318,83.448639,25233.152};
-										angles[]={0.12074402,0.29628009,0.17809302};
+										position[]={8442.6963,83.35894,25231.836};
+										angles[]={0.13778827,0.29628009,0.1612542};
 									};
 									side="Civilian";
 									flags=6;
@@ -62140,7 +62138,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_11";
-										description="Civ 11";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=506;
@@ -62164,7 +62162,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8447.1455,84.059738,25231.668};
+										position[]={8445.71,84.035721,25230.352};
 										angles[]={0.12074353,0.51037616,0.12730782};
 									};
 									side="Civilian";
@@ -62173,7 +62171,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_12";
-										description="Civ 12";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=508;
@@ -62197,8 +62195,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8449.3311,84.515862,25230.215};
-										angles[]={0.12074353,0.29627663,0.12730782};
+										position[]={8447.8955,84.252296,25228.898};
+										angles[]={6.1967349,0.29627663,0.12730736};
 									};
 									side="Civilian";
 									flags=6;
@@ -62206,7 +62204,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_13";
-										description="Civ 13";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=510;
@@ -62230,7 +62228,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8451.3799,84.684822,25228.742};
+										position[]={8449.9443,84.386971,25227.426};
 										angles[]={6.1967349,0.51037616,0.12730736};
 									};
 									side="Civilian";
@@ -62239,7 +62237,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_14";
-										description="Civ 14";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=512;
@@ -62263,8 +62261,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8453.5654,84.673721,25227.289};
-										angles[]={6.1967349,0.29627663,6.256525};
+										position[]={8452.1299,84.540855,25225.973};
+										angles[]={6.1967349,0.29627663,0.12730736};
 									};
 									side="Civilian";
 									flags=6;
@@ -62272,7 +62270,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_15";
-										description="Civ 15";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=514;
@@ -62296,7 +62294,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8442.8584,83.393929,25231.773};
+										position[]={8441.4229,83.342972,25230.457};
 										angles[]={0.13778827,0.29628009,0.1612542};
 									};
 									side="Civilian";
@@ -62305,7 +62303,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_16";
-										description="Civ 16";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=516;
@@ -62329,8 +62327,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8445.8701,84.064232,25230.285};
-										angles[]={0.12074353,0.51037616,0.12730782};
+										position[]={8444.4346,84.009109,25228.969};
+										angles[]={0.11021759,0.51037616,0.16125457};
 									};
 									side="Civilian";
 									flags=6;
@@ -62338,7 +62336,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_17";
-										description="Civ 17";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=518;
@@ -62362,8 +62360,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8448.0557,84.26709,25228.832};
-										angles[]={6.1967349,0.29627663,0.12730736};
+										position[]={8446.6201,84.149544,25227.516};
+										angles[]={0.11021759,0.29627663,6.213963};
 									};
 									side="Civilian";
 									flags=6;
@@ -62371,7 +62369,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_18";
-										description="Civ 18";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=520;
@@ -62395,8 +62393,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8450.1045,84.402077,25227.363};
-										angles[]={6.1967349,0.51037616,0.12730736};
+										position[]={8448.6689,84.169998,25226.047};
+										angles[]={0.11021759,0.51037616,6.213963};
 									};
 									side="Civilian";
 									flags=6;
@@ -62404,7 +62402,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_19";
-										description="Civ 19";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=522;
@@ -62428,7 +62426,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8452.29,84.555489,25225.906};
+										position[]={8450.8545,84.257637,25224.59};
 										angles[]={6.1967349,0.29627663,0.12730736};
 									};
 									side="Civilian";
@@ -62437,7 +62435,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_20";
-										description="Civ 20";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=524;
@@ -62461,8 +62459,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8441.9443,83.425323,25230.477};
-										angles[]={0.13778827,0.29628009,0.1612542};
+										position[]={8440.5088,83.349442,25229.16};
+										angles[]={0.11021759,0.29628009,0.16125457};
 									};
 									side="Civilian";
 									flags=6;
@@ -62470,7 +62468,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_21";
-										description="Civ 21";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=526;
@@ -62494,7 +62492,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.9561,84.091217,25228.992};
+										position[]={8443.5205,84.003403,25227.676};
 										angles[]={0.11021759,0.51037616,0.16125457};
 									};
 									side="Civilian";
@@ -62503,7 +62501,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_22";
-										description="Civ 22";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=528;
@@ -62527,7 +62525,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8447.1416,84.11113,25227.535};
+										position[]={8445.7061,84.356354,25226.219};
 										angles[]={0.11021759,0.29627663,6.213963};
 									};
 									side="Civilian";
@@ -62536,7 +62534,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_23";
-										description="Civ 23";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=530;
@@ -62560,8 +62558,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8449.1904,84.172775,25226.066};
-										angles[]={6.1967349,0.51037616,0.12730736};
+										position[]={8447.7549,84.376808,25224.75};
+										angles[]={0.11021759,0.51037616,6.213963};
 									};
 									side="Civilian";
 									flags=6;
@@ -62569,7 +62567,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_24";
-										description="Civ 24";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=532;
@@ -62593,8 +62591,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8451.376,84.3265,25224.613};
-										angles[]={6.1967349,0.29627663,0.12730736};
+										position[]={8449.9404,84.386185,25223.297};
+										angles[]={0.11021759,0.29627663,6.213963};
 									};
 									side="Civilian";
 									flags=6;
@@ -62602,7 +62600,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_25";
-										description="Civ 25";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=534;
@@ -62626,7 +62624,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8441.1357,83.409515,25229.539};
+										position[]={8439.7002,83.321693,25228.223};
 										angles[]={0.11021759,0.29628009,0.16125457};
 									};
 									side="Civilian";
@@ -62635,7 +62633,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_26";
-										description="Civ 26";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=536;
@@ -62659,7 +62657,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.1494,84.063766,25228.055};
+										position[]={8442.7139,83.975945,25226.738};
 										angles[]={0.11021759,0.51037616,0.16125457};
 									};
 									side="Civilian";
@@ -62668,7 +62666,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_27";
-										description="Civ 27";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=538;
@@ -62692,8 +62690,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8446.335,84.270393,25226.602};
-										angles[]={0.11021759,0.29627663,6.213963};
+										position[]={8444.8994,84.49247,25225.285};
+										angles[]={0.11021759,0.29627663,0.16125457};
 									};
 									side="Civilian";
 									flags=6;
@@ -62701,7 +62699,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_28";
-										description="Civ 28";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=540;
@@ -62725,7 +62723,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8448.3838,84.291313,25225.129};
+										position[]={8446.9482,84.536545,25223.813};
 										angles[]={0.11021759,0.51037616,6.213963};
 									};
 									side="Civilian";
@@ -62734,7 +62732,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_29";
-										description="Civ 29";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=542;
@@ -62758,8 +62756,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8450.5693,84.300629,25223.676};
-										angles[]={0.11021759,0.29627663,6.213963};
+										position[]={8449.1338,84.541283,25222.359};
+										angles[]={0.086451322,0.29627663,6.213963};
 									};
 									side="Civilian";
 									flags=6;
@@ -62767,7 +62765,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_30";
-										description="Civ 30";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=544;
@@ -62791,8 +62789,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8440.2686,83.407143,25228.285};
-										angles[]={0.11021759,0.29628009,0.16125457};
+										position[]={8438.833,83.461189,25226.969};
+										angles[]={0.18969083,0.29628009,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -62800,7 +62798,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_31";
-										description="Civ 31";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=546;
@@ -62824,8 +62822,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8443.2803,84.061638,25226.797};
-										angles[]={0.11021759,0.51037616,0.16125457};
+										position[]={8441.8447,83.991989,25225.48};
+										angles[]={0.18969083,0.51037616,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -62833,7 +62831,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_32";
-										description="Civ 32";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=548;
@@ -62857,8 +62855,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8445.4658,84.46991,25225.344};
-										angles[]={0.11021759,0.29627663,6.213963};
+										position[]={8444.0303,84.490196,25224.027};
+										angles[]={0.11021759,0.29627663,0.16125457};
 									};
 									side="Civilian";
 									flags=6;
@@ -62866,7 +62864,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_33";
-										description="Civ 33";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=550;
@@ -62890,7 +62888,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8447.5146,84.490364,25223.875};
+										position[]={8446.0791,84.735588,25222.559};
 										angles[]={0.11021759,0.51037616,6.213963};
 									};
 									side="Civilian";
@@ -62899,7 +62897,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_34";
-										description="Civ 34";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=552;
@@ -62923,7 +62921,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8449.7002,84.496979,25222.418};
+										position[]={8448.2646,84.710609,25221.102};
 										angles[]={0.086451322,0.29627663,6.213963};
 									};
 									side="Civilian";
@@ -62932,7 +62930,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_35";
-										description="Civ 35";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=554;
@@ -62956,7 +62954,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8439.1416,83.605179,25226.352};
+										position[]={8437.7061,83.740852,25225.035};
 										angles[]={0.18969083,0.29628009,0.081154868};
 									};
 									side="Civilian";
@@ -62965,7 +62963,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_36";
-										description="Civ 36";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=556;
@@ -62989,7 +62987,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8442.1553,84.135712,25224.863};
+										position[]={8440.7197,84.271721,25223.547};
 										angles[]={0.18969083,0.51037616,0.081154868};
 									};
 									side="Civilian";
@@ -62998,7 +62996,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_37";
-										description="Civ 37";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=558;
@@ -63022,8 +63020,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.3408,84.608978,25223.41};
-										angles[]={0.11021759,0.29627663,0.16125457};
+										position[]={8442.9053,84.743195,25222.094};
+										angles[]={0.22036278,0.29627663,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -63031,7 +63029,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_38";
-										description="Civ 38";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=560;
@@ -63055,8 +63053,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8446.3896,84.767769,25221.941};
-										angles[]={0.086451322,0.51037616,6.213963};
+										position[]={8444.9541,85.238792,25220.625};
+										angles[]={0.22036278,0.51037616,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -63064,7 +63062,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_39";
-										description="Civ 39";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=562;
@@ -63088,8 +63086,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8448.5752,84.7425,25220.484};
-										angles[]={0.086451322,0.29627663,6.213963};
+										position[]={8447.1396,85.126633,25219.168};
+										angles[]={0.2203625,0.29627663,6.0793886};
 									};
 									side="Civilian";
 									flags=6;
@@ -63097,7 +63095,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_40";
-										description="Civ 40";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=564;
@@ -63121,8 +63119,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8437.5088,83.884026,25224.207};
-										angles[]={0.18969083,0.51037616,0.081154868};
+										position[]={8436.0732,83.839211,25222.891};
+										angles[]={0.15214851,0.51037616,0.2140051};
 									};
 									side="Civilian";
 									flags=6;
@@ -63130,7 +63128,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_41";
-										description="Civ 41";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=566;
@@ -63154,8 +63152,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8440.1025,84.355133,25222.852};
-										angles[]={0.18969083,0.51037616,0.081154868};
+										position[]={8438.667,84.523605,25221.535};
+										angles[]={0.22036278,0.51037616,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -63163,7 +63161,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_42";
-										description="Civ 42";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=568;
@@ -63187,7 +63185,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8442.9678,84.91732,25221.34};
+										position[]={8441.5322,85.095467,25220.023};
 										angles[]={0.22036278,0.51037616,0.081154868};
 									};
 									side="Civilian";
@@ -63196,7 +63194,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_43";
-										description="Civ 43";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=570;
@@ -63220,8 +63218,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8445.0967,85.348373,25220.063};
-										angles[]={0.2203625,0.51037616,6.0793886};
+										position[]={8443.6611,85.554474,25218.746};
+										angles[]={0.22036278,0.51037616,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -63229,7 +63227,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_44";
-										description="Civ 44";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=572;
@@ -63253,7 +63251,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8447.5361,85.17308,25218.594};
+										position[]={8446.1006,85.764664,25217.277};
 										angles[]={0.2203625,0.51037616,6.0793886};
 									};
 									side="Civilian";
@@ -63262,7 +63260,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_45";
-										description="Civ 45";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=574;
@@ -63286,7 +63284,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8436.2666,83.967125,25222.449};
+										position[]={8434.8311,84.095734,25221.133};
 										angles[]={0.32295048,0.51037616,0.21400481};
 									};
 									side="Civilian";
@@ -63295,7 +63293,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_46";
-										description="Civ 46";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=576;
@@ -63319,8 +63317,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8438.8604,84.648697,25221.094};
-										angles[]={0.3229503,0.51037616,6.253859};
+										position[]={8437.4248,85.112892,25219.777};
+										angles[]={0.32295048,0.51037616,0.21400481};
 									};
 									side="Civilian";
 									flags=6;
@@ -63328,7 +63326,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_47";
-										description="Civ 47";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=578;
@@ -63352,8 +63350,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8441.7256,85.208794,25219.586};
-										angles[]={0.22036278,0.51037616,0.081154868};
+										position[]={8440.29,85.551682,25218.27};
+										angles[]={0.3229503,0.51037616,6.253859};
 									};
 									side="Civilian";
 									flags=6;
@@ -63361,7 +63359,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_48";
-										description="Civ 48";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=580;
@@ -63385,8 +63383,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8443.8545,85.668205,25218.309};
-										angles[]={0.22036278,0.51037616,0.081154868};
+										position[]={8442.4189,85.916969,25216.992};
+										angles[]={0.3229503,0.51037616,6.253859};
 									};
 									side="Civilian";
 									flags=6;
@@ -63394,7 +63392,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_49";
-										description="Civ 49";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=582;
@@ -63418,8 +63416,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8446.2939,85.823586,25216.836};
-										angles[]={0.2203625,0.51037616,6.0793886};
+										position[]={8444.8584,86.374565,25215.52};
+										angles[]={0.22036278,0.51037616,0.081154868};
 									};
 									side="Civilian";
 									flags=6;
@@ -63427,7 +63425,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_50";
-										description="Civ 50";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=584;
@@ -63451,7 +63449,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8435.0771,84.195824,25220.992};
+										position[]={8433.6416,84.324432,25219.676};
 										angles[]={0.32295048,0.51037616,0.21400481};
 									};
 									side="Civilian";
@@ -63460,7 +63458,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_51";
-										description="Civ 51";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=586;
@@ -63484,8 +63482,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8437.6709,85.171371,25219.637};
-										angles[]={0.3229503,0.51037616,6.253859};
+										position[]={8436.2354,85.342209,25218.32};
+										angles[]={0.32295048,0.51037616,0.21400481};
 									};
 									side="Civilian";
 									flags=6;
@@ -63493,7 +63491,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_52";
-										description="Civ 52";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=588;
@@ -63517,7 +63515,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8440.5361,85.592865,25218.125};
+										position[]={8439.1006,86.075569,25216.809};
 										angles[]={0.3229503,0.51037616,6.253859};
 									};
 									side="Civilian";
@@ -63526,7 +63524,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_53";
-										description="Civ 53";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=590;
@@ -63550,7 +63548,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8442.667,85.958107,25216.848};
+										position[]={8441.2314,86.440811,25215.531};
 										angles[]={0.3229503,0.51037616,6.253859};
 									};
 									side="Civilian";
@@ -63559,7 +63557,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_54";
-										description="Civ 54";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=592;
@@ -63583,8 +63581,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8445.1064,86.39547,25215.379};
-										angles[]={0.2203625,0.51037616,6.0793886};
+										position[]={8443.6709,86.973877,25214.063};
+										angles[]={0.42229962,0.51037616,6.253861};
 									};
 									side="Civilian";
 									flags=6;
@@ -63592,7 +63590,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_55";
-										description="Civ 55";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=594;
@@ -63616,7 +63614,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8444.0127,86.991829,25214};
+										position[]={8442.5771,87.625496,25212.684};
 										angles[]={0.42229962,0.51037616,6.253861};
 									};
 									side="Civilian";
@@ -63625,7 +63623,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_56";
-										description="Civ 56";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=596;
@@ -63649,8 +63647,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8441.3779,86.487373,25215.379};
-										angles[]={0.3229503,0.51037616,6.253859};
+										position[]={8439.9424,87.08326,25214.063};
+										angles[]={0.42229962,0.51037616,6.253861};
 									};
 									side="Civilian";
 									flags=6;
@@ -63658,7 +63656,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_57";
-										description="Civ 57";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=598;
@@ -63682,7 +63680,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8439.4346,86.043716,25216.875};
+										position[]={8437.999,86.526421,25215.559};
 										angles[]={0.3229503,0.51037616,6.253859};
 									};
 									side="Civilian";
@@ -63691,7 +63689,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_58";
-										description="Civ 58";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=600;
@@ -63715,8 +63713,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8436.8018,85.542587,25218.09};
-										angles[]={0.32295048,0.51037616,0.21400481};
+										position[]={8435.3662,85.681473,25216.773};
+										angles[]={0.34673536,0.51037616,0.18840532};
 									};
 									side="Civilian";
 									flags=6;
@@ -63724,7 +63722,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_59";
-										description="Civ 59";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=602;
@@ -63748,8 +63746,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8433.6416,84.285217,25219.793};
-										angles[]={0.32295048,0.51037616,0.21400481};
+										position[]={8432.2061,84.463577,25218.477};
+										angles[]={0.34673536,0.51037616,0.18840532};
 									};
 									side="Civilian";
 									flags=6;
@@ -63757,7 +63755,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_60";
-										description="Civ 60";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=604;
@@ -63781,8 +63779,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8442.9873,87.648857,25212.605};
-										angles[]={0.42229986,0.51036918,6.2538638};
+										position[]={8441.5518,88.282516,25211.289};
+										angles[]={0.42229962,0.51036918,6.253861};
 									};
 									side="Civilian";
 									flags=6;
@@ -63790,12 +63788,11 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_61";
-										description="Civ 61";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=606;
 									type="C_man_1_3_F";
-									atlOffset=7.6293945e-006;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -63844,7 +63841,6 @@ class Mission
 							{
 							};
 							id=605;
-							atlOffset=7.6293945e-006;
 						};
 						class Item61
 						{
@@ -63858,8 +63854,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8440.3135,87.070702,25214.066};
-										angles[]={0.42229962,0.51037616,6.253861};
+										position[]={8438.8779,87.791565,25212.75};
+										angles[]={0.49822527,0.51037616,6.1598153};
 									};
 									side="Civilian";
 									flags=6;
@@ -63867,7 +63863,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_62";
-										description="Civ 62";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=608;
@@ -63891,8 +63887,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8438.3682,86.553596,25215.445};
-										angles[]={0.3229503,0.51037616,6.253859};
+										position[]={8436.9326,87.104424,25214.129};
+										angles[]={0.49822512,0.51037616,0.18840532};
 									};
 									side="Civilian";
 									flags=6;
@@ -63900,7 +63896,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_63";
-										description="Civ 63";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=610;
@@ -63924,7 +63920,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8435.8291,85.840416,25216.578};
+										position[]={8434.3936,86.042404,25215.262};
 										angles[]={0.34673536,0.51037616,0.18840532};
 									};
 									side="Civilian";
@@ -63933,7 +63929,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_64";
-										description="Civ 64";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=612;
@@ -63957,7 +63953,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8432.5869,84.568619,25218.387};
+										position[]={8431.1514,84.770607,25217.07};
 										angles[]={0.34673536,0.51037616,0.18840532};
 									};
 									side="Civilian";
@@ -63966,7 +63962,7 @@ class Mission
 									{
 										skill=0.60000002;
 										name="civ_65";
-										description="Civ 65";
+										description="Citoyen";
 										isPlayable=1;
 									};
 									id=614;
@@ -63991,7 +63987,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={8464.2949,85.231827,25217.971};
-										angles[]={0.062584557,6.2545614,0.19611399};
+										angles[]={0.062587507,6.2545614,0.19612266};
 									};
 									side="Civilian";
 									flags=6;
@@ -64004,6 +64000,48 @@ class Mission
 									};
 									id=616;
 									type="C_man_1_3_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03GRE";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=2;
+									};
 								};
 							};
 							class Attributes
@@ -65002,7 +65040,7 @@ class Mission
 						};
 					};
 					id=3154;
-					atlOffset=7.2907658;
+					atlOffset=7.2907696;
 				};
 				class Item1
 				{
@@ -65024,7 +65062,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={8424.9258,99.932129,25177.275};
-										angles[]={0.26681554,3.2307963,6.2073312};
+										angles[]={0.26680848,3.2307963,6.2073331};
 									};
 									side="Independent";
 									flags=6;
@@ -65037,6 +65075,48 @@ class Mission
 									};
 									id=714;
 									type="I_soldier_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male03GRE";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=0.98000002;
+												};
+											};
+										};
+										nAttributes=2;
+									};
 								};
 								class Item1
 								{
@@ -65504,8 +65584,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={8601.626,94.401619,25109.566};
-										angles[]={0.057271164,4.98035,5.8608866};
+										position[]={8601.626,94.401627,25109.566};
+										angles[]={0.05726425,4.9803491,5.8608851};
 									};
 									side="West";
 									flags=4;
@@ -65519,6 +65599,49 @@ class Mission
 									};
 									id=484;
 									type="B_medic_F";
+									atlOffset=7.6293945e-006;
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="speaker";
+											expression="_this setspeaker _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"STRING"
+														};
+													};
+													value="Male01ENG";
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													class type
+													{
+														type[]=
+														{
+															"SCALAR"
+														};
+													};
+													value=1.01;
+												};
+											};
+										};
+										nAttributes=2;
+									};
 								};
 							};
 							class Attributes
@@ -66571,6 +66694,79 @@ class Mission
 			};
 			id=3156;
 			atlOffset=124.40256;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={8456.6826,85.397346,25233.15};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="Civ_01";
+						description="Civil - 01";
+						isPlayable=1;
+					};
+					id=3479;
+					type="C_man_polo_1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male05GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.05;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=3478;
 		};
 	};
 };
