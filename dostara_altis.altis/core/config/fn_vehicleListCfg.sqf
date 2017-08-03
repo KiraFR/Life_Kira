@@ -63,8 +63,8 @@ switch (_shop) do
 			["ivory_gti",25833],
 			["ivory_m3",60333],
 			["ivory_lfa",383000],
-			["ivory_wrx",23335],
-			["dh2o_porsheboxter",23335]
+			["ivory_wrx",23335]/*,
+			["dh2o_porsheboxter",23335]*/
 
 		];
 	};
