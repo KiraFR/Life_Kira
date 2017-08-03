@@ -26,7 +26,7 @@ case "Cafe" : {[                1,     -1,      0,      0,      1,      0,      
 case "Tabac" : {[               1,     -1,      0,      0,      1,      0,      [["Cafe",0.5]]]};
 
 case "Saupe" : {[               1,      23,     14,     0.2,    1,      0,      [["Girelle",0.2],["Maquereau",0.2],["Thon",0.2],["Mulet",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]};
-case "Girelle" : {[             1,      19,     12,     0.4,    1,      0,      [["Saupe",0.2],["Maquereau",0.2],["Thon",0.2],["Mulet",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]}
+case "Girelle" : {[             1,      19,     12,     0.4,    1,      0,      [["Saupe",0.2],["Maquereau",0.2],["Thon",0.2],["Mulet",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]};
 case "Maquereau" : {[           1,      16,     9,      0.2,    1,      0,      [["Girelle",0.2],["Saupe",0.2],["Thon",0.2],["Mulet",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]};
 case "Thon" : {[                1,      30,     21,     0.2,    1,      0,      [["Girelle",0.2],["Maquereau",0.2],["Saupe",0.2],["Mulet",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]};
 case "Mulet" : {[               1,      20,     13,     0.4,    1,      0,      [["Girelle",0.2],["Maquereau",0.2],["Thon",0.2],["Saupe",0.2],["Roussette",0.2],["Soupe_de_poisson",0.2],["Sel",0.2],["Tortue",0.2]]]};
