@@ -101,12 +101,12 @@ while {true} do {
                             _minFor = (_resultFor select 0);
                             _maxFor = (_resultFor select 1);
                             //diag_log format["Save Object ==> Boucle de Relation ==> ressources : %1 | Max : %2 | Min : %3",_name,_maxFor,_minFor];
-                            if (_NewValueFor >= _maxFor) then {
+                            if (round(_NewValueFor) > round(_maxFor)) then {
                                 _valueNew = _maxFor;
                                 //diag_log format["Save Object ==> Boucle de Relation ==> Verification du Max ==> ressources : %1 | Value : %2 >= %3",_name,_NewValueFor,_maxFor];
                             };
 
-                            if (_NewValueFor <= _minFor) then {
+                            if (round(_NewValueFor) <= round(_minFor)) then {
                                 _valueNew = _minFor;
                                 //diag_log format["Save Object ==> Boucle de Relation ==> Verification du Min ==> ressources : %1 | Value : %2 <= %3",_name,_NewValueFor,_minFor];
                             };
