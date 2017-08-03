@@ -387,7 +387,7 @@ CONSTANT(life_weapon_shop_array,life_weapon_shop_array);
 life_garage_prices =
 [
 	["B_QuadBike_01_F",20],
-	["B_QuadBike_01_F",20],
+	["dh2o_smart",20],
 	["C_Hatchback_01_F",20],
 	["C_Offroad_01_F", 20],
 	["B_G_Offroad_01_F",20],
@@ -418,10 +418,10 @@ life_garage_sell =
 [
 	["B_Quadbike_01_F",950],
 	["dh2o_smart",150],
-	["C_Hatchback_01_F",4500],
-	["C_Offroad_01_F", 6500],
+	["C_Hatchback_01_F",1500],
+	["C_Offroad_01_F", 3200],
 	["B_G_Offroad_01_F",3500],
-	["C_SUV_01_F",15000],
+	["C_SUV_01_F",7000],
 	["C_Van_01_transport_F",25000],
 	["C_Hatchback_01_sport_F",7500],
 	["C_Van_01_fuel_F",3850],
