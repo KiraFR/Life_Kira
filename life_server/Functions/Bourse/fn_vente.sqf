@@ -43,6 +43,7 @@ if (!(isNil 'Bourse_Object')) then {
                 }else{
                     _prix = _count * _value;
                 };
+                diag_log format ["%1",_prix];
              };
         };
         Bourse_ressource_Save pushBack [_ressource,_count];

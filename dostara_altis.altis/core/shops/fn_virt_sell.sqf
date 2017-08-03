@@ -1,8 +1,8 @@
-#include "..\..\macro.h" 
+#include "..\..\macro.h"
 /*
 	File: fn_virt_sell.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Sell a virtual item to the store / shop
 */
@@ -19,4 +19,5 @@ _amount = parseNumber (_amount);
 if(_amount > (missionNameSpace getVariable _var)) exitWith {hint localize "STR_Shop_Virt_NotEnough"};
 
 _sender = player;
+diag_log 1;
 [_name,_amount,false,_sender] remoteExecCall ["bourse_fnc_vente",2];
