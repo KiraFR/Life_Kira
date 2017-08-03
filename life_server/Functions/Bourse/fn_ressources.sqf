@@ -18,7 +18,7 @@ case "Jus_de_pommes" : {[       1,      15,     10,     0.2,    1,      0,      
 case "Jus_de_raisin" : {[       1,      15,     10,     0.2,    1,      0,      [["Raisin",0.2],["Jus_Multifruit",0.2],["Vin",0.4],["Jus_de_pommes",0.2]]]};
 
 case "Cidre" : {[               1,      25,     15,     0.5,    1,      0,      [["Vin",0.1],["Biere",0.3],["Whisky",0.3]]]};
-case "Vin" : {[                 1,      25,     15      0.5,    1,      0,      [["Cidre",0.1],["Biere",0.3],["Whisky",0.3]]]};
+case "Vin" : {[                 1,      25,     15,      0.5,    1,      0,      [["Cidre",0.1],["Biere",0.3],["Whisky",0.3]]]};
 
 case "Biere" : {[               1,     -1,      0,      0,      1,      0,      [["Cidre",0.2],["Whisky",0.4]]]};
 case "Whisky" : {[              1,     -1,      0,      0,      1,      0,      [["Vin",0.2],["Biere",0.4]]]};
