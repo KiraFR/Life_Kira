@@ -3,7 +3,7 @@
 	description: none
 	returns: nothing
 */
-private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_maxFor","_minFor","_ressource_2","_Id_Object2","_valueModif","_newValueArray","_Object_Bourse","_ressource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_name"];
+private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_maxFor","_minFor","_NewValueFor","_ressource_2","_Id_Object2","_valueModif","_newValueArray","_Object_Bourse","_ressource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_name"];
 uiSleep 5;
 while {true} do {
     _ObjectLast = Bourse_ressource_Save;
