@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=513;
+	toggles=641;
 	class ItemIDProvider
 	{
 		nextID=3482;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=444;
+		nextID=470;
 	};
 	class Camera
 	{
-		pos[]={8417.3672,130.6015,25236.561};
-		dir[]={0.49661428,-0.68222833,-0.53666419};
-		up[]={0.46337712,0.73111427,-0.50074756};
-		aside[]={-0.73398787,-2.5815098e-007,-0.67921299};
+		pos[]={8399.4375,171.66304,25008.035};
+		dir[]={-0.33331478,-0.52986294,-0.77988887};
+		up[]={-0.20825186,0.8480522,-0.48726678};
+		aside[]={-0.91957498,2.9090734e-007,0.39301217};
 	};
 };
 binarizationWanted=0;
@@ -51093,7 +51093,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -54044,7 +54044,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];   " \n " " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""med_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger son Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""med_shop"",independent,""med_car_1"",""med"",""Kavala Hosptial""]];   " \n " " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [  " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""med_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger son Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=87085312;
 					};
@@ -55138,7 +55138,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_1"",independent,""med_air_1"",""med"",""Fournisseur Logistique Aerienne""]];  " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""med_air_1"";   " \n " " \n "    } " \n "];this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; " \n "this addAction[ " \n "    ""Réserve d'Héliportés"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place de l'Héliporté""]; " \n "        life_garage_sp = ""med_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique Aerienne"",life_fnc_vehicleShopMenu,[""med_air_hs"",independent,""med_air_1"",""med"",""Fournisseur Logistique Aerienne""]];  " \n " this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [                                                                     playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""med_air_1"";   " \n " " \n "    } " \n "];this addAction[""Ranger son Heliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store']; " \n "this addAction[ " \n "    ""Réserve d'Héliportés"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place de l'Héliporté""]; " \n "        life_garage_sp = ""med_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=334151;
 					};
@@ -55512,7 +55512,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 8 '];  " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
+						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_recrue"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 1 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_officier"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_sergent"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lieutenant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capitaine"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_commandant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comissaire"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 ']; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
 						disableSimulation=1;
 					};
 					id=2460;
@@ -55572,7 +55572,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 8 '];  " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
+						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_recrue"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 1 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_officier"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_sergent"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lieutenant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capitaine"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_commandant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comissaire"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 ']; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
 						disableSimulation=1;
 					};
 					id=2459;
@@ -55633,7 +55633,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 8 '];  " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
+						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_recrue"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 1 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_officier"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_sergent"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lieutenant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capitaine"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_commandant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comissaire"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 ']; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
 						disableSimulation=1;
 					};
 					id=2458;
@@ -55694,7 +55694,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_patrol"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_sergeant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_ser"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lie"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_com"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comi"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 8 '];  " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
+						init="call{this addAction[""Fournitures"",life_fnc_virt_menu,""cop"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 '];  " \n "this addAction[""Uniformes"",life_fnc_clothingMenu,""cop""];  " \n "this addAction[""Recrue"",life_fnc_weaponShopMenu,""cop_recrue"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 1 '];  " \n "this addAction[""Officier"",life_fnc_weaponShopMenu,""cop_officier"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 2 '];  " \n "this addAction[""Sergent"",life_fnc_weaponShopMenu,""cop_sergent"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 3 '];  " \n "this addAction[""Lieutenant"",life_fnc_weaponShopMenu,""cop_lieutenant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 4 '];  " \n "this addAction[""Capitaine"",life_fnc_weaponShopMenu,""cop_capitaine"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 5 '];  " \n "this addAction[""Commandant"",life_fnc_weaponShopMenu,""cop_commandant"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 6 '];  " \n "this addAction[""Commissaire"",life_fnc_weaponShopMenu,""cop_comissaire"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4  && (call life_coplevel) == 7 ']; " \n "this addAction[format[""%1 ($%2)"",[""license_cop_air""] call life_fnc_varToStr,[([""cair""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""cair"",0,false,false,"""",' !license_cop_air && playerSide == west && player distance _target < 4'];}";
 						disableSimulation=1;
 					};
 					id=2457;
@@ -55815,7 +55815,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""cop_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger le Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique"",life_fnc_vehicleShopMenu,[""cop_car"",west,""cop_car_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Véhicules de Fonction"", " \n "    {    " \n "        [ " \n "            playerSide, " \n "            ""Car"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2]; " \n " " \n "        life_garage_type = ""Car""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place du Véhicule""]; " \n "        life_garage_sp = ""cop_car_1"";   " \n " " \n "    } " \n "];  " \n " " \n "this addAction[""Ranger le Véhicule"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 						aiRadarUsage=206914;
 					};
@@ -55857,7 +55857,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{this addAction[""Fournisseur Logistique Aérienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Réserve d'Héliportés"", " \n "    {    " \n "        [ " \n "            getPlayerUID player, " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehicles"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impoundCop_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place de l'Héliporté""]; " \n "        life_garage_sp = ""cop_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
+						init="call{this addAction[""Fournisseur Logistique Aérienne"",life_fnc_vehicleShopMenu,[""cop_air"",west,""cop_air_1"",""cop"",""Police""]];  " \n " " \n "this addAction[ " \n "    ""Réserve d'Héliportés"", " \n "    {    " \n "        [ " \n "            playerSide, " \n "            ""Air"", " \n "            player " \n "        ] remoteExec [""TON_fnc_getVehiclesCop"",2]; " \n " " \n "        life_garage_type = ""Air""; " \n "        createDialog ""Life_impound_menu""; " \n "        disableSerialization; " \n "        ctrlSetText[2802,""Mise en place de l'Héliporté""]; " \n "        life_garage_sp = ""cop_air_1"";   " \n " " \n "    } " \n "]; " \n "this addAction[""Ranger son Héliporté"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];}";
 						disableSimulation=1;
 					};
 					id=1563;
@@ -57220,7 +57220,6 @@ class Mission
 										angles[]={0,4.4593339,0};
 									};
 									side="Civilian";
-									flags=4;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -57230,7 +57229,7 @@ class Mission
 									};
 									id=661;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.057557106;
+									atlOffset=0.79999924;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57714,7 +57713,7 @@ class Mission
 										angles[]={0,5.031033,0};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -57724,6 +57723,7 @@ class Mission
 									};
 									id=1366;
 									type="C_Man_casual_2_F_euro";
+									atlOffset=0.66956329;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57791,6 +57791,7 @@ class Mission
 							{
 							};
 							id=1365;
+							atlOffset=0.66956329;
 						};
 						class Item4
 						{
@@ -57808,7 +57809,7 @@ class Mission
 										angles[]={0,3.1440187,0};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -57818,7 +57819,7 @@ class Mission
 									};
 									id=1374;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.0003786087;
+									atlOffset=0.94400024;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -57886,7 +57887,7 @@ class Mission
 							{
 							};
 							id=1373;
-							atlOffset=0.0003786087;
+							atlOffset=0.94400024;
 						};
 						class Item5
 						{
@@ -58017,7 +58018,7 @@ class Mission
 										angles[]={0,0.67219484,6.2820935};
 									};
 									side="Civilian";
-									flags=6;
+									flags=2;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -58027,6 +58028,7 @@ class Mission
 									};
 									id=3360;
 									type="C_man_polo_3_F";
+									atlOffset=0.47954369;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58113,6 +58115,7 @@ class Mission
 							{
 							};
 							id=3359;
+							atlOffset=0.47954369;
 						};
 						class Item7
 						{
@@ -60159,7 +60162,7 @@ class Mission
 									};
 									id=3394;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.00048065186;
+									atlOffset=0.17200089;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -61287,6 +61290,7 @@ class Mission
 					};
 					id=3456;
 					type="Land_Atm_02_F";
+					atlOffset=0.1618824;
 					class CustomAttributes
 					{
 						class Attribute0

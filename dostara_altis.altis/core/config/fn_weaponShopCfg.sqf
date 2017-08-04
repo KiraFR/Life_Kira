@@ -75,12 +75,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_patrol":
+	case "cop_recrue":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 0): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 1): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -113,12 +113,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_sergeant":
+	case "cop_officier":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 1): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 2): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Police Officer Shop",
@@ -155,12 +155,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_ser":
+	case "cop_sergeant":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 2): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 3): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Sergent Shop",
@@ -197,12 +197,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_lie":
+	case "cop_lieutenant":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 3): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 4): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Lieutenant Shop",
@@ -239,12 +239,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_capi":
+	case "cop_capitaine":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 4): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 5): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -281,12 +281,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_com":
+	case "cop_commandant":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 5): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 6): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
@@ -323,12 +323,12 @@ switch(_shop) do
 		};
 	};
 
-	case "cop_comi":
+	case "cop_comissaire":
 	{
 		switch(true) do
 		{
 			case (playerSide != west): {"Vous n'etes pas un flic !"};
-			case (__GETC__(life_coplevel) > 6): {"Vous n'etes pas du bon niveau !"};
+			case (__GETC__(life_coplevel) isEqualTo 7): {"Vous n'etes pas du bon niveau !"};
 			default
 			{
 				["Altis Patrol Officer Shop",
