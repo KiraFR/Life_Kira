@@ -44,17 +44,16 @@ switch(playerSide) do {
 		CONSTANT(life_coplevel, parseNumber(_this select 6));
 		CONSTANT(life_medicLevel,0);
 		life_blacklisted = _this select 8;
-		_num = _this select 11;
+		_num = _this select 9;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
-		profileNamespace setVariable ["conversations",[]];
 
-		_bank = _this select 12;
+		_bank = _this select 10;
 		_nbBank = _bank select 1;
 		if(_nbBank > 0)then{[(_bank select 0)] call life_fnc_loadAccount;};
 
 
-		if(count (_this select 13) > 0) then {
-			{life_vehicles pushBack _x;} forEach (_this select 13);
+		if(count (_this select 11) > 0) then {
+			{life_vehicles pushBack _x;} forEach (_this select 11);
 		};
 	};
 
@@ -79,7 +78,6 @@ switch(playerSide) do {
 
 		_num = _this select 12;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
-		profileNamespace setVariable ["conversations",[]];
 
 		life_pPermis = _this select 13;
 		life_nbrFoisPermis = _this select 14;
@@ -106,16 +104,15 @@ switch(playerSide) do {
 		CONSTANT(life_medicLevel, parseNumber(_this select 6));
 		CONSTANT(life_coplevel,0);
 
-		_num = _this select 10;
+		_num = _this select 8;
 		if(_num != "")then{player setVariable ["phoneNumber",_num,true];};
-		profileNamespace setVariable ["conversations",[]];
 
-		_bank = _this select 11;
+		_bank = _this select 9;
 		_nbBank = _bank select 1;
 		if(_nbBank > 0)then{[(_bank select 0)] call life_fnc_loadAccount;};
 
-		if(count (_this select 12) > 0) then {
-			{life_vehicles pushBack _x;} forEach (_this select 12);
+		if(count (_this select 10) > 0) then {
+			{life_vehicles pushBack _x;} forEach (_this select 10);
 		};
 	};
 };

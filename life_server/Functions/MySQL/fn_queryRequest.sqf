@@ -78,15 +78,15 @@ switch (_side) do {
 		_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
 		if(count _numAnnuResult > 0)then {
 			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
-			_queryResult pushBack _numAnnuResult; // select 11
+			_queryResult pushBack _numAnnuResult; // select 9
 		}else{
 			_numAnnuResult = "";
-			_queryResult pushBack _numAnnuResult; // select 11
+			_queryResult pushBack _numAnnuResult; // select 9
 		};
 		_compteBanque = [_uid] call KIRA_fnc_queryAccountRequest;
-		_queryResult pushBack _compteBanque; //12
+		_queryResult pushBack _compteBanque; //10
 		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-		_queryResult pushBack _keyArr; //13
+		_queryResult pushBack _keyArr; //11
 	};
 
 	case civilian: {
@@ -148,22 +148,17 @@ switch (_side) do {
 		_numAnnuResult = [_numAnnu,2] call DB_fnc_asyncCall;
 		if(count _numAnnuResult > 0)then {
 			if(typeName _numAnnuResult == "ARRAY")then{_numAnnuResult = _numAnnuResult select 0;};
-			_queryResult pushBack _numAnnuResult; // select 10
+			_queryResult pushBack _numAnnuResult; // select 8
 		}else{
 			_numAnnuResult = format["0%1",_numAnnuResult];
-			_queryResult pushBack _numAnnuResult; // select 10
+			_queryResult pushBack _numAnnuResult; // select 8
 		};
 
 		_compteBanque = [_uid] call KIRA_fnc_queryAccountRequest;
-		_queryResult pushBack _compteBanque; //11
+		_queryResult pushBack _compteBanque; //9
 		_keyArr = missionNamespace getVariable [format["%1_KEYS_%2",_uid,_side],[]];
-		_queryResult pushBack _keyArr; //12
+		_queryResult pushBack _keyArr; //10
 	};
 };
 
-
-
-
-
-diag_log format["%1",_queryResult];
 _queryResult remoteExec ["SOCK_fnc_requestReceived",_ownerID];
