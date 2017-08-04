@@ -30,7 +30,7 @@ for "_i" from 0 to count(_licenses)-1 do {
 };
 
 switch (_side) do {
-	case west: {_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%5'",_name,_cash,_gear,_licenses,_uid];};
+	case west: {_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%6'",_name,_cash,_gear,_licenses,_uid];};
 	case civilian: {
 									_arrested = [_this select 6];
 									_civPosition = [_this select 7] call DB_fnc_mresArray;
