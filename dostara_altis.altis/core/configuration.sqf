@@ -207,6 +207,7 @@ life_licenses =
 	["license_cop_gdo","cop"],
 	["license_cop_cg","cop"],
 	["license_cop_prefet","cop"],
+	["license_med_prefet","med"],
 	["license_civ_driver","civ"],
 	["license_civ_air","civ"],
 	["license_civ_heroin","civ"],

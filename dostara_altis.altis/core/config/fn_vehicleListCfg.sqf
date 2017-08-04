@@ -24,17 +24,29 @@ switch (_shop) do
 
 	case "med_shop":
 	{
+		_return =
+		[
+		];
+		if(license_med_prefet) then
+		{
 		_return = [
 			["VL_SIM",10000],
 			["VSAV_SIM",25000]
 		];
 	};
+};
 
 	case "med_air_hs": {
+		_return =
+		[
+		];
+		if(license_med_prefet) then
+		{
 		_return = [
 			["O_Heli_Transport_04_medevac_F",50000]
 		];
 	};
+};
 
 	case "civ_car":
 	{
