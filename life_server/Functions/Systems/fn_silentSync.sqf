@@ -44,4 +44,4 @@ switch(_side) do
 
 //Execute SQL Statement
 
-_thread = [_query,false] spawn DB_fnc_asyncCall;
+_thread = [_query,2] spawn DB_fnc_asyncCall;

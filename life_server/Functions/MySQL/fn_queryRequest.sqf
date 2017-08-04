@@ -27,11 +27,11 @@ _ownerID = owner _ownerID;
 */
 _query = switch(_side) do {
 					// 10 (en partant de 0)
-	case west: {_returnCount = 10; format["SELECT playerid, name, cash, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist, position, alive FROM players WHERE playerid='%1'",_uid];};
+	case west: {_returnCount = 8; format["SELECT playerid, name, cash, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist FROM players WHERE playerid='%1'",_uid];};
 					// 9 (en partant de 0)
 	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civPosition, alive FROM players WHERE playerid='%1'",_uid];};
 					// 9 (en partant de 0)
-	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, position, alive FROM players WHERE playerid='%1'",_uid];};
+	case independent: {_returnCount = 7; format["SELECT playerid, name, cash, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear FROM players WHERE playerid='%1'",_uid];};
 };
 
 

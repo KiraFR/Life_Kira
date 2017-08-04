@@ -39,4 +39,4 @@ switch (_side) do {
 		_query = format["UPDATE players SET name='%1', cash='%2', med_licenses='%3', med_gear='%5' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear];
 	};
 };
-_queryResult = [_query,1] call DB_fnc_asyncCall;
+[_query,1] call DB_fnc_asyncCall;

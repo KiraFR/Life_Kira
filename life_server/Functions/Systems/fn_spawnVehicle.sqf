@@ -60,7 +60,7 @@ if(count _nearVehicles > 0) exitWith
 _query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
 
 
-[_query,false] spawn DB_fnc_asyncCall;
+[_query,1] spawn DB_fnc_asyncCall;
 if(typeName _sp == "STRING") then {
 	_vehicle = createVehicle[(_vInfo select 2),[0,0,999],[],0,"NONE"];
 	waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
