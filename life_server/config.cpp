@@ -122,6 +122,7 @@ class CfgFunctions
 			class keyManagement {};
 			class getVehicles_fourriere {};
 			class fourriereStore {};
+			class getVehiclesCop {};
 		};
 
 		class Housing

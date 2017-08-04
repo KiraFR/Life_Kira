@@ -1,6 +1,6 @@
 #include "\life_server\script_macros.hpp"
 /*
-	File: fn_getVehicles.sqf
+	File: fn_getVehiclesCop.sqf
 	Author: Bryan "Tonic" Boardwine
 
 	Description:
