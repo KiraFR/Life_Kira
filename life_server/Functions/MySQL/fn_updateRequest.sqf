@@ -14,7 +14,7 @@ params[
 	["_cash",10000,[0]],
 	["_licenses",[],[[]]],
 	["_gear",[],[[]]],
-	["_civPosition","",[""]]
+	["_civPosition","",[[]]]
 ];
 
 //Get to those error checks.
