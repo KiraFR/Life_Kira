@@ -3,7 +3,8 @@
 	File: fn_updateRequest.sqf
 	Author: Tonic
 */
-private["_packet","_array","_flag"];
+private["_packet","_array","_flag","_civPosition"];
+_civPosition = getPos player;
 _packet = [getPlayerUID player,(profileName),playerSide,CASH];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};
@@ -20,6 +21,8 @@ _packet pushBack life_gear;
 switch (playerSide) do {
 	case civilian: {
 		_packet pushBack life_is_arrested;
+		_packet set[count _packet,_civPosition];
+		_packet set[count _packet,life_is_alive];
 	};
 };
 _packet RemoteExecCall ["DB_fnc_updateRequest",2];

@@ -29,7 +29,7 @@ _query = switch(_side) do {
 					// 10 (en partant de 0)
 	case west: {_returnCount = 10; format["SELECT playerid, name, cash, adminlevel, donatorlvl, cop_licenses, coplevel, cop_gear, blacklist, position, alive FROM players WHERE playerid='%1'",_uid];};
 					// 9 (en partant de 0)
-	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, position, alive FROM players WHERE playerid='%1'",_uid];};
+	case civilian: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, civ_licenses, arrested, civ_gear, civPosition, alive FROM players WHERE playerid='%1'",_uid];};
 					// 9 (en partant de 0)
 	case independent: {_returnCount = 9; format["SELECT playerid, name, cash, adminlevel, donatorlvl, med_licenses, mediclevel, med_gear, position, alive FROM players WHERE playerid='%1'",_uid];};
 };
@@ -107,7 +107,13 @@ switch (_side) do {
 		_gang = missionNamespace getVariable[format["gang_%1",_uid],[]];
 		_queryResult pushBack _gang; // select 11
 
+		//Pos CIVIL
+		_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
+		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
+			_queryResult set[8,_new];
 
+			//alive Civil
+			_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 
 		//Telephone
 		_numAnnu = format["SELECT numero FROM phonenumber WHERE pid_owner='%1' AND active='1'",_uid];

@@ -31,6 +31,7 @@ life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
 life_action_gathering = false;
+life_is_alive = false;
 life_listMessage = [];
 life_drop_weapons_onDeath = true;
 //Persistent Saving

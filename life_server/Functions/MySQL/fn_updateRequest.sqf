@@ -2,7 +2,7 @@
 /*
 	File: fn_updateRequest.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Ain't got time to describe it, READ THE FILE NAME!
 */
@@ -13,7 +13,8 @@ params[
 	["_side",sideUnknown,[civilian]],
 	["_cash",10000,[0]],
 	["_licenses",[],[[]]],
-	["_gear",[],[[]]]
+	["_gear",[],[[]]],
+	["_civPosition","",[""]]
 ];
 
 //Get to those error checks.
@@ -30,7 +31,11 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 switch (_side) do {
 	case west: {_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%6'",_name,_cash,_gear,_licenses,_uid];};
-	case civilian: {_query = format["UPDATE players SET name='%1', cash='%2', civ_licenses='%3', civ_gear='%5', arrested='%6' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear,[_this select 7] call DB_fnc_bool];};
+	case civilian: {
+									_arrested = [_this select 6];
+									_civPosition = [_this select 7] call DB_fnc_mresArray;
+									_alive = [_this select 8] call DB_fnc_bool;
+									_query = format["UPDATE players SET name='%1', cash='%2', civ_licenses='%3', civ_gear='%5', arrested='%6', civPosition='%7', alive='%8' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear,_arrested,_civPosition,_alive];};
 	case independent: {_query = format["UPDATE players SET name='%1', cash='%2', med_licenses='%3', med_gear='%5' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear];};
 };
 

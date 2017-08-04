@@ -64,6 +64,11 @@ switch(_mode) do {
 	case 11: {
 		_packet set[2,waitsleep];
 	};
+	case 12: {  
+	_civPosition = getPos player;
+	_packet set[2,_civPosition];
+	_packet set[4,life_is_alive];
+};
 };
 
 _packet remoteExecCall ["DB_fnc_updatePartial",2];
