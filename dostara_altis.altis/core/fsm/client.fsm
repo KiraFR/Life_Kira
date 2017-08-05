@@ -1,43 +1,31 @@
 /*%FSM<COMPILE "scriptedFSM.cfg, Life Client FSM">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Main_Init",0,250,103.669884,-125.880852,193.669891,-75.880836,0.000000,"Main Init"};
+item0[] = {"Main_Init",0,250,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
 item1[] = {"Split",2,250,-41.805862,153.081284,48.194153,203.081284,0.000000,"Split"};
 item2[] = {"",7,210,-235.426147,437.652557,-227.426132,445.652557,0.000000,""};
 item3[] = {"",7,210,-235.747147,173.442017,-227.747147,181.442017,0.000000,""};
 item4[] = {"Time_to_pay_",4,218,-40.350739,235.042938,49.649319,285.042969,0.000000,"Time to pay?"};
 item5[] = {"Pay_me_",2,250,-38.699593,320.819702,51.300362,370.819580,0.000000,"Pay me!"};
 item6[] = {"true",8,218,-38.528328,417.312042,51.471504,467.312073,0.000000,"true"};
-item7[] = {"true",8,218,105.458214,-66.418945,195.458206,-16.418945,0.000000,"true"};
-item8[] = {"Tfr_Start",2,250,227.744690,147.706024,317.744720,197.706024,0.000000,"Tfr Start"};
-item9[] = {"time",4,218,230.222061,221.812775,320.222046,271.812775,0.000000,"time"};
-item10[] = {"verif",2,250,225.693176,310.579041,315.693176,360.579041,0.000000,"verif"};
-item11[] = {"true",8,218,219.352753,412.932007,309.352753,462.932007,0.000000,"true"};
-item12[] = {"",7,210,443.985748,434.670715,451.985748,442.670715,0.000000,""};
-item13[] = {"",7,210,444.120300,167.466095,452.120300,175.466095,0.000000,""};
-item14[] = {"Splite",2,250,105.153259,13.120789,195.153275,63.120789,0.000000,"Splite"};
-item15[] = {"true_1",8,218,24.438232,69.270386,114.438232,119.270393,0.000000,"true 1"};
-item16[] = {"true_2",8,218,188.208069,72.778656,278.208069,122.778664,0.000000,"true 2"};
+item7[] = {"true",8,218,-37.250252,51.568375,52.749741,101.568367,0.000000,"true"};
+item8[] = {"",7,210,116.811279,436.242920,124.811279,444.242920,0.000000,""};
+item9[] = {"time",4,218,77.400345,157.762543,167.400330,207.762543,0.000000,"time"};
+item10[] = {"verif",2,250,77.366211,319.568604,167.366211,369.568604,0.000000,"verif"};
 link0[] = {0,7};
 link1[] = {1,4};
-link2[] = {2,3};
-link3[] = {3,1};
-link4[] = {4,5};
-link5[] = {5,6};
-link6[] = {6,2};
-link7[] = {7,14};
-link8[] = {8,9};
-link9[] = {9,10};
-link10[] = {10,11};
-link11[] = {11,12};
-link12[] = {12,13};
-link13[] = {13,8};
-link14[] = {14,15};
-link15[] = {14,16};
-link16[] = {15,1};
-link17[] = {16,8};
-globals[] = {0.000000,0,0,0,0,640,480,1,42,6316128,1,-251.812378,514.543457,741.041260,-297.247131,682,924,1};
-window[] = {2,-1,-1,-1,-1,948,130,1044,130,3,700};
+link2[] = {1,9};
+link3[] = {2,3};
+link4[] = {3,1};
+link5[] = {4,5};
+link6[] = {5,6};
+link7[] = {6,2};
+link8[] = {7,1};
+link9[] = {8,6};
+link10[] = {9,10};
+link11[] = {10,8};
+globals[] = {0.000000,0,0,0,0,640,480,1,43,6316128,1,-294.406494,471.949341,741.041260,-297.247131,682,924,1};
+window[] = {2,-1,-1,-1,-1,1052,234,1148,234,3,700};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -65,7 +53,7 @@ class FSM
                                 {
                                         itemno = 7;
                                         priority = 0.000000;
-                                        to="Splite";
+                                        to="Split";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
                                         condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
@@ -83,6 +71,17 @@ class FSM
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
+                                /*%FSM<LINK "time">*/
+                                class time
+                                {
+                                        itemno = 9;
+                                        priority = 0.000000;
+                                        to="verif";
+                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"(time - _lastchecktfr) > (60)"/*%FSM</CONDITION""">*/;
+                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+                                };
+                                /*%FSM</LINK>*/
                                 /*%FSM<LINK "Time_to_pay_">*/
                                 class Time_to_pay_
                                 {
@@ -191,11 +190,11 @@ class FSM
                         };
                 };
                 /*%FSM</STATE>*/
-                /*%FSM<STATE "Tfr_Start">*/
-                class Tfr_Start
+                /*%FSM<STATE "verif">*/
+                class verif
                 {
-                        name = "Tfr_Start";
-                        itemno = 8;
+                        name = "verif";
+                        itemno = 10;
                         init = /*%FSM<STATEINIT""">*/"titleCut ["""", ""BLACK IN"", 0.005];" \n
                          "titleText ["""",""PLAIN DOWN""];" \n
                          "titleFadeOut 0.005;" \n
@@ -203,30 +202,7 @@ class FSM
                          "_server = call TFAR_fnc_getTeamSpeakServerName;" \n
                          "_chanel = call TFAR_fnc_getTeamSpeakChannelName;" \n
                          "" \n
-                         "player allowDamage true;"/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "time">*/
-                                class time
-                                {
-                                        itemno = 9;
-                                        priority = 0.000000;
-                                        to="verif";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"(time - _lastchecktfr) > (60)"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "verif">*/
-                class verif
-                {
-                        name = "verif";
-                        itemno = 10;
-                        init = /*%FSM<STATEINIT""">*/"if (_server != ""H&K - Dostara"") then {" \n
+                         "if (_server != ""H&K - Dostara"") then {" \n
                          "	titleCut ["""", ""BLACK FADED"", 99999999];" \n
                          "	[] Spawn {" \n
                          "		titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
@@ -261,45 +237,11 @@ class FSM
                                 /*%FSM<LINK "true">*/
                                 class true
                                 {
-                                        itemno = 11;
-                                        priority = 0.000000;
-                                        to="Tfr_Start";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                        };
-                };
-                /*%FSM</STATE>*/
-                /*%FSM<STATE "Splite">*/
-                class Splite
-                {
-                        name = "Splite";
-                        itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
-                        precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
-                        class Links
-                        {
-                                /*%FSM<LINK "true_2">*/
-                                class true_2
-                                {
-                                        itemno = 16;
-                                        priority = 0.000000;
-                                        to="Tfr_Start";
-                                        precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
-                                        action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
-                                };
-                                /*%FSM</LINK>*/
-                                /*%FSM<LINK "true_1">*/
-                                class true_1
-                                {
-                                        itemno = 15;
+                                        itemno = 6;
                                         priority = 0.000000;
                                         to="Split";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"true"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
                                 };
                                 /*%FSM</LINK>*/
