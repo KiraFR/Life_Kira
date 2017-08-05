@@ -32,7 +32,7 @@ switch (_side) do {
 	};
 	case civilian: {
 		_arrested = [param[6,false,[false]]] call DB_fnc_bool;
-		_civPosition = param[7,"",[""]] call DB_fnc_mresArray;
+		_civPosition = param[7,[],[[]]];
 		_alive = [param[8,false,[false]]] call DB_fnc_bool;
 		_query = format["UPDATE players SET name='%1', cash='%2', civ_licenses='%3', civ_gear='%5', arrested='%6', civPosition='%7', alive='%8' WHERE playerid='%4'",_name,_cash,_licenses,_uid,_gear,_arrested,_civPosition,_alive];};
 	case independent: {

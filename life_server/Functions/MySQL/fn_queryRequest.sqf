@@ -108,9 +108,10 @@ switch (_side) do {
 		_queryResult pushBack _gang; // select 11
 
 		//Pos CIVIL
-		_new = [(_queryResult select 8)] call DB_fnc_mresToArray;
+		_new = [(_queryResult select 8)];
 		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
 			_queryResult set[8,_new];
+			diag_log format["%1",_queryResult select 8];
 
 			//alive Civil
 			_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
