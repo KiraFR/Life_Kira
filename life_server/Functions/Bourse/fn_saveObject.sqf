@@ -3,7 +3,7 @@
 	description: none
 	returns: nothing
 */
-private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_maxFor","_minFor","_NewValueFor","_ressource_2","_Id_Object2","_valueModif","_newValueArray","_Object_Bourse","_ressource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_name"];
+private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_maxFor","_evolFor","_seilFor","_minFor","_NewValueFor","_ressource_2","_Id_Object2","_valueModif","_newValueArray","_Object_Bourse","_ressource","_count","_ent","_ownerID","_result","_valueNew","_prix","_min","_max","_seil","_evol","_entValue","_relation","_value","_name"];
 uiSleep 5;
 while {true} do {
     _ObjectLast = Bourse_ressource_Save;
@@ -55,13 +55,9 @@ while {true} do {
                 _relation = (_result select 6);
                 _value = {if (_ressource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object_Bourse;
                 //diag_log format["Save Object ==> Boucle de modification ==> ressources : %1 | Count : %2 | Min : %3 | Max : %4 | Seil : %5 | Evol : %6 | Ent Evol : %7 | Relation : %8",_ressource,_count,_min,_max,_seil,_evol,_entValue,_relation];
-                if (_value >= _seil) then {
-                    _valueNew = (_value - (_count * _evol));
-                    //diag_log format["Save Object ==> Boucle de modification ==> Verification du seil ==> ressources : %1 | Value : %2 >= %3",_ressource,_value,_seil];
-                } else {
-                    _valueNew = (_value - (_count));
-                    //diag_log format["Save Object ==> Boucle de modification ==> Verification du seil ==> ressources : %1 | Value : %2 < %3",_ressource,_value,_seil];
-                };
+
+                _valueNew = (_value - (_count));
+                //diag_log format["Save Object ==> Boucle de modification ==> Verification du seil ==> ressources : %1 | Value : %2 < %3",_ressource,_value,_seil];
 
                 if (_value >= _max) then {
                     _valueNew = _max;
@@ -100,13 +96,21 @@ while {true} do {
                             _resultFor = [_x select 0] call bourse_fnc_ressources;
                             _minFor = (_resultFor select 0);
                             _maxFor = (_resultFor select 1);
-                            //diag_log format["Save Object ==> Boucle de Relation ==> ressources : %1 | Max : %2 | Min : %3",_name,_maxFor,_minFor];
-                            if (round(_NewValueFor) > round(_maxFor)) then {
+                            _seilFor = (_resultFor select 2);
+                            _evolFor = (_resultFor select 3);
+                            //diag_log format["Save Object ==> Boucle de Relation ==> ressources : %1 | Max : %2 | Min : %3 | Seil : %4 | Evol : %4",_name,_maxFor,_minFor,_seilFor,_evolFor];
+
+                            if (_NewValueFor > _seilFor) then {
+                                _NewValueFor = ((_x select 1) + ((_valueModif) * (_evolFor)));
+                                //diag_log format["Save Object ==> Boucle de Relation ==> Verification du seil ==> ressources : %1 | Value : %2 > %3",_name,_NewValueFor,_seilFor];
+                            };
+
+                            if (_NewValueFor > _maxFor) then {
                                 _NewValueFor = _maxFor;
                                 //diag_log format["Save Object ==> Boucle de Relation ==> Verification du Max ==> ressources : %1 | Value : %2 >= %3",_name,_NewValueFor,_maxFor];
                             };
 
-                            if (round(_NewValueFor) <= round(_minFor)) then {
+                            if (_NewValueFor <= _minFor) then {
                                 _NewValueFor = _minFor;
                                 //diag_log format["Save Object ==> Boucle de Relation ==> Verification du Min ==> ressources : %1 | Value : %2 <= %3",_name,_NewValueFor,_minFor];
                             };
