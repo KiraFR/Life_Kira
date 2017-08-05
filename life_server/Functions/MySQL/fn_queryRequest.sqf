@@ -91,11 +91,12 @@ switch (_side) do {
 
 	case civilian: {
 		_queryResult set[6,([_queryResult select 6,1] call DB_fnc_bool)];
+		
+		_queryResult set[8,call compile format["%1", (_queryResult select 8)]];
+		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;
 		waitUntil {scriptDone _houseData};
-
-
 
 		_house = missionNamespace getVariable[format["houses_%1",_uid],[]];
 		_queryResult pushBack _house; // select 10
@@ -106,15 +107,6 @@ switch (_side) do {
 		waitUntil{scriptDone _gangData};
 		_gang = missionNamespace getVariable[format["gang_%1",_uid],[]];
 		_queryResult pushBack _gang; // select 11
-
-		//Pos CIVIL
-		_new = [(_queryResult select 8)];
-		if(typeName _new == "STRING") then {_new = call compile format["%1", _new];};
-			_queryResult set[8,_new];
-			diag_log format["%1",_queryResult select 8];
-
-			//alive Civil
-			_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 
 		//Telephone
 		_numAnnu = format["SELECT numero FROM phonenumber WHERE pid_owner='%1' AND active='1'",_uid];

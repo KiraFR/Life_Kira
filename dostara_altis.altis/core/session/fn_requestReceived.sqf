@@ -59,7 +59,6 @@ switch(playerSide) do {
 
 	case civilian: {
 		civ_position = _this select 8;
-		diag_log format["%1",_this select 8];
 		life_is_alive = _this select 9;
 		life_is_arrested = _this select 6;
 		CONSTANT(life_coplevel, 0);
