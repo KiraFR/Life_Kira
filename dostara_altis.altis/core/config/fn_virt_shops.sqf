@@ -14,7 +14,7 @@ switch (_shop) do
 	case "cop": {["Marché Police",["Cafe","Herse","Bouteille_d_eau","Essence"]]};
 	case "outillage": {["Outillage",["Seau","Pelle","Pioche"]]};
 	case "Export_luxe": {["Export Luxe",["Argent","Pierres_Precieuses","Bijoux"]]};
-	case "Export_Combustible": {["Export de Combustible ",["Bois","Charbon","fuelF","oil"]]};
+	case "Export_Combustible": {["Export de Combustible ",["Bois","Charbons","fuelF","oil"]]};
 	case "Export_Metallurgie": {["Export de Metallurgie ",["Fer","Cuivre","Aluminium","Acier"]]};
     case "Caviste" : {["Caviste",["Cidre","Vin"]]};
     //case "Brasseur" : {["Brasseur",["Biere","Whisky","Cafe","Tabac"]]};
