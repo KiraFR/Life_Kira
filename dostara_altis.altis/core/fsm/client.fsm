@@ -1,7 +1,7 @@
 /*%FSM<COMPILE "scriptedFSM.cfg, Life Client FSM">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Main_Init",0,250,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
+item0[] = {"Main_Init",0,4346,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
 item1[] = {"Split",2,250,-37.376846,314.297150,52.623169,364.297150,0.000000,"Split"};
 item2[] = {"",7,210,-230.997131,598.868469,-222.997116,606.868469,0.000000,""};
 item3[] = {"",7,210,-231.318130,334.657898,-223.318130,342.657898,0.000000,""};
@@ -43,7 +43,7 @@ class FSM
                 {
                         name = "Main_Init";
                         itemno = 0;
-                        init = /*%FSM<STATEINIT""">*/"private[""_bp"",""_load"",""_life_hunger"",""_life_maxWeight"",""_life_hunger"",""_life_thirst"",""_life_carryWeight"",""_cfg"",""_lastcheck"",""_lastchecktfr"",""_server"",""_chanel"",""_food"",""_water"",""_lastsync"",""_timehunger"",""_timethist"",""_timebourse""];" \n
+                        init = /*%FSM<STATEINIT""">*/"private[""_bp"",""_load"",""_cfg"",""_lastcheck"",""_lastchecktfr"",""_server"",""_chanel"",""_food"",""_water"",""_lastsync"",""_timehunger"",""_timethist"",""_timebourse""];" \n
                          "_lastcheck = time;" \n
                          "_lastchecktfr = time;" \n
                          "_food = time;" \n
@@ -53,13 +53,7 @@ class FSM
                          "_chanel = """";" \n
                          "_timehunger = time;" \n
                          "_timethist = time;" \n
-                         "_timebourse = time;" \n
-                         "" \n
-                         "_life_hunger = (call life_hunger);" \n
-                         "_life_thirst = (call life_thirst);" \n
-                         "_life_carryWeight = (call life_carryWeight);" \n
-                         "_life_maxWeight = ;" \n
-                         ""/*%FSM</STATEINIT""">*/;
+                         "_timebourse = time;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
