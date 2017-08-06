@@ -1,7 +1,7 @@
 /*%FSM<COMPILE "scriptedFSM.cfg, Life Client FSM">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Main_Init",0,4346,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
+item0[] = {"Main_Init",0,250,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
 item1[] = {"Split",2,250,-37.376846,314.297150,52.623169,364.297150,0.000000,"Split"};
 item2[] = {"",7,210,-230.997131,598.868469,-222.997116,606.868469,0.000000,""};
 item3[] = {"",7,210,-231.318130,334.657898,-223.318130,342.657898,0.000000,""};
@@ -41,7 +41,7 @@ item36[] = {"MaxWeight",2,250,-705.758423,315.900513,-615.758423,365.900513,0.00
 item37[] = {"",7,210,-663.738770,424.100952,-655.738770,432.100952,0.000000,""};
 item38[] = {"",7,210,-800.271851,162.518860,-792.271851,170.518860,0.000000,""};
 item39[] = {"Boucle_Ventre",8,218,-841.240967,222.396820,-751.240967,272.396820,0.000000,"Boucle" \n "Ventre"};
-item40[] = {"Ventre",2,250,-838.120361,312.748840,-748.120361,362.748840,0.000000,"Ventre"};
+item40[] = {"Ventre",2,4346,-838.120361,312.748840,-748.120361,362.748840,0.000000,"Ventre"};
 item41[] = {"",7,210,-796.100708,419.898865,-788.100708,427.898865,0.000000,""};
 link0[] = {0,7};
 link1[] = {1,4};
@@ -92,7 +92,7 @@ link45[] = {38,39};
 link46[] = {39,40};
 link47[] = {40,41};
 link48[] = {41,37};
-globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-334.056030,748.999756,792.611023,-178.042053,1031,924,1};
+globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-1160.792114,-77.736328,792.611023,-178.042053,1031,924,1};
 window[] = {2,-1,-1,-1,-1,922,104,1018,104,3,1049};
 *//*%FSM</HEAD>*/
 class FSM
@@ -369,9 +369,7 @@ class FSM
                 {
                         name = "life_hunger";
                         itemno = 14;
-                        init = /*%FSM<STATEINIT""">*/"_life_hunger = (call life_hunger);" \n
-                         "" \n
-                         "if(_life_hunger < 2) then {player setDamage 1; hint localize ""STR_NOTF_EatMSG_Death"";}" \n
+                        init = /*%FSM<STATEINIT""">*/"if(_life_hunger < 2) then {player setDamage 1; hint localize ""STR_NOTF_EatMSG_Death"";}" \n
                          "		else" \n
                          "		{" \n
                          "		_life_hunger = _life_hunger - 10;" \n
@@ -407,9 +405,7 @@ class FSM
                 {
                         name = "life_thirst";
                         itemno = 18;
-                        init = /*%FSM<STATEINIT""">*/"_life_thirst = (call life_thirst);" \n
-                         "" \n
-                         "if(_life_thirst < 2) then {player setDamage 1; hint localize ""STR_NOTF_DrinkMSG_Death"";}" \n
+                        init = /*%FSM<STATEINIT""">*/"if(_life_thirst < 2) then {player setDamage 1; hint localize ""STR_NOTF_DrinkMSG_Death"";}" \n
                          "		else" \n
                          "		{" \n
                          "			_life_thirst = _life_thirst - 10;" \n
@@ -553,9 +549,7 @@ class FSM
                 {
                         name = "backpack_maximum";
                         itemno = 29;
-                        init = /*%FSM<STATEINIT""">*/"_life_maxWeight = (call life_maxWeight);" \n
-                         "" \n
-                         "_bp = backpack player;" \n
+                        init = /*%FSM<STATEINIT""">*/"_bp = backpack player;" \n
                          "_cfg = getNumber(configFile >> ""CfgVehicles"" >> (backpack player) >> ""maximumload"");" \n
                          "_load = round(_cfg / 8);" \n
                          "_life_maxWeight = _life_maxWeightT + _load;" \n
@@ -586,10 +580,7 @@ class FSM
                 {
                         name = "MaxWeight";
                         itemno = 36;
-                        init = /*%FSM<STATEINIT""">*/"_life_carryWeight = (call life_carryWeight);" \n
-                         "_life_maxWeight = (call life_maxWeight);" \n
-                         "" \n
-                         "if(_life_carryWeight > _life_maxWeight && !isForcedWalk player) then {" \n
+                        init = /*%FSM<STATEINIT""">*/"if(_life_carryWeight > _life_maxWeight && !isForcedWalk player) then {" \n
                          "			player forceWalk true;" \n
                          "			player setFatigue 1;" \n
                          "			hint localize ""STR_NOTF_MaxWeight"";" \n
@@ -620,9 +611,7 @@ class FSM
                 {
                         name = "Ventre";
                         itemno = 40;
-                        init = /*%FSM<STATEINIT""">*/"_life_hunger = (call life_hunger);" \n
-                         "" \n
-                         "if(_life_hunger <30) then {" \n
+                        init = /*%FSM<STATEINIT""">*/"if(_life_hunger <30) then {" \n
                          "	sleep random(30);" \n
                          "	player say3D ""ventre"";" \n
                          "};	"/*%FSM</STATEINIT""">*/;
