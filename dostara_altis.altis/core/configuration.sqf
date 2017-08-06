@@ -96,6 +96,8 @@ life_delivery_in_progress = false;
 life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
+CONSTANT(life_thirst,100);
+CONSTANT(life_hunger,100);
 CONSTANT(life_paycheck_period,15);
 CONSTANT(life_impound_car,350);
 CONSTANT(life_impound_boat,250);
