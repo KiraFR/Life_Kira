@@ -10,8 +10,8 @@ item5[] = {"Pay_me_",2,250,-38.699593,320.819702,51.300362,370.819580,0.000000,"
 item6[] = {"true",8,218,-38.528328,417.312042,51.471504,467.312073,0.000000,"true"};
 item7[] = {"true",8,218,-37.250252,51.568375,52.749741,101.568367,0.000000,"true"};
 item8[] = {"",7,210,116.811279,436.242920,124.811279,444.242920,0.000000,""};
-item9[] = {"time",4,4314,79.323837,232.779419,169.323822,282.779419,0.000000,"time"};
-item10[] = {"verif",2,250,77.366211,319.568604,167.366211,369.568604,0.000000,"verif"};
+item9[] = {"time",4,218,79.323837,232.779419,169.323822,282.779419,0.000000,"time"};
+item10[] = {"verif",2,4346,77.366211,319.568604,167.366211,369.568604,0.000000,"verif"};
 item11[] = {"",7,210,118.708458,176.167282,126.708450,184.167267,0.000000,""};
 link0[] = {0,7};
 link1[] = {1,4};
@@ -26,8 +26,8 @@ link9[] = {8,6};
 link10[] = {9,10};
 link11[] = {10,8};
 link12[] = {11,9};
-globals[] = {0.000000,0,0,0,0,640,480,1,44,6316128,1,-293.125122,362.791748,657.039185,-231.622421,682,924,1};
-window[] = {2,-1,-1,-1,-1,974,156,1070,156,3,700};
+globals[] = {0.000000,0,0,0,0,640,480,1,44,6316128,1,-369.443909,344.849487,719.626587,-248.125763,682,924,1};
+window[] = {2,-1,-1,-32000,-32000,982,2201,3115,164,3,700};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -218,7 +218,13 @@ class FSM
                          "	};" \n
                          "};" \n
                          "" \n
-                         "if(_chanel != ""TFR"") then {" \n
+                         "_check = [""TFR"",""Accueil Support / Aide"",""Bureau des Opérateurs"",""Bureau des Supports"",""Sous-Bureau 1"",""Sous-Bureau 2"",""Sous-Bureau 3"",""Sous-Bureau 4"",""Staff & You - Voir la Description"",""Groupe de Travail"",""Groupe de Modelisation"",""Groupe de Graphiste"",""Groupe de Developpement"",""Bureau Developpement"",""Bureau des Responsables"",""Bureau des Leaders"",""Bureau des Fondateurs""];" \n
+                         "" \n
+                         "if(_chanel in _check) then {" \n
+                         "	titleCut ["""", ""BLACK IN"", 0.005];" \n
+                         "	titleText ["""",""PLAIN DOWN""];" \n
+                         "	titleFadeOut 0.005;" \n
+                         "}else{" \n
                          "	titleCut ["""", ""BLACK FADED"", 99999999];" \n
                          "	[] Spawn {" \n
                          "		titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
