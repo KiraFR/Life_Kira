@@ -24,8 +24,8 @@ _retrievePrice = if(_retrievePrice == -1) then {1000} else {(__GETC__(life_garag
 _sellPrice = if(_sellPrice == -1) then {1000} else {(__GETC__(life_garage_sell) select _sellPrice) select 1;};
 
 (getControl(2800,2803)) ctrlSetStructuredText parseText format[
-	(localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
-	" +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>
+	(localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>€%1</t><br/>
+	" +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>€%2</t><br/>
 	" +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>
 	" +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>
 	" +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>

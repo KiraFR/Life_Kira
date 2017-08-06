@@ -21,7 +21,7 @@ private _text = getControl(2700,2701);
 private _units = getControl(2700,2780);
 
 lbClear _units;
-_text ctrlSetStructuredText parseText format["<img size='1.7' image='\Kira_assets\hud\bank.paa'/> $%1<br/><img size='1.6' image='\Kira_assets\hud\money.paa'/> $%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
+_text ctrlSetStructuredText parseText format["<img size='1.7' image='\Kira_assets\hud\bank.paa'/> €%1<br/><img size='1.6' image='\Kira_assets\hud\money.paa'/> €%2",[BANK] call life_fnc_numberText,[CASH] call life_fnc_numberText];
 _repertoire = profileNamespace getVariable ["repertoireBanque",[]];
 {
 	_units lbAdd format["%1 (%2)",_x select 0, _x select 1];

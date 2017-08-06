@@ -67,6 +67,8 @@ class CfgRemoteExec {
 		F(KIRA_fnc_receiveTestament,CLIENT)
 		F(KIRA_fnc_saveMoney,CLIENT)
 		F(KIRA_fnc_rembourser,CLIENT)
+        F(KIRA_fnc_notification,CLIENT)
+        F(KIRA_fnc_markerUrgence,CLIENT)
 
 		F(TON_fnc_managesc,SERVER)
 		F(TON_fnc_updateHouseContainers,SERVER)
@@ -138,6 +140,7 @@ class CfgRemoteExec {
 		F(life_fnc_jumpFnc,ANYONE)
 		F(life_fnc_medicRequest,ANYONE)
 		F(life_fnc_copMedicRequest,ANYONE)
+		F(deleteMarkerLocal,ANYONE)
 		
 		F(join,ANYONE)
 	};

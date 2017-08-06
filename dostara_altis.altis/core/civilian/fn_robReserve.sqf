@@ -18,7 +18,7 @@ if(_funds < 50000) exitWith{[_vault,-1] RemoteExecCall ["TON_fnc_robberyState",0
 
 _timer = time + (10 * 60); //Default timer is 10 minutes to rob.
 titleText["Cracking the safe...","PLAIN"];
-[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"] RemoteExec ["life_fnc_broadcast",west];
+[2,"€€€ THE FEDERAL RESERVE IS BEING ROBBED!!! €€€"] RemoteExec ["life_fnc_broadcast",west];
 
 
 while {true} do
@@ -56,7 +56,7 @@ switch(true) do
 
 	case ((round(_timer - time)) < 1):
 	{
-		hint format["You have successfully robbed $%1\n\nTo avoid the cops tracing you, your bank card will not work for 8 minutes",[_funds] call life_fnc_numberText];
+		hint format["You have successfully robbed €%1\n\nTo avoid the cops tracing you, your bank card will not work for 8 minutes",[_funds] call life_fnc_numberText];
 		[] spawn
 		{
 			life_use_atm = false;

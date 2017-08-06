@@ -48,7 +48,7 @@ if(count _data == 0) then {_veh setVariable["Trunk",[[],0],true]; _data = [];} e
 	{
 		if(CASH > 0) then
 		{
-			_pInv lbAdd format["$%1",[CASH] call life_fnc_numberText];
+			_pInv lbAdd format["€%1",[CASH] call life_fnc_numberText];
 			_pInv lbSetData [(lbSize _pInv)-1,"money"];
 		};
 	};
@@ -72,7 +72,7 @@ if(count _data == 0) then {_veh setVariable["Trunk",[[],0],true]; _data = [];} e
 		_val = _x select 1;
 		if(_val > 0) then
 		{
-			_tInv lbAdd format["$%1",[_val] call life_fnc_numberText];
+			_tInv lbAdd format["€%1",[_val] call life_fnc_numberText];
 			_tInv lbSetData [(lbSize _pInv)-1,"money"];
 		};
 	};

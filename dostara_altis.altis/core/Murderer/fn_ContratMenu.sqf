@@ -28,8 +28,8 @@ lbClear _list;
 }forEach _contrat;
 
 (getControl(5500,5502)) ctrlSetStructuredText parseText format[
-	(_name)+ " $%1<br/>
-	" +(_job)+ " $%2<br/>
+	(_name)+ " €%1<br/>
+	" +(_job)+ " €%2<br/>
 	" +(_price)+ " %3<br/>
 	" +(_type)+ " %4<br/>
 	"
