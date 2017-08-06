@@ -54,7 +54,7 @@ if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasse
 _taxe = 0;
 
 _taxe = [0] call life_fnc_taxes;
-if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{hint "Vous ne pouvez pas deposer moins ou égale à 50 dostar."};
+if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{hint "Vous ne pouvez pas deposer moins ou égale à 50€."};
 if(_taxe == 50)then{
 	_value = _value - _taxe;
 	_taxes = _taxe;
@@ -66,7 +66,7 @@ if(_taxe == 50)then{
 CASH = CASH - _value;
 BANK = BANK + _value;
 call life_fnc_refreshAC;
-hint format["Vous venez de deposer %1 dostar, %2 dostar de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
+hint format["Vous venez de deposer %1 dostar, %2€ de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 call SOCK_fnc_updateBanque;
 call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
