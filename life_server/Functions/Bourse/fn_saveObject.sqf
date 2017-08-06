@@ -56,17 +56,12 @@ while {true} do {
                 _value = {if (_ressource == (_x select 0)) exitWith {(_x select 1)}}forEach _Object_Bourse;
                 diag_log format["Save Object ==> Boucle de modification ==> ressources : %1 | Count : %2 | Min : %3 | Max : %4 | Seil : %5 | Evol : %6 | Ent Evol : %7 | Relation : %8",_ressource,_count,_min,_max,_seil,_evol,_entValue,_relation];
 
-                _valueNew = (_value - (_count));
-                diag_log format["Save Object ==> Boucle de modification ==> Verification du seil ==> ressources : %1 | Value : %2 < %3",_ressource,_value,_seil];
+                _valueNew = ((_value) - (_count));
+                diag_log format["Save Object ==> Boucle de modification ==> Verification du calcule ==> ressources : %1 | Value : %2",_ressource,_valueNew];
 
-                if (_value >= _max) then {
-                    _valueNew = _max;
-                    diag_log format["Save Object ==> Boucle de modification ==> Verification du Max ==> ressources : %1 | Value : %2 >= %3",_ressource,_value,_max];
-                };
-
-                if (_value <= _min) then {
+                if (_valueNew < _min) then {
                     _valueNew = _min;
-                    diag_log format["Save Object ==> Boucle de modification ==> Verification du Min ==> ressources : %1 | Value : %2 <= %3",_ressource,_value,_min];
+                    diag_log format["Save Object ==> Boucle de modification ==> Verification du Min ==> ressources : %1 | Value : %2 <= %3",_ressource,_valueNew,_min];
                 };
 
                  diag_log format["Save Object ==> Boucle de modification ==> ressources : %1 | Value : %2",_ressource,_value];
@@ -105,14 +100,11 @@ while {true} do {
                                 diag_log format["Save Object ==> Boucle de Relation ==> Verification du seil ==> ressources : %1 | Value : %2 > %3",_name,_NewValueFor,_seilFor];
                             };
 
-                            if (_NewValueFor > _maxFor) then {
-                                _NewValueFor = _maxFor;
-                                diag_log format["Save Object ==> Boucle de Relation ==> Verification du Max ==> ressources : %1 | Value : %2 >= %3",_name,_NewValueFor,_maxFor];
-                            };
-
-                            if (_NewValueFor <= _minFor) then {
-                                _NewValueFor = _minFor;
-                                diag_log format["Save Object ==> Boucle de Relation ==> Verification du Min ==> ressources : %1 | Value : %2 <= %3",_name,_NewValueFor,_minFor];
+                            if (_maxFor != -1) then {
+                                if (_NewValueFor > _maxFor) then {
+                                    _NewValueFor = _maxFor;
+                                    diag_log format["Save Object ==> Boucle de Relation ==> Verification du Max ==> ressources : %1 | Value : %2 >= %3",_name,_NewValueFor,_maxFor];
+                                };
                             };
 
                             _newValueArray = [_name,(_NewValueFor)];

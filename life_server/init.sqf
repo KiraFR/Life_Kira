@@ -120,18 +120,3 @@ _rsb allowDamage false;
 _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
-
-
-while{true}do{
-	sleep 120;
-	_query = "UPDATE bourse SET civPosition = CASE";
-	{
-		_unit = _x;
-		if(side _unit == civilian)then{
-			_str = format[" WHEN playerid = '%1' THEN '""%2""'",getPlayerUID _unit,position _unit];
-		};
-		_query = _query + _str;
-	}foreach playableUnits;
-	_query = _query + " END WHERE alive = '1'";
-	[_query,1] call DB_fnc_asyncCall;
-};
