@@ -46,6 +46,7 @@ if (!(isNil 'Bourse_Object')) then {
              };
         };
         Bourse_ressource_Save pushBack [_ressource,_count];
+        _prix = floor _prix;
         [_prix] remoteExecCall ["life_fnc_virt_sellBourse",_ownerID];
     };
 };
