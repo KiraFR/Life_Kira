@@ -118,10 +118,10 @@ class FSM
                          "_timebourse = time;" \n
                          "" \n
                          "_life_hunger = (call life_hunger);" \n
+                         "_life_thirst = (call life_thirst);" \n
                          "_life_carryWeight = (call life_carryWeight);" \n
                          "_life_maxWeight = (call life_maxWeight);" \n
-                         "_life_hunger = (call life_hunger);" \n
-                         "_life_thirst = (call life_thirst);"/*%FSM</STATEINIT""">*/;
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
