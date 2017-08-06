@@ -8,7 +8,7 @@
 */
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _target) exitWith {}; //DAFUQ?@!%$!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
+if(isNull _target) exitWith {}; //DAFUQ?@!%€!R?EFFD?TGSF?HBS?DHBFNFD?YHDGN?D?FJH
 
 _revivable = _target getVariable["Revive",FALSE];
 if(_revivable) exitWith {};

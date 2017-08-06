@@ -17,6 +17,6 @@ _val = life_inv_turtle;
 _price = _price * _val;
 
 if([false,"turtle",life_inv_turtle] call life_fnc_handleInv) then {
-	titleText[format["You sold %1 turtle(s) for $%2",_val,[_price] call life_fnc_numberText],"PLAIN"];
+	titleText[format["You sold %1 turtle(s) for €%2",_val,[_price] call life_fnc_numberText],"PLAIN"];
 	CASH = CASH + _price;
 };

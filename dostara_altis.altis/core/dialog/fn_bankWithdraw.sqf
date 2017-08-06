@@ -20,7 +20,7 @@ CASH = CASH + _val;
 BANK = BANK - _val;
 call life_fnc_refreshAC;
 
-hint format ["Vous venez de retirer %1 dostar, %2 dostar de taxe ont été retiré.",[_val] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
+hint format ["Vous venez de retirer %1€, %2€ de taxe ont été retiré.",[_val] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [] call SOCK_fnc_updateBanque;
 [6] call SOCK_fnc_updatePartial;
