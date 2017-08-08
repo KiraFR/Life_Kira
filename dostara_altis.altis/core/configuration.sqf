@@ -175,7 +175,7 @@ life_inv_items =
     "life_ressource_pierres_precieuses",
     "life_ressource_sable",
     "life_ressource_sel",
-    "life_ressource_varre",
+    "life_ressource_verre",
     "life_ressource_acier",
     "life_ressource_bijoux",
     "life_ressource_ciment",
@@ -195,7 +195,6 @@ life_inv_items =
     "life_ressource_argent_brut",
     "life_ressource_cuivre_brut",
     "life_ressource_fer_brut"
-
 ];
 
 //Setup variable inv vars.

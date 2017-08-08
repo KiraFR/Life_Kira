@@ -215,7 +215,7 @@ if(count (secondaryWeaponItems player) > 0) then
     ["life_ressource_pierres_precieuses",life_ressource_pierres_precieuses],
     ["life_ressource_sable",life_ressource_sable],
     ["life_ressource_sel",life_ressource_sel],
-    ["life_ressource_varre",life_ressource_varre],
+    ["life_ressource_verre",life_ressource_verre],
     ["life_ressource_acier",life_ressource_acier],
     ["life_ressource_bijoux",life_ressource_bijoux],
     ["life_ressource_ciment",life_ressource_ciment],
