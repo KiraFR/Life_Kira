@@ -12,6 +12,15 @@ params[
 	["_type","",[""]],
 	["_unit",ObjNull,[ObjNull]]
 ];
+
+_side = switch(_side) do
+{
+	case west:{"cop"};
+	case civilian: {"civ"};
+	case independent: {"med"};
+	default {"Error"};
+};
+
 //Error checks
 if(_side == "" OR _type == "" OR isNull _unit) exitWith{
 	if(!isNull _unit) then{
