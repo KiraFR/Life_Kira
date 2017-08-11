@@ -1,7 +1,7 @@
 /*
 	File: fn_vehicleWeightCfg.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Master configuration for vehicle weight.
 */
@@ -54,5 +54,25 @@ switch (_className) do
 	case "ivory_lfa": {30};
 	case "ivory_wrx": {30};
 	case "dh2o_smart": {10};
+
+//House
+
+	case "Land_i_House_Big_02_V1_F": {2700};
+	case "Land_i_House_Big_02_V2_F": {2700};
+	case "Land_i_House_Big_02_V3_F": {2700};
+	case "Land_i_House_Big_01_V1_F": {4200};
+	case "Land_i_House_Big_01_V2_F": {4200};
+	case "Land_i_House_Big_01_V3_F": {4200};
+	case "Land_i_House_Small_01_V1_F": {1500};
+	case "Land_i_House_Small_01_V2_F": {1500};
+	case "Land_i_House_Small_01_V3_F": {1500};
+	case "Land_i_House_Small_02_V1_F": {1500};
+	case "Land_i_House_Small_02_V2_F": {1500};
+	case "Land_i_House_Small_02_V3_F": {1500};
+	case "Land_i_House_Small_03_V1_F": {2700};
+	case "Land_i_Stone_HouseSmall_V2_F": {1000};
+	case "Land_i_Stone_HouseSmall_V1_F": {1000};
+	case "Land_i_Stone_HouseSmall_V3_F": {1000};
+	case "Land_i_Shed_Ind_F": {10000};
 	default {-1};
 };

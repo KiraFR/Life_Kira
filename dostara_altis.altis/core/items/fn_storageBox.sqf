@@ -1,6 +1,6 @@
 /*
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Tries to place a storage box in the nearest house.
 */
@@ -28,29 +28,29 @@ _pos = [0,0,0];
 if(_pos isEqualTo [0,0,0]) exitWith {hint localize "STR_ISTR_Box_HouseFull_2"};
 if(!([false,_boxType,1] call life_fnc_handleInv)) exitWith {};
 switch (_boxType) do {
-	case "storagesmall": {
+	case "Petit_Coffre": {
 		_container = "Box_IND_Grenades_F" createVehicle [0,0,0];
 		_container setPosATL _pos;
-		
+
 		_containers pushBack _container;
 		_house setVariable["containers",_containers,true];
 		[_house] RemoteExecCall ["TON_fnc_updateHouseContainers",2];
-		
+
 		//Empty out the crate
 		clearWeaponCargoGlobal _container;
 		clearMagazineCargoGlobal _container;
 		clearItemCargoGlobal _container;
 		clearBackpackCargoGlobal _container;
 	};
-	
-	case "storagebig": {
+
+	case "Grand_Coffre": {
 		_container = "B_supplyCrate_F" createVehicle [0,0,0];
 		_container setPosATL _pos;
-		
+
 		_containers pushBack _container;
 		_house setVariable["containers",_containers,true];
 		[_house] RemoteExecCall ["TON_fnc_updateHouseContainers",2];
-		
+
 		//Empty out the crate
 		clearWeaponCargoGlobal _container;
 		clearMagazineCargoGlobal _container;
