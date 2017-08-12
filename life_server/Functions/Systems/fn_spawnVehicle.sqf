@@ -59,8 +59,11 @@ if(count _nearVehicles > 0) exitWith
 	[1,(localize "STR_Garage_SpawnPointError")] RemoteExecCall ["life_fnc_broadcast",_unit];
 };
 
-_query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
-
+if(playerSide in [west,independent]) then {
+		_query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE id='%1'",_vid];
+						} else {
+		_query = format["UPDATE vehicles SET active='1',fourriere='0' WHERE pid='%1' AND id='%2'",_pid,_vid];
+};
 
 [_query,1] spawn DB_fnc_asyncCall;
 if(typeName _sp == "STRING") then {
