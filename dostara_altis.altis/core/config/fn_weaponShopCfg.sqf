@@ -586,21 +586,19 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != civilian): {"You are not a civilian!"};
-			case (!license_civ_gun): {"You don't have a Firearms license!"};
+			case (!license_civ_gun): {"Vous n'avez pas la license requise !"};
 			default
 			{
-				["Billy Joe's Firearms",
+				["Billy fait de la thune",
 					[
-						["hgun_Rook40_F",nil,6500],
-						["hgun_Pistol_heavy_02_F",nil,9850],
-						["hgun_ACPC2_F",nil,11500],
-						["hgun_PDW2000_F",nil,20000],
-						["optic_ACO_grn_smg",nil,2500],
-						["V_Rangemaster_belt",nil,4900],
-						["16Rnd_9x21_Mag",nil,25],
-						["9Rnd_45ACP_Mag",nil,45],
-						["6Rnd_45ACP_Cylinder",nil,50],
-						["30Rnd_9x21_Mag",nil,75]
+						["hgun_mas_bhp_F",nil,259],
+						["hgun_mas_grach_F",nil,219],
+						["hgun_Pistol_01_F",nil,269],
+						["hgun_Pistol_Signal_F",nil,120],
+						["V_Rangemaster_belt",nil,400],
+						["15Rnd_mas_9x21_Mag",nil,15],
+						["10Rnd_9x21_Mag",nil,12],
+						["6Rnd_GreenSignal_F",nil,50]
 					]
 				];
 			};
