@@ -23,10 +23,12 @@ _side = side _unit;
 _unit = owner _unit;
 
 if(_vid == -1 OR _pid == "") exitWith {};
-
-_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
-
-
+if(playerSide in [west,independent]) then {
+		_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE id='%1'",_vid];
+	} else {
+		_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE id='%1' AND pid='%2'",_vid,_pid];
+	};
+	
 _tickTime = diag_tickTime;
 _queryResult = [_query,2] call DB_fnc_asyncCall;
 if(typeName _queryResult == "STRING") exitWith {};
