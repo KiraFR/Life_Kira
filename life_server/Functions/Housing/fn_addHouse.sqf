@@ -14,7 +14,7 @@ if(isNull _house OR _uid == "") exitWith {};
 
 private _housePos = getPosATL _house;
 
-private _query = format["INSERT INTO houses (pid, pos, inventory, containers, owned) VALUES('%1', '%2', '""[[],0]""', '""[]""', '1')",_uid,_housePos];
+private _query = format["INSERT INTO houses (pid, pos, inventory, containers, owned) VALUES('%1', '%2', '""[[],0]""', '[]', '1')",_uid,_housePos];
 diag_log format["Query: %1",_query];
 
 [_query,1] call DB_fnc_asyncCall;
