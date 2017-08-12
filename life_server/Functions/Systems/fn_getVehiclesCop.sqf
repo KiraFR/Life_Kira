@@ -27,7 +27,7 @@ if(_side == "" OR _type == "" OR isNull _unit) exitWith{
 		[[]] RemoteExecCall ["life_fnc_impoundMenu",_unit];
 	};
 };
-_query = format["SELECT id, side, classname, type, alive, active, plate, color FROM vehicles WHERE alive='1' AND active='0' AND side='%1' AND type='%2'",_side,_type];
+_query = format["SELECT id, side, classname, type, pid, alive, active, plate, color FROM vehicles WHERE alive='1' AND active='0' AND side='%1' AND type='%2'",_side,_type];
 _tickTime = diag_tickTime;
 _queryResult = [_query,2,true] call DB_fnc_asyncCall;
 if(typeName _queryResult == "STRING") exitWith {

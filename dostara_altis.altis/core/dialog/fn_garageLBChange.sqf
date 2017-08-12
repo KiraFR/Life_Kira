@@ -13,7 +13,6 @@ _index = _this select 1;
 
 //Fetch some information.
 _dataArr = _control lbData _index; _dataArr = call compile format["%1",_dataArr];
-diag_log format["%1",_dataArr];
 _className = _dataArr select 0;
 _vehicleColor = [_className,_dataArr select 1] call life_fnc_vehicleColorStr;
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
