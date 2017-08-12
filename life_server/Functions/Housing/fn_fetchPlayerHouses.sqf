@@ -15,7 +15,6 @@ _houses = [_query,2,true] call DB_fnc_asyncCall;
 _return = [];
 {
 	_pos = call compile format["%1",_x select 1];
-	diag_log format["postions %1",_x select 1];
 	_house = nearestBuilding _pos;
 	_house allowDamage false;
 	_containers = [];
@@ -26,6 +25,7 @@ _return = [];
 
 	_trunk = _x select 2;
 	_containerData = _x select 3;
+	diag_log format["%1",_containerData];
 	_house setVariable["Trunk",_trunk,true];
 	{
 		if(count _x == 0) exitWith {}; //No containers / items.
@@ -85,6 +85,7 @@ _return = [];
 		} forEach (_backpacks select 0);
 
 	} forEach _containerData;
+
 
 	_house setVariable["containers",_containers,true];
 	_return pushBack [_x select 1,_containers];
