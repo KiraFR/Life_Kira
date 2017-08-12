@@ -8,7 +8,7 @@
 */
 private["_pid","_side","_type","_unit","_ret","_tickTime","_queryResult"];
 params[
-	["_side","",[""]],
+	["_side",sideUnknown,[civilian]],
 	["_type","",[""]],
 	["_unit",ObjNull,[ObjNull]]
 ];
