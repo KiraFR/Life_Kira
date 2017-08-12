@@ -28,7 +28,8 @@ for "_i" from 0 to count(_licenses)-1 do {
 
 switch (_side) do {
 	case west: {
-		_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%6'",_name,_cash,_gear,_licenses,_uid];
+		//diag_log format ["%1 : %2 : %3 : %4 : %5",_name,_cash,_gear,_licenses,_uid];
+		_query = format["UPDATE players SET name='%1', cash='%2', cop_gear='%3', cop_licenses='%4' WHERE playerid='%5'",_name,_cash,_gear,_licenses,_uid];
 	};
 	case civilian: {
 		_arrested = [param[6,false,[false]],1] call DB_fnc_bool;
