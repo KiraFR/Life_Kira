@@ -25,7 +25,6 @@ _return = [];
 
 	_trunk = _x select 2;
 	_containerData = _x select 3;
-	diag_log format["%1",_containerData];
 	_house setVariable["Trunk",_trunk,true];
 	{
 		if(count _x == 0) exitWith {}; //No containers / items.
