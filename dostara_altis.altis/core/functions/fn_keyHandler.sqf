@@ -1,7 +1,7 @@
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Main key handler for event 'keyDown'
 */
@@ -33,7 +33,7 @@ if(life_action_inUse) exitWith {
 if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	if(!life_action_inUse && !(player getVariable "ACE_Captives_isHandcuffed")) then {
-		[] spawn 
+		[] spawn
 		{
 			private["_handle"];
 			_handle = [] spawn life_fnc_actionKeyHandler;
@@ -46,17 +46,17 @@ if(count (actionKeys "User10") != 0 && {(inputAction "User10" > 0)}) exitWith {
 
 switch (_code) do
 {
-	
+
 	//Map Key
 	case _mapKey:
 	{
-		switch (playerSide) do 
+		switch (playerSide) do
 		{
 			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 		};
 	};
-	
+
 	//Holster / recall weapon.
 	case 35:
 	{
@@ -65,19 +65,19 @@ switch (_code) do
 			player action ["SwitchWeapon", player, player, 100];
 			player switchcamera cameraView;
 		};
-		
+
 		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
 			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
 				player selectWeapon life_curWep_h;
 			};
 		};
 	};
-	
+
 	//Interaction key (default is Left Windows, can be mapped via Controls -> Custom -> User Action 10)
 	case _interactionKey:
 	{
 		if(!life_action_inUse) then {
-			[] spawn 
+			[] spawn
 			{
 				private["_handle"];
 				_handle = [] spawn life_fnc_actionKeyHandler;
@@ -86,7 +86,7 @@ switch (_code) do
 			};
 		};
 	};
-	
+	/*
 	//Restraining (Shift + R)
 	case 19:
 	{
@@ -96,7 +96,7 @@ switch (_code) do
 			[] call life_fnc_restrainAction;
 		};
 	};
-	
+	*/
 	//Knock out, this is experimental and yeah...
 	case 34:
 	{
@@ -135,7 +135,7 @@ switch (_code) do
 		};
 	};
 	//L Key?
-	case 38: 
+	case 38:
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent]) then {
@@ -146,7 +146,7 @@ switch (_code) do
 				};
 			};
 		};
-		
+
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
 	//Y Player Menu
@@ -157,7 +157,7 @@ switch (_code) do
 			[] spawn KIRA_fnc_initSmart;
 		};
 	};
-	
+
 	//I key
 	case 23:{
 		call life_fnc_openMenuI;
@@ -202,7 +202,7 @@ switch (_code) do
 			} else {
 				_veh = vehicle player;
 			};
-			
+
 			if(_veh isKindOf "House_F" && playerSide == civilian) then {
 				if(_veh in life_vehicles && player distance _veh < 8) then {
 					_door = [_veh] call life_fnc_nearestDoor;
@@ -233,7 +233,7 @@ switch (_code) do
 							_veh lock 2;
 						} else {
 							[_veh,2] RemoteExecCall ["life_fnc_lockVehicle",_veh];
-						};	
+						};
 						systemChat localize "STR_MISC_VehLock";
 					};
 				};
