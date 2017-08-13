@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=3559;
+		nextID=3594;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=535;
+		nextID=561;
 	};
 	class Camera
 	{
-		pos[]={6383.6025,157.53029,12092.764};
-		dir[]={0.39580619,-0.031346917,0.9178378};
-		up[]={0.012429917,0.99950665,0.028824601};
-		aside[]={0.91829228,9.024734e-007,-0.39600071};
+		pos[]={3170.2776,46.398346,12892.765};
+		dir[]={-0.31272948,-0.70809352,0.6332801};
+		up[]={-0.31358537,0.70596021,0.63501924};
+		aside[]={0.89674383,-2.7073256e-006,0.44283563};
 	};
 };
 binarizationWanted=0;
@@ -480,7 +480,7 @@ class Mission
 			name="Mapping";
 			class Entities
 			{
-				items=652;
+				items=657;
 				class Item0
 				{
 					dataType="Object";
@@ -15667,8 +15667,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3154.2024,9.5467491,12941.138};
-						angles[]={0,2.9670596,0};
+						position[]={3154.2019,9.912384,12941.138};
+						angles[]={0,2.7945378,0};
 					};
 					side="Empty";
 					flags=4;
@@ -15678,7 +15678,7 @@ class Mission
 					};
 					id=1764;
 					type="Pine_3";
-					atlOffset=-3.065599;
+					atlOffset=-2.7000005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -51499,9 +51499,213 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item652
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3127.0747,12.688344,12947.231};
+						angles[]={6.1887999,3.0751464,0.018663859};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=3585;
+					type="Pine_1";
+					atlOffset=0.028326988;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item653
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3134.3601,8.9973459,12927.53};
+						angles[]={0,3.0751479,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=3589;
+					type="Pine_1";
+					atlOffset=0.077000618;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item654
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3131.4954,10.591219,12932.126};
+						angles[]={0,3.0751479,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=3590;
+					type="Pine_1";
+					atlOffset=0.017931938;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item655
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3151.135,8.2435093,12930.338};
+						angles[]={0,5.2359877,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=3591;
+					type="Pine_3";
+					atlOffset=-0.69650364;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
+				class Item656
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3141.2454,8.7046919,12932.604};
+						angles[]={0,3.0751479,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						disableSimulation=1;
+					};
+					id=3592;
+					type="Pine_1";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="allowDamage";
+							expression="_this allowdamage _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						nAttributes=1;
+					};
+				};
 			};
 			id=3146;
-			atlOffset=1.1357656;
+			atlOffset=-0.35972452;
 		};
 		class Item2
 		{
@@ -51509,7 +51713,7 @@ class Mission
 			name="Marqueurs";
 			class Entities
 			{
-				items=143;
+				items=144;
 				class Item0
 				{
 					dataType="Marker";
@@ -51628,7 +51832,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=0.28009796;
+					atlOffset=9.5367432e-007;
 				};
 				class Item9
 				{
@@ -52791,7 +52995,7 @@ class Mission
 				class Item114
 				{
 					dataType="Marker";
-					position[]={17489.371,0,13218.177};
+					position[]={17430.715,14.486665,13159.079};
 					name="Zone_Gouv_Restreinte_01";
 					text="Zone Gouvernementale Privée";
 					markerType="RECTANGLE";
@@ -52799,16 +53003,15 @@ class Mission
 					colorName="ColorRed";
 					alpha=0.2;
 					fillName="SolidFull";
-					a=100;
-					b=150;
-					angle=48.523613;
+					a=110;
+					b=80;
+					angle=46.3703;
 					id=2550;
-					atlOffset=-13.26714;
 				};
 				class Item115
 				{
 					dataType="Marker";
-					position[]={17507.932,12.743114,13262.165};
+					position[]={17431.93,14.340898,13162.154};
 					name="Zone_Gouv_Restreinte_02";
 					text="Zone de Formation des Services Publics ";
 					type="mil_flag";
@@ -53110,9 +53313,26 @@ class Mission
 					id=3507;
 					atlOffset=-27.205887;
 				};
+				class Item143
+				{
+					dataType="Marker";
+					position[]={17548.291,0,13234.191};
+					name="Zone_Gouv_Restreinte_03";
+					text="Zone Gouvernementale Privée";
+					markerType="RECTANGLE";
+					type="rectangle";
+					colorName="ColorRed";
+					alpha=0.2;
+					fillName="SolidFull";
+					a=30;
+					b=45;
+					angle=46.369976;
+					id=3559;
+					atlOffset=-13.133814;
+				};
 			};
 			id=3147;
-			atlOffset=1.0783892e+013;
+			atlOffset=5.3919461e+012;
 		};
 		class Item3
 		{
@@ -58564,7 +58784,7 @@ class Mission
 										angles[]={0,0.67219484,6.2820935};
 									};
 									side="Civilian";
-									flags=2;
+									flags=6;
 									class Attributes
 									{
 										skill=0.60000002;
@@ -58574,7 +58794,6 @@ class Mission
 									};
 									id=3360;
 									type="C_man_polo_3_F";
-									atlOffset=0.47954369;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -58661,7 +58880,6 @@ class Mission
 							{
 							};
 							id=3359;
-							atlOffset=0.47954369;
 						};
 						class Item7
 						{
@@ -60708,7 +60926,7 @@ class Mission
 									};
 									id=3394;
 									type="C_Man_casual_2_F_euro";
-									atlOffset=0.17200089;
+									atlOffset=0.00048065186;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -61839,7 +62057,6 @@ class Mission
 					};
 					id=3456;
 					type="Land_Atm_02_F";
-					atlOffset=0.1618824;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -62297,6 +62514,7 @@ class Mission
 					};
 					id=3558;
 					type="Land_CargoBox_V1_F";
+					atlOffset=-0.00022506714;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -62342,7 +62560,7 @@ class Mission
 				};
 			};
 			id=3145;
-			atlOffset=19.878183;
+			atlOffset=19.878532;
 		};
 		class Item4
 		{
@@ -67266,7 +67484,7 @@ class Mission
 						position[]={3146.572,1.968418,12922.584};
 						angles[]={5.9880676,0,6.2299004};
 					};
-					init="call{(getPos this nearestObject 1119386) hideObject true; " \n "(getPos this nearestObject 1119391) hideObject true; " \n "(getPos this nearestObject 1119395) hideObject true; " \n "(getPos this nearestObject 1119863) hideObject true; " \n "(getPos this nearestObject 1119864) hideObject true; " \n "(getPos this nearestObject 1119865) hideObject true; " \n "(getPos this nearestObject 1119865) hideObject true; " \n "(getPos this nearestObject 1119866) hideObject true; " \n "(getPos this nearestObject 1119867) hideObject true; " \n "(getPos this nearestObject 1119882) hideObject true; " \n "(getPos this nearestObject 1119883) hideObject true; " \n "(getPos this nearestObject 1119886) hideObject true; " \n "(getPos this nearestObject 1119887) hideObject true; " \n "(getPos this nearestObject 1119888) hideObject true; " \n "(getPos this nearestObject 1119889) hideObject true; " \n "(getPos this nearestObject 1119890) hideObject true; " \n "(getPos this nearestObject 1119891) hideObject true; " \n "(getPos this nearestObject 1119892) hideObject true; " \n "(getPos this nearestObject 1119893) hideObject true; " \n "(getPos this nearestObject 1119894) hideObject true; " \n "(getPos this nearestObject 1119895) hideObject true; " \n "(getPos this nearestObject 1119896) hideObject true; " \n "(getPos this nearestObject 1119897) hideObject true; " \n "(getPos this nearestObject 1119904) hideObject true; " \n "(getPos this nearestObject 1119925) hideObject true; " \n "(getPos this nearestObject 1119925) hideObject true; " \n "(getPos this nearestObject 1119926) hideObject true; " \n "(getPos this nearestObject 1119927) hideObject true; " \n "(getPos this nearestObject 1119928) hideObject true; " \n "(getPos this nearestObject 1119955) hideObject true; " \n "(getPos this nearestObject 1119956) hideObject true; " \n "(getPos this nearestObject 1119957) hideObject true; " \n "(getPos this nearestObject 1119958) hideObject true; " \n "(getPos this nearestObject 1119959) hideObject true; " \n "(getPos this nearestObject 1119959) hideObject true; " \n "(getPos this nearestObject 1119960) hideObject true; " \n "(getPos this nearestObject 1119971) hideObject true; " \n "(getPos this nearestObject 1119972) hideObject true; " \n "(getPos this nearestObject 1119976) hideObject true; " \n "(getPos this nearestObject 1119977) hideObject true; " \n "(getPos this nearestObject 1119979) hideObject true; " \n "(getPos this nearestObject 1119980) hideObject true; " \n "(getPos this nearestObject 1119992) hideObject true; " \n "(getPos this nearestObject 1119993) hideObject true; " \n "(getPos this nearestObject 1119994) hideObject true; " \n "(getPos this nearestObject 1119995) hideObject true; " \n "(getPos this nearestObject 1120319) hideObject true; " \n "(getPos this nearestObject 1120321) hideObject true; " \n "(getPos this nearestObject 1124821) hideObject true; " \n "(getPos this nearestObject 53704) hideObject true; " \n "(getPos this nearestObject 1119386) allowDamage false; " \n "(getPos this nearestObject 1119391) allowDamage false; " \n "(getPos this nearestObject 1119395) allowDamage false; " \n "(getPos this nearestObject 1119863) allowDamage false; " \n "(getPos this nearestObject 1119864) allowDamage false; " \n "(getPos this nearestObject 1119865) allowDamage false; " \n "(getPos this nearestObject 1119865) allowDamage false; " \n "(getPos this nearestObject 1119866) allowDamage false; " \n "(getPos this nearestObject 1119867) allowDamage false; " \n "(getPos this nearestObject 1119882) allowDamage false; " \n "(getPos this nearestObject 1119883) allowDamage false; " \n "(getPos this nearestObject 1119886) allowDamage false; " \n "(getPos this nearestObject 1119887) allowDamage false; " \n "(getPos this nearestObject 1119888) allowDamage false; " \n "(getPos this nearestObject 1119889) allowDamage false; " \n "(getPos this nearestObject 1119890) allowDamage false; " \n "(getPos this nearestObject 1119891) allowDamage false; " \n "(getPos this nearestObject 1119892) allowDamage false; " \n "(getPos this nearestObject 1119893) allowDamage false; " \n "(getPos this nearestObject 1119894) allowDamage false; " \n "(getPos this nearestObject 1119895) allowDamage false; " \n "(getPos this nearestObject 1119896) allowDamage false; " \n "(getPos this nearestObject 1119897) allowDamage false; " \n "(getPos this nearestObject 1119904) allowDamage false; " \n "(getPos this nearestObject 1119925) allowDamage false; " \n "(getPos this nearestObject 1119925) allowDamage false; " \n "(getPos this nearestObject 1119926) allowDamage false; " \n "(getPos this nearestObject 1119927) allowDamage false; " \n "(getPos this nearestObject 1119928) allowDamage false; " \n "(getPos this nearestObject 1119955) allowDamage false; " \n "(getPos this nearestObject 1119956) allowDamage false; " \n "(getPos this nearestObject 1119957) allowDamage false; " \n "(getPos this nearestObject 1119958) allowDamage false; " \n "(getPos this nearestObject 1119959) allowDamage false; " \n "(getPos this nearestObject 1119959) allowDamage false; " \n "(getPos this nearestObject 1119960) allowDamage false; " \n "(getPos this nearestObject 1119971) allowDamage false; " \n "(getPos this nearestObject 1119972) allowDamage false; " \n "(getPos this nearestObject 1119976) allowDamage false; " \n "(getPos this nearestObject 1119977) allowDamage false; " \n "(getPos this nearestObject 1119979) allowDamage false; " \n "(getPos this nearestObject 1119980) allowDamage false; " \n "(getPos this nearestObject 1119992) allowDamage false; " \n "(getPos this nearestObject 1119993) allowDamage false; " \n "(getPos this nearestObject 1119994) allowDamage false; " \n "(getPos this nearestObject 1119995) allowDamage false; " \n "(getPos this nearestObject 1120319) allowDamage false; " \n "(getPos this nearestObject 1120321) allowDamage false; " \n "(getPos this nearestObject 1124821) allowDamage false; " \n "(getPos this nearestObject 53704) allowDamage false;}";
+					init="call{(getPos this nearestObject 1119386) hideObject true; " \n "(getPos this nearestObject 1119391) hideObject true; " \n "(getPos this nearestObject 1119395) hideObject true; " \n "(getPos this nearestObject 1119863) hideObject true; " \n "(getPos this nearestObject 1119864) hideObject true; " \n "(getPos this nearestObject 1119865) hideObject true; " \n "(getPos this nearestObject 1119865) hideObject true; " \n "(getPos this nearestObject 1119866) hideObject true; " \n "(getPos this nearestObject 1119867) hideObject true; " \n "(getPos this nearestObject 1119882) hideObject true; " \n "(getPos this nearestObject 1119883) hideObject true; " \n "(getPos this nearestObject 1119886) hideObject true; " \n "(getPos this nearestObject 1119887) hideObject true; " \n "(getPos this nearestObject 1119888) hideObject true; " \n "(getPos this nearestObject 1119889) hideObject true; " \n "(getPos this nearestObject 1119890) hideObject true; " \n "(getPos this nearestObject 1119891) hideObject true; " \n "(getPos this nearestObject 1119892) hideObject true; " \n "(getPos this nearestObject 1119893) hideObject true; " \n "(getPos this nearestObject 1119894) hideObject true; " \n "(getPos this nearestObject 1119895) hideObject true; " \n "(getPos this nearestObject 1119896) hideObject true; " \n "(getPos this nearestObject 1119897) hideObject true; " \n "(getPos this nearestObject 1119904) hideObject true; " \n "(getPos this nearestObject 1119925) hideObject true; " \n "(getPos this nearestObject 1119925) hideObject true; " \n "(getPos this nearestObject 1119926) hideObject true; " \n "(getPos this nearestObject 1119927) hideObject true; " \n "(getPos this nearestObject 1119928) hideObject true; " \n "(getPos this nearestObject 1119955) hideObject true; " \n "(getPos this nearestObject 1119956) hideObject true; " \n "(getPos this nearestObject 1119957) hideObject true; " \n "(getPos this nearestObject 1119958) hideObject true; " \n "(getPos this nearestObject 1119959) hideObject true; " \n "(getPos this nearestObject 1119959) hideObject true; " \n "(getPos this nearestObject 1119960) hideObject true; " \n "(getPos this nearestObject 1119971) hideObject true; " \n "(getPos this nearestObject 1119972) hideObject true; " \n "(getPos this nearestObject 1119976) hideObject true; " \n "(getPos this nearestObject 1119977) hideObject true; " \n "(getPos this nearestObject 1119979) hideObject true; " \n "(getPos this nearestObject 1119980) hideObject true; " \n "(getPos this nearestObject 1119992) hideObject true; " \n "(getPos this nearestObject 1119993) hideObject true; " \n "(getPos this nearestObject 1119994) hideObject true; " \n "(getPos this nearestObject 1119995) hideObject true; " \n "(getPos this nearestObject 1120319) hideObject true; " \n "(getPos this nearestObject 1120321) hideObject true; " \n "(getPos this nearestObject 1124821) hideObject true; " \n "(getPos this nearestObject 53704) hideObject true; " \n "(getPos this nearestObject 1119386) allowDamage false; " \n "(getPos this nearestObject 1119391) allowDamage false; " \n "(getPos this nearestObject 1119395) allowDamage false; " \n "(getPos this nearestObject 1119863) allowDamage false; " \n "(getPos this nearestObject 1119864) allowDamage false; " \n "(getPos this nearestObject 1119865) allowDamage false; " \n "(getPos this nearestObject 1119865) allowDamage false; " \n "(getPos this nearestObject 1119866) allowDamage false; " \n "(getPos this nearestObject 1119867) allowDamage false; " \n "(getPos this nearestObject 1119882) allowDamage false; " \n "(getPos this nearestObject 1119883) allowDamage false; " \n "(getPos this nearestObject 1119886) allowDamage false; " \n "(getPos this nearestObject 1119887) allowDamage false; " \n "(getPos this nearestObject 1119888) allowDamage false; " \n "(getPos this nearestObject 1119889) allowDamage false; " \n "(getPos this nearestObject 1119890) allowDamage false; " \n "(getPos this nearestObject 1119891) allowDamage false; " \n "(getPos this nearestObject 1119892) allowDamage false; " \n "(getPos this nearestObject 1119893) allowDamage false; " \n "(getPos this nearestObject 1119894) allowDamage false; " \n "(getPos this nearestObject 1119895) allowDamage false; " \n "(getPos this nearestObject 1119896) allowDamage false; " \n "(getPos this nearestObject 1119897) allowDamage false; " \n "(getPos this nearestObject 1119904) allowDamage false; " \n "(getPos this nearestObject 1119925) allowDamage false; " \n "(getPos this nearestObject 1119925) allowDamage false; " \n "(getPos this nearestObject 1119926) allowDamage false; " \n "(getPos this nearestObject 1119927) allowDamage false; " \n "(getPos this nearestObject 1119928) allowDamage false; " \n "(getPos this nearestObject 1119955) allowDamage false; " \n "(getPos this nearestObject 1119956) allowDamage false; " \n "(getPos this nearestObject 1119957) allowDamage false; " \n "(getPos this nearestObject 1119958) allowDamage false; " \n "(getPos this nearestObject 1119959) allowDamage false; " \n "(getPos this nearestObject 1119959) allowDamage false; " \n "(getPos this nearestObject 1119960) allowDamage false; " \n "(getPos this nearestObject 1119971) allowDamage false; " \n "(getPos this nearestObject 1119972) allowDamage false; " \n "(getPos this nearestObject 1119976) allowDamage false; " \n "(getPos this nearestObject 1119977) allowDamage false; " \n "(getPos this nearestObject 1119979) allowDamage false; " \n "(getPos this nearestObject 1119980) allowDamage false; " \n "(getPos this nearestObject 1119992) allowDamage false; " \n "(getPos this nearestObject 1119993) allowDamage false; " \n "(getPos this nearestObject 1119994) allowDamage false; " \n "(getPos this nearestObject 1119995) allowDamage false; " \n "(getPos this nearestObject 1120319) allowDamage false; " \n "(getPos this nearestObject 1120321) allowDamage false; " \n "(getPos this nearestObject 1124821) allowDamage false; " \n "(getPos this nearestObject 53704) allowDamage false; " \n "(getPos this nearestObject 1119862) hideObject true; " \n "(getPos this nearestObject 1119861) hideObject true; " \n "(getPos this nearestObject 1119860) hideObject true; " \n "(getPos this nearestObject 1119881) hideObject true; " \n "(getPos this nearestObject 1119880) hideObject true; " \n "(getPos this nearestObject 1119879) hideObject true; " \n "(getPos this nearestObject 1119862) allowDamage false; " \n "(getPos this nearestObject 1119861) allowDamage false; " \n "(getPos this nearestObject 1119860) allowDamage false; " \n "(getPos this nearestObject 1119881) allowDamage false; " \n "(getPos this nearestObject 1119880) allowDamage false; " \n "(getPos this nearestObject 1119879) allowDamage false; " \n "(getPos this nearestObject 1119859) hideObject true; " \n "(getPos this nearestObject 1119859) allowDamage false;}";
 					id=1670;
 					type="Logic";
 				};
@@ -67896,11 +68114,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={6393.5049,155.90413,12091.069};
+						position[]={8373.1865,98.589584,25124.801};
 						angles[]={0,4.7663546,0};
 					};
 					side="East";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						init="call{this addAction[""Magasinier Pëtite Frappe"",life_fnc_weaponShopMenu,""PetiteF"",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4 && license_civ_petiteF'];}";
@@ -67968,7 +68186,7 @@ class Mission
 					};
 					id=3556;
 					type="O_officer_F";
-					atlOffset=0.00042724609;
+					atlOffset=0.30310822;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -68055,7 +68273,7 @@ class Mission
 			{
 			};
 			id=3557;
-			atlOffset=0.00042724609;
+			atlOffset=0.30310822;
 		};
 	};
 };
