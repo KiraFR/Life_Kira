@@ -64,13 +64,13 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	_money = "Land_Money_F";
 
 	//It's a vehicle! open the vehicle interaction key!
-	if(_isVehicle) then {
-		if(!dialog) then {
-			if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 2) then {
-				[_curTarget] call life_fnc_vInteractionMenu;
-			};
-		};
-	} else {
+	//if(_isVehicle) then {
+		//if(!dialog) then {
+			//if(player distance _curTarget < ((boundingBox _curTarget select 1) select 0) + 2) then {
+				//[_curTarget] call life_fnc_vInteractionMenu;
+			//};
+		//};
+	//} else {
 		//Is it a animal type?
 		if((typeOf _curTarget) in _animalTypes) then {
 			if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
