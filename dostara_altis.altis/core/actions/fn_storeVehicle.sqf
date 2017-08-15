@@ -1,18 +1,19 @@
 /*
 	File: fn_storeVehicle.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Stores the vehicle in the garage.
 */
-private["_nearVehicles","_vehicle"];
+private["_nearVehicles","_vehicle","_dist"];
+if(PlayerSide in [west,independent]) then {_dist = 80} else {_dist = 40};
 if(vehicle player != player) then
 {
 	_vehicle = vehicle player;
 }
 	else
 {
-	_nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air","Ship"],30]; //Fetch vehicles within 30m.
+	_nearVehicles = nearestObjects[getPos (_this select 0),["Car","Air","Ship"],_dist]; //Fetch vehicles within _dist.
 	if(count _nearVehicles > 0) then
 	{
 		{

@@ -1,7 +1,7 @@
 /*
 	File: fn_knockoutAction.sqf
 	Author: Bryan "Tonic" Boardwine
-	
+
 	Description:
 	Knocks out the target.
 */
@@ -15,7 +15,7 @@ if(player distance _target > 4) exitWith {};
 life_knockout = true;
 [player,"AwopPercMstpSgthWrflDnon_End2"] RemoteExecCall ["life_fnc_animSync",0];
 sleep 0.08;
-[_target,profileName] RemoteExecCall ["life_fnc_knockedOut",_target];
+[_target,profileName] RemoteExec ["life_fnc_knockedOut",_target];
 
-sleep 3;
+sleep 10;
 life_knockout = false;

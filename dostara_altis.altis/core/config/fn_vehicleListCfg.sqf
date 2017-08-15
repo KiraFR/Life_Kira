@@ -43,7 +43,7 @@ switch (_shop) do
 		if(license_med_prefet) then
 		{
 		_return = [
-			["O_Heli_Transport_04_medevac_F",50000]
+			["O_Heli_Transport_04_medevac_F",50000];
 		];
 	};
 };
