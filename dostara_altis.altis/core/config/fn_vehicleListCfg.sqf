@@ -24,29 +24,25 @@ switch (_shop) do
 
 	case "med_shop":
 	{
-		_return =
-		[
-		];
 		if(license_med_prefet) then
 		{
-		_return = [
-			["VL_SIM",10000],
-			["VSAV_SIM",25000]
-		];
+			_return = [
+				["VL_SIM",10000],
+				["VSAV_SIM",25000]
+			];
+		};
 	};
-};
 
-	case "med_air_hs": {
-		_return =
-		[
-		];
+	case "med_air_hs": 
+	{
+
 		if(license_med_prefet) then
 		{
-		_return = [
-			["O_Heli_Transport_04_medevac_F",50000]
-		];
+			_return = [
+				["O_Heli_Transport_04_medevac_F",50000]
+			];
+		};
 	};
-};
 
 	case "civ_car":
 	{
@@ -110,16 +106,13 @@ switch (_shop) do
 
 	case "cop_car":
 	{
-		_return =
-		[
-		];
 		if(license_cop_prefet) then
 		{
 			_return = [
-			["DAR_ChargerPolice",5000],
-			["DAR_ExplorerPolice",5000],
-			["M3_POLICE",5000],
-			["Gurkha_f5",30000]
+				["DAR_ChargerPolice",5000],
+				["DAR_ExplorerPolice",5000],
+				["M3_POLICE",5000],
+				["Gurkha_f5",30000]
 			];
 		};
 	};
@@ -135,9 +128,6 @@ switch (_shop) do
 
 	case "cop_air":
 	{
-		_return =
-		[
-		];
 		if(license_cop_prefet) then
 		{
 			_return = [
