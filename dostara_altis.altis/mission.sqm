@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=729;
+		nextID=750;
 	};
 	class Camera
 	{
@@ -52536,7 +52536,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -62019,7 +62019,6 @@ class Mission
 								angles[]={0,0.67219484,6.2820935};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -62029,6 +62028,7 @@ class Mission
 							};
 							id=3360;
 							type="C_man_polo_3_F";
+							atlOffset=0.47954369;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -63158,7 +63158,7 @@ class Mission
 							};
 							id=3394;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.00048065186;
+							atlOffset=0.17200089;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -74954,7 +74954,7 @@ class Mission
 				};
 			};
 			id=3156;
-			atlOffset=20.084362;
+			atlOffset=-82.714256;
 		};
 		class Item6
 		{
