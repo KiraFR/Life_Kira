@@ -21,7 +21,8 @@ if(_num < 1) exitWith {hint "You can't enter anything below 1!";};
 
 if(life_trunk_vehicle isKindOf "House_F") then {
 	_mWeight = 0;
-	{_mWeight = _mWeight + ([(typeOf _x)] call life_fnc_vehicleWeightCfg);} forEach (life_trunk_vehicle getVariable["containers",[]]);
+	_mWeight = [(typeOf cursorTarget)] call life_fnc_vehicleWeightCfg;
+	//{_mWeight = _mWeight + ([(typeOf _x)] call life_fnc_vehicleWeightCfg);} forEach (life_trunk_vehicle getVariable["containers",[]]);
 	_totalWeight = [_mWeight,(life_trunk_vehicle getVariable["Trunk",[[],0]]) select 1];
 } else {
 	_totalWeight = [life_trunk_vehicle] call life_fnc_vehicleWeight;
