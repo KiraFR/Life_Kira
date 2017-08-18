@@ -1,4 +1,3 @@
-#include <macro.h>
 /*
 	File:  fn_HAttackedPhone.sqf
 	Auteur: J. `Kira` D.
