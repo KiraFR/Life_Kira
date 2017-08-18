@@ -52,6 +52,7 @@ class CfgFunctions
 			class queryAccountRequest{};
 			class taxes{};
 			class modifComptGouv{};
+			class HAttackedPhone{};
 		};
 	};
 
