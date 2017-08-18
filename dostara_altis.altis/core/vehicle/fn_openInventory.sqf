@@ -23,14 +23,14 @@ if(_vehicle isKindOf "House_F") then {
 
 if(_vehicle isKindOf "House_F") then {
 	private["_mWeight"];
-	_mWeight = _mWeight + [(typeOf cursorTarget)] call life_fnc_vehicleWeightCfg;
+	_mWeight = [(typeOf cursorTarget)] call life_fnc_vehicleWeightCfg;
 	//{_mWeight = _mWeight + ([(typeOf _x)] call life_fnc_vehicleWeightCfg);} forEach (_vehicle getVariable["containers",[]]);
 	_veh_data = [_mWeight,(_vehicle getVariable["Trunk",[[],0]]) select 1];
 } else {
 	_veh_data = [_vehicle] call life_fnc_vehicleWeight;
 };
 
-if(_vehicle isKindOf "House_F" && _mWeight == 0}) exitWith {hint localize "STR_MISC_NoStorageWarn"; closeDialog 0; _vehicle setVariable["trunk_in_use",false,true];};
+if(_vehicle isKindOf "House_F" && _mWeight == 0) exitWith {hint localize "STR_MISC_NoStorageWarn"; closeDialog 0; _vehicle setVariable["trunk_in_use",false,true];};
 if(_veh_data select 0 == -1 && {!(_vehicle isKindOf "House_F")}) exitWith {closeDialog 0; _vehicle setVariable["trunk_in_use",false,true]; hint localize "STR_MISC_NoStorageVeh";};
 
 ctrlSetText[3504,format[(localize "STR_MISC_Weight")+ " %1/%2",_veh_data select 1,_veh_data select 0]];
