@@ -33,7 +33,7 @@ switch (_shop) do
 		};
 	};
 
-	case "med_air_hs": 
+	case "med_air_hs":
 	{
 
 		if(license_med_prefet) then
@@ -49,6 +49,7 @@ switch (_shop) do
 		_return =
 		[
 			["dh2o_smart",133],
+			["dh2o_tatra_613",133],
 			["C_Hatchback_01_F",1667],
 			["C_Offroad_01_F",3335],
 			["C_SUV_01_F",3335],
@@ -72,7 +73,7 @@ switch (_shop) do
 			["ivory_m3",60333],
 			["ivory_lfa",383000],
 			["ivory_wrx",23335]/*,
-			["dh2o_porsheboxter",23335]*/
+			["dh2o_tatra_613",23335]*/
 
 		];
 	};
