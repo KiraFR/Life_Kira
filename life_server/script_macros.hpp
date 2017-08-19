@@ -58,3 +58,7 @@
 #define M_CONFIG(TYPE,CFG,CLASS,ENTRY) TYPE(missionConfigFile >> CFG >> CLASS >> ENTRY)
 #define BASE_CONFIG(CFG,CLASS) inheritsFrom(configFile >> CFG >> CLASS)
 #define LIFE_SETTINGS(TYPE,SETTING) TYPE(missionConfigFile >> "Life_Settings" >> SETTING)
+
+
+//très utile
+#define return (playableUnits select {owner _x isEqualTo remoteExecutedOwner} param [0, objNull])
