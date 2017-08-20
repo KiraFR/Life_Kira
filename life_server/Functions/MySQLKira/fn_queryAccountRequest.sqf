@@ -23,7 +23,7 @@ _cpt = _cpt + count _accResult;
 _total pushBack _accResult;
 
 _accEntreprise = format["SELECT nam_account,numcompte,bankacc,dflt,first FROM banque WHERE playerid='%1' AND entreprise='1';",_uid];
-_AccResultEnt = [_accEntreprise,2,true] call DB_fnc_asyncCall;
+_AccResultEnt = [_accEntreprise,2] call DB_fnc_asyncCall;
 _total pushBack _AccResultEnt;
 _cpt = _cpt + count _AccResultEnt;
 

@@ -65,7 +65,8 @@ if(count _entreprise > 0) then{
 	missionNameSpace setVariable ["life_EnterAcc",true];
 };
 if(count _organisme > 0) then{
-	missionNamespace setVariable ["AccountBanqueOrga",_orga];
+	_accCourant = _accCourant + _organisme;
+	missionNamespace setVariable ["AccountBanque",_accCourant];
 	missionNameSpace setVariable ["life_OrgaAcc",true];
 };
 missionNameSpace setVariable ["life_nbAcc",_cpt];
