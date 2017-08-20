@@ -7,7 +7,7 @@ private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_max
 uiSleep 5;
 while {true} do {
     _ObjectLast = Bourse_ressource_Save;
-    Sleep 30;
+    Sleep 300; //5min
     _Object = Bourse_ressource_Save;
     if ((count _Object) != 0) then {
         //diag_log format["Save Object ==> Boucle d'ajout ==> %1",Bourse_ressource_Save];

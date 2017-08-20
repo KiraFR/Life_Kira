@@ -8,7 +8,7 @@ uiSleep 5;
 while{true} do {
     _Object = Bourse_Object getVariable "Bourse";
     _gouv = Bourse_Object getVariable "MontantGouvernement";
-    uiSleep 150; // 2m 30s
+    sleep 150; // 2m 30s
     _query = "UPDATE bourse SET valeur = CASE";
     {
        _str = format[" WHEN name = '""%2""' THEN '%1'",_x select 1,_x select 0];
