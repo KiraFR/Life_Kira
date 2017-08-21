@@ -58,12 +58,13 @@ if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{hint "Vous ne pouvez pas depos
 if(_taxe == 50)then{
 	_value = _value - _taxe;
 	_taxes = _taxe;
+	CASH = CASH - _value - _taxe;
 }else{
 	_taxes = floor(_value * _taxe);
 	_value = floor(_value - _taxes);
+	CASH = CASH - _value - _taxes;
 };
-
-CASH = CASH - _value;
+	
 BANK = BANK + _value;
 call life_fnc_refreshAC;
 hint format["Vous venez de deposer %1 dostar, %2€ de taxe ont été retiré.",[_value] call life_fnc_numberText,[_taxes] call life_fnc_numberText];
