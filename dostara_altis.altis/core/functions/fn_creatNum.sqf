@@ -9,8 +9,8 @@
 private _prefixe = _this select 3;
 
 if(_prefixe == "")exitwith{hint "Problème de préfixe, contactez un Administrateur."};
-if(CASH < 1000) exitWith{hint "Vous n'avez pas assez d'argent de poche pour acheter une carte SIM";};
-CASH = CASH - 1000;
+if(CASH < life_prix_Numero) exitWith{hint "Vous n'avez pas assez d'argent de poche pour acheter une carte SIM";};
+CASH = CASH - life_prix_Numero;
 hint "Vous pouvez maintenant envoyer des messages.";
 [0] call SOCK_fnc_updatePartial;
 [_prefixe,player,getPlayerUID player] remoteExecCall ["KIRA_fnc_phoneNum",RSERV];
