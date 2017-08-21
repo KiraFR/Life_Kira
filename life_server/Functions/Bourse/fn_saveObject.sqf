@@ -7,10 +7,7 @@ private["_Object","_ObjectLast","_Object2","_Sell","_Sell_2","_ressources","_max
 
 while {true} do {
     while {(count Bourse_ressource_Save) == 0} do {sleep 5;};
-    dialog "quelqu'un a vendu";
-    sleep 150; //5min
-    _time1 = time;
-    dialog "c'est partie";
+    sleep 300; //5min
     _Object = Bourse_ressource_Save;
     if ((count _Object) != 0) then {
         //diag_log format["Save Object ==> Boucle d'ajout ==> %1",Bourse_ressource_Save];
@@ -123,7 +120,5 @@ while {true} do {
         } forEach _Object2;
         //diag_log format["Save Object ==> End ==> Bourse : %1",_Object_Bourse];
         Bourse_ressource_Save = [];
-	_time2 = time - _time1;
-        diag_log format["cela a mis %1 secondes pour modifier la bourse.",_time2];
     };
 };
