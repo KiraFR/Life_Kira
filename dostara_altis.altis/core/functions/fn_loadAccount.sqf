@@ -41,7 +41,7 @@ if(count _courant > 0) then{
 		};
 		_tab = [_x select 0,_x select 1,_x select 2,_default,_x select 4];
 		_accCourant pushBack _tab;
-		_nb = _nb +1;
+		if(([_x select 1] call life_fnc_typeCompte) == 2)then{_nb = _nb +1;};
 	}foreach _courant;
 	missionNamespace setVariable ["AccountBanque",_accCourant];
 	missionNameSpace setVariable ["life_AccN",_nb];

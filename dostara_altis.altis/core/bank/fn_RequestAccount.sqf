@@ -20,7 +20,7 @@ switch (_type) do {
 	//offshoree
 	case 1: {
 		_name = ctrlText 11007;
-		_life_AccOffshore = missionNameSpace setVariable ["life_AccOffshore",_nb];
+		_life_AccOffshore = missionNameSpace getVariable ["life_AccOffshore",0];
 		_PriceB = (_life_AccOffshore)*(100000*3);
 		_first = false;
 		if(_PriceB == 0)then{_PriceB = 100000;};
