@@ -180,6 +180,7 @@ class FSM
                          "		};" \n
                          "	};" \n
                          "};" \n
+                         "call life_fnc_refreshAC;" \n
                          "" \n
                          "systemChat format[localize ""STR_FSM_Paycheck"",(call life_paycheck_period)];"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
