@@ -10,7 +10,7 @@ _type = [_this,0,"",[""]] call BIS_fnc_param;
 if(_type == "") exitWith {-1};
 
 switch (_type) do{
-	case "driver": {_ret = (500 * (life_nbrFoisPermis + 1));};
+	case "driver": {_ret = 500;};//(500 * (life_nbrFoisPermis + 1));};
 	case "boat": {_ret = 1000;}; //Boating license cost
 	case "pilot": {_ret = 20000;}; //Pilot/air license cost
 	case "gun": {_ret = 3600;}; //Firearm/gun license cost
@@ -24,7 +24,7 @@ switch (_type) do{
 	case "medmarijuana": {_ret = 1500;}; //Medical Marijuana processing license cost
 	case "gang": {_ret = 10000;}; //Gang license cost
 	case "rebel": {_ret = 75000;}; //Rebel license cost
-	case "truck": {_ret = (20000 * (life_nbrFoisPermis + 1));};
+	case "truck": {_ret = (20000;};// * (life_nbrFoisPermis + 1));};
 	case "diamond": {_ret = 4350;};
 	case "salt": {_ret = 12000;};
 	case "cocaine": {_ret = 30000;};
