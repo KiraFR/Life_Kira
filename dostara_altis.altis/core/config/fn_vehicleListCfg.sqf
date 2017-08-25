@@ -152,13 +152,25 @@ switch (_shop) do
 		};
 	};
 
-	case "civ_ship":
+	case "civ_ship_peche":
 	{
-		_return =
-		[
-			["C_Rubberboat",1300],
-			["C_Boat_Civil_01_F",9533]
-		];
+		if(license_civ_boat) then
+		{
+		_return =[];
+		};
+	};
+
+	case "civ_ship_plaisance":
+	{
+		if(license_civ_boat) then
+		{
+			_return =[
+				["C_Rubberboat",1300],
+				["C_Boat_Civil_01_F",14300]
+				["C_Scooter_Transport_01_F",8000]
+				["faa_ar_lcm",28600]
+			];
+		};
 	};
 
 	case "cop_ship":
