@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=5833;
+		nextID=5838;
 	};
 	class MarkerIDProvider
 	{
@@ -490,6 +490,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Mapping";
+			state=1;
 			class Entities
 			{
 				items=329;
@@ -84424,9 +84425,10 @@ class Mission
 		{
 			dataType="Layer";
 			name="Marqueurs";
+			state=1;
 			class Entities
 			{
-				items=164;
+				items=169;
 				class Item0
 				{
 					dataType="Marker";
@@ -86246,14 +86248,80 @@ class Mission
 					id=5826;
 					atlOffset=-119.05182;
 				};
+				class Item164
+				{
+					dataType="Marker";
+					position[]={3052.9751,3.8486887e+033,12635.625};
+					name="civ_boat_1";
+					text="Armateur";
+					type="mil_triangle";
+					colorName="ColorWEST";
+					a=1.2;
+					b=1.2;
+					id=5833;
+					atlOffset=3.8486887e+033;
+				};
+				class Item165
+				{
+					dataType="Marker";
+					position[]={12831.574,3.8486887e+033,14223.922};
+					name="civ_boat_2";
+					text="Armateur";
+					type="mil_triangle";
+					colorName="ColorWEST";
+					a=1.2;
+					b=1.2;
+					id=5834;
+					atlOffset=3.8486887e+033;
+				};
+				class Item166
+				{
+					dataType="Marker";
+					position[]={16367.185,3.8486887e+033,12467.04};
+					name="civ_boat_3";
+					text="Armateur";
+					type="mil_triangle";
+					colorName="ColorWEST";
+					a=1.2;
+					b=1.2;
+					id=5835;
+					atlOffset=3.8486887e+033;
+				};
+				class Item167
+				{
+					dataType="Marker";
+					position[]={27679.996,3.8486887e+033,24511.428};
+					name="civ_boat_4";
+					text="Armateur";
+					type="mil_triangle";
+					colorName="ColorWEST";
+					a=1.2;
+					b=1.2;
+					id=5836;
+					atlOffset=3.8486887e+033;
+				};
+				class Item168
+				{
+					dataType="Marker";
+					position[]={17604.033,3.8486887e+033,18909.598};
+					name="civ_boat_5";
+					text="Armateur";
+					type="mil_triangle";
+					colorName="ColorWEST";
+					a=1.2;
+					b=1.2;
+					id=5837;
+					atlOffset=3.8486887e+033;
+				};
 			};
 			id=3147;
-			atlOffset=5142550.5;
+			atlOffset=3.7284173e+033;
 		};
 		class Item3
 		{
 			dataType="Layer";
 			name="PNJ";
+			state=1;
 			class Entities
 			{
 				items=117;
