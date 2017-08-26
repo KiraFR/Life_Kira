@@ -35,7 +35,6 @@ switch (_shop) do
 
 	case "med_air_hs":
 	{
-
 		if(license_med_prefet) then
 		{
 			_return = [
@@ -100,8 +99,7 @@ switch (_shop) do
 
 		if(license_civ_rebel) then
 		{
-			_return pushBack
-			["B_G_Offroad_01_armed_F",750000];
+			_return pushBack["B_G_Offroad_01_armed_F",750000];
 		};
 	};
 
@@ -141,22 +139,19 @@ switch (_shop) do
 
 	case "cop_airhq":
 	{
-		_return pushBack
-		["B_Heli_Light_01_F",75000];
+		_return pushBack ["B_Heli_Light_01_F",75000];
+
 		if(__GETC__(life_coplevel) > 2) then
 		{
-			_return pushBack
-			["B_Heli_Transport_01_F",200000];
-			_return pushBack
-			["B_MRAP_01_hmg_F",750000];
+			_return pushBack ["B_Heli_Transport_01_F",200000];
+			_return pushBack ["B_MRAP_01_hmg_F",750000];
 		};
 	};
 
 	case "civ_ship_peche":
 	{
-		if(license_civ_boat) then
-		{
-		_return =[];
+		if(license_civ_boat) then{
+			_return =[];
 		};
 	};
 
