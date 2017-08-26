@@ -72,6 +72,7 @@ life_waitpermis = false;
 life_maxPoints = 2;
 nbNotif = 0;
 life_prix_Numero = 40;
+life_shopList = [];
 /*
 *****************************
 ****** KronosD Variables *****
@@ -133,7 +134,6 @@ CONSTANT(life_vShop_rentalOnly,life_vShop_rentalOnly); //These vehicles can neve
 
 life_inv_items =
 [
-
     "life_inv_orange",
     "life_inv_peche",
     "life_inv_eau",
@@ -144,6 +144,7 @@ life_inv_items =
     "life_inv_seau",
     "life_inv_pelle",
     "life_inv_pioche",
+    "life_inv_harpon",
     "life_inv_herse",
     "life_inv_outil_crochetage",
     "life_inv_grand_coffre",
@@ -286,6 +287,7 @@ sell_array =
     ["Pelle",45],
     ["Pioche",55],
     ["Herse",20],
+    ["harpon",40], //à changer
     ["Outil_Crochetage",200],
 
     ["Grand_Coffre",-1],
@@ -335,7 +337,6 @@ sell_array =
     ["Pharmaceutique",-1],
     ["Speed_Ball",-1],
     ["Tortue",-1]
-
 ];
 CONSTANT(sell_array,sell_array);
 

@@ -1,17 +1,3 @@
-TON_fnc_index =
-compileFinal "
-	params ['_item','_stack'];
-	_return = -1;
-
-	{
-		if(_item in _x) exitWith {
-			_return = _forEachIndex;
-		};
-	} forEach _stack;
-
-	_return;
-";
-
 TON_fnc_player_query =
 compileFinal "
 	params ['_ret'];
@@ -22,7 +8,6 @@ compileFinal "
 ";
 publicVariable "TON_fnc_player_query";
 
-publicVariable "TON_fnc_index";
 
 TON_fnc_clientWireTransfer =
 compileFinal "

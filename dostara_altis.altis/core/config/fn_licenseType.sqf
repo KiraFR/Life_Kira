@@ -47,14 +47,12 @@ switch (_mode) do
 			case "opium": {_var = "license_civ_opium";};
 			case "vin": {_var = "license_civ_vin";};
 
-
 			case "ASG": {_var = "license_civ_ASG";};
             case "AMC": {_var = "license_civ_AMC";};
             case "AMG": {_var = "license_civ_AMG";};
             case "ASP": {_var = "license_civ_ASP";};
 
 			//New License # KronosD
-
 			case "diamond": {_var = "license_civ_diamond";};
 			case "acier": {_var = "license_civ_acier";};
 			case "pprecieuse": {_var = "license_civ_pprecieuse";};
@@ -68,7 +66,6 @@ switch (_mode) do
 
 			case "silver": {_var = "licence_civ_silver";};
 			case "aluminium": {_var = "licence_civ_aluminium";};
-
 			default {_var = "";};
 		};
 	};

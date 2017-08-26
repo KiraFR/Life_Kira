@@ -17,10 +17,9 @@ _unit = player;
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 if ((time - life_action_delay) < 1.5) exitWith {hint localize "STR_NOTF_ActionDelay";};
 
-_price = [_vehicleLife,__GETC__(life_garage_prices)] call TON_fnc_index;
-_price = if(_price == -1) then {1000;} else {(__GETC__(life_garage_prices) select _price) select 1;};
+_price = [_vehicleLife] call life_fnc_priceVehBuy;
 
-_insurancePrice = _price * 0.5;
+_insurancePrice = _price * 0.2;
 if(!(_insurancePrice isEqualType 0) || _insurancePrice < 1) then {_insurancePrice = 500};
 if(BANK < _insurancePrice) exitWith {hint format[(localize "STR_GNOTF_NotEnoughMoney"),[_insurancePrice] call life_fnc_numberText];};
 

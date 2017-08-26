@@ -16,9 +16,7 @@ _zone = "";
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } forEach _ressourceZones;
 _hasObject = true;
-if(_zone == "") exitWith {
-	life_action_inUse = false;
-};
+if(_zone == "") exitWith {life_action_inUse = false;};
 //Get the ressource that will be gathered from the zone name...
 switch(true) do {
 	case (_zone in ["Ress_Pomme_01","Ress_Pomme_02"]): {_gather = "Pommes"; _val = 3; _object = "Seau";};
@@ -47,7 +45,7 @@ if(_val == 0) exitWith{hint "Votre récolte n'est pas bonne, vous avez jeté ce 
 
 if (!(_object == "")) then {
     _var = [_object,0] call life_fnc_varHandle;
-    if((missionNamespace getVariable _var) <= 0) exitWith{_hasObject = false;};
+    if((missionNamespace getVariable _var) <= 0) exitWith {_hasObject = false;hint format["Vous n'avez pas de %1 pour récolter la ressource : %2.",_object,_gather];};
 };
 
 if(!_hasObject)exitWith{hint format["Vous n'avez pas de %1 pour récolter la ressource : %2.",_object,_gather];};

@@ -73,15 +73,15 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	//} else {
 		//Is it a animal type?
 		if((typeOf _curTarget) in _animalTypes) then {
-			if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
+			/*if((typeOf _curTarget) == "Turtle_F" && !alive _curTarget) then {
 				private["_handle"];
 				_handle = [_curTarget] spawn life_fnc_catchTurtle;
 				waitUntil {scriptDone _handle};
-			} else {
+			} else {*/
 				private["_handle"];
 				_handle = [_curTarget] spawn life_fnc_catchFish;
 				waitUntil {scriptDone _handle};
-			};
+			//};
 		} else {
 			//OK, it wasn't a vehicle so let's see what else it could be?
 			if((typeOf _curTarget) in _miscItems) then {

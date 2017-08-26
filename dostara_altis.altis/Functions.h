@@ -223,7 +223,6 @@ class Life_Client_Core
 		class index {};
 
 		//ADD
-
 		class processSwitch {};
 		class minValue {};
 		class loadAccount {};
@@ -234,6 +233,7 @@ class Life_Client_Core
 		class taxes {};
 		class typeCompte {};
 		class refreshAC {};
+		class priceVehBuy {};
 	};
 
 	class Network

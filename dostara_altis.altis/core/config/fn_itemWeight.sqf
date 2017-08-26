@@ -73,4 +73,5 @@ switch (_item) do
     case "Pharmaceutique" : {1};
     case "Speed_Ball" : {1};
     case "Tortue" : {3};
+    case "harpon" : {4};
 };

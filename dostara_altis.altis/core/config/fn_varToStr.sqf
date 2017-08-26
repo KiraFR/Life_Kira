@@ -78,7 +78,7 @@ switch (_var) do
     case "life_inv_petit_coffre" : {"Petit Coffre"};
     case "life_inv_herse" : {"Herse"};
     case "life_inv_outil_crochetage" : {"Outil de crochetage"};
-
+    case "life_inv_harpon" : {"Harpon"};
 
 
 	//License Block

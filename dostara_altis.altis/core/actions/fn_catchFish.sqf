@@ -6,17 +6,17 @@
 	Catches a fish that is near by.
 */
 private["_fish","_type"];
-_fish = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+_fish = param[0,ObjNull,[ObjNull]];
 if(!(_fish isKindOf "Fish_Base_F")) exitWith {}; //Not a fishy!
 if(player distance _fish > 3.5) exitWith {};
-switch(true) do
-{
-	case ((typeOf _fish) == "Salema_F"): {_type = "salema"};
-	case ((typeOf _fish) == "Ornate_random_F") : {_type = "ornate"};
-	case ((typeOf _fish) == "Mackerel_F") : {_type = "mackerel"};
-	case ((typeOf _fish) == "Tuna_F") : {_type = "tuna"};
-	case ((typeOf _fish) == "Mullet_F") : {_type = "mullet"};
-	case ((typeOf _fish) == "CatShark_F") : {_type = "catshark"};
+
+switch(true) do{
+	case ((typeOf _fish) == "Salema_F"): {_type = "Saupe"};
+	case ((typeOf _fish) == "Ornate_random_F") : {_type = "Girelle"};
+	case ((typeOf _fish) == "Mackerel_F") : {_type = "Maquereau"};
+	case ((typeOf _fish) == "Tuna_F") : {_type = "Thon"};
+	case ((typeOf _fish) == "Mullet_F") : {_type = "Mulet"};
+	case ((typeOf _fish) == "CatShark_F") : {_type = "Roussette"};
 	default {_type = ""};
 };
 

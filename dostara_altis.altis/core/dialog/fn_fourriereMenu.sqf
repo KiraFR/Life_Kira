@@ -40,8 +40,8 @@ ctrlShow[18011,false];
 {
 	_displayName = getText(configFile >> "CfgVehicles" >> (_x select 2) >> "displayName");
 	_picture = getText(configFile >> "CfgVehicles" >> (_x select 2) >> "picture");
-	_price = [_x select 2,__GETC__(life_garage_prices)] call TON_fnc_index;
-	_sPrice = [_x select 2,__GETC__(life_garage_sell)] call TON_fnc_index;
+	_price = [_x select 2,__GETC__(life_garage_prices)] call life_fnc_index;
+	_sPrice = [_x select 2,__GETC__(life_garage_sell)] call life_fnc_index;
 	if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_prices) select _price) select 1;};
 	if(_sPrice == -1) then {_sPrice = 1500;} else {_sPrice = (__GETC__(life_garage_sell) select _sPrice) select 1;};
 	
