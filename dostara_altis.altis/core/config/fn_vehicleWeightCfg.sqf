@@ -55,7 +55,7 @@ switch (_className) do
 	case "ivory_wrx": {30};
 	case "dh2o_smart": {10};
 
-//House
+	//House
 
 	case "Land_i_House_Big_02_V1_F": {2700};
 	case "Land_i_House_Big_02_V2_F": {2700};

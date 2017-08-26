@@ -411,6 +411,7 @@ class Life_Client_Core
         class lbAccounts {};
 		class BankUpdate {};
     };
+
     class Assassin
     {
         file = "core\Murderer";
@@ -422,5 +423,13 @@ class Life_Client_Core
 		class ContratMenu {};
 		class listActif {};
 		class SumContract {};
+    };
+
+	class peche
+    {
+        file = "core\actions\pecher";
+        class lacherFilet {};
+        class pecher {};
+        class recupereFilet {};
     };
 };
