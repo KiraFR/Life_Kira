@@ -6,9 +6,9 @@
 	Do I really need one?
 */
 private["_math","_item","_num","_return","_var","_weight","_value","_diff"];
-_math = [_this,0,false,[false]] call BIS_fnc_param; //true = add; false = subtract;
-_item = [_this,1,"",[""]] call BIS_fnc_param; //The item we are using to add or remove.
-_num = [_this,2,0,[0]] call BIS_fnc_param; //Number of items to add or remove.
+_math = param[0,false,[false]]; //true = add; false = subtract;
+_item = param[1,"",[""]]; //The item we are using to add or remove.
+_num = param[2,0,[0]]; //Number of items to add or remove.
 if(_item == "" OR _num == 0) exitWith {false};
 
 _var = [_item,0] call life_fnc_varHandle;

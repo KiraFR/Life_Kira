@@ -17,6 +17,7 @@
 private _boat = param[0,objNull,[objNull]];
 private _poissons = _boat getVariable ["poissons",[]];
 private _boat_data = _boat getVariable ["Trunk",[[],0]];
+private _filet = _boat getVariable ["filetInUse",""];
 private _totalWeight = [_boat] call life_fnc_vehicleWeight;
 private _inventaire = _boat_data param[1,[],[[]]];
 private _weight = _totalWeight select 0;
@@ -46,3 +47,4 @@ if !(isNil "_id")then{
 	_boat removeAction _id;
 	_boat setVariable ["idAction",nil,true];
 };
+[true,_filet,1] call life_fnc_handleInv;

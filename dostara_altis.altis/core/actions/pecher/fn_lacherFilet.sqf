@@ -27,7 +27,9 @@ _maxmin = switch (_filet) do {
 	case "filet_p" : {[1,20,11]};
 	case "filet_e" : {[1,30,21]};
 };
-_boat setVariable["poissons",[],true];
 _action = _boat addAction ["Recuperer filet de pêche",life_fnc_recupereFilet,"",0,false,false,"",format["vehicle player == %1 && !(isNil {_boat getVariable ['InUsefishing',nil]})",_boat]];
+_boat setVariable["poissons",[],true];
 _boat setVariable["idAction",_action,true];
+_boat setVariable ["filetInUse",_filet,true];
+[false,_filet,1] call life_fnc_handleInv;
 [_boat,_maxmin] spawn life_fnc_pecher;

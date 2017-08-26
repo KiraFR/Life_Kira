@@ -26,7 +26,6 @@ _maxMin params[
 
 
 while{!(isNil {_boat getVariable ['InUsefishing',nil]})} do {
-
 	while {speed _boat > _min} do {
 		sleep 3;
 		_fishing = selectRandom ["Saupe","Girelle","Maquereau","Thon","Mulet","Roussette"];

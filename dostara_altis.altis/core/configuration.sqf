@@ -255,7 +255,6 @@ life_licenses =
     ["license_civ_fishsoup","civ"],
     ["license_civ_aluminium","civ"],
     ["license_civ_silver","civ"]
-
 ];
 
 //Setup License Variables
@@ -292,8 +291,12 @@ sell_array =
     ["Pelle",45],
     ["Pioche",55],
     ["Herse",20],
-    ["harpon",40], //à changer
+    ["harpon",57],
     ["Outil_Crochetage",200],
+
+    ["filet_a",57],
+    ["filet_p",240],
+    ["filet_e",1430],
 
     ["Grand_Coffre",-1],
     ["Petit_Coffre",-1],

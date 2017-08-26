@@ -12,7 +12,10 @@ _control = _this select 0;
 _index = _this select 1;
 
 //Fetch some information.
-_dataArr = _control lbData _index; _dataArr = call compile format["%1",_dataArr];
+_dataArr = _control lbData _index;
+_dataArr = call compile format["%1",_dataArr];
+_assurance = _dataArr select 2;
+_assurance = [_assurance] call life_fnc_bool;
 _className = _dataArr select 0;
 _vehicleColor = [_className,_dataArr select 1] call life_fnc_vehicleColorStr;
 _vehicleInfo = [_className] call life_fnc_fetchVehInfo;
@@ -24,14 +27,15 @@ _retrievePrice = if(_retrievePrice == -1) then {1000} else {(__GETC__(life_garag
 _sellPrice = if(_sellPrice == -1) then {1000} else {(__GETC__(life_garage_sell) select _sellPrice) select 1;};
 
 (getControl(2800,2803)) ctrlSetStructuredText parseText format[
-	(localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>€%1</t><br/>
-	" +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>€%2</t><br/>
+	(localize "STR_Shop_Veh_UI_RetrievalP")+ " <t color='#8cff9b'>$%1</t><br/>
+	" +(localize "STR_Shop_Veh_UI_SellP")+ " <t color='#8cff9b'>$%2</t><br/>
 	" +(localize "STR_Shop_Veh_UI_Color")+ " %8<br/>
 	" +(localize "STR_Shop_Veh_UI_MaxSpeed")+ " %3 km/h<br/>
 	" +(localize "STR_Shop_Veh_UI_HPower")+ " %4<br/>
 	" +(localize "STR_Shop_Veh_UI_PSeats")+ " %5<br/>
 	" +(localize "STR_Shop_Veh_UI_Trunk")+ " %6<br/>
-	" +(localize "STR_Shop_Veh_UI_Fuel")+ " %7
+	" +(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>
+	" + "Assurance : %8
 	",
 [_retrievePrice] call life_fnc_numberText,
 [_sellPrice] call life_fnc_numberText,
@@ -40,7 +44,8 @@ _vehicleInfo select 11,
 _vehicleInfo select 10,
 if(_trunkSpace == -1) then {"None"} else {_trunkSpace},
 _vehicleInfo select 12,
-_vehicleColor
+_vehicleColor,
+if(_assurance)then{"<t color='#00FF00'>Assuré</t>"}else{"<t color='#FF0000'>non Assuré</t>"};
 ];
 
 ctrlShow [2803,true];
