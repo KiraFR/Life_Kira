@@ -125,6 +125,6 @@ switch (_var) do
 	case "license_civ_fermenta": {(localize "STR_License_Cidre")};
 	case "license_civ_fishsoup": {"Cuisinier en poissonnerie"};
 
-	case "licence_civ_silver": {"Argent"};
-    case "licence_civ_aluminium": {"Aluminium"};
+	case "license_civ_silver": {"Permis d'Argent"};
+    case "license_civ_aluminium": {"Permis d'Aluminium"};
 };

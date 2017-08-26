@@ -64,8 +64,8 @@ switch (_mode) do
 			case "vin": {_var = "license_civ_vin";};
 			case "fishsoup": {_var = "license_civ_fishsoup";};
 
-			case "silver": {_var = "licence_civ_silver";};
-			case "aluminium": {_var = "licence_civ_aluminium";};
+			case "silver": {_var = "license_civ_silver";};
+			case "aluminium": {_var = "license_civ_aluminium";};
 			default {_var = "";};
 		};
 	};
@@ -123,8 +123,8 @@ switch (_mode) do
 			case "license_civ_vin": {_var = "vin";};
 			case "license_civ_fishsoup": {_var = "fishsoup";};
 
-			case "licence_civ_silver": {_var = "silver";};
-			case "licence_civ_aluminium": {_var = "aluminium";};
+			case "license_civ_silver": {_var = "silver";};
+			case "license_civ_aluminium": {_var = "aluminium";};
 
 			default {_var = "";};
 		};

@@ -249,7 +249,9 @@ life_licenses =
     ["license_civ_presseur","civ"],
     ["license_civ_fermenta","civ"],
     ["license_civ_vin","civ"],
-    ["license_civ_fishsoup","civ"]
+    ["license_civ_fishsoup","civ"],
+    ["license_civ_aluminium","civ"],
+    ["license_civ_silver","civ"]
 
 ];
 
