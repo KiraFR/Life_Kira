@@ -82,6 +82,9 @@ switch (_mode) do
             case "Herse" : {"life_inv_herse"};
             case "Outil_Crochetage" : {"life_inv_outil_crochetage"};
             case "harpon" : {"life_inv_harpon"};
+            case "filet_a" : {"life_inv_filet_a"};
+            case "filet_p" : {"life_inv_filet_p"};
+            case "filet_e" : {"life_inv_filet_e"};
 		};
 	};
 	
@@ -155,6 +158,9 @@ switch (_mode) do
             case "life_inv_herse" : {"Herse"};
             case "life_inv_outil_crochetage" : {"Outil_Crochetage"};
             case "life_inv_harpon" : {"harpon"};
+            case "life_inv_filet_a" : {"filet_a"};
+            case "life_inv_filet_p" : {"filet_p"};
+            case "life_inv_filet_e" : {"filet_e"};
 		};
 	};
 };

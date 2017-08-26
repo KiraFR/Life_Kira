@@ -80,6 +80,10 @@ switch (_var) do
     case "life_inv_outil_crochetage" : {"Outil de crochetage"};
     case "life_inv_harpon" : {"Harpon"};
 
+    case "life_inv_filet_a" : {"Filet de pêche amateur"};
+    case "life_inv_filet_p" : {"Filet de pêche professionnel"};
+    case "life_inv_filet_e" : {"Filet de pêche expert"};
+
 
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

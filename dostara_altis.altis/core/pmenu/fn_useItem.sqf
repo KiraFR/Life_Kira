@@ -157,7 +157,9 @@ switch (true) do
 	{
 		[] spawn life_fnc_BucketUse;
 	};
-
+	case (_item in ["filet_a","filet_p","filet_e"]):{
+		[_item] call life_fnc_lacherFilet;
+	};
 	default
 	{
 		hint localize "STR_ISTR_NotUsable";

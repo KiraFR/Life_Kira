@@ -177,7 +177,7 @@ if(count (secondaryWeaponItems player) > 0) then
         };
     };
 } forEach [
-        ["life_inv_orange",life_inv_orange],
+    ["life_inv_orange",life_inv_orange],
     ["life_inv_peche",life_inv_peche],
     ["life_inv_eau",life_inv_eau],
     ["life_inv_Jus_Multifruit",life_inv_Jus_Multifruit],
@@ -229,7 +229,11 @@ if(count (secondaryWeaponItems player) > 0) then
     ["life_ressource_meth",life_ressource_meth],
     ["life_ressource_pharmceutique",life_ressource_pharmceutique],
     ["life_ressource_speedball",life_ressource_speedball],
-    ["life_ressource_tortue",life_ressource_tortue]
+    ["life_ressource_tortue",life_ressource_tortue],
+    ["life_inv_harpon",life_inv_harpon],
+    ["life_inv_filet_a",life_inv_filet_a],
+    ["life_inv_filet_p",life_inv_filet_p],
+    ["life_inv_filet_e",life_inv_filet_e]
 ];
 
 _return pushBack _uItems;
