@@ -94105,7 +94105,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""}',"""",' vehicle player == player && player distance _target < 4 '];}";
+								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""} && vehicle player == player && player distance _target < 4 '];}";
 								name="operator_2";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -95208,7 +95208,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""}',"""",' vehicle player == player && player distance _target < 4 '];}";
+								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""} && vehicle player == player && player distance _target < 4 '];}";
 								name="operator_1";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -96333,7 +96333,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""}',"""",' vehicle player == player && player distance _target < 4 '];}";
+								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""} && vehicle player == player && player distance _target < 4 '];}";
 								name="operator_3";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -96986,7 +96986,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""}',"""",' vehicle player == player && player distance _target < 4 '];}";
+								init="call{this addAction[""Acheter carte SIM ($42)"",life_fnc_creatNum,""01"",0,FALSE,FALSE,"""",'isNil {player getVariable ""phoneNumber""} && vehicle player == player && player distance _target < 4 '];}";
 								name="operator_4";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
