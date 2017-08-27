@@ -35,4 +35,4 @@ lbClear _control;
 
 ctrlShow[2810,false];
 ctrlShow[2811,false];
-if(playerSide in [west,independent])then{ctrlShow[2812,false];};
+if(playerSide in [west,independent])then{ctrlShow[2812,false];ctrlShow[97480,false];};

@@ -37,15 +37,15 @@ _sellPrice = if(_sellPrice == -1) then {1000} else {(__GETC__(life_garage_sell) 
 	" +(localize "STR_Shop_Veh_UI_Fuel")+ " %7<br/>
 	" + "Assurance : %8
 	",
-[_retrievePrice] call life_fnc_numberText,
-[_sellPrice] call life_fnc_numberText,
-_vehicleInfo select 8,
-_vehicleInfo select 11,
-_vehicleInfo select 10,
-if(_trunkSpace == -1) then {"None"} else {_trunkSpace},
-_vehicleInfo select 12,
-_vehicleColor,
-if(_assurance)then{"<t color='#00FF00'>Assuré</t>"}else{"<t color='#FF0000'>non Assuré</t>"};
+	[_retrievePrice] call life_fnc_numberText,
+	[_sellPrice] call life_fnc_numberText,
+	_vehicleInfo select 8,
+	_vehicleInfo select 11,
+	_vehicleInfo select 10,
+	if(_trunkSpace == -1) then {"None"} else {_trunkSpace},
+	_vehicleInfo select 12,
+	_vehicleColor,
+	if(_assurance)then{"<t color='#00FF00'>Assuré</t>"}else{"<t color='#FF0000'>non Assuré</t>"}
 ];
 
 ctrlShow [2803,true];
