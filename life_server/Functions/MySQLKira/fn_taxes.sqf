@@ -32,4 +32,4 @@ if(_uid == "" OR _cash == 0 OR _type == "" OR _montant == 0 OR _bank == 0) exitW
 _query = format["INSERT INTO logs (pid,cash,bank,montant,taxes,type) VALUES('%1',%2,%3,%4,%5,""%6"")",_uid,_cash,_bank,_montant,_Taxes,_type];
 [_query,1] call DB_fnc_asyncCall;
 
-[_Taxes] call KIRA_fnc_modifComptGouv;
+[true,_Taxes] call KIRA_fnc_modifComptGouv;

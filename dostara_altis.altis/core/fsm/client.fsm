@@ -170,7 +170,7 @@ class FSM
                          "			_paye = (round _paye);" \n
                          "			life_atmcash = life_atmcash + _paye;" \n
                          "			systemChat format[localize ""STR_FSM_ReceivedPay"",[_paye] call life_fnc_numberText];" \n
-                         "			[_paye] remoteExecCall [""KIRA_fnc_modifComptGouv"",2];" \n
+                         "			[false,_paye] remoteExecCall [""KIRA_fnc_modifComptGouv"",2];" \n
                          "			_lastcheck = time;" \n
                          "		};" \n
                          "		case west:{" \n

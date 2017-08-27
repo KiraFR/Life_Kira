@@ -125,6 +125,8 @@ class CfgRemoteExec {
         F(bourse_fnc_vente,SERVER)
         F(life_fnc_virt_sellBourse,CLIENT)
 
+        F(diag_log,SERVER)
+
 	};
 
 	class Commands {

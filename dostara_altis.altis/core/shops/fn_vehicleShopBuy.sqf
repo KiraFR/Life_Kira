@@ -16,13 +16,14 @@ _colorIndex = getSelValue(2304);
 
 //Series of checks (YAY!)
 if(_basePrice < 0) exitWith {}; //Bad price entry
-if(CASH < _basePrice) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - CASH] call life_fnc_numberText];};
+if(CASH < _basePrice && playerSide == civilian) exitWith {hint format[localize "STR_Shop_Veh_NotEnough",[_basePrice - CASH] call life_fnc_numberText];};
 if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg_F") exitWith {hint localize "STR_Shop_Veh_NoLicense"};
 
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
-
-if((life_veh_shop select 0) == "med_air_hs") then {
+_shop = (life_veh_shop select 0);
+format["achat vehicule vente : %1",_shop] remoteExec ["diag_log",2];
+if(_shop == "med_air_hs") then {
 	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
 } else {
 	//Check if there is multiple spawn points and find a suitable spawnpoint.
@@ -36,7 +37,13 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 
 
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
-CASH = CASH - _basePrice;
+
+if(_shop in ["med_shop","med_air_hs","cop_car","cop_air","cop_ship","med_ship"]) then{
+	[false,_basePrice] remoteExecCall ["KIRA_fnc_modifComptGouv",2];
+}else{
+	CASH = CASH - _basePrice;
+};
+
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.

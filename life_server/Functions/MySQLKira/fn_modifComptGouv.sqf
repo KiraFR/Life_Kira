@@ -6,16 +6,22 @@
 	flemme
 
 	PARAMETRES:
-	1. SCALAR(montant)
+	1. BOOL (Addition/soustraction)
+	2. SCALAR(montant)
 
 	RETURNS:
 	NONE
 
 	CALL:
-	[SCALAR] call KIRA_fnc_modifComptGouv
+	[BOOL,SCALAR] call KIRA_fnc_modifComptGouv
 */
-_amount = param[0,0,[0]];
+private _math = param[0,false,[false]]; //true = addition, false = soustraction
+private _amount = param[1,0,[0]];
+private _gouv = Bourse_Object getVariable ["MontantGouvernement",0];
 
-_gouv = Bourse_Object getVariable ["MontantGouvernement",0];
-_gouv = _gouv - _amount;
+if(_math)then{
+	_gouv = _gouv + _amount;
+}else{
+	_gouv = _gouv - _amount;
+};
 Bourse_Object setVariable ["MontantGouvernement",_gouv];
