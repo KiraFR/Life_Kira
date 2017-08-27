@@ -23,16 +23,12 @@ _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
 _shop = (life_veh_shop select 0);
 format["achat vehicule vente : %1",_shop] remoteExec ["diag_log",2];
-if(_shop == "med_air_hs") then {
-	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Air"],35]) == 0) exitWith {_spawnPoint = _spawnPoints};
+//Check if there is multiple spawn points and find a suitable spawnpoint.
+if(typeName _spawnPoints == typeName []) then {
+	//Find an available spawn point.
+	{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} forEach _spawnPoints;
 } else {
-	//Check if there is multiple spawn points and find a suitable spawnpoint.
-	if(typeName _spawnPoints == typeName []) then {
-		//Find an available spawn point.
-		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} forEach _spawnPoints;
-	} else {
-		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
-	};
+	if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 };
 
 
@@ -47,32 +43,18 @@ if(_shop in ["med_shop","med_air_hs","cop_car","cop_air","cop_ship","med_ship"])
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
 
 //Spawn the vehicle and prep it.
-if((life_veh_shop select 0) == "med_air_hs") then {
-	_vehicle = createVehicle [_className,[0,0,999],[], 0, "NONE"];
-	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false;
-	_hs = nearestObjects[getMarkerPos _spawnPoint,["Land_Hospital_side2_F"],50] select 0;
-	_vehicle setPosATL (_hs modelToWorld [-0.4,-4,12.65]);
-	_vehicle lock 2;
-	[_vehicle,_colorIndex] RemoteExecCall ["life_fnc_colorVehicle",0];
-	[_vehicle] call life_fnc_clearVehicleAmmo;
-	[_vehicle,"trunk_in_use",false,true] RemoteExecCall ["TON_fnc_setObjVar",2];
-	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] RemoteExecCall ["TON_fnc_setObjVar",2];
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-} else {
-	_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
-	waitUntil {!isNil "_vehicle"}; //Wait?
-	_vehicle allowDamage false; //Temp disable damage handling..
-	_vehicle lock 2;
-	_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
-	_vehicle setDir (markerDir _spawnPoint);
-	_vehicle setPos (getMarkerPos _spawnPoint);
-	[_vehicle,_colorIndex] RemoteExecCall ["life_fnc_colorVehicle",0];
-	[_vehicle] call life_fnc_clearVehicleAmmo;
-	[_vehicle,"trunk_in_use",false,true] RemoteExecCall ["TON_fnc_setObjVar",2];
-	[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] RemoteExecCall ["TON_fnc_setObjVar",2];
-	_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
-};
+_vehicle = createVehicle [_className, (getMarkerPos _spawnPoint), [], 0, "NONE"];
+waitUntil {!isNil "_vehicle"}; //Wait?
+_vehicle allowDamage false; //Temp disable damage handling..
+_vehicle lock 2;
+_vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
+_vehicle setDir (markerDir _spawnPoint);
+_vehicle setPos (getMarkerPos _spawnPoint);
+[_vehicle,_colorIndex] RemoteExecCall ["life_fnc_colorVehicle",0];
+[_vehicle] call life_fnc_clearVehicleAmmo;
+[_vehicle,"trunk_in_use",false,true] RemoteExecCall ["TON_fnc_setObjVar",2];
+[_vehicle,"vehicle_info_owners",[[getPlayerUID player,profileName]],true] RemoteExecCall ["TON_fnc_setObjVar",2];
+_vehicle disableTIEquipment true; //No Thermals.. They're cheap but addictive.
 
 //Side Specific actions.
 switch(playerSide) do {
