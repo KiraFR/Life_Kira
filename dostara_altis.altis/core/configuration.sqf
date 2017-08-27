@@ -71,7 +71,7 @@ life_nbrFoisPermis = 0;
 life_waitpermis = false;
 life_maxPoints = 2;
 nbNotif = 0;
-life_prix_Numero = 40;
+life_prix_Numero = 42;
 life_shopList = [];
 /*
 *****************************
