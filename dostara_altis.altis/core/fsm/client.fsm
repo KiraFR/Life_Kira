@@ -175,7 +175,7 @@ class FSM
                          "		};" \n
                          "		case west:{" \n
                          "			life_atmcash = life_atmcash + 500;" \n
-                         "			[500] remoteExecCall [""KIRA_fnc_modifComptGouv"",2];" \n
+                         "			[false,500] remoteExecCall [""KIRA_fnc_modifComptGouv"",2];" \n
                          "			_lastcheck = time;		" \n
                          "		};" \n
                          "	};" \n

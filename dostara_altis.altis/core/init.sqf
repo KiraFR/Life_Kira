@@ -62,7 +62,7 @@ life_sidechat = true;
 [player,life_sidechat,playerSide] RemoteExecCall ["TON_fnc_managesc",2];
 0 cutText ["","BLACK IN"];
 [] call life_fnc_hudSetup;
-LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
+//LIFE_ID_PlayerTags = ["LIFE_PlayerTags","onEachFrame","life_fnc_playerTags"] call BIS_fnc_addStackedEventHandler;
 LIFE_ID_RevealObjects = ["LIFE_RevealObjects","onEachFrame","life_fnc_revealObjects"] call BIS_fnc_addStackedEventHandler;
 [] call life_fnc_settingsInit;
 
