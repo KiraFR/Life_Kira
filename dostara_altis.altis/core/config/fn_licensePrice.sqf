@@ -46,5 +46,10 @@ switch (_type) do{
 	case "fermenta": {_ret = 1000;};
 	case "silver": {_ret = 2400;};
     case "aluminium": {_ret = 1100;};
+    case "wood_01": {_ret = 100;};
+    case "wood_02": {_ret = 100;};
+    case "wood_03": {_ret = 100;};
+    case "wood_04": {_ret = 100;};
+    case "petrol": {_ret = 2300;};
 };
 _ret;

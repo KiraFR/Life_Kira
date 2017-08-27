@@ -5,7 +5,7 @@
 	Main functionality for gathering.
 */
 if(isNil "life_action_gathering") then {life_action_gathering = false;};
-private["_gather","_itemWeight","_diff","_itemName","_val","_ressourceZones","_zone","_object","_hasObject"];
+private["_gather","_diff","_lis","_itemName","_val","_ressourceZones","_zone","_object","_hasObject"];
 _ressourceZones = ["apple_1","apple_2","apple_3","apple_4","heroin_1","cocaine_1","Cannabis_01","opium_1","wine_1","wine_2","Ress_Orange_01","Ress_Orange_02","Ress_Pêche_01","Ress_Pêche_02",
 					"Ress_Pomme_01","Ress_Pomme_02","Ress_Raisin_01","Ress_Raisin_02","Ress_Alu_01","Ress_Alu_02","Ress_Argent_01","Ress_Bois_01","Ress_Bois_02","Ress_Bois_03","Ress_Bois_04",
 					"Ress_Charbon_01","Ress_Charbon_02","Ress_Calcaire_01","Ress_Calcaire_02","Ress_Cuivre_01","Ress_Fer_01","Ress_Fer_02","Ress_Petrole_01","Ress_PP_01","Ress_Sable_01",
@@ -18,13 +18,19 @@ _zone = "";
 _hasObject = true;
 if(_zone == "") exitWith {life_action_inUse = false;};
 //Get the ressource that will be gathered from the zone name...
+_lis = null;
 switch(true) do {
 	case (_zone in ["Ress_Pomme_01","Ress_Pomme_02"]): {_gather = "Pommes"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Pêche_01","Ress_Pêche_02"]): {_gather = "Peche"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Orange_01","Ress_Orange_02"]): {_gather = "Orange"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Raisin_01","Ress_Raisin_02"]): {_gather = "Raisin"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Petrole_01"]): {_gather = "Petrole"; _val = 3; _object = "Seau";};
-	case (_zone in ["Ress_Bois_01","Ress_Bois_02","Ress_Bois_03","Ress_Bois_04"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";};
+
+	case (_zone in ["Ress_Bois_01"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_01;};
+	case (_zone in ["Ress_Bois_02"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_02;};
+	case (_zone in ["Ress_Bois_03"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_03;};
+	case (_zone in ["Ress_Bois_04"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_04;};
+
 	case (_zone in ["Ress_Sable_02","Ress_Sable_01"]): {_gather = "Sable"; _val = floor(random(5)); _object = "Pelle";};
 	case (_zone in ["Ress_Alu_01","Ress_Alu_02"]): {_gather = "Aluminium_Brut"; _val = floor(random(3)); _object = "Pioche";};
 	case (_zone in ["Ress_Calcaire_01","Ress_Calcaire_02"]): {_gather = "Calcaire"; _val = floor(random(3)); _object = "Pelle";};
@@ -41,7 +47,11 @@ switch(true) do {
 if(vehicle player != player) exitWith {};
 if(_val == 0) exitWith{hint "Votre récolte n'est pas bonne, vous avez jeté ce que vous avez recolté.";};
 
-
+if (_lis != null) then {
+    if (!_lis) exitWith {
+        hint format["Vous n'avez pas la license %1 pour récolter la ressource : %2.",([toString _lis] call life_fnc_varToStr),_gather];
+    };
+};
 
 if (!(_object == "")) then {
     _var = [_object,0] call life_fnc_varHandle;

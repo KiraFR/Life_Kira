@@ -131,4 +131,11 @@ switch (_var) do
 
 	case "license_civ_silver": {"Permis d'Argent"};
     case "license_civ_aluminium": {"Permis d'Aluminium"};
+
+    case "license_civ_wood_01": {"Droit d'abattage Kavala"};
+    case "license_civ_wood_02": {"Droit d'abattage Atira"};
+    case "license_civ_wood_03": {"Droit d'abattage Pyrgos"};
+    case "license_civ_wood_04": {"Droit d'abattage Sofia"};
+
+    case "license_civ_petrol": {"Accès forage"};
 };

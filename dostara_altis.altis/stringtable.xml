@@ -3788,11 +3788,6 @@
 		</Key>
 		<Key ID="STR_License_Diamond">
 			<Original>Conception de Bijoux</Original>
-			<English>Diamond Processing</English>
-			<German>Diamantenverarbeitung</German>
-			<French>Conception de Bijoux</French>
-			<Italian>Processo Diamanti</Italian>
-			<Portuguese>Lapidação de Diamante</Portuguese>
 		</Key>
 		<Key ID="STR_License_Copper">
 			<Original>Copper Processing</Original>

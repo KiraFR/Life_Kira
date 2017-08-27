@@ -212,6 +212,7 @@ life_licenses =
 	["license_cop_cg","cop"],
 	["license_cop_prefet","cop"],
 	["license_med_prefet","med"],
+	["license_med_air","med"],
 	["license_civ_driver","civ"],
 	["license_civ_air","civ"],
 	["license_civ_heroin","civ"],
@@ -225,13 +226,11 @@ life_licenses =
 	["license_civ_rebel","civ"],
 	["license_civ_petiteF","civ"],
 	["license_civ_coke","civ"],
-	["license_civ_diamond","civ"],
 	["license_civ_copper","civ"],
 	["license_civ_iron","civ"],
 	["license_civ_sand","civ"],
 	["license_civ_salt","civ"],
 	["license_civ_cement","civ"],
-	["license_med_air","med"],
 	["license_civ_home","civ"],
 	["license_civ_opium","civ"],
 	["license_civ_vin","civ"],
@@ -254,7 +253,14 @@ life_licenses =
     ["license_civ_vin","civ"],
     ["license_civ_fishsoup","civ"],
     ["license_civ_aluminium","civ"],
-    ["license_civ_silver","civ"]
+    ["license_civ_silver","civ"],
+
+    ["license_civ_wood_01","civ"],
+    ["license_civ_wood_02","civ"],
+    ["license_civ_wood_03","civ"],
+    ["license_civ_wood_04","civ"],
+
+    ["license_civ_petrol","civ"]
 ];
 
 //Setup License Variables

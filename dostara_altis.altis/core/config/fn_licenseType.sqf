@@ -66,6 +66,14 @@ switch (_mode) do
 
 			case "silver": {_var = "license_civ_silver";};
 			case "aluminium": {_var = "license_civ_aluminium";};
+
+			case "wood_01": {_var = "license_civ_wood_01";};
+			case "wood_02": {_var = "license_civ_wood_02";};
+			case "wood_03": {_var = "license_civ_wood_03";};
+			case "wood_04": {_var = "license_civ_wood_04";};
+
+			case "petrol": {_var = "license_civ_petrol";};
+
 			default {_var = "";};
 		};
 	};
@@ -110,8 +118,6 @@ switch (_mode) do
 			case "license_civ_AMG": {_var = "AMG";};
 			case "license_civ_ASP": {_var = "ASP";};
 
-// New License # KronosD
-
 			case "license_civ_diamond": {_var = "diamond";};
 			case "license_civ_acier": {_var = "acier";};
 			case "license_civ_pprecieuse": {_var = "pprecieuse";};
@@ -125,6 +131,13 @@ switch (_mode) do
 
 			case "license_civ_silver": {_var = "silver";};
 			case "license_civ_aluminium": {_var = "aluminium";};
+
+            case "license_civ_wood_01": {_var = "wood_01";};
+            case "license_civ_wood_02": {_var = "wood_02";};
+            case "license_civ_wood_03": {_var = "wood_03";};
+            case "license_civ_wood_04": {_var = "wood_04";};
+
+            case "license_civ_petrol": {_var = "petrol";};
 
 			default {_var = "";};
 		};
