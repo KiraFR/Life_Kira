@@ -14,7 +14,8 @@ if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 50) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
 if(_value > CASH) exitWith {hint localize "STR_ATM_NotEnoughCash"};
-
+if(life_atmUsing)exitWith{hint "Attendez que la transaction soit terminé."};
+life_atmUsing = true;
 _ac = missionNamespace getVariable ["accountBanque",[]];
 {
 	_dft = _x select 3;
@@ -50,11 +51,11 @@ _ac = missionNamespace getVariable ["accountBanque",[]];
 }forEach _ac;
 
 _valTot = BANK + _value;
-if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
+if(!(isNil "_plafond") && (_valTot > _plafond))exitWith{life_atmUsing = false;hint "Vous allez depasser le plafond de ce compte, impossible de deposer de l'argent."};
 _taxe = 0;
 
 _taxe = [0] call life_fnc_taxes;
-if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{hint "Vous ne pouvez pas deposer moins ou égale à 50€."};
+if(_value <= 50 && (_taxe isEqualTo 50)) exitWith{life_atmUsing = false;hint "Vous ne pouvez pas deposer moins ou égale à 50€."};
 if(_taxe == 50)then{
 	_value = _value - _taxe;
 	_taxes = _taxe;
@@ -73,3 +74,4 @@ call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;
 
 [CASH,BANK,_value,_taxes,"Depot"] remoteExecCall ["KIRA_fnc_taxes",2];
+life_atmUsing = false;

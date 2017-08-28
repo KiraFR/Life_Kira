@@ -9,7 +9,8 @@ private["_item"];
 disableSerialization;
 if((lbCurSel 2005) == -1) exitWith {hint localize "STR_ISTR_SelectItemFirst";};
 _item = lbData[2005,(lbCurSel 2005)];
-
+if(life_useItem)exitWith{hint "Vous ne pouvez pas faire d'actions aussi vite."};
+life_useItem = true;
 switch (true) do
 {
 	case (_item == "Bouteille_d_eau" or _item == "Cafe"):
@@ -168,3 +169,4 @@ switch (true) do
 
 [] call life_fnc_p_updateMenu;
 [] call life_fnc_hudUpdate;
+life_useItem = false;

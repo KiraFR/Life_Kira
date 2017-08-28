@@ -12,6 +12,7 @@ _ressourceZones = ["apple_1","apple_2","apple_3","apple_4","heroin_1","cocaine_1
 					"Ress_Sable_02","Ress_Sel_01","Ress_Cuivre_02"];
 _zone = "";
 //Find out what zone we're near
+if(life_action_inUse)exitWith{};
 {
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } forEach _ressourceZones;

@@ -18,9 +18,11 @@ if(_val > BANK) exitWith {hint localize "STR_ATM_NotEnough"};
 _tax = [2] call life_fnc_taxes;
 if((typeName _tax) == "BOOL")exitWith{hint "Vous ne pouvez pas faire de virement avec ce type de compte."};
 if((_val + _tax) > BANK) exitWith {hint format[localize "STR_ATM_SentMoneyFail",_val,_tax]};
-
+if(life_atmUsing)exitWith{hint "Attendez que la transaction soit terminé."};
+life_atmUsing = true;
 //BANK = BANK - (_val + _tax);
 
 [] call life_fnc_atmMenu;
 hint format[localize "STR_ATM_SentMoneySuccess",[_val] call life_fnc_numberText,_unit getVariable["realname",name _unit],[_tax] call life_fnc_numberText];
 [1] call SOCK_fnc_updatePartial;
+life_atmUsing = false;
