@@ -159,7 +159,8 @@ class FSM
                 {
                         name = "Update_Civ_Pos";
                         itemno = 9;
-                        init = /*%FSM<STATEINIT""">*/"_query = ""UPDATE player SET civPosition = CASE"";" \n
+                        init = /*%FSM<STATEINIT""">*/"if(count playableUnits > 0) then{"\n
+                         "      _query = ""UPDATE player SET civPosition = CASE"";" \n
                          "	{" \n
                          "		_unit = _x;" \n
                          "		if(side _unit == civilian)then{" \n
@@ -168,7 +169,7 @@ class FSM
                          "		_query = _query + _str;" \n
                          "	}foreach playableUnits;" \n
                          "	_query = _query + "" END WHERE alive = '1'"";" \n
-                         "	[_query,1] call DB_fnc_asyncCall;"/*%FSM</STATEINIT""">*/;
+                         "	[_query,1] call DB_fnc_asyncCall;};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
