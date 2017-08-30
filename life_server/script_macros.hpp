@@ -61,4 +61,4 @@
 
 
 //très utile
-#define return (playableUnits select {owner _x isEqualTo remoteExecutedOwner} param [0, objNull])
+#define CLIENT_SENDER (playableUnits select {owner _x isEqualTo remoteExecutedOwner} param [0, objNull])
