@@ -20,10 +20,10 @@ private _index = -1;
 private _price = -1;
 
 {
-	_list = [(_this select 3)] call life_fnc_weaponShopCfg;
-	_index = [_vehicle,_list] call life_fnc_index;
+	_listVeh = [_x] call life_fnc_vehicleListCfg;
+	_index = [_vehicle,_listVeh] call life_fnc_index;
 	if(_index != -1) exitWith{
-		_price = (_list select _index) select 1;
+		_price = (_listVeh select _index) select 1;
 	};
 }forEach _list;
 

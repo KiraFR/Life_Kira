@@ -55,7 +55,7 @@ switch (_mode) do
 			//New License # KronosD
 			case "diamond": {_var = "license_civ_diamond";};
 			case "acier": {_var = "license_civ_acier";};
-			case "pprecieuse": {_var = "license_civ_pprecieuse";};
+			case "PPrecieuse": {_var = "license_civ_pprecieuse";};
 			case "fonderie": {_var = "license_civ_fonderie";};
 			case "fonderieExp": {_var = "license_civ_fonderieExp";};
 			case "chaux": {_var = "license_civ_chaux";};
@@ -120,7 +120,7 @@ switch (_mode) do
 
 			case "license_civ_diamond": {_var = "diamond";};
 			case "license_civ_acier": {_var = "acier";};
-			case "license_civ_pprecieuse": {_var = "pprecieuse";};
+			case "license_civ_pprecieuse": {_var = "PPrecieuse";};
 			case "license_civ_fonderie": {_var = "fonderie";};
 			case "license_civ_fonderieExp": {_var = "fonderieExp";};
 			case "license_civ_chaux": {_var = "chaux";};

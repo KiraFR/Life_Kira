@@ -17,11 +17,11 @@ _unit = player;
 
 if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
-_price = [_vehicleLife] call life_fnc_priceVehBuy;
+_price = [_vehicle] call life_fnc_priceVehBuy;
 _price = _price * 0.5;
 [_vid,_pid,_price,player,life_garage_type] RemoteExecCall ["TON_fnc_vehicleDelete",2];
 hint format[localize "STR_Garage_SoldCar",[_price] call life_fnc_numberText];
-BANK = BANK + _price;
+CASH = CASH + _price;
 call life_fnc_refreshAC;
 call SOCK_fnc_updateBanque;
 closeDialog 0;

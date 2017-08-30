@@ -36,7 +36,7 @@ switch (_type) do{
 	case "home": {_ret = 100;};
 	case "opium": {_ret = 150000;};
 	case "vin": {_ret = 1000;};
-	case "pprecieuse": {_ret = 3240;};
+	case "PPrecieuse": {_ret = 3240;};
 	case "fonderie": {_ret = 800;};
 	case "fonderieExp": {_ret = 4300;};
 	case "chaux": {_ret = 430;};

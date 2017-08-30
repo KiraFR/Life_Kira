@@ -5245,6 +5245,11 @@
 			<Italian>Costo di ritiro:</Italian>
 			<Portuguese>Preço para Recuperar:</Portuguese>
 		</Key>
+		<Key ID="STR_Shop_Veh_UI_Insure">
+			<Original>Insure Price:</Original>
+			<English>Insure Price:</English>
+			<French>Prix d'assurance:</French>
+		</Key>
 		<Key ID="STR_Shop_Veh_UI_SellP">
 			<Original>Sell Price:</Original>
 			<English>Sell Price:</English>
