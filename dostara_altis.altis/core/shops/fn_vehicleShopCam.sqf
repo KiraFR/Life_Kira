@@ -51,7 +51,7 @@ vehPreview enableSimulation false;
 
         // rotation
         for "_i" from 0 to 1 step 0 do {
-            if (!(vehPreview isEqualTo _objet)) exitWith {azimut = _azimut;diag_log "Pas même vehicule";};
+            if (!(vehPreview isEqualTo _objet)) exitWith {azimut = _azimut;};
             _azimut = _azimut + 2.00;
             life_shop_cam camSetPos (_objet modelToWorld [_distance * sin _azimut, _distance * cos _azimut, _distance * 0.33]);
             life_shop_cam camCommit 0.05;

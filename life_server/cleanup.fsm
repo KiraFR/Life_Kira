@@ -160,7 +160,7 @@ class FSM
                         name = "Update_Civ_Pos";
                         itemno = 9;
                         init = /*%FSM<STATEINIT""">*/"if(count playableUnits > 0) then{"\n
-                         "      _query = ""UPDATE player SET civPosition = CASE"";" \n
+                         "      _query = ""UPDATE players SET civPosition = CASE"";" \n
                          "	{" \n
                          "		_unit = _x;" \n
                          "		if(side _unit == civilian)then{" \n

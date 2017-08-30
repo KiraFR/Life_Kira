@@ -8,7 +8,6 @@
 */
 private["_dialog","_inv","_lic","_licenses","_near","_near_units","_mstatus","_shrt","_side"];
 disableSerialization;
-diag_log "fn_p_updateMenu";
 _side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 
 _dialog = findDisplay 602;

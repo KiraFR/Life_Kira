@@ -1,8 +1,27 @@
-private["_vid","_pid","_query","_sql","_unit","_insurancePrice","_thread"];
-_vid = [_this,0,-1,[0]] call BIS_fnc_param;
-_pid = [_this,1,"",[""]] call BIS_fnc_param;
-_unit = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
-_insurancePrice = [_this,3,0,[0]] call BIS_fnc_param;
+/*
+	File: fn_insureCar.sqf
+	Auteur: J. `Kira` D.
+
+	Description:
+	assurance
+
+	PARAMETRES:
+	1.SCALAR(Rayon)
+	2.OBJECT(Player)
+	3.ARRAY(Position)
+
+	RETURNS:
+	NONE
+
+	CALL:
+	[SCALAR,OBJECT,ARRAY] call KIRA_fnc_HCheckNearS
+*/
+
+private["_vid","_pid","_query","_unit"];
+params[
+	["_vid",-1,[0]],
+	["_pid","",[""]]
+];
+if(_vid == -1 OR _pid == "") exitWith{};
 _query = format["UPDATE vehicles SET insure='1' WHERE pid='%1' AND id='%2'",_pid,_vid];
-waitUntil { ! DB_Async_Active};
-_thread = [_query,1] call DB_fnc_asyncCall
+[_query,1] call DB_fnc_asyncCall;

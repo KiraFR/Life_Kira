@@ -28,7 +28,6 @@ switch _type do {
 	};
 	// gang
 	case 2:{
-		diag_log format ["_data avant : %1",_data];
 		_gang = (group Player) getVariable "gang_name";
 		if(!(isNil "_gang")) then {
 			{

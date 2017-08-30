@@ -124,6 +124,7 @@ class CfgFunctions
 			class getVehicles_fourriere {};
 			class fourriereStore {};
 			class getVehiclesCop {};
+			class insureCar {};
 		};
 
 		class Housing

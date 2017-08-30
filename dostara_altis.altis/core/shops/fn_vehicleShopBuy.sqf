@@ -22,7 +22,6 @@ if(!([_className] call life_fnc_vehShopLicenses) && _className != "B_MRAP_01_hmg
 _spawnPoints = life_veh_shop select 1;
 _spawnPoint = "";
 _shop = (life_veh_shop select 0);
-format["achat vehicule vente : %1",_shop] remoteExec ["diag_log",2];
 //Check if there is multiple spawn points and find a suitable spawnpoint.
 if(typeName _spawnPoints == typeName []) then {
 	//Find an available spawn point.

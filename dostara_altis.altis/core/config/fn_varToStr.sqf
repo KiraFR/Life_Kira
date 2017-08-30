@@ -79,7 +79,6 @@ switch (_var) do
     case "life_inv_herse" : {"Herse"};
     case "life_inv_outil_crochetage" : {"Outil de crochetage"};
     case "life_inv_harpon" : {"Harpon"};
-    case "life_inv_hache" : {"Hache"};
 
     case "life_inv_filet_a" : {"Filet de pêche amateur"};
     case "life_inv_filet_p" : {"Filet de pêche professionnel"};

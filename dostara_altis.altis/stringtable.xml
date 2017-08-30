@@ -755,6 +755,11 @@
 			<Italian>Non hai abbastanza fondi nel tuo conto in banca.\n\nTi mancano: €%1</Italian>
 			<Portuguese>Você não tem dinheiro suficiente na sua conta bancária.\n\nFaltam: R€%1</Portuguese>
 		</Key>
+		<Key ID="STR_GNOTF_NotEnoughMoneyCash">
+			<Original>You do not have enough cash money.\n\nYou lack: €%1</Original>
+			<English>You do not have enough cash money.\n\nYou lack: €%1</English>
+			<French>Vous n'avez pas assez d'argent.\n\nVous manquez de: €%1</French>
+		</Key>
 		<Key ID="STR_GNOTF_CreateSuccess">
 			<Original>You have created the gang %1 for €%2</Original>
 			<English>You have created the gang %1 for €%2</English>

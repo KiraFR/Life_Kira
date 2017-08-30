@@ -39,11 +39,15 @@ if (count _queryResult == 0) then {
 };
 _queryGouv = "SELECT bankacc FROM banque WHERE numcompte='GD0000001';";
 _queryResultGouv = [_queryGouv,2] call DB_fnc_asyncCall;
-if(typeName _queryResultGouv == "ARRAY") then{
-    _queryResultGouv = _queryResultGouv select 0;
-    if(typeName _queryResultGouv == "STRING")then{
-        _queryResultGouv = parseNumber(_queryResultGouv);
+if(count _queryresultgouv > 0)then{
+    if(typeName _queryResultGouv == "ARRAY") then{
+        _queryResultGouv = _queryResultGouv select 0;
+        if(typeName _queryResultGouv == "STRING")then{
+            _queryResultGouv = parseNumber(_queryResultGouv);
+        };
     };
+}else{
+    _queryresultgouv = 100000;
 };
 Bourse_Object setVariable ["MontantGouvernement",_queryResultGouv];
 Bourse_Object setVariable ["Bourse",_queryResult];

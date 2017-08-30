@@ -148,7 +148,6 @@ life_inv_items =
     "life_inv_pioche",
     "life_inv_harpon",
     "life_inv_herse",
-    "life_inv_hache",
     "life_inv_filet_a",
     "life_inv_filet_p",
     "life_inv_filet_e",
@@ -300,7 +299,6 @@ sell_array =
     ["Pelle",45],
     ["Pioche",55],
     ["Herse",20],
-    ["Hache",46],
     ["harpon",57],
     ["Outil_Crochetage",200],
 
