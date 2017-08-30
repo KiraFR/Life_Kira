@@ -18,6 +18,9 @@ switch (_shop) do
 		if(license_civ_dive)then{
 			_res = _res + ["filet_a","filet_p","filet_e"];
 		};
+		if(license_civ_wood_01 || license_civ_wood_02 || license_civ_wood_03 || license_civ_wood_04)then{
+			_res = _res + ["Hache"];
+		};
 
 		["Outillage",_res]
 	};

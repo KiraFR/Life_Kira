@@ -74,6 +74,7 @@ switch (_item) do
     case "Speed_Ball" : {1};
     case "Tortue" : {3};
     case "harpon" : {4};
+    case "Hache" : {4};
     case "filet_a" : {2};
     case "filet_p" : {3};
     case "filet_e" : {5};

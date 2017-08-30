@@ -19,7 +19,7 @@ if(life_action_inUse)exitWith{};
 _hasObject = true;
 if(_zone == "") exitWith {life_action_inUse = false;};
 //Get the ressource that will be gathered from the zone name...
-_lis = null;
+_lis = "";
 switch(true) do {
 	case (_zone in ["Ress_Pomme_01","Ress_Pomme_02"]): {_gather = "Pommes"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Pêche_01","Ress_Pêche_02"]): {_gather = "Peche"; _val = 3; _object = "Seau";};
@@ -27,10 +27,10 @@ switch(true) do {
 	case (_zone in ["Ress_Raisin_01","Ress_Raisin_02"]): {_gather = "Raisin"; _val = 3; _object = "Seau";};
 	case (_zone in ["Ress_Petrole_01"]): {_gather = "Petrole"; _val = 3; _object = "Seau";};
 
-	case (_zone in ["Ress_Bois_01"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_01;};
-	case (_zone in ["Ress_Bois_02"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_02;};
-	case (_zone in ["Ress_Bois_03"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_03;};
-	case (_zone in ["Ress_Bois_04"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = license_civ_wood_04;};
+	case (_zone in ["Ress_Bois_01"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = "license_civ_wood_01";};
+	case (_zone in ["Ress_Bois_02"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = "license_civ_wood_02";};
+	case (_zone in ["Ress_Bois_03"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = "license_civ_wood_03";};
+	case (_zone in ["Ress_Bois_04"]): {_gather = "Bois"; _val = floor(random(4)); _object = "Hache";_lis = "license_civ_wood_04";};
 
 	case (_zone in ["Ress_Sable_02","Ress_Sable_01"]): {_gather = "Sable"; _val = floor(random(5)); _object = "Pelle";};
 	case (_zone in ["Ress_Alu_01","Ress_Alu_02"]): {_gather = "Aluminium_Brut"; _val = floor(random(3)); _object = "Pioche";};
@@ -48,9 +48,10 @@ switch(true) do {
 if(vehicle player != player) exitWith {};
 if(_val == 0) exitWith{hint "Votre récolte n'est pas bonne, vous avez jeté ce que vous avez recolté.";};
 
-if (_lis != null) then {
-    if (!_lis) exitWith {
-        hint format["Vous n'avez pas la license %1 pour récolter la ressource : %2.",([toString _lis] call life_fnc_varToStr),_gather];
+if (_lis != "") then {
+	_haslicence = missionNamespace getVariable "_lis";
+    if (!_haslicence) exitWith {
+        hint format["Vous n'avez pas la license %1 pour récolter la ressource : %2.",([_lis] call life_fnc_varToStr),_gather];
     };
 };
 
