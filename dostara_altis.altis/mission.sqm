@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6196;
+		nextID=6203;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1268;
+		nextID=1304;
 	};
 	class Camera
 	{
-		pos[]={14417.02,190.89795,18380.271};
-		dir[]={0.85013473,-0.42546287,0.31025612};
-		up[]={0.39968386,0.90497285,0.14586401};
-		aside[]={0.34283257,-2.0752486e-007,-0.939399};
+		pos[]={23829.088,184.32991,18057.406};
+		dir[]={0.64063025,-0.69433981,0.32795036};
+		up[]={0.61810988,0.71958899,0.31642249};
+		aside[]={0.45569843,-7.9278834e-008,-0.89017397};
 	};
 };
 binarizationWanted=0;
@@ -471,7 +471,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=260;
+		items=265;
 		class Item0
 		{
 			dataType="Group";
@@ -59311,13 +59311,14 @@ class Mission
 								angles[]={0,3.7193365,6.2818046};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								disableSimulation=1;
 							};
 							id=5921;
 							type="Land_OfficeChair_01_F";
-							atlOffset=0.54539299;
+							atlOffset=9.5367432e-007;
 						};
 						class Item522
 						{
@@ -59334,7 +59335,7 @@ class Mission
 							};
 							id=5922;
 							type="Land_OfficeChair_01_F";
-							atlOffset=0.58647251;
+							atlOffset=0.58638763;
 						};
 						class Item523
 						{
@@ -59351,7 +59352,7 @@ class Mission
 							};
 							id=5923;
 							type="Land_OfficeChair_01_F";
-							atlOffset=0.58076668;
+							atlOffset=0.5806942;
 						};
 						class Item524
 						{
@@ -59362,13 +59363,13 @@ class Mission
 								angles[]={0,0.57166362,6.2818046};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								disableSimulation=1;
 							};
 							id=5924;
 							type="OfficeTable_01_new_F";
-							atlOffset=0.56144047;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -72726,7 +72727,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=322;
+						items=324;
 						class Item0
 						{
 							dataType="Object";
@@ -85546,13 +85547,47 @@ class Mission
 								nAttributes=1;
 							};
 						};
+						class Item322
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={16557.549,24.981829,12778.247};
+								angles[]={0,1.4142228,6.2185035};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+							};
+							id=6196;
+							type="Land_LampStreet_F";
+							atlOffset=7.8579998;
+						};
+						class Item323
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={16627.363,24.806305,12794.954};
+								angles[]={6.2185178,2.9776926,6.2827158};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+							};
+							id=6197;
+							type="Land_LampStreet_F";
+							atlOffset=7.682476;
+						};
 					};
 					id=5940;
-					atlOffset=-21.448164;
+					atlOffset=108.04268;
 				};
 			};
 			id=3146;
-			atlOffset=26.949253;
+			atlOffset=110.12022;
 		};
 		class Item2
 		{
@@ -87692,7 +87727,7 @@ class Mission
 					position[]={17532.012,4.6696718e-013,13133.969};
 					name="aca_cop";
 					type="Empty";
-					angle=226.95186;
+					angle=226.95184;
 					id=5918;
 					atlOffset=-14.086363;
 				};
@@ -92994,7 +93029,6 @@ class Mission
 								angles[]={0,4.4593339,0};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -93005,7 +93039,7 @@ class Mission
 							};
 							id=661;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.057557106;
+							atlOffset=0.79999924;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -95204,7 +95238,6 @@ class Mission
 								angles[]={0,5.0310335,0};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -95215,7 +95248,7 @@ class Mission
 							};
 							id=1366;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.00043773651;
+							atlOffset=0.67000008;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -95287,7 +95320,6 @@ class Mission
 								angles[]={0,3.1440187,0};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -95298,7 +95330,7 @@ class Mission
 							};
 							id=1374;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.0003786087;
+							atlOffset=0.94400024;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -96726,7 +96758,7 @@ class Mission
 							};
 							id=3394;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.00048065186;
+							atlOffset=0.17200089;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -97573,7 +97605,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_1""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_1"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
+								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_2""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_2"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
 								name="boat_shop_2";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -97675,7 +97707,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_1""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_1"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
+								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_3""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_3"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
 								name="boat_shop_3";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -97776,7 +97808,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_1""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_1"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
+								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_4""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_4"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
 								name="boat_shop_4";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -97877,7 +97909,7 @@ class Mission
 							class Attributes
 							{
 								skill=0.60000002;
-								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_1""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_1"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
+								init="call{this addAction[""Parler à l'Armateur de plaisance"",life_fnc_vehicleShopMenu,[""civ_ship_plaisance"",civilian,[""civ_ship_5""],""civ"",""Armateur de plaisance""],0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4']; this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_5"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
 								name="boat_shop_5";
 								disableSimulation=1;
 								ignoreByDynSimulGrid=1;
@@ -98408,7 +98440,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5082.5947,3.5015109,9913.0527};
+						position[]={5082.5952,3.5015285,9913.0527};
 						angles[]={0,2.4211557,0};
 					};
 					side="Empty";
@@ -98421,7 +98453,7 @@ class Mission
 					};
 					id=5878;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.14993095;
+					atlOffset=-0.1500001;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98451,7 +98483,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9277.4854,3.1391106,10858.258};
+						position[]={9277.4854,3.1388853,10858.258};
 						angles[]={0,5.0733051,0};
 					};
 					side="Empty";
@@ -98463,7 +98495,7 @@ class Mission
 					};
 					id=5880;
 					type="Land_RowBoat_V2_F";
-					atlOffset=2.0842257;
+					atlOffset=2.0840001;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98746,7 +98778,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={22771.318,2.1386509,13801.278};
+						position[]={22771.318,2.1387351,13801.278};
 						angles[]={0.031974431,2.6175926,0.15767305};
 					};
 					side="Empty";
@@ -98759,7 +98791,7 @@ class Mission
 					};
 					id=5895;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.10408413;
+					atlOffset=-0.10399997;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98789,8 +98821,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={23269.5,2.9759078,24191.447};
-						angles[]={6.2631865,3.2931623,6.2645183};
+						position[]={23269.5,2.9757683,24191.447};
+						angles[]={6.2631841,3.2931571,6.2645102};
 					};
 					side="Empty";
 					class Attributes
@@ -98801,7 +98833,7 @@ class Mission
 					};
 					id=5896;
 					type="Land_RowBoat_V2_F";
-					atlOffset=7.4271393;
+					atlOffset=7.427;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98831,7 +98863,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={21636.906,2.5340767,20839.986};
+						position[]={21636.906,2.5344706,20839.986};
 						angles[]={0.084229596,4.4263821,5.9942284};
 					};
 					side="Empty";
@@ -98844,7 +98876,7 @@ class Mission
 					};
 					id=5899;
 					type="Land_RowBoat_V2_F";
-					atlOffset=0.21821141;
+					atlOffset=0.21860528;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98874,7 +98906,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={20603.275,4.4536233,19510.244};
+						position[]={20603.275,4.4533648,19510.244};
 						angles[]={0,0.12435471,0};
 					};
 					side="Empty";
@@ -98886,7 +98918,7 @@ class Mission
 					};
 					id=5901;
 					type="Land_RowBoat_V2_F";
-					atlOffset=9.741786;
+					atlOffset=9.7370005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98916,10 +98948,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16742.854,2.0892839,20523.291};
+						position[]={16742.854,2.0890117,20523.291};
 						angles[]={0.0023736479,3.7359295,6.28055};
 					};
 					side="Empty";
+					flags=4;
 					class Attributes
 					{
 						init="call{this addAction[  " \n "    ""Mise à l'eau"",  " \n "    {     " \n "        [  " \n "            getPlayerUID player,  " \n "            playerSide,  " \n "            ""Ship"",  " \n "            player  " \n "        ] remoteExec [""TON_fnc_getVehicles"",2];  " \n " " \n "        life_garage_type = ""Ship"";  " \n "        createDialog ""Life_impound_menu"";  " \n "        disableSerialization;  " \n "        ctrlSetText[2802,""Vous êtes en train de faire la mise à l'eau""];  " \n "        life_garage_sp = ""civ_ship_plais_14"";    " \n " " \n "    },"""",0,FALSE,FALSE,"""",' vehicle player == player && player distance _target < 4' " \n "];" \n " " \n "this addAction[""Mettre en cale sèche"",life_fnc_storeVehicle,"""",0,FALSE,FALSE,"""",'!life_garage_store && vehicle player == player && player distance _target < 4'];}";
@@ -98928,7 +98961,7 @@ class Mission
 					};
 					id=5903;
 					type="Land_RowBoat_V2_F";
-					atlOffset=3.1050906;
+					atlOffset=0.010293603;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -98958,7 +98991,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={16731.51,3.1368959,21914.248};
+						position[]={16731.51,3.1364992,21914.248};
 						angles[]={6.1808739,3.2931571,0.21273819};
 					};
 					side="Empty";
@@ -98971,7 +99004,7 @@ class Mission
 					};
 					id=5905;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.055603266;
+					atlOffset=-0.055999994;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99001,7 +99034,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={9761.084,1.180654,22331.75};
+						position[]={9761.084,1.1808994,22331.75};
 						angles[]={0.10206685,3.2891951,0.077038832};
 					};
 					side="Empty";
@@ -99014,7 +99047,7 @@ class Mission
 					};
 					id=5907;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.11624551;
+					atlOffset=-0.11600012;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99044,7 +99077,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4219.7642,2.8971376,16436.441};
+						position[]={4219.7637,2.8969004,16436.441};
 						angles[]={6.2299004,1.4225305,0.13779375};
 					};
 					side="Empty";
@@ -99057,7 +99090,7 @@ class Mission
 					};
 					id=5909;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.011826277;
+					atlOffset=-0.012000084;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99087,7 +99120,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3311.9683,3.5192053,14080.068};
+						position[]={3311.968,3.5197415,14080.068};
 						angles[]={6.282208,3.7409387,0};
 					};
 					side="Empty";
@@ -99099,7 +99132,7 @@ class Mission
 					};
 					id=5911;
 					type="Land_RowBoat_V2_F";
-					atlOffset=3.646524;
+					atlOffset=3.6470001;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99129,8 +99162,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12137.782,2.3654509,10449.113};
-						angles[]={6.1677012,5.9060144,6.2591896};
+						position[]={12137.781,2.3651276,10449.113};
+						angles[]={6.167697,5.9060197,6.2591867};
 					};
 					side="Empty";
 					flags=4;
@@ -99142,7 +99175,7 @@ class Mission
 					};
 					id=5914;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.045654655;
+					atlOffset=-0.046000004;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99172,7 +99205,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18395.02,2.1426406,8027.9678};
+						position[]={18395.02,2.1427116,8027.9678};
 						angles[]={0.033318337,1.935413,0.1023112};
 					};
 					side="Empty";
@@ -99185,7 +99218,6 @@ class Mission
 					};
 					id=5916;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-7.1048737e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -99422,7 +99454,7 @@ class Mission
 				};
 			};
 			id=3145;
-			atlOffset=-2.4496632;
+			atlOffset=-2.4496565;
 		};
 		class Item4
 		{
@@ -120070,7 +120102,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23979.443,15.609052,18098.988};
+				position[]={23999.531,15.609053,18088.898};
 				angles[]={0,3.5762844,0};
 			};
 			side="Empty";
@@ -120080,7 +120112,6 @@ class Mission
 			};
 			id=6190;
 			type="Land_LampAirport_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120110,7 +120141,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24064.926,15.609052,18255.658};
+				position[]={24085.014,15.609053,18245.568};
 				angles[]={0,3.5762844,0};
 			};
 			side="Empty";
@@ -120120,7 +120151,6 @@ class Mission
 			};
 			id=6191;
 			type="Land_LampAirport_F";
-			atlOffset=-4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120150,7 +120180,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={24022.629,15.609053,18175.342};
+				position[]={24042.717,15.609053,18165.252};
 				angles[]={0,3.5762844,0};
 			};
 			side="Empty";
@@ -120160,7 +120190,7 @@ class Mission
 			};
 			id=6192;
 			type="Land_LampAirport_F";
-			atlOffset=4.7683716e-007;
+			atlOffset=9.5367432e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120190,7 +120220,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23939.348,15.609053,18197.154};
+				position[]={23943.039,15.609053,18193.775};
 				angles[]={0,3.5762844,0};
 			};
 			side="Empty";
@@ -120200,7 +120230,6 @@ class Mission
 			};
 			id=6193;
 			type="Land_LampAirport_F";
-			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120230,7 +120259,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={23977.98,15.609053,18268.43};
+				position[]={23981.672,15.609053,18265.051};
 				angles[]={0,3.5762844,0};
 			};
 			side="Empty";
@@ -120240,7 +120269,6 @@ class Mission
 			};
 			id=6194;
 			type="Land_LampAirport_F";
-			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120277,6 +120305,202 @@ class Mission
 			b=1.5;
 			id=6195;
 			atlOffset=-3.1900001;
+		};
+		class Item260
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24044.889,15.609053,18266.637};
+				angles[]={0,3.5762844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6198;
+			type="Land_LampAirport_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item261
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24002.592,15.609053,18186.32};
+				angles[]={0,3.5762844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6199;
+			type="Land_LampAirport_F";
+			atlOffset=9.5367432e-007;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item262
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={23959.406,15.609053,18109.967};
+				angles[]={0,3.5762844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6200;
+			type="Land_LampAirport_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item263
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24042.322,15.609053,18095.055};
+				angles[]={0,3.5762844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6201;
+			type="Land_LampAirport_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item264
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={24069.217,15.609053,18051.992};
+				angles[]={0,3.5762844,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=6202;
+			type="Land_LampAirport_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="allowDamage";
+					expression="_this allowdamage _value;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
