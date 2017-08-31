@@ -75,6 +75,7 @@ life_maxPoints = 2;
 nbNotif = 0;
 life_prix_Numero = 42;
 life_shopList = ["civ_car","civ_truck","civ_air","civ_ship_peche","civ_ship_plaisance"];
+life_gathering = false;
 /*
 *****************************
 ****** KronosD Variables *****

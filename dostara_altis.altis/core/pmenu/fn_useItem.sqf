@@ -159,7 +159,8 @@ switch (true) do
 		[] spawn life_fnc_BucketUse;
 	};
 	case (_item in ["filet_a","filet_p","filet_e"]):{
-		[_item] call life_fnc_lacherFilet;
+		_veh = vehicle player;
+		if(_veh isKindOf "Ship")then{[_item] call life_fnc_lacherFilet;};
 	};
 	default
 	{
