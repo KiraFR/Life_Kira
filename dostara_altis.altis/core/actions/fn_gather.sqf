@@ -51,7 +51,7 @@ if(vehicle player != player) exitWith {};
 if(_val == 0) exitWith{hint "Votre récolte n'est pas bonne, vous avez jeté ce que vous avez recolté.";};
 
 if (_lis != "") then {
-	_hasLicense = missionNamespace setVariable _lis;
+	_hasLicense = missionNamespace getVariable _lis;
     if (!_hasLicense) exitWith {
         hint format["Vous n'avez pas la licence %1 pour récolter la ressource : %2.",([_lis] call life_fnc_varToStr),_gather];
     };
