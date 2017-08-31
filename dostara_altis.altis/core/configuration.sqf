@@ -271,15 +271,13 @@ life_licenses =
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
 life_illegal_items = [
-	["heroinu",1200],
-	["heroinp",2500],
-	["cocaine",1500],
-	["cocainep",3500],
-	["marijuana",2000],
-	["opium",2300],
-	["turtle",3000],
-	["blastingcharge",10000],
-	["boltcutter",500]
+	["Cannabis",0],
+	["Coca",0],
+	["Opium",0],
+	["Cocaine",0],
+	["Heroine",0],
+	["Shit",0],
+	["Meth",0]
 ];
 
 
