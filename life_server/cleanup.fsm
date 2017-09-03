@@ -1,4 +1,4 @@
-/*%FSM<COMPILE "scriptedFSM.cfg, Server-Side Cleanup">*/
+/*%FSM<COMPILE "D:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Server-Side Cleanup">*/
 /*%FSM<HEAD>*/
 /*
 item0[] = {"init",0,250,-65.004578,-391.651611,24.995417,-341.651672,0.000000,"init"};
@@ -10,7 +10,7 @@ item5[] = {"Delete_Dead_Cars",2,250,-219.188843,52.596649,-129.189087,102.596458
 item6[] = {"",7,210,-311.540131,177.140106,-303.540131,185.140106,0.000000,""};
 item7[] = {"",7,210,-310.751892,-121.188660,-302.751892,-113.188660,0.000000,""};
 item8[] = {"Time_Check",4,218,-63.600525,-50.823380,26.399475,-0.823380,0.000000,"Time Check"};
-item9[] = {"Update_Civ_Pos",2,250,-65.596741,52.980026,24.403275,102.980026,0.000000,"Update" \n "Civ" \n "Pos"};
+item9[] = {"Update_Civ_Pos",2,4346,-65.596741,52.980026,24.403275,102.980026,0.000000,"Update" \n "Civ" \n "Pos"};
 link0[] = {0,1};
 link1[] = {1,2};
 link2[] = {2,4};
@@ -22,8 +22,8 @@ link7[] = {6,7};
 link8[] = {7,2};
 link9[] = {8,9};
 link10[] = {9,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,48,6316128,1,-629.444153,611.207214,293.309357,-434.050568,1243,924,1};
-window[] = {2,-1,-1,-1,-1,968,208,1851,208,3,1261};
+globals[] = {0.000000,0,0,0,0,640,480,1,48,6316128,1,-629.444153,611.207214,293.309357,-434.050568,1011,928,1};
+window[] = {2,-1,-1,-1,-1,826,66,1709,66,3,1029};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -159,17 +159,18 @@ class FSM
                 {
                         name = "Update_Civ_Pos";
                         itemno = 9;
-                        init = /*%FSM<STATEINIT""">*/"if(count playableUnits > 0) then{"\n
+                        init = /*%FSM<STATEINIT""">*/"if(count playableUnits > 0) then{" \n
                          "      _query = ""UPDATE players SET civPosition = CASE"";" \n
                          "	{" \n
                          "		_unit = _x;" \n
-                         "		if(side _unit == civilian)then{" \n
+                         "		if(side _unit == civilian && !((position _x) inArea ""ilespawn""))then{" \n
                          "			_str = format["" WHEN playerid = '%1' THEN '""""%2""""'"",getPlayerUID _unit,position _unit];" \n
                          "		};" \n
                          "		_query = _query + _str;" \n
                          "	}foreach playableUnits;" \n
                          "	_query = _query + "" END WHERE alive = '1'"";" \n
-                         "	[_query,1] call DB_fnc_asyncCall;};"/*%FSM</STATEINIT""">*/;
+                         "	[_query,1] call DB_fnc_asyncCall;" \n
+                         "};"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
