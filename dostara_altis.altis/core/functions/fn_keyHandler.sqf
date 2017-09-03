@@ -26,6 +26,11 @@ if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(play
 
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
+	if(life_gathering)then{
+		life_gathering = false;
+		hint "Vous arrêter de recolter.";
+		life_gathering = false;
+	};
 	_handled;
 };
 

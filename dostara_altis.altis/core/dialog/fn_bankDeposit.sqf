@@ -8,14 +8,13 @@
 */
 private["_value","_dftfound","_plafond","_taxe","_taxes","_ac","_first"];
 _value = parseNumber(ctrlText 2702);
-
+if((time - life_action_delay) < 2.5) exitWith {hint "Vous ne pouvez pas faire d'actions aussi vite."};
+life_action_delay = time;
 //Series of stupid checks
 if(_value > 999999) exitWith {hint localize "STR_ATM_GreaterThan";};
 if(_value < 50) exitWith {};
 if(!([str(_value)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};
 if(_value > CASH) exitWith {hint localize "STR_ATM_NotEnoughCash"};
-if(life_atmUsing)exitWith{hint "Attendez que la transaction soit terminé."};
-life_atmUsing = true;
 _ac = missionNamespace getVariable ["accountBanque",[]];
 {
 	_dft = _x select 3;

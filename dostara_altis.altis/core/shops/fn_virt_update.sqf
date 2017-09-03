@@ -34,22 +34,16 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
             _item_list lbSetValue [(lbSize _item_list)-1,_price];
 		};
 	};
-
 } forEach (_shop_data select 1);
-
 {
 	_var = [_x,0] call life_fnc_varHandle;
 	_val = missionNameSpace getVariable _var;
 	_name = [_var] call life_fnc_vartostr;
-    if (_var in Bourse_VarIteams) then {
-	    if(_val > 0) then
-	    {
-
-	        _id = Bourse_VarIteams find _var;
-	        _Obj = Bourse_Object select _id;
-	        _price = round(_Obj select 1);
-		    _gear_list lbAdd format["%1x %2  ( %3€ )",_val,_name,_price];
-		    _gear_list lbSetData [(lbSize _gear_list)-1,_x];
-	    };
-    };
+	//_icon = [_var] call life_fnc_itemIcon;
+	if(_val > 0) then
+	{
+		_gear_list lbAdd format["%1x %2",_val,_name];
+		_gear_list lbSetData [(lbSize _gear_list)-1,_x];
+		//_gear_list lbSetPicture [(lbSize _gear_list)-1,_icon];
+	};
 } forEach (_shop_data select 1);

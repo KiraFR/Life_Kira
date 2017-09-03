@@ -7,6 +7,8 @@
 */
 private["_vehicle","_vehicleLife","_vid","_pid","_multiplier","_price","_purchasePrice","_insurancePrice"];
 disableSerialization;
+if((time - life_action_delay) < 2.5) exitWith {hint "Vous ne pouvez pas faire d'actions aussi vite."};
+life_action_delay = time;
 if ((lbCurSel 2802) isEqualTo -1) exitWith {hint localize "STR_Global_NoSelection"};
 _vehicle = lbData[2802,(lbCurSel 2802)];
 _vehicleLife = (call compile format["%1",_vehicle]) select 0;

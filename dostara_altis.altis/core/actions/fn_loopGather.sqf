@@ -16,6 +16,7 @@
 */
 private ["_gather","_val"];
 private _zone = param[0,"",[""]];
+waitUntil {!life_action_inUse};
 while{life_gathering} do {
 	if(player distance (getMarkerPos _zone) > 30)exitWith{life_gathering = false;};
 	if(!alive player)exitWith{life_gathering = false;};
@@ -78,7 +79,7 @@ while{life_gathering} do {
 	{
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-		sleep 2.5;
+		sleep 2.5
 	};
 
 	if([true,_gather,_diff] call life_fnc_handleInv) then
@@ -88,4 +89,5 @@ while{life_gathering} do {
 	};
 
 	life_action_inUse = false;
+	if !(life_gathering) exitWith{};
 };

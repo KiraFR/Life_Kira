@@ -8,6 +8,8 @@
 */
 private["_vehicle","_vid","_pid","_unit","_price","_PGarage"];
 disableSerialization;
+if((time - life_action_delay) < 2.5) exitWith {hint "Vous ne pouvez pas faire d'actions aussi vite."};
+life_action_delay = time;
 if(lbCurSel 2802 == -1) exitWith {hint localize "STR_Global_NoSelection"};
 _vehicle = getSelData(2802);
 _vehicle = (call compile format["%1",_vehicle]) select 0;

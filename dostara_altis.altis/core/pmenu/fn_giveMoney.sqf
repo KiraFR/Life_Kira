@@ -27,3 +27,4 @@ CASH = CASH - _amount;
 [_unit,str(_amount),player] RemoteExecCall ["life_fnc_receiveMoney",_unit];
 [] call life_fnc_p_updateMenu;
 ctrlEnable[9004,true];
+closeDialog 0;

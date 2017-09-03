@@ -24,5 +24,5 @@ _type = [_item,0] call life_fnc_varHandle;
 _type = [_type] call life_fnc_varToStr;
 hint format["Vous avez donné %1 %2 %3",_unit getVariable["realname",name _unit],_val,_type];
 [] call life_fnc_p_updateMenu;
-
 ctrlEnable[9004,true];
+closeDialog 0;

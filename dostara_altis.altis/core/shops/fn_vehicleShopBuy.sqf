@@ -49,6 +49,7 @@ _vehicle lock 2;
 _vehicle setVectorUp (surfaceNormal (getMarkerPos _spawnPoint));
 _vehicle setDir (markerDir _spawnPoint);
 _vehicle setPos (getMarkerPos _spawnPoint);
+diag_log format["couleur: %1",_colorIndex];
 [_vehicle,_colorIndex] RemoteExecCall ["life_fnc_colorVehicle",0];
 [_vehicle] call life_fnc_clearVehicleAmmo;
 [_vehicle,"trunk_in_use",false,true] RemoteExecCall ["TON_fnc_setObjVar",2];

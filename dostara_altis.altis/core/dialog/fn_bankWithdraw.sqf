@@ -1,8 +1,15 @@
 #include "..\..\macro.h"
 /*
-	COPY PASTE TIME
+	File: fn_bankDeposit.sqf
+	Author: Bryan "Tonic" Boardwine
+	Edit : J. `Kira` D.
+	
+	Description:
+	Figure it out.
 */
 private _val = parseNumber(ctrlText 2702);
+if((time - life_action_delay) < 2.5) exitWith {hint "Vous ne pouvez pas faire d'actions aussi vite."};
+life_action_delay = time;
 if(_val > 999999) exitWith {hint localize "STR_ATM_WithdrawMax";};
 if(_val < 0) exitwith {};
 if(!([str(_val)] call life_fnc_isnumeric)) exitWith {hint localize "STR_ATM_notnumeric"};

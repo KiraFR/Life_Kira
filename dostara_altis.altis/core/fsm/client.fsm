@@ -1,7 +1,7 @@
-/*%FSM<COMPILE "scriptedFSM.cfg, Life Client FSM">*/
+/*%FSM<COMPILE "D:\SteamLibrary\steamapps\common\Arma 3 Tools\FSMEditor\scriptedFSM.cfg, Life Client FSM">*/
 /*%FSM<HEAD>*/
 /*
-item0[] = {"Main_Init",0,4346,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
+item0[] = {"Main_Init",0,250,-34.543800,-41.604156,55.456207,8.395844,0.000000,"Main Init"};
 item1[] = {"Split",2,250,-37.376846,314.297150,52.623169,364.297150,0.000000,"Split"};
 item2[] = {"",7,210,-230.997131,598.868469,-222.997116,606.868469,0.000000,""};
 item3[] = {"",7,210,-231.318130,334.657898,-223.318130,342.657898,0.000000,""};
@@ -30,8 +30,8 @@ link11[] = {10,8};
 link12[] = {11,9};
 link13[] = {12,13};
 link14[] = {13,1};
-globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-283.632477,799.423340,792.611023,-178.042053,1031,924,1};
-window[] = {2,-1,-1,-32000,-32000,922,104,1018,104,3,1049};
+globals[] = {0.000000,0,0,0,0,640,480,1,81,6316128,1,-262.294159,778.084473,761.890015,123.772743,521,650,1};
+window[] = {0,-1,-1,-63,-1,1009,480,1394,191,1,539};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -208,44 +208,44 @@ class FSM
                         init = /*%FSM<STATEINIT""">*/"titleCut ["""", ""BLACK IN"", 0.005];" \n
                          "titleText ["""",""PLAIN DOWN""];" \n
                          "titleFadeOut 0.005;" \n
+                         "if !((getPlayerUID player) in [""76561197964675179""]) then{" \n
+                         "	_server = call TFAR_fnc_getTeamSpeakServerName;" \n
+                         "	_chanel = call TFAR_fnc_getTeamSpeakChannelName;" \n
                          "" \n
-                         "_server = call TFAR_fnc_getTeamSpeakServerName;" \n
-                         "_chanel = call TFAR_fnc_getTeamSpeakChannelName;" \n
+                         "	if (_server != ""H&K - Dostara"") then {" \n
+                         "		titleCut ["""", ""BLACK FADED"", 99999999];" \n
+                         "		[] Spawn {" \n
+                         "			titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
+                         "			titleFadeOut 99999999;" \n
                          "" \n
-                         "if (_server != ""H&K - Dostara"") then {" \n
-                         "	titleCut ["""", ""BLACK FADED"", 99999999];" \n
-                         "	[] Spawn {" \n
-                         "		titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
-                         "		titleFadeOut 99999999;" \n
+                         "			""dynamicBlur"" ppEffectEnable true;" \n
+                         "			""dynamicBlur"" ppEffectAdjust [6];" \n
+                         "			""dynamicBlur"" ppEffectCommit 0;" \n
+                         "			""dynamicBlur"" ppEffectAdjust [0.0];" \n
+                         "			""dynamicBlur"" ppEffectCommit 5;" \n
+                         "		};" \n
+                         "	};" \n
                          "" \n
-                         "		""dynamicBlur"" ppEffectEnable true;" \n
-                         "		""dynamicBlur"" ppEffectAdjust [6];" \n
-                         "		""dynamicBlur"" ppEffectCommit 0;" \n
-                         "		""dynamicBlur"" ppEffectAdjust [0.0];" \n
-                         "		""dynamicBlur"" ppEffectCommit 5;" \n
+                         "	_check = [""TFR"",""Accueil Support / Aide"",""Bureau des Opérateurs"",""Bureau des Supports"",""Sous-Bureau 1"",""Sous-Bureau 2"",""Sous-Bureau 3"",""Sous-Bureau 4"",""Staff & You - Voir la Description"",""Groupe de Travail"",""Groupe de Modelisation"",""Groupe de Graphiste"",""Groupe de Developpement"",""Bureau Developpement"",""Bureau des Responsables"",""Bureau des Leaders"",""Bureau des Fondateurs""];" \n
+                         "" \n
+                         "	if(_chanel in _check) then {" \n
+                         "		titleCut ["""", ""BLACK IN"", 0.005];" \n
+                         "		titleText ["""",""PLAIN DOWN""];" \n
+                         "		titleFadeOut 0.005;" \n
+                         "	}else{" \n
+                         "		titleCut ["""", ""BLACK FADED"", 99999999];" \n
+                         "		[] Spawn {" \n
+                         "			titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
+                         "			titleFadeOut 99999999;" \n
+                         "" \n
+                         "			""dynamicBlur"" ppEffectEnable true;" \n
+                         "			""dynamicBlur"" ppEffectAdjust [6];" \n
+                         "			""dynamicBlur"" ppEffectCommit 0;" \n
+                         "			""dynamicBlur"" ppEffectAdjust [0.0];" \n
+                         "			""dynamicBlur"" ppEffectCommit 5;" \n
+                         "		};" \n
                          "	};" \n
                          "};" \n
-                         "" \n
-                         "_check = [""TFR"",""Accueil Support / Aide"",""Bureau des Opérateurs"",""Bureau des Supports"",""Sous-Bureau 1"",""Sous-Bureau 2"",""Sous-Bureau 3"",""Sous-Bureau 4"",""Staff & You - Voir la Description"",""Groupe de Travail"",""Groupe de Modelisation"",""Groupe de Graphiste"",""Groupe de Developpement"",""Bureau Developpement"",""Bureau des Responsables"",""Bureau des Leaders"",""Bureau des Fondateurs""];" \n
-                         "" \n
-                         "if(_chanel in _check) then {" \n
-                         "	titleCut ["""", ""BLACK IN"", 0.005];" \n
-                         "	titleText ["""",""PLAIN DOWN""];" \n
-                         "	titleFadeOut 0.005;" \n
-                         "}else{" \n
-                         "	titleCut ["""", ""BLACK FADED"", 99999999];" \n
-                         "	[] Spawn {" \n
-                         "		titleText [""Merci de vous rendre dans le salon TFR."",""PLAIN DOWN""];" \n
-                         "		titleFadeOut 99999999;" \n
-                         "" \n
-                         "		""dynamicBlur"" ppEffectEnable true;" \n
-                         "		""dynamicBlur"" ppEffectAdjust [6];" \n
-                         "		""dynamicBlur"" ppEffectCommit 0;" \n
-                         "		""dynamicBlur"" ppEffectAdjust [0.0];" \n
-                         "		""dynamicBlur"" ppEffectCommit 5;" \n
-                         "	};" \n
-                         "};" \n
-                         "" \n
                          "_lastchecktfr = time;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links

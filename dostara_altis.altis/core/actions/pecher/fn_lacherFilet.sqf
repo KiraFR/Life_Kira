@@ -17,6 +17,7 @@
 private _filet = param[0,"",[""]];
 private _maxmin = [];
 _boat = vehicle player;
+diag_log format["%1",_boat];
 if !(_boat isKindOf "Ship") exitWith {hint "Vous ne pouvez pas lacher vos filets car le vehicule n'est pas un bateau."};
 if (speed _boat > 5)exitWith{hint "Vous devez être immobile pour lacher le filet."};
 if !(isNil {_boat getVariable ["InUsefishing",nil]})exitWith{hint "Vous pechez déjà."};
@@ -27,7 +28,7 @@ _maxmin = switch (_filet) do {
 	case "filet_p" : {[1,20,11]};
 	case "filet_e" : {[1,30,21]};
 };
-_action = _boat addAction ["Recuperer filet de pêche",life_fnc_recupereFilet,"",0,false,false,"",format["vehicle player == %1 && !(isNil {_boat getVariable ['InUsefishing',nil]})",_boat]];
+_action = _boat addAction ["Recuperer filet de pêche",life_fnc_recupereFilet,_boat,0,false,false,"",""];
 _boat setVariable["poissons",[],true];
 _boat setVariable["idAction",_action,true];
 _boat setVariable ["filetInUse",_filet,true];

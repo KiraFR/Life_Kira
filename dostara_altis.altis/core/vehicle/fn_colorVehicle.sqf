@@ -37,8 +37,7 @@ if(local _vehicle) then
 {
 	_vehicle setVariable["Life_VEH_color",_index,true];
 };
-
-waitUntil{!isNil {_vehicle getVariable "Life_VEH_color"}};
+//waitUntil{!isNil {_vehicle getVariable "Life_VEH_color"}};
 
 _vehicle setObjectTexture[0,_texture];
 if(!isNil "_texture2") then
