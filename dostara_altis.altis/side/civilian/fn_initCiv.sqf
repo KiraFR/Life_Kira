@@ -21,15 +21,23 @@ if (!life_is_alive) then
 }
 else
 {
-	if(life_is_arrested) then
-	{
-		life_is_arrested = false;
-		[player,true] spawn life_fnc_jail;
+	if(_playerPosition inArea ilespawn)then{
+		[] call life_fnc_spawnMenu;
+		waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
+		waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 	}
 	else
 	{
-		player setPos _playerPosition;
-		hint format["Votre êtes toujours en vie ! Vous etes a votre derniere position"];
+		if(life_is_arrested) then
+		{
+			life_is_arrested = false;
+			[player,true] spawn life_fnc_jail;
+		}
+		else
+		{
+			player setPos _playerPosition;
+			hint format["Votre êtes toujours en vie ! Vous etes a votre derniere position"];
+		};
+		life_is_alive = true;
 	};
-	life_is_alive = true;
 };

@@ -8,15 +8,15 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=6203;
+		nextID=6204;
 	};
 	class MarkerIDProvider
 	{
-		nextID=228;
+		nextID=229;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1304;
+		nextID=1340;
 	};
 	class Camera
 	{
@@ -471,7 +471,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=265;
+		items=266;
 		class Item0
 		{
 			dataType="Group";
@@ -85714,7 +85714,7 @@ class Mission
 					b=2;
 					angle=358.09689;
 					id=2429;
-					atlOffset=9.5367432e-007;
+					atlOffset=0.28009796;
 				};
 				class Item9
 				{
@@ -87727,7 +87727,7 @@ class Mission
 					position[]={17532.012,4.6696718e-013,13133.969};
 					name="aca_cop";
 					type="Empty";
-					angle=226.95184;
+					angle=226.95183;
 					id=5918;
 					atlOffset=-14.086363;
 				};
@@ -91917,6 +91917,7 @@ class Mission
 					};
 					id=3456;
 					type="Land_Atm_02_F";
+					atlOffset=0.1618824;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -95604,7 +95605,6 @@ class Mission
 								angles[]={0,0.67219609,6.2820859};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -95615,7 +95615,7 @@ class Mission
 							};
 							id=3360;
 							type="C_man_polo_3_F";
-							atlOffset=0.00045585632;
+							atlOffset=0.47999954;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -95706,7 +95706,6 @@ class Mission
 								angles[]={0,1.9838285,0};
 							};
 							side="Civilian";
-							flags=4;
 							class Attributes
 							{
 								skill=0.60000002;
@@ -95717,7 +95716,7 @@ class Mission
 							};
 							id=3388;
 							type="C_Man_casual_2_F_euro";
-							atlOffset=0.00034809113;
+							atlOffset=0.28299999;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -99047,7 +99046,7 @@ class Mission
 					};
 					id=5907;
 					type="Land_RowBoat_V2_F";
-					atlOffset=-0.11600012;
+					atlOffset=-0.11600018;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -120112,6 +120111,7 @@ class Mission
 			};
 			id=6190;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120151,6 +120151,7 @@ class Mission
 			};
 			id=6191;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120190,7 +120191,7 @@ class Mission
 			};
 			id=6192;
 			type="Land_LampAirport_F";
-			atlOffset=9.5367432e-007;
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120230,6 +120231,7 @@ class Mission
 			};
 			id=6193;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120269,6 +120271,7 @@ class Mission
 			};
 			id=6194;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120321,6 +120324,7 @@ class Mission
 			};
 			id=6198;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120360,7 +120364,7 @@ class Mission
 			};
 			id=6199;
 			type="Land_LampAirport_F";
-			atlOffset=9.5367432e-007;
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120400,6 +120404,7 @@ class Mission
 			};
 			id=6200;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120439,6 +120444,7 @@ class Mission
 			};
 			id=6201;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120478,6 +120484,7 @@ class Mission
 			};
 			id=6202;
 			type="Land_LampAirport_F";
+			atlOffset=4.7683716e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -120501,6 +120508,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item265
+		{
+			dataType="Marker";
+			position[]={8450.7246,0,25183.301};
+			name="ilespawn";
+			markerType="ELLIPSE";
+			type="ellipse";
+			alpha=0;
+			fillName="SolidBorder";
+			a=1000;
+			b=500;
+			angle=178.564;
+			drawBorder=1;
+			id=6203;
+			atlOffset=-94.670563;
 		};
 	};
 };
