@@ -6,46 +6,27 @@
 	Description:
 	Updates the player menu (Virtual Interaction Menu)
 */
-private["_dialog","_inv","_lic","_licenses","_near","_near_units","_mstatus","_shrt","_side","_ui","_food","_water","_health"];
+private["_dialog","_inv","_lic","_licenses","_near","_mstatus","_shrt","_side","_ui","_food","_water","_health","_itemsPoids"];
 disableSerialization;
 _side = switch(playerSide) do {case west:{"cop"}; case civilian:{"civ"}; case independent:{"med"};};
 _dialog = uiNameSpace getVariable ["RscDisplayInventory",displayNull];
 _inv = _dialog displayCtrl 2005;
 _lic = _dialog displayCtrl 2014;
-_near = _dialog displayCtrl 2022;
 _itemsPoids = _dialog displayCtrl 2009;
-_near_i = _dialog displayCtrl 2023;
 _mstatus = _dialog displayCtrl 2015;
 _pstatus = _dialog displayCtrl 2016;
+_permis = _dialog displayCtrl 1066;
 _food = _dialog displayCtrl 23500;
 _water = _dialog displayCtrl 23510;
 _health = _dialog displayCtrl 23515;
 _money = _dialog displayCtrl 23520;
 _struct = "";
 lbClear _inv;
-lbClear _near;
-lbClear _near_i;
 
-_near_units = [];
-{ if(player distance _x < 10) then {_near_units pushBack _x};} forEach playableUnits;
-{
-	if(!isNull _x && alive _x && player distance _x < 10 && _x != player) then
-	{
-		_near lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
-		_near lbSetData [(lbSize _near)-1,str(_x)];
-		_near_i lbAdd format["%1 - %2",_x getVariable["realname",name _x], side _x];
-		_near_i lbSetData [(lbSize _near)-1,str(_x)];
-	};
-} forEach _near_units;
-/*
-if(life_nbAcc > 0) then{
-	_mstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\bank.paa'/> <t size='0.8px'>%1€</t><br/><img size='1.2' image='icons\money.paa'/> <t size='0.8'>%2€</t>",[life_atmcash] call life_fnc_numberText,[life_cash] call life_fnc_numberText];
-}else{
-	_mstatus ctrlSetStructuredText parseText format["<img size='1.2' image='icons\money.paa'/> <t size='0.8'>%1€</t>",[life_cash] call life_fnc_numberText];
-};
+
 if(life_pPermis > 0) then {
-	_pstatus ctrlSetStructuredText parseText format["<img size='1.3' image='icons\ppermis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
-}else{ctrlShow[2016,false];};*/
+	_permis ctrlSetStructuredText parseText format["<img size='1.3' image='\Kira_assets\texture\permis.paa'/> <t size='0.8px'>Points: %1</t>",life_pPermis];
+}else{ctrlShow[2016,false];};
 
 _itemsPoids ctrlSetText format["Items, place: %1 / %2", life_carryWeight, life_maxWeight];
 {
@@ -71,6 +52,7 @@ _itemsPoids ctrlSetText format["Items, place: %1 / %2", life_carryWeight, life_m
 } forEach life_licenses;
 if(_struct == "") then{_struct = "No Licenses";};
 _lic ctrlSetStructuredText parseText format["<t size='0.8px'>%1</t>",_struct];
+
 
 
 _food ctrlSetPosition [safeZoneX+safeZoneW-0.15,safeZoneY+safeZoneH-0.637];

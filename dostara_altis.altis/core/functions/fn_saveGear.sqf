@@ -187,6 +187,14 @@ if(count (secondaryWeaponItems player) > 0) then
     ["life_inv_seau",life_inv_seau],
     ["life_inv_pelle",life_inv_pelle],
     ["life_inv_pioche",life_inv_pioche],
+    ["life_inv_harpon",life_inv_harpon],
+    ["life_inv_herse",life_inv_herse],
+    ["life_inv_filet_a",life_inv_filet_a],
+    ["life_inv_filet_p",life_inv_filet_p],
+    ["life_inv_filet_e",life_inv_filet_e],
+    ["life_inv_outil_crochetage",life_inv_outil_crochetage],
+    ["life_inv_grand_coffre",life_inv_grand_coffre],
+    ["life_inv_petit_coffre",life_inv_petit_coffre],
     ["life_ressource_pommes",life_ressource_pommes],
     ["life_ressource_raisin",life_ressource_raisin],
     ["life_ressource_jus_pomme",life_ressource_jus_pomme],
@@ -230,10 +238,11 @@ if(count (secondaryWeaponItems player) > 0) then
     ["life_ressource_pharmceutique",life_ressource_pharmceutique],
     ["life_ressource_speedball",life_ressource_speedball],
     ["life_ressource_tortue",life_ressource_tortue],
-    ["life_inv_harpon",life_inv_harpon],
-    ["life_inv_filet_a",life_inv_filet_a],
-    ["life_inv_filet_p",life_inv_filet_p],
-    ["life_inv_filet_e",life_inv_filet_e]
+    ["life_ressource_calcaire",life_ressource_calcaire],
+    ["life_ressource_aluminium_brut",life_ressource_aluminium_brut],
+    ["life_ressource_argent_brut",life_ressource_argent_brut],
+    ["life_ressource_cuivre_brut",life_ressource_cuivre_brut],
+    ["life_ressource_fer_brut",life_ressource_fer_brut]
 ];
 
 _return pushBack _uItems;

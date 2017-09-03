@@ -149,7 +149,7 @@ class CfgNotifications
 
 class CfgDifficultyPresets
 {
-	defaultPreset = Custom;
+	defaultPreset = Regular;
  
 	// Parameters that affect difficulty and which are shared among presets
 	myArmorCoef = 1;
@@ -171,7 +171,7 @@ class CfgDifficultyPresets
  
 	class Custom
 	{
-		displayName = "";	    //Name of the difficulty preset.
+		displayName = "Dostara";	    //Name of the difficulty preset.
         optionDescription = "";                                      //Description
 		optionPicture = "\A3\Ui_f\data\Logos\arma3_white_ca.paa"; //Picture
         levelAI = "AILevelMedium";//Level of AI skill
@@ -196,11 +196,11 @@ class CfgDifficultyPresets
 			stanceIndicator = 0;      // Stance indicator   (0 = never, 1 = fade out, 2 = always)
 			staminaBar = 0;       // Stamina bar (0 = disabled, 1 = enabled)
 			weaponCrosshair = 0;  // Weapon crosshair (0 = disabled, 1 = enabled)
-			visionAid = 0;        // Vision aid (0 = disabled, 1 = enabled)
+			visionAid = 1;        // Vision aid (0 = disabled, 1 = enabled)
  
 			// View
 			thirdPersonView = 1;  // 3rd person view (0 = disabled, 1 = enabled)
-			cameraShake = 0;      // Camera shake (0 = disabled, 1 = enabled)
+			cameraShake = 1;      // Camera shake (0 = disabled, 1 = enabled)
  
 			// Multiplayer
 			scoreTable = 0;       // Score table (0 = disabled, 1 = enabled)

@@ -7,27 +7,22 @@
 	removes the item & amount of it from the players virtual
 	inventory.
 */
-private["_unit","_val"];
-_val = ctrlText 2010;
-ctrlShow[2002,false];
-if((lbCurSel 2023) == -1) exitWith {hint "No one was selected!";ctrlShow[2002,true];};
-_unit = lbData [2023,lbCurSel 2023];
-_unit = call compile format["%1",_unit];
-if((lbCurSel 2005) == -1) exitWith {hint "You didn't select an item you wanted to give.";ctrlShow[2002,true];};
-_item = lbData [2005,(lbCurSel 2005)];
-if(isNil "_unit") exitWith {ctrlShow[2002,true];};
-if(_unit == player) exitWith {ctrlShow[2002,true];};
-if(isNull _unit) exitWith {ctrlShow[2002,true];};
+private _val = param[0,"",[""]];
+private _item = param[1,"",[""]];
+private _unit = param[2,objNull,[objNull]];
+private _type = "";
+if(isNil "_unit") exitWith {ctrlEnable[9004,true];};
+if(_unit == player) exitWith {ctrlEnable[9004,true];};
+if(isNull _unit) exitWith {ctrlEnable[9004,true];};
 
 //A series of checks *ugh*
-if(!([_val] call TON_fnc_isnumber)) exitWith {hint "You didn't enter an actual number format.";ctrlShow[2002,true];};
-if(parseNumber(_val) <= 0) exitWith {hint "You need to enter an actual amount you want to give.";ctrlShow[2002,true];};
-if(isNil "_unit") exitWith {ctrlShow[2001,true]; hint "The selected player is not within range";};
-if(!([false,_item,(parseNumber _val)] call life_fnc_handleInv)) exitWith {hint "Couldn't give that much of that item, maybe you don't have that amount?";ctrlShow[2002,true];};
+if(!([_val] call TON_fnc_isnumber)) exitWith {hint "Ce n'est pas un chiffre/nombre.";ctrlEnable[9004,true];};
+if(parseNumber(_val) <= 0) exitWith {hint "Vous devez mettre un montant positif.";ctrlEnable[9004,true];};
+if(!([false,_item,(parseNumber _val)] call life_fnc_handleInv)) exitWith {hint "Vous ne pouvez pas envoyer autant d'argent, vous n'avez pas assez.";ctrlEnable[9004,true];};
 [_unit,_val,_item,player] RemoteExecCall ["life_fnc_receiveItem",_unit];
 _type = [_item,0] call life_fnc_varHandle;
 _type = [_type] call life_fnc_varToStr;
-hint format["You gave %1 %2 %3",_unit getVariable["realname",name _unit],_val,_type];
+hint format["Vous avez donné %1 %2 %3",_unit getVariable["realname",name _unit],_val,_type];
 [] call life_fnc_p_updateMenu;
 
-ctrlShow[2002,true];
+ctrlEnable[9004,true];
