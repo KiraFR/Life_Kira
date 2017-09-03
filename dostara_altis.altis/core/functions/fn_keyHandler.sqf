@@ -249,7 +249,7 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehUnlock";
 						if(_veh isKindOf "Car") then {
-							[_veh,"verrVeh",15] remoteExecCall ["life_fnc_play3D",-2];
+							[_veh,"unlockVeh",15] remoteExecCall ["life_fnc_play3D",-2];
 						};
 					} else {
 						if(local _veh) then {
@@ -259,7 +259,7 @@ switch (_code) do
 						};
 						systemChat localize "STR_MISC_VehLock";
 						if(_veh isKindOf "Car") then {
-							[_veh,"verrVeh",15] remoteExecCall ["life_fnc_play3D",-2];
+							[_veh,"lockVeh",15] remoteExecCall ["life_fnc_play3D",-2];
 						};
 					};
 				};
