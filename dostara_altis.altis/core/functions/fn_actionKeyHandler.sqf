@@ -41,35 +41,28 @@ life_action_inUse = true;
 	life_action_inUse = false;
 };
 
-/*
-if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent]}) exitWith {
-	if(((playerSide == blufor && {(call life_revive_cops)}) || playerSide == independent) && {"Medikit" in (items player)}) then {
-		[_curTarget] call life_fnc_revivePlayer;
-	};
-};
-*/
 if!(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 	private["_isVehicle","_miscItems","_money"];
 	_isVehicle = if((_curTarget isKindOf "landVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
 	_miscItems = ["Land_BottlePlastic_V1_F","Land_TacticalBacon_F","Land_Can_V3_F","Land_CanisterFuel_F","Land_Suitcase_F"];
 	_animalTypes = ["Salema_F","Ornate_random_F","Mackerel_F","Tuna_F","Mullet_F","CatShark_F","Turtle_F"];
 	_money = "Land_Money_F";
-		if((typeOf _curTarget) in _animalTypes) then {
-				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_catchFish;
-				waitUntil {scriptDone _handle};
+	if((typeOf _curTarget) in _animalTypes) then {
+			private["_handle"];
+			_handle = [_curTarget] spawn life_fnc_catchFish;
+			waitUntil {scriptDone _handle};
+	} else {
+		if((typeOf _curTarget) in _miscItems) then {
+			private["_handle"];
+			_handle = [_curTarget] spawn life_fnc_pickupItem;
+			waitUntil {scriptDone _handle};
 		} else {
-			if((typeOf _curTarget) in _miscItems) then {
+			if((typeOf _curTarget) == _money && {!(_curTarget getVariable["inUse",false])}) then {
 				private["_handle"];
-				_handle = [_curTarget] spawn life_fnc_pickupItem;
+				_curTarget setVariable["inUse",TRUE,TRUE];
+				_handle = [_curTarget] spawn life_fnc_pickupMoney;
 				waitUntil {scriptDone _handle};
-			} else {
-				if((typeOf _curTarget) == _money && {!(_curTarget getVariable["inUse",false])}) then {
-					private["_handle"];
-					_curTarget setVariable["inUse",TRUE,TRUE];
-					_handle = [_curTarget] spawn life_fnc_pickupMoney;
-					waitUntil {scriptDone _handle};
-				};
 			};
 		};
 	};
+};

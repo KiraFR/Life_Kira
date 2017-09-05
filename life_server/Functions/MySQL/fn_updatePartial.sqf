@@ -107,7 +107,7 @@ switch(_mode) do {
 		_query = format["UPDATE permis SET waitTime='%1' WHERE uid='%2'",_value1,_uid];
 	};
 	case 12: {  
-		_value1 = [_this,2,""] call BIS_fnc_param;
+		_value1 = [_this,2,[]] call BIS_fnc_param;
 		_value2 = [_this,4,false,[true]] call BIS_fnc_param;
 		_value2 = [_value2] call DB_fnc_bool;
 		_query = format["UPDATE players SET civPosition='%1', alive='%2' WHERE playerid='%3'",_value1,_value2,_uid];

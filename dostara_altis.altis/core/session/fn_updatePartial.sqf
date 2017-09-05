@@ -65,7 +65,7 @@ switch(_mode) do {
 		_packet set[2,waitsleep];
 	};
 	case 12: {  
-	_civPosition = getPos player;
+	_civPosition = position player;
 	_packet set[2,_civPosition];
 	_packet set[4,life_is_alive];
 };

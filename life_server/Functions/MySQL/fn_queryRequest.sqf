@@ -91,8 +91,6 @@ switch (_side) do {
 
 	case civilian: {
 		_queryResult set[6,([_queryResult select 6,1] call DB_fnc_bool)];
-		diag_log (_queryResult select 8);
-		_queryResult set[8,call compile format["%1", (_queryResult select 8)]];
 		_queryResult set[9,([_queryResult select 9,1] call DB_fnc_bool)];
 
 		_houseData = _uid spawn TON_fnc_fetchPlayerHouses;

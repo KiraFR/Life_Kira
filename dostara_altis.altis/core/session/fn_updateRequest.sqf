@@ -4,7 +4,7 @@
 	Author: Tonic
 */
 private["_packet","_array","_flag","_civPosition"];
-_civPosition = getPos player;
+_civPosition = position player;
 _packet = [getPlayerUID player,(profileName),playerSide,CASH];
 _array = [];
 _flag = switch(playerSide) do {case west: {"cop"}; case civilian: {"civ"}; case independent: {"med"};};

@@ -18,14 +18,18 @@ if(vehicle player != player) then
 	{
 		{
 			if(!isNil "_vehicle") exitWith {}; //Kill the loop.
-			_vehData = _x getVariable["vehicle_info_owners",[]];
-			if(count _vehData  > 0) then
-			{
-				_vehOwner = (_vehData select 0) select 0;
-				if((getPlayerUID player) == _vehOwner) exitWith
+			if(playerSide == civilian) then{
+				_vehData = _x getVariable["vehicle_info_owners",[]];
+				if(count _vehData  > 0) then
 				{
-					_vehicle = _x;
+					_vehOwner = (_vehData select 0) select 0;
+					if((getPlayerUID player) == _vehOwner) exitWith
+					{
+						_vehicle = _x;
+					};
 				};
+			}else{
+				_vehicle = _x;
 			};
 		} forEach _nearVehicles;
 	};
