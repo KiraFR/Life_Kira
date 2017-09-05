@@ -22,8 +22,8 @@ link7[] = {6,7};
 link8[] = {7,2};
 link9[] = {8,9};
 link10[] = {9,3};
-globals[] = {0.000000,0,0,0,0,640,480,1,48,6316128,1,-629.444153,611.207214,293.309357,-434.050568,793,928,1};
-window[] = {2,-1,-1,-1,-1,922,224,1867,162,3,811};
+globals[] = {0.000000,0,0,0,0,640,480,1,48,6316128,1,-629.444153,611.207214,293.309357,-434.050568,1165,928,1};
+window[] = {2,-1,-1,-1,-1,946,255,1898,186,3,1183};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -160,7 +160,8 @@ class FSM
                         name = "Update_Civ_Pos";
                         itemno = 9;
                         init = /*%FSM<STATEINIT""">*/"if(count playableUnits > 0) then{" \n
-                         "      private _query = ""UPDATE players SET civPosition = CASE"";" \n
+                         "		private [""_query"",""_str""];" \n
+                         "      _query = ""UPDATE players SET civPosition = CASE"";" \n
                          "	{" \n
                          "		_unit = _x;" \n
                          "		if(side _unit == civilian && !((position _x) inArea ""ilespawn""))then{" \n
