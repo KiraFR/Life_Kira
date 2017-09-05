@@ -9,9 +9,7 @@ private["_crew"];
 _crew = crew cursorTarget;
 
 {
-	if(side _x != west) then
-	{
-		_x setVariable ["transporting",false,true]; _x setVariable ["Escorting",false,true];
-		[_x] RemoteExecCall ["life_fnc_pulloutVeh",owner _x];
+	if (_x getVariable "ACE_Captives_isHandcuffed")then {
+		[_x] call ACE_captives_fnc_vehicleCaptiveMoveOut;
 	};
 } forEach _crew;
