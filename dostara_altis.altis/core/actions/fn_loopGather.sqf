@@ -80,6 +80,7 @@ while{life_gathering} do {
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 		sleep 2.5
+		if(life_interrupted)exitWith{};
 	};
 
 	if([true,_gather,_diff] call life_fnc_handleInv) then
@@ -87,7 +88,7 @@ while{life_gathering} do {
 		_itemName = [([_gather,0] call life_fnc_varHandle)] call life_fnc_varToStr;
 		titleText[format[localize "STR_NOTF_Gather_Success",_itemName,_diff],"PLAIN"];
 	};
-
+	if(life_interrupted)exitWith{};
 	life_action_inUse = false;
 	if !(life_gathering) exitWith{};
 };

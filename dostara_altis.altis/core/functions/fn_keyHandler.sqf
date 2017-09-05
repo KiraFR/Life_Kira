@@ -26,7 +26,7 @@ if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(play
 
 if(life_action_inUse) exitWith {
 	if(!life_interrupted && _code in _interruptionKeys) then {life_interrupted = true;};
-	if(life_gathering && life_action_gathering)then{
+	if(life_gathering && life_interrupted)then{
 		life_gathering = false;
 		hint "Vous arrêter de recolter.";
 		life_gathering = false;
@@ -170,7 +170,7 @@ switch (_code) do
 	//F Key
 	case 33:
 	{
-		if(playerSide in [west,independent] && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+		if((playerSide == west) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn
 			{
