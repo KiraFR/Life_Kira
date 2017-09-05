@@ -250,8 +250,8 @@ switch (_code) do
 		};
 	};
 
-	//J key Siren Priority
-	case 36:
+	//& key Siren Priority
+	case 12:
 	{
 		_veh = vehicle player;
 		if((playerSide == west) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
