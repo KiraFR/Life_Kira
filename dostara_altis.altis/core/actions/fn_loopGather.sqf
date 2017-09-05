@@ -79,7 +79,7 @@ while{life_gathering} do {
 	{
 		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-		sleep 2.5
+		sleep 2.5;
 		if(life_interrupted)exitWith{};
 	};
 
