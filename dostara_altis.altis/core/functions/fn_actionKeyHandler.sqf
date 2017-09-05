@@ -22,7 +22,6 @@ if(isNull _curTarget) exitWith {
 	} else {
 		if(!life_gathering)then{
 			life_gathering = true;
-			hint "Vous commencez à recolter.";
 			[] call life_fnc_gather;
 		};
 	};

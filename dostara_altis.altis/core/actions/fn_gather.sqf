@@ -17,4 +17,5 @@ if(life_action_inUse)exitWith{};
 	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
 } forEach _ressourceZones;
 if(_zone == "") exitWith {life_action_inUse = false;};
+hint "Vous commencez à recolter.";
 [_zone] spawn life_fnc_loopGather;
