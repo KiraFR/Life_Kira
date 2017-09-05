@@ -17,7 +17,7 @@ _handled = false;
 _interactionKey = if(count (actionKeys "User10") == 0) then {219} else {(actionKeys "User10") select 0};
 _mapKey = actionKeys "ShowMap" select 0;
 //hint str _code;
-_interruptionKeys = [16,31,21,32]; //Q,S,Z,D
+_interruptionKeys = [30,31,17,32]; //Q,S,Z,D
 
 //Vault handling...
 if((_code in (actionKeys "GetOver") || _code in (actionKeys "salute")) && {(player getVariable ["restrained",false])}) exitWith {
@@ -251,9 +251,8 @@ switch (_code) do
 	};
 
 	//& key Siren Priority
-	case 31:
+	case 44:
 	{
-		hint "touche W appuyé";
 		_veh = vehicle player;
 		if((playerSide == west) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
