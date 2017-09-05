@@ -253,6 +253,7 @@ switch (_code) do
 	//& key Siren Priority
 	case 31:
 	{
+		hint "touche W appuyé";
 		_veh = vehicle player;
 		if((playerSide == west) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
