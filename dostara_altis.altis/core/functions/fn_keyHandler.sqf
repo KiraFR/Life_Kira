@@ -175,7 +175,7 @@ switch (_code) do
 			[] spawn
 			{
 				life_siren_active = true;
-				sleep 14;
+				sleep 10;
 				life_siren_active = false;
 			};
 			_veh = vehicle player;
@@ -253,13 +253,7 @@ switch (_code) do
 	//H key
 	case 35:
 	{
-		if(!_alt && !_ctrlKey) then {
-		if(vehicle player == player) then {
-			_veh = cursorTarget;
-		} else {
-			_veh = vehicle player;
-		};
-
+		_veh = vehicle player;
 		if((playerSide == west) && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
 		{
 			[] spawn{
@@ -273,9 +267,7 @@ switch (_code) do
 			}else{
 				titleText ["Vous venez d'allumer la siren prioritaire.","PLAIN"];
 				_veh setVariable["siren",true,true];
-				if(playerSide == west) then {
-					[_veh,"Priority",4] RemoteExec ["life_fnc_copSiren",0];
-				}
+				[_veh,"Priority",4] RemoteExec ["life_fnc_copSiren",0];
 			};
 		};
 	};
