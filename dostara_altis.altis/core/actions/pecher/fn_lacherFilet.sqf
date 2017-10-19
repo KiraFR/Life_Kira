@@ -14,6 +14,13 @@
 	CALL:
 	[STRING] call life_fnc_lacherFilet
 */
+
+
+
+
+
+
+jljkljli
 private _filet = param[0,"",[""]];
 private _maxmin = [];
 _boat = vehicle player;
